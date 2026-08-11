@@ -188,22 +188,29 @@ function makeWave() {
   scene.add(particles);
 }
 
+const TECHNO_WORDS = [
+  'buy it', 'use it', 'break it', 'fix it', 'trash it', 'change it', 'mail it',
+  'upgrade it', 'charge it', 'point it', 'zoom it', 'press it', 'snap it', 'work it',
+  'quick', 'erase it', 'write it', 'cut it', 'paste it', 'save it', 'load it', 'check it',
+  'rewrite it', 'plug it', 'play it', 'burn it', 'rip it', 'drag it', 'drop it', 'lock it',
+  'fill it', 'call it', 'find it', 'view it', 'code it', 'jam it', 'unlock it', 'surf it',
+  'scroll it', 'pause it', 'click it', 'cross it', 'crack it', 'switch it', 'update it',
+];
+
 function makeSkillSprites() {
-  const names = (state.data ? state.data.skills : [])
-    .filter(s => s.origin === 'autoral')
-    .map(s => s.id);
   const canvas = document.createElement('canvas');
   canvas.width = 256; canvas.height = 48;
   const ctx = canvas.getContext('2d');
-  names.slice(0, 40).forEach((name, i) => {
+  TECHNO_WORDS.forEach((word, i) => {
     ctx.clearRect(0, 0, 256, 48);
     ctx.font = '24px JetBrains Mono, monospace';
     ctx.fillStyle = '#00ff66';
-    ctx.fillText(name, 8, 32);
+    ctx.fillText(word, 8, 32);
     const tex = new THREE.CanvasTexture(canvas);
     const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.5 });
     const sprite = new THREE.Sprite(mat);
-    const a = (i / 40) * Math.PI * 2;
+    const n = TECHNO_WORDS.length;
+    const a = (i / n) * Math.PI * 2;
     const r = 22;
     sprite.position.set(Math.cos(a) * r, (Math.random() - 0.5) * 8, Math.sin(a) * r);
     sprite.scale.set(7, 1.3, 1);
