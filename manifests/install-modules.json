@@ -351,7 +351,20 @@
         "skills/santa-method",
         "skills/git-workflow",
         "skills/graphify",
-        "skills/criar-skill"
+        "skills/criar-skill",
+        "skills/anti-hallucination",
+        "skills/auditar-skills",
+        "skills/encontrar-skill",
+        "skills/goal",
+        "skills/graph-engineering",
+        "skills/grill-with-docs",
+        "skills/grilling",
+        "skills/plan",
+        "skills/superpowers",
+        "skills/doctor",
+        "skills/engenharia-de-grafos",
+        "skills/grills",
+        "skills/score-loop"
       ],
       "targets": [
         "claude",
@@ -510,7 +523,11 @@
         "skills/marketing-campaign",
         "skills/analise-concorrentes",
         "skills/criar-campanha-visual",
-        "skills/humanizar-texto"
+        "skills/humanizar-texto",
+        "skills/clareza",
+        "skills/conversa",
+        "skills/coordenacao",
+        "skills/criatividade"
       ],
       "targets": [
         "claude",
@@ -681,7 +698,9 @@
         "skills/ui-demo",
         "skills/video-editing",
         "skills/videodb",
-        "skills/taste"
+        "skills/taste",
+        "skills/dnb-production",
+        "skills/baixar-musica"
       ],
       "targets": [
         "claude",
@@ -801,7 +820,8 @@
         "skills/orch-refine-code",
         "skills/plan-orchestrate",
         "skills/workflows",
-        "skills/routines"
+        "skills/routines",
+        "skills/prompt-builder"
       ],
       "targets": [
         "claude",

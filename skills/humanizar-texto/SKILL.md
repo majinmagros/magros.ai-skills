@@ -19,7 +19,7 @@ os vícios, elimina, mantém a informação e o tom do contexto.
 - Generalizações vazias: "seu potencial é ilimitado", "resultados reais".
 - Abertura/fechamento genérico de IA: "Neste artigo vamos explorar...",
   "Em conclusão, podemos afirmar que...".
-- Hedging em excesso e listas com emojis de seta (→, ✅) onde não há lista.
+- Hedging em excesso e listas com emojis de seta (→, PASS:) onde não há lista.
 
 ## 2. Em vez disso
 

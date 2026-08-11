@@ -20,8 +20,7 @@ paths:
   accessibilityRole="button"
   accessibilityLabel="Delete item"
   onPress={onDelete}
->
-  <TrashIcon />
+> <TrashIcon />
 </Pressable>
 ```
 
