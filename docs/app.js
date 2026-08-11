@@ -325,7 +325,11 @@ els.musicList.addEventListener('click', e => {
   const row = btn.closest('.track');
   row.classList.add('playing');
   const audio = row.querySelector('audio');
-  audio.play().catch(() => { row.classList.remove('playing'); });
+  if (!audio.src) audio.src = audio.dataset.src;
+  row.classList.add('loading');
+  audio.addEventListener('playing', () => { row.classList.remove('loading'); }, { once: true });
+  audio.addEventListener('error', () => { row.classList.remove('loading', 'playing'); }, { once: true });
+  audio.play().then(() => row.classList.remove('loading')).catch(() => { row.classList.remove('loading', 'playing'); });
   audio.addEventListener('ended', () => row.classList.remove('playing'), { once: true });
   musicState.audio = audio;
 });
