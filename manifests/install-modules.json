@@ -349,7 +349,9 @@
         "skills/repo-scan",
         "skills/rules-distill",
         "skills/santa-method",
-        "skills/git-workflow"
+        "skills/git-workflow",
+        "skills/graphify",
+        "skills/criar-skill"
       ],
       "targets": [
         "claude",
@@ -465,7 +467,8 @@
         "skills/scientific-pkg-gget",
         "skills/scientific-thinking-literature-review",
         "skills/scientific-thinking-scholar-evaluation",
-        "skills/documentation-lookup"
+        "skills/documentation-lookup",
+        "skills/pesquisa-social"
       ],
       "targets": [
         "claude",
@@ -504,7 +507,10 @@
         "skills/brand-discovery",
         "skills/competitive-platform-analysis",
         "skills/competitive-report-structure",
-        "skills/marketing-campaign"
+        "skills/marketing-campaign",
+        "skills/analise-concorrentes",
+        "skills/criar-campanha-visual",
+        "skills/humanizar-texto"
       ],
       "targets": [
         "claude",
@@ -548,7 +554,8 @@
         "skills/terminal-ops",
         "skills/unified-notifications-ops",
         "skills/workspace-surface-audit",
-        "skills/mailtrap-email-integration"
+        "skills/mailtrap-email-integration",
+        "skills/automacao-deterministica"
       ],
       "targets": [
         "claude",
@@ -792,7 +799,9 @@
         "skills/orch-fix-defect",
         "skills/orch-pipeline",
         "skills/orch-refine-code",
-        "skills/plan-orchestrate"
+        "skills/plan-orchestrate",
+        "skills/workflows",
+        "skills/routines"
       ],
       "targets": [
         "claude",
