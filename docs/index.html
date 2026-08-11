@@ -42,6 +42,10 @@
       <button class="mt-btn active" data-mode="subtle">SUBTIL</button>
       <button class="mt-btn" data-mode="aggressive">AGRESSIVO</button>
     </div>
+    <nav class="section-nav">
+      <button class="sec-btn active" data-sec="skills">SKILLS</button>
+      <button class="sec-btn" data-sec="music">MÚSICA</button>
+    </nav>
     <button class="theme-btn" id="themeBtn" title="Alternar tema">◐</button>
   </div>
 </header>
@@ -69,6 +73,10 @@
 <main>
   <p class="status-line" id="statusLine">carregando catálogo...</p>
   <div class="grid" id="grid"></div>
+  <section id="musicSection" hidden>
+    <p class="status-line" id="musicStatus">carregando músicas...</p>
+    <div class="music-list" id="musicList"></div>
+  </section>
 </main>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden></div>

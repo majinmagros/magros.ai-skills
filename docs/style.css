@@ -400,6 +400,66 @@ main {
 }
 .lang-banner a { color: var(--amber); }
 
+.section-nav { display: flex; gap: 6px; margin-left: 4px; }
+.sec-btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  padding: 6px 14px;
+  background: var(--panel);
+  color: var(--dim);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all .2s;
+}
+.sec-btn.active { color: var(--accent); border-color: var(--accent); }
+
+.controls.hide { display: none; }
+
+.music-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 10px; }
+.track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.track.playing { border-color: var(--accent); box-shadow: 0 0 16px rgba(0,255,102,.12); }
+.track-play {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.track-play:hover { border-color: var(--accent); color: var(--accent); }
+.track.playing .track-play { color: var(--accent); border-color: var(--accent); }
+.play-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid currentColor;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  margin-left: 2px;
+}
+.track-info { display: flex; flex-direction: column; min-width: 0; }
+.track-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.track-dur { font-family: var(--mono); font-size: 10px; color: var(--dim); }
+
 .foot {
   position: relative;
   z-index: 2;
@@ -419,6 +479,7 @@ main {
 @media (max-width: 720px) {
   .masthead { flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px 16px; }
   .counters { gap: 14px; }
+  .section-nav { margin-left: 0; }
   .controls { padding: 12px 16px; }
   main { padding: 14px 16px 40px; }
   .grid { grid-template-columns: 1fr; }

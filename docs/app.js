@@ -28,7 +28,13 @@ const els = {
   backdrop: document.getElementById('modalBackdrop'),
   modeToggle: document.getElementById('modeToggle'),
   themeBtn: document.getElementById('themeBtn'),
+  sectionNav: [...document.querySelectorAll('.sec-btn')],
+  musicSection: document.getElementById('musicSection'),
+  musicList: document.getElementById('musicList'),
+  musicStatus: document.getElementById('musicStatus'),
 };
+
+let musicState = { tracks: [], current: null, audio: null };
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -272,6 +278,58 @@ document.addEventListener('visibilitychange', () => {
   // three.js segue animando; pausa só o que for pesado: reduz em background
 });
 
+/* ---- música (DnB) ---- */
+function showSection(name) {
+  els.sectionNav.forEach(b => b.classList.toggle('active', b.dataset.sec === name));
+  const isMusic = name === 'music';
+  els.grid.hidden = isMusic;
+  els.musicSection.hidden = !isMusic;
+  document.querySelector('.controls').classList.toggle('hide', isMusic);
+  return name;
+}
+
+async function loadMusic() {
+  const res = await fetch('data/music.json');
+  const tracks = await res.json();
+  musicState.tracks = tracks;
+  els.musicStatus.textContent = `${tracks.length} faixas · ${Math.round(tracks.reduce((a, t) => a + t.seconds, 0) / 60)} min`;
+  renderMusic();
+}
+
+function fmtSec(s) {
+  const m = Math.floor(s / 60), r = Math.floor(s % 60);
+  return `${m}:${String(r).padStart(2, '0')}`;
+}
+
+function renderMusic() {
+  els.musicList.innerHTML = musicState.tracks.map(t => `
+    <article class="track" data-file="${esc(t.file)}">
+      <button class="track-play" data-play="${esc(t.file)}" title="Tocar"><span class="play-arrow"></span></button>
+      <div class="track-info">
+        <span class="track-title">${esc(t.title)}</span>
+        <span class="track-dur">${esc(t.duration)}</span>
+      </div>
+      <audio data-src="assets/music/${esc(t.file)}" preload="none"></audio>
+    </article>
+  `).join('');
+}
+
+// delegado
+els.musicList.addEventListener('click', e => {
+  const btn = e.target.closest('.track-play');
+  if (!btn) return;
+  const file = btn.dataset.play;
+  const old = musicState.audio;
+  if (old) { old.pause(); old.currentTime = 0; }
+  document.querySelectorAll('.track').forEach(r => r.classList.remove('playing'));
+  const row = btn.closest('.track');
+  row.classList.add('playing');
+  const audio = row.querySelector('audio');
+  audio.play().catch(() => { row.classList.remove('playing'); });
+  audio.addEventListener('ended', () => row.classList.remove('playing'), { once: true });
+  musicState.audio = audio;
+});
+
 /* ---- eventos ---- */
 els.search.addEventListener('input', () => {
   state.query = els.search.value;
@@ -319,6 +377,8 @@ els.modeToggle.addEventListener('click', e => {
   setClima(btn.dataset.mode);
 });
 
+els.sectionNav.forEach(btn => btn.addEventListener('click', () => showSection(btn.dataset.sec)));
+
 els.themeBtn.addEventListener('click', () => {
   const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   document.documentElement.dataset.theme = next;
@@ -343,7 +403,7 @@ els.themeBtn.addEventListener('click', () => {
 })();
 
 /* ---- boot ---- */
-load().then(() => {
+Promise.all([load(), loadMusic()]).then(() => {
   initThree();
   setClima('subtle');
 }).catch(err => {
