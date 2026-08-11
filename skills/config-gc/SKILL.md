@@ -113,6 +113,7 @@ jq '.permissions.allow -= ["Bash(git push)"]' ~/.claude/settings.local.json.bak 
 
 ## Related Skills
 
+- `doctor` — the project/agent/skills counterpart: audits *instruction bloat and context dead weight* in repositories (vs config-gc's `~/.claude` config). Run doctor for context/token cost; config-gc for config hygiene.
 - `skill-stocktake` — audits skill *quality*; config-gc audits skill *existence*. Run stocktake on what survives GC.
 - `workspace-surface-audit` — the additive counterpart: recommends what to install. config-gc is the subtractive half of the same lifecycle.
 - `configure-ecc` — after installing skills with it, run config-gc to reconcile overlaps with your pre-existing setup.
