@@ -192,6 +192,20 @@ Para ver todas as opções: `./install.sh --help`.
 - **Dispara quando**: "graph engineering", "verificar em paralelo", "gerar
   candidatos", "nota 80", "pipeline".
 
+#### `gauntlet-loop` — resultado "uau" com subagentes às cegas
+
+- **O que é**: arquitetura para entregas excepcionais (jogo, app, site, cena 3D).
+  Inspirada na técnica Gauntlet Loop do canal Maestros da IA.
+- **Como funciona**: quebra o projeto em muitos segmentos; cada um recebe um par
+  **executor + verificador**. O verificador julga **ÀS CEGAS** (não vê como o
+  executor criou) e só aprova se ficar **genuinamente impressionado** — "funciona"
+  não basta. Aprovação de todas as etapas → relatório final.
+- **Custo**: alto (horas + centenas de milhares de tokens). Usar SÓ quando o
+  resultado precisa ser extraordinário. Para tarefas normais, use
+  `graph-engineering`/`score-loop` (nota numérica, mais barato).
+- **Dispara quando**: "gauntlet loop", "resultado de outro nível", "impressionar",
+  "julgamento às cegas", "subagentes em paralelo".
+
 #### `criar-skill` — criar/refinar skills novas
 
 - **O que é**: manual de autoragem de skills (para quem quer escrever as suas).
@@ -291,8 +305,11 @@ Para ver todas as opções: `./install.sh --help`.
   PDF).
 - **Como funciona**: primeiro fecha lacunas com você (público, tom, nº de
   slides, identidade visual) — inclusive **pedindo para você perguntar** o que
-  faltar. Nunca inventa dado: o que não existe vira "[A CONFIRMAR]". Mostra a
-  estrutura antes de gerar e entrega para o seu julgamento final.
+  faltar. Define um **conceito gráfico** (estética que traduz o tema: urbano,
+  minimalista, futurista...) antes de montar — não é só "paleta bonita", é
+  direção visual coerente. Nunca inventa dado: o que não existe vira
+  "[A CONFIRMAR]". Mostra a estrutura antes de gerar e entrega para o seu
+  julgamento final.
 - **Dispara quando**: "faz os slides", "apresentação", "powerpoint", "documento",
   "relatório".
 

@@ -6,9 +6,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **313 `SKILL.md`** no total.
+- **314 `SKILL.md`** no total.
 - **284** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **29 autorais** (em português ou originais):
+- **30 autorais** (em português ou originais):
 
 ### Autorais — núcleo
 
@@ -46,6 +46,7 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `grilling` | Pressão-teste de ideias: entrevista de UMA pergunta por vez (objetivo → escopo → restrições → riscos → validação) até o plano ficar afiado. Não implementa. | workflow-quality |
 | `plan` | Plano decision-complete ancorado nos arquivos reais; para e pede aprovação antes de escrever código (`/plan`). | workflow-quality |
 | `superpowers` | TDD leve + tarefas pequenas e verificáveis + aprovação do usuário a cada passo. Aplica a todo trabalho multi-etapa. | workflow-quality |
+| `gauntlet-loop` | Arquitetura p/ resultado "uau": quebra em segmentos, cada um com subagente executor + verificador às CEGAS (sem contexto de criação), barra de aprovação = surpresa real. Caro (horas + muitos tokens) — só p/ entregas excepcionais. | workflow-quality |
 | `prompt-builder` | Transforma instrução preguiçosa em prompt bom pelos 4 pilares (objetivo, contexto, exemplo, restrições); gera, conserta ou adapta por modelo/mídia. | agentic-patterns |
 | `baixar-musica` | Baixa áudio do YouTube: busca via `ytsearch`, CONFIRMA a faixa com o usuário e só então baixa com `baixar_audio.ps1`. | media-generation |
 | `dnb-production` | Produção de Drum'n Bass original via harness: MusicGen gera, verificador nota 0–100, itera até >= 80. 100% original, sem stems de artistas. | media-generation |
@@ -64,7 +65,7 @@ a profundidade desejada (bundle = pipeline completo; autoral = decisão rápida)
 ## Estrutura
 
 ```
-skills/          # todas as skills (284 ECC + 29 autorais)
+skills/          # todas as skills (284 ECC + 30 autorais)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
   grills/                  # autoral
@@ -89,6 +90,7 @@ skills/          # todas as skills (284 ECC + 29 autorais)
   encontrar-skill/         # autoral (produtividade)
   goal/                    # autoral (produtividade)
   graph-engineering/       # autoral (produtividade)
+  gauntlet-loop/           # autoral (produtividade)
   grill-with-docs/         # autoral (produtividade)
   grilling/                # autoral (produtividade)
   plan/                    # autoral (produtividade)
@@ -141,7 +143,7 @@ npm install
 > estruturado que ensina o agente a agir daquele jeito específico.
 
 **Guia completo (leigo)**: veja [`GUIA-COMPLETO.md`](GUIA-COMPLETO.md) — explica o que
-é uma skill, instalação passo a passo e como funciona cada uma das 29 autorais.
+é uma skill, instalação passo a passo e como funciona cada uma das 30 autorais.
 
 ## Proveniência das skills autorais novas
 
@@ -166,7 +168,7 @@ git remote add upstream https://github.com/affaan-m/ECC.git
 
 O script `sync-upstream.sh` faz `fetch` + `merge` do branch principal do upstream para o seu `master`.
 Conflitos (ex.: se você editou uma skill que também mudou lá em cima) precisam ser resolvidos
-manualmente — o git vai apontá-los. As suas **29 skills autorais não são tocadas** pelo merge, pois
+manualmente — o git vai apontá-los. As suas **30 skills autorais não são tocadas** pelo merge, pois
 não existem no upstream.
 
 Recomendação: rode o sync após novas releases do ECC, e rode a skill `doctor` periodicamente para
@@ -193,4 +195,4 @@ remover peso morto acumulado.
 ## Licença
 
 - Conteúdo herdado do ECC: **MIT** (ver `LICENSE` — mantido do upstream `affaan-m/ECC`).
-- Skills autorais (todas as 29 listadas acima): MIT, salvo indicação em contrário.
+- Skills autorais (todas as 30 listadas acima): MIT, salvo indicação em contrário.

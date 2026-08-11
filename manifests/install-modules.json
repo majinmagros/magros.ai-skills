@@ -364,7 +364,8 @@
         "skills/doctor",
         "skills/engenharia-de-grafos",
         "skills/grills",
-        "skills/score-loop"
+        "skills/score-loop",
+        "skills/gauntlet-loop"
       ],
       "targets": [
         "claude",
