@@ -318,21 +318,49 @@ function renderMusic() {
 els.musicList.addEventListener('click', e => {
   const btn = e.target.closest('.track-play');
   if (!btn) return;
-  const file = btn.dataset.play;
-  const old = musicState.audio;
-  if (old) { old.pause(); old.currentTime = 0; }
-  document.querySelectorAll('.track').forEach(r => r.classList.remove('playing'));
   const row = btn.closest('.track');
+  // toggle: se esta tocando (ou carregando), para
+  if (row.classList.contains('playing') || row.classList.contains('loading')) {
+    stopPlayback();
+    return;
+  }
+  playFrom(row);
+});
+
+function stopPlayback() {
+  const a = musicState.audio;
+  if (a) { a.pause(); a.currentTime = 0; musicState.audio = null; }
+  document.querySelectorAll('.track').forEach(r => r.classList.remove('playing', 'loading'));
+  musicState.current = null;
+}
+
+function playFrom(row) {
+  stopPlayback();
   row.classList.add('playing');
   const audio = row.querySelector('audio');
   if (!audio.src) audio.src = audio.dataset.src;
   row.classList.add('loading');
-  audio.addEventListener('playing', () => { row.classList.remove('loading'); }, { once: true });
-  audio.addEventListener('error', () => { row.classList.remove('loading', 'playing'); }, { once: true });
-  audio.play().then(() => row.classList.remove('loading')).catch(() => { row.classList.remove('loading', 'playing'); });
-  audio.addEventListener('ended', () => row.classList.remove('playing'), { once: true });
+  audio.addEventListener('error', () => row.classList.remove('loading', 'playing'), { once: true });
+  audio.play().then(() => row.classList.remove('loading')).catch(() => row.classList.remove('loading', 'playing'));
+  audio.addEventListener('ended', () => { playNext(row); }, { once: true });
+  audio.addEventListener('pause', () => { if (musicState.audio === audio && audio.ended !== true) row.classList.remove('playing'); });
   musicState.audio = audio;
-});
+  musicState.current = row;
+}
+
+function playNext(fromRow) {
+  const rows = [...document.querySelectorAll('.track')];
+  const idx = rows.indexOf(fromRow);
+  const next = rows[idx + 1];
+  if (next) {
+    playFrom(next);
+    next.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    document.querySelectorAll('.track').forEach(r => r.classList.remove('playing', 'loading'));
+    musicState.audio = null;
+    musicState.current = null;
+  }
+}
 
 /* ---- eventos ---- */
 els.search.addEventListener('input', () => {

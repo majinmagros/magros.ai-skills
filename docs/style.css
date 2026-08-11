@@ -440,6 +440,15 @@ main {
 }
 .track-play:hover { border-color: var(--accent); color: var(--accent); }
 .track.playing .track-play { color: var(--accent); border-color: var(--accent); }
+.track.playing .play-arrow, .track.loading .play-arrow {
+  border-left: none;
+  width: 9px;
+  height: 10px;
+  border-top: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  margin-left: 0;
+  background: currentColor;
+}
 .track.loading .track-play::after {
   content: '';
   position: absolute;
