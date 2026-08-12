@@ -413,6 +413,32 @@ function playNext(fromRow) {
   }
 }
 
+function skipNext() {
+  if (musicState.current) {
+    playNext(musicState.current);
+  } else {
+    const first = document.querySelector('.track');
+    if (first) playFrom(first);
+  }
+}
+
+function skipPrev() {
+  const rows = [...document.querySelectorAll('.track')];
+  if (musicState.current) {
+    const idx = rows.indexOf(musicState.current);
+    const prev = rows[idx - 1];
+    if (prev) {
+      playFrom(prev);
+      prev.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      playFrom(rows[0]);
+    }
+  } else {
+    const first = document.querySelector('.track');
+    if (first) playFrom(first);
+  }
+}
+
 // botão MÚSICA = play/pause global (1º clique inicia playlist; demais alternam pause/resume)
 function toggleGlobalPlayback() {
   const audio = musicState.audio;
@@ -443,6 +469,9 @@ els.musicList.addEventListener('click', e => {
   }
   playFrom(row);
 });
+
+document.getElementById('prevBtn').addEventListener('click', skipPrev);
+document.getElementById('nextBtn').addEventListener('click', skipNext);
 
 els.search.addEventListener('input', () => {
   state.query = els.search.value;
