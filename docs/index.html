@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DARK STUDIO // magros.ai-skills</title>
+<meta name="description" content="Catálogo interativo das 314 skills de IA do repositório magros.ai-skills.">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="bg3d"></canvas>
+<div class="scanlines"></div>
+
+<header class="masthead">
+  <div class="masthead-left">
+    <img src="assets/avatar.jpg" alt="Dark Studio avatar" class="avatar" id="avatar">
+    <div class="brand">
+      <h1>DARK<span class="accent">STUDIO</span></h1>
+      <p class="sub">MAGROS.AI-SKILLS // CATÁLOGO DE SKILLS</p>
+    </div>
+  </div>
+  <div class="masthead-right">
+    <div class="counters" id="counters">
+      <div class="counter"><span class="num" id="cTotal">--</span><span class="lbl">SKILLS</span></div>
+      <div class="counter"><span class="num accent" id="cAutorais">--</span><span class="lbl">AUTORAIS</span></div>
+      <div class="counter"><span class="num amber" id="cModules">--</span><span class="lbl">MÓDULOS</span></div>
+    </div>
+    <div class="mode-toggle" id="modeToggle" title="Alternar clima 3D">
+      <span class="mt-label">CLIMA</span>
+      <button class="mt-btn active" data-mode="subtle">SUBTIL</button>
+      <button class="mt-btn" data-mode="aggressive">AGRESSIVO</button>
+    </div>
+    <div class="mode-toggle" id="animToggle" title="Animação das frases">
+      <span class="mt-label">ANIM</span>
+      <button class="mt-btn active" data-anim="A">A</button>
+      <button class="mt-btn" data-anim="B">B</button>
+      <button class="mt-btn" data-anim="C">C</button>
+    </div>
+    <nav class="section-nav">
+      <button class="sec-btn active" data-sec="skills">SKILLS</button>
+      <button class="sec-btn" data-sec="music" id="musicBtn">MÚSICA</button>
+    </nav>
+    <div class="now-playing" id="nowPlaying" hidden>
+      <div class="np-marquee">
+        <span class="np-title" id="npTitle"></span>
+        <span class="np-title np-dup" id="npTitleDup" aria-hidden="true"></span>
+      </div>
+      <span class="np-time" id="npTime"></span>
+    </div>
+    <div class="track-controls" id="trackControls">
+      <button class="tc-btn" id="prevBtn" title="Voltar música"><span class="tc-arrow prev"></span></button>
+      <button class="tc-btn" id="nextBtn" title="Avançar música"><span class="tc-arrow next"></span></button>
+    </div>
+    <button class="sec-btn" id="guideBtn" title="Guia de instalação 9router + opencode">GUIA</button>
+    <button class="theme-btn" id="themeBtn" title="Alternar tema">◐</button>
+  </div>
+</header>
+
+<nav class="controls">
+  <div class="searchbox">
+    <span class="search-glyph">/</span>
+    <input type="text" id="search" placeholder="buscar skill, descrição, módulo..." autocomplete="off">
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip active" data-filter="all">TODAS</button>
+    <button class="chip" data-filter="autoral">AUTORAIS</button>
+    <button class="chip" data-filter="ecc">ECC</button>
+  </div>
+  <select id="moduleFilter" class="module-filter" title="Filtrar por módulo">
+    <option value="">MÓDULO: TODOS</option>
+  </select>
+  <select id="sort" class="sort" title="Ordenar">
+    <option value="name">ORDENAR: NOME</option>
+    <option value="cost">CUSTO</option>
+    <option value="module">MÓDULO</option>
+  </select>
+</nav>
+
+<main>
+  <p class="status-line" id="statusLine">carregando catálogo...</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden></div>
+<aside class="detail" id="detail" aria-hidden="true">
+  <button class="detail-close" id="detailClose" aria-label="Fechar">✕</button>
+  <div id="detailContent"></div>
+</aside>
+
+<div class="guide-overlay" id="guideOverlay" hidden>
+  <div class="guide-panel">
+    <button class="guide-close" id="guideClose" aria-label="Fechar">✕</button>
+    <h1 class="guide-title">GUIA 9ROUTER + OPENCODE</h1>
+    <p class="guide-sub">instalação · chaves · conexão</p>
+    <div class="guide-body" id="guideBody">carregando guia...</div>
+  </div>
+</div>
+
+<footer class="foot">
+  <span>DARK STUDIO © 2026 · majinmagros</span>
+  <a href="https://github.com/majinmagros/magros.ai-skills" target="_blank" rel="noopener">github.com/majinmagros/magros.ai-skills</a>
+</footer>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
