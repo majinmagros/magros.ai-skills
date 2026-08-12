@@ -145,6 +145,10 @@ npm install
 **Guia completo (leigo)**: veja [`GUIA-COMPLETO.md`](GUIA-COMPLETO.md) — explica o que
 é uma skill, instalação passo a passo e como funciona cada uma das 30 autorais.
 
+**Configurar 9router + opencode (do zero)**: veja [`GUIA-9ROUTER-OPENCODE.md`](GUIA-9ROUTER-OPENCODE.md) —
+instalação do 9router (roteador grátis de IA), cadastro de API keys, conexão do
+opencode e troubleshooting.
+
 ## Proveniência das skills autorais novas
 
 As 9 skills "Maestros da IA" foram derivadas da análise de **16 vídeos transcritos** do canal

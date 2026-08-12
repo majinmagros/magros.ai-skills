@@ -71,6 +71,9 @@ npm install
 
 Para ver todas as opções: `./install.sh --help`.
 
+> **Configurar o 9router + opencode do zero** (roteador grátis de IA, API keys,
+> conexão e troubleshooting): veja o [`GUIA-9ROUTER-OPENCODE.md`](GUIA-9ROUTER-OPENCODE.md).
+
 ## 3. Como saber se instalou certo
 
 - Cada skill é uma pasta com o arquivo `SKILL.md` dentro, no lugar certo.

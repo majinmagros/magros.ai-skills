@@ -413,6 +413,27 @@ main {
   transition: all .2s;
 }
 .sec-btn.active { color: var(--accent); border-color: var(--accent); }
+.sec-btn[data-sec="music"].global-playing { color: var(--accent); border-color: var(--accent); animation: np-pulse 1.6s infinite; }
+@keyframes np-pulse { 0%,100% { box-shadow: 0 0 0 rgba(0,255,102,0); } 50% { box-shadow: 0 0 12px rgba(0,255,102,.35); } }
+
+.now-playing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 0;
+  max-width: 320px;
+}
+.now-playing .np-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.now-playing .np-time { font-family: var(--mono); font-size: 9px; color: var(--dim); letter-spacing: .08em; }
 
 .controls.hide { display: none; }
 

@@ -32,6 +32,9 @@ const els = {
   musicSection: document.getElementById('musicSection'),
   musicList: document.getElementById('musicList'),
   musicStatus: document.getElementById('musicStatus'),
+  nowPlaying: document.getElementById('nowPlaying'),
+  npTitle: document.getElementById('npTitle'),
+  npTime: document.getElementById('npTime'),
 };
 
 let musicState = { tracks: [], current: null, audio: null };
@@ -197,6 +200,9 @@ const TECHNO_WORDS = [
   'scroll it', 'pause it', 'click it', 'cross it', 'crack it', 'switch it', 'update it',
 ];
 
+let wordRotationTimer = 0;
+const WORD_ROTATION_INTERVAL = 3000; // 3 seconds
+
 function makeSkillSprites() {
   const canvas = document.createElement('canvas');
   canvas.width = 256; canvas.height = 48;
@@ -209,12 +215,11 @@ function makeSkillSprites() {
     const tex = new THREE.CanvasTexture(canvas);
     const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.5 });
     const sprite = new THREE.Sprite(mat);
-    const n = TECHNO_WORDS.length;
-    const a = (i / n) * Math.PI * 2;
+    const a = (i / TECHNO_WORDS.length) * Math.PI * 2;
     const r = 22;
     sprite.position.set(Math.cos(a) * r, (Math.random() - 0.5) * 8, Math.sin(a) * r);
     sprite.scale.set(7, 1.3, 1);
-    sprite.userData = { angle: a, radius: r, speed: 0.06 + Math.random() * 0.08 };
+    sprite.userData = { angle: a, radius: r, speed: 0.06 + Math.random() * 0.08, wordIndex: i };
     scene.add(sprite);
     skillSprites.push(sprite);
   });
@@ -235,7 +240,29 @@ function setClima(mode) {
 function animate() {
   requestAnimationFrame(animate);
   const t = clock.getElapsedTime();
+  const tMs = t * 1000;
   const speed = state.clima === 'aggressive' ? 2.4 : 1;
+
+  // rotaciona palavras do Technologic
+  if (tMs - wordRotationTimer >= WORD_ROTATION_INTERVAL) {
+    wordRotationTimer = tMs;
+    skillSprites.forEach(sprite => {
+      const nextIndex = (sprite.userData.wordIndex + 1) % TECHNO_WORDS.length;
+      sprite.userData.wordIndex = nextIndex;
+      const canvas = document.createElement('canvas');
+      canvas.width = 256; canvas.height = 48;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, 256, 48);
+      ctx.font = '24px JetBrains Mono, monospace';
+      ctx.fillStyle = '#00ff66';
+      ctx.fillText(TECHNO_WORDS[nextIndex], 8, 32);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.needsUpdate = true;
+      if (sprite.material.map) sprite.material.map.dispose();
+      sprite.material.map = tex;
+      sprite.material.needsUpdate = true;
+    });
+  }
 
   // osciloscópio: partículas em onda
   if (particles) {
@@ -321,24 +348,36 @@ function renderMusic() {
   `).join('');
 }
 
-// delegado
-els.musicList.addEventListener('click', e => {
-  const btn = e.target.closest('.track-play');
-  if (!btn) return;
-  const row = btn.closest('.track');
-  // toggle: se esta tocando (ou carregando), para
-  if (row.classList.contains('playing') || row.classList.contains('loading')) {
-    stopPlayback();
+function trackTitle(row) {
+  return row ? row.querySelector('.track-title').textContent : '';
+}
+
+function trackDur(audio) {
+  return audio && isFinite(audio.duration) ? fmtSec(audio.duration) : '';
+}
+
+function updateNowPlaying() {
+  const row = musicState.current;
+  const audio = musicState.audio;
+  const np = els.nowPlaying;
+  if (!np) return;
+  if (!row || !audio || audio.paused) {
+    np.hidden = true;
     return;
   }
-  playFrom(row);
-});
+  np.hidden = false;
+  els.npTitle.textContent = trackTitle(row);
+  els.npTime.textContent = `${fmtSec(audio.currentTime || 0)} / ${trackDur(audio)}`;
+  const playing = audio && !audio.paused;
+  document.getElementById('musicBtn').classList.toggle('global-playing', playing);
+}
 
 function stopPlayback() {
   const a = musicState.audio;
   if (a) { a.pause(); a.currentTime = 0; musicState.audio = null; }
   document.querySelectorAll('.track').forEach(r => r.classList.remove('playing', 'loading'));
   musicState.current = null;
+  updateNowPlaying();
 }
 
 function playFrom(row) {
@@ -348,9 +387,13 @@ function playFrom(row) {
   if (!audio.src) audio.src = audio.dataset.src;
   row.classList.add('loading');
   audio.addEventListener('error', () => row.classList.remove('loading', 'playing'), { once: true });
-  audio.play().then(() => row.classList.remove('loading')).catch(() => row.classList.remove('loading', 'playing'));
+  audio.play().then(() => {
+    row.classList.remove('loading');
+    updateNowPlaying();
+  }).catch(() => row.classList.remove('loading', 'playing'));
+  audio.addEventListener('timeupdate', () => { if (musicState.audio === audio) updateNowPlaying(); });
   audio.addEventListener('ended', () => { playNext(row); }, { once: true });
-  audio.addEventListener('pause', () => { if (musicState.audio === audio && audio.ended !== true) row.classList.remove('playing'); });
+  audio.addEventListener('pause', () => { if (musicState.audio === audio && audio.ended !== true) { row.classList.remove('playing'); updateNowPlaying(); } });
   musicState.audio = audio;
   musicState.current = row;
 }
@@ -366,10 +409,41 @@ function playNext(fromRow) {
     document.querySelectorAll('.track').forEach(r => r.classList.remove('playing', 'loading'));
     musicState.audio = null;
     musicState.current = null;
+    updateNowPlaying();
   }
 }
 
+// botão MÚSICA = play/pause global (1º clique inicia playlist; demais alternam pause/resume)
+function toggleGlobalPlayback() {
+  const audio = musicState.audio;
+  if (audio && !audio.paused) {
+    audio.pause();
+    updateNowPlaying();
+    return;
+  }
+  if (audio && audio.paused && audio.currentTime > 0 && !audio.ended) {
+    audio.play().then(updateNowPlaying);
+    return;
+  }
+  // nada tocando: inicia da primeira faixa
+  if (!musicState.tracks.length) return;
+  showSection('music');
+  const first = document.querySelector('.track');
+  if (first) playFrom(first);
+}
+
 /* ---- eventos ---- */
+els.musicList.addEventListener('click', e => {
+  const btn = e.target.closest('.track-play');
+  if (!btn) return;
+  const row = btn.closest('.track');
+  if (row.classList.contains('playing') || row.classList.contains('loading')) {
+    stopPlayback();
+    return;
+  }
+  playFrom(row);
+});
+
 els.search.addEventListener('input', () => {
   state.query = els.search.value;
   render();
@@ -416,7 +490,13 @@ els.modeToggle.addEventListener('click', e => {
   setClima(btn.dataset.mode);
 });
 
-els.sectionNav.forEach(btn => btn.addEventListener('click', () => showSection(btn.dataset.sec)));
+els.sectionNav.forEach(btn => btn.addEventListener('click', () => {
+  if (btn.dataset.sec === 'music') {
+    toggleGlobalPlayback();
+  } else {
+    showSection(btn.dataset.sec);
+  }
+}));
 
 els.themeBtn.addEventListener('click', () => {
   const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
