@@ -1,0 +1,46 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+*.egg-info/
+
+# Audio/Video (large binaries)
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.mp4
+*.mov
+*.mkv
+
+# Model weights
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Checkpoints
+checkpoints/
