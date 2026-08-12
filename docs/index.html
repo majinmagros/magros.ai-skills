@@ -42,18 +42,28 @@
       <button class="mt-btn active" data-mode="subtle">SUBTIL</button>
       <button class="mt-btn" data-mode="aggressive">AGRESSIVO</button>
     </div>
+    <div class="mode-toggle" id="animToggle" title="Animação das frases">
+      <span class="mt-label">ANIM</span>
+      <button class="mt-btn active" data-anim="A">A</button>
+      <button class="mt-btn" data-anim="B">B</button>
+      <button class="mt-btn" data-anim="C">C</button>
+    </div>
     <nav class="section-nav">
       <button class="sec-btn active" data-sec="skills">SKILLS</button>
       <button class="sec-btn" data-sec="music" id="musicBtn">MÚSICA</button>
     </nav>
     <div class="now-playing" id="nowPlaying" hidden>
-      <span class="np-title" id="npTitle"></span>
+      <div class="np-marquee">
+        <span class="np-title" id="npTitle"></span>
+        <span class="np-title np-dup" id="npTitleDup" aria-hidden="true"></span>
+      </div>
       <span class="np-time" id="npTime"></span>
     </div>
     <div class="track-controls" id="trackControls">
       <button class="tc-btn" id="prevBtn" title="Voltar música"><span class="tc-arrow prev"></span></button>
       <button class="tc-btn" id="nextBtn" title="Avançar música"><span class="tc-arrow next"></span></button>
     </div>
+    <button class="theme-btn" id="guideBtn" title="Guia de instalação 9router + opencode">GUIA</button>
     <button class="theme-btn" id="themeBtn" title="Alternar tema">◐</button>
   </div>
 </header>
@@ -81,10 +91,6 @@
 <main>
   <p class="status-line" id="statusLine">carregando catálogo...</p>
   <div class="grid" id="grid"></div>
-  <section id="musicSection" hidden>
-    <p class="status-line" id="musicStatus">carregando músicas...</p>
-    <div class="music-list" id="musicList"></div>
-  </section>
 </main>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden></div>
@@ -92,6 +98,15 @@
   <button class="detail-close" id="detailClose" aria-label="Fechar">✕</button>
   <div id="detailContent"></div>
 </aside>
+
+<div class="guide-overlay" id="guideOverlay" hidden>
+  <div class="guide-panel">
+    <button class="guide-close" id="guideClose" aria-label="Fechar">✕</button>
+    <h1 class="guide-title">GUIA 9ROUTER + OPENCODE</h1>
+    <p class="guide-sub">instalação · chaves · conexão</p>
+    <div class="guide-body" id="guideBody">carregando guia...</div>
+  </div>
+</div>
 
 <footer class="foot">
   <span>DARK STUDIO © 2026 · majinmagros</span>

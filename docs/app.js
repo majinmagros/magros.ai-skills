@@ -27,17 +27,20 @@ const els = {
   detailClose: document.getElementById('detailClose'),
   backdrop: document.getElementById('modalBackdrop'),
   modeToggle: document.getElementById('modeToggle'),
+  animToggle: document.getElementById('animToggle'),
   themeBtn: document.getElementById('themeBtn'),
   sectionNav: [...document.querySelectorAll('.sec-btn')],
-  musicSection: document.getElementById('musicSection'),
-  musicList: document.getElementById('musicList'),
-  musicStatus: document.getElementById('musicStatus'),
   nowPlaying: document.getElementById('nowPlaying'),
   npTitle: document.getElementById('npTitle'),
+  npTitleDup: document.getElementById('npTitleDup'),
   npTime: document.getElementById('npTime'),
+  guideBtn: document.getElementById('guideBtn'),
+  guideOverlay: document.getElementById('guideOverlay'),
+  guideBody: document.getElementById('guideBody'),
+  guideClose: document.getElementById('guideClose'),
 };
 
-let musicState = { tracks: [], current: null, audio: null };
+let musicState = { tracks: [], currentIndex: -1, audio: null };
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -149,10 +152,31 @@ function closeDetail() {
   els.backdrop.hidden = true;
 }
 
+async function openGuide() {
+  els.guideOverlay.hidden = false;
+  els.guideBody.innerHTML = 'carregando guia...';
+  try {
+    const res = await fetch('data/guia-9router.md');
+    const md = await res.text();
+    els.guideBody.innerHTML = marked.parse(md);
+    document.body.style.overflow = 'hidden';
+  } catch (err) {
+    els.guideBody.innerHTML = 'erro ao carregar o guia: ' + esc(err.message);
+  }
+}
+
+function closeGuide() {
+  els.guideOverlay.hidden = true;
+  document.body.style.overflow = '';
+}
+
 /* ---- three.js clima de fundo ---- */
-let scene, camera, renderer, composer, particles, skillSprites = [];
+let scene, camera, renderer, composer, particles, lyricSprites = [];
 let clock = new THREE.Clock();
 const COLORS = { subtle: 0x00ff66, aggressive: 0xff2244 };
+let animMode = 'A'; // A: frase central | B: anel de linhas | C: letreiro na onda
+let wordRotationTimer = 0;
+const WORD_ROTATION_INTERVAL = 4000;
 
 function initThree() {
   scene = new THREE.Scene();
@@ -164,7 +188,7 @@ function initThree() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   makeWave();
-  makeSkillSprites();
+  buildLyricAnim();
   animate();
 }
 
@@ -191,38 +215,124 @@ function makeWave() {
   scene.add(particles);
 }
 
-const TECHNO_WORDS = [
-  'buy it', 'use it', 'break it', 'fix it', 'trash it', 'change it', 'mail it',
-  'upgrade it', 'charge it', 'point it', 'zoom it', 'press it', 'snap it', 'work it',
-  'quick', 'erase it', 'write it', 'cut it', 'paste it', 'save it', 'load it', 'check it',
-  'rewrite it', 'plug it', 'play it', 'burn it', 'rip it', 'drag it', 'drop it', 'lock it',
-  'fill it', 'call it', 'find it', 'view it', 'code it', 'jam it', 'unlock it', 'surf it',
-  'scroll it', 'pause it', 'click it', 'cross it', 'crack it', 'switch it', 'update it',
+const TECHNO_LYRICS = [
+  'Buy it, use it, break it, fix it',
+  'Trash it, change it, mail, upgrade it',
+  'Charge it, point it, zoom it, press it',
+  'Snap it, work it, quick, erase it',
+  'Write it, cut it, paste it, save it',
+  'Load it, check it, quick, rewrite it',
+  'Plug it, play it, burn it, rip it',
+  'Drag and drop it, zip, unzip it',
+  'Lock it, fill it, call it, find it',
+  'View it, code it, jam, unlock it',
+  'Surf it, scroll it, pause it, click it',
+  'Cross it, crack it, switch, update it',
+  'Name it, read it, tune it, print it',
+  'Scan it, send it, fax, rename it',
+  'Touch it, bring it, pay it, watch it',
+  'Turn it, leave it, start, format it',
 ];
 
-let wordRotationTimer = 0;
-const WORD_ROTATION_INTERVAL = 3000; // 3 seconds
+const TECHNO_PHRASES = [
+  'Buy it', 'use it', 'break it', 'fix it',
+  'Trash it', 'change it', 'mail', 'upgrade it',
+  'Charge it', 'point it', 'zoom it', 'press it',
+  'Snap it', 'work it', 'quick', 'erase it',
+  'Write it', 'cut it', 'paste it', 'save it',
+  'Load it', 'check it', 'rewrite it',
+  'Plug it', 'play it', 'burn it', 'rip it',
+  'Drag and drop it', 'zip', 'unzip it',
+  'Lock it', 'fill it', 'call it', 'find it',
+  'View it', 'code it', 'jam', 'unlock it',
+  'Surf it', 'scroll it', 'pause it', 'click it',
+  'Cross it', 'crack it', 'switch', 'update it',
+  'Name it', 'read it', 'tune it', 'print it',
+  'Scan it', 'send it', 'fax', 'rename it',
+  'Touch it', 'bring it', 'pay it', 'watch it',
+  'Turn it', 'leave it', 'start', 'format it',
+];
 
-function makeSkillSprites() {
+function makeLyricTexture(line, w, h, fontSize) {
   const canvas = document.createElement('canvas');
-  canvas.width = 256; canvas.height = 48;
+  canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext('2d');
-  TECHNO_WORDS.forEach((word, i) => {
-    ctx.clearRect(0, 0, 256, 48);
-    ctx.font = '24px JetBrains Mono, monospace';
-    ctx.fillStyle = '#00ff66';
-    ctx.fillText(word, 8, 32);
-    const tex = new THREE.CanvasTexture(canvas);
-    const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.5 });
-    const sprite = new THREE.Sprite(mat);
-    const a = (i / TECHNO_WORDS.length) * Math.PI * 2;
-    const r = 22;
-    sprite.position.set(Math.cos(a) * r, (Math.random() - 0.5) * 8, Math.sin(a) * r);
-    sprite.scale.set(7, 1.3, 1);
-    sprite.userData = { angle: a, radius: r, speed: 0.06 + Math.random() * 0.08, wordIndex: i };
-    scene.add(sprite);
-    skillSprites.push(sprite);
+  ctx.clearRect(0, 0, w, h);
+  ctx.font = `${fontSize}px JetBrains Mono, monospace`;
+  ctx.fillStyle = '#ffffff';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(line, 16, h / 2);
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.needsUpdate = true;
+  return tex;
+}
+
+function disposeLyrics() {
+  lyricSprites.forEach(sp => {
+    scene.remove(sp);
+    if (sp.material.map) sp.material.map.dispose();
+    sp.material.dispose();
   });
+  lyricSprites = [];
+}
+
+function buildLyricAnim() {
+  disposeLyrics();
+  if (animMode === 'A') buildLyricCentral();
+  else if (animMode === 'B') buildLyricRing();
+  else buildLyricTicker();
+}
+
+/* Modo A — frase central: 1 sprite grande, troca a linha a cada 4s */
+function buildLyricCentral() {
+  const mat = new THREE.SpriteMaterial({
+    map: makeLyricTexture(TECHNO_LYRICS[0], 1400, 70, 42),
+    transparent: true, opacity: 0.8,
+  });
+  const sprite = new THREE.Sprite(mat);
+  sprite.position.set(0, 0, 0);
+  sprite.scale.set(34, 1.9, 1);
+  sprite.userData = { lineIdx: 0 };
+  scene.add(sprite);
+  lyricSprites.push(sprite);
+}
+
+/* Modo B — anel de sprites, cada um com UMA frase do Technologic, alternando */
+function buildLyricRing() {
+  const n = 8;
+  const step = Math.floor(TECHNO_PHRASES.length / n);
+  for (let i = 0; i < n; i++) {
+    const phraseIdx = (i * step) % TECHNO_PHRASES.length;
+    const mat = new THREE.SpriteMaterial({
+      map: makeLyricTexture(TECHNO_PHRASES[phraseIdx], 700, 56, 30),
+      transparent: true, opacity: 0.6,
+    });
+    const sprite = new THREE.Sprite(mat);
+    const a = (i / n) * Math.PI * 2;
+    sprite.position.set(Math.cos(a) * 22, (Math.random() - 0.5) * 8, Math.sin(a) * 22);
+    sprite.scale.set(16, 1.4, 1);
+    sprite.userData = { lineIdx: phraseIdx, angle: a, radius: 22, speed: 0.05 + Math.random() * 0.05 };
+    scene.add(sprite);
+    lyricSprites.push(sprite);
+  }
+}
+
+/* Modo C — letreiro: linhas passando ao longo do osciloscópio */
+function buildLyricTicker() {
+  const n = TECHNO_LYRICS.length;
+  for (let i = 0; i < n; i++) {
+    const mat = new THREE.SpriteMaterial({
+      map: makeLyricTexture(TECHNO_LYRICS[i], 900, 48, 26),
+      transparent: true, opacity: 0.35,
+    });
+    const sprite = new THREE.Sprite(mat);
+    const x = (i / n - 0.5) * 40;
+    sprite.position.set(x, 0, 1);
+    sprite.scale.set(14, 1.2, 1);
+    sprite.userData = { lineIdx: i, baseX: x, phase: i / n };
+    scene.add(sprite);
+    lyricSprites.push(sprite);
+  }
 }
 
 function setClima(mode) {
@@ -230,7 +340,7 @@ function setClima(mode) {
   document.body.setAttribute('data-clima', mode);
   const color = COLORS[mode];
   if (particles) particles.material.color.setHex(color);
-  skillSprites.forEach(sp => { sp.material.opacity = mode === 'aggressive' ? 0.9 : 0.5; });
+  lyricSprites.forEach(sp => { sp.material.color.setHex(color); });
   const mt = mode === 'aggressive'
     ? { color: 0xff2244, intensity: 2.2 }
     : { color: 0x00ff66, intensity: 1.0 };
@@ -243,25 +353,22 @@ function animate() {
   const tMs = t * 1000;
   const speed = state.clima === 'aggressive' ? 2.4 : 1;
 
-  // rotaciona palavras do Technologic
+  // rotaciona frases do Technologic (A e B trocam texto; C desloca na onda)
   if (tMs - wordRotationTimer >= WORD_ROTATION_INTERVAL) {
     wordRotationTimer = tMs;
-    skillSprites.forEach(sprite => {
-      const nextIndex = (sprite.userData.wordIndex + 1) % TECHNO_WORDS.length;
-      sprite.userData.wordIndex = nextIndex;
-      const canvas = document.createElement('canvas');
-      canvas.width = 256; canvas.height = 48;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, 256, 48);
-      ctx.font = '24px JetBrains Mono, monospace';
-      ctx.fillStyle = '#00ff66';
-      ctx.fillText(TECHNO_WORDS[nextIndex], 8, 32);
-      const tex = new THREE.CanvasTexture(canvas);
-      tex.needsUpdate = true;
-      if (sprite.material.map) sprite.material.map.dispose();
-      sprite.material.map = tex;
-      sprite.material.needsUpdate = true;
-    });
+    if (animMode === 'A' || animMode === 'B') {
+      lyricSprites.forEach(sprite => {
+        const list = animMode === 'A' ? TECHNO_LYRICS : TECHNO_PHRASES;
+        const w = animMode === 'A' ? 1400 : 700;
+        const fs = animMode === 'A' ? 42 : 30;
+        const next = (sprite.userData.lineIdx + 1) % list.length;
+        sprite.userData.lineIdx = next;
+        const oldMap = sprite.material.map;
+        sprite.material.map = makeLyricTexture(list[next], w, 70, fs);
+        sprite.material.needsUpdate = true;
+        if (oldMap) oldMap.dispose();
+      });
+    }
   }
 
   // osciloscópio: partículas em onda
@@ -282,12 +389,33 @@ function animate() {
     }
   }
 
-  skillSprites.forEach(sp => {
-    sp.userData.angle += sp.userData.speed * 0.004 * speed;
-    sp.position.x = Math.cos(sp.userData.angle) * sp.userData.radius;
-    sp.position.z = Math.sin(sp.userData.angle) * sp.userData.radius;
-    if (state.clima === 'aggressive') {
-      sp.position.y += Math.sin(t * 3 + sp.userData.angle) * 0.01;
+  lyricSprites.forEach(sp => {
+    const u = sp.userData;
+    if (animMode === 'A') {
+      // central: pulso leve
+      const pulse = 1 + Math.sin(t * 1.5) * 0.04;
+      sp.scale.set(34 * pulse, 1.9 * pulse, 1);
+      sp.material.opacity = 0.6 + Math.sin(t * 1.5) * 0.2;
+    } else if (animMode === 'B') {
+      // anel: orbita
+      u.angle += u.speed * 0.004 * speed;
+      sp.position.x = Math.cos(u.angle) * u.radius;
+      sp.position.z = Math.sin(u.angle) * u.radius;
+      if (state.clima === 'aggressive') {
+        sp.position.y += Math.sin(t * 3 + u.angle) * 0.01;
+      }
+    } else {
+      // letreiro: linhas deslizam da direita p/ esquerda sobre a onda
+      const wrap = 55;
+      const off = (u.phase + t * 0.02 * speed) % 1;
+      const x = (off - 0.5) * wrap;
+      sp.position.x = x;
+      sp.position.y = Math.sin(x * 0.35 + t * 1.6) * 1.6
+        + Math.sin(x * 0.9 - t * 2.2) * 0.7;
+      // fade nas bordas (esquerda some, direita entra)
+      const fadeIn = Math.min(1, (x + wrap / 2) / 8);
+      const fadeOut = Math.min(1, (wrap / 2 - x) / 8);
+      sp.material.opacity = 0.25 + Math.min(fadeIn, fadeOut) * 0.6;
     }
   });
 
@@ -315,19 +443,12 @@ document.addEventListener('visibilitychange', () => {
 /* ---- música (DnB) ---- */
 function showSection(name) {
   els.sectionNav.forEach(b => b.classList.toggle('active', b.dataset.sec === name));
-  const isMusic = name === 'music';
-  els.grid.hidden = isMusic;
-  els.musicSection.hidden = !isMusic;
-  document.querySelector('.controls').classList.toggle('hide', isMusic);
   return name;
 }
 
 async function loadMusic() {
   const res = await fetch('data/music.json');
-  const tracks = await res.json();
-  musicState.tracks = tracks;
-  els.musicStatus.textContent = `${tracks.length} faixas · ${Math.round(tracks.reduce((a, t) => a + t.seconds, 0) / 60)} min`;
-  renderMusic();
+  musicState.tracks = await res.json();
 }
 
 function fmtSec(s) {
@@ -335,107 +456,65 @@ function fmtSec(s) {
   return `${m}:${String(r).padStart(2, '0')}`;
 }
 
-function renderMusic() {
-  els.musicList.innerHTML = musicState.tracks.map(t => `
-    <article class="track" data-file="${esc(t.file)}">
-      <button class="track-play" data-play="${esc(t.file)}" title="Tocar"><span class="play-arrow"></span></button>
-      <div class="track-info">
-        <span class="track-title">${esc(t.title)}</span>
-        <span class="track-dur">${esc(t.duration)}</span>
-      </div>
-      <audio data-src="assets/music/${esc(t.file)}" preload="none"></audio>
-    </article>
-  `).join('');
-}
-
-function trackTitle(row) {
-  return row ? row.querySelector('.track-title').textContent : '';
-}
-
-function trackDur(audio) {
-  return audio && isFinite(audio.duration) ? fmtSec(audio.duration) : '';
-}
-
 function updateNowPlaying() {
-  const row = musicState.current;
-  const audio = musicState.audio;
   const np = els.nowPlaying;
+  const audio = musicState.audio;
+  const track = musicState.tracks[musicState.currentIndex];
   if (!np) return;
-  if (!row || !audio || audio.paused) {
+  if (!audio || !track || audio.paused) {
     np.hidden = true;
+    document.getElementById('musicBtn').classList.remove('global-playing');
     return;
   }
   np.hidden = false;
-  els.npTitle.textContent = trackTitle(row);
-  els.npTime.textContent = `${fmtSec(audio.currentTime || 0)} / ${trackDur(audio)}`;
-  const playing = audio && !audio.paused;
-  document.getElementById('musicBtn').classList.toggle('global-playing', playing);
+  els.npTitle.textContent = track.title;
+  if (els.npTitleDup) els.npTitleDup.textContent = track.title;
+  els.npTime.textContent = `${fmtSec(audio.currentTime || 0)} / ${track.duration}`;
+  document.getElementById('musicBtn').classList.add('global-playing');
 }
 
 function stopPlayback() {
   const a = musicState.audio;
   if (a) { a.pause(); a.currentTime = 0; musicState.audio = null; }
-  document.querySelectorAll('.track').forEach(r => r.classList.remove('playing', 'loading'));
-  musicState.current = null;
+  musicState.currentIndex = -1;
   updateNowPlaying();
 }
 
-function playFrom(row) {
+function playIndex(i) {
+  const track = musicState.tracks[i];
+  if (!track) return;
   stopPlayback();
-  row.classList.add('playing');
-  const audio = row.querySelector('audio');
-  if (!audio.src) audio.src = audio.dataset.src;
-  row.classList.add('loading');
-  audio.addEventListener('error', () => row.classList.remove('loading', 'playing'), { once: true });
-  audio.play().then(() => {
-    row.classList.remove('loading');
-    updateNowPlaying();
-  }).catch(() => row.classList.remove('loading', 'playing'));
-  audio.addEventListener('timeupdate', () => { if (musicState.audio === audio) updateNowPlaying(); });
-  audio.addEventListener('ended', () => { playNext(row); }, { once: true });
-  audio.addEventListener('pause', () => { if (musicState.audio === audio && audio.ended !== true) { row.classList.remove('playing'); updateNowPlaying(); } });
+  musicState.currentIndex = i;
+  const audio = new Audio(track.url || `assets/music/${track.file}`);
   musicState.audio = audio;
-  musicState.current = row;
+  audio.addEventListener('timeupdate', () => updateNowPlaying());
+  audio.addEventListener('ended', () => playNext());
+  audio.addEventListener('pause', () => { if (musicState.audio === audio && !audio.ended) updateNowPlaying(); });
+  audio.play().catch(() => { musicState.audio = null; musicState.currentIndex = -1; updateNowPlaying(); });
 }
 
-function playNext(fromRow) {
-  const rows = [...document.querySelectorAll('.track')];
-  const idx = rows.indexOf(fromRow);
-  const next = rows[idx + 1];
-  if (next) {
-    playFrom(next);
-    next.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+function playNext() {
+  const next = musicState.currentIndex + 1;
+  if (next < musicState.tracks.length) {
+    playIndex(next);
   } else {
-    document.querySelectorAll('.track').forEach(r => r.classList.remove('playing', 'loading'));
-    musicState.audio = null;
-    musicState.current = null;
-    updateNowPlaying();
+    stopPlayback();
   }
 }
 
 function skipNext() {
-  if (musicState.current) {
-    playNext(musicState.current);
-  } else {
-    const first = document.querySelector('.track');
-    if (first) playFrom(first);
+  if (musicState.currentIndex >= 0) {
+    playNext();
+  } else if (musicState.tracks.length) {
+    playIndex(0);
   }
 }
 
 function skipPrev() {
-  const rows = [...document.querySelectorAll('.track')];
-  if (musicState.current) {
-    const idx = rows.indexOf(musicState.current);
-    const prev = rows[idx - 1];
-    if (prev) {
-      playFrom(prev);
-      prev.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      playFrom(rows[0]);
-    }
-  } else {
-    const first = document.querySelector('.track');
-    if (first) playFrom(first);
+  if (musicState.currentIndex > 0) {
+    playIndex(musicState.currentIndex - 1);
+  } else if (musicState.tracks.length) {
+    playIndex(0);
   }
 }
 
@@ -453,23 +532,10 @@ function toggleGlobalPlayback() {
   }
   // nada tocando: inicia da primeira faixa
   if (!musicState.tracks.length) return;
-  showSection('music');
-  const first = document.querySelector('.track');
-  if (first) playFrom(first);
+  playIndex(0);
 }
 
 /* ---- eventos ---- */
-els.musicList.addEventListener('click', e => {
-  const btn = e.target.closest('.track-play');
-  if (!btn) return;
-  const row = btn.closest('.track');
-  if (row.classList.contains('playing') || row.classList.contains('loading')) {
-    stopPlayback();
-    return;
-  }
-  playFrom(row);
-});
-
 document.getElementById('prevBtn').addEventListener('click', skipPrev);
 document.getElementById('nextBtn').addEventListener('click', skipNext);
 
@@ -495,8 +561,13 @@ els.grid.addEventListener('keydown', e => {
 });
 els.detailClose.addEventListener('click', closeDetail);
 els.backdrop.addEventListener('click', closeDetail);
+els.guideBtn.addEventListener('click', openGuide);
+els.guideClose.addEventListener('click', closeGuide);
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeDetail();
+  if (e.key === 'Escape') {
+    if (!els.guideOverlay.hidden) { closeGuide(); return; }
+    closeDetail();
+  }
   if (e.key === '/' && document.activeElement !== els.search) {
     e.preventDefault();
     els.search.focus();
@@ -517,6 +588,18 @@ els.modeToggle.addEventListener('click', e => {
   els.modeToggle.querySelectorAll('.mt-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   setClima(btn.dataset.mode);
+});
+
+els.animToggle.addEventListener('click', e => {
+  const btn = e.target.closest('.mt-btn');
+  if (!btn) return;
+  els.animToggle.querySelectorAll('.mt-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  animMode = btn.dataset.anim;
+  try { localStorage.setItem('animMode', animMode); } catch (_) {}
+  buildLyricAnim();
+  const color = COLORS[state.clima];
+  lyricSprites.forEach(sp => sp.material.color.setHex(color));
 });
 
 els.sectionNav.forEach(btn => btn.addEventListener('click', () => {
@@ -551,7 +634,28 @@ els.themeBtn.addEventListener('click', () => {
 })();
 
 /* ---- boot ---- */
+function syncAnimModeUI() {
+  const btn = els.animToggle.querySelector(`[data-anim="${animMode}"]`);
+  if (btn) {
+    els.animToggle.querySelectorAll('.mt-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+}
+
+(function initAnimMode() {
+  const qs = new URLSearchParams(location.search).get('mode');
+  if (qs && ['A', 'B', 'C'].includes(qs)) {
+    animMode = qs;
+  } else {
+    try {
+      const saved = localStorage.getItem('animMode');
+      if (saved && ['A', 'B', 'C'].includes(saved)) animMode = saved;
+    } catch (_) {}
+  }
+})();
+
 Promise.all([load(), loadMusic()]).then(() => {
+  syncAnimModeUI();
   initThree();
   setClima('subtle');
 }).catch(err => {
