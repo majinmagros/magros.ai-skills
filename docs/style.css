@@ -125,9 +125,7 @@ body {
   border-color: var(--accent);
   box-shadow: 0 0 10px rgba(0,255,102,.15);
 }
-#animToggle .mt-btn[data-anim="A"].active { color: var(--accent); border-color: var(--accent); }
-#animToggle .mt-btn[data-anim="B"].active { color: var(--amber); border-color: var(--amber); }
-#animToggle .mt-btn[data-anim="C"].active { color: var(--red); border-color: var(--red); }
+#animToggle .mt-btn.active { color: var(--accent); border-color: var(--accent); }
 [data-clima="aggressive"] .mt-btn[data-mode="aggressive"].active {
   color: var(--red);
   border-color: var(--red);

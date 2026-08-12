@@ -173,10 +173,10 @@ function closeGuide() {
 /* ---- three.js clima de fundo ---- */
 let scene, camera, renderer, composer, particles, lyricSprites = [];
 let clock = new THREE.Clock();
-const COLORS = { subtle: 0x00ff66, aggressive: 0xff2244 };
+const COLORS = { subtle: 0x00ff66, aggressive: 0x00ff66 };
 let animMode = 'A'; // A: frase central | B: anel de linhas | C: letreiro na onda
 let wordRotationTimer = 0;
-const WORD_ROTATION_INTERVAL = 4000;
+const WORD_ROTATION_INTERVAL = 6000;
 
 function initThree() {
   scene = new THREE.Scene();
@@ -299,7 +299,7 @@ function buildLyricCentral() {
 
 /* Modo B — anel de sprites, cada um com UMA frase do Technologic, alternando */
 function buildLyricRing() {
-  const n = 8;
+  const n = 16;
   const step = Math.floor(TECHNO_PHRASES.length / n);
   for (let i = 0; i < n; i++) {
     const phraseIdx = (i * step) % TECHNO_PHRASES.length;
@@ -309,9 +309,9 @@ function buildLyricRing() {
     });
     const sprite = new THREE.Sprite(mat);
     const a = (i / n) * Math.PI * 2;
-    sprite.position.set(Math.cos(a) * 22, (Math.random() - 0.5) * 8, Math.sin(a) * 22);
-    sprite.scale.set(16, 1.4, 1);
-    sprite.userData = { lineIdx: phraseIdx, angle: a, radius: 22, speed: 0.05 + Math.random() * 0.05 };
+    sprite.position.set(Math.cos(a) * 26, (Math.random() - 0.5) * 10, Math.sin(a) * 26);
+    sprite.scale.set(14, 1.4, 1);
+    sprite.userData = { lineIdx: phraseIdx, angle: a, radius: 26, speed: 0.05 + Math.random() * 0.05 };
     scene.add(sprite);
     lyricSprites.push(sprite);
   }
@@ -342,7 +342,7 @@ function setClima(mode) {
   if (particles) particles.material.color.setHex(color);
   lyricSprites.forEach(sp => { sp.material.color.setHex(color); });
   const mt = mode === 'aggressive'
-    ? { color: 0xff2244, intensity: 2.2 }
+    ? { color: 0x00ff66, intensity: 2.2 }
     : { color: 0x00ff66, intensity: 1.0 };
   document.body.style.setProperty('--glow-color', `#${mt.color.toString(16).padStart(6, '0')}`);
 }
@@ -351,7 +351,7 @@ function animate() {
   requestAnimationFrame(animate);
   const t = clock.getElapsedTime();
   const tMs = t * 1000;
-  const speed = state.clima === 'aggressive' ? 2.4 : 1;
+  const speed = state.clima === 'aggressive' ? 4 : 1;
 
   // rotaciona frases do Technologic (A e B trocam texto; C desloca na onda)
   if (tMs - wordRotationTimer >= WORD_ROTATION_INTERVAL) {
