@@ -1,35 +1,35 @@
 ---
 name: superpowers
-description: Use when executing multi-step work in this project. Triggers on "tdd", "testes", "superpowers", "pequenas tarefas", "aprovaÃ§Ã£o", "break the task down", "verify first". Encodes the Superpowers workflow: break work into small verifiable tasks, write verification/tests first, get user approval before proceeding to each step.
+description: Use when executing multi-step work in this project. Triggers on "tdd", "testes", "superpowers", "pequenas tarefas", "aprovação", "break the task down", "verify first". Encodes the Superpowers workflow: break work into small verifiable tasks, write verification/tests first, get user approval before proceeding to each step.
 ---
 
-# Skill: Superpowers (TDD + pequenas tarefas + aprovaÃ§Ã£o)
+# Skill: Superpowers (TDD + pequenas tarefas + aprovação)
 
-Aplicar a TODA tarefa de mais de 1 passo neste projeto (mÃºsica ou cÃ³digo).
+Aplicar a TODA tarefa de mais de 1 passo neste projeto (música ou código).
 
 ## 1. Quebre em tarefas pequenas
 
 - Antes de agir, liste as tarefas com `todowrite`: cada item deve ser **pequeno,
-  verificÃ¡vel e ter saÃ­da concreta** (arquivo criado, comando que roda, nota >= X).
-- Nada de "etapas" gigantes. Se um passo nÃ£o der para verificar em minutos,
+  verificável e ter saída concreta** (arquivo criado, comando que roda, nota >= X).
+- Nada de "etapas" gigantes. Se um passo não der para verificar em minutos,
   quebre de novo.
 
-## 2. VerificaÃ§Ã£o primeiro (TDD leve)
+## 2. Verificação primeiro (TDD leve)
 
-- Para cÃ³digo: escrever o **verificador/expectativa ANTES** da implementaÃ§Ã£o
-  (ex.: `verify_loop.ps1` define os critÃ©rios antes de `gen_dnb.py` gerar).
-- Para Ã¡udio: o **Verificador** (`scripts\verify_loop.ps1`) define a nota mÃ­nima
-  antes do Criador rodar â€” jÃ¡ Ã© o fluxo do harness.
-- Sempre rode o verificador apÃ³s implementar. SÃ³ avance se ele passar
+- Para código: escrever o **verificador/expectativa ANTES** da implementação
+  (ex.: `verify_loop.ps1` define os critérios antes de `gen_dnb.py` gerar).
+- Para áudio: o **Verificador** (`scripts\verify_loop.ps1`) define a nota mínima
+  antes do Criador rodar — já é o fluxo do harness.
+- Sempre rode o verificador após implementar. Só avance se ele passar
   (ou registre o desvio explicitamente).
 
-## 3. AprovaÃ§Ã£o do usuÃ¡rio
+## 3. Aprovação do usuário
 
-- Entre cada bloco de trabalho com impacto (novo script, mudanÃ§a de estrutura,
-  mover/apagar arquivos, mudar prompts), **pare e peÃ§a aprovaÃ§Ã£o**.
-- NÃ£o execute o prÃ³ximo passo sem OK do usuÃ¡rio.
+- Entre cada bloco de trabalho com impacto (novo script, mudança de estrutura,
+  mover/apagar arquivos, mudar prompts), **pare e peça aprovação**.
+- Não execute o próximo passo sem OK do usuário.
 - Resumo curto do que foi feito + o que vem a seguir, sempre.
 
-## 4. CÃ­rculo TDD clÃ¡ssico (para cÃ³digo novo)
+## 4. Círculo TDD clássico (para código novo)
 
-RED (teste falha) â†’ GREEN (implementaÃ§Ã£o mÃ­nima passa) â†’ REFACTOR (limpa, repetindo teste).
+RED (teste falha) → GREEN (implementação mínima passa) → REFACTOR (limpa, repetindo teste).

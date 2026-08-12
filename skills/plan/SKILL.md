@@ -1,41 +1,41 @@
 ---
 name: plan
-description: Use when the user invokes /plan or explicitly asks for a plan/approval before building. Triggers on "/plan", "planeja antes de codar", "faz um plano", "aprovaÃ§Ã£o antes de mexer", "preciso de um plano". Turns a task into an approval-gated plan grounded in the actual files, then STOPS for approval before any code is written. Do not implement â€” only plan.
+description: Use when the user invokes /plan or explicitly asks for a plan/approval before building. Triggers on "/plan", "planeja antes de codar", "faz um plano", "aprovação antes de mexer", "preciso de um plano". Turns a task into an approval-gated plan grounded in the actual files, then STOPS for approval before any code is written. Do not implement — only plan.
 ---
 
-# Skill: /plan â€” Plano com aprovaÃ§Ã£o
+# Skill: /plan — Plano com aprovação
 
 Gere um plano **decision-complete** e **ancorado nos arquivos reais** do projeto.
-NÃƒO escreva cÃ³digo. Pare e peÃ§a aprovaÃ§Ã£o antes de qualquer execuÃ§Ã£o.
+NÃO escreva código. Pare e peça aprovação antes de qualquer execução.
 
 ## 1. Explore antes de planejar
 
-- Leia os arquivos relevantes (caminhos reais, nÃ£o suposiÃ§Ãµes).
+- Leia os arquivos relevantes (caminhos reais, não suposições).
 - Veja `git log --oneline -10` e o estado atual para entender o contexto.
-- Identifique as restriÃ§Ãµes reais (dependÃªncias, esquemas, API, convenÃ§Ãµes).
+- Identifique as restrições reais (dependências, esquemas, API, convenções).
 
 ## 2. Estrutura do plano
 
-Uma seÃ§Ã£o para cada item abaixo, com o conteÃºdo especÃ­fico do projeto:
+Uma seção para cada item abaixo, com o conteúdo específico do projeto:
 
-1. **Objetivo**: uma frase observÃ¡vel do que serÃ¡ alcanÃ§ado.
-2. **CritÃ©rios de sucesso**: como saberemos que ficou pronto.
-3. **DecisÃµes-chave**: cada decisÃ£o importante + a opÃ§Ã£o recomendada + o porquÃª.
-4. **Plano de trabalho em ordem**: passos numerados, unitÃ¡rios e verificÃ¡veis.
-5. **Plano de validaÃ§Ã£o**: testes/checagens que provam cada passo.
+1. **Objetivo**: uma frase observável do que será alcançado.
+2. **Critérios de sucesso**: como saberemos que ficou pronto.
+3. **Decisões-chave**: cada decisão importante + a opção recomendada + o porquê.
+4. **Plano de trabalho em ordem**: passos numerados, unitários e verificáveis.
+5. **Plano de validação**: testes/checagens que provam cada passo.
 
 ## 3. Regras
 
-- Nada de "fazer em geral": cada passo Ã© acionÃ¡vel e especÃ­fico do repo.
-- Se houver risco de intenÃ§Ã£o divergente, use `/grilling` depois â€” nÃ£o force no plano.
-- Termine SEMPRE perguntando: "Aprova, pede mudanÃ§as ou cancela?"
+- Nada de "fazer em geral": cada passo é acionável e específico do repo.
+- Se houver risco de intenção divergente, use `/grilling` depois — não force no plano.
+- Termine SEMPRE perguntando: "Aprova, pede mudanças ou cancela?"
 
-## 4. Pontos de atenÃ§Ã£o
+## 4. Pontos de atenção
 
-- Nomear decisÃµes faz o plano falhar num passo, nÃ£o no fim.
-- Objetivo vago â†’ exemplos de sucesso vagos â†’ aceite vago. Seja especÃ­fico.
+- Nomear decisões faz o plano falhar num passo, não no fim.
+- Objetivo vago → exemplos de sucesso vagos → aceite vago. Seja específico.
 
 ## 5. Explicit-only
 
-NÃ£o planeje por conta prÃ³pria em tarefas simples de implementar/corrigir/refatorar.
-SÃ³ rode o fluxo de plano quando o usuÃ¡rio pedir `/plan` ou um plano explÃ­cito.
+Não planeje por conta própria em tarefas simples de implementar/corrigir/refatorar.
+Só rode o fluxo de plano quando o usuário pedir `/plan` ou um plano explícito.

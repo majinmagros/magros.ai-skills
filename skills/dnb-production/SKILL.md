@@ -3,18 +3,18 @@ name: dnb-production
 description: Use when creating or refining Drum'n Bass tracks in this project. Triggers on "gerar musica", "drum and bass", "dnb", "loop engineering", "graph engineering", "gerar loops", "pipeline", "MusicGen", "orquestrador". Encodes the Harness workflow: Generation, Loop Engineering (iterate until score>=80), Graph Engineering (parallel verification), and Creator/Verifier separation.
 ---
 
-# Skill de ProduÃ§Ã£o DnB â€” Harness
+# Skill de Produção DnB — Harness
 
-Procedimento padronizado para criar ou refinar mÃºsicas Drum'n Bass originais em
+Procedimento padronizado para criar ou refinar músicas Drum'n Bass originais em
 `E:\Projeto DnB`, inspiradas em artistas, sem usar material protegido.
 
 ## 1. Leia o contexto antes de agir
 
-- Sempre leia `contexto\00-contexto-sessao.md` antes de iniciar uma tarefa de criaÃ§Ã£o.
-- Sempre leia `harness\RULES.md` (regras) e `harness\config.jsonc` (configuraÃ§Ã£o).
+- Sempre leia `contexto\00-contexto-sessao.md` antes de iniciar uma tarefa de criação.
+- Sempre leia `harness\RULES.md` (regras) e `harness\config.jsonc` (configuração).
 - Regra de ouro: **100% original, nunca stems/samples de artistas**.
 
-## 2. Fluxo de criaÃ§Ã£o (Harness)
+## 2. Fluxo de criação (Harness)
 
 Use o **orquestrador** `scripts\run_pipeline.ps1`:
 
@@ -25,50 +25,50 @@ powershell -ExecutionPolicy Bypass -File scripts\run_pipeline.ps1 [-elemento <no
 Ele aplica, nesta ordem:
 
 - **Graph Engineering**: gera `amostras` candidatos por elemento e os verifica **em paralelo**.
-- **Loop Engineering**: ranqueia por nota (0â€“100) e **itera** atÃ© `nota >= minNota`.
+- **Loop Engineering**: ranqueia por nota (0–100) e **itera** até `nota >= minNota`.
 
 ### Sem elementos-chave
 
-- `break_limpo`, `sub_bass`, `pad_atmosferico` â€” jÃ¡ listados em `harness\config.jsonc`.
+- `break_limpo`, `sub_bass`, `pad_atmosferico` — já listados em `harness\config.jsonc`.
 Bill adicionar novos: edite `harness\config.jsonc` (`elementos[]`) com `nome`, `duracao`,
 `amostras`, `prompts[]`.
 
-### Finalizar a mÃºsica
+### Finalizar a música
 
-ApÃ³s os elementos aprovados, o **compositor** Ã© `build_original.ps1` (instalado
+Após os elementos aprovados, o **compositor** é `build_original.ps1` (instalado
 manual ou via prompt). A masterpiece final vai em `export\`.
 
-## 3. CritÃ©rios do Verificador (`scripts\verify_loop.ps1`)
+## 3. Critérios do Verificador (`scripts\verify_loop.ps1`)
 
-| CritÃ©rio | Peso | Regra |
+| Critério | Peso | Regra |
 |---|---|---|
 | Clip | 30 | pico <= -1 dB = 30 |
-| BPM | 40 | â‰ˆ174 (Â±2)=40, Â±5=20 |
+| BPM | 40 | ≈174 (±2)=40, ±5=20 |
 | Energia | 30 | RMS -18..-10 = 30 |
 
-Nota >= 80 â†’ aprovado. Abaixo â†’ itera (max `maxIters`), depois entrega best-effort.
+Nota >= 80 → aprovado. Abaixo → itera (max `maxIters`), depois entrega best-effort.
 
-## 4. ParÃ¢metros do Criador (`scripts\gen_dnb.py`)
+## 4. Parâmetros do Criador (`scripts\gen_dnb.py`)
 
 - Modelo `facebook/musicgen-small`, device `cuda`
 - `temperature=0.6`, `cfg_coef=4.0`, `top_k=100` (som conservador)
-- Prompts: inglÃ©s, esboÃ§o estilo/sonoridade â€” **NUNCA nomes de artistas**.
-- PÃ³s-processa pico <= 0.95 (evita clip).
+- Prompts: inglés, esboço estilo/sonoridade — **NUNCA nomes de artistas**.
+- Pós-processa pico <= 0.95 (evita clip).
 
-## 5. TransiÃ§Ãµes (aplicar no compositor)
+## 5. Transições (aplicar no compositor)
 
 - Sincronia: 174 BPM, barra 1.37931 s, grid 0.086207 s.
-- TransiÃ§Ãµes suaves: crossfade de 1 barra, puis fades.
-- Evitar mudanÃ§as bruscas entre seÃ§Ãµes.
+- Transições suaves: crossfade de 1 barra, puis fades.
+- Evitar mudanças bruscas entre seções.
 
 ## 6. Ratifica-se
 
-- NÃ£o usar arquivos de `E:\Samples\Simula Library` nem `E:\Simula\**` como material.
-- NÃ£o usar prompts com nomes de artistas/mÃºsicas.
-- Deliverables em `public\ai_gerados\*` sÃ£o originais (gerado por IA).
+- Não usar arquivos de `E:\Samples\Simula Library` nem `E:\Simula\**` como material.
+- Não usar prompts com nomes de artistas/músicas.
+- Deliverables em `public\ai_gerados\*` são originais (gerado por IA).
 
-## 7. VerificaÃ§Ã£o final de qualidade
+## 7. Verificação final de qualidade
 
 Antes de entregar, garanta:
-- pico < -1 dB (sem clip), BPM â‰ˆ 174.
-- NÃ£o mostrar cÃ³digo sem o push/task; pergunta ao usuÃ¡rio antes de grandes mudanÃ§as.
+- pico < -1 dB (sem clip), BPM ≈ 174.
+- Não mostrar código sem o push/task; pergunta ao usuário antes de grandes mudanças.
