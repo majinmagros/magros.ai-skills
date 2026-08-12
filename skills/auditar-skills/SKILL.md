@@ -10,7 +10,7 @@ corrigir primeiro. Baseado na auditoria de skills via workflow paralelo.
 
 ## 1. Locais a varrer
 
-- **Global do usuário**: `~/.config/opencode/skills/` (ou `~\.config\opencode\skills\`).
+- **Global do usuário**: `~/.config/opencode/skills/` (Windows: `%USERPROFILE%\.config\opencode\skills\`).
 - **Do projeto**: `.claude/skills/` (ou `.opencode/skills/`).
 - Varredura: um arquivo `SKILL.md` por skill.
 
