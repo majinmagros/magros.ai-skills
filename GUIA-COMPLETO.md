@@ -198,7 +198,7 @@ Para ver todas as opções: `./install.sh --help`.
 #### `gauntlet-loop` — resultado "uau" com subagentes às cegas
 
 - **O que é**: arquitetura para entregas excepcionais (jogo, app, site, cena 3D).
-  Inspirada na técnica Gauntlet Loop do canal Maestros da IA.
+  Inspirada na técnica Gauntlet Loop.
 - **Como funciona**: quebra o projeto em muitos segmentos; cada um recebe um par
   **executor + verificador**. O verificador julga **ÀS CEGAS** (não vê como o
   executor criou) e só aprova se ficar **genuinamente impressionado** — "funciona"

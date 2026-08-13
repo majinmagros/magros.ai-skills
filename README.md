@@ -4,11 +4,18 @@ Biblioteca pessoal de skills de IA para agentes de código (Claude Code, OpenCod
 
 Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https://github.com/affaan-m/ECC), MIT) com um conjunto de **skills autorais** adicionadas por cima.
 
+> **Primeira vez aqui?** Veja o [Guia de Instalação para Iniciantes](GUIA-INSTALACAO-INICIANTES.md) —
+> passo a passo em linguagem simples, sem exigir experiência com tecnologia.
+>
+> A ideia central: a biblioteca funciona como um **"cérebro externo"** — procedimentos
+> detalhados que permitem até a modelos de IA mais simples produzir trabalho de
+> qualidade, com o conhecimento vivendo no seu computador.
+
 ## Conteúdo
 
-- **297 `SKILL.md`** no total.
+- **322 `SKILL.md`** no total.
 - **284** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **13 autorais** (em português ou originais):
+- **38 autorais** (em português ou originais):
 
 ### Autorais — núcleo
 
@@ -19,7 +26,7 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `grills` | Stress-test adversarial de planos e implementações (casos extremos, concorrência, carga) antes de finalizar. |
 | `score-loop` | Loop gerador-avaliador com nota mínima: gera em alto padrão, avalia contra rubrica, e refaz até atingir o corte. |
 
-### Autorais — derivadas da análise do canal Maestros da IA (2026-08-11)
+### Autorais — derivadas de análise de conteúdo (2026-08-11)
 
 | Skill | O que faz | Módulo no manifest |
 |-------|-----------|--------------------|
@@ -32,6 +39,18 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `graphify` | Transforma repositório grande/legado em grafo de conhecimento consultável; economiza tokens e responde como as coisas se conectam. | workflow-quality |
 | `criar-skill` | Autoragem de skills: processo de 4 etapas, Skill Creator/Record a Skill, estrutura de 3 camadas, as 4 regras dos engenheiros da Anthropic. | workflow-quality |
 | `automacao-deterministica` | Decide o que vira script (tarefa previsível A+B=C) vs o que fica na IA (criativo/raciocínio); com guardrails de manutenção e segurança. | operator-workflows |
+
+### Autorais — fluxo spec-driven (derivadas do [spec-kit](https://github.com/github/spec-kit), 2026-08-13)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `constituicao-projeto` | Cria/atualiza a constituição do projeto — princípios inegociáveis com versionamento semântico, Scope Guard e Sync Impact Report. | workflow-quality |
+| `clarificar` | Interrogatório de ambiguidade do spec: até 5 perguntas dirigidas (uma por vez, com recomendação justificada), respostas gravadas de volta no documento. | workflow-quality |
+| `checklist-requisitos` | "Unit tests for English": checklist que testa a qualidade dos requisitos (completude, clareza, consistência), não a implementação. Agente nunca marca [x]. | workflow-quality |
+| `auditoria-artefatos` | Análise read-only de consistência entre spec/plano/tarefas: duplicações, ambiguidades, lacunas de cobertura, violações de constituição, com severidade. | workflow-quality |
+| `convergencia` | Compara código atual com spec/plano/tarefas e anexa o trabalho restante como tarefas (append-only) até a implementação convergir. | workflow-quality |
+| `triagem-ideias` | Pipeline go/kill para ideias cruas (intake→pesquisa→definição→formato→decisão) antes de investir em especificar/codar. | workflow-quality |
+| `triagem-bug` | Avaliar→corrigir→provar com separação de papéis: reproduz e classifica antes de tocar no código, corrige causa-raiz, prova com execução. | workflow-quality |
 
 ### Redundância tratada (3 candidatas NÃO adicionadas)
 
@@ -46,20 +65,27 @@ Na comparação com as 288 skills do upstream, 3 candidatas foram **puladas** po
 ## Estrutura
 
 ```
-skills/          # todas as skills (284 ECC + 13 autorais)
+skills/          # todas as skills (284 ECC + 38 autorais)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
   grills/                  # autoral
   score-loop/              # autoral
-  humanizar-texto/         # autoral (Maestros da IA)
-  analise-concorrentes/    # autoral (Maestros da IA)
-  criar-campanha-visual/   # autoral (Maestros da IA)
-  pesquisa-social/         # autoral (Maestros da IA)
-  workflows/               # autoral (Maestros da IA)
-  routines/                # autoral (Maestros da IA)
-  graphify/                # autoral (Maestros da IA)
-  criar-skill/             # autoral (Maestros da IA)
-  automacao-deterministica/# autoral (Maestros da IA)
+  humanizar-texto/         # autoral
+  analise-concorrentes/    # autoral
+  criar-campanha-visual/   # autoral
+  pesquisa-social/         # autoral
+  workflows/               # autoral
+  routines/                # autoral
+  graphify/                # autoral
+  criar-skill/             # autoral
+  automacao-deterministica/# autoral
+  constituicao-projeto/    # autoral (spec-driven)
+  clarificar/              # autoral (spec-driven)
+  checklist-requisitos/    # autoral (spec-driven)
+  auditoria-artefatos/     # autoral (spec-driven)
+  convergencia/            # autoral (spec-driven)
+  triagem-ideias/          # autoral (spec-driven)
+  triagem-bug/             # autoral (spec-driven)
 scripts/         # ferramentas, incl. sync do upstream
 manifests/       # install-modules.json (módulos de instalação)
 .github/         # (workflows ECC removidos — não aplicáveis a repo de skills)
@@ -67,10 +93,10 @@ manifests/       # install-modules.json (módulos de instalação)
 
 ## Proveniência das skills autorais novas
 
-As 9 skills "Maestros da IA" foram derivadas da análise de **16 vídeos transcritos** do canal
-[Maestros da IA](https://www.youtube.com/@MaestrosdaIA) (yt-dlp auto-subs, 2026-08-11):
-relatório, scorecard de auditoria das skills e transcrições `.dedup.txt` ficam em
-`C:\projetos\maestros-da-ia\` (não fazem parte deste repo). Mapa transcrição→skill no `RELATORIO.md`.
+As 9 skills derivadas foram criadas a partir da análise de **16 vídeos transcritos**
+(yt-dlp auto-subs, 2026-08-11). Relatório, scorecard de auditoria das skills e
+transcrições `.dedup.txt` ficam em um diretório local fora deste repo.
+Mapa transcrição→skill no `RELATORIO.md`.
 
 ## Manutenção / atualização das skills
 

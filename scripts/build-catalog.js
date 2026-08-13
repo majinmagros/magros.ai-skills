@@ -16,12 +16,13 @@ const OUT_DIR = path.join(ROOT, 'docs', 'data');
 const OUT_FILE = path.join(OUT_DIR, 'skills.json');
 
 const AUTORAIS = new Set([
-  'analise-concorrentes','anti-hallucination','auditar-skills','automacao-deterministica',
-  'baixar-musica','clareza','conversa','coordenacao','criar-campanha-visual','criar-skill',
-  'criatividade','dnb-production','doctor','encontrar-skill','engenharia-de-grafos',
+  'analise-concorrentes','anti-hallucination','auditar-skills','auditoria-artefatos',
+  'automacao-deterministica','baixar-musica','checklist-requisitos','clareza','clarificar',
+  'constituicao-projeto','convergencia','conversa','coordenacao','criar-campanha-visual',
+  'criar-skill','criatividade','dnb-production','doctor','encontrar-skill','engenharia-de-grafos',
   'gauntlet-loop','goal','graph-engineering','graphify','grill-with-docs','grilling','grills',
   'humanizar-texto','pesquisa-social','plan','prompt-builder','routines','score-loop',
-  'superpowers','taste','workflows'
+  'superpowers','taste','triagem-bug','triagem-ideias','workflows'
 ]);
 
 function parseFrontmatter(content) {

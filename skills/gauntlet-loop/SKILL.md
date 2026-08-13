@@ -5,8 +5,8 @@ description: Use when a task needs an exceptional/impressive result and you can 
 
 # Skill: Gauntlet-loop — segmentação + verificadores às cegas
 
-Arquitetura para entrega de nível "uau" (inspirada na técnica Gauntlet Loop do
-canal Maestros da IA). Quebra a tarefa em muitos segmentos, dá a cada um um par
+Arquitetura para entrega de nível "uau" (inspirada na técnica Gauntlet Loop).
+Quebra a tarefa em muitos segmentos, dá a cada um um par
 executor + verificador, e só libera o que deixa o verificador IMPRESSIONADO.
 
 Custo alto: horas + centenas de milhares de tokens. Usar só quando o resultado
