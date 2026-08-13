@@ -565,7 +565,8 @@
         "skills/unified-notifications-ops",
         "skills/workspace-surface-audit",
         "skills/mailtrap-email-integration",
-        "skills/automacao-deterministica"
+        "skills/automacao-deterministica",
+        "skills/n8n-agentic-flows"
       ],
       "targets": [
         "claude",
