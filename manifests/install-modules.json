@@ -323,6 +323,7 @@
         "skills/plan-canvas",
         "skills/plankton-code-quality",
         "skills/production-audit",
+        "skills/skill-map",
         "skills/skill-scout",
         "skills/skill-stocktake",
         "skills/strategic-compact",
@@ -517,7 +518,8 @@
         "skills/marketing-campaign",
         "skills/analise-concorrentes",
         "skills/criar-campanha-visual",
-        "skills/humanizar-texto"
+        "skills/humanizar-texto",
+        "skills/plain-language-response"
       ],
       "targets": [
         "claude",

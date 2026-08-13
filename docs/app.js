@@ -451,7 +451,11 @@ function showSection(name) {
 async function loadMusic() {
   const res = await fetch('data/music.json');
   musicState.tracks = await res.json();
-  shuffledTracks = [...musicState.tracks].sort(() => Math.random() - 0.5);
+  shuffledTracks = [...musicState.tracks];
+  for (let i = shuffledTracks.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledTracks[i], shuffledTracks[j]] = [shuffledTracks[j], shuffledTracks[i]];
+  }
 }
 
 function fmtSec(s) {
@@ -462,7 +466,7 @@ function fmtSec(s) {
 function updateNowPlaying() {
   const np = els.nowPlaying;
   const audio = musicState.audio;
-  const track = musicState.tracks[musicState.currentIndex];
+  const track = shuffledTracks[musicState.currentIndex];
   if (!np) return;
   if (!audio || !track || audio.paused) {
     np.hidden = true;
@@ -535,7 +539,7 @@ function toggleGlobalPlayback() {
   }
   // nada tocando: inicia em faixa aleatória
   if (!shuffledTracks.length) return;
-  playIndex(0);
+  playIndex(Math.floor(Math.random() * shuffledTracks.length));
 }
 
 /* ---- eventos ---- */

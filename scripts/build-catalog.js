@@ -21,8 +21,8 @@ const AUTORAIS = new Set([
   'constituicao-projeto','convergencia','conversa','coordenacao','criar-campanha-visual',
   'criar-skill','criatividade','dnb-production','doctor','encontrar-skill','engenharia-de-grafos',
   'gauntlet-loop','goal','graph-engineering','graphify','grill-with-docs','grilling','grills',
-  'humanizar-texto','pesquisa-social','plan','prompt-builder','routines','score-loop',
-  'superpowers','taste','triagem-bug','triagem-ideias','workflows'
+  'humanizar-texto','pesquisa-social','plain-language-response','plan','prompt-builder','routines',
+  'score-loop','skill-map','superpowers','taste','triagem-bug','triagem-ideias','workflows'
 ]);
 
 function parseFrontmatter(content) {

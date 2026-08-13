@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-13T17:52:33.826Z",
+  "generatedAt": "2026-08-13T20:32:31.444Z",
   "repo": "majinmagros/magros.ai-skills",
   "counts": {
-    "total": 322,
-    "autorais": 38,
+    "total": 324,
+    "autorais": 40,
     "ecc": 284,
     "modules": 20
   },
@@ -2757,6 +2757,18 @@
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/pesquisa-social"
     },
     {
+      "id": "plain-language-response",
+      "name": "plain-language-response",
+      "description": "Use when the user wants final output simplified for fast understanding — short sentences, common words, and immediate explanation of any complex term before continuing. Avoid jargon, dense prose, and overexplained formatting.",
+      "origin": "autoral",
+      "module": "business-content",
+      "cost": "heavy",
+      "stability": "stable",
+      "defaultInstall": false,
+      "body": "# Plain Language Response\n\nUse this skill when the answer itself must be easy to read.\n\n## When to Activate\n\n- explaining a concept to a non-expert\n- giving a quick answer after analysis\n- rewriting output so it reads like natural human speech\n- user asks for ELI5, simples, direto, or linguagem clara\n\n## Rules\n\n- Use short sentences.\n- Prefer common words.\n- Explain any complex term right after first use.\n- Keep one idea per paragraph.\n- Use bullets only when they reduce effort.\n- Do not add jargon just to sound precise.\n- Do not pad with filler, caveats, or meta commentary.\n\n## Output Shape\n\n- answer first\n- then brief explanation if needed\n- then next step if useful\n\n## Anti-Overlap\n\n- Not `humanizar-texto`: that skill rewrites for tone and AI-slop removal.\n- Not `clareza`: that skill analyzes documents and organizes information.\n- Not `prompt-builder`: that skill improves prompts, not final answers.",
+      "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/plain-language-response"
+    },
+    {
       "id": "plan",
       "name": "plan",
       "description": "Use when the user invokes /plan or explicitly asks for a plan/approval before building. Triggers on \"/plan\", \"planeja antes de codar\", \"faz um plano\", \"aprovação antes de mexer\", \"preciso de um plano\". Turns a task into an approval-gated plan grounded in the actual files, then STOPS for approval before any code is written. Do not implement — only plan.",
@@ -3403,6 +3415,18 @@
       "defaultInstall": null,
       "body": "# skill-comply: Automated Compliance Measurement\n\nMeasures whether coding agents actually follow skills, rules, or agent definitions by:\n1. Auto-generating expected behavioral sequences (specs) from any .md file\n2. Auto-generating scenarios with decreasing prompt strictness (supportive → neutral → competing)\n3. Running `claude -p` and capturing tool call traces via stream-json\n4. Classifying tool calls against spec steps using LLM (not regex)\n5. Checking temporal ordering deterministically\n6. Generating self-contained reports with spec, prompts, and timelines\n\n## Supported Targets\n\n- **Skills** (`skills/*/SKILL.md`): Workflow skills like search-first, TDD guides\n- **Rules** (`rules/common/*.md`): Mandatory rules like testing.md, security.md, git-workflow.md\n- **Agent definitions** (`agents/*.md`): Whether an agent gets invoked when expected (internal workflow verification not yet supported)\n\n## When to Activate\n\n- User runs `/skill-comply <path>`\n- User asks \"is this rule actually being followed?\"\n- After adding new rules/skills, to verify agent compliance\n- Periodically as part of quality maintenance\n\n## Usage\n\n```bash\n# Full run\nuv run python -m scripts.run ~/.claude/rules/common/testing.md\n\n# Dry run (no cost, spec + scenarios only)\nuv run python -m scripts.run --dry-run ~/.claude/skills/search-first/SKILL.md\n\n# Custom models\nuv run python -m scripts.run --gen-model haiku --model sonnet <path>\n```\n\n## Key Concept: Prompt Independence\n\nMeasures whether a skill/rule is followed even when the prompt doesn't explicitly support it.\n\n## Report Contents\n\nReports are self-contained and include:\n1. Expected behavioral sequence (auto-generated spec)\n2. Scenario prompts (what was asked at each strictness level)\n3. Compliance scores per scenario\n4. Tool call timelines with LLM classification labels\n\n### Advanced (optional)\n\nFor users familiar with hooks, reports also include hook promotion recommendations for steps with low compliance. This is informational — the main value is the compliance visibility itself.",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/skill-comply"
+    },
+    {
+      "id": "skill-map",
+      "name": "skill-map",
+      "description": "Use when the user needs one entrypoint to navigate a large skill set — find the right skill by intent, compare similar skills, and choose keep / merge / cut / load paths before doing work.",
+      "origin": "autoral",
+      "module": "workflow-quality",
+      "cost": "medium",
+      "stability": "stable",
+      "defaultInstall": true,
+      "body": "# Skill Map\n\nUse this skill to route a request to the right existing skill fast.\n\n## When to Activate\n\n- the user says the skills repo feels too big or messy\n- the user wants one index for all skills\n- the user asks which skill fits a task\n- the user wants to compare similar skills before creating a new one\n- the user wants to know whether a new skill already exists in another form\n\n## Process\n\n1. Identify the user intent in one line.\n2. Search for existing skills with the same job.\n3. Compare overlap by scope, trigger, and output.\n4. Return one of:\n   - `use existing skill`\n   - `merge into existing skill`\n   - `new skill needed`\n5. If new skill is needed, name the missing gap in one sentence.\n\n## Output Shape\n\n- best matching skill(s)\n- nearest overlap\n- recommendation\n- gap, if any\n\n## Anti-Overlap\n\n- Not `skill-stocktake`: that skill audits quality of installed skills.\n- Not `config-gc`: that skill cleans dead config and stale entries.\n- Not `strategic-compact`: that skill suggests when to compact context.",
+      "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/skill-map"
     },
     {
       "id": "skill-scout",
