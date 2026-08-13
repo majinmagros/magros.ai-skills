@@ -138,6 +138,24 @@ remover peso morto acumulado.
 - `auditar-skills` (skill local equivalente, fora do repo): scorecard 0–100 com ranking pior→melhor.
 - `validate-no-personal-paths.js`: CI que impede caminhos absolutos pessoais em docs/skills/commands.
 
+## Autor
+
+**William Batista Gomes** — aka **magros Zapatero**
+
+Site Reliability Engineer e Software Engineer no Itaú Unibanco. Brasileiro, constrói
+bibliotecas de skills de IA, portfólios 3D interativos (Three.js + Rapier), e produz
+DJ sets sob o alias **Björk von Hohenheim** (Dark Techno, Hypnotic Techno, Minimal Tech,
+Drum & Bass, Dubstep). Trajetória de 1989 a 2026 — de contínuo de banco a SRE.
+
+- Portfólio: https://majinmagros.github.io/folio-2025/
+- GitHub: https://github.com/majinmagros
+- LinkedIn: https://www.linkedin.com/in/william-batista-gomes-601a2883/
+- YouTube: https://www.youtube.com/channel/UC5sg6RpxRIWdaPtyI7bznjg
+- X/Twitter: https://x.com/MagrosZapatero
+- Instagram: https://www.instagram.com/magroszapatero/
+
+Biografia completa em [`AUTHOR.md`](AUTHOR.md).
+
 ## Licença
 
 - Conteúdo herdado do ECC: **MIT** (ver `LICENSE` — mantido do upstream `affaan-m/ECC`).

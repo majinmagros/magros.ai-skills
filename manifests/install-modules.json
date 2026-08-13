@@ -359,7 +359,8 @@
         "skills/constituicao-projeto",
         "skills/convergencia",
         "skills/triagem-bug",
-        "skills/triagem-ideias"
+        "skills/triagem-ideias",
+        "skills/multi-perspective-convergence"
       ],
       "targets": [
         "claude",
