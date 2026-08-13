@@ -1,5 +1,11 @@
 # The Shorthand Guide to Everything Claude Code
 
+> **Multi-harness note:** Although this guide uses Claude Code in its examples
+> (it was originally written by the ECC author about his Claude Code workflow),
+> all patterns, hooks, skills, subagents, MCPs, and plugins described here work
+> across **all supported AI agents** — Claude Code, OpenCode, Codex, Cursor,
+> Gemini, and others — via ECC's cross-harness adapters.
+
 ![Header: Anthropic Hackathon Winner - Tips & Tricks for Claude Code](./assets/images/shortform/00-header.png)
 
 ---

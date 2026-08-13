@@ -36,7 +36,7 @@ Há duas formas: **sem programar** (copiar a pasta) ou **via instalador**.
 
 | Ferramenta | Onde colar (Windows) | Onde colar (Mac/Linux) |
 |---|---|---|
-| **Claude Code** (todas as máquinas) | `C:\Users\<você>\.claude\skills\` | `~/.claude/skills/` |
+| **Claude Code** | `C:\Users\<você>\.claude\skills\` | `~/.claude/skills/` |
 | **OpenCode** | `C:\Users\<você>\.config\opencode\skills\` | `~/.config/opencode/skills/` |
 | **Cursor** (por projeto) | `.cursor\skills\` no projeto | `.cursor/skills/` no projeto |
 | **Codex** | `C:\Users\<você>\.codex\skills\` | `~/.codex/skills/` |
@@ -59,7 +59,7 @@ cd magros.ai-skills
 # instala as dependências de validação (uma vez)
 npm install
 
-# instala TUDO no Claude Code (perfil full)
+# instala TUDO no seu agente de IA (perfil full)
 ./install.sh --target claude --profile full
 
 # só as autorais de produtividade no OpenCode

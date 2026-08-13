@@ -35,7 +35,7 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `criar-campanha-visual` | Gera campanha visual (imagem/vídeo/site) com orçamento fechado, roteia o modelo mais barato entre fornecedores, usa referências de marca e registra histórico (posse dos arquivos). | business-content |
 | `pesquisa-social` | Pesquisa sentimento/experiência real de usuários em plataformas sociais (meio-termo entre busca web e deep research); ranqueia por convergência. | research-apis |
 | `workflows` | Guia de decisão da escada chat→skill→subagente→agent team→workflow, com controle de custo (escopo fechado, Haiku nos workers, monitoramento). | agentic-patterns |
-| `routines` | Agenda sessões autônomas do Claude Code na nuvem (gatilho horário/webhook/GitHub), sem VPS nem computador ligado. | agentic-patterns |
+| `routines` | Agenda sessões autônomas do seu agente de IA na nuvem (gatilho horário/webhook/GitHub), sem VPS nem computador ligado. Funciona com Claude Code, OpenCode, Codex e outros. | agentic-patterns |
 | `graphify` | Transforma repositório grande/legado em grafo de conhecimento consultável; economiza tokens e responde como as coisas se conectam. | workflow-quality |
 | `criar-skill` | Autoragem de skills: processo de 4 etapas, Skill Creator/Record a Skill, estrutura de 3 camadas, as 4 regras dos engenheiros da Anthropic. | workflow-quality |
 | `automacao-deterministica` | Decide o que vira script (tarefa previsível A+B=C) vs o que fica na IA (criativo/raciocínio); com guardrails de manutenção e segurança. | operator-workflows |

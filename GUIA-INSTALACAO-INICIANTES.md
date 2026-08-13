@@ -35,7 +35,7 @@ que só abre o aplicativo certo para cada tarefa.
 |---|---|---|
 | **Git** | Baixa o repositório e mantém atualizado | https://git-scm.com/downloads |
 | **Node.js** (versão LTS) | Executa o instalador | https://nodejs.org |
-| **Claude Code** (ou outro agente) | Quem vai usar as skills | https://claude.ai/claude-code |
+| **Agente de IA** (Claude Code, OpenCode, Codex, Cursor...) | Quem vai usar as skills | https://github.com/majinmagros/magros.ai-skills#compatibilidade |
 
 Instale cada um clicando em "Next/Avançar" até o fim — as opções padrão estão corretas.
 
@@ -73,7 +73,7 @@ O instalador vai:
 > rodar o instalador de novo depois para adicionar ou remover módulos.
 
 ### Passo 4 — Conferir se funcionou
-Abra o Claude Code e pergunte algo como:
+Abra o seu agente de IA (Claude Code, OpenCode, Codex...) e pergunte algo como:
 
 ```
 Que skills você tem disponíveis?

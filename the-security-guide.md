@@ -1,6 +1,6 @@
 # The Shorthand Guide to Everything Agentic Security
 
-_everything claude code / research / security_
+_everything claude code / research / security — applicable across all supported AI agents (Claude Code, OpenCode, Codex, Cursor, Gemini, etc.)_
 
 ---
 

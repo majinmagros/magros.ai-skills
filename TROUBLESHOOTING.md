@@ -28,7 +28,7 @@ Common issues and solutions for Everything Claude Code (ECC) plugin.
 **Solutions:**
 ```bash
 # 1. Clear conversation history and start fresh
-# Use Claude Code: "New Chat" or Cmd/Ctrl+Shift+N
+# Use your AI agent: "New Chat" or equivalent shortcut
 
 # 2. Reduce file size before analysis
 head -n 100 large-file.log > sample.log
@@ -105,7 +105,7 @@ ls ~/.claude/plugins/cache/*/agents/
 ls ~/.claude/agents/  # Custom agents only
 
 # Reload plugin
-# Claude Code → Settings → Extensions → Reload
+# Your AI agent → Settings → Extensions → Reload (Claude Code) or equivalent in your harness
 ```
 
 ### Workflow Execution Hangs
@@ -179,7 +179,7 @@ ls -la ~/.claude/plugins/cache/*/hooks/
 bash ~/.claude/plugins/cache/*/hooks/pre-bash.sh <<< '{"command":"echo test"}'
 
 # Re-register hooks (if using plugin)
-# Disable and re-enable plugin in Claude Code settings
+# Disable and re-enable plugin in your AI agent settings
 ```
 
 ### Python/Node Version Mismatches
@@ -243,7 +243,7 @@ tmux attach -t dev
 
 **Causes:**
 - Marketplace cache not updated
-- Claude Code version incompatibility
+- Harness version incompatibility (Claude Code, OpenCode, Codex, etc.)
 - Corrupted plugin files
 - Local Claude setup was wiped or reset
 
@@ -264,14 +264,14 @@ mv ~/.claude/plugins/cache ~/.claude/plugins/cache.backup.$(date +%Y%m%d-%H%M%S)
 mkdir -p ~/.claude/plugins/cache
 
 # Reinstall from marketplace
-# Claude Code → Extensions → Everything Claude Code → Uninstall
-# Then reinstall from marketplace
+# Your AI agent → Extensions → Everything Claude Code → Uninstall
+# Then reinstall from marketplace (or use the equivalent in your harness)
 
 # If the issue is marketplace/account access, use ECC Tools billing/account recovery separately; do not use reinstall as a proxy for account recovery
 
-# Check Claude Code version
-claude --version
-# Requires Claude Code 2.0+
+# Check your harness version
+claude --version  # or equivalent for your agent
+# Requires Claude Code 2.0+ (or compatible version of your harness)
 
 # Manual install (if marketplace fails)
 git clone https://github.com/affaan-m/everything-claude-code.git
@@ -378,7 +378,7 @@ find ~/.claude/homunculus/projects -name "observations.jsonl" -size +10M -exec s
 
 ### High CPU Usage
 
-**Symptom:** Claude Code consuming 100% CPU
+**Symptom:** AI agent consuming 100% CPU
 
 **Causes:**
 - Infinite observation loops
@@ -393,7 +393,7 @@ top -o cpu | grep claude
 # Disable continuous learning temporarily
 touch ~/.claude/homunculus/disabled
 
-# Restart Claude Code
+# Restart your AI agent
 # Cmd/Ctrl+Q then reopen
 
 # Check observation file size

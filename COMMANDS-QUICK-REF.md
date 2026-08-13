@@ -1,6 +1,6 @@
 # Commands Quick Reference
 
-> 94 slash commands installed globally. Type `/` in any Claude Code session to invoke.
+> 94 slash commands installed globally. Type `/` in any supported AI agent session (Claude Code, OpenCode, Codex, Cursor, etc.) to invoke.
 
 ---
 
@@ -223,7 +223,7 @@ These lifecycle commands are also available through the `ecc` CLI.
 | `/pm2` | PM2 process manager initialisation |
 | `/setup-pm` | Configure package manager (npm / pnpm / yarn / bun) |
 | `/auto-update` | Pull the latest ECC repo changes and reinstall the current managed targets |
-| `/cost-report` | Generate a local Claude Code cost report from a cost-tracker SQLite database |
+| `/cost-report` | Generate a local cost report from a cost-tracker SQLite database (works across harnesses) |
 | `/security-scan` | Run AgentShield against agent, hook, MCP, permission, and secret surfaces |
 | `/jira` | Retrieve a Jira ticket, analyze requirements, update status, or add comments |
 | `/pr` | Create a GitHub PR from current branch with unpushed commits |

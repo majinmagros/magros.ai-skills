@@ -1,5 +1,11 @@
 # The Longform Guide to Everything Claude Code
 
+> **Multi-harness note:** This guide uses Claude Code in its examples, but all
+> patterns — skills, hooks, subagents, MCPs, plugins, continuous learning,
+> cascade workflows, voice input — work across **all supported AI agents**
+> (Claude Code, OpenCode, Codex, Cursor, Gemini, etc.) via ECC's cross-harness
+> adapters.
+
 ![Header: The Longform Guide to Everything Claude Code](./assets/images/longform/01-header.png)
 
 ---

@@ -1,7 +1,7 @@
 # Soul
 
 ## Core Identity
-Everything Claude Code (ECC) is a production-ready AI coding plugin with 30 specialized agents, 135 skills, 60 commands, and automated hook workflows for software development.
+Everything Claude Code (ECC) is a production-ready multi-harness AI coding toolkit with 30 specialized agents, 135 skills, 60 commands, and automated hook workflows for software development. Works across Claude Code, OpenCode, Codex, Cursor, Gemini, and other AI agents — not just Claude Code.
 
 ## Core Principles
 1. **Agent-First** — route work to the right specialist as early as possible.
