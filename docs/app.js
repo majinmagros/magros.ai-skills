@@ -41,8 +41,10 @@ const els = {
   guideClose: document.getElementById('guideClose'),
 };
 
-let musicState = { tracks: [], currentIndex: -1, audio: null };
+let musicState = { tracks: [], currentIndex: -1, audio: null, ytPlayer: null, ytReady: false };
 let shuffledTracks = [];
+let ytPlaylist = [];
+let ytShuffledTracks = [];
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -456,6 +458,20 @@ async function loadMusic() {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledTracks[i], shuffledTracks[j]] = [shuffledTracks[j], shuffledTracks[i]];
   }
+  
+  // Carregar playlist do YouTube
+  try {
+    const ytRes = await fetch('assets/playlist.json');
+    const ytData = await ytRes.json();
+    ytPlaylist = ytData.tracks || [];
+    ytShuffledTracks = [...ytPlaylist];
+    for (let i = ytShuffledTracks.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [ytShuffledTracks[i], ytShuffledTracks[j]] = [ytShuffledTracks[j], ytShuffledTracks[i]];
+    }
+  } catch (e) {
+    console.warn('Não foi possível carregar playlist do YouTube:', e);
+  }
 }
 
 function fmtSec(s) {
@@ -463,11 +479,40 @@ function fmtSec(s) {
   return `${m}:${String(r).padStart(2, '0')}`;
 }
 
+// YouTube IFrame API ready callback
+window.onYouTubeIframeAPIReady = function() {
+  musicState.ytReady = true;
+  console.log('YouTube IFrame API pronto');
+};
+
 function updateNowPlaying() {
   const np = els.nowPlaying;
   const audio = musicState.audio;
+  const ytPlayer = musicState.ytPlayer;
   const track = shuffledTracks[musicState.currentIndex];
+  const ytTrack = ytShuffledTracks[musicState.currentIndex];
+  
   if (!np) return;
+  
+  // Se estiver tocando YouTube
+  if (ytPlayer && ytTrack) {
+    const playerState = ytPlayer.getPlayerState();
+    if (playerState === -1 || playerState === 0 || playerState === 2 || playerState === 5) {
+      // Não tocando (unstarted, ended, paused, cued)
+      np.hidden = true;
+      document.getElementById('musicBtn').classList.remove('global-playing');
+      return;
+    }
+    np.hidden = false;
+    els.npTitle.textContent = ytTrack.title;
+    if (els.npTitleDup) els.npTitleDup.textContent = ytTrack.title;
+    const currentTime = ytPlayer.getCurrentTime() || 0;
+    els.npTime.textContent = `${fmtSec(currentTime)} / ${ytTrack.duration}`;
+    document.getElementById('musicBtn').classList.add('global-playing');
+    return;
+  }
+  
+  // Se estiver tocando áudio local
   if (!audio || !track || audio.paused) {
     np.hidden = true;
     document.getElementById('musicBtn').classList.remove('global-playing');
@@ -481,14 +526,73 @@ function updateNowPlaying() {
 }
 
 function stopPlayback() {
+  // Parar YouTube
+  if (musicState.ytPlayer) {
+    try {
+      musicState.ytPlayer.stopVideo();
+      musicState.ytPlayer.destroy();
+    } catch (e) {}
+    musicState.ytPlayer = null;
+  }
+  
+  // Parar áudio local
   const a = musicState.audio;
   if (a) { a.pause(); a.currentTime = 0; musicState.audio = null; }
+  
   musicState.currentIndex = -1;
   updateNowPlaying();
 }
 
 function playIndex(i) {
-  const track = shuffledTracks[i];
+  // Verificar se é YouTube ou local
+  const ytTrack = ytShuffledTracks[i];
+  const localTrack = shuffledTracks[i];
+  
+  // Se tem YouTube e a API está pronta, usar YouTube
+  if (ytTrack && musicState.ytReady) {
+    stopPlayback();
+    musicState.currentIndex = i;
+    
+    // Criar player do YouTube
+    musicState.ytPlayer = new YT.Player('yt-player-container', {
+      height: '0',
+      width: '0',
+      videoId: ytTrack.id,
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        disablekb: 1,
+        fs: 0,
+        modestbranding: 1,
+        rel: 0,
+        showinfo: 0
+      },
+      events: {
+        onReady: function(event) {
+          event.target.playVideo();
+          updateNowPlaying();
+        },
+        onStateChange: function(event) {
+          if (event.data === YT.PlayerState.ENDED) {
+            playNext();
+          } else if (event.data === YT.PlayerState.PAUSED) {
+            updateNowPlaying();
+          }
+          updateNowPlaying();
+        },
+        onError: function() {
+          console.error('Erro ao tocar vídeo do YouTube:', ytTrack.id);
+          musicState.ytPlayer = null;
+          musicState.currentIndex = -1;
+          updateNowPlaying();
+        }
+      }
+    });
+    return;
+  }
+  
+  // Fallback para áudio local
+  const track = localTrack;
   if (!track) return;
   stopPlayback();
   musicState.currentIndex = i;
@@ -502,7 +606,8 @@ function playIndex(i) {
 
 function playNext() {
   const next = musicState.currentIndex + 1;
-  if (next < shuffledTracks.length) {
+  const maxLen = Math.max(shuffledTracks.length, ytShuffledTracks.length);
+  if (next < maxLen) {
     playIndex(next);
   } else {
     stopPlayback();
@@ -512,7 +617,7 @@ function playNext() {
 function skipNext() {
   if (musicState.currentIndex >= 0) {
     playNext();
-  } else if (shuffledTracks.length) {
+  } else if (shuffledTracks.length || ytShuffledTracks.length) {
     playIndex(0);
   }
 }
@@ -520,13 +625,30 @@ function skipNext() {
 function skipPrev() {
   if (musicState.currentIndex > 0) {
     playIndex(musicState.currentIndex - 1);
-  } else if (shuffledTracks.length) {
+  } else if (shuffledTracks.length || ytShuffledTracks.length) {
     playIndex(0);
   }
 }
 
 // botão MÚSICA = play/pause global (1º clique inicia playlist; demais alternam pause/resume)
 function toggleGlobalPlayback() {
+  // Verificar YouTube primeiro
+  if (musicState.ytPlayer) {
+    const playerState = musicState.ytPlayer.getPlayerState();
+    if (playerState === 1) {
+      // Tocando - pausar
+      musicState.ytPlayer.pauseVideo();
+      updateNowPlaying();
+      return;
+    } else if (playerState === 2) {
+      // Pausado - retomar
+      musicState.ytPlayer.playVideo();
+      updateNowPlaying();
+      return;
+    }
+  }
+  
+  // Verificar áudio local
   const audio = musicState.audio;
   if (audio && !audio.paused) {
     audio.pause();
@@ -537,9 +659,11 @@ function toggleGlobalPlayback() {
     audio.play().then(updateNowPlaying);
     return;
   }
-  // nada tocando: inicia em faixa aleatória
-  if (!shuffledTracks.length) return;
-  playIndex(Math.floor(Math.random() * shuffledTracks.length));
+  
+  // nada tocando: inicia em faixa aleatória (preferir YouTube se disponível)
+  const maxLen = Math.max(shuffledTracks.length, ytShuffledTracks.length);
+  if (!maxLen) return;
+  playIndex(Math.floor(Math.random() * maxLen));
 }
 
 /* ---- eventos ---- */
@@ -666,6 +790,13 @@ Promise.all([load(), loadMusic()]).then(() => {
   syncAnimModeUI();
   initThree();
   setClima('subtle');
+  
+  // Atualizar nowPlaying periodicamente quando YouTube está tocando
+  setInterval(() => {
+    if (musicState.ytPlayer && musicState.ytPlayer.getPlayerState() === 1) {
+      updateNowPlaying();
+    }
+  }, 1000);
 }).catch(err => {
   els.status.textContent = 'erro ao carregar catálogo: ' + err.message;
 });
