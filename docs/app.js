@@ -42,6 +42,7 @@ const els = {
 };
 
 let musicState = { tracks: [], currentIndex: -1, audio: null };
+let shuffledTracks = [];
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -450,6 +451,7 @@ function showSection(name) {
 async function loadMusic() {
   const res = await fetch('data/music.json');
   musicState.tracks = await res.json();
+  shuffledTracks = [...musicState.tracks].sort(() => Math.random() - 0.5);
 }
 
 function fmtSec(s) {
@@ -482,7 +484,7 @@ function stopPlayback() {
 }
 
 function playIndex(i) {
-  const track = musicState.tracks[i];
+  const track = shuffledTracks[i];
   if (!track) return;
   stopPlayback();
   musicState.currentIndex = i;
@@ -496,7 +498,7 @@ function playIndex(i) {
 
 function playNext() {
   const next = musicState.currentIndex + 1;
-  if (next < musicState.tracks.length) {
+  if (next < shuffledTracks.length) {
     playIndex(next);
   } else {
     stopPlayback();
@@ -506,7 +508,7 @@ function playNext() {
 function skipNext() {
   if (musicState.currentIndex >= 0) {
     playNext();
-  } else if (musicState.tracks.length) {
+  } else if (shuffledTracks.length) {
     playIndex(0);
   }
 }
@@ -514,7 +516,7 @@ function skipNext() {
 function skipPrev() {
   if (musicState.currentIndex > 0) {
     playIndex(musicState.currentIndex - 1);
-  } else if (musicState.tracks.length) {
+  } else if (shuffledTracks.length) {
     playIndex(0);
   }
 }
@@ -531,8 +533,8 @@ function toggleGlobalPlayback() {
     audio.play().then(updateNowPlaying);
     return;
   }
-  // nada tocando: inicia da primeira faixa
-  if (!musicState.tracks.length) return;
+  // nada tocando: inicia em faixa aleatória
+  if (!shuffledTracks.length) return;
   playIndex(0);
 }
 
