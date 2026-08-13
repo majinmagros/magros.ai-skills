@@ -35,6 +35,7 @@ const els = {
   npTitleDup: document.getElementById('npTitleDup'),
   npTime: document.getElementById('npTime'),
   guideBtn: document.getElementById('guideBtn'),
+  guideIniBtn: document.getElementById('guideIniBtn'),
   guideOverlay: document.getElementById('guideOverlay'),
   guideBody: document.getElementById('guideBody'),
   guideClose: document.getElementById('guideClose'),
@@ -152,11 +153,11 @@ function closeDetail() {
   els.backdrop.hidden = true;
 }
 
-async function openGuide() {
+async function openGuide(file = 'data/guia-9router.md') {
   els.guideOverlay.hidden = false;
   els.guideBody.innerHTML = 'carregando guia...';
   try {
-    const res = await fetch('data/guia-9router.md');
+    const res = await fetch(file);
     const md = await res.text();
     els.guideBody.innerHTML = marked.parse(md);
     document.body.style.overflow = 'hidden';
@@ -561,7 +562,8 @@ els.grid.addEventListener('keydown', e => {
 });
 els.detailClose.addEventListener('click', closeDetail);
 els.backdrop.addEventListener('click', closeDetail);
-els.guideBtn.addEventListener('click', openGuide);
+els.guideBtn.addEventListener('click', () => openGuide());
+els.guideIniBtn.addEventListener('click', () => openGuide('data/guia-instalacao-iniciantes.md'));
 els.guideClose.addEventListener('click', closeGuide);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
