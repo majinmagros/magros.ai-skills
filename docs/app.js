@@ -485,6 +485,11 @@ window.onYouTubeIframeAPIReady = function() {
   console.log('YouTube IFrame API pronto');
 };
 
+// Garantir caso a API já tenha carregado antes do script app.js
+if (window.YT && window.YT.Player) {
+  musicState.ytReady = true;
+}
+
 function updateNowPlaying() {
   const np = els.nowPlaying;
   const audio = musicState.audio;
