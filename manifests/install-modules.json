@@ -421,7 +421,7 @@
     {
       "id": "security",
       "kind": "skills",
-      "description": "Security review and security-focused framework guidance.",
+      "description": "Security review, automated scanning (ZAP, GitLeaks, Bandit, OpenGrype), and security-focused framework guidance.",
       "paths": [
         "skills/defi-amm-security",
         "skills/django-security",
@@ -442,7 +442,8 @@
         "skills/healthcare-cdss-patterns",
         "skills/healthcare-emr-patterns",
         "skills/healthcare-eval-harness",
-        "skills/safety-guard"
+        "skills/safety-guard",
+        "skills/vibe-security-scanner"
       ],
       "targets": [
         "claude",
