@@ -849,11 +849,18 @@ async function dashRun(forcedSkillId) {
     setNode(node.id, 'run');
     if (idx > 0) { setEdge(idx === 2 ? 1 : idx === 3 ? 2 : idx - 1, 'run'); }
     setLadderStep(idx, 'step-run');
-    if (idx === 1) setLadderStep(1, 'MOTOR DE ROTEAMENTO'); 
+    if (idx === 1 && els.telmLadder) {
+      const items = els.telmLadder.querySelectorAll('li');
+      if (items[1]) items[1].textContent = "MOTOR DE ROTEAMENTO";
+    }
     emitSkillEvent('skill:step', { step: idx, skillId: skillName, module, status: 'run' });
     await sleep(dur);
     setNode(node.id, 'done');
     setLadderStep(idx, '');
+    if (idx === 1 && els.telmLadder) {
+      const items = els.telmLadder.querySelectorAll('li');
+      if (items[1]) items[1].textContent = DASH_LADDER[1];
+    }
     setEdge(idx === 2 ? 1 : idx === 3 ? 2 : idx === 4 ? 3 : idx, 'done');
   };
 
