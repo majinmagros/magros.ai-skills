@@ -108,6 +108,8 @@
     </div>
     <div class="dash-actions">
       <button class="dash-btn" id="dashPlay" title="Executar um fluxo de demonstração">▶ EXECUTAR</button>
+      <button class="dash-btn ghost" id="dashAuto" title="Executar automaticamente em loop">↻ AUTO</button>
+      <span class="auto-interval"><input type="number" id="dashAutoInterval" value="8" min="4" max="60" title="Intervalo em segundos">s</span>
       <button class="dash-btn ghost" id="dashClear" title="Limpar histórico local">LIMPAR</button>
     </div>
     <div class="dash-modes">
@@ -124,15 +126,37 @@
     </div>
     <div id="graphWrap" class="graph-wrap" hidden>
       <div class="graph-view" id="graphView">
-        <svg id="graphSvg" class="graph-svg" role="img" aria-label="Grafo de skills estilo Obsidian"></svg>
         <div class="graph-toolbar">
-          <button class="dash-btn ghost" id="graphReset" title="Recolocar os nós no layout inicial">↺ REDEFINIR</button>
+          <div class="graph-tools">
+            <div class="graph-filter" title="Mostrar todas as skills ou apenas as executadas">
+              <button class="gfilter active" data-filter="all" id="gfilterAll">TODAS</button>
+              <button class="gfilter" data-filter="exec" id="gfilterExec">EXECUTADAS</button>
+            </div>
+            <button class="dash-btn ghost" id="graphReset" title="Recolocar os nós no layout inicial">↺ REDEFINIR</button>
+          </div>
           <span class="graph-legend" id="graphLegend"></span>
         </div>
-        <p class="dash-hint">grafo interativo · arraste os nós · role para zoom · conexões entre módulos e skills</p>
+        <svg id="graphSvg" class="graph-svg" role="img" aria-label="Grafo de skills estilo Obsidian"></svg>
+        <p class="dash-hint">grafo interativo · arraste os nós · role para zoom · duplo clique para detalhes · conexões entre módulos e skills</p>
       </div>
     </div>
     <aside class="dash-telemetry" aria-label="Telemetria">
+      <div class="telm-block" id="detailPanel" hidden>
+        <div class="detail-panel-head">
+          <span class="telm-lbl" id="detailKindLabel">SKILL</span>
+          <button class="detail-x" id="detailCloseGraph" title="Voltar para o histórico">✕</button>
+        </div>
+        <nav class="detail-crumb" id="detailCrumb" aria-label="Trilha de navegação"></nav>
+        <p class="telm-skill" id="detailTitle">—</p>
+        <p class="detail-desc" id="detailDesc">—</p>
+        <div class="detail-run"><button class="dash-btn" id="detailRunBtn">▶ RODAR NO FLUXO</button></div>
+        <div class="detail-meta" id="detailMeta"></div>
+        <div class="detail-triggers" id="detailTriggers"></div>
+        <div class="detail-conns">
+          <span class="telm-lbl">CONEXÕES</span>
+          <ul class="detail-links" id="detailLinks"></ul>
+        </div>
+      </div>
       <div class="telm-block">
         <span class="telm-lbl">PROMPT</span>
         <p class="telm-prompt" id="telmPrompt">—</p>

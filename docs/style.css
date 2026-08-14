@@ -822,6 +822,81 @@ main {
 .g-link.active { stroke: var(--accent); }
 .g-link.trace { stroke: var(--amber); stroke-width: 1.5; }
 
+/* ---- auto-run ---- */
+.dash-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.dash-actions .auto-interval {
+  display: flex; align-items: center; gap: 4px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .1em; color: var(--dim);
+}
+.auto-interval input {
+  width: 44px;
+  font-family: var(--mono); font-size: 11px;
+  background: var(--panel2); color: var(--text);
+  border: 1px solid var(--border); padding: 5px 6px;
+}
+.dash-btn.active { color: var(--red); border-color: var(--red); box-shadow: 0 0 12px rgba(255,59,48,.15); }
+
+/* ---- filtro do grafo ---- */
+.graph-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.graph-filter { display: flex; gap: 2px; border: 1px solid var(--border); }
+.gfilter {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+  padding: 6px 10px; background: var(--panel2); color: var(--dim);
+  border: none; cursor: pointer; transition: all .2s;
+}
+.gfilter.active { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+.gfilter:hover { color: var(--text); }
+
+/* ---- pulsar quando skill é executada ---- */
+.g-node.pulse .g-node-body {
+  animation: g-pulse 1.3s ease-out;
+}
+.g-node.just-run .g-node-body {
+  stroke: var(--accent);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 12px var(--accent));
+}
+@keyframes g-pulse {
+  0% { stroke-width: 1; filter: drop-shadow(0 0 0 rgba(0,255,102,0)); }
+  40% { stroke-width: 4; filter: drop-shadow(0 0 18px var(--accent)); }
+  100% { stroke-width: 2.5; filter: drop-shadow(0 0 6px rgba(0,255,102,.4)); }
+}
+
+/* ---- painel de detalhe do grafo ---- */
+#detailPanel { border: 1px solid var(--accent); background: var(--panel2); padding: 12px; }
+.detail-panel-head { display: flex; align-items: center; justify-content: space-between; }
+.detail-x {
+  background: none; border: none; color: var(--dim);
+  font-size: 14px; cursor: pointer; padding: 2px 6px;
+}
+.detail-x:hover { color: var(--red); }
+.detail-crumb {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .06em; color: var(--dim);
+  padding: 6px 0; border-bottom: 1px solid var(--border); margin-bottom: 8px;
+}
+.crumb { background: none; border: none; color: var(--accent); font-family: var(--mono); font-size: 9px; cursor: pointer; padding: 0; }
+.crumb:hover { text-decoration: underline; }
+.crumb-cur { color: var(--text); font-weight: 700; }
+.crumb-sep { color: var(--dim); }
+.detail-desc { font-family: var(--mono); font-size: 10px; color: var(--dim); line-height: 1.5; word-break: break-word; }
+.detail-run { margin: 8px 0; }
+.detail-meta { font-family: var(--mono); font-size: 9px; color: var(--amber); letter-spacing: .05em; margin: 6px 0; }
+.detail-triggers { margin: 6px 0; }
+.detail-trig-txt { font-family: var(--mono); font-size: 10px; color: var(--dim); line-height: 1.45; }
+.detail-conns { margin-top: 10px; }
+.detail-links { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; max-height: 180px; overflow-y: auto; }
+.conn-btn {
+  width: 100%; text-align: left;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .05em;
+  color: var(--text); background: var(--bg);
+  border: 1px solid var(--border); padding: 6px 8px; cursor: pointer; transition: all .2s;
+}
+.conn-btn:hover { color: var(--accent); border-color: var(--accent); }
+.conn-btn.conn-mod { color: var(--accent); font-weight: 700; }
+
+.detail-run .dash-btn { width: 100%; }
+
 @media (max-width: 720px) {
   .masthead { flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px 16px; }
   .counters { gap: 14px; }

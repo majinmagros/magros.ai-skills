@@ -46,6 +46,8 @@ const els = {
   main: document.querySelector('main'),
   controls: document.querySelector('.controls'),
   dashPlay: document.getElementById('dashPlay'),
+  dashAuto: document.getElementById('dashAuto'),
+  dashAutoInterval: document.getElementById('dashAutoInterval'),
   dashClear: document.getElementById('dashClear'),
   dashModes: [...document.querySelectorAll('.dash-mode')],
   flowWrap: document.getElementById('dashFlowWrap'),
@@ -54,6 +56,18 @@ const els = {
   graphSvg: document.getElementById('graphSvg'),
   graphReset: document.getElementById('graphReset'),
   graphLegend: document.getElementById('graphLegend'),
+  gfilterAll: document.getElementById('gfilterAll'),
+  gfilterExec: document.getElementById('gfilterExec'),
+  detailPanel: document.getElementById('detailPanel'),
+  detailCloseGraph: document.getElementById('detailCloseGraph'),
+  detailKindLabel: document.getElementById('detailKindLabel'),
+  detailCrumb: document.getElementById('detailCrumb'),
+  detailTitle: document.getElementById('detailTitle'),
+  detailDesc: document.getElementById('detailDesc'),
+  detailMeta: document.getElementById('detailMeta'),
+  detailTriggers: document.getElementById('detailTriggers'),
+  detailLinks: document.getElementById('detailLinks'),
+  detailRunBtn: document.getElementById('detailRunBtn'),
   telmPrompt: document.getElementById('telmPrompt'),
   telmSkill: document.getElementById('telmSkill'),
   telmModel: document.getElementById('telmModel'),
@@ -201,6 +215,9 @@ function openDetail(id) {
   els.detailContent.innerHTML = `
     <h1>${esc(s.id)}</h1>
     <p class="detail-meta">${esc(meta)}</p>
+    <div class="detail-run">
+      <button class="dash-btn" data-run-skill="${esc(s.id)}">▶ RODAR ESTA SKILL NO FLUXO</button>
+    </div>
     <div class="install-cmd">
       <code>${esc(installCmd)}</code>
       <button class="copy-btn" data-copy="${esc(installCmd)}">COPIAR</button>
@@ -544,7 +561,7 @@ const DASH_LADDER = [
   'VERIFICAÇÃO — nota ≥ 80 · pico · bpm',
   'ENTREGA — deliverable',
 ];
-const dashState = { built: false, raf: 0, running: false, lastTs: 0, particles: [], edgeEls: {}, nodeEls: {}, clock: 0 };
+const dashState = { built: false, raf: 0, running: false, lastTs: 0, particles: [], edgeEls: {}, nodeEls: {}, clock: 0, currentSkill: null };
 const EXEC_KEY = 'skillstudio.exec';
 const LAYOUT_KEY = 'skillstudio.flowlayout';
 
@@ -800,14 +817,18 @@ function setLadderStep(i, cls) {
   });
 }
 
-async function dashRun() {
+async function dashRun(forcedSkillId) {
   if (dashState.running) return;
   dashState.running = true;
   els.dashPlay.disabled = true;
   const skills = (state.data && state.data.skills) || [];
-  const pick = skills.length ? skills[Math.floor(Math.random() * skills.length)] : null;
+  let pick = null;
+  if (forcedSkillId) pick = skills.find(s => s.id === forcedSkillId) || null;
+  if (!pick) pick = skills.length ? skills[Math.floor(Math.random() * skills.length)] : null;
   const skillName = pick ? pick.id : 'dnb-production';
+  const module = pick ? (pick.module || 'outros') : 'dnb';
   const prompt = pick ? (pick.description || '').slice(0, 90) : 'gerar faixa original de drum and bass, 174 bpm';
+  dashState.currentSkill = skillName;
   els.telmPrompt.textContent = prompt;
   els.telmSkill.textContent = skillName;
   els.telmModel.textContent = '9router/my-combo';
@@ -815,12 +836,14 @@ async function dashRun() {
   els.telmTok.textContent = '—';
   setAllNodes(''); setAllEdges(''); setLadderStep(-1);
   setStatus('run', 'EXECUTANDO');
+  emitSkillEvent('skill:start', { skillId: skillName, module, prompt, forced: !!forcedSkillId });
 
   const step = async (idx, dur) => {
     const node = DASH_NODES[idx];
     setNode(node.id, 'run');
     if (idx > 0) { setEdge(idx === 2 ? 1 : idx === 3 ? 2 : idx - 1, 'run'); }
     setLadderStep(idx, 'step-run');
+    emitSkillEvent('skill:step', { step: idx, skillId: skillName, module, status: 'run' });
     await sleep(dur);
     setNode(node.id, 'done');
     setLadderStep(idx, '');
@@ -829,7 +852,9 @@ async function dashRun() {
   await step(0, 500);                       // prompt
   await step(1, 600);                       // roteamento
   setEdge(2, 'run'); await step(2, 600);    // skill → subagente
+  emitSkillEvent('skill:step', { step: 2, skillId: skillName, module, status: 'activate' });
   setNode('subagente', 'run'); setEdge(3, 'run'); setLadderStep(3, 'step-run');
+  emitSkillEvent('skill:step', { step: 3, skillId: skillName, module, status: 'activate' });
   await sleep(700);
   setNode('subagente', 'done');
   setEdge(4, 'run'); await step(4, 700);    // verificação
@@ -838,6 +863,7 @@ async function dashRun() {
   setEdge(5, 'run'); await step(5, 500);    // entrega
   setStatus('ok', 'CONCLUÍDO');
   setAllEdges('done');
+  emitSkillEvent('skill:end', { skillId: skillName, module, prompt });
   dashLogEntry('run', skillName, prompt);
   dashState.running = false;
   els.dashPlay.disabled = false;
@@ -873,9 +899,17 @@ const graphState = {
   active: null, animRaf: 0, alpha: 1, ticks: 0,
 };
 
+/* ---- barramento de eventos (fluxo ↔ grafo ↔ telemetria) ---- */
+const SkillStudioBus = new EventTarget();
+function emitSkillEvent(type, detail) {
+  SkillStudioBus.dispatchEvent(new CustomEvent(type, { detail }));
+}
+
 function nodeRadius(n) { return n.kind === 'module' ? 24 : 10; }
 
 function graphData() {
+  const filtered = graphDataFiltered();
+  if (filtered) return filtered;
   const skills = (state.data && state.data.skills) || [];
   const modMap = {};
   const modules = [];
@@ -954,6 +988,7 @@ function initGraphView() {
     buildGraphLegend(GRAPH_COLORS);
     attachGraphDrag();
     attachGraphZoom();
+    initDetailPanelHandlers();
     els.graphReset.addEventListener('click', resetGraphLayout);
   }
   const view = els.graphWrap && !els.graphWrap.hidden;
@@ -1008,6 +1043,7 @@ function buildGraphSvg() {
   });
 
   graphState.active = graphState.nodes.length ? graphState.nodes[0].id : null;
+  graphState.built = true;
   graphTick();
 }
 
@@ -1292,6 +1328,318 @@ function setGraphActive(id) {
   graphTick();
 }
 
+/* ---- destaque em tempo real (fluxo → grafo) ---- */
+function highlightGraphNode(skillId, module) {
+  const ids = ['sk:' + skillId, 'mod:' + (module || 'outros')];
+  ids.forEach(id => {
+    const el = graphState.els.nodes[id];
+    if (!el) return;
+    el.g.classList.add('pulse');
+    setTimeout(() => el.g.classList.remove('pulse'), 2600);
+  });
+  // reaquece leve para dar vida ao nó destacado
+  graphState.alpha = Math.max(graphState.alpha, 0.6);
+  graphTick();
+}
+
+SkillStudioBus.addEventListener('skill:start', e => {
+  const { skillId, module } = e.detail;
+  if (graphState.built) highlightGraphNode(skillId, module);
+});
+SkillStudioBus.addEventListener('skill:end', e => {
+  const { skillId } = e.detail;
+  graphState.nodes.forEach(n => {
+    const el = graphState.els.nodes[n.id];
+    if (el && n.id === 'sk:' + skillId) el.g.classList.add('just-run');
+  });
+  setTimeout(() => {
+    graphState.nodes.forEach(n => {
+      const el = graphState.els.nodes[n.id];
+      if (el && n.id === 'sk:' + skillId) el.g.classList.remove('just-run');
+    });
+  }, 2000);
+});
+
+/* ---- painel de detalhe do grafo (duplo clique + navegação recursiva) ---- */
+const DETAIL_KEY = 'skillstudio.graphDetail';
+const detailState = { trail: [] };
+
+function findSkillById(id) {
+  return (state.data && state.data.skills.find(s => s.id === id)) || null;
+}
+function execSkillsSet() {
+  const set = new Set();
+  try {
+    const arr = JSON.parse(localStorage.getItem(EXEC_KEY) || '[]');
+    arr.forEach(e => { if (e.skill) set.add(e.skill); });
+  } catch (_) {}
+  if (dashState && dashState.currentSkill) set.add(dashState.currentSkill);
+  return set;
+}
+function skillIsExecuted(id) {
+  return execSkillsSet().has(id);
+}
+function siblingSkills(skill) {
+  if (!skill || !skill.module) return [];
+  return (state.data && state.data.skills
+    .filter(s => s.module === skill.module && s.id !== skill.id)
+    .slice(0, 8)) || [];
+}
+
+function openGraphDetail(skillId, pushTrail = true) {
+  window.__ogd = (window.__ogd || 0) + 1;
+  const s = findSkillById(skillId);
+  if (!s) { window.__ogdRet = 'no skill'; return; }
+  if (pushTrail) {
+    const last = detailState.trail[detailState.trail.length - 1];
+    if (last !== s.id) {
+      detailState.trail.push(s.id);
+      detailState.trail = detailState.trail.slice(-6);
+    }
+  }
+  try { localStorage.setItem(DETAIL_KEY, s.id); } catch (_) {}
+
+  els.detailKindLabel.textContent = s.origin === 'autoral' ? 'SKILL AUTORAL' : 'SKILL ECC';
+  els.detailTitle.textContent = s.id;
+  els.detailDesc.textContent = s.description || 'sem descrição';
+  els.detailRunBtn.hidden = false;
+  els.detailRunBtn.dataset.skill = s.id;
+  const meta = [
+    s.module ? `MÓDULO: ${s.module}` : '',
+    s.cost ? `CUSTO: ${s.cost}` : '',
+    s.stability ? `ESTABILIDADE: ${s.stability}` : '',
+    skillIsExecuted(s.id) ? '● EXECUTADA' : '○ NUNCA EXECUTADA',
+  ].filter(Boolean).join(' · ');
+  els.detailMeta.innerHTML = esc(meta);
+
+  const triggers = s.triggers || [];
+  els.detailTriggers.innerHTML = triggers.length
+    ? `<span class="telm-lbl">GATILHOS</span><p class="detail-trig-txt">${esc(triggers.slice(0, 3).join(' · '))}</p>`
+    : '';
+
+  // conexões: módulo pai + irmãs
+  const conns = [];
+  if (s.module) {
+    const modNode = graphState.nodes.find(n => n.id === 'mod:' + s.module);
+    if (modNode) conns.push({ id: 'mod:' + s.module, label: 'MÓDULO · ' + s.module.toUpperCase(), kind: 'module', isModule: true });
+  }
+  siblingSkills(s).forEach(sk => conns.push({ id: sk.id, label: sk.id, kind: 'skill' }));
+  els.detailLinks.innerHTML = conns.length ? conns.map(c => `
+    <li>
+      <button class="conn-btn ${c.isModule ? 'conn-mod' : ''}" data-conn="${esc(c.id)}" data-kind="${c.kind}">
+        ${esc(c.label)}
+      </button>
+    </li>`).join('') : '<li>sem conexões diretas no grafo atual</li>';
+
+  els.detailCrumb.innerHTML = detailState.trail.map((id, i) =>
+    i === detailState.trail.length - 1
+      ? `<span class="crumb-cur">${esc(id)}</span>`
+      : `<button class="crumb" data-crumb="${i}">${esc(id)}</button>`
+  ).join(' <span class="crumb-sep">›</span> ');
+
+  els.detailPanel.hidden = false;
+  window.__ogdHiddenSet = true;
+  if (graphState.built) {
+    setGraphActive('sk:' + s.id);
+    highlightGraphNode(s.id, s.module);
+  }
+  dashLogEntry('view', s.id, (s.description || '').slice(0, 60));
+  window.__ogdDone = true;
+}
+function closeGraphDetail() {
+  detailState.trail = [];
+  els.detailPanel.hidden = true;
+  try { localStorage.removeItem(DETAIL_KEY); } catch (_) {}
+  if (graphState.built) setGraphActive(graphState.nodes.length ? graphState.nodes[0].id : null);
+}
+function jumpGraphCrumb(i) {
+  detailState.trail = detailState.trail.slice(0, i + 1);
+  const id = detailState.trail[i];
+  if (id && id.startsWith('mod:')) {
+    openModuleDetail(id.slice(4), false);
+  } else {
+    openGraphDetail(id, false);
+  }
+}
+function openModuleDetail(module, pushTrail = true) {
+  const modNode = graphState.nodes.find(n => n.id === 'mod:' + module);
+  if (!modNode) return;
+  if (pushTrail) {
+    const last = detailState.trail[detailState.trail.length - 1];
+    if (last !== 'mod:' + module) {
+      detailState.trail.push('mod:' + module);
+      detailState.trail = detailState.trail.slice(-6);
+    }
+  }
+  try { localStorage.setItem(DETAIL_KEY, 'mod:' + module); } catch (_) {}
+
+  const skills = (state.data && state.data.skills.filter(s => s.module === module)) || [];
+  els.detailKindLabel.textContent = 'MÓDULO';
+  els.detailTitle.textContent = module.toUpperCase();
+  els.detailDesc.textContent = `${skills.length} skills neste módulo. Clique em uma para ver os detalhes.`;
+  els.detailRunBtn.hidden = true;
+  els.detailMeta.innerHTML = '';
+  els.detailTriggers.innerHTML = '';
+  els.detailLinks.innerHTML = skills.slice(0, 10).map(s => `
+    <li><button class="conn-btn" data-conn="${esc(s.id)}" data-kind="skill">${esc(s.id)}</button></li>`).join('') ||
+    '<li>sem skills neste módulo</li>';
+
+  els.detailCrumb.innerHTML = detailState.trail.map((id, i) =>
+    i === detailState.trail.length - 1
+      ? `<span class="crumb-cur">${esc(id)}</span>`
+      : `<button class="crumb" data-crumb="${i}">${esc(id)}</button>`
+  ).join(' <span class="crumb-sep">›</span> ');
+
+  els.detailPanel.hidden = false;
+  if (graphState.built) {
+    setGraphActive('mod:' + module);
+    highlightGraphNode('', module);
+  }
+}
+
+els.detailCloseGraph.addEventListener('click', closeGraphDetail);
+els.detailRunBtn.addEventListener('click', () => {
+  const id = els.detailRunBtn.dataset.skill;
+  if (!id) return;
+  runSkillFromCard(id);
+});
+els.detailLinks.addEventListener('click', e => {
+  const btn = e.target.closest('.conn-btn');
+  if (!btn) return;
+  const id = btn.dataset.conn;
+  const kind = btn.dataset.kind;
+  if (kind === 'module' || id.startsWith('mod:')) openModuleDetail(id.replace('mod:', ''), true);
+  else openGraphDetail(id, true);
+});
+els.detailCrumb.addEventListener('click', e => {
+  const crumb = e.target.closest('.crumb');
+  if (crumb) jumpGraphCrumb(Number(crumb.dataset.crumb));
+});
+
+function initDetailPanelHandlers() {
+  // duplo clique no nó do grafo abre o painel (compatível com drag)
+  els.graphSvg.addEventListener('dblclick', e => {
+    window.__dblDebug = (window.__dblDebug || 0) + 1;
+    const g = e.target.closest('.g-node');
+    if (!g) return;
+    const id = g.getAttribute('data-id');
+    window.__dblTarget = id;
+    try {
+      if (id.startsWith('mod:')) openModuleDetail(id.slice(4), true);
+      else openGraphDetail(id, true);
+    } catch (err) {
+      window.__dblError = err.message + ' @ ' + (err.stack || '').split('\n')[1];
+    }
+    window.__dblAfter = { s: id, found: !!findSkillById(id.slice(3)), stateData: !!(state && state.data), nSk: state && state.data ? state.data.skills.length : -1, hidden: els.detailPanel.hidden, elId: els.detailPanel && els.detailPanel.id, sameAsDoc: els.detailPanel === document.getElementById('detailPanel'), runBtn: !!els.detailRunBtn };
+  });
+}
+
+/* ---- auto-run (execução contínua) ---- */
+const AUTO_KEY = 'skillstudio.auto';
+const AUTO_INTERVAL_KEY = 'skillstudio.autoInterval';
+let autoState = { on: false, timer: null, running: false };
+
+function syncAutoUI() {
+  els.dashAuto.classList.toggle('active', autoState.on);
+  els.dashAuto.textContent = autoState.on ? '■ PARAR' : '↻ AUTO';
+}
+function autoLoop() {
+  if (!autoState.on) return;
+  if (dashState.running) {
+    autoState.timer = setTimeout(autoLoop, 400);
+    return;
+  }
+  dashRun();
+  const intervalMs = Math.max(4, parseInt(els.dashAutoInterval.value || '8', 10)) * 1000;
+  autoState.timer = setTimeout(autoLoop, intervalMs);
+}
+function toggleAutoRun() {
+  autoState.on = !autoState.on;
+  try { localStorage.setItem(AUTO_KEY, autoState.on ? '1' : '0'); } catch (_) {}
+  syncAutoUI();
+  if (autoState.on) {
+    if (dashState.running) return;
+    dashRun();
+    const intervalMs = Math.max(4, parseInt(els.dashAutoInterval.value || '8', 10)) * 1000;
+    autoState.timer = setTimeout(autoLoop, intervalMs);
+  } else {
+    clearTimeout(autoState.timer);
+    autoState.timer = null;
+  }
+}
+els.dashAuto.addEventListener('click', toggleAutoRun);
+els.dashAutoInterval.addEventListener('change', () => {
+  try { localStorage.setItem(AUTO_INTERVAL_KEY, els.dashAutoInterval.value); } catch (_) {}
+});
+
+/* ---- filtro do grafo: TODAS / EXECUTADAS ---- */
+let graphFilter = 'all';
+function rebuildGraph() {
+  // preserva nós fixos (arrastados) para módulos já existentes
+  const saved = {};
+  graphState.nodes.forEach(n => { if (n.fixed) saved[n.id] = { x: n.x, y: n.y }; });
+  const data = graphData();
+  graphState.nodes = data.nodes;
+  graphState.links = data.links;
+  Object.keys(saved).forEach(id => {
+    const n = graphState.nodes.find(x => x.id === id);
+    if (n) { n.x = saved[id].x; n.y = saved[id].y; n.fixed = true; }
+  });
+  graphState.built = false;
+  loadGraphLayout();
+  buildNodeMap();
+  buildGraphSvg();
+  buildGraphLegend(graphState.colors || GRAPH_COLORS);
+  if (!graphState.animRaf && els.graphWrap && !els.graphWrap.hidden) {
+    graphState.alpha = 1;
+    graphTickLoop();
+  }
+}
+function setGraphFilter(mode) {
+  graphFilter = mode;
+  els.gfilterAll.classList.toggle('active', mode === 'all');
+  els.gfilterExec.classList.toggle('active', mode === 'exec');
+  try { localStorage.setItem('skillstudio.graphfilter', mode); } catch (_) {}
+  rebuildGraph();
+  if (mode === 'exec') {
+    const set = execSkillsSet();
+    const count = graphState.nodes.filter(n => n.kind === 'skill' && set.has(n.name)).length;
+    const mods = graphState.nodes.filter(n => n.kind === 'module');
+    els.gfilterExec.textContent = `EXECUTADAS (${count} / ${set.size})`;
+  } else {
+    const total = (state.data && state.data.skills.length) || 0;
+    els.gfilterExec.textContent = 'EXECUTADAS';
+    els.gfilterAll.textContent = `TODAS (${total})`;
+  }
+}
+els.gfilterAll.addEventListener('click', () => setGraphFilter('all'));
+els.gfilterExec.addEventListener('click', () => setGraphFilter('exec'));
+
+// Filtro aplica apenas skills executadas
+function graphDataFiltered() {
+  if (graphFilter === 'exec') {
+    const set = execSkillsSet();
+    const skills = (state.data && state.data.skills.filter(s => set.has(s.id))) || [];
+    if (!skills.length) return { nodes: [], links: [] };
+    const mods = [...new Set(skills.map(s => s.module).filter(Boolean))];
+    const nodes = mods.map(m => ({ id: 'mod:' + m, name: m, kind: 'module', count: skills.filter(s => s.module === m).length, r: nodeRadius({ kind: 'module' }), vx: 0, vy: 0, fixed: false }));
+    skills.forEach(s => {
+      const m = s.module || 'outros';
+      nodes.push({ id: 'sk:' + s.id, name: s.id, kind: 'skill', module: m, r: nodeRadius({ kind: 'skill' }), vx: 0, vy: 0, fixed: false });
+    });
+    const links = skills.map(s => ({ source: 'mod:' + (s.module || 'outros'), target: 'sk:' + s.id }));
+    return { nodes, links };
+  }
+  return null;
+}
+
+/* ---- catálogo → disparar skill no fluxo ---- */
+function runSkillFromCard(skillId) {
+  showSection('dashboard');
+  dashSetMode('flow');
+  dashRun(skillId);
+}
+
 async function loadMusic() {
   const res = await fetch('data/music.json');
   musicState.tracks = await res.json();
@@ -1563,6 +1911,13 @@ document.addEventListener('keydown', e => {
   }
 });
 els.detailContent.addEventListener('click', e => {
+  const runBtn = e.target.closest('[data-run-skill]');
+  if (runBtn) {
+    const skillId = runBtn.dataset.runSkill;
+    closeDetail();
+    runSkillFromCard(skillId);
+    return;
+  }
   const btn = e.target.closest('.copy-btn');
   if (btn) {
     const detailTitle = els.detailContent.querySelector('h1');
@@ -1660,7 +2015,22 @@ Promise.all([load(), loadMusic()]).then(() => {
     const savedMode = localStorage.getItem(GRAPH_VIEW_KEY);
     if (savedMode === 'graph') dashSetMode('graph');
   } catch (_) {}
-  
+
+  // restaura estado do dashboard (filtro, auto-run, detalhe)
+  try {
+    const savedFilter = localStorage.getItem('skillstudio.graphfilter');
+    if (savedFilter === 'exec') setGraphFilter('exec');
+    const savedAuto = localStorage.getItem(AUTO_KEY);
+    if (savedAuto === '1') { autoState.on = true; syncAutoUI(); }
+    const savedInterval = localStorage.getItem(AUTO_INTERVAL_KEY);
+    if (savedInterval && els.dashAutoInterval) els.dashAutoInterval.value = savedInterval;
+    const savedDetail = localStorage.getItem(DETAIL_KEY);
+    if (savedDetail) {
+      if (savedDetail.startsWith('mod:')) openModuleDetail(savedDetail.slice(4), true);
+      else openGraphDetail(savedDetail, true);
+    }
+  } catch (_) {}
+
   // Atualizar nowPlaying periodicamente quando YouTube está tocando
   setInterval(() => {
     if (musicState.ytPlayer && musicState.ytPlayer.getPlayerState() === 1) {
