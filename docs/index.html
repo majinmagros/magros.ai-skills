@@ -53,22 +53,24 @@
        <button class="sec-btn" data-sec="music" id="musicBtn">MÚSICA</button>
        <button class="sec-btn" data-sec="dashboard" id="dashboardBtn">DASHBOARD</button>
      </nav>
-    <div class="now-playing" id="nowPlaying" hidden>
-      <div class="np-marquee">
-        <span class="np-title" id="npTitle"></span>
-        <span class="np-title np-dup" id="npTitleDup" aria-hidden="true"></span>
+    <div class="player-cluster" id="playerCluster">
+      <div class="now-playing" id="nowPlaying" hidden>
+        <div class="np-marquee">
+          <span class="np-title" id="npTitle"></span>
+          <span class="np-title np-dup" id="npTitleDup" aria-hidden="true"></span>
+        </div>
+        <span class="np-time" id="npTime"></span>
       </div>
-      <span class="np-time" id="npTime"></span>
-    </div>
-    <div class="track-controls" id="trackControls">
-      <button class="tc-btn" id="prevBtn" title="Voltar música"><span class="tc-arrow prev"></span></button>
-      <button class="tc-btn" id="nextBtn" title="Avançar música"><span class="tc-arrow next"></span></button>
-      <button class="tc-btn" id="muteBtn" title="Mudo"><span id="volIcon">♪</span></button>
-      <input type="range" id="volRange" min="0" max="100" value="70" title="Volume" aria-label="Volume">
+      <div class="track-controls" id="trackControls">
+        <button class="tc-btn" id="prevBtn" title="Voltar música"><span class="tc-arrow prev"></span></button>
+        <button class="tc-btn" id="nextBtn" title="Avançar música"><span class="tc-arrow next"></span></button>
+        <button class="tc-btn" id="muteBtn" title="Mudo"><span id="volIcon">♪</span></button>
+        <input type="range" id="volRange" min="0" max="100" value="70" title="Volume" aria-label="Volume">
+      </div>
     </div>
     <div id="yt-player-container" style="display:none"></div>
     <button class="sec-btn" id="guideBtn" title="Guia de instalação 9router + opencode">GUIA</button>
-    <button class="sec-btn" id="guideIniBtn" title="Guia de instalação para iniciantes (linguagem simples)">INICIANTES</button>
+    <button class="sec-btn" id="guideIniBtn" title="Guia de instalação para principiantes (linguagem simples)">PRINCIPIANTES</button>
     <button class="theme-btn" id="themeBtn" title="Alternar tema">◐</button>
   </div>
 </header>
@@ -108,11 +110,27 @@
       <button class="dash-btn" id="dashPlay" title="Executar um fluxo de demonstração">▶ EXECUTAR</button>
       <button class="dash-btn ghost" id="dashClear" title="Limpar histórico local">LIMPAR</button>
     </div>
+    <div class="dash-modes">
+      <button class="dash-mode active" data-mode="flow" title="Fluxo linear de execução">FLUXO</button>
+      <button class="dash-mode" data-mode="graph" title="Visualização em grafo estilo Obsidian">GRAFO</button>
+    </div>
   </div>
   <div class="dash-body">
-    <div class="dash-flow" id="dashFlow">
-      <svg id="flowSvg" class="flow-svg" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Fluxo de execução de agentes e skills"></svg>
-      <p class="dash-hint">clique em EXECUTAR para percorrer o fluxo · interações no catálogo ficam no histórico local</p>
+    <div id="dashFlowWrap" class="dash-flow-wrap">
+      <div class="dash-flow" id="dashFlow">
+        <svg id="flowSvg" class="flow-svg" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Fluxo de execução de agentes e skills"></svg>
+        <p class="dash-hint">clique em EXECUTAR para percorrer o fluxo · arraste as caixinhas para reorganizar · interações no catálogo ficam no histórico local</p>
+      </div>
+    </div>
+    <div id="graphWrap" class="graph-wrap" hidden>
+      <div class="graph-view" id="graphView">
+        <svg id="graphSvg" class="graph-svg" role="img" aria-label="Grafo de skills estilo Obsidian"></svg>
+        <div class="graph-toolbar">
+          <button class="dash-btn ghost" id="graphReset" title="Recolocar os nós no layout inicial">↺ REDEFINIR</button>
+          <span class="graph-legend" id="graphLegend"></span>
+        </div>
+        <p class="dash-hint">grafo interativo · arraste os nós · role para zoom · conexões entre módulos e skills</p>
+      </div>
     </div>
     <aside class="dash-telemetry" aria-label="Telemetria">
       <div class="telm-block">

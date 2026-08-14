@@ -47,7 +47,13 @@ const els = {
   controls: document.querySelector('.controls'),
   dashPlay: document.getElementById('dashPlay'),
   dashClear: document.getElementById('dashClear'),
+  dashModes: [...document.querySelectorAll('.dash-mode')],
+  flowWrap: document.getElementById('dashFlowWrap'),
+  graphWrap: document.getElementById('graphWrap'),
   flowSvg: document.getElementById('flowSvg'),
+  graphSvg: document.getElementById('graphSvg'),
+  graphReset: document.getElementById('graphReset'),
+  graphLegend: document.getElementById('graphLegend'),
   telmPrompt: document.getElementById('telmPrompt'),
   telmSkill: document.getElementById('telmSkill'),
   telmModel: document.getElementById('telmModel'),
@@ -540,10 +546,25 @@ const DASH_LADDER = [
 ];
 const dashState = { built: false, raf: 0, running: false, lastTs: 0, particles: [], edgeEls: {}, nodeEls: {}, clock: 0 };
 const EXEC_KEY = 'skillstudio.exec';
+const LAYOUT_KEY = 'skillstudio.flowlayout';
+
+function saveFlowLayout() {
+  const pos = {};
+  DASH_NODES.forEach(n => { pos[n.id] = [Math.round(n.x), Math.round(n.y)]; });
+  try { localStorage.setItem(LAYOUT_KEY, JSON.stringify(pos)); } catch (_) {}
+}
+function loadFlowLayout() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(LAYOUT_KEY) || 'null');
+    if (!saved) return;
+    DASH_NODES.forEach(n => { if (saved[n.id]) { n.x = saved[n.id][0]; n.y = saved[n.id][1]; } });
+  } catch (_) {}
+}
 
 function dashInit() {
   if (!els.flowSvg) return;
   if (!dashState.built) {
+    loadFlowLayout();
     buildFlow();
     renderLadder();
     renderLog();
@@ -629,7 +650,75 @@ function buildFlow() {
     svg.appendChild(g);
     dashState.nodeEls[n.id] = g;
   });
+  attachFlowDrag(svg);
   dashState.built = true;
+}
+
+function getNodeById(id) { return DASH_NODES.find(n => n.id === id); }
+
+function refreshNodePosition(node) {
+  const g = dashState.nodeEls[node.id];
+  if (!g) return;
+  g.querySelector('rect').setAttribute('x', node.x - 72);
+  g.querySelector('rect').setAttribute('y', node.y - 26);
+  g.querySelector('.node-title').setAttribute('x', node.x);
+  g.querySelector('.node-title').setAttribute('y', node.y - 4);
+  g.querySelector('.node-sub').setAttribute('x', node.x);
+  g.querySelector('.node-sub').setAttribute('y', node.y + 12);
+  g.querySelector('.node-dot').setAttribute('cx', node.x + 66);
+  g.querySelector('.node-dot').setAttribute('cy', node.y - 20);
+  DASH_EDGES.forEach(([a, b], i) => {
+    const line = dashState.edgeEls[i];
+    if (!line) return;
+    const pa = getNodeById(a), pb = getNodeById(b);
+    if (pa === node || pb === node) {
+      line.setAttribute('x1', pa.x); line.setAttribute('y1', pa.y);
+      line.setAttribute('x2', pb.x); line.setAttribute('y2', pb.y);
+    }
+  });
+  dashState.particles.forEach(p => {
+    if (p.from === node || p.to === node) {
+      const x = p.from.x + (p.to.x - p.from.x) * p.p;
+      const y = p.from.y + (p.to.y - p.from.y) * p.p;
+      p.el.setAttribute('cx', x); p.el.setAttribute('cy', y);
+    }
+  });
+}
+
+function attachFlowDrag(svg) {
+  let dragging = null;
+  let offX = 0, offY = 0;
+  svg.addEventListener('mousedown', (e) => {
+    const target = e.target.closest ? e.target.closest('.flow-node') : null;
+    if (!target) return;
+    const id = target.getAttribute('data-node');
+    const node = getNodeById(id);
+    if (!node) return;
+    e.preventDefault();
+    const rect = svg.getBoundingClientRect();
+    const scaleX = 1000 / rect.width;
+    const scaleY = 480 / rect.height;
+    dragging = node;
+    offX = (e.clientX - rect.left) * scaleX - node.x;
+    offY = (e.clientY - rect.top) * scaleY - node.y;
+    target.classList.add('dragging');
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const rect = svg.getBoundingClientRect();
+    const scaleX = 1000 / rect.width;
+    const scaleY = 480 / rect.height;
+    dragging.x = Math.min(950, Math.max(50, (e.clientX - rect.left) * scaleX - offX));
+    dragging.y = Math.min(460, Math.max(20, (e.clientY - rect.top) * scaleY - offY));
+    refreshNodePosition(dragging);
+  });
+  window.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    const g = dashState.nodeEls[dragging.id];
+    if (g) g.classList.remove('dragging');
+    saveFlowLayout();
+    dragging = null;
+  });
 }
 
 function dashTick(ts) {
@@ -752,6 +841,455 @@ async function dashRun() {
   dashLogEntry('run', skillName, prompt);
   dashState.running = false;
   els.dashPlay.disabled = false;
+}
+
+/* ---- alternância FLUXO / GRAFO ---- */
+const GRAPH_VIEW_KEY = 'skillstudio.graphview';
+
+function dashSetMode(mode) {
+  const isGraph = mode === 'graph';
+  els.dashModes.forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+  if (els.flowWrap) els.flowWrap.hidden = isGraph;
+  if (els.graphWrap) els.graphWrap.hidden = !isGraph;
+  try { localStorage.setItem(GRAPH_VIEW_KEY, mode); } catch (_) {}
+  if (isGraph) initGraphView();
+}
+
+/* ---- grafo estilo Obsidian (force-directed) ---- */
+const GRAPH_LAYOUT_KEY = 'skillstudio.graphlayout';
+const GRAPH_COLORS = ['#00ff66', '#00ccff', '#ff00ff', '#ff9900', '#ff0066', '#ffd700', '#00ffbf', '#ff6b6b'];
+const PHYS = {
+  repulsion: 1400,    // força de repulsão de carga
+  linkDist: 105,      // comprimento de repouso da mola
+  linkStrength: 0.06, // rigidez da mola (tensão)
+  gravity: 0.010,     // atração suave ao centro
+  damping: 0.86,      // atrito por frame
+  alphaDecay: 0.006,  // quão rápido a simulação "assenta"
+  minAlpha: 0.04,     // agitação residual mínima (vivo, nunca 100% parado)
+};
+const graphState = {
+  nodes: [], links: [], built: false, zoom: 1, panX: 0, panY: 0,
+  dragging: null, dragOff: { x: 0, y: 0 },
+  active: null, animRaf: 0, alpha: 1, ticks: 0,
+};
+
+function nodeRadius(n) { return n.kind === 'module' ? 24 : 10; }
+
+function graphData() {
+  const skills = (state.data && state.data.skills) || [];
+  const modMap = {};
+  const modules = [];
+  skills.forEach(s => {
+    const m = s.module || 'outros';
+    if (!modMap[m]) {
+      modMap[m] = { id: 'mod:' + m, name: m, kind: 'module', count: 0 };
+      modules.push(modMap[m]);
+    }
+    modMap[m].count++;
+  });
+  const nodes = modules.map(m => ({ ...m, r: nodeRadius(m), vx: 0, vy: 0, fixed: false }));
+  const links = [];
+
+  // amostra uniforme de skills: limite total de nós para ~120 (performance + legibilidade)
+  const MAX_SKILLS = 99;
+  const byMod = {};
+  skills.forEach(s => {
+    const m = s.module || 'outros';
+    if (!byMod[m]) byMod[m] = [];
+    byMod[m].push(s);
+  });
+  const modNames = Object.keys(byMod);
+  let taken = 0;
+  let pass = 0;
+  const seen = new Set();
+  while (taken < MAX_SKILLS && seen.size < skills.length) {
+    let addedThisPass = 0;
+    modNames.forEach(m => {
+      const list = byMod[m];
+      if (pass >= list.length) return;
+      if (taken >= MAX_SKILLS) return;
+      const s = list[pass];
+      if (seen.has(s.id)) return;
+      seen.add(s.id);
+      const sid = 'sk:' + s.id;
+      nodes.push({ id: sid, name: s.id, kind: 'skill', module: m, r: nodeRadius({ kind: 'skill' }), vx: 0, vy: 0, fixed: false });
+      links.push({ source: 'mod:' + m, target: sid });
+      taken++;
+      addedThisPass++;
+    });
+    if (!addedThisPass) break;
+    pass++;
+  }
+  return { nodes, links };
+}
+
+function nodeColor(node, colors) {
+  if (node.kind === 'module') return colors[Math.abs(hashStr(node.name)) % colors.length];
+  return colors[Math.abs(hashStr(node.module)) % colors.length];
+}
+function hashStr(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+  return h;
+}
+
+function buildGraphLegend(colors) {
+  if (!els.graphLegend) return;
+  const items = graphState.nodes.filter(n => n.kind === 'module');
+  els.graphLegend.innerHTML = items.slice(0, 8).map(m =>
+    `<span class="lg-item"><span class="lg-dot" style="background:${nodeColor(m, colors)}"></span>${esc(m.name)}</span>`
+  ).join('');
+}
+
+function initGraphView() {
+  if (!els.graphSvg) return;
+  if (!graphState.built) {
+    const data = graphData();
+    graphState.nodes = data.nodes;
+    graphState.links = data.links;
+    graphState.colors = GRAPH_COLORS;
+    loadGraphLayout();
+    buildNodeMap();
+    buildGraphSvg();
+    buildGraphLegend(GRAPH_COLORS);
+    attachGraphDrag();
+    attachGraphZoom();
+    els.graphReset.addEventListener('click', resetGraphLayout);
+  }
+  const view = els.graphWrap && !els.graphWrap.hidden;
+  if (view && !graphState.animRaf) {
+    graphState.alpha = 1;
+    graphTickLoop();
+  }
+  window.__graphState = graphState; // exposto para debug/automação
+}
+
+function buildGraphSvg() {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = els.graphSvg;
+  svg.setAttribute('viewBox', '0 0 1000 560');
+  svg.innerHTML = '';
+  graphState.els = { links: {}, nodes: {} };
+  const colors = graphState.colors;
+
+  graphState.links.forEach((l, i) => {
+    const line = document.createElementNS(ns, 'line');
+    line.setAttribute('class', 'g-link');
+    svg.appendChild(line);
+    graphState.els.links[i] = line;
+  });
+
+  graphState.nodes.forEach(n => {
+    const g = document.createElementNS(ns, 'g');
+    g.setAttribute('class', 'g-node');
+    g.setAttribute('data-id', n.id);
+    const body = document.createElementNS(ns, 'circle');
+    body.setAttribute('class', 'g-node-body');
+    body.setAttribute('r', n.r);
+    body.setAttribute('fill', 'rgba(10,12,16,0.92)');
+    body.setAttribute('stroke', nodeColor(n, colors));
+    body.setAttribute('stroke-width', n.kind === 'module' ? 2 : 1.2);
+    g.appendChild(body);
+    const t = document.createElementNS(ns, 'text');
+    t.setAttribute('class', 'g-node-title');
+    t.textContent = n.kind === 'module' ? n.name.toUpperCase() : n.name;
+    g.appendChild(t);
+    if (n.kind === 'module') {
+      const sub = document.createElementNS(ns, 'text');
+      sub.setAttribute('class', 'g-node-sub');
+      sub.textContent = n.count + ' skills';
+      g.appendChild(sub);
+    }
+    const hint = document.createElementNS(ns, 'title');
+    hint.textContent = (n.kind === 'module' ? 'Módulo: ' : 'Skill: ') + n.name;
+    g.appendChild(hint);
+    svg.appendChild(g);
+    graphState.els.nodes[n.id] = { g, body };
+  });
+
+  graphState.active = graphState.nodes.length ? graphState.nodes[0].id : null;
+  graphTick();
+}
+
+function positionNodeEl(n) {
+  const el = graphState.els.nodes[n.id];
+  if (!el) return;
+  const isMod = n.kind === 'module';
+  const r = n.r;
+  el.g.setAttribute('transform', `translate(${n.x}, ${n.y})`);
+  el.body.setAttribute('r', r);
+  const t = el.g.querySelector('.g-node-title');
+  t.setAttribute('x', 0);
+  t.setAttribute('y', r + 13);
+  const sub = el.g.querySelector('.g-node-sub');
+  if (sub) { sub.setAttribute('x', 0); sub.setAttribute('y', r + 25); }
+}
+
+function refreshGraphPositions() {
+  graphState.nodes.forEach(n => {
+    if (graphState.els && graphState.els.nodes[n.id]) positionNodeEl(n);
+  });
+  graphState.links.forEach((l, i) => {
+    const line = graphState.els.links[i];
+    if (!line) return;
+    const a = graphState.nodes.find(x => x.id === l.source);
+    const b = graphState.nodes.find(x => x.id === l.target);
+    if (!a || !b) return;
+    line.setAttribute('x1', a.x); line.setAttribute('y1', a.y);
+    line.setAttribute('x2', b.x); line.setAttribute('y2', b.y);
+    const activeA = graphState.active && (graphState.active === a.id || graphState.active === b.id);
+    line.classList.toggle('active', !!activeA);
+  });
+  applyGraphTransform();
+}
+
+function applyGraphTransform() {
+  if (!els.graphSvg) return;
+  els.graphSvg.style.transform = `translate(${graphState.panX}px, ${graphState.panY}px) scale(${graphState.zoom})`;
+  els.graphSvg.style.transformOrigin = 'center center';
+}
+
+/* ---- física force-directed (repulsão + molas + gravidade + colisão) ---- */
+const G_CX = 500, G_CY = 280;
+let gNodeMap = null;
+
+function buildNodeMap() {
+  gNodeMap = new Map();
+  graphState.nodes.forEach(n => gNodeMap.set(n.id, n));
+}
+
+function physicsStep() {
+  const nodes = graphState.nodes;
+  const a = graphState.alpha;
+
+  // repulsão coulombiana entre todos os pares (O(n²))
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const A = nodes[i], B = nodes[j];
+      let dx = A.x - B.x, dy = A.y - B.y;
+      let d2 = dx * dx + dy * dy;
+      if (d2 < 0.01) d2 = 0.01;
+      const minD = A.r + B.r + 10;
+      if (d2 < minD * minD) d2 = minD * minD; // não explode quando sobrepõe
+      const d = Math.sqrt(d2);
+      const f = (PHYS.repulsion / d2) * a;
+      const fx = (dx / d) * f, fy = (dy / d) * f;
+      if (!A.fixed) { A.vx += fx; A.vy += fy; }
+      if (!B.fixed) { B.vx -= fx; B.vy -= fy; }
+    }
+  }
+
+  // molas nas arestas (tensão que mantém conectados)
+  if (!gNodeMap) buildNodeMap();
+  graphState.links.forEach(l => {
+    const A = gNodeMap.get(l.source);
+    const B = gNodeMap.get(l.target);
+    if (!A || !B) return;
+    let dx = B.x - A.x, dy = B.y - A.y;
+    const d = Math.hypot(dx, dy) || 0.01;
+    const f = (d - PHYS.linkDist) * PHYS.linkStrength * a;
+    const fx = (dx / d) * f, fy = (dy / d) * f;
+    if (!A.fixed) { A.vx += fx; A.vy += fy; }
+    if (!B.fixed) { B.vx -= fx; B.vy -= fy; }
+  });
+
+  // gravidade ao centro + damping + integração
+  nodes.forEach(n => {
+    if (n.fixed) return;
+    n.vx += (G_CX - n.x) * PHYS.gravity * a;
+    n.vy += (G_CY - n.y) * PHYS.gravity * a;
+    n.vx *= PHYS.damping;
+    n.vy *= PHYS.damping;
+    const maxV = 3;
+    if (n.vx > maxV) n.vx = maxV; else if (n.vx < -maxV) n.vx = -maxV;
+    if (n.vy > maxV) n.vy = maxV; else if (n.vy < -maxV) n.vy = -maxV;
+    n.x += n.vx;
+    n.y += n.vy;
+    n.x = Math.min(995, Math.max(5, n.x));
+    n.y = Math.min(555, Math.max(5, n.y));
+  });
+
+  // resolução suave de colisão (nunca sobrepõem)
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const A = nodes[i], B = nodes[j];
+      if (A.fixed && B.fixed) continue;
+      let dx = A.x - B.x, dy = A.y - B.y;
+      const minD = A.r + B.r + 6;
+      const d = Math.hypot(dx, dy);
+      if (d > 0.001 && d < minD) {
+        const push = (minD - d) / d * 0.5;
+        const px = dx * push, py = dy * push;
+        if (!A.fixed) { A.x += px; A.y += py; }
+        if (!B.fixed) { B.x -= px; B.y -= py; }
+      }
+    }
+  }
+}
+
+function graphTick() {
+  if (graphState.alpha > PHYS.minAlpha) {
+    physicsStep();
+    graphState.alpha *= (1 - PHYS.alphaDecay);
+  } else {
+    graphState.alpha = PHYS.minAlpha;
+    physicsStep(); // mantém leve agitação residual
+  }
+  refreshGraphPositions();
+}
+
+function graphTickLoop() {
+  graphState.animRaf = 0;
+  if (!els.graphWrap || els.graphWrap.hidden) return;
+  graphTick();
+  graphState.animRaf = requestAnimationFrame(graphTickLoop);
+}
+
+function loadGraphLayout() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(GRAPH_LAYOUT_KEY) || 'null');
+    if (saved && saved.nodes) {
+      const map = {};
+      saved.nodes.forEach(n => { map[n.id] = [n.x, n.y]; });
+      graphState.nodes.forEach(n => { if (map[n.id]) { n.x = map[n.id][0]; n.y = map[n.id][1]; } });
+      graphState.zoom = saved.zoom || 1;
+      graphState.panX = saved.panX || 0;
+      graphState.panY = saved.panY || 0;
+      return;
+    }
+  } catch (_) {}
+  seedGraphLayout();
+}
+
+function seedGraphLayout() {
+  const mods = graphState.nodes.filter(n => n.kind === 'module');
+  const skills = graphState.nodes.filter(n => n.kind === 'skill');
+  mods.forEach((m, i) => {
+    const angle = (i / Math.max(1, mods.length)) * Math.PI * 2 - Math.PI / 2;
+    m.x = G_CX + Math.cos(angle) * 210;
+    m.y = G_CY + Math.sin(angle) * 150;
+  });
+  const byMod = {};
+  graphState.links.forEach(l => {
+    const mod = typeof l.source === 'string' ? l.source : l.source.id;
+    const sk = typeof l.target === 'string' ? l.target : l.target.id;
+    if (!byMod[mod]) byMod[mod] = [];
+    byMod[mod].push(sk);
+  });
+  skills.forEach(s => {
+    const modId = 'mod:' + s.module;
+    const list = byMod[modId] || [];
+    const mod = graphState.nodes.find(n => n.id === modId);
+    if (!mod) { s.x = G_CX; s.y = G_CY; return; }
+    const idx = list.indexOf(s.id);
+    const total = list.length;
+    const angle = total <= 1 ? 0 : (idx / total) * Math.PI * 2;
+    s.x = mod.x + Math.cos(angle) * 70;
+    s.y = mod.y + Math.sin(angle) * 70;
+  });
+}
+
+function saveGraphLayout() {
+  try {
+    localStorage.setItem(GRAPH_LAYOUT_KEY, JSON.stringify({
+      nodes: graphState.nodes.map(n => ({ id: n.id, x: Math.round(n.x), y: Math.round(n.y) })),
+      zoom: graphState.zoom, panX: graphState.panX, panY: graphState.panY,
+    }));
+  } catch (_) {}
+}
+
+function resetGraphLayout() {
+  graphState.nodes.forEach(n => { n.vx = 0; n.vy = 0; n.fixed = false; });
+  seedGraphLayout();
+  graphState.zoom = 1; graphState.panX = 0; graphState.panY = 0;
+  graphState.alpha = 1;
+  refreshGraphPositions();
+  saveGraphLayout();
+}
+
+function attachGraphDrag() {
+  const svg = els.graphSvg;
+  svg.addEventListener('mousemove', (e) => {
+    if (graphState.dragging) return;
+    const g = e.target.closest('.g-node');
+    const hoverId = g ? g.getAttribute('data-id') : null;
+    graphState.nodes.forEach(n => {
+      const el = graphState.els.nodes[n.id];
+      if (!el) return;
+      const hovered = n.id === hoverId;
+      if (hovered !== el.g.classList.contains('hovered')) {
+        el.g.classList.toggle('hovered', hovered);
+        const isActive = hovered || (graphState.active && n.id === graphState.active);
+        el.g.classList.toggle('active', !!isActive);
+      }
+    });
+    graphTick();
+  });
+  svg.addEventListener('mouseleave', () => {
+    graphState.nodes.forEach(n => {
+      const el = graphState.els.nodes[n.id];
+      if (el) {
+        el.g.classList.remove('hovered');
+        el.g.classList.toggle('active', n.id === graphState.active);
+      }
+    });
+  });
+  svg.addEventListener('mousedown', (e) => {
+    const g = e.target.closest('.g-node');
+    if (g) {
+      e.preventDefault();
+      const id = g.getAttribute('data-id');
+      const node = graphState.nodes.find(n => n.id === id);
+      if (!node) return;
+      const rect = svg.getBoundingClientRect();
+      const scaleX = 1000 / (rect.width / graphState.zoom);
+      const scaleY = 560 / (rect.height / graphState.zoom);
+      graphState.dragging = node;
+      node.fixed = true;
+      node.vx = 0; node.vy = 0;
+      graphState.dragOff.x = (e.clientX - rect.left) * scaleX - node.x;
+      graphState.dragOff.y = (e.clientY - rect.top) * scaleY - node.y;
+      g.classList.add('dragging');
+      setGraphActive(id);
+    }
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!graphState.dragging) return;
+    const rect = els.graphSvg.getBoundingClientRect();
+    const scaleX = 1000 / (rect.width / graphState.zoom);
+    const scaleY = 560 / (rect.height / graphState.zoom);
+    graphState.dragging.x = Math.min(995, Math.max(5, (e.clientX - rect.left) * scaleX - graphState.dragOff.x));
+    graphState.dragging.y = Math.min(555, Math.max(5, (e.clientY - rect.top) * scaleY - graphState.dragOff.y));
+    graphTick();
+  });
+  window.addEventListener('mouseup', () => {
+    if (!graphState.dragging) return;
+    const g = graphState.els.nodes[graphState.dragging.id];
+    if (g) g.g.classList.remove('dragging');
+    graphState.dragging.fixed = false;
+    graphState.dragging = null;
+    graphState.alpha = 1; // reaquece a rede: nós conectados "puxam" de volta
+    saveGraphLayout();
+  });
+}
+
+function attachGraphZoom() {
+  const svg = els.graphSvg;
+  svg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    graphState.zoom = Math.min(2.5, Math.max(0.4, graphState.zoom * (e.deltaY < 0 ? 1.1 : 0.9)));
+    applyGraphTransform();
+    saveGraphLayout();
+  }, { passive: false });
+}
+
+function setGraphActive(id) {
+  graphState.active = id;
+  Object.keys(graphState.els.nodes).forEach(k => {
+    const el = graphState.els.nodes[k];
+    el.g.classList.toggle('active', k === id);
+  });
+  graphTick();
 }
 
 async function loadMusic() {
@@ -1064,6 +1602,10 @@ els.sectionNav.forEach(btn => btn.addEventListener('click', () => {
   }
 }));
 
+els.dashModes.forEach(btn => btn.addEventListener('click', () => {
+  dashSetMode(btn.dataset.mode);
+}));
+
 els.themeBtn.addEventListener('click', () => {
   const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   document.documentElement.dataset.theme = next;
@@ -1113,6 +1655,11 @@ Promise.all([load(), loadMusic()]).then(() => {
   syncAnimModeUI();
   initThree();
   setClima('subtle');
+
+  try {
+    const savedMode = localStorage.getItem(GRAPH_VIEW_KEY);
+    if (savedMode === 'graph') dashSetMode('graph');
+  } catch (_) {}
   
   // Atualizar nowPlaying periodicamente quando YouTube está tocando
   setInterval(() => {
