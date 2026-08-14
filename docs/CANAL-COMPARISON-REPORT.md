@@ -1,7 +1,7 @@
-# Relatório Consolidado — Análise de Canais (Maestros da IA vs. EnzoSparo) & Matriz de Skills
+# Relatório Consolidado — Análise de Canais (Maestros da IA vs. Canal Analisado) & Matriz de Skills
 
 > Data: 2026-08-13
-> Escopo: Cruzamento de 201 transcrições do canal EnzoSparo + acervo do Maestros da IA com o spec-kit e as 325+ skills do repositório `magros.ai-skills`.
+> Escopo: Cruzamento de 201 transcrições do canal analisado + acervo do Maestros da IA com o spec-kit e as 325+ skills do repositório `magros.ai-skills`.
 
 ---
 
@@ -10,7 +10,7 @@
 | Canal | Foco Principal | Sobreposição com Maestros da IA | Veredito |
 |---|---|---|---|
 | **Maestros da IA** | Claude Code fundacional, Skill Creator, meta-skills, agent loops | Base original das 38 skills autorais | Mantido como referência principal de arquitetura |
-| **EnzoSparo** | N8N 2.0, Antigravity 2.0, bases de conhecimento em grafo (Karpathy), automações de agentes | Complementar (foco forte em n8n e plataformas no-code/low-code + agentes) | **Integrado** (gerou oportunidades de expansão sem duplicar o que `graphify` ou `autonomous-loops` já fazem) |
+| **Canal Analisado** | N8N 2.0, Antigravity 2.0, bases de conhecimento em grafo (Karpathy), automações de agentes | Complementar (foco forte em n8n e plataformas no-code/low-code + agentes) | **Integrado** (gerou oportunidades de expansão sem duplicar o que `graphify` ou `autonomous-loops` já fazem) |
 
 ---
 
@@ -24,7 +24,7 @@ O repositório já possui o conjunto completo de spec-driven skills derivado do 
 - `convergencia` (gap code vs spec)
 - `triagem-ideias` / `triagem-bug` (go/kill e triage)
 
-### O que EnzoSparo traz de NOVO (que o spec-kit e o Maestros não cobriam):
+### O que o canal analisado traz de NOVO (que o spec-kit e o Maestros não cobriam):
 1. **Integração N8N com MCP (Model Context Protocol):** Orquestração de agentes visuais no n8n conectados a ferramentas locais via MCP.
 2. **Método Karpathy de Grafos de Conhecimento Hierárquicos:** Ingestão de grande volume de dados (transcrições/vídeos) em grafos consultáveis com resumos automáticos em camadas, economizando tokens.
 
@@ -38,7 +38,7 @@ Antes de criar qualquer nova skill, verificamos o catálogo atual:
 - Já temos `autonomous-loops` para loops de agentes.
 
 ### Veredito de Duplicidade
-Criar uma skill genérica de "N8N" seria redundante com `automation-audit-ops` e `mcp-server-patterns`. No entanto, o padrão **N8N 2.0 + MCP Agents + Guardrails** (visto em vários vídeos do EnzoSparo) é um padrão visual/node-based distinto que ainda não está encapsulado como procedimento autônomo.
+Criar uma skill genérica de "N8N" seria redundante com `automation-audit-ops` e `mcp-server-patterns`. No entanto, o padrão **N8N 2.0 + MCP Agents + Guardrails** (visto em vários vídeos do canal analisado) é um padrão visual/node-based distinto que ainda não está encapsulado como procedimento autônomo.
 
 ---
 
