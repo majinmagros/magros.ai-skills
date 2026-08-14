@@ -538,12 +538,12 @@ function showSection(name) {
 
 /* ---- dashboard de execução (fluxo estilo 9router USO) ---- */
 const DASH_NODES = [
-  { id: 'prompt', label: 'PROMPT', sub: 'entrada do usuário', x: 75, y: 240 },
-  { id: 'roteamento', label: 'ROTEAMENTO', sub: 'kernel · AGENTS.md · 9router', x: 260, y: 240 },
-  { id: 'skill', label: 'SKILL', sub: 'skill acionada', x: 445, y: 150 },
-  { id: 'subagente', label: 'SUBAGENTE', sub: 'graph engineering · paralelo', x: 445, y: 330 },
-  { id: 'verif', label: 'VERIFICAÇÃO', sub: 'nota ≥ 80 · pico · bpm', x: 630, y: 240 },
-  { id: 'entrega', label: 'ENTREGA', sub: 'deliverable', x: 815, y: 240 },
+  { id: 'prompt', label: 'PRÉVIA DO PROMPT', sub: 'conteúdo do prompt', x: 75, y: 240 },
+  { id: 'roteamento', label: 'MOTOR DE ROTEAMENTO', sub: 'análise de contexto', x: 260, y: 240 },
+  { id: 'skill', label: 'SKILL ACIONADA', sub: 'skill identificada', x: 445, y: 150 },
+  { id: 'subagente', label: 'ATIVAÇÃO DE AGENTE', sub: 'execução', x: 445, y: 330 },
+  { id: 'verif', label: 'VERIFICAÇÃO', sub: 'nota ≥ 80', x: 630, y: 240 },
+  { id: 'entrega', label: 'ENTREGA', sub: 'concluído', x: 815, y: 240 },
 ];
 const DASH_EDGES = [
   ['prompt', 'roteamento'],
