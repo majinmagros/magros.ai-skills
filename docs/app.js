@@ -610,13 +610,10 @@ function playIndex(i) {
 }
 
 function playNext() {
-  const next = musicState.currentIndex + 1;
   const maxLen = Math.max(shuffledTracks.length, ytShuffledTracks.length);
-  if (next < maxLen) {
-    playIndex(next);
-  } else {
-    stopPlayback();
-  }
+  if (maxLen === 0) return;
+  const next = (musicState.currentIndex + 1) % maxLen;
+  playIndex(next);
 }
 
 function skipNext() {
@@ -742,6 +739,9 @@ els.animToggle.addEventListener('click', e => {
 els.sectionNav.forEach(btn => btn.addEventListener('click', () => {
   if (btn.dataset.sec === 'music') {
     toggleGlobalPlayback();
+  } else if (btn.dataset.sec === 'dashboard') {
+    showSection('dashboard');
+    alert('Dashboard de Execução de Agentes e Skills ativado!');
   } else {
     showSection(btn.dataset.sec);
   }
