@@ -63,6 +63,8 @@
     <div class="track-controls" id="trackControls">
       <button class="tc-btn" id="prevBtn" title="Voltar música"><span class="tc-arrow prev"></span></button>
       <button class="tc-btn" id="nextBtn" title="Avançar música"><span class="tc-arrow next"></span></button>
+      <button class="tc-btn" id="muteBtn" title="Mudo"><span id="volIcon">♪</span></button>
+      <input type="range" id="volRange" min="0" max="100" value="70" title="Volume" aria-label="Volume">
     </div>
     <div id="yt-player-container" style="display:none"></div>
     <button class="sec-btn" id="guideBtn" title="Guia de instalação 9router + opencode">GUIA</button>
@@ -94,19 +96,6 @@
 <main>
   <p class="status-line" id="statusLine">carregando catálogo...</p>
   <div class="grid" id="grid"></div>
-  <section id="dashboardPanel" class="dashboard-panel" hidden>
-    <div class="dash-grid">
-      <div class="dash-main">
-        <svg id="dashFlow" class="dash-flow"></svg>
-      </div>
-      <aside class="dash-telemetry">
-        <h3>TELEMETRIA</h3>
-        <div id="telemetryContent" class="telemetry-log">
-          <p class="t-line">[STATUS] SISTEMA PRONTO</p>
-        </div>
-      </aside>
-    </div>
-  </section>
 </main>
 
 <section class="dashboard" id="dashboardSection" hidden aria-label="Dashboard de execução">

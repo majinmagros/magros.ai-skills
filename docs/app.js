@@ -34,6 +34,9 @@ const els = {
   npTitle: document.getElementById('npTitle'),
   npTitleDup: document.getElementById('npTitleDup'),
   npTime: document.getElementById('npTime'),
+  volRange: document.getElementById('volRange'),
+  volIcon: document.getElementById('volIcon'),
+  muteBtn: document.getElementById('muteBtn'),
   guideBtn: document.getElementById('guideBtn'),
   guideIniBtn: document.getElementById('guideIniBtn'),
   guideOverlay: document.getElementById('guideOverlay'),
@@ -59,6 +62,46 @@ let musicState = { tracks: [], currentIndex: -1, audio: null, ytPlayer: null, yt
 let shuffledTracks = [];
 let ytPlaylist = [];
 let ytShuffledTracks = [];
+const VOL_KEY = 'skillstudio.volume';
+const MUTE_KEY = 'skillstudio.muted';
+let volLevel = 0.7;
+let isMuted = false;
+
+function loadVolumePrefs() {
+  try {
+    const v = parseFloat(localStorage.getItem(VOL_KEY));
+    if (!isNaN(v)) volLevel = Math.min(1, Math.max(0, v));
+    isMuted = localStorage.getItem(MUTE_KEY) === '1';
+  } catch (_) {}
+}
+
+function applyVolume(vol) {
+  volLevel = vol;
+  try { localStorage.setItem(VOL_KEY, String(vol)); } catch (_) {}
+  if (musicState.audio) {
+    musicState.audio.volume = isMuted ? 0 : volLevel;
+  }
+  if (musicState.ytPlayer) {
+    try { musicState.ytPlayer.setVolume(Math.round((isMuted ? 0 : volLevel) * 100)); } catch (_) {}
+  }
+  syncVolUI();
+}
+
+function toggleMute() {
+  isMuted = !isMuted;
+  try { localStorage.setItem(MUTE_KEY, isMuted ? '1' : '0'); } catch (_) {}
+  applyVolume(volLevel);
+}
+
+function syncVolUI() {
+  const range = els.volRange;
+  const icon = els.volIcon;
+  const btn = els.muteBtn;
+  if (!range || !icon || !btn) return;
+  range.value = String(Math.round(volLevel * 100));
+  btn.classList.toggle('muted', isMuted);
+  icon.textContent = isMuted || volLevel === 0 ? '×' : volLevel < 0.5 ? '♪' : '♪♪';
+}
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -712,6 +755,8 @@ async function dashRun() {
   dashState.running = false;
   els.dashPlay.disabled = false;
 }
+
+async function loadMusic() {
   const res = await fetch('data/music.json');
   musicState.tracks = await res.json();
   shuffledTracks = [...musicState.tracks];
@@ -835,6 +880,7 @@ function playIndex(i) {
       },
       events: {
         onReady: function(event) {
+          event.target.setVolume(Math.round((isMuted ? 0 : volLevel) * 100));
           event.target.playVideo();
           updateNowPlaying();
         },
@@ -863,6 +909,7 @@ function playIndex(i) {
   stopPlayback();
   musicState.currentIndex = i;
   const audio = new Audio(track.url || `assets/music/${track.file}`);
+  audio.volume = isMuted ? 0 : volLevel;
   musicState.audio = audio;
   audio.addEventListener('timeupdate', () => updateNowPlaying());
   audio.addEventListener('ended', () => playNext());
@@ -932,6 +979,17 @@ function toggleGlobalPlayback() {
 /* ---- eventos ---- */
 document.getElementById('prevBtn').addEventListener('click', skipPrev);
 document.getElementById('nextBtn').addEventListener('click', skipNext);
+
+if (els.volRange) {
+  els.volRange.addEventListener('input', () => {
+    volLevel = parseFloat(els.volRange.value) / 100;
+    if (isMuted) { isMuted = false; try { localStorage.removeItem(MUTE_KEY); } catch (_) {} }
+    applyVolume(volLevel);
+  });
+}
+if (els.muteBtn) {
+  els.muteBtn.addEventListener('click', toggleMute);
+}
 
 els.search.addEventListener('input', () => {
   state.query = els.search.value;
@@ -1013,113 +1071,6 @@ els.themeBtn.addEventListener('click', () => {
   document.documentElement.dataset.theme = next;
 });
 
-/* ---- Dashboard Flow (SVG) ---- */
-let dashRunning = false;
-let dashSimId = null;
-
-function initDashboard() {
-  if (!els.flowSvg) return;
-  drawFlowSvg();
-  animateParticles();
-}
-
-function drawFlowSvg() {
-  const ns = 'http://www.w3.org/2000/svg';
-  const svg = els.flowSvg;
-  svg.setAttribute('viewBox', '0 0 960 420');
-  svg.innerHTML = '';
-  const nodes = [
-    { id: 'n1', x: 140, y: 200, label: 'Prompt do Usuário', color: '#00ff66' },
-    { id: 'n2', x: 320, y: 200, label: 'Kernel / AGENTS.md', color: '#00ccff' },
-    { id: 'n3', x: 500, y: 140, label: 'Skill Selecionada', color: '#ff00ff' },
-    { id: 'n4', x: 500, y: 260, label: 'Graph Engineering', color: '#ff9900' },
-    { id: 'n5', x: 740, y: 140, label: 'Verificação', color: '#ff0066' },
-    { id: 'n6', x: 740, y: 260, label: 'Retry 429', color: '#ff2244' },
-    { id: 'n7', x: 900, y: 200, label: 'Entrega / Deliverable', color: '#00ff62' },
-  ];
-  const edges = [
-    ['n1', 'n2'], ['n2', 'n3'], ['n2', 'n4'], ['n3', 'n5'], ['n4', 'n6'], ['n5', 'n7'], ['n6', 'n3']
-  ];
-  const frag = document.createDocumentFragment();
-  edges.forEach(([a, b]) => {
-    const ax = nodes.find(n => n.id === a).x, ay = nodes.find(n => n.id === a).y;
-    const bx = nodes.find(n => n.id === b).x, by = nodes.find(n => n.id === b).y;
-    const line = document.createElementNS(ns, 'line');
-    line.setAttribute('x1', ax); line.setAttribute('y1', ay);
-    line.setAttribute('x2', bx); line.setAttribute('y2', by);
-    line.setAttribute('class', 'edge');
-    line.style.stroke = '#333';
-    line.style.strokeWidth = '2';
-    frag.appendChild(line);
-    const anim = document.createElementNS(ns, 'animate');
-    anim.setAttribute('attributeName', 'stroke');
-    anim.setAttribute('values', '#00ff66;#333;#00ff62;#333');
-    anim.setAttribute('dur', (2 + Math.random() * 3).toFixed(1));
-    anim.setAttribute('repeatCount', 'indefinite');
-    line.appendChild(anim);
-    const pathLen = Math.hypot(bx - ax, by - ay);
-    for (let i = 0; i < 3; i++) {
-      const circle = document.createElementNS(ns, 'circle');
-      circle.setAttribute('r', '3');
-      circle.setAttribute('fill', '#00ff66');
-      circle.setAttribute('class', 'particle');
-      circle.style.opacity = '0';
-      const offset = (i + 1) * (pathLen / 4);
-      const pct = offset / pathLen;
-      const an = document.createElementNS(ns, 'animateMotion');
-      const mpath = `M ${ax} ${ay} L ${bx} ${by}`;
-      const mp = document.createElementNS(ns, 'mpath');
-      mp.setAttribute('href', `#edgePath${Math.random().toString(36).slice(2)}`);
-      const path = document.createElementNS(ns, 'path');
-      path.setAttribute('id', mp.getAttribute('href').slice(1));
-      path.setAttribute('d', mpath);
-      svg.appendChild(path);
-      an.appendChild(mp);
-      circle.appendChild(an);
-      frag.appendChild(circle);
-    }
-  });
-  nodes.forEach(n => {
-    const g = document.createElementNS(ns, 'g');
-    g.setAttribute('id', n.id);
-    const c = document.createElementNS(ns, 'circle');
-    c.setAttribute('cx', n.x); c.setAttribute('cy', n.y);
-    c.setAttribute('r', '24'); c.setAttribute('fill', 'rgba(0,0,0,0.7)');
-    c.setAttribute('stroke', n.color); c.setAttribute('stroke-width', '2');
-    const t = document.createElementNS(ns, 'text');
-    t.setAttribute('x', n.x); t.setAttribute('y', n.y + 60);
-    t.setAttribute('text-anchor', 'middle');
-    t.setAttribute('fill', '#d6d6da');
-    t.setAttribute('font-family', "'JetBrains Mono',monospace");
-    t.setAttribute('font-size', '11');
-    t.textContent = n.label;
-    g.appendChild(c); g.appendChild(t);
-    frag.appendChild(g);
-  });
-  svg.appendChild(frag);
-}
-
-function animateParticles() {
-  if (!dashRunning) return;
-  const particles = els.flowSvg.querySelectorAll('.particle');
-  particles.forEach(p => {
-    p.style.opacity = Math.random() * 0.8 + 0.2;
-  });
-  dashSimId = requestAnimationFrame(animateParticles);
-}
-
-function startDashboard() {
-  showSection('dashboard');
-  els.main.classList.add('with-dashboard');
-  dashRunning = true;
-  initDashboard();
-}
-
-function stopDashboard() {
-  dashRunning = false;
-  if (dashSimId) cancelAnimationFrame(dashSimId);
-  els.main.classList.remove('with-dashboard');
-}
 (function detectLocale() {
   const lang = (navigator.language || 'pt-BR').toLowerCase();
   if (lang.startsWith('pt')) return; // já em português
@@ -1159,6 +1110,8 @@ function syncAnimModeUI() {
 })();
 
 Promise.all([load(), loadMusic()]).then(() => {
+  loadVolumePrefs();
+  syncVolUI();
   syncAnimModeUI();
   initThree();
   setClima('subtle');
