@@ -1,0 +1,412 @@
+Claude skills are reusable prompts, you
+save once and run by typing / and the
+name of the prompt. Today, you'll learn
+how to create your first skill
+step-by-step, run them across chat,
+co-work, and Claude code, and share
+skills with your team. I'm David
+DeWinter, your guide to all things
+Claude. Open up a browser, head to
+claude.ai with me, and let's dive in.
+Together, we'll create a skill to catch
+you up on long email threads. It'll
+summarize the thread, tell you your
+action items, as well as draft a reply.
+To create a skill, you do not need a
+paid plan. Just simply head over to the
+sidebar, and then click on customize.
+Skills live under this customize skills
+tab. A skill is nothing fancy. It's
+literally a file with a prompt. This
+Gmail summary skill, for example, just
+looks for recent emails to draft
+responses to. Under the covers, it's a
+single file called a markdown file.
+Basically, it's a text file which has
+special characters for formatting.
+Simple skills only have a prompt, but
+some more complex skills can actually
+embed code. For example, this dashboard
+updater skill also includes some Python
+code to run its task. But regardless of
+the complexity, skills are saved
+prompts. So, let's create our first one.
+From this screen, the easiest way is to
+click the plus button, go to create
+skill, and then create with Claude. You
+get a prompt which, as of filming, looks
+like this. We're actually going to
+create a skill using its skill creator
+skill. So, it's a bit meta. So, it
+starts off by asking, "What do we want
+to do with this skill?" Now, I've got a
+response already prepared. You can grab
+this from the resource guide that's in
+the description. Basically, given a long
+email thread or a Slack thread among my
+co-workers, help me summarize the main
+points, call out action items, and draft
+a response. We are asking for help
+building tone. This is so the email it
+drafts doesn't sound like AI. Before we
+look at the response, notice I added
+these words, "What else should I
+clarify?" This tells Claude not to make
+assumptions about how we want this
+built, instead default to asking us for
+clarification. We see those questions
+showing up right away here. So, really
+don't worry about being super precise
+with your first prompt. Claude will
+guide you through this process. Your
+questions will be different, so take the
+time to respond thoughtfully. Now, while
+this is running, I do want to call out
+question three about trigger phrases.
+Once you create a skill, you can invoke
+it by the name of the skill. That's the
+shortcut it references here, or Claude
+will pick it up automatically based on
+context. That's this option. In my
+experience, while Claude is getting
+better at recognizing skills through
+this, it's actually more reliable to
+invoke it with the shortcut. After you
+answer that first round of questions,
+it'll either ask you more questions or
+start drafting the skill. Claude here
+has drafted the skill and has separated
+it into this thing called front matter
+and the body. Front matter describes a
+skill at a high level and details how
+you use it, while the body is the actual
+prompt. So, it's helped us get more
+specific, which is good, and now the
+next step of the process is to test
+against examples. This helps you refine
+your skill before you turn it on. Now,
+you have a choice here. You can either
+have Claude create the examples or paste
+in examples yourself. I've got an email
+thread ready to go, so I'll test it
+against that. Now, while that's running,
+for those of you who didn't reach this
+step, as in it didn't create the skill,
+just tell it inside of your next prompt,
+"This is good. Create the skill." As for
+this example email thread I just sent
+in, it gives us a summary, action items,
+and two draft replies. Now, I'm glossing
+over the details of the summary and the
+action items here because this isn't a
+video about how to write emails, it's a
+video about skills. But, you need to
+know that this is where the real work
+is. Any feedback you can give on these
+test examples will make the skill
+better. You can send in feedback just by
+writing a prompt. I'm sure you get the
+idea by now, so let's install the skill.
+It gets packaged up as the skill file
+and then clicking it will reveal the
+prompt behind the skill. And remember,
+if you keep getting asked feedback
+questions, you can force the creation
+just by telling Claude to do so. To
+install the skill, you can either click
+the save skill button here or the save
+skill button up in the preview pane.
+You'll see the skill saved dialog and
+let's click manage here. Thread reply
+now shows up in the skills list here and
+you'll see its description and the
+prompt down below. Now, here's a cool
+thing to know about skills. These
+prompts are super long, right? So, if
+you have all the prompts from all the
+skills you have loaded in every
+conversation, Claude would probably get
+confused on what to do. That's why these
+prompts don't get loaded automatically.
+They only get loaded when a skill is
+triggered. And a skill is triggered in
+one of two ways. The first is when
+typing the skill name directly and the
+second is when Claude infers from the
+context that it needs to be used.
+Though, the first way is definitely more
+reliable. From here, try your skill by
+clicking the three dots in the top right
+and then clicking try and chat. This is
+how you invoke skills, a forward slash
+plus the name of the skill. Type in the
+context that your skill needs and then
+submit it. Now, you might find that even
+with all that iteration, your skill
+might not be that good. It might work,
+but just not as well as you doing it on
+your own. You're on the right path. Keep
+using it and then tune it right
+afterward. You can do that simply by
+asking Claude to update the skill. For
+example, I don't like signing off emails
+with the word best. So, I'm just going
+to tell Claude to update the skill not
+to do that. In a few seconds, it makes
+the changes and you can continue
+building from there. Great skills have
+three components. They're specific,
+they've been built based on real
+examples, and they've stood the test of
+time. The skill we just built summarizes
+and drafts replies based on your voice,
+but skills get more interesting when you
+teach them the rules that only you know
+about your business. Let me show you
+what that looks like with today's
+sponsor, QuickBooks Workforce. Okay, so
+say you run payroll for a small business
+and before you hit submit, you want a
+quick sanity check that everything looks
+okay. You can do that with a skill. So,
+the key is to get the data out of the
+system that you're using. QuickBooks
+payroll can do that when you click
+preview payroll details. You can save
+this PDF, upload it into Claude, and
+then run your skill. It flagged a couple
+things I need to pay attention to, so
+now I can go back and fix my payroll.
+Oh, and I hope you caught that you don't
+even have to remember your skill's name.
+You just type the forward slash key and
+all of your skills show up in an auto
+complete window. If you've got a small
+business, payroll can be a huge
+challenge with so many taxes, fees, and
+state-specific requirements to keep
+track of. If you feel that burden, check
+out QuickBooks Workforce. All your
+employee records stay in one place, your
+team can add their timesheets through a
+mobile app, and you can make sure your
+payroll goes out on time every time.
+Check out QuickBooks Workforce using the
+link in the description below for 50%
+off for 3 months. Now, we just built
+this thread reply skill on Claude on the
+web, but if you download Claude for the
+desktop, the same skill is about to show
+up somewhere we didn't install it. Check
+it out. When you install Claude desktop,
+you get access to three apps: chat,
+co-work, and code. We've still got the
+customize button here, too, and when we
+click on it and then go to skills,
+you'll see the thread reply skill is
+still there. I didn't have to install it
+separately. These environments are all
+connected. Let's go back here and see
+how this works inside of the co-work
+app. Co-work introduces some cool
+features on top of chat, and the main
+one is that you can work in a local
+folder. The reason that's so valuable is
+so you can jumpstart every conversation
+with all the context in that folder. For
+example, the folder I just selected has
+this file about our business, this file
+about our financials, and this file
+about our team. So, back in Coda, I can
+ask it use the business context in this
+folder to and then invoke the thread
+reply skill. And then I'll paste in the
+perfect email thread to use it on. Now,
+while this is working, you'll see a
+whole number of new things on the right
+side of the page here. If you're
+interested more in Coda, check out our
+tutorial in the top right. So, this is
+cool. It's like we've saved our prompt
+inside of this thread reply skill, and
+we get the same type of result inside of
+Coda. We get the email summary, action
+items for me, and a draft reply. And you
+don't just see this in Coda, you'll see
+it across the Claude ecosystem. That
+includes Claude for Word,
+Claude for Excel,
+and Claude for PowerPoint. Claude Code
+works differently though. So, let's
+spend a few minutes reviewing how skills
+work there. Here I've got Claude Code
+running inside of VS Code. I like this
+view because I can see all the files of
+the folder that I care about on the left
+side of the screen. To make this easier
+to follow, I won't use the terminal
+today, but everything I show you will
+also work in the terminal. So, let's try
+our thread reply skill. When you type
+{slash} in Claude Code, you'll quickly
+find out that the skill list here
+doesn't match the rest of the Claude
+ecosystem. So, what's the deal with
+that? Skills are installed differently
+here, and you can get some insight on
+that by asking about global versus
+project skills. Global skills are
+available to every Claude Code instance
+across your machine, and then project
+level skills live inside this folder.
+Now, to create a skill, you can use the
+same pattern that we used on the web,
+and you can even ask Claude Code for
+help creating a skill. It takes you down
+a very similar road. It'll tell you what
+it needs, and then it asks you what you
+want. But we've already built this
+thread reply skill. So, is there a way
+to import it into Claude Code? Let's
+take a look. I've just gone back to the
+skills view inside of Claude. You can
+get this on the desktop or the web app.
+With the thread reply skill selected,
+I'm going to hit these three dots and
+then click download. When you're
+prompted for a file name, actually
+rename it to .zip. The reason for that
+will be clear in just a second. Now,
+extract the zip file, you're going to
+get a folder with a skill file in it,
+and it will look something like this. On
+the right side of the screen, we have
+the folder that's open in Claude code.
+To install a skill here, you need to
+copy it into a skills folder inside a
+.claude folder. I'll move the thread
+reply folder, not the skill file
+directly, but the folder into the skills
+folder. Back in VS Code, you can see
+that folder structure show up here in
+the left sidebar. And now it doesn't
+show up in your current Claude code
+session, but if you start a new one and
+then try the skill, you'll see it's
+recognized. Now, before we leave this
+example, one cool thing to keep in mind,
+this folder structure of .claude/skills
+also works within co-work. That means if
+you're sharing a folder with someone,
+you can also share skills this way. So,
+let's answer the top question that I get
+from teams that I train on Claude. How
+do we share skills? Path number one to
+share skills is to use a zip file. Now,
+I just showed you how you can download a
+skill out of Claude using the three dots
+menu here. So, if you have a skill to
+share, download it first here, then have
+your colleague click this plus button
+under skills, go to create skill, and
+then upload a skill. Then they can
+choose a zip file or a skill file to
+upload into Claude. Now that we've
+covered that, let me share why you
+should never do it. You now have two
+copies of the skill, one on your machine
+and one on your friend's machine. So, if
+one of you updates the skill, you're now
+running two different versions, and you
+have to run through this download upload
+process to get back in sync. Path number
+two solves this problem, but it only
+works if you have a Claude Teams or
+Enterprise account. Organization-wide
+admins get access to this special
+organization settings view. I'm going to
+take you down on the left side to the
+section called skills. There are some
+interesting skill settings here, but I'm
+going to direct your attention all the
+way to the bottom to organization
+skills. You can upload skills the exact
+same way I showed you before, but this
+time they're accessible to your entire
+Quad organization. These skills can be
+used in the exact same way that I've
+showed you before, and in fact, if you
+go to the customize skills view, you'll
+also see a new section for those
+organization-wide skills. Now, one thing
+worth knowing about organization skills,
+you can use them, but you can't edit
+them. But, if you want to make a change,
+you can always ask your Quad admin to
+download the skill and send it to you.
+Now, if you don't have a Quad Teams
+account, but you do have a shared cloud
+drive like OneDrive or Google Drive,
+then there is an experimental way I
+found to share skills. Here's how it
+works. First, make sure you sync that
+drive down to your local machine. That's
+what this folder is. Then, for the
+folder you want to work in, right click
+and click on something that looks like
+always keep on this device. This menu
+option will be called something
+different depending on the tool you're
+using. This is for OneDrive. Next, load
+up Co-work and select the folder that
+you just downloaded. Inside this folder,
+we've got a Quad folder with a skills
+folder, which contains a skill. But, for
+Co-work to pick up the skill, it's got
+to be in a dot quad folder.
+Unfortunately, OneDrive does not support
+folders that start with a dot. So, we've
+got to settle for Quad as is, and then
+we use the special file called quad.md
+to preload the skills in the folder.
+This is a bit advanced, so if you want
+to learn more, check out the resource
+guide in the description for the full
+setup. Let me show you how this works.
+Now, first of all, the skill is not
+installed anywhere, so it doesn't show
+up in autocomplete. But, I can still say
+run the contract generator, that's the
+name of the skill, on this deal notes
+file. And you can see, before it even
+loads the file, it'll load the skill
+that we have in the directory, even
+though I misspelled it as contractor
+generator instead of contract. We'll
+check back on this one in just a minute.
+Let me take you through the last option.
+This is Git. It's a source control
+system, which is mainly used by software
+developers. Because skills are basically
+markdown or text files, it's really
+useful to have a version history. This
+is super useful in case someone modifies
+a skill and makes it worse by accident.
+Git shows you this version history and
+allows you to revert to previous
+versions. Git can get complex, so we'll
+stop our overview here. But if you are
+non-technical and you want to learn more
+about how to use Git with your team, let
+me know in the comments. Now you know
+how to build a Claude skill. You know
+how to run them in chat, in co-work, and
+in Claude code, and you know four ways
+to share them with your team. Your next
+step is to connect your apps with your
+skills, which you can learn more about
+here. Now big thanks to our sponsor
+QuickBooks Workforce, link in the
+description below for 50% off for 3
+months. I'm David DeWinter and I'll see
+you in the next video.

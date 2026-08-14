@@ -1,0 +1,29 @@
+[Music]
+AI agents have joined the global
+workforce. NVIDIA IQ and Agentic AI
+blueprint lets enterprises connect AI
+agents to reasoning models and data
+systems. Given a task, agent TJ needs to
+reason, plan, iterate, and use tools to
+generate a final
+report. For example, what if I want to
+research information for a board brief?
+IQ uses NIM and Nemo to help TJ
+synthesize hours worth of research in
+minutes. Llama Neotron Super lets TJ
+reason and has the capability to switch
+its reasoning functionality on or off. A
+single multi-purpose model. When on, the
+model can find the best answer faster
+than other similar reasoning models.
+Nemo agent ops tools helps TJ process
+information, adapt and learn. It can
+ingest pabytes of data faster with
+worldclass semantic query
+accuracy. Nemo curates user and AI
+feedback, then post- train small models
+to exceed the accuracy of larger ones
+for greater efficiency.
+With the IQ blueprint, developers can
+unlock the full potential of AI agents.
+[Music]

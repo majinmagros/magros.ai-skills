@@ -1,0 +1,1190 @@
+Imagine building your own team of
+artificial intelligence agents [music] and having the power to give
+them a set of skills, like in the
+movie Matrix, when New starts
+learning from Gu, simply by
+uploading [music] that skill.
+Unfortunately, it's not yet possible to do
+this with human beings, but it's more
+than possible to do it [make music] with
+artificial intelligence.  And that's what
+I'm going to show you in this video.  My name
+is Rombraza, I am the founder and CEO of
+Overlands, a nexialist creative school
+where we connect creation,
+business, and technology so you
+can learn to realize your own ideas.
+If you'd like to learn more
+about Overl, be sure to check out the
+link below in the description.  Let's
+get to the video because we have
+a lot to talk about today.  Imagine
+building your own team of
+artificial intelligence agents, defining a
+hierarchy among them and, best of all,
+being able to give each agent specific skills to
+perform within their
+role.  It's quite likely that you've already heard
+of agents, maybe you've even tried to
+create your own, but you didn't quite understand
+how they worked.  Or perhaps
+you've watched some of my recent
+videos that I posted here on the channel
+explaining how Cloud Code works,
+how to install it, the main
+differences, and the fundamentals of working on the
+web, in the terminal, or in the application.  But
+maybe you're still stuck, maybe
+you're still waiting for the
+right moment to build your agent.  Some
+people might say that it's perhaps
+too complicated or that it's something only
+programmers and developers can handle.  But
+actually, in this video, I'm going to
+show you how you can still create
+your own agents, your own
+skills, and use them to your advantage
+so they work together with you.   Okay, let's go
+, I'll share
+my screen with you here.  The first thing
+I'm going to do is access the Cloud Code
+Docs here.  As I've mentioned in other videos,
+this is your workbook.  This is where you
+can learn all about cloud code and reputable
+companies that provide documentation.
+So, Antropic has it, OpenI has it,
+Google has it.  The difference is that most
+people are too lazy to study, too
+lazy to learn.  I know it
+'s different with you.  I'll
+even leave the link to that document here for you.  Let's go
+, because there's a lot of cool stuff
+here.  The first thing I'm going to do
+to make things easier is to come here to where it's in
+English and change it to Brazilian Portuguese.  Okay,
+now it's translated, easy to read, easy
+to understand.  Now I'm going to go to the
+side menu and click here on "
+extend cloud code".  In this section, the
+documentation explains how you can give
+your cloud code more power.  And
+down here we have a link to
+skills, which I'll leave open, and
+a link to subagents and agent teams,
+which are the three things we're going to
+talk about in this video.  To help you
+understand as best as possible how
+agents and
+skills work, I need to explain this to you in
+chronological order.  This way you will
+understand when the need arose
+for each of these resources to be
+created.  So I'm going to pull out the
+whiteboard here to explain better
+how this works, and then we'll move on to the
+practical creation of agents and
+skills.  To summarize the story for
+you, around 2022 we have
+the arrival of GPT chat and then other
+LLMs as well.  And we could use these
+LLMs to build assistants.  I've even
+explained what
+assistants are in another video here on the
+channel.  You can go there to
+learn a little more.  But with
+assistants, we started performing
+specific tasks using
+artificial intelligence.  Usually you send a
+question, she answers, you ask for a text,
+she delivers it, or even a
+simple page, she delivers that too.  This has
+evolved over time, hasn't it?  So, from
+2022 until around 2024, we
+used
+artificial intelligence as assistants.  Openia
+even created some
+API connection processes for the assistants, because the
+real power would come when the assistants
+could call tools to
+perform specific tasks, but
+back then it didn't work so well, it
+was complicated.  AI made more mistakes
+until we get to 2024. In 2024,
+Antropic, the owner of Cloud, launches MCP,
+which is a protocol that allows you to
+connect artificial intelligence with
+other tools better than using
+the API, using MCP itself.  This
+was already a huge leap, an
+important step here, because now it
+was possible to use
+artificial intelligence more efficiently to call
+specific tools.  It was still
+emerging there, things were just starting to
+gain traction.  Once
+artificial intelligences began
+connecting with other programs and making
+tool calls, we
+officially entered the age of agents.
+And here's where things start to get
+interesting, because with the call of
+tools,
+artificial intelligences have gained arms and can
+perform tasks for you.  That was the
+main topic discussed in 2025.
+A lot of progress happened there.  And at the
+very end of 2025, these large
+companies like Antropic, Google, and
+Openi began launching their
+code agents.  So put it here, code.
+And 2026, or at least the beginning of it, right? The
+moment I'm recording this video, it's
+April.  In 2026, we're going to have
+the boom of code agents.  When
+code agents start to dominate the
+market, then it's time to get into terminals,
+into IDEs—if you don't know
+what these concepts are, there's a link
+below to a playlist where you can
+learn all about it for free on
+YouTube.  But when these
+code agents start arriving, new challenges
+arise as well.  In 2025, the main
+idea was to use agents to
+build entire teams.  So imagine
+you have a specific agent of A
+here.  Imagine this: this is my agent
+A. And you give him instructions.
+So, put it here as if it were a
+playbook, a recipe, a step-by-step guide
+for him on how to perform a
+specific task.  More than that, you
+also gave him an
+identity, told him what
+his role was, what he would be doing, and
+what information he would have access to.
+From there, we started building
+teams of A-list agents and establishing a
+hierarchy among them.  So, I have
+a lead agent who delegates to the other
+agents.  You'll see how to do that in this video,
+too.  And each with
+their own identity, each with
+their own permissions.  This was
+amazing and continues to be amazing and
+very valuable, but it also has its
+limitations.  Because think about it this way:
+every time you open an
+artificial intelligence to talk
+to it, it has a context window,
+and when it reaches a certain number of
+tokens in a conversation, its performance starts to
+decline.
+This usually ranges between 60,000 and 100,000 tokens.
+So, after this, the AI ​​will
+continue working.  You'll see
+many models that claim to have 1
+million context windows.
+They do have it, but there is a
+performance decline.  This means that she
+starts to have lower performance,
+starts to hallucinate, starts to deliver
+worse results, starts to spend more
+tokens, and so on.  So what do
+we start doing at this point?
+Context window management.  So,
+imagine that I hire an agent like that
+to work with me.  We start
+a conversation, we chat for a while, and at a
+certain point,
+his context window starts to get cluttered.  So what do
+I need to do?  I need to open
+a new window and continue the conversation.
+However, there's a lot of
+valuable information here that I don't want to lose,
+that I want to store in a memory, or
+at least that I want to better manage what
+information the AI ​​has access to, so that
+I always have a
+clean, healthy window of context.
+The problem is that when you start a
+conversation with an agent from A,
+the context window is already filled in.
+And when you put a very
+long instruction in it, that instruction also
+fills up even more of the
+context window.  And then there's just a little bit of
+space left for you to actually talk
+to her and ask her to do what
+you want.  In other words, we already have here what
+is called the system prompt, which is
+a bit like the context prompt window.  Next
+comes all your instruction here regarding the
+procedure you want her to
+perform.  And this is where things start to
+get interesting.  Let's suppose you
+want to use your AI agent to
+build a house.  Beauty?  When he's
+going to build that house, he needs to
+go through a series of
+different processes there, preparing materials,
+preparing the foundation.  There are a number of
+steps involved in building a house, right?
+And you will give him
+complete instructions on how to build this house from
+start to finish.  So you write that
+prompt-to-execute description of everything she needs to
+do in there.  After you
+create this entire instruction prompt,
+you're going to bring in the entire instruction
+from the beginning, from the moment
+it prepares the batch.  After preparing the
+plot of land, he lays the foundation, prepares the
+materials, builds the walls, and so on. I'm
+skipping steps here, but just so you
+understand.  At a certain point, within
+all of this instruction, you have an
+instruction for him on how he is
+going to prepare the cement mix.  Beauty?
+Then he will prepare the
+cement mix.  He needs sand, he
+needs cement, he needs water.
+And then you explain to him that first
+he puts one in, then the other, then the
+other, then mixes them, in short, there's a whole
+process involved in making this cement.  But
+this is inside a
+giant prompt with several other steps as well.   So
+every time your agent is going to
+perform a task, let's say it's
+already on the roof, it's not even
+mixing cement anymore, it's building
+the roof of the house.  However, as this is
+in the instruction, every time this agent
+runs, even if it's on the
+roof, it will read step by step how
+to prepare the
+cement mix.  So he's there needing the
+roof tiles, but he's
+there.  First put the cement in, mix it
+with sand, then add the water, and
+mix again.  He's reading this all the time.  And
+this is taking up space in your
+context panel, even if you no
+longer need that function or those
+steps.  So here we have a
+problem in managing all of this
+instruction for the agent, because he has an
+excess of instructions here.  You have
+more information than he needs to do his
+job.  This information is occupying
+his context window.  But when
+you actually go to use it to
+perform the function, there's a little bit of the
+context window left, which runs out quickly, and
+it can't execute; it starts acting
+erratically, and so on.  At this point,
+we are creating the skills.
+So Antropic, once again, created a
+different way for you to manage this
+context here.  So imagine you
+have your agent, and your agent has
+its instructions there, but you
+only use a tiny bit of
+its context window simply to tell
+it where to find all the
+information it needs.  For this purpose,
+they created Cloud MD.  It's a file that
+functions as an index.  After it
+reads this Cloud MD and its System Prompt,
+it can invoke some specific agent
+with specific permissions to
+work.  This will take up a
+little more of the context window, but not as much
+as before, because now you can
+activate specific skills
+at specific moments in the project.
+So imagine there's a library,
+let's put that library over here
+.  And when this agent needs
+a specific skill, for example,
+preparing cement mix, he knows
+that he has that skill at that moment.  He'll search through
+all his skills here,
+find the skill to prepare
+cement mix, pull it into the context,
+execute the skill, and move on.  In other
+words, now I only pull out the
+skill I need instead of
+asking it to read all the skills all the
+time.  This is the foundation
+you need to understand in order to work with
+the skills.  And now I'm going to show you in
+practice how to do this, because it's
+simpler than it seems.  Here in the
+Cloud Code documentation, if you're looking to
+extend Cloud Code, you'll find an
+overview of the skills.  Here you have
+all the instruction on how to work with
+skills, going even more advanced than what
+many people teach out there.  And I'm going to
+show you how to do that in
+practice now.  You can read the documentation here later
+if you want to delve deeper,
+okay?  Here in the documentation, it will
+tell you to start the skills
+by running a command in your terminal.
+In our case here, I'm going to do it in an
+even simpler way and I'll be developing
+the process together with you.  So, the
+easiest way to work with
+skills is right here within your
+Cloud Code application.  You'll probably
+access the application on this page here.
+You can come here to customize and here
+you have skills.  When you click
+on that little plus sign, you can explore
+skills that Antropic itself
+created, downloading those skills for
+you.  Or you can also create your
+own skills.  So I click
+here on this little plus sign, create skill.
+I can create this skill
+by talking to Cloud, writing it
+myself word for word, or doing the
+padding.
+The skills utilize a
+file format called markdown.  It's a
+very good format for working with AI, because
+you can break the file into
+different parts.  The important part
+that we're going to see here in a moment is the
+fronter, where you give a summary of
+what's inside the file, so you don't
+need to read the entire file to
+understand if it's relevant to the
+context in which you're working.
+So, look how simple it is to create a
+skill.  I can simply click here
+to write the skill.  I'm going to give
+this skill a name.  An example we can
+give here is a skill focused
+on, for example, understanding what ideas I have
+, a briefing skill.  So,
+I'm going to put here, look, briefing make, a
+skill focused on creating briefings.
+Here I will put the description of this
+skill.  And it's very important that you
+write this description accurately,
+because the AI ​​will read the skill name first
+, then the description.  If the
+description shows the AI ​​that something is
+relevant to the task, it reads the
+entire skill.  If she sees in the description that it
+'s not what she needs, she doesn't read the rest
+of the file.  Beauty?  So here you will
+put the description.
+There's even an example right here, look.  Generate
+weekly status reports of
+recent work.  Use when prompted for
+updates or progress summaries.
+So, if I'm going to
+create a briefing, I can set it to
+: generate a
+complete briefing from the
+user's instructions.  Use this when the
+user has an idea that needs to be
+developed.
+No, I put a simple description here
+.  And here in the instructions you can
+put the step-by-step process of a framework, the
+way you create your
+briefings.  You write this here and it
+will execute exactly step by step
+as you put it.  So you're going to do
+this first, then this,
+then this, then this, and so on.
+This is the simple way to create a
+skill.  Later I'll show you how to
+write the instruction here as well.
+First, I want to show you the
+tool.  What is important for you to
+take into consideration here?  When you
+create a skill directly in the application,
+that skill goes to your user folder;
+it doesn't go to the project folder
+you're working on.  This is important
+to mention because if you fill your
+user folder with too many skills,
+Cloud will need to read all the skills
+to understand which ones it needs for each
+project.  And often you'll
+need different skills for
+different projects.  So it doesn't make much
+sense for you to carry
+different skills to projects that
+don't require those skills.  We
+were talking about the example of the house.
+Imagine you need to build a
+house, and there's a skill that
+teaches you how to make a
+paper airplane.  You don't need that skill
+to build a house, but it's
+there in your user library,
+and the cloud constantly needs to read
+that information to know if it needs
+that skill or not.  So here in the
+user section, when you create a
+skill in your global file, it's
+important that you create skills that
+will work for any type of
+project.  These are generally skills
+focused on project preparation, on
+preparing the project's structure, which includes
+which technologies and tools will be
+used.  These are skills you use
+frequently throughout the project, such as
+committing and pushing,
+which are processes where you upload
+your project to the cloud, and versioning that
+project.  So these are skills that
+you will naturally use in
+many different projects.  Now,
+how do you go about developing
+a specific skill for a
+project you're working on?
+To do this, you first need to create the
+project, and within that project you will
+work with the skills.  So,
+let's see how this works.  It will
+be easy for you.  We had already
+created a Delta project here in one of the
+last lessons on this channel.
+Within this Delta project, there's this little
+website that we created, and there's also
+some documentation here.  If you want to
+know more, I'll leave the link
+below for you to watch this video.
+I'll show you how we created this
+in just a few minutes, okay?
+What am I going to do?  Okay?  So, I'm here
+in my work area.  I'm going to create a
+new project here.  I'm going to call this project Project
+Omega.  For each
+video, I give the project a different name
+.  Here's my folder.  I'm going to
+open Antigravity.  If you want to
+learn more about Antigravity, check out
+our channel here.  There's a video where
+I show you how to install it and how it
+works.  With my antigravity software open, I'm
+going to click here on "open folder" and
+select that folder.  So, I'm here,
+in the work area.  Project Omega,
+select folder.  There aren't any files
+in this folder yet, but we're going to
+start working on it.  For that,
+we need a specific context.
+You will use agent skills when
+creating a project.  Let's suppose
+I'm going to create a study assistant here,
+and then I need to create
+some sub-agents: a
+content explainer, an exercise generator, and an
+answer evaluator later.  And they
+need a set of skills,
+for example, creating a quiz,
+explaining a concept that has
+different levels, or following a
+specific learning framework.  So I'm going to
+start this project here.  The first
+step is to come here to the terminal.  If you
+don't understand what's happening here
+now, I recommend watching the other videos
+first.  We have a playlist here that will
+teach you how.  And now I'm
+simply going to wake up the cloud within
+the project, okay?  I'm going to press shift tab
+here to enable
+edit mode; it'll be easier to work with that way.  So here's
+the thing: the first step is to
+give the cloud some initial context so they
+understand what the project is about.  I
+can put it here, look, let's create a
+study assistant where the user
+learns a specific topic, like
+nexalism, the future, etc.  And that's why we
+need a structure.  So, the
+structure basically consists of
+subagents of... I'll put the
+content explanation here.  Oops.
+Content explainer, exercise generator.
+Think about it, everyone here is an agent,
+we'll talk more about this later.  An
+evaluator of responses, and so on.
+Beauty?  Okay, then.  We have
+several agents here, each with a
+specific identity and a
+specific function.  And skills, skills
+like, I'll put here, generating quizzes,
+explaining a concept in levels, creating a
+study plan, and that's it, okay?  So
+that's the idea here, to keep it really simple so
+you can see how these
+agents are created.  So here, okay, how to create
+an agent, studies, this is here,
+we've already explained to him what
+I'm going to talk about.  Create a briefing
+detailing the project idea.  I like
+to start like this, don't you?  You can even, if
+you want, run a plan mode on it
+here too, and it will plan
+the idea here.  The play mode takes a little
+longer to set up, but it's worth it, it pays off,
+but for this video I'm just going to ask
+him to generate a briefing for us.  Then
+he'll understand what our idea is,
+write a briefing, and save that
+briefing in our folder here.
+So all we have to do is wait for him to do
+it.  While Clou works on
+our briefing, I want to introduce you to
+our community.  You've always sought a
+place where you could evolve,
+continue learning from people who
+want to help you achieve results, people who
+are on the same journey as you,
+building projects, realizing their
+own ideas.  I want to introduce you
+to Overl and also Vanguarda.  Overl is
+our ecosystem as a whole.  There
+you can learn in any way you
+want.  If you want to watch a class, read
+a text, or listen to a lecture, you
+can do that within our
+ecosystem. You'll have access to various
+materials, book recommendations, and classes
+to watch. But there's also
+Vanguarda, which is our
+results acceleration program for those who want to
+build a business within the
+creative economy.  If you want to realize your ideas and
+create your own tools, it's great to
+learn about the cutting edge.  It's one
+thing to study alone and
+learn a skill, but it's quite another to
+learn from someone who is already on
+the path you want to follow.
+Sooner or later you'll realize, if you have
+n't already, that the secret isn't
+in learning to click buttons or follow
+tutorials, but in having good ideas and
+turning those ideas into reality.
+How do you know if what you're
+creating is actually useful?  Does it make a
+difference in people's lives?  How
+can you validate your ideas?  That's what
+we do at the forefront.  The
+vanguard is a collective program; it's a
+program that includes in-person meetings,
+a program that meets every
+week.  I can tell you that there's
+nothing quite like the avant-garde.  And right now
+I just want you to know,
+I'm just introducing you so you know
+that this exists and that we're here
+ready to welcome you when the
+time is right, okay?  Then check it out
+a little more.  I'll leave the link
+below as well, in case you're interested.
+And we're going back because I think
+Cloud is finished.  Look how
+interesting.  So he finished
+writing the briefing for us here.  He
+even mentioned which points are
+worth deciding before he begins.
+This is information that I didn't give him,
+and he's asking me how we're
+going to work with it.  Since my
+goal here is mainly to show you the agents and
+skills, I won't go into detail about
+that part here.  The point is that we
+have the entire briefing right here above.  Look at
+the file he created.  He even
+explained here how the
+agent architecture will work.  So there is a
+main orchestrating agent, a
+content explanation agent, an
+exercise generator, and an
+answer evaluator.  They are three different agents,
+right?  Four, actually.  And they also
+have the skills here, look,
+summonable skills, hierarchies, explaining levels,
+study plan.  What am I going to do
+here now?  The first step, okay?  This might
+not be the best possible step, maybe
+you could do better with the
+skills here, but I want to show you the
+simplest way so you can see that you can
+start today.  What I can do here
+is ask the AI ​​itself to create the agents and
+skills for me.  I'll
+improve them later.  I'm going to do this
+because Cloud will create the
+entire structure here, and you'll see how it
+works.  The first thing I'm going to
+do is press the clear bar to clear
+my context window so I can
+continue communicating with the cloud.  Since
+we already have this briefing here,
+I can now give a slash init.  When I
+do this, the cloud will create the
+cloud.md file, where it will write the
+index of this project.  Even though there's only
+one briefing file now, he
+can already understand the context and
+the structure we'll be
+working with.  So we run the
+barrait here to create the cloud.  MD.
+Here he's already saying, look, that the
+repository is empty, that's correct according to the
+briefing.  MD, which doesn't have any code yet,
+doesn't have any packages and doesn't have any
+structure for it to understand where
+the folders and files are located.  Then he says he's
+going to write the Cloud MD focused on the
+architecture that's written in the
+briefing, but later we can also
+refine this file here,
+okay?  I'm just creating this so you can see
+how the structure will work.
+So, the file is right here.
+Hey, cool, he created this file for
+us.  You'll see that the file has a
+status, it has project architecture, it's
+already showing the layout, that there
+will be a file, a folder called cloud.
+Within this cloud folder, we will have the
+agents and the skills.  In addition,
+here is also the content that he will
+save inside another folder.
+Beauty?  Once we've done this
+, I can press clear again,
+and now I'm going to ask him to create
+the agents and skills for us.  I
+can either type `slash agents` here and it
+will tell me, "Look, running
+agents, create a new agent."  Here, he
+also has the plugins that I have
+installed within this user account, but
+we're not going to do it that way, okay?
+I could do it manually here.  I'm going to
+give an ES.  I'm going to tell him in
+natural language that I want him to
+create all the agents and all the skills.
+But now comes an important part.  Look what
+I'm going to do now.  Create the
+agents and skills needed for
+this project.
+Do it.  Just turn the Caps Lock down a bit
+.  Do this in parallel.  What does this
+mean?  He's not going to execute the
+creation of all these agent skills
+in this window here, in this chat
+we're having.  To help you understand
+this a little better, imagine
+this: imagine we have cloud
+code here.  And Cloud Code is
+chatting with us here in this chat.
+So, there's a little chat here and we
+'re in it.  Beauty?  We're working together with
+Cloud Code.  There's a conversation going on here.
+What will he do when you tell
+him to work in parallel?  He
+will invoke other cloud codes.  And these
+cloud codes here, each one will have its
+own window; they won't appear in
+our conversation, okay?  It will actually
+give you information that they
+are working, but each of them will
+work in their own context window,
+executing what you
+asked them to do.  So, what do
+we want to do here?  We want, we
+'re asking this person to do the
+following: you're going to be the leader,
+and you're going to ask each of these people
+here for a part of this project, and each of
+them will create it.  So you're going to create
+agent one, you're going to create agent two,
+you're going to create agent three, and so on
+.  This is good because it preserves
+its context window and puts a brand
+new, zero-mileage cloud here
+to create only this
+specific task.  So he's well-
+focused on what he needs to
+create.  You could have dozens of them
+created by you here, okay?  So take a look at
+how this happens in practice.  We
+'ll talk to him here.  Do this
+in parallel.  You don't execute, you
+only delegate.  Okay, you'll see what's
+going to happen here now.  He's going to
+start calling each of the agents.
+The agent he's calling is the
+Cloud Code Crew itself, okay?  He is not
+a subagent.  And this is something
+important for you to understand.  Cloud
+Code, by itself, is already an
+artificial intelligence code agent.  When you
+create your own agents,
+Antropic calls them subagents.  It is
+their agents there that the Cloud can
+invoke for a given task.
+Beauty?  So, look what he's
+saying here.  I will delegate the creation
+of the six files, which are three
+sub-agents and three skills, in parallel.
+Each agent will read the briefing and the cloud
+MD for context and write the
+specific file.  Now, what's going to start
+happening?  Look, it's initializing
+the first agent, which is the agent that
+will create the content explainer sub-agent
+.  Now he's going to initialize the
+others.  Look, I'm going to let him
+do this here, and he's going to start, look, he
+created the cloud folder, he's going to start
+running the other agents here together in
+parallel.  So, look, two
+agents are rotating.  Right now we have one person
+creating the content explainer and another
+creating the
+exercise generator.  Every time he asks me for this
+, he's asking for
+permission to create new folders.
+So, he created the "agents" folder here and
+is working inside that folder.
+It's running two now, it's about to
+load the third one here too.  Look, there are
+three agents patrolling right now.  The
+response evaluator as well.  The idea here is that these
+are raw clouds, okay?  These are raw clouds
+that are creating sub-agents that will
+work on those
+specific tasks.  Here, he's just asking me for
+permission to create the files and
+folders.  So he created the first
+agent here, the content explainer.
+I'll open it for
+you in a little while.  Let me just close this tab
+here.  What you need to see now is that
+we have a cloud folder.  Inside this
+Cloud folder, we have an agents folder.
+And within that "agents" folder, we have the
+content explainer.  Now he's
+asking me for permission to create the
+skills folder.  Now we have two folders
+here, look, the agents folder and the
+skills folder.  The first one is already inside the agents folder;
+the others are being created.
+Look, one here has already been done, look,
+Don.  The others are still being made,
+you see?  But I have several agents
+working in parallel.  I'll give you a
+yes right now.
+Leave them loading here, and the skill
+is being created as well.  So, each
+skill has its own folder.  This is
+important information when we
+talk about the folder architecture here in the
+cloud: when you create an agent,
+you just need to create this "point cloud" folder,
+then inside the "points" folder.
+And inside that "agents" folder, you're going to
+put the MD (Medical Domain) of your agent, which
+we'll see now.  However, when you
+work with skills, the architecture is
+different.  You have a folder called "skills," which
+needs to be inside the "cloud" folder.
+Then you have your skill folder.
+So, each skill has its own folder.  And
+inside that folder there's a file
+called skill.m.
+This file has the same name in
+all folders, but the way to
+identify it is by the folder name.  That's how
+the AI ​​will identify it, okay?
+So she's creating it here while I'm
+explaining it to you.  Look, two agents have already
+been created, one of which was the
+content explainer.  Let's see here, close
+all the tabs, see.  We have the
+answer evaluator, the
+content explainer, and the exercise generator.  And
+he's still developing the skills.  So,
+we have the skill of explaining in levels,
+the skill of generating quizzes, and the skill of creating
+study plans.  Beauty?  I can create
+as many skills as I want, but here I
+'m creating the skills directly within the
+project I'll be working on.  If I
+come here inside the agent, we have
+here the entire skill file
+that he created.  Beauty?  And what is
+important for you to understand here?
+This information is also available here in the
+cloud code documentation.  Just look.
+So you're going to access Cloud Code, go
+here to extend cloud code, then scroll
+down here to skills.  Within the
+skills section, if you scroll down here, you
+'ll find an explanation of how to
+write a skill.  Then he's going to
+show you the path that was just
+created there, and he's showing
+you a structure for writing this in
+MarkD.  Then you can test where they
+live, so which files, in which
+folders they are located, right,
+their directory, depending on the level
+you're putting this skill at.  So,
+when it's an enterprise skill, it's something the
+whole company can use; it's
+centralized in one place.  If it's a personal file,
+it will be located in your user folder.
+When it's at the project level, it
+will be located inside the "cloud" folder within the
+project.  And when it's a plugin, it will be
+located inside the plugin's folder.  If you
+scroll down a bit further here, you'll find the entire
+folder structure, and further down
+, you'll find the configuration options.  So,
+there are different types of skill content.
+Below is a small table, take a look, with
+the fields.  It has a name (which is not
+mandatory), a description, and information on when you will
+use it.  There's a lot of
+information you can put here
+to quickly read that information
+simply by pressing true or false.  We
+call this the Boolean model.  You say
+yes or no.  So, for example,
+we have here, look, disable model
+invocation.  What does that mean?  If
+you set this to true, it means
+that the cloud will not
+automatically load this skill; it will only use
+this skill when you request it.  This is
+useful for managing
+its context window, as I've already explained to you.
+So here's the model she's going to
+use, what tools are
+available, the context, the agents, and
+also her level of effort, whether she
+'ll spend more time thinking or not.
+The hooks, which I already explained in another
+lesson here, are also explained on the channel
+, you know?  Here you can
+simply define with yes and no what
+Cloud can or cannot do with this
+skill.  And where is that located?  This is located in the
+field that we call the front.   I'm
+going to show you what a
+frontter is.  In this case, I was showing
+the agent; I'll go to the agents too,
+but let's understand the skill here.  So the
+skill is inside the folder.  This is the
+skill to explain in levels.  If I look at
+the file here, you'll see that I
+have three little lines.  Then, within
+those three little lines, I have some
+information, and then I have three little
+lines again.  What lies between
+those three little lines is what's called
+the front.
+This is the most important information for Cloud to
+read the skill and understand whether or not it will
+use it.  In this case, when
+Cloud creates the skill for you, it creates
+it in a very basic way.  He
+only put the name and
+description here, but I could
+add more information, for
+example, allowed tools.
+And then I put two points here and
+write which tools he can or
+cannot use.  It's available right here
+.  Allowed Tools.  So, I define for him
+what he can and cannot
+do in terms of tools.  And I
+can include various other pieces of
+information about them here.  All of these
+I can set, for example, if
+I don't want this model to be
+used, I set it like this, true.
+Ready.  Now it will only activate here
+for me.  Hey, show up!  He will only
+activate that skill for me if I ask
+him to activate it.  It won't activate
+automatically.  I can put here, for
+example, what the model is.  So, I come
+here, write modelis pontos and say, for
+example, that I want the opus here.  And so it
+goes.  Here you define the front end,
+and from there you can better manage
+when, how, and through which this skill will be
+used.  To give you an example
+, look, there are several examples here
+.  Let me load one here.  For
+example, I have a front-end that's
+disabling the invocation of the
+model here.  This means he will only use
+that skill if you ask him to
+use it.  If I leave it here, there are other
+examples.  Look, tools enabled.
+Then he wrote here what AI can and cannot
+do in terms of tools, and so on
+.  Here he will give
+you several examples.  Here I have
+another front end showing which agent
+uses this skill.  That's a
+cool thing too.  You can create an agent,
+and only that specific agent, when
+activated, will activate this skill
+.  No other agent can use
+this skill here, and so on, okay?  Here
+are several examples; I recommend you take
+a look at them later. But once you've
+defined the front-end, here comes the full
+explanation of your skill, which you'll
+write in natural language.  I
+recommend you ask it to write
+the skill once and then read it as the AI
+wrote it here.  This will give you the
+framework for how you can do it
+too.  But basically, here's the step-by-
+step process.  Look, first do this, then
+this, then this, then this, and so on
+, okay?  This will depend a
+lot on your background and which
+frameworks you are already familiar with.  If you already
+have a structure, a step-by-step process, a
+method for performing a
+specific task, you can ask AI for that
+.  If you don't have one, you can ask her
+to make one for you too, okay?
+So this here is a skill.  Let's see
+how it works inside the agent.  So,
+we have this first part here, which is
+very important, which is the front.  Three
+little lines on top, three little lines
+on the bottom.  Everything in here is what
+the AI ​​will read first before reading everything
+else.  It's for her to understand whether
+or not she needs this right now, what the
+possibilities are within this context.  So, in this
+case, we have a name, description, and
+tools available for this
+subagent.  To help you understand this
+a little better, I'll refer you to the
+Cloud Code documentation.  I'm here to
+extend Cloud Code, and below
+I have subagents.  If you go here, you'll
+find a full explanation of how to use
+subagents.  And down here, look how
+cool, he's going to show us what
+the structure of the front panel is.  Look
+here.  So here are
+supported frontend fields.  Then comes the name,
+description, tools,
+disabled tools, model, mode, and the types of
+permissions that we'll have.
+Maximum number of turns, skills, and so on
+, right?  Connectors, hooks.
+I've already explained to you what these are.
+Here you can simply connect.  And it
+'s easier than it looks, okay?  Because
+basically you can get the
+information you need.  In this
+case, our AI only created the name,
+description, and tools, but I could,
+for example, put the following here.
+Look, I'm going to start a new thread here, and I want to
+say which model he's going to use.
+So I'll give it a colon and I'll write it
+here.  No, in this one I want to use the
+son.  All done.  Now he will load
+this model.  Every time he uses
+that agent.  I can also tell him the
+following.  Look, permission mode.
+I can copy this, add a colon, and
+then I'll enable a type of
+permission.  He'll tell me what they are.
+I have def, accept permission,
+automatic, don't ask, and bypass or
+schedule.  Let's assume this is a
+planning agent.  He is the
+evaluator of responses.  So I'll just
+put here that only edits can be accepted.
+All done.  I'm moving on to the next one.  I want
+him to use a specific skill.  So
+I'll put it here, see, skills.  And then the
+answer evaluator will use the study plan here
+.  Let's put, for example,
+I'll put a study plan here.  And
+now he can use that skill, and so on
+.  So here you'll put what
+he can't do, permissions.  And
+this has to be really short,
+straight to the point, because you're going to read this
+fronter first.  If she sees that it's what
+she needs, then she'll read the
+rest.  Below is a description of
+what this subagent is.  The AI ​​itself created
+this description for us.  This is not the
+most optimized way to create a subagent.  It's
+always good to read and understand if it's
+working the way you want.
+But to start, so you understand the
+structure, here it is, it's a good way to
+understand how it works.  The
+AI ​​itself created an agent here for you,
+okay?  So, I'm going to give it a try here to
+save it.  Whenever you see that little ball, press
+Ctrl+S. And now you understand
+how agents and
+skills work.  I showed you both of them
+here, their structure.  From
+now on, how does it work?  If
+you want to call upon these agents or
+skills in a project, let's take a
+look at that.  I'm going to close this
+now.  The entire project is already here.  Look,
+our agents worked here
+in parallel and created all the
+files.  Here he's just explaining to me
+everything he created.  So, let's take a
+look at the folder structure here.  We
+have the briefing that we created at the beginning
+of the project, the cloud.md file, and we have the
+cloud folder.  Inside the cloud folder we
+have the agents folder.  Here we have
+three agents.  And within the skills folder,
+we also have skills here.  with three
+different skills.  The structure is a
+little different.  Within agents,
+it loads the MD directly; within skills, it
+loads the folder, and within the folder, there's the
+skill.  The name is always the same, you
+see?  Look, skill MD, skill MD, skill
+MD, but Cloud can identify
+which skill it is by its folder name.
+Beauty?  Now, look how interesting.  I
+can close this now.  Here we have
+our terminal.  Or maybe there was a little bug here,
+which sometimes happens.  Look, I'm going to
+load it here.  Or I'll give a clear slash.   There's
+an option here, and then I reset the
+project to continue, or I can open
+a new one here as well.  Whatever you
+think is best, is fine, because sometimes the cloud is
+having this bug, you see?  So, I
+have a bit of OCD, I open a new
+cloud here, look.  So, let us load it
+here for us.  I'll use shift-tab
+to enable edit mode here,
+easy.  And now look how interesting, if
+I type "skills" here and press
+enter, you'll see that down here I
+have three ONS skills.  The ones
+with the padlock here are skills that are
+installed directly on my user account, which is why
+they're locked like that. They
+'re enabled, but to
+manage them, I need to go to the
+user folder or my
+Cloud application, where I can manage the
+skills as well.  But in this case, look,
+these three appeared here, which are the
+project-level skills.  I'll give you an
+ES here.  If I type "agents" here now,
+type "agents" here, you'll also see it
+loading, look at the library.  And here I
+have project agents: the
+response evaluator, the content explainer, and the
+exercise generator.  There are three agents
+I can work with here.  Now that
+you understand how the folder structure works
+, what subagents are, what
+skills are, how to create them,
+how to edit them, and what a fronter is, you
+'re probably thinking: "Juan, that's
+great, but I freeze up. I don't know
+what to write in the file, I don't know
+where to start, I don't know if what I
+'m doing is valid. Are you
+wasting tokens, creating solutions
+that you won't even use yourself? Will
+what you're doing really
+help you achieve better results,
+improve your life, or help other
+people?" If you want to answer these
+questions and truly want to use
+artificial intelligence to build
+relevant projects, then I want to
+tell you about Atlas. It will be a
+whole weekend where I will build
+a complete brand system,
+an entire project using
+artificial intelligence agents and skills, right in front of you. I wo
+n't be teaching you theory at this
+event. I will build it in front of you, and
+you will be able to build it along with me. And
+as if seeing me create it right there in front of you was
+n't enough, you will also have
+access to a series of materials and will be
+able to learn about our...  Community, see
+other people who are creating
+projects just like you. We
+even interviewed some of them,
+and we're going to share their stories so
+you can watch and understand everything that's
+possible with all these
+technologies. If you don't want to miss
+this, I highly recommend you click
+the link below and
+buy your ticket, because it's really
+very cheap. It's worth clicking
+just to see the price, it will impress you,
+and you'll get two whole days creating a
+project together. To not miss out, click the
+link here. If this video was helpful to
+you, if I managed to answer your
+question, if you understood a little
+better how to create agents, how to create
+skills, comment below so I
+know. Like this video too so I
+know you're enjoying it and
+YouTube shows it to more people.
+And check if you're not already following
+our channel, follow us, because now I'm
+bringing you a series of powerful videos
+. And speaking of
+video series, if you haven't yet watched how to
+install Cloud Code, what the
+fundamentals of Cloud Code are, how to connect
+Cloud Code with Antigy, check them out.
+Within our channel, because it's an
+entire playlist, it's practically a
+free course here for you to learn
+how to use the cloud. There are people who
+charge a lot to teach what I'm
+teaching you here. So, take advantage,
+it's right in front of you now, it's available
+here. You just have to want to learn,
+okay? So I'll leave it at that,
+I hope you enjoyed this
+video and I'll see you in the next one. See you later
+and bye.
