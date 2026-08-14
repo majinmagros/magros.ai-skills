@@ -39,6 +39,20 @@ const els = {
   guideOverlay: document.getElementById('guideOverlay'),
   guideBody: document.getElementById('guideBody'),
   guideClose: document.getElementById('guideClose'),
+  dashboard: document.getElementById('dashboardSection'),
+  main: document.querySelector('main'),
+  controls: document.querySelector('.controls'),
+  dashPlay: document.getElementById('dashPlay'),
+  dashClear: document.getElementById('dashClear'),
+  flowSvg: document.getElementById('flowSvg'),
+  telmPrompt: document.getElementById('telmPrompt'),
+  telmSkill: document.getElementById('telmSkill'),
+  telmModel: document.getElementById('telmModel'),
+  telmStatus: document.getElementById('telmStatus'),
+  telmLat: document.getElementById('telmLat'),
+  telmTok: document.getElementById('telmTok'),
+  telmLadder: document.getElementById('telmLadder'),
+  telmLog: document.getElementById('telmLog'),
 };
 
 let musicState = { tracks: [], currentIndex: -1, audio: null, ytPlayer: null, ytReady: false };
@@ -126,6 +140,7 @@ function cardHtml(s) {
 function openDetail(id) {
   const s = state.data.skills.find(x => x.id === id);
   if (!s) return;
+  dashLogEntry('view', s.id, (s.description || '').slice(0, 60));
   const installCmd = `install.sh --skills ${s.id}`;
   const meta = [
     `ORIGEM: ${s.origin.toUpperCase()}`,
@@ -447,10 +462,256 @@ document.addEventListener('visibilitychange', () => {
 /* ---- música (DnB) ---- */
 function showSection(name) {
   els.sectionNav.forEach(b => b.classList.toggle('active', b.dataset.sec === name));
+  const isDash = name === 'dashboard';
+  if (els.dashboard) els.dashboard.hidden = !isDash;
+  if (els.main) els.main.hidden = isDash;
+  if (els.controls) els.controls.hidden = isDash;
+  if (isDash) dashInit();
   return name;
 }
 
-async function loadMusic() {
+/* ---- dashboard de execução (fluxo estilo 9router USO) ---- */
+const DASH_NODES = [
+  { id: 'prompt', label: 'PROMPT', sub: 'entrada do usuário', x: 75, y: 240 },
+  { id: 'roteamento', label: 'ROTEAMENTO', sub: 'kernel · AGENTS.md · 9router', x: 260, y: 240 },
+  { id: 'skill', label: 'SKILL', sub: 'skill acionada', x: 445, y: 150 },
+  { id: 'subagente', label: 'SUBAGENTE', sub: 'graph engineering · paralelo', x: 445, y: 330 },
+  { id: 'verif', label: 'VERIFICAÇÃO', sub: 'nota ≥ 80 · pico · bpm', x: 630, y: 240 },
+  { id: 'entrega', label: 'ENTREGA', sub: 'deliverable', x: 815, y: 240 },
+];
+const DASH_EDGES = [
+  ['prompt', 'roteamento'],
+  ['roteamento', 'skill'],
+  ['skill', 'subagente'],
+  ['skill', 'verif'],
+  ['subagente', 'verif'],
+  ['verif', 'entrega'],
+];
+const DASH_LADDER = [
+  'PROMPT — entrada do usuário',
+  'ROTEAMENTO — kernel · AGENTS.md · 9router',
+  'SKILL — skill acionada',
+  'SUBAGENTE — graph engineering (paralelo)',
+  'VERIFICAÇÃO — nota ≥ 80 · pico · bpm',
+  'ENTREGA — deliverable',
+];
+const dashState = { built: false, raf: 0, running: false, lastTs: 0, particles: [], edgeEls: {}, nodeEls: {}, clock: 0 };
+const EXEC_KEY = 'skillstudio.exec';
+
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+function dashInit() {
+  if (!els.flowSvg) return;
+  if (!dashState.built) {
+    buildFlow();
+    renderLadder();
+    renderLog();
+    els.dashPlay.addEventListener('click', dashRun);
+    els.dashClear.addEventListener('click', () => {
+      try { localStorage.removeItem(EXEC_KEY); } catch (_) {}
+      renderLog();
+    });
+  }
+  if (!dashState.raf) {
+    dashState.lastTs = performance.now();
+    dashState.raf = requestAnimationFrame(dashTick);
+  }
+}
+
+function buildFlow() {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = els.flowSvg;
+  svg.innerHTML = '';
+  const defs = document.createElementNS(ns, 'defs');
+  const filter = document.createElementNS(ns, 'filter');
+  filter.setAttribute('id', 'dash-glow');
+  filter.setAttribute('x', '-50%'); filter.setAttribute('y', '-50%');
+  filter.setAttribute('width', '200%'); filter.setAttribute('height', '200%');
+  const feG = document.createElementNS(ns, 'feGaussianBlur');
+  feG.setAttribute('stdDeviation', '2');
+  const feM = document.createElementNS(ns, 'feMerge');
+  const feMn = document.createElementNS(ns, 'feMergeNode');
+  const feMn2 = document.createElementNS(ns, 'feMergeNode');
+  feMn2.setAttribute('in', 'SourceGraphic');
+  feM.appendChild(feMn); feM.appendChild(feMn2);
+  filter.appendChild(feG); filter.appendChild(feM);
+  defs.appendChild(filter);
+  svg.appendChild(defs);
+
+  dashState.edgeEls = {};
+  DASH_EDGES.forEach(([a, b], i) => {
+    const pa = DASH_NODES.find(n => n.id === a);
+    const pb = DASH_NODES.find(n => n.id === b);
+    const line = document.createElementNS(ns, 'line');
+    line.setAttribute('class', 'flow-edge');
+    line.setAttribute('x1', pa.x); line.setAttribute('y1', pa.y);
+    line.setAttribute('x2', pb.x); line.setAttribute('y2', pb.y);
+    svg.appendChild(line);
+    dashState.edgeEls[i] = line;
+    for (let k = 0; k < 5; k++) {
+      const c = document.createElementNS(ns, 'circle');
+      c.setAttribute('class', 'flow-particle');
+      c.setAttribute('r', '2.6');
+      c.setAttribute('opacity', '0');
+      svg.appendChild(c);
+      dashState.particles.push({ edge: i, from: pa, to: pb, p: Math.random(), speed: 0.0016 + Math.random() * 0.0018, el: c, phase: k / 5, warn: k === 4 });
+    }
+  });
+
+  dashState.nodeEls = {};
+  DASH_NODES.forEach(n => {
+    const g = document.createElementNS(ns, 'g');
+    g.setAttribute('class', 'flow-node');
+    g.setAttribute('data-node', n.id);
+    const rect = document.createElementNS(ns, 'rect');
+    rect.setAttribute('x', n.x - 72); rect.setAttribute('y', n.y - 26);
+    rect.setAttribute('width', '144'); rect.setAttribute('height', '52');
+    rect.setAttribute('rx', '4');
+    g.appendChild(rect);
+    const title = document.createElementNS(ns, 'text');
+    title.setAttribute('class', 'node-title');
+    title.setAttribute('x', n.x); title.setAttribute('y', n.y - 4);
+    title.setAttribute('text-anchor', 'middle');
+    title.textContent = n.label;
+    g.appendChild(title);
+    const sub = document.createElementNS(ns, 'text');
+    sub.setAttribute('class', 'node-sub');
+    sub.setAttribute('x', n.x); sub.setAttribute('y', n.y + 12);
+    sub.setAttribute('text-anchor', 'middle');
+    sub.textContent = n.sub;
+    g.appendChild(sub);
+    const dot = document.createElementNS(ns, 'circle');
+    dot.setAttribute('class', 'node-dot');
+    dot.setAttribute('cx', n.x + 66); dot.setAttribute('cy', n.y - 20);
+    dot.setAttribute('r', '3');
+    g.appendChild(dot);
+    svg.appendChild(g);
+    dashState.nodeEls[n.id] = g;
+  });
+  dashState.built = true;
+}
+
+function dashTick(ts) {
+  dashState.raf = 0;
+  if (!els.dashboard || els.dashboard.hidden) return;
+  const dt = Math.min(50, ts - dashState.lastTs);
+  dashState.lastTs = ts;
+  dashState.clock += dt;
+  dashState.particles.forEach(p => {
+    const base = (dashState.clock * p.speed + p.phase) % 1;
+    p.p = base;
+    const x = p.from.x + (p.to.x - p.from.x) * p.p;
+    const y = p.from.y + (p.to.y - p.from.y) * p.p;
+    p.el.setAttribute('cx', x);
+    p.el.setAttribute('cy', y);
+    const edgeActive = dashState.edgeEls[p.edge] && dashState.edgeEls[p.edge].classList.contains('run');
+    const edgeDone = dashState.edgeEls[p.edge] && dashState.edgeEls[p.edge].classList.contains('done');
+    p.el.setAttribute('opacity', (edgeActive || edgeDone) ? '1' : '0.18');
+    p.el.setAttribute('class', 'flow-particle' + (p.warn ? ' warn' : '') + (edgeDone ? '' : (edgeActive ? '' : '')));
+  });
+  dashState.raf = requestAnimationFrame(dashTick);
+}
+
+function setNode(id, cls) {
+  const g = dashState.nodeEls[id];
+  if (!g) return;
+  ['run', 'done', 'err'].forEach(c => g.classList.remove(c));
+  if (cls) g.classList.add(cls);
+}
+function setEdge(i, cls) {
+  const e = dashState.edgeEls[i];
+  if (!e) return;
+  ['run', 'done', 'err'].forEach(c => e.classList.remove(c));
+  if (cls) e.classList.add(cls);
+}
+function setStatus(kind, txt) {
+  els.telmStatus.textContent = txt || '';
+  els.telmStatus.className = 'telm-val ' + (kind === 'ok' ? 'status-ok' : kind === 'run' ? 'status-run' : 'status-err');
+}
+function setAllNodes(cls) { DASH_NODES.forEach(n => setNode(n.id, cls)); }
+function setAllEdges(cls) { DASH_EDGES.forEach((_, i) => setEdge(i, cls)); }
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function dashLogEntry(kind, skill, prompt) {
+  try {
+    const arr = JSON.parse(localStorage.getItem(EXEC_KEY) || '[]');
+    arr.push({ t: Date.now(), kind, skill, prompt });
+    localStorage.setItem(EXEC_KEY, JSON.stringify(arr.slice(-30)));
+  } catch (_) {}
+  renderLog();
+}
+
+function renderLog() {
+  if (!els.telmLog) return;
+  let arr = [];
+  try { arr = JSON.parse(localStorage.getItem(EXEC_KEY) || '[]'); } catch (_) {}
+  if (!arr.length) {
+    els.telmLog.innerHTML = '<li>nenhuma execução registrada ainda.</li>';
+    return;
+  }
+  els.telmLog.innerHTML = arr.slice().reverse().map(e => {
+    const time = new Date(e.t).toLocaleTimeString('pt-BR');
+    const lbl = e.kind === 'run' ? 'EXEC' : e.kind === 'view' ? 'VIEW' : 'COPY';
+    return `<li class="${e.kind === 'err' ? 'log-err' : ''}"><span class="log-time">${time}</span> [${lbl}] <span class="log-skill">${esc(e.skill || '')}</span>${e.prompt ? ` — ${esc(e.prompt)}` : ''}</li>`;
+  }).join('');
+}
+
+function renderLadder() {
+  if (!els.telmLadder) return;
+  els.telmLadder.innerHTML = DASH_LADDER.map((s, i) => `<li data-step="${i}">${esc(s)}</li>`).join('');
+}
+function setLadderStep(i, cls) {
+  const items = els.telmLadder.querySelectorAll('li');
+  items.forEach((li, j) => {
+    li.classList.remove('step-done', 'step-run');
+    if (j < i) li.classList.add('step-done');
+    else if (j === i && cls) li.classList.add(cls);
+  });
+}
+
+async function dashRun() {
+  if (dashState.running) return;
+  dashState.running = true;
+  els.dashPlay.disabled = true;
+  const skills = (state.data && state.data.skills) || [];
+  const pick = skills.length ? skills[Math.floor(Math.random() * skills.length)] : null;
+  const skillName = pick ? pick.id : 'dnb-production';
+  const prompt = pick ? (pick.description || '').slice(0, 90) : 'gerar faixa original de drum and bass, 174 bpm';
+  els.telmPrompt.textContent = prompt;
+  els.telmSkill.textContent = skillName;
+  els.telmModel.textContent = '9router/my-combo';
+  els.telmLat.textContent = '—';
+  els.telmTok.textContent = '—';
+  setAllNodes(''); setAllEdges(''); setLadderStep(-1);
+  setStatus('run', 'EXECUTANDO');
+
+  const step = async (idx, dur) => {
+    const node = DASH_NODES[idx];
+    setNode(node.id, 'run');
+    if (idx > 0) { setEdge(idx === 2 ? 1 : idx === 3 ? 2 : idx - 1, 'run'); }
+    setLadderStep(idx, 'step-run');
+    await sleep(dur);
+    setNode(node.id, 'done');
+    setLadderStep(idx, '');
+  };
+
+  await step(0, 500);                       // prompt
+  await step(1, 600);                       // roteamento
+  setEdge(2, 'run'); await step(2, 600);    // skill → subagente
+  setNode('subagente', 'run'); setEdge(3, 'run'); setLadderStep(3, 'step-run');
+  await sleep(700);
+  setNode('subagente', 'done');
+  setEdge(4, 'run'); await step(4, 700);    // verificação
+  els.telmLat.textContent = (Math.random() * 2.4 + 1.2).toFixed(2) + ' s';
+  els.telmTok.textContent = Math.floor(Math.random() * 8000 + 3000);
+  setEdge(5, 'run'); await step(5, 500);    // entrega
+  setStatus('ok', 'CONCLUÍDO');
+  setAllEdges('done');
+  dashLogEntry('run', skillName, prompt);
+  dashState.running = false;
+  els.dashPlay.disabled = false;
+}
   const res = await fetch('data/music.json');
   musicState.tracks = await res.json();
   shuffledTracks = [...musicState.tracks];
@@ -710,6 +971,9 @@ document.addEventListener('keydown', e => {
 els.detailContent.addEventListener('click', e => {
   const btn = e.target.closest('.copy-btn');
   if (btn) {
+    const detailTitle = els.detailContent.querySelector('h1');
+    const skillName = detailTitle ? detailTitle.textContent : '';
+    dashLogEntry('copy', skillName);
     navigator.clipboard.writeText(btn.dataset.copy);
     btn.textContent = 'COPIADO ✓';
     setTimeout(() => { btn.textContent = 'COPIAR'; }, 1500);
@@ -739,9 +1003,6 @@ els.animToggle.addEventListener('click', e => {
 els.sectionNav.forEach(btn => btn.addEventListener('click', () => {
   if (btn.dataset.sec === 'music') {
     toggleGlobalPlayback();
-  } else if (btn.dataset.sec === 'dashboard') {
-    showSection('dashboard');
-    alert('Dashboard de Execução de Agentes e Skills ativado!');
   } else {
     showSection(btn.dataset.sec);
   }
@@ -752,7 +1013,113 @@ els.themeBtn.addEventListener('click', () => {
   document.documentElement.dataset.theme = next;
 });
 
-/* ---- i18n: PT-BR base + tradução automática global ---- */
+/* ---- Dashboard Flow (SVG) ---- */
+let dashRunning = false;
+let dashSimId = null;
+
+function initDashboard() {
+  if (!els.flowSvg) return;
+  drawFlowSvg();
+  animateParticles();
+}
+
+function drawFlowSvg() {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = els.flowSvg;
+  svg.setAttribute('viewBox', '0 0 960 420');
+  svg.innerHTML = '';
+  const nodes = [
+    { id: 'n1', x: 140, y: 200, label: 'Prompt do Usuário', color: '#00ff66' },
+    { id: 'n2', x: 320, y: 200, label: 'Kernel / AGENTS.md', color: '#00ccff' },
+    { id: 'n3', x: 500, y: 140, label: 'Skill Selecionada', color: '#ff00ff' },
+    { id: 'n4', x: 500, y: 260, label: 'Graph Engineering', color: '#ff9900' },
+    { id: 'n5', x: 740, y: 140, label: 'Verificação', color: '#ff0066' },
+    { id: 'n6', x: 740, y: 260, label: 'Retry 429', color: '#ff2244' },
+    { id: 'n7', x: 900, y: 200, label: 'Entrega / Deliverable', color: '#00ff62' },
+  ];
+  const edges = [
+    ['n1', 'n2'], ['n2', 'n3'], ['n2', 'n4'], ['n3', 'n5'], ['n4', 'n6'], ['n5', 'n7'], ['n6', 'n3']
+  ];
+  const frag = document.createDocumentFragment();
+  edges.forEach(([a, b]) => {
+    const ax = nodes.find(n => n.id === a).x, ay = nodes.find(n => n.id === a).y;
+    const bx = nodes.find(n => n.id === b).x, by = nodes.find(n => n.id === b).y;
+    const line = document.createElementNS(ns, 'line');
+    line.setAttribute('x1', ax); line.setAttribute('y1', ay);
+    line.setAttribute('x2', bx); line.setAttribute('y2', by);
+    line.setAttribute('class', 'edge');
+    line.style.stroke = '#333';
+    line.style.strokeWidth = '2';
+    frag.appendChild(line);
+    const anim = document.createElementNS(ns, 'animate');
+    anim.setAttribute('attributeName', 'stroke');
+    anim.setAttribute('values', '#00ff66;#333;#00ff62;#333');
+    anim.setAttribute('dur', (2 + Math.random() * 3).toFixed(1));
+    anim.setAttribute('repeatCount', 'indefinite');
+    line.appendChild(anim);
+    const pathLen = Math.hypot(bx - ax, by - ay);
+    for (let i = 0; i < 3; i++) {
+      const circle = document.createElementNS(ns, 'circle');
+      circle.setAttribute('r', '3');
+      circle.setAttribute('fill', '#00ff66');
+      circle.setAttribute('class', 'particle');
+      circle.style.opacity = '0';
+      const offset = (i + 1) * (pathLen / 4);
+      const pct = offset / pathLen;
+      const an = document.createElementNS(ns, 'animateMotion');
+      const mpath = `M ${ax} ${ay} L ${bx} ${by}`;
+      const mp = document.createElementNS(ns, 'mpath');
+      mp.setAttribute('href', `#edgePath${Math.random().toString(36).slice(2)}`);
+      const path = document.createElementNS(ns, 'path');
+      path.setAttribute('id', mp.getAttribute('href').slice(1));
+      path.setAttribute('d', mpath);
+      svg.appendChild(path);
+      an.appendChild(mp);
+      circle.appendChild(an);
+      frag.appendChild(circle);
+    }
+  });
+  nodes.forEach(n => {
+    const g = document.createElementNS(ns, 'g');
+    g.setAttribute('id', n.id);
+    const c = document.createElementNS(ns, 'circle');
+    c.setAttribute('cx', n.x); c.setAttribute('cy', n.y);
+    c.setAttribute('r', '24'); c.setAttribute('fill', 'rgba(0,0,0,0.7)');
+    c.setAttribute('stroke', n.color); c.setAttribute('stroke-width', '2');
+    const t = document.createElementNS(ns, 'text');
+    t.setAttribute('x', n.x); t.setAttribute('y', n.y + 60);
+    t.setAttribute('text-anchor', 'middle');
+    t.setAttribute('fill', '#d6d6da');
+    t.setAttribute('font-family', "'JetBrains Mono',monospace");
+    t.setAttribute('font-size', '11');
+    t.textContent = n.label;
+    g.appendChild(c); g.appendChild(t);
+    frag.appendChild(g);
+  });
+  svg.appendChild(frag);
+}
+
+function animateParticles() {
+  if (!dashRunning) return;
+  const particles = els.flowSvg.querySelectorAll('.particle');
+  particles.forEach(p => {
+    p.style.opacity = Math.random() * 0.8 + 0.2;
+  });
+  dashSimId = requestAnimationFrame(animateParticles);
+}
+
+function startDashboard() {
+  showSection('dashboard');
+  els.main.classList.add('with-dashboard');
+  dashRunning = true;
+  initDashboard();
+}
+
+function stopDashboard() {
+  dashRunning = false;
+  if (dashSimId) cancelAnimationFrame(dashSimId);
+  els.main.classList.remove('with-dashboard');
+}
 (function detectLocale() {
   const lang = (navigator.language || 'pt-BR').toLowerCase();
   if (lang.startsWith('pt')) return; // já em português

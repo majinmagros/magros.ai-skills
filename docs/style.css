@@ -552,6 +552,166 @@ main {
 .foot a { color: var(--dim); text-decoration: none; }
 .foot a:hover { color: var(--accent); }
 
+/* ---- dashboard de execução ---- */
+.dashboard {
+  position: relative;
+  z-index: 2;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 18px 28px 60px;
+}
+.dash-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+.dash-heading { display: flex; flex-direction: column; gap: 2px; }
+.dash-title {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .18em;
+  font-weight: 800;
+  color: var(--accent);
+}
+.dash-sub { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; color: var(--dim); }
+.dash-actions { display: flex; gap: 8px; }
+.dash-btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  padding: 7px 16px;
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  transition: all .2s;
+}
+.dash-btn:hover { box-shadow: 0 0 14px rgba(0,255,102,.2); color: var(--accent); }
+.dash-btn.ghost { border-color: var(--border); color: var(--dim); }
+.dash-btn.ghost:hover { border-color: var(--red); color: var(--red); box-shadow: none; }
+.dash-body { display: grid; grid-template-columns: 1fr 320px; gap: 14px; align-items: start; }
+.dash-flow {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 10px;
+  position: relative;
+}
+.flow-svg { width: 100%; height: auto; display: block; }
+.dash-hint {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  color: var(--dim);
+  text-align: center;
+  padding: 8px 0 2px;
+}
+.dash-telemetry {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+.telm-block { display: flex; flex-direction: column; gap: 6px; }
+.telm-block.grow { flex: 1; }
+.telm-lbl {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .22em;
+  color: var(--dim);
+}
+.telm-prompt, .telm-skill {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text);
+  border-left: 2px solid var(--accent);
+  padding-left: 8px;
+  word-break: break-word;
+}
+.telm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.telm-cell { border: 1px solid var(--border); background: var(--bg); padding: 8px; }
+.telm-val { font-family: var(--mono); font-size: 12px; font-weight: 800; color: var(--text); }
+.telm-val.status-ok { color: var(--accent); }
+.telm-val.status-run { color: var(--amber); animation: pulse 1.4s infinite; }
+.telm-val.status-err { color: var(--red); }
+.telm-ladder {
+  margin: 0;
+  padding-left: 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--dim);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.telm-ladder li { list-style-position: outside; }
+.telm-ladder li.step-done { color: var(--accent); }
+.telm-ladder li.step-run { color: var(--amber); font-weight: 700; }
+.telm-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--dim);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.telm-log li { padding: 4px 6px; border-left: 1px solid var(--border); }
+.telm-log li .log-time { color: var(--dim); }
+.telm-log li .log-skill { color: var(--accent); }
+.telm-log li.log-err { border-left-color: var(--red); color: var(--dim); }
+
+/* nós do fluxo (SVG) */
+.flow-node rect {
+  fill: var(--panel2);
+  stroke: var(--border);
+  stroke-width: 1;
+  transition: stroke .25s, fill .25s;
+}
+.flow-node.run rect { stroke: var(--amber); fill: color-mix(in srgb, var(--amber) 8%, var(--panel2)); animation: node-pulse 1s infinite; }
+.flow-node.done rect { stroke: var(--accent); fill: color-mix(in srgb, var(--accent) 6%, var(--panel2)); }
+.flow-node.err rect { stroke: var(--red); fill: color-mix(in srgb, var(--red) 8%, var(--panel2)); }
+.flow-node .node-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  fill: var(--text);
+}
+.flow-node .node-sub {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .1em;
+  fill: var(--dim);
+}
+.flow-node.run .node-title { fill: var(--amber); }
+.flow-node.done .node-title { fill: var(--accent); }
+.flow-node.err .node-title { fill: var(--red); }
+.flow-node .node-dot { fill: var(--dim); }
+.flow-node.run .node-dot { fill: var(--amber); }
+.flow-node.done .node-dot { fill: var(--accent); }
+.flow-node.err .node-dot { fill: var(--red); }
+@keyframes node-pulse { 0%,100% { filter: drop-shadow(0 0 0 rgba(255,176,0,0)); } 50% { filter: drop-shadow(0 0 8px rgba(255,176,0,.5)); } }
+.flow-edge { stroke: var(--border); stroke-width: 1.5; fill: none; }
+.flow-edge.run { stroke: var(--amber); stroke-width: 2; }
+.flow-edge.done { stroke: var(--accent); stroke-width: 2; }
+.flow-particle { fill: var(--accent); }
+.flow-particle.warn { fill: var(--amber); }
+.flow-particle.err { fill: var(--red); }
+
 @media (max-width: 720px) {
   .masthead { flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px 16px; }
   .counters { gap: 14px; }
@@ -561,3 +721,13 @@ main {
   .grid { grid-template-columns: 1fr; }
   .foot { flex-direction: column; }
 }
+
+/* ---- Dashboard Panel (Estilo Skill Studio) ---- */
+.dashboard-panel { position: absolute; top: 90px; left: 0; width: 1000vw; height: calc(100vh - 90px); background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); z-index: 50; display: flex; flex-direction: column; padding: 24px; }
+.dash-grid { display: grid; grid-template-columns: 1fr 340px; gap: 24px; height: 100%; }
+.dash-main { border: 1px solid var(--border); background: rgba(0,0,0,0.5); position: relative; overflow: hidden; border-radius: 6px; }
+.dash-flow { width: 100%; height: 100%; }
+.dash-telemetry { border: 1px solid var(--border); background: rgba(0,0,0,0.7); padding: 16px; border-radius: 6px; display: flex; flex-direction: column; }
+.dash-telemetry h3 { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #222; padding-bottom: 8px; }
+.telemetry-log { font-family: var(--mono); font-size: 11px; color: #ccc; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.t-line { border-left: 2px solid var(--accent); padding-left: 8px; background: rgba(0,255,102,0.05); padding: 4px 8px; }

@@ -94,7 +94,63 @@
 <main>
   <p class="status-line" id="statusLine">carregando catálogo...</p>
   <div class="grid" id="grid"></div>
+  <section id="dashboardPanel" class="dashboard-panel" hidden>
+    <div class="dash-grid">
+      <div class="dash-main">
+        <svg id="dashFlow" class="dash-flow"></svg>
+      </div>
+      <aside class="dash-telemetry">
+        <h3>TELEMETRIA</h3>
+        <div id="telemetryContent" class="telemetry-log">
+          <p class="t-line">[STATUS] SISTEMA PRONTO</p>
+        </div>
+      </aside>
+    </div>
+  </section>
 </main>
+
+<section class="dashboard" id="dashboardSection" hidden aria-label="Dashboard de execução">
+  <div class="dash-head">
+    <div class="dash-heading">
+      <span class="dash-title">DASHBOARD DE EXECUÇÃO</span>
+      <span class="dash-sub">fluxo em tempo real · prompt → roteamento → skill → subagente → verificação → entrega</span>
+    </div>
+    <div class="dash-actions">
+      <button class="dash-btn" id="dashPlay" title="Executar um fluxo de demonstração">▶ EXECUTAR</button>
+      <button class="dash-btn ghost" id="dashClear" title="Limpar histórico local">LIMPAR</button>
+    </div>
+  </div>
+  <div class="dash-body">
+    <div class="dash-flow" id="dashFlow">
+      <svg id="flowSvg" class="flow-svg" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Fluxo de execução de agentes e skills"></svg>
+      <p class="dash-hint">clique em EXECUTAR para percorrer o fluxo · interações no catálogo ficam no histórico local</p>
+    </div>
+    <aside class="dash-telemetry" aria-label="Telemetria">
+      <div class="telm-block">
+        <span class="telm-lbl">PROMPT</span>
+        <p class="telm-prompt" id="telmPrompt">—</p>
+      </div>
+      <div class="telm-block">
+        <span class="telm-lbl">SKILL ATIVA</span>
+        <p class="telm-skill" id="telmSkill">—</p>
+      </div>
+      <div class="telm-grid">
+        <div class="telm-cell"><span class="telm-lbl">MODELO</span><p class="telm-val" id="telmModel">—</p></div>
+        <div class="telm-cell"><span class="telm-lbl">STATUS</span><p class="telm-val status-ok" id="telmStatus">OCIOSO</p></div>
+        <div class="telm-cell"><span class="telm-lbl">LATÊNCIA</span><p class="telm-val" id="telmLat">—</p></div>
+        <div class="telm-cell"><span class="telm-lbl">TOKENS</span><p class="telm-val" id="telmTok">—</p></div>
+      </div>
+      <div class="telm-block">
+        <span class="telm-lbl">ESCOADA PLANEJADA</span>
+        <ol class="telm-ladder" id="telmLadder"></ol>
+      </div>
+      <div class="telm-block grow">
+        <span class="telm-lbl">HISTÓRICO LOCAL</span>
+        <ul class="telm-log" id="telmLog"></ul>
+      </div>
+    </aside>
+  </div>
+</section>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden></div>
 <aside class="detail" id="detail" aria-hidden="true">
