@@ -541,8 +541,6 @@ const DASH_LADDER = [
 const dashState = { built: false, raf: 0, running: false, lastTs: 0, particles: [], edgeEls: {}, nodeEls: {}, clock: 0 };
 const EXEC_KEY = 'skillstudio.exec';
 
-function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
-
 function dashInit() {
   if (!els.flowSvg) return;
   if (!dashState.built) {
