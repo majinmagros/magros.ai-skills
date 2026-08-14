@@ -820,20 +820,26 @@ function setLadderStep(i, cls) {
 async function dashRun(forcedSkillId) {
   if (dashState.running) return;
   dashState.running = true;
-  els.dashPlay.disabled = true;
+  if (els.dashPlay) els.dashPlay.disabled = true;
   const skills = (state.data && state.data.skills) || [];
   let pick = null;
   if (forcedSkillId) pick = skills.find(s => s.id === forcedSkillId) || null;
-  if (!pick) pick = skills.length ? skills[Math.floor(Math.random() * skills.length)] : null;
+  if (!pick) {
+    if (!dashState.allQueue || dashState.allQueue.length === 0) {
+      dashState.allQueue = [...skills];
+      // embaralha ou mantém ordem
+    }
+    pick = dashState.allQueue.shift() || skills[0];
+  }
   const skillName = pick ? pick.id : 'dnb-production';
   const module = pick ? (pick.module || 'outros') : 'dnb';
-  const prompt = pick ? (pick.description || '').slice(0, 90) : 'gerar faixa original de drum and bass, 174 bpm';
+  const prompt = pick ? (pick.description || '').slice(0, 70) + '...' : 'gerar faixa original de drum and bass, 174 bpm';
   dashState.currentSkill = skillName;
-  els.telmPrompt.textContent = prompt;
-  els.telmSkill.textContent = skillName;
-  els.telmModel.textContent = '9router/my-combo';
-  els.telmLat.textContent = '—';
-  els.telmTok.textContent = '—';
+  if (els.telmPrompt) els.telmPrompt.textContent = '"' + prompt + '"';
+  if (els.telmSkill) els.telmSkill.textContent = skillName;
+  if (els.telmModel) els.telmModel.textContent = '9router/my-combo';
+  if (els.telmStatus) els.telmStatus.textContent = 'EXECUTANDO';
+  if (els.telmTok) els.telmTok.textContent = '—';
   setAllNodes(''); setAllEdges(''); setLadderStep(-1);
   setStatus('run', 'EXECUTANDO');
   emitSkillEvent('skill:start', { skillId: skillName, module, prompt, forced: !!forcedSkillId });
@@ -843,30 +849,32 @@ async function dashRun(forcedSkillId) {
     setNode(node.id, 'run');
     if (idx > 0) { setEdge(idx === 2 ? 1 : idx === 3 ? 2 : idx - 1, 'run'); }
     setLadderStep(idx, 'step-run');
+    if (idx === 1) setLadderStep(1, 'MOTOR DE ROTEAMENTO'); 
     emitSkillEvent('skill:step', { step: idx, skillId: skillName, module, status: 'run' });
     await sleep(dur);
     setNode(node.id, 'done');
     setLadderStep(idx, '');
+    setEdge(idx === 2 ? 1 : idx === 3 ? 2 : idx === 4 ? 3 : idx, 'done');
   };
 
-  await step(0, 500);                       // prompt
-  await step(1, 600);                       // roteamento
-  setEdge(2, 'run'); await step(2, 600);    // skill → subagente
+  await step(0, 200);                       // prompt
+  await step(1, 200);                       // roteamento
+  setEdge(2, 'run'); await step(2, 200);    // skill → subagente
   emitSkillEvent('skill:step', { step: 2, skillId: skillName, module, status: 'activate' });
   setNode('subagente', 'run'); setEdge(3, 'run'); setLadderStep(3, 'step-run');
   emitSkillEvent('skill:step', { step: 3, skillId: skillName, module, status: 'activate' });
-  await sleep(700);
+  await sleep(200);
   setNode('subagente', 'done');
-  setEdge(4, 'run'); await step(4, 700);    // verificação
-  els.telmLat.textContent = (Math.random() * 2.4 + 1.2).toFixed(2) + ' s';
-  els.telmTok.textContent = Math.floor(Math.random() * 8000 + 3000);
-  setEdge(5, 'run'); await step(5, 500);    // entrega
-  setStatus('ok', 'CONCLUÍDO');
+  setEdge(4, 'run'); await step(4, 200);    // verificação
+  setLadderStep(4, 'step-run'); await sleep(200);
+  setNode('verificacao', 'done');
+  setEdge(5, 'run'); await step(5, 200);    // entrega
+  setStatus('ok', 'ENTREGA CONCLUÍDA · OK');
   setAllEdges('done');
   emitSkillEvent('skill:end', { skillId: skillName, module, prompt });
   dashLogEntry('run', skillName, prompt);
   dashState.running = false;
-  els.dashPlay.disabled = false;
+  if (els.dashPlay) els.dashPlay.disabled = false;
 }
 
 /* ---- alternância FLUXO / GRAFO ---- */
