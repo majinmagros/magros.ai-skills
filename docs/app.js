@@ -554,12 +554,12 @@ const DASH_EDGES = [
   ['verif', 'entrega'],
 ];
 const DASH_LADDER = [
-  'PROMPT — entrada do usuário',
-  'ROTEAMENTO — kernel · AGENTS.md · 9router',
-  'SKILL — skill acionada',
-  'SUBAGENTE — graph engineering (paralelo)',
-  'VERIFICAÇÃO — nota ≥ 80 · pico · bpm',
-  'ENTREGA — deliverable',
+  'PRÉVIA DO PROMPT',
+  'MOTOR DE ROTEAMENTO',
+  'SKILL ACIONADA',
+  'ATIVAÇÃO DE AGENTE',
+  'VERIFICAÇÃO · NOTA ≥ 80',
+  'ENTREGA CONCLUÍDA',
 ];
 const dashState = { built: false, raf: 0, running: false, lastTs: 0, particles: [], edgeEls: {}, nodeEls: {}, clock: 0, currentSkill: null };
 const EXEC_KEY = 'skillstudio.exec';
