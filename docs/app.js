@@ -528,7 +528,18 @@ document.addEventListener('visibilitychange', () => {
   // three.js segue animando; pausa só o que for pesado: reduz em background
 });
 
-/* ---- música (DnB) ---- */
+const SOUNDS = {
+  loading: new Audio('assets/sounds/robocop_loading.wav'),
+  scanner: new Audio('assets/sounds/kitt_scanner.wav'),
+  done: new Audio('assets/sounds/robocop_done.wav')
+};
+
+function playSfx(type) {
+  if (SOUNDS[type]) {
+    SOUNDS[type].currentTime = 0;
+    SOUNDS[type].play().catch(() => {});
+  }
+}
 function showSection(name) {
   els.sectionNav.forEach(b => b.classList.toggle('active', b.dataset.sec === name));
   const isDash = name === 'dashboard';
@@ -833,6 +844,7 @@ function setLadderStep(i, cls) {
 
 async function dashRun(forcedSkillId) {
   if (dashState.running) return;
+  playSfx('scanner');
   dashState.running = true;
   if (els.dashPlay) els.dashPlay.disabled = true;
   const skills = (state.data && state.data.skills) || [];
@@ -880,6 +892,7 @@ async function dashRun(forcedSkillId) {
 
   await step(0, 200);                       // prompt
   await step(1, 200);                       // roteamento
+  playSfx('loading');
   setEdge(2, 'run'); await step(2, 200);    // skill → subagente
   emitSkillEvent('skill:step', { step: 2, skillId: skillName, module, status: 'activate' });
   setNode('subagente', 'run'); setEdge(3, 'run'); setLadderStep(3, 'step-run');
@@ -890,6 +903,7 @@ async function dashRun(forcedSkillId) {
   setLadderStep(4, 'step-run'); await sleep(200);
   setNode('verificacao', 'done');
   setEdge(5, 'run'); await step(5, 200);    // entrega
+  playSfx('done');
   setStatus('ok', 'ENTREGA CONCLUÍDA · OK');
   setAllEdges('done');
   emitSkillEvent('skill:end', { skillId: skillName, module, prompt });
