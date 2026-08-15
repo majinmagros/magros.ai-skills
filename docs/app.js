@@ -42,6 +42,9 @@ const els = {
   guideOverlay: document.getElementById('guideOverlay'),
   guideBody: document.getElementById('guideBody'),
   guideClose: document.getElementById('guideClose'),
+  avatar: document.getElementById('avatar'),
+  avatarDetail: document.getElementById('avatarDetail'),
+  avatarDetailClose: document.getElementById('avatarDetailClose'),
   dashboard: document.getElementById('dashboardSection'),
   main: document.querySelector('main'),
   controls: document.querySelector('.controls'),
@@ -1950,9 +1953,29 @@ els.backdrop.addEventListener('click', closeDetail);
 els.guideBtn.addEventListener('click', () => openGuide());
 els.guideIniBtn.addEventListener('click', () => openGuide('data/guia-instalacao-iniciantes.md'));
 els.guideClose.addEventListener('click', closeGuide);
+if (els.avatar) {
+  els.avatar.addEventListener('click', () => {
+    els.avatarDetail.classList.add('open');
+    els.avatarDetail.setAttribute('aria-hidden', 'false');
+    els.backdrop.hidden = false;
+  });
+}
+if (els.avatarDetailClose) {
+  els.avatarDetailClose.addEventListener('click', () => {
+    els.avatarDetail.classList.remove('open');
+    els.avatarDetail.setAttribute('aria-hidden', 'true');
+    els.backdrop.hidden = true;
+  });
+}
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     if (!els.guideOverlay.hidden) { closeGuide(); return; }
+    if (els.avatarDetail && els.avatarDetail.classList.contains('open')) {
+      els.avatarDetail.classList.remove('open');
+      els.avatarDetail.setAttribute('aria-hidden', 'true');
+      els.backdrop.hidden = true;
+      return;
+    }
     closeDetail();
   }
   if (e.key === '/' && document.activeElement !== els.search) {

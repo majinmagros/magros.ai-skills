@@ -25,9 +25,9 @@
 
 <header class="masthead">
   <div class="masthead-left">
-    <img src="assets/avatar.jpg" alt="Skill Studio avatar" class="avatar" id="avatar">
+    <img src="assets/avatar.jpg" alt="Skill Studio avatar" class="avatar" id="avatar" style="cursor: pointer;" title="Clique para ver informações">
     <div class="brand">
-      <h1>SKILL<span class="accent">STUDIO</span></h1>
+      <h1><a href="https://github.com/majinmagros/magros.ai-skills" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">SKILL<span class="accent">STUDIO</span></a></h1>
       <p class="sub">MAGROS.AI-SKILLS // CATÁLOGO DE SKILLS</p>
     </div>
   </div>
@@ -185,6 +185,25 @@
 </section>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+<aside class="detail" id="avatarDetail" aria-hidden="true" style="width: min(450px, 90vw);">
+  <button class="detail-close" id="avatarDetailClose" aria-label="Fechar">✕</button>
+  <div style="font-family: var(--mono); padding: 10px;">
+    <h2 style="color: var(--accent); margin-bottom: 12px; font-size: 18px;">WILLIAM BATISTA GOMES (MAGROS ZAPATERO)</h2>
+    <p style="color: var(--text); font-size: 13px; margin-bottom: 16px;">SRE e Engenheiro de Software no Itaú Unibanco. Constrói bibliotecas de skills de IA, portfólios 3D interativos e produz DJ sets sob o alias <strong>Björk von Hohenheim</strong>.</p>
+    <div style="font-size: 12px; color: var(--dim); display: flex; flex-direction: column; gap: 8px;">
+      <div><strong style="color: var(--amber);">EXPERIÊNCIA:</strong> Class Runner (ESL), Host/Manager/DJ (Fiteiro Cultural).</div>
+      <div><strong style="color: var(--amber);">FOCO & STACK:</strong> Engenharia de Agentes, IA Autônoma, Python, TypeScript, PowerShell, Git, OpenCode / ECC Harness, LLMs (Multi-provider / 9router).</div>
+      <div><strong style="color: var(--amber);">LINKS:</strong> 
+        <a href="https://majinmagros.github.io/folio-2025/" target="_blank" style="color: var(--accent);">Portfólio</a> · 
+        <a href="https://github.com/majinmagros" target="_blank" style="color: var(--accent);">GitHub</a> · 
+        <a href="https://www.linkedin.com/in/william-batista-gomes-601a2883/" target="_blank" style="color: var(--accent);">LinkedIn</a> · 
+        <a href="https://www.youtube.com/channel/UC5sg6RpxRIWdaPtyI7bznjg" target="_blank" style="color: var(--accent);">YouTube</a> · 
+        <a href="https://www.instagram.com/magroszapatero/" target="_blank" style="color: var(--accent);">Instagram</a> · 
+        <a href="https://x.com/MagrosZapatero" target="_blank" style="color: var(--accent);">X/Twitter</a>
+      </div>
+    </div>
+  </div>
+</aside>
 <aside class="detail" id="detail" aria-hidden="true">
   <button class="detail-close" id="detailClose" aria-label="Fechar">✕</button>
   <div id="detailContent"></div>

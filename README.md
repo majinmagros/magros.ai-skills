@@ -142,10 +142,11 @@ remover peso morto acumulado.
 
 **William Batista Gomes** — aka **magros Zapatero**
 
-Site Reliability Engineer e Software Engineer no Itaú Unibanco. Brasileiro, constrói
-bibliotecas de skills de IA, portfólios 3D interativos (Three.js + Rapier), e produz
-DJ sets sob o alias **Björk von Hohenheim** (Dark Techno, Hypnotic Techno, Minimal Tech,
-Drum & Bass, Dubstep). Trajetória de 1989 a 2026 — de contínuo de banco a SRE.
+SRE e Engenheiro de Software no Itaú Unibanco. Constrói bibliotecas de skills de IA, portfólios 3D interativos e produz DJ sets sob o alias **Björk von Hohenheim**. 
+
+**Experiência:**
+- **Class Runner** na ESL (English as Second Language).
+- **Host/Manager/DJ** no Fiteiro Cultural.
 
 - Portfólio: https://majinmagros.github.io/folio-2025/
 - GitHub: https://github.com/majinmagros
