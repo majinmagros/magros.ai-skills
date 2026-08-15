@@ -98,8 +98,34 @@ body {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: .28em;
-  color: var(--dim);
 }
+
+/* Estilo para Tela Cheia do Dashboard */
+.dashboard.fullscreen {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: var(--bg) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 10px !important;
+}
+.dashboard.fullscreen .dash-body {
+  flex: 1 !important;
+  height: calc(100vh - 70px) !important;
+}
+.dashboard.fullscreen .dash-flow-wrap,
+.dashboard.fullscreen .graph-wrap {
+  height: 100% !important;
+}
+.dashboard.fullscreen .flow-svg,
+.dashboard.fullscreen .graph-svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .masthead-right { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
 .counters { display: flex; gap: 18px; }
 .counter { display: flex; flex-direction: column; align-items: flex-end; }

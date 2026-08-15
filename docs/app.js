@@ -657,7 +657,8 @@ function buildFlow() {
     sub.setAttribute('class', 'node-sub');
     sub.setAttribute('x', n.x); sub.setAttribute('y', n.y + 12);
     sub.setAttribute('text-anchor', 'middle');
-    sub.textContent = n.sub;
+    // Truncagem básica
+    sub.textContent = n.sub.length > 20 ? n.sub.slice(0, 17) + '...' : n.sub;
     g.appendChild(sub);
     const dot = document.createElementNS(ns, 'circle');
     dot.setAttribute('class', 'node-dot');
@@ -678,10 +679,20 @@ function refreshNodePosition(node) {
   if (!g) return;
   g.querySelector('rect').setAttribute('x', node.x - 72);
   g.querySelector('rect').setAttribute('y', node.y - 26);
-  g.querySelector('.node-title').setAttribute('x', node.x);
-  g.querySelector('.node-title').setAttribute('y', node.y - 4);
-  g.querySelector('.node-sub').setAttribute('x', node.x);
-  g.querySelector('.node-sub').setAttribute('y', node.y + 12);
+  const title = g.querySelector('.node-title');
+  title.setAttribute('x', node.x);
+  title.setAttribute('y', node.y - 4);
+  // Se for o nó de Skill, atualizar com dados da execução
+  if (node.id === 'skill' && dashState.currentSkill) {
+    title.textContent = dashState.currentSkill.length > 20 ? dashState.currentSkill.slice(0, 17) + '...' : dashState.currentSkill;
+  }
+  const sub = g.querySelector('.node-sub');
+  sub.setAttribute('x', node.x);
+  sub.setAttribute('y', node.y + 12);
+  // Se for o nó de Skill, atualizar sub com o agente
+  if (node.id === 'skill') {
+    sub.textContent = "Agent: 9Router";
+  }
   g.querySelector('.node-dot').setAttribute('cx', node.x + 66);
   g.querySelector('.node-dot').setAttribute('cy', node.y - 20);
   DASH_EDGES.forEach(([a, b], i) => {
@@ -886,6 +897,19 @@ async function dashRun(forcedSkillId) {
 
 /* ---- alternância FLUXO / GRAFO ---- */
 const GRAPH_VIEW_KEY = 'skillstudio.graphview';
+
+// Tela Cheia handler
+const dashFullscreenBtn = document.getElementById('dashFullscreen');
+dashFullscreenBtn.addEventListener('click', () => {
+  const dash = document.getElementById('dashboardSection');
+  if (!document.fullscreenElement) {
+    dash.requestFullscreen().catch(err => alert(`Erro ao entrar em tela cheia: ${err.message}`));
+    dash.classList.add('fullscreen');
+  } else {
+    document.exitFullscreen();
+    dash.classList.remove('fullscreen');
+  }
+});
 
 function dashSetMode(mode) {
   const isGraph = mode === 'graph';
@@ -1147,17 +1171,27 @@ function physicsStep() {
   // gravidade ao centro + damping + integração
   nodes.forEach(n => {
     if (n.fixed) return;
+    // Peso: Força descendente extra constante
+    n.vy += 0.5; 
     n.vx += (G_CX - n.x) * PHYS.gravity * a;
     n.vy += (G_CY - n.y) * PHYS.gravity * a;
     n.vx *= PHYS.damping;
     n.vy *= PHYS.damping;
+    
+    // Centralização forçada se nó estiver muito longe (ex: na "gaveta" superior esquerda)
+    if (n.x < 100 && n.y < 100) {
+        n.vx += 1.0;
+        n.vy += 1.0;
+    }
+
     const maxV = 3;
     if (n.vx > maxV) n.vx = maxV; else if (n.vx < -maxV) n.vx = -maxV;
     if (n.vy > maxV) n.vy = maxV; else if (n.vy < -maxV) n.vy = -maxV;
     n.x += n.vx;
     n.y += n.vy;
-    n.x = Math.min(995, Math.max(5, n.x));
-    n.y = Math.min(555, Math.max(5, n.y));
+    // Barreira invisível (boundary) com margem de 50px
+    n.x = Math.min(950, Math.max(50, n.x));
+    n.y = Math.min(510, Math.max(50, n.y));
   });
 
   // resolução suave de colisão (nunca sobrepõem)
@@ -1216,9 +1250,10 @@ function seedGraphLayout() {
   const mods = graphState.nodes.filter(n => n.kind === 'module');
   const skills = graphState.nodes.filter(n => n.kind === 'skill');
   mods.forEach((m, i) => {
-    const angle = (i / Math.max(1, mods.length)) * Math.PI * 2 - Math.PI / 2;
-    m.x = G_CX + Math.cos(angle) * 210;
-    m.y = G_CY + Math.sin(angle) * 150;
+    const angle = (i / Math.max(1, mods.length)) * Math.PI * 2;
+    // Centraliza na parte superior (G_CX, G_CY - 120)
+    m.x = G_CX + Math.cos(angle) * 140;
+    m.y = (G_CY - 100) + Math.sin(angle) * 80;
   });
   const byMod = {};
   graphState.links.forEach(l => {
@@ -1231,12 +1266,12 @@ function seedGraphLayout() {
     const modId = 'mod:' + s.module;
     const list = byMod[modId] || [];
     const mod = graphState.nodes.find(n => n.id === modId);
-    if (!mod) { s.x = G_CX; s.y = G_CY; return; }
+    if (!mod) { s.x = G_CX; s.y = G_CY - 100; return; }
     const idx = list.indexOf(s.id);
     const total = list.length;
     const angle = total <= 1 ? 0 : (idx / total) * Math.PI * 2;
-    s.x = mod.x + Math.cos(angle) * 70;
-    s.y = mod.y + Math.sin(angle) * 70;
+    s.x = mod.x + Math.cos(angle) * 40;
+    s.y = mod.y + Math.sin(angle) * 40;
   });
 }
 

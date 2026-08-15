@@ -11,8 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const http = require('http');
-const {
+const http = require('http');const {
   LOOPBACK_HOSTNAMES,
   buildAllowedHostnames,
   isAllowedHostHeader,
