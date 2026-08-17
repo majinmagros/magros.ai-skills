@@ -42,7 +42,13 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 |---|---|---|
 | `6GcfKpfA2kM` | Graph Engineering: orquestração de agentes em paralelo com verificadores independentes, sem contexto compartilhado | **Coberto com enriquecimento**: conceito central já em `engenharia-de-grafos`; absorver anti-overengineering (artefatos ruins = queima de tokens), os 3 níveis de implementação (delegar à IA / especificar manual / ferramenta dedicada) e "loop como nó de grafo" na skill canônica |
 
-Transcrições do canal ficam em `C:\projetos\attekitadev\` (fora do repo; via `YT_DIR`).
+### 3.2 Canal Full Cycle (quarto canal)
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `RO5y-fCIBy8` | Novo papel do dev → "engenheiro de IA": dev vira arquiteto que guia agentes; 2 camadas (AI engineering vs software dev); gaps de quem programa com IA (domínio superficial, sem metodologia, pouco paralelismo, sem critério de validação, skills mal feitas) | **Persona materializada**: agente `ai-engineer` (agents/ai-engineer.md) com as características do vídeo — define direção/limites/critérios, modela o harness, decompõe em workflows paralelos, critério de validação com cutoff, guard rails, equilíbrio custo/latência/segurança/fiabilidade |
+
+Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `YT_DIR`).
 
 ## 4. Próximos Passos
 
