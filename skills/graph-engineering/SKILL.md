@@ -1,19 +1,25 @@
 ---
 name: graph-engineering
-description: Use when generating/verifying candidates in parallel or iterating to a quality score — music elements, research, any rankable output. Triggers on "graph engineering", "grafos", "verificar em paralelo", "loop engineering", "gerar candidatos", "rankear", "nota 80", "pipeline". Encodes parallel verification (Graph) + iterate-until-score (Loop). Companion to dnb-production for audio; use together.
+description: Componente de engenharia do harness de Drum'n Bass — produzir candidatos de áudio, verificar em paralelo (graph) e iterar até a nota mínima (loop). É companheira do `dnb-production` e uma aplicação específica da `engenharia-de-grafos` (a canônica). Use junto com `dnb-production`; para a teoria genérica de grafos/orquestração, consulte `engenharia-de-grafos`. Triggers on "graph engineering", "grafos", "verificar em paralelo", "loop engineering", "gerar candidatos", "rankear", "nota 80", "pipeline".
+metadata:
+  origin: ECC
 ---
 
 # Skill: Graph & Loop Engineering (DnB)
 
 Componente de engenharia do harness: produzir candidatos de áudio, verificar em
 PARALELO (graph) e iterar até a nota mínima (loop). É companheira da
-`dnb-production` — use junto.
+`dnb-production` — use junto. A teoria geral de grafos (decompor em ramos
+paralelos, verificador independente, convergência) vive em `engenharia-de-grafos`;
+este skill mantém apenas o específico de áudio do harness.
 
 ## 1. Contexto primeiro
 
 - Leia `contexto\00-contexto-sessao.md` e `harness\RULES.md` antes de agir.
 - Leia `harness\config.jsonc` para ver os elementos configurados (`nome`,
   `duracao`, `amostras`, `prompts[]`, `notaMin`, `maxIters`).
+- Referência de arquitetura: `engenharia-de-grafos` (princípios de verificação
+  paralela e iteração por nota — não duplicados aqui).
 
 ## 2. Graph Engineering (verificação paralela)
 
@@ -56,3 +62,10 @@ Aprovado: nota >= 80. Mín 3 candidatos p/ elemento; máx 3 iterações.
 - Confirme com o verificador (não com opinião) antes de declarar aprovado.
 - Se BPM do MusicGen sair fora de 174, registre no report que o compositor deve
   ajustar com `atempo`.
+
+## Relação com a canônica
+
+- Teoria de grafos/orquestração → `engenharia-de-grafos`.
+- Iteração até nota com verificador independente (genérico) → `score-loop`.
+- Este skill = a configuração concreta (parâmetros de áudio e critérios de nota)
+  aplicada ao harness DnB.

@@ -34,6 +34,14 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
   `multi-perspective-convergence` (multi-perspectiva) já existiam.
 - Vídeo do `/doctor` → a skill `doctor` foi materializada na leva anterior.
 
+### 3.1 Canal Attekita Dev (terceiro canal)
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `6GcfKpfA2kM` | Graph Engineering: orquestração de agentes em paralelo com verificadores independentes, sem contexto compartilhado | **Coberto com enriquecimento**: conceito central já em `engenharia-de-grafos`; absorver anti-overengineering (artefatos ruins = queima de tokens), os 3 níveis de implementação (delegar à IA / especificar manual / ferramenta dedicada) e "loop como nó de grafo" na skill canônica |
+
+Transcrições do canal ficam em `C:\projetos\attekitadev\` (fora do repo; via `YT_DIR`).
+
 ## 4. Próximos Passos
 
 1. Rodar o pipeline em novos vídeos: `node scripts/yt-oportunidades.mjs diff --since <data>`

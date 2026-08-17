@@ -818,7 +818,9 @@
         "skills/routines",
         "skills/sessoes-orquestradas",
         "skills/gemini-cli-agent-skills",
-        "skills/roteamento-modelos-baratos"
+        "skills/roteamento-modelos-baratos",
+        "skills/engenharia-de-grafos",
+        "skills/score-loop"
       ],
       "targets": [
         "claude",
