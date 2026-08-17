@@ -15,6 +15,8 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `fTok7Z-Bz40` | Pipeline claymation: áudio-first, imagem-depois-anima, ledger de custos | **Skill nova**: `pipeline-video-agente` |
 | `ZeD44y55t6I` | Skills "simplificar resposta" e "ADHD/multi-perspectiva" (Opus 5 slop) | **Já coberto**: `plain-language-response` + `multi-perspective-convergence` |
 | `Hdn1BXqGeTE` | Anthropic cortou 80% do system prompt (`/doctor`) | **Já coberto**: `doctor` |
+| `M4euu8xqO-k` | IA resolve conjectura jacobiana (87 anos em aberto) com Fable 5 + verificação LEAN | **Informativo**: sem workflow concreto, sem skill |
+| `ZQIbgHsf_iE` | Conselhos do Boris Cherny (criador do Claude Code): instruções envelhecem rápido, framework fiável (prompt desafiante + verificação + não parar até 100%), gap modelo-produto | **Coberto com enriquecimento**: 2.1 "instruções envelhecem" → `doctor` (falta a estratégia radical de rodar com prompt enxuto a cada ~6 meses); framework fiável → `score-loop` (já cobre, nota 85/100); gap modelo-produto → insight de negócio, sem skill |
 
 ---
 

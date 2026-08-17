@@ -1,6 +1,6 @@
 ---
 name: doctor
-description: Remove "peso morto" de projetos, agentes e skills — instruções verbosas que modelos modernos não precisam mais, contexto duplicado, skills/plugins não usados e arquivos órfãos que inflam a janela de contexto e o custo por execução. Use quando a sessão engole tokens rápido, o contexto alcança o limite cedo demais, o CLAUDE.md está sobrecarregado, ou você nunca revisou/atualizou suas skills e agentes há meses.
+description: Remove "peso morto" de projetos, agentes e skills — instruções verbosas que modelos modernos não precisam mais, contexto duplicado, skills/plugins não usados e arquivos órfãos que inflam a janela de contexto e o custo por execução. Use quando a sessão engole tokens rápido, o contexto alcança o limite cedo demais, o CLAUDE.md está sobrecarregado, ou você nunca revisou/atualizou suas skills e agentes há meses. Inclui a estratégia radical de revalidação: a cada ~6 meses (ou quando modelos novos saem) rodar a tarefa com prompt enxuto num repo vazio e observar o que é necessário de verdade, re-adicionando só o que faltou. Triggers em "instruções envelhecem", "estratégia radical", "revalidar skills depois do modelo novo", "cicatrizes de problemas que não existem".
 ---
 
 # Doctor — Auditoria e Enxugamento de Contexto e Instruções
@@ -77,6 +77,33 @@ Quantifique a economia para justificar e acompanhar:
 - **Teste em um projeto secundário primeiro.** Não comece pelo agente mais importante da sua vida. Rode num secundário que não faz falta e, se funcionar, aplique nos demais.
 - **Escale com confiança**: conforme você confia no processo, pode escolher "limpar tudo" — junto com a evolução dos modelos, é um caminho para cada vez menos instruções mantendo (ou melhorando) performance.
 - **Entender o que está rodando importa.** Quem constrói via linguagem natural sem entender a arquitetura atinge um teto; quem usa os próprios projetos/skills para aprender o que fazem avança muito mais.
+
+## Estratégia radical (revalidação por observação)
+
+Fonte: conselho do Boris Cherny (criador do Claude Code). Em vez de adivinhar
+quais instruções ainda são necessárias, **observe**: a cada ~6 meses (ou após
+lançamento de modelos novos), peça para a IA executar uma tarefa que você já
+fazia com todo o "arreio" (instruções, skills, guard rails) usando **apenas um
+prompt enxuto** — o mínimo necessário, num repositório vazio/novo. Depois
+observe o quão bem ela executa com essa instrução mínima:
+
+1. **Escolha uma tarefa representativa** que você já roda com instruções.
+2. **Pede para executar com o mínimo** — um prompt direto, sem as instruções
+   antigas. Se precisar de ferramentas/API, insira o necessário (senha/token
+   não se adivinha), mas nada além.
+3. **Observe o que é necessário de verdade** — compare o resultado com o da
+   execução "engessada". O que ainda foge do que você queria?
+4. **Re-adicione só o que faltou** — uma instrução por problema real observado.
+   Não re-adicione nada que o modelo já resolveu sozinho.
+5. **Repita com parcimônia** — cada execução limpa remove peso morto e
+   economiza tokens/contexto; nunca apague tudo de uma vez (veja Anti-padrões).
+
+As instruções antigas são "cicatrizes de problemas que já não existem": em
+testes controlados, a Anthropic teve resultados melhores removendo TODAS as
+instruções do que mantendo-as. Instruções envelhecem rápido — o que era
+essencial há 2 gerações de modelo virou ruído. Essa estratégia é o complemento
+empírico do workflow acima: o workflow diagnostica o estado atual, a estratégia
+radical revalida as decisões do passado contra os modelos de hoje.
 
 ## Comandos de apoio
 
