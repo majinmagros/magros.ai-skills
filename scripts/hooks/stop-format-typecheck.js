@@ -29,7 +29,7 @@ const MAX_STDIN = 1024 * 1024;
 const TOTAL_BUDGET_MS = 270_000;
 
 // Characters cmd.exe treats as separators/operators when shell: true is used.
-// Includes spaces and parentheses to guard paths like "C:\Users\John Doe\...".
+// Includes spaces and parentheses to guard paths like "C:\Users\<user>\...".
 const UNSAFE_PATH_CHARS = /[&|<>^%!\s()]/;
 
 /** Parse the accumulator text into a deduplicated array of file paths. */

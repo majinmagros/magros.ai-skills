@@ -1,7 +1,7 @@
 # Script de Sincronização Global do Opencode
 # Sincroniza a pasta de skills/agents local do repositório para a raiz global (~/.config/opencode)
 
-$sourceSkills = "C:\Projetos\magros.ai-skills\skills"
+$sourceSkills = Join-Path $PSScriptRoot "..\skills"
 $targetSkills = "$env:USERPROFILE\.config\opencode\skills"
 
 if (!(Test-Path $targetSkills)) {

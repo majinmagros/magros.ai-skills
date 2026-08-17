@@ -1,0 +1,41 @@
+# Relatório de Oportunidades: Maestros da IA (2026)
+
+Condensa os aprendizados dos vídeos processados e as skills materializadas a
+partir deles. Transcrições ficam em pastas locais (nunca no repo público).
+
+---
+
+## 1. Fontes Analisadas
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `j3AV7xsCepI` | Sessões do Claude Code conversando entre si + supervisor loop com nota | **Skill nova**: `sessoes-orquestradas` |
+| `ut2YqOMRkeo` | Gemini Spark agentic (skills, MCP, @tool, tarefas agendadas, AI Studio) | **Skill nova**: `gemini-cli-agent-skills` |
+| `ltmH3Oo49fE` | DeepSeek V4 Flash barato, custo-por-tarefa, OpenRouter no Claude Code | **Skill nova**: `roteamento-modelos-baratos` |
+| `fTok7Z-Bz40` | Pipeline claymation: áudio-first, imagem-depois-anima, ledger de custos | **Skill nova**: `pipeline-video-agente` |
+| `ZeD44y55t6I` | Skills "simplificar resposta" e "ADHD/multi-perspectiva" (Opus 5 slop) | **Já coberto**: `plain-language-response` + `multi-perspective-convergence` |
+| `Hdn1BXqGeTE` | Anthropic cortou 80% do system prompt (`/doctor`) | **Já coberto**: `doctor` |
+
+---
+
+## 2. Skills Materializadas Neste Lote
+
+| Skill | Módulo | Gatilho |
+|---|---|---|
+| `coletar-oportunidades-youtube` | workflow-quality | pipeline deste próprio relatório (catalog/diff/download/dedup/mark) |
+| `sessoes-orquestradas` | agentic-patterns | sessões nomeadas que se falam + supervisor loop 0-100 + roteamento de modelo |
+| `gemini-cli-agent-skills` | agentic-patterns | Gemini Spark, MCP, @tool, tarefas agendadas, AI Studio |
+| `roteamento-modelos-baratos` | agentic-patterns | OpenRouter, custo-por-tarefa, executor barato + verificador forte |
+| `pipeline-video-agente` | media-generation | áudio-first, imagem→anima, consistência via referências, ledger de custos |
+
+## 3. Já Cobertos (não duplicar)
+
+- Vídeo das skills anti-slop → `plain-language-response` (texto) e
+  `multi-perspective-convergence` (multi-perspectiva) já existiam.
+- Vídeo do `/doctor` → a skill `doctor` foi materializada na leva anterior.
+
+## 4. Próximos Passos
+
+1. Rodar o pipeline em novos vídeos: `node scripts/yt-oportunidades.mjs diff --since <data>`
+2. Analisar vídeos novos → materializar via `criar-skill`.
+3. Rodar validators (`validate-no-personal-paths.js`, testes CI) antes de qualquer commit.

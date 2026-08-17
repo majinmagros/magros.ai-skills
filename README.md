@@ -142,7 +142,7 @@ remover peso morto acumulado.
 
 **William Batista Gomes** — aka **magros Zapatero**
 
-SRE e Engenheiro de Software no Itaú Unibanco. Constrói bibliotecas de skills de IA, portfólios 3D interativos e produz DJ sets sob o alias **Björk von Hohenheim**. 
+SRE e Engenheiro de Software. Constrói bibliotecas de skills de IA, portfólios 3D interativos e produz DJ sets sob o alias **Björk von Hohenheim**. 
 
 **Experiência:**
 - **Class Runner** na ESL (English as Second Language).

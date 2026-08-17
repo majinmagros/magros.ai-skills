@@ -6,7 +6,7 @@
 ## 朝fixの形式
 
 ```json
-"command": "C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.sh pre"
+"command": "C:/Users/<user>/.claude/skills/continuous-learning/hooks/observe-wrapper.sh pre"
 ```
 
 `.sh` ファイルを直接 command にする形式。Git Bash が shebang 経由で実行する前提。
@@ -17,7 +17,7 @@ Node.js の `child_process.spawn` で `.sh` ファイルを直接実行すると
 **EFTYPE** で失敗する：
 
 ```js
-spawn('C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.sh',
+spawn('C:/Users/<user>/.claude/skills/continuous-learning/hooks/observe-wrapper.sh',
       ['post'], {stdio:['pipe','pipe','pipe']});
 // → Error: spawn EFTYPE (errno -4028)
 ```
@@ -36,14 +36,14 @@ spawn('C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.s
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "bash \"C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.sh\" pre"
+        "command": "bash \"C:/Users/<user>/.claude/skills/continuous-learning/hooks/observe-wrapper.sh\" pre"
       }]
     }],
     "PostToolUse": [{
       "matcher": "*",
       "hooks": [{
         "type": "command",
-        "command": "bash \"C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.sh\" post"
+        "command": "bash \"C:/Users/<user>/.claude/skills/continuous-learning/hooks/observe-wrapper.sh\" post"
       }]
     }]
   }
@@ -56,7 +56,7 @@ spawn('C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.s
 ### Node spawn 検証
 
 ```js
-spawn('bash "C:/Users/sugig/.claude/skills/continuous-learning/hooks/observe-wrapper.sh" post',
+spawn('bash "C:/Users/<user>/.claude/skills/continuous-learning/hooks/observe-wrapper.sh" post',
       [], {shell:true});
 // exit=0 → observations.jsonl に正常追記
 ```
@@ -104,6 +104,6 @@ hook command が `"C:\Program Files\Git\bin\bash.exe" "C:\Users\...\wrapper.sh"`
 - 朝 fix commit: 527c18b
 - 朝 fix doc: docs/fixes/HOOK-FIX-20260421.md
 - 朝 apply script: docs/fixes/apply-hook-fix.sh
-- 夜 fix 記録（ローカル）: C:\Users\sugig\Documents\Claude\Projects\ECC作成\hook-fix-report-20260421.md
-- 夜 fix 適用ファイル: C:\Users\sugig\.claude\settings.local.json
-- 夜 backup: C:\Users\sugig\.claude\settings.local.json.bak-hook-fix-20260421
+- 夜 fix 記録（ローカル）: C:\Users\<user>\Documents\Claude\Projects\ECC作成\hook-fix-report-20260421.md
+- 夜 fix 適用ファイル: C:\Users\<user>\.claude\settings.local.json
+- 夜 backup: C:\Users\<user>\.claude\settings.local.json.bak-hook-fix-20260421

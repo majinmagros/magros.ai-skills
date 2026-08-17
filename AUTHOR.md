@@ -1,6 +1,6 @@
 # Autor — William Batista Gomes (magros Zapatero)
 
-Brasileiro. Site Reliability Engineer e Software Engineer no Itaú Unibanco.
+Brasileiro. Site Reliability Engineer e Software Engineer.
 Constrói bibliotecas de skills de IA, portfólios 3D interativos, e produz
 DJ sets — de contínuo de banco a SRE, a vida é um aprendizado sem fim.
 
@@ -24,8 +24,8 @@ DJ sets — de contínuo de banco a SRE, a vida é um aprendizado sem fim.
 | ~2012–2014 | DJ / Criativo Digital | Fiteiro Cultural (Suíça) | Paralelo (DJ/criativo) |
 | ~2014–2015 | Manager Virtual Parties | Helio Club (Second Life) | Paralelo (DJ/criativo) |
 | ~2015–2021 | Freelancer | — | Paralelo |
-| 2014–2021 | Agente de Atendimento e Solução | Itaú Unibanco | Principal |
-| 2021–2026 | Software Engineer / SRE | Itaú Unibanco | Principal |
+| 2014–2021 | Agente de Atendimento e Solução | Banco (privado) | Principal |
+| 2021–2026 | Software Engineer / SRE | Banco (privado) | Principal |
 
 > Atividades marcadas como "Paralelo" rodavam simultaneamente com a ocupação principal do período.
 

@@ -1,14 +1,15 @@
 import { createRequire } from 'module';
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
+import { homedir } from 'os';
 
-const require = createRequire('C:/Users/rosan/AppData/Roaming/npm/node_modules/9router/');
+const require = createRequire(join(homedir(), 'AppData/Roaming/npm/node_modules/9router/'));
 const Database = require('better-sqlite3');
-const db = new Database('C:/Users/rosan/.local/share/opencode/opencode.db', { readonly: true });
+const db = new Database(join(homedir(), '.local/share/opencode/opencode.db'), { readonly: true });
 
 const args = process.argv.slice(2);
 const sessionId = args[0];
-const outDir = 'C:/projetos/retomadas';
+const outDir = join(homedir(), 'projetos', 'retomadas');
 mkdirSync(outDir, { recursive: true });
 
 function parse(s) { try { return JSON.parse(s); } catch { return {}; } }

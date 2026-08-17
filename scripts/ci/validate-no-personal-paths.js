@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
- * Prevent shipping user-specific absolute paths in public docs/skills/commands.
+ * Prevent shipping user-specific absolute paths in public docs/skills/commands
+ * and scripts.
  *
  * Catches generic `/Users/<name>` (macOS) and `C:\Users\<name>` (Windows) paths,
  * while allowing obvious placeholder usernames used in templates/examples.
- * Forensic incident reports under `docs/fixes/` are exempt because they may
- * legitimately document a reporter's local machine path.
+ * Forensic incident reports under `docs/fixes/` are NOT exempt: they must
+ * redact reporter paths to placeholder usernames (e.g. `C:\Users\<user>`).
  */
 
 'use strict';
@@ -20,12 +21,14 @@ const TARGETS = [
   'commands',
   'agents',
   'docs',
+  'scripts',
   '.opencode/commands',
 ];
 
-const EXEMPT_PREFIXES = [
-  'docs/fixes/',
-];
+// Forensic incident reports under `docs/fixes/` may document a reporter's local
+// machine path, but must be redacted to a placeholder username (`<user>`).
+// Placeholder usernames are already allowed by findLeaks(), so no file is exempt.
+const EXEMPT_PREFIXES = [];
 
 const PLACEHOLDER_USERNAMES = new Set([
   'example',
@@ -39,7 +42,7 @@ const PLACEHOLDER_USERNAMES = new Set([
 ]);
 
 const POSIX_USER_RE = /\/Users\/([a-zA-Z][a-zA-Z0-9._-]*)/g;
-const WIN_USER_RE = /C:\\Users\\([a-zA-Z][a-zA-Z0-9._-]*)/gi;
+const WIN_USER_RE = /C:(?:\\|\\\\)Users(?:\\|\\\\)([a-zA-Z][a-zA-Z0-9._-]*)/gi;
 
 function repoRelative(file) {
   return path.relative(ROOT, file).split(path.sep).join('/');

@@ -1098,7 +1098,7 @@ function buildGraphSvg() {
     graphState.els.nodes[n.id] = { g, body };
   });
 
-  graphState.active = graphState.nodes.length ? graphState.nodes[0].id : null;
+  graphState.active = null;
   graphState.built = true;
   graphTick();
 }
@@ -1164,7 +1164,9 @@ function physicsStep() {
       const minD = A.r + B.r + 10;
       if (d2 < minD * minD) d2 = minD * minD; // não explode quando sobrepõe
       const d = Math.sqrt(d2);
-      const f = (PHYS.repulsion / d2) * a;
+      // nó ativo (bolinha acionada) sente repulsão reduzida: não é "jogado" aos cantos
+      const repBoost = (A.id === graphState.active || B.id === graphState.active) ? 0.3 : 1;
+      const f = (PHYS.repulsion / d2) * a * repBoost;
       const fx = (dx / d) * f, fy = (dy / d) * f;
       if (!A.fixed) { A.vx += fx; A.vy += fy; }
       if (!B.fixed) { B.vx -= fx; B.vy -= fy; }
@@ -1188,10 +1190,18 @@ function physicsStep() {
   // gravidade ao centro + damping + integração
   nodes.forEach(n => {
     if (n.fixed) return;
-    // Peso: Força descendente extra constante
-    n.vy += 0.5; 
-    n.vx += (G_CX - n.x) * PHYS.gravity * a;
-    n.vy += (G_CY - n.y) * PHYS.gravity * a;
+    const isActive = n.id === graphState.active;
+    if (isActive) {
+      // Balão: sem peso descendente; empuxo ascendente constante p/ flutuar e se destacar
+      n.vy -= 0.15;
+      n.vx += (G_CX - n.x) * PHYS.gravity * 2 * a;
+      n.vy += (G_CY - n.y) * PHYS.gravity * 2 * a;
+    } else {
+      // Peso: Força descendente extra constante
+      n.vy += 0.5;
+      n.vx += (G_CX - n.x) * PHYS.gravity * a;
+      n.vy += (G_CY - n.y) * PHYS.gravity * a;
+    }
     n.vx *= PHYS.damping;
     n.vy *= PHYS.damping;
     
@@ -1517,7 +1527,7 @@ function closeGraphDetail() {
   detailState.trail = [];
   els.detailPanel.hidden = true;
   try { localStorage.removeItem(DETAIL_KEY); } catch (_) {}
-  if (graphState.built) setGraphActive(graphState.nodes.length ? graphState.nodes[0].id : null);
+  if (graphState.built) setGraphActive(null);
 }
 function jumpGraphCrumb(i) {
   detailState.trail = detailState.trail.slice(0, i + 1);

@@ -16,7 +16,7 @@ You are helping someone who is buying or has bought a property in Brazil with fi
    - What documents do they have? (contract, SIOPI, DAMP, SCR, extrato)
    - What is the specific question or problem?
 
-2. Read the available documents in the project directory (usually `C:\Projetos\apto-XXXX\`)
+2. Read the available documents in the project directory (usually `%USERPROFILE%\Projetos\apto-XXXX\`)
 
 ### Step 2: Extract Key Information
 From the documents, identify:
@@ -130,7 +130,7 @@ Assunto: Solicitação de Esclarecimento — Valores Divergentes (Contrato X / P
 
 ## Project Directory Structure
 ```
-C:\Projetos\apto-XXXX\
+%USERPROFILE%\Projetos\apto-XXXX\
 ├── Contexto para ia.txt                          (context summary)
 ├── analise_financeira_completa.md                (financial analysis)
 ├── email_caixa_siopi_fgts.md                     (email template to CAIXA)
@@ -147,7 +147,7 @@ C:\Projetos\apto-XXXX\
 
 ## Accumulated Project Context — projeto-lorem-ipsum
 
-Use this context when the project directory is `C:\Projetos\projeto-lorem-ipsum`. Treat the files in that directory as the primary record and keep facts, projections, public reports and legal hypotheses explicitly separated.
+Use this context when the project directory is `%USERPROFILE%\Projetos\projeto-lorem-ipsum`. Treat the files in that directory as the primary record and keep facts, projections, public reports and legal hypotheses explicitly separated.
 
 ### Verified project snapshot (01/01/2099)
 

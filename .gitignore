@@ -107,3 +107,12 @@ ecc2/target/
 assets/images/security/badrudi-exploit.mp4
 
 .aider*
+.obsidian/
+
+# YouTube transcripts — sempre fora do repo (repo público; transcrições são
+# de terceiros e vivem apenas em pastas locais via YT_DIR)
+*.vtt
+*.dedup.txt
+contexto/transricoes_youtube/
+ANALISADOS.json
+CATALOGO.json

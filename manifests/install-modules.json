@@ -360,7 +360,8 @@
         "skills/convergencia",
         "skills/triagem-bug",
         "skills/triagem-ideias",
-        "skills/multi-perspective-convergence"
+        "skills/multi-perspective-convergence",
+        "skills/coletar-oportunidades-youtube"
       ],
       "targets": [
         "claude",
@@ -693,7 +694,8 @@
         "skills/ui-demo",
         "skills/video-editing",
         "skills/videodb",
-        "skills/taste"
+        "skills/taste",
+        "skills/pipeline-video-agente"
       ],
       "targets": [
         "claude",
@@ -813,7 +815,10 @@
         "skills/orch-refine-code",
         "skills/plan-orchestrate",
         "skills/workflows",
-        "skills/routines"
+        "skills/routines",
+        "skills/sessoes-orquestradas",
+        "skills/gemini-cli-agent-skills",
+        "skills/roteamento-modelos-baratos"
       ],
       "targets": [
         "claude",
@@ -821,6 +826,7 @@
         "cursor",
         "antigravity",
         "codex",
+        "gemini",
         "opencode",
         "codebuddy",
         "joycode",

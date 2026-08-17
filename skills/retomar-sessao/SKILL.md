@@ -1,26 +1,26 @@
 ---
 name: retomar-sessao
-description: Recupera o historico de uma sessao do opencode travada/perdida e exporta para um arquivo markdown de retomada. Triggers em "perdi a sessao", "janela travou", "recupera historico", "retoma a tarefa", "meu contexto sumiu", "opencode.db". Lê o SQLite de sessoes, lista as recentes e exporta a conversa completa (texto, raciocinio e ferramentas) para C:\projetos\retomadas\.
+description: Recupera o historico de uma sessao do opencode travada/perdida e exporta para um arquivo markdown de retomada. Triggers em "perdi a sessao", "janela travou", "recupera historico", "retoma a tarefa", "meu contexto sumiu", "opencode.db". Lê o SQLite de sessoes, lista as recentes e exporta a conversa completa (texto, raciocinio e ferramentas) para %USERPROFILE%\projetos\retomadas\.
 ---
 
 # Retomar Sessao Perdida
 
 O historico de TODAS as sessoes do opencode fica em SQLite em
-`C:\Users\rosan\.local\share\opencode\opencode.db`. Quando uma janela trava
+`%USERPROFILE%\.local\share\opencode\opencode.db`. Quando uma janela trava
 e o usuario perde o contexto, a conversa continua la e pode ser exportada.
 
 ## Fluxo
 
 1. **Listar sessoes recentes** (achar a sessao travada pela data/titulo):
    ```powershell
-   node "C:\projetos\magros.ai-skills\scripts\retomar-sessao.mjs" list
+   node "scripts\retomar-sessao.mjs" list
    ```
 
 2. **Exportar a sessao** (substitua <id> pelo id `ses_...`):
    ```powershell
-   node "C:\projetos\magros.ai-skills\scripts\retomar-sessao.mjs" <id>
+   node "scripts\retomar-sessao.mjs" <id>
    ```
-   O arquivo sai em `C:\projetos\retomadas\retomada_<data>_<titulo>.md`.
+   O arquivo sai em `%USERPROFILE%\projetos\retomadas\retomada_<data>_<titulo>.md`.
 
 3. **Reler o contexto**: leia o arquivo exportado e use-o como base da
    proxima sessao (resumo do que foi feito + proximos passos).
@@ -39,6 +39,6 @@ e o usuario perde o contexto, a conversa continua la e pode ser exportada.
 O SQLite WAL permite leitura mesmo com o opencode aberto. Se der erro de
 "database is locked", copie o arquivo antes de ler:
 ```powershell
-Copy-Item "C:\Users\rosan\.local\share\opencode\opencode.db" "$env:TEMP\oc-bak.db" -Force
+Copy-Item "$env:USERPROFILE\.local\share\opencode\opencode.db" "$env:TEMP\oc-bak.db" -Force
 ```
 e aponte o script para a copia (edite o caminho na linha `new Database(...)`).

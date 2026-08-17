@@ -159,7 +159,7 @@ record(test('allows /Users/<placeholder> templates', () => {
   }
 }));
 
-record(test('exempts docs/fixes forensic reports', () => {
+record(test('flags a real username in docs/fixes forensic reports', () => {
   const testDir = createTestDir();
   try {
     writeFile(
@@ -167,7 +167,22 @@ record(test('exempts docs/fixes forensic reports', () => {
       'Reporter ran: C:\\Users\\sugig\\.claude\\settings.local.json\n',
     );
     const result = runValidatorAgainst(testDir);
-    assert.strictEqual(result.code, 0, `expected exit 0 for docs/fixes; stderr: ${result.stderr}`);
+    assert.strictEqual(result.code, 1, `expected non-zero exit for real username in docs/fixes; stderr: ${result.stderr}`);
+    assert.ok(result.stderr.includes('C:\\Users\\sugig'), `expected stderr to mention leaked path; got: ${result.stderr}`);
+  } finally {
+    cleanupTestDir(testDir);
+  }
+}));
+
+record(test('allows redacted placeholder username in docs/fixes forensic reports', () => {
+  const testDir = createTestDir();
+  try {
+    writeFile(
+      path.join(testDir, 'docs', 'fixes', 'HOOK-FIX-EXAMPLE.md'),
+      'Reporter ran: C:\\Users\\<user>\\.claude\\settings.local.json\n',
+    );
+    const result = runValidatorAgainst(testDir);
+    assert.strictEqual(result.code, 0, `expected exit 0 for redacted docs/fixes; stderr: ${result.stderr}`);
   } finally {
     cleanupTestDir(testDir);
   }

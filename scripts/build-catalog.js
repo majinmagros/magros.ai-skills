@@ -22,7 +22,9 @@ const AUTORAIS = new Set([
   'criar-skill','criatividade','dnb-production','doctor','encontrar-skill','engenharia-de-grafos',
   'gauntlet-loop','goal','graph-engineering','graphify','grill-with-docs','grilling','grills',
   'humanizar-texto','pesquisa-social','plain-language-response','plan','prompt-builder','routines',
-  'score-loop','skill-map','superpowers','taste','triagem-bug','triagem-ideias','workflows'
+  'score-loop','skill-map','superpowers','taste','triagem-bug','triagem-ideias','workflows',
+  'coletar-oportunidades-youtube','sessoes-orquestradas','gemini-cli-agent-skills',
+  'roteamento-modelos-baratos','pipeline-video-agente'
 ]);
 
 function parseFrontmatter(content) {
