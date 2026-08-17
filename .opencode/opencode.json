@@ -338,6 +338,42 @@
         "edit": true,
         "bash": true
       }
+    },
+    "jarvis": {
+      "description": "Jarvis (aka Kitt / Mega Brain) — AI Engineer orchestrator persona. Evaluates the request, loads the relevant skills from the skills repository, and delegates to the right subagents to deliver maximum quality work.",
+      "mode": "subagent",
+      "model": "9router/my-combo",
+      "prompt": "{file:prompts/agents/jarvis.txt}",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "kitt": {
+      "description": "Kitt — alias for Jarvis. AI Engineer orchestrator persona that loads the relevant skills and delegates to the right subagents.",
+      "mode": "subagent",
+      "model": "9router/my-combo",
+      "prompt": "{file:prompts/agents/jarvis.txt}",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "mega-brain": {
+      "description": "Mega Brain — alias for Jarvis. AI Engineer orchestrator persona that loads the relevant skills and delegates to the right subagents.",
+      "mode": "subagent",
+      "model": "9router/my-combo",
+      "prompt": "{file:prompts/agents/jarvis.txt}",
+      "tools": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
     }
   },
   "command": {
@@ -472,6 +508,24 @@
     "projects": {
       "description": "List known projects and instinct stats",
       "template": "{file:commands/projects.md}\n\n$ARGUMENTS"
+    },
+    "jarvis": {
+      "description": "Consult Jarvis (AI Engineer orchestrator) for direction, skills, and delegation",
+      "template": "{file:commands/jarvis.md}\n\n$ARGUMENTS",
+      "agent": "jarvis",
+      "subtask": true
+    },
+    "kitt": {
+      "description": "Consult Kitt (alias for Jarvis, AI Engineer orchestrator)",
+      "template": "{file:commands/kitt.md}\n\n$ARGUMENTS",
+      "agent": "kitt",
+      "subtask": true
+    },
+    "mega-brain": {
+      "description": "Consult Mega Brain (alias for Jarvis, AI Engineer orchestrator)",
+      "template": "{file:commands/mega-brain.md}\n\n$ARGUMENTS",
+      "agent": "mega-brain",
+      "subtask": true
     }
   },
   "permission": {

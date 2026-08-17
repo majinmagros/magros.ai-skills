@@ -46,7 +46,7 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 
 | Vídeo | Tema | Decisão |
 |---|---|---|
-| `RO5y-fCIBy8` | Novo papel do dev → "engenheiro de IA": dev vira arquiteto que guia agentes; 2 camadas (AI engineering vs software dev); gaps de quem programa com IA (domínio superficial, sem metodologia, pouco paralelismo, sem critério de validação, skills mal feitas) | **Persona materializada**: agente `ai-engineer` (agents/ai-engineer.md) com as características do vídeo — define direção/limites/critérios, modela o harness, decompõe em workflows paralelos, critério de validação com cutoff, guard rails, equilíbrio custo/latência/segurança/fiabilidade |
+| `RO5y-fCIBy8` | Novo papel do dev → "engenheiro de IA": dev vira arquiteto que guia agentes; 2 camadas (AI engineering vs software dev); gaps de quem programa com IA (domínio superficial, sem metodologia, pouco paralelismo, sem critério de validação, skills mal feitas) | **Persona materializada**: agente `jarvis` (agents/jarvis.md; aliases Kitt/Mega Brain; subagente opencode em `.opencode/prompts/agents/jarvis.txt`) com as características do vídeo — define direção/limites/critérios, modela o harness, decompõe em workflows paralelos, critério de validação com cutoff, guard rails, equilíbrio custo/latência/segurança/fiabilidade |
 
 Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `YT_DIR`).
 
