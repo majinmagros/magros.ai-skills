@@ -49,6 +49,10 @@ Do not use generic platform exemplars as source material.
 
 ## Output Contract
 
+- Extração do **Body of Work**: além de voz de posts, mapear o histórico de criação da marca e marcos visuais/narrativos (BodyOfWork.md).
+- Visual Identity Tokens: exportar tokens visuais em `tokens.json` para alinhamento em geração de imagens/vídeo.
+*Origem: Simon Scrapes (Leva 1 - 2026).*
+
 Produce a reusable `VOICE PROFILE` block that downstream skills can consume directly. Use the schema in [references/voice-profile-schema.md](references/voice-profile-schema.md).
 
 Keep the profile structured and short enough to reuse in session context. The point is not literary criticism. The point is operational reuse.

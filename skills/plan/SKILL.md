@@ -35,6 +35,15 @@ Uma seção para cada item abaixo, com o conteúdo específico do projeto:
 - Nomear decisões faz o plano falhar num passo, não no fim.
 - Objetivo vago → exemplos de sucesso vagos → aceite vago. Seja específico.
 
+## Property-Based Plan Format (New)
+
+Para tarefas complexas que exigem inteligência de nível Mythos (Fable 5 e superiores), use um template de plano estrito:
+1. **Objetivo & Restrições**: Delimite o que NÃO pode ser feito para evitar alucinações de escopo.
+2. **Público do Plano**: O plano deve ser criado para ser consumido e atualizado por outros agentes (agent-to-agent interface).
+3. **Trade-off Trifecta**: Defina a prioridade do job — `Performance > Velocidade >= Custo`.
+4. **Engineering Template**: O modelo deve preencher seções específicas e preservar o resto do contrato original.
+*Origem: Indy Dev Dan (Leva 1 - 2026).*
+
 ## 5. Explicit-only
 
 Não planeje por conta própria em tarefas simples de implementar/corrigir/refatorar.

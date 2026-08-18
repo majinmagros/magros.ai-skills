@@ -230,7 +230,16 @@ claude -p "Create memory entities for: me (user profile), my projects, my key co
 
 Grant computer-use MCP the necessary permissions for browser and desktop control.
 
-## Example Workflows
+## Loop Library (Patterns)
+
+1. **Daily Standup / PR Reviewer**: cron `0 9 * * 1-5` → analisa PRs/CI → resumo.
+2. **Nightly Green-Keeper**: cron `0 2 * * *` → roda testes → corrige pequenas falhas com limites.
+3. **Personal Research Agent**: cron diário → busca tópicos via Exa → compila digest.
+4. **Meeting Prep**: gatilho de agenda → busca histórico → gera talking points.
+5. **Inbox Zero / File Classifier**: cron horário → limpa pasta/inbox → classifica com goal verificável.
+6. **Data Scraper / Monitor**: intervalado → busca fonte → atualiza banco se houver mudança.
+7. **Security / Vulnerability Scanner**: cron semanal → roda audit local → abre issues.
+*Origem: Matthew Berman (Leva 1 - 2026).*
 
 ### Autonomous PR Reviewer
 ```

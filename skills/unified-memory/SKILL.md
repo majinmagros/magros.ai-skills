@@ -39,7 +39,13 @@ A repository checkout may instead run the CLI as
 Do not use the vault as a task tracker, secret store, policy engine, or
 substitute for governed project documentation.
 
-## Vault Scopes
+## Memory Architecture: 3-Job Framework (New)
+
+Estrutura recomendada para sistemas de memória persistente em agentes:
+1. **Storage**: Decisão de quando e o que armazenar (evitar transcrições cruas).
+2. **Injection**: Injeção contextual leve no prompt (context window management).
+3. **Retrieval**: Busca semântica por significado (ex: vetores/PG Vector + RLS para time, ou Vault local) em 3 níveis (curto, médio, longo prazo).
+*Origem: Simon Scrapes (Leva 1 - 2026).*
 
 | Scope | Location | Use |
 |---|---|---|

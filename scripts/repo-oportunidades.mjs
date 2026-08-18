@@ -23,21 +23,25 @@ function gh(args) {
   }
 }
 
-/** Cataloga SKILL.md de um repo (só metadata/frontmatter). */
-function catalogRepo(repo) {
-  console.log(`[${repo}] Catalogando...`);
-  const files = gh(['api', `repos/${repo}/contents/skills`, '--paginate']);
-  if (!files) return [];
+/** Busca recursivamente arquivos SKILL.md em um repo. */
+async function findSkills(repo) {
+  console.log(`[${repo}] Buscando recursivamente...`);
+  const tree = gh(['api', `repos/${repo}/git/trees/master?recursive=1`]);
+  if (!tree || !tree.tree) return [];
   
-  return files.filter(f => f.type === 'dir').map(dir => {
-    const skillName = dir.name;
-    const content = gh(['api', `repos/${repo}/contents/skills/${skillName}/SKILL.md`]);
-    if (!content) return { name: skillName, error: 'SKILL.md não encontrado' };
-    
-    // Extrai frontmatter basico (parser simples de chave: valor YAML)
+  const skillFiles = tree.tree.filter(f => f.path.endsWith('SKILL.md'));
+  const skills = [];
+
+  for (const file of skillFiles) {
+    const content = gh(['api', `repos/${repo}/contents/${file.path}`]);
+    if (!content) continue;
+
     const raw = Buffer.from(content.content, 'base64').toString('utf8');
+    const skillName = file.path.split('/').slice(-2, -1)[0];
+    
+    // Parse frontmatter
     const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    const meta = { name: skillName };
+    const meta = { name: skillName, path: file.path };
     if (match) {
       for (const line of match[1].split('\n')) {
         const idx = line.indexOf(':');
@@ -48,8 +52,9 @@ function catalogRepo(repo) {
         }
       }
     }
-    return meta;
-  });
+    skills.push(meta);
+  }
+  return skills;
 }
 
 const config = readJson(REPOS_CONFIG, { repos: [] });
@@ -57,7 +62,7 @@ const allSkills = {};
 
 for (const repoInfo of config.repos) {
   const repo = repoInfo.repo;
-  allSkills[repo] = catalogRepo(repo);
+  allSkills[repo] = await findSkills(repo);
 }
 
 writeJson('docs/vigilancia/CATALOGO-REPOS.json', allSkills);

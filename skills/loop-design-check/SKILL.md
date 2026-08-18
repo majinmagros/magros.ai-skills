@@ -113,7 +113,20 @@ Retry cap, hard stop, human flips the last switch = damping. **Negative feedback
 
 ---
 
-## Worked example — reviewing a "nightly green-keeper" loop
+## Loop Contract Template (New)
+
+Quando for subir um loop autônomo complexo, defina o contrato em um único arquivo markdown (`loop-contract.md`):
+
+```markdown
+# Loop Contract: <Name>
+- **Goal**: <decidable machine-verifiable end condition>
+- **Boundaries**: <what it must NOT do — anti-Goodhart>
+- **SOP (Standard Operating Procedure)**: <step-by-step executor behavior>
+- **State File**: `.loop-state.json`
+- **Audit Log**: append-only log of every iteration (timestamp, action, outcome)
+- **Failure Fallback**: max 3 retries → escalate to human
+```
+*Origem: IA Jason (Leva 1 - 2026).*
 
 You want a loop that runs every night and fixes whatever tests are failing.
 
