@@ -2,15 +2,19 @@
 /**
  * yt-oportunidades.mjs — Pipeline determinístico de coleta de oportunidades.
  *
- * Cataloga um canal do YouTube, compara com as transcrições locais, baixa e
+ * Cataloga canais do YouTube, compara com as transcrições locais, baixa e
  * deduplica transcrições que faltam. A ANÁLISE das transcrições (raciocínio)
  * fica com a skill `coletar-oportunidades-youtube`, não aqui.
  *
  * Uso:
  *   node scripts/yt-oportunidades.mjs catalog
  *       Canal -> CATALOGO.json na pasta de transcrições (id, título, data).
+ *   node scripts/yt-oportunidades.mjs catalog-all
+ *       Cataloga TODOS os canais de manifests/canais-vigilados.json.
  *   node scripts/yt-oportunidades.mjs diff [--since AAAA-MM-DD]
  *       Canal vs transcrições locais -> sem_transcricao e transcritos_nao_analisados.
+ *   node scripts/yt-oportunidades.mjs diff-all [--since AAAA-MM-DD]
+ *       Igual a diff, mas para todos os canais da config.
  *   node scripts/yt-oportunidades.mjs download <id> [<id>...]
  *       Baixa auto-subs (pt/en) do vídeo e gera <id>.<lang>.dedup.txt.
  *   node scripts/yt-oportunidades.mjs dedup [arquivo.vtt ...]
@@ -20,24 +24,27 @@
  *   node scripts/yt-oportunidades.mjs analyzed
  *       Lista os vídeos marcados como analisados.
  *
- * Configuração por variáveis de ambiente:
+ * Configuração por variáveis de ambiente (modo canal único, compatível):
  *   YT_CHANNEL  URL do canal (padrão: https://www.youtube.com/@maestrosdaia/videos)
  *   YT_DIR      pasta(s) das transcrições, separadas por ';'
  *               (padrão: ~/projetos/maestros-da-ia;~/projetos/enzo-sparo).
  *               Catálogo/registro de análise vão na PRIMEIRA pasta.
+ *
+ * Modo multi-canal (catalog-all/diff-all):
+ *   Lê manifests/canais-vigilados.json: [{ handle, nome, pasta, idiomas, keywords }]
+ *   Cada canal tem sua própria pasta de transcrições (catalogo/analisados locais).
  */
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
-import { basename, join } from 'node:path';
+import { basename, dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const CHANNEL = process.env.YT_CHANNEL || 'https://www.youtube.com/@maestrosdaia/videos';
-const YT_DIRS = (process.env.YT_DIR || `${join(homedir(), 'projetos', 'maestros-da-ia')};${join(homedir(), 'projetos', 'enzo-sparo')}`)
-  .split(';').map((p) => p.trim()).filter(Boolean);
-const YT_DIR = YT_DIRS[0];
-const RAW_DIR = join(YT_DIR, 'raw');
-const CATALOG_FILE = join(YT_DIR, 'CATALOGO.json');
-const ANALYZED_FILE = join(YT_DIR, 'ANALISADOS.json');
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
+const CHANNELS_CONFIG = join(SCRIPT_DIR, '..', 'manifests', 'canais-vigilados.json');
+
+const DEFAULT_CHANNEL = 'https://www.youtube.com/@maestrosdaia/videos';
+const DEFAULT_DIRS = `${join(homedir(), 'projetos', 'maestros-da-ia')};${join(homedir(), 'projetos', 'enzo-sparo')}`;
 
 const RUN = () => process.argv[2];
 
@@ -64,16 +71,52 @@ function readJson(file, fallback) {
 }
 
 function writeJson(file, value) {
-  ensureDir(YT_DIR);
+  ensureDir(dirname(file));
   writeFileSync(file, JSON.stringify(value, null, 2) + '\n', 'utf8');
 }
 
-function catalog() {
+/** Contexto de um canal: dirs, channel, arquivos de estado. */
+function ctxFor({ channel = DEFAULT_CHANNEL, dirs = null, label = 'default' } = {}) {
+  const dirList = dirs || (process.env.YT_DIR || DEFAULT_DIRS).split(';').map((p) => p.trim()).filter(Boolean);
+  const dir = dirList[0];
+  return {
+    label,
+    channel,
+    dirs: dirList,
+    dir,
+    rawDir: join(dir, 'raw'),
+    catalogFile: join(dir, 'CATALOGO.json'),
+    analyzedFile: join(dir, 'ANALISADOS.json'),
+  };
+}
+
+function defaultCtx() {
+  return ctxFor({
+    channel: process.env.YT_CHANNEL || DEFAULT_CHANNEL,
+    dirs: (process.env.YT_DIR || DEFAULT_DIRS).split(';').map((p) => p.trim()).filter(Boolean),
+  });
+}
+
+/** Lê manifests/canais-vigilados.json e devolve ctxs por canal. */
+function allChannelCtxs() {
+  const cfg = readJson(CHANNELS_CONFIG, null);
+  if (!cfg || !Array.isArray(cfg.canais) || cfg.canais.length === 0) {
+    process.stderr.write(`Config multi-canal ausente/inválida: ${CHANNELS_CONFIG}\n`);
+    process.exit(1);
+  }
+  return cfg.canais.map((c) => ({
+    ...ctxFor({ channel: `https://www.youtube.com/${c.handle}/videos`, dirs: [c.pasta], label: c.handle }),
+    nome: c.nome,
+    keywords: c.keywords || [],
+  }));
+}
+
+function catalog(ctx) {
   const out = yt([
     '--flat-playlist',
     '--extractor-args', 'youtubetab:approximate_date',
     '--print', '%(id)s|%(title)s|%(upload_date)s',
-    CHANNEL,
+    ctx.channel,
   ]);
   const videos = out.split(/\r?\n/)
     .filter((l) => l.includes('|'))
@@ -83,15 +126,15 @@ function catalog() {
       const title = rest.join('|');
       return { id, title, upload_date };
     });
-  const data = { generatedAt: new Date().toISOString(), channel: CHANNEL, videos };
-  writeJson(CATALOG_FILE, data);
-  console.log(`Catálogo: ${videos.length} vídeos em ${CATALOG_FILE}`);
+  const data = { generatedAt: new Date().toISOString(), channel: ctx.channel, videos };
+  writeJson(ctx.catalogFile, data);
+  console.log(`[${ctx.label}] Catálogo: ${videos.length} vídeos em ${ctx.catalogFile}`);
   return data;
 }
 
-function localIds() {
+function localIds(ctx) {
   const ids = new Set();
-  for (const dir of YT_DIRS) {
+  for (const dir of ctx.dirs) {
     if (!existsSync(dir)) continue;
     for (const f of readdirSync(dir)) {
       if (f.endsWith('.dedup.txt')) ids.add(basename(f).split('.')[0]);
@@ -100,8 +143,8 @@ function localIds() {
   return ids;
 }
 
-function analyzedIds() {
-  const list = readJson(ANALYZED_FILE, []);
+function analyzedIds(ctx) {
+  const list = readJson(ctx.analyzedFile, []);
   return new Set(Array.isArray(list) ? list : []);
 }
 
@@ -114,21 +157,31 @@ function parseChannel(data, since) {
   });
 }
 
-function diff(since) {
-  const data = existsSync(CATALOG_FILE) ? readJson(CATALOG_FILE, null) : catalog();
-  if (!data || !Array.isArray(data.videos)) return catalog();
-  const transcribed = localIds();
-  const analyzed = analyzedIds();
+function diff(ctx, since, keywords = []) {
+  const data = existsSync(ctx.catalogFile) ? readJson(ctx.catalogFile, null) : catalog(ctx);
+  if (!data || !Array.isArray(data.videos)) return catalog(ctx);
+  const transcribed = localIds(ctx);
+  const analyzed = analyzedIds(ctx);
   const scope = parseChannel(data, since);
-  const semTranscricao = scope.filter((v) => !transcribed.has(v.id));
-  const semAnalise = scope.filter((v) => transcribed.has(v.id) && !analyzed.has(v.id));
+  const kw = keywords.filter((k) => k).map((k) => k.toLowerCase());
+  const semTranscricao = scope.filter((v) => !transcribed.has(v.id)).map((v) => ({
+    id: v.id,
+    title: v.title,
+    upload_date: v.upload_date,
+    matches_filtro: kw.length === 0 || kw.some((k) => v.title.toLowerCase().includes(k)),
+  }));
+  const semAnalise = scope.filter((v) => transcribed.has(v.id) && !analyzed.has(v.id)).map((v) => ({
+    id: v.id,
+    title: v.title,
+    upload_date: v.upload_date,
+  }));
 
   const result = {
+    canal: ctx.label,
     total: scope.length,
-    sem_transcricao: semTranscricao.map((v) => ({ id: v.id, title: v.title, upload_date: v.upload_date })),
-    transcritos_nao_analisados: semAnalise.map((v) => ({ id: v.id, title: v.title, upload_date: v.upload_date })),
+    sem_transcricao: semTranscricao,
+    transcritos_nao_analisados: semAnalise,
   };
-  console.log(JSON.stringify(result, null, 2));
   return result;
 }
 
@@ -171,37 +224,37 @@ function dedupVtt(vttPath) {
   return wrapped.join('\n') + '\n';
 }
 
-function dedup(args) {
+function dedup(ctx, args) {
   const files = args.length > 0
     ? args.filter((f) => existsSync(f))
-    : (existsSync(RAW_DIR) ? readdirSync(RAW_DIR).filter((f) => f.endsWith('.vtt')).map((f) => join(RAW_DIR, f)) : []);
+    : (existsSync(ctx.rawDir) ? readdirSync(ctx.rawDir).filter((f) => f.endsWith('.vtt')).map((f) => join(ctx.rawDir, f)) : []);
   if (files.length === 0) {
-    process.stderr.write('Nenhum .vtt para deduplicar (use `download` ou passe arquivos).\n');
+    process.stderr.write(`[${ctx.label}] Nenhum .vtt para deduplicar (use \`download\` ou passe arquivos).\n`);
     process.exit(1);
   }
-  ensureDir(YT_DIR);
+  ensureDir(ctx.dir);
   for (const f of files) {
     const name = basename(f).replace(/\.vtt$/i, '');
     const [id, ...langParts] = name.split('.');
     const lang = langParts.join('.') || 'auto';
-    const out = join(YT_DIR, `${id}.${lang}.dedup.txt`);
+    const out = join(ctx.dir, `${id}.${lang}.dedup.txt`);
     writeFileSync(out, dedupVtt(f), 'utf8');
-    console.log(`dedup: ${out}`);
+    console.log(`[${ctx.label}] dedup: ${out}`);
   }
 }
 
-function download(ids) {
+function download(ctx, ids) {
   if (ids.length === 0) {
     process.stderr.write('Informe ao menos um id: download <id> [<id>...]\n');
     process.exit(1);
   }
-  ensureDir(RAW_DIR);
+  ensureDir(ctx.rawDir);
   for (const id of ids) {
     let ok = false;
     for (const langs of [['pt', 'pt-PT', 'en'], ['en'], ['pt']]) {
       for (let attempt = 0; attempt < 3 && !ok; attempt++) {
         if (attempt > 0) setTimeoutSync(5000 * attempt);
-        console.log(`baixando subs de ${id} (${langs.join(',')}) tentativa ${attempt + 1}...`);
+        console.log(`[${ctx.label}] baixando subs de ${id} (${langs.join(',')}) tentativa ${attempt + 1}...`);
         const r = spawnSync('yt-dlp', [
           '--skip-download',
           '--write-auto-sub',
@@ -210,7 +263,7 @@ function download(ids) {
           '--sub-format', 'vtt',
           '--no-playlist',
           '--no-warnings',
-          '-o', `${RAW_DIR.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
+          '-o', `${ctx.rawDir.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
           `https://www.youtube.com/watch?v=${id}`,
         ], { encoding: 'utf8' });
         if (r.status === 0) {
@@ -221,39 +274,89 @@ function download(ids) {
       }
       if (ok) break;
     }
-    if (!ok) process.stderr.write(`FALHOU: ${id} (rate limit persistente)\n`);
+    if (!ok) process.stderr.write(`[${ctx.label}] FALHOU: ${id} (rate limit persistente)\n`);
   }
-  const vtts = readdirSync(RAW_DIR)
+  const vtts = readdirSync(ctx.rawDir)
     .filter((f) => /\.vtt$/i.test(f) && ids.some((id) => f.startsWith(id + '.')))
-    .map((f) => join(RAW_DIR, f));
-  dedup(vtts);
+    .map((f) => join(ctx.rawDir, f));
+  dedup(ctx, vtts);
 }
 
 function setTimeoutSync(ms) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
 
-function mark(ids) {
-  const list = new Set(readJson(ANALYZED_FILE, []));
+function mark(ctx, ids) {
+  const list = new Set(readJson(ctx.analyzedFile, []));
   for (const id of ids) list.add(id);
-  writeJson(ANALYZED_FILE, [...list].sort());
-  console.log(`Analisados registrados: ${list.size}`);
+  writeJson(ctx.analyzedFile, [...list].sort());
+  console.log(`[${ctx.label}] Analisados registrados: ${list.size}`);
 }
 
-function analyzed() {
-  const list = readJson(ANALYZED_FILE, []);
-  console.log(JSON.stringify(list, null, 2));
+function analyzed(ctx) {
+  const list = readJson(ctx.analyzedFile, []);
+  console.log(`[${ctx.label}] ${JSON.stringify(list, null, 2)}`);
+}
+
+function sinceArg() {
+  return process.argv.includes('--since')
+    ? process.argv[process.argv.indexOf('--since') + 1]
+    : undefined;
+}
+
+/** Resolve o canal-alvo de --canal <handle> (senão o canal padrão/env). */
+function targetCtx() {
+  const i = process.argv.indexOf('--canal');
+  if (i === -1) return defaultCtx();
+  const handle = process.argv[i + 1];
+  const ctx = allChannelCtxs().find((c) => c.label === handle);
+  if (!ctx) {
+    process.stderr.write(`Canal não encontrado na config: ${handle}\n`);
+    process.exit(1);
+  }
+  return ctx;
+}
+
+/** Args posicionais após o comando, removendo --canal <handle> e outras flags. */
+function posArgs() {
+  const rest = process.argv.slice(3);
+  const i = rest.indexOf('--canal');
+  if (i !== -1) rest.splice(i, 2);
+  return rest.filter((a) => !a.startsWith('--'));
+}
+
+function runPerChannel(fn) {
+  const ctxs = allChannelCtxs();
+  const results = [];
+  for (const ctx of ctxs) {
+    try {
+      results.push(fn(ctx));
+    } catch (e) {
+      process.stderr.write(`[${ctx.label}] erro: ${e.message}\n`);
+    }
+  }
+  return results;
 }
 
 switch (RUN()) {
-  case 'catalog': catalog(); break;
-  case 'diff': diff(process.argv.find((a) => a === '--since') ? process.argv[process.argv.indexOf('--since') + 1] : undefined); break;
-  case 'download': download(process.argv.slice(3)); break;
-  case 'dedup': dedup(process.argv.slice(3)); break;
-  case 'mark': mark(process.argv.slice(3)); break;
-  case 'analyzed': analyzed(); break;
+  case 'catalog': catalog(defaultCtx()); break;
+  case 'catalog-all': runPerChannel((ctx) => catalog(ctx)); break;
+  case 'diff': {
+    const ctx = defaultCtx();
+    console.log(JSON.stringify(diff(ctx, sinceArg()), null, 2));
+    break;
+  }
+  case 'diff-all': {
+    const results = runPerChannel((ctx) => diff(ctx, sinceArg(), ctx.keywords));
+    console.log(JSON.stringify(results, null, 2));
+    break;
+  }
+  case 'download': download(targetCtx(), posArgs()); break;
+  case 'dedup': dedup(targetCtx(), posArgs()); break;
+  case 'mark': mark(targetCtx(), posArgs()); break;
+  case 'analyzed': analyzed(targetCtx()); break;
   default:
-    console.log(`Uso: node ${basename(process.argv[1])} {catalog|diff [--since DATA]|download <id>...|dedup [vtt...]|mark <id>...|analyzed}`);
-    console.log(`  YT_DIR=${YT_DIR}`);
-    console.log(`  YT_CHANNEL=${CHANNEL}`);
+    console.log(`Uso: node ${basename(process.argv[1])} {catalog|catalog-all|diff [--since DATA]|diff-all [--since DATA]|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|analyzed [--canal HANDLE]}`);
+    console.log(`  YT_DIR=${defaultCtx().dir}`);
+    console.log(`  YT_CHANNEL=${defaultCtx().channel}`);
 }

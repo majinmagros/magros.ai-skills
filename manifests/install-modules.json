@@ -361,7 +361,8 @@
         "skills/triagem-bug",
         "skills/triagem-ideias",
         "skills/multi-perspective-convergence",
-        "skills/coletar-oportunidades-youtube"
+        "skills/coletar-oportunidades-youtube",
+        "skills/avaliar-ferramenta-ia"
       ],
       "targets": [
         "claude",

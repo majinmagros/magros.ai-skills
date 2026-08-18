@@ -1,0 +1,46 @@
+{
+  "repos": [
+    {
+      "repo": "VoltAgent/awesome-agent-skills",
+      "prioridade": 1,
+      "limite_skills": 300,
+      "fonte": "meta-lista curada de skills oficiais (Anthropic, Google, Vercel, Stripe, Cloudflare, Trail of Bits, Hugging Face)"
+    },
+    {
+      "repo": "alirezarezvani/claude-skills",
+      "prioridade": 2,
+      "limite_skills": 400,
+      "fonte": "362+ skills, 18 dominios, multi-harness (13 ferramentas de coding agent)"
+    },
+    {
+      "repo": "artubss/SKILLS-CLAUDE-CODE",
+      "prioridade": 3,
+      "limite_skills": 500,
+      "fonte": "1044+ skills, 400+ subagents, 341 slash-commands, 13 MCP servers"
+    },
+    {
+      "repo": "secondsky/claude-skills",
+      "prioridade": 4,
+      "limite_skills": 200,
+      "fonte": "142 skills de producao, cross-harness via skills.sh"
+    },
+    {
+      "repo": "seb1n/awesome-ai-agent-skills",
+      "prioridade": 5,
+      "limite_skills": 150,
+      "fonte": "103 skills prontas, inclui skill-supply-chain-audit"
+    },
+    {
+      "repo": "anthropics/skills",
+      "prioridade": 6,
+      "limite_skills": 100,
+      "fonte": "skills oficiais do Anthropic (Skill Creator, PDF, docx)"
+    },
+    {
+      "repo": "microsoft/SkillOpt",
+      "prioridade": 7,
+      "limite_skills": 100,
+      "fonte": "sistema de skills auto-evolutivas (RAG); verificar estrutura de SKILL.md"
+    }
+  ]
+}

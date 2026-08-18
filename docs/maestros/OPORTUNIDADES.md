@@ -17,6 +17,7 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `Hdn1BXqGeTE` | Anthropic cortou 80% do system prompt (`/doctor`) | **Já coberto**: `doctor` |
 | `M4euu8xqO-k` | IA resolve conjectura jacobiana (87 anos em aberto) com Fable 5 + verificação LEAN | **Informativo**: sem workflow concreto, sem skill |
 | `ZQIbgHsf_iE` | Conselhos do Boris Cherny (criador do Claude Code): instruções envelhecem rápido, framework fiável (prompt desafiante + verificação + não parar até 100%), gap modelo-produto | **Coberto com enriquecimento**: 2.1 "instruções envelhecem" → `doctor` (falta a estratégia radical de rodar com prompt enxuto a cada ~6 meses); framework fiável → `score-loop` (já cobre, nota 85/100); gap modelo-produto → insight de negócio, sem skill |
+| `dRGKKq_1aYs` | Grokbot (xAI): central de agentes na nuvem, $200/mês no recurso definidor, lock-in total no ecossistema, só roda Grok; review real mostra beta instável (auths quebradas, créditos consumidos no trial); conclusão: "clone bonito de ferramentas abertas (OpenClaw/Claude Code/Codex)" | **Skill nova**: `avaliar-ferramenta-ia` — framework cético de adoção (escopo real vs marketing, custo do recurso definidor, lock-in, comparativo com o stack, trial hands-on, linha do hype) |
 
 ---
 
@@ -29,6 +30,7 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `gemini-cli-agent-skills` | agentic-patterns | Gemini Spark, MCP, @tool, tarefas agendadas, AI Studio |
 | `roteamento-modelos-baratos` | agentic-patterns | OpenRouter, custo-por-tarefa, executor barato + verificador forte |
 | `pipeline-video-agente` | media-generation | áudio-first, imagem→anima, consistência via referências, ledger de custos |
+| `avaliar-ferramenta-ia` | workflow-quality | Grokbot/xAI review — framework cético: escopo real vs marketing, custo do recurso definidor, lock-in, comparativo com stack, trial, linha do hype (2026-08-18) |
 
 ## 3. Já Cobertos (não duplicar)
 
