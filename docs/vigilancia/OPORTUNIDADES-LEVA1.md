@@ -1,7 +1,7 @@
 # Relatório de Vigilância — Oportunidades Leva 1 (2026-08-18)
 
 Primeira leva de análise dos 8 canais vigiados (`manifests/canais-vigilados.json`).
-12 vídeos analisados na íntegra (transcrições em `C:\Projetos\<canal>\`, fora do repo).
+12 vídeos analisados na íntegra (transcrições em pastas locais fora do repo; caminhos em `manifests/canais-vigilados.local.json`, gitignored).
 Cruzamento com `docs/data/skills.json` (337 skills) e decisões por vídeo.
 
 ---

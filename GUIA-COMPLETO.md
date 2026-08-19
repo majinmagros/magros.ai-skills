@@ -1,7 +1,7 @@
 # GUIA COMPLETO — instalar e usar as skills autorais
 
 > Escrito para quem não é técnico. Explica o que é uma skill, como instalar o
-> pacote inteiro e como funciona cada uma das 29 skills autorais.
+> pacote inteiro e como funciona cada uma das 49 skills autorais.
 
 ---
 
@@ -85,7 +85,7 @@ Para ver todas as opções: `./install.sh --help`.
 
 ---
 
-## 4. As 29 skills autorais, uma a uma
+## 4. As 49 skills autorais, uma a uma
 
 > Organizadas em 3 grupos: **qualidade de trabalho**, **comunicação/conteúdo** e
 > **ferramentas pessoais**. "Dispara quando" = frases que fazem o agente carregar

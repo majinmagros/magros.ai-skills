@@ -13,6 +13,9 @@ secrets.json
 config/secrets.yml
 .secrets
 
+# Local-only config (personal paths, machine-specific)
+manifests/canais-vigilados.local.json
+
 # OS files
 .DS_Store
 .DS_Store?

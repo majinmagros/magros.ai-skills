@@ -1,6 +1,10 @@
 # GUIA 9ROUTER + OPENCODE — instalação e conexão
 
 > Guia simplificado. Objetivo: usar IA sem custo, sem assinaturas.
+>
+> ⚠️ **Uso pessoal apenas.** Este guia usa provedores de IA gratuitos não homologados.
+> Não utilize com dados corporativos, internos ou confidenciais da sua empresa —
+> consulte as políticas de IA e proteção de dados do seu empregador antes.
 
 ---
 

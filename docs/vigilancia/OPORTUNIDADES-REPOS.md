@@ -1,7 +1,7 @@
 # Relatório de Vigilância — Repositórios (2026-08-18)
 
 Vigilância automatizada via `scripts/repo-oportunidades.mjs` (gh api).
-7 repositórios monitorados. Gap analysis vs inventário local (337 skills).
+7 repositórios monitorados. Gap analysis vs inventário local (337 skills — total gerado por `scripts/ci/count-skills.js`).
 
 ---
 

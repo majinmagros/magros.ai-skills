@@ -3,77 +3,66 @@
     {
       "handle": "@IndyDevDan",
       "nome": "Indy Dev Dan",
-      "pasta": "C:\\Projetos\\indyddevdan",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "subagent", "orchestration"]
     },
     {
       "handle": "@ColeMedin",
       "nome": "Cole Medin",
-      "pasta": "C:\\Projetos\\cole-medin",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "subagent", "agent team", "rag"]
     },
     {
       "handle": "@matthew_berman",
       "nome": "Matthew Berman",
-      "pasta": "C:\\Projetos\\matthew-berman",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "llm", "openai", "anthropic"]
     },
     {
       "handle": "@SimonScrapes",
       "nome": "Simon Scrapes",
-      "pasta": "C:\\Projetos\\simon-scrapes",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "claude", "codex", "workflow", "prompt", "1%", "agent"]
     },
     {
       "handle": "@celinexu6598",
       "nome": "Celine Xu",
-      "pasta": "C:\\Projetos\\celine-xu",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "mcp", "governance", "claude", "agent", "security", "enterprise", "compliance"]
     },
     {
       "handle": "@ai-foundations",
       "nome": "AI Foundations",
-      "pasta": "C:\\Projetos\\ai-foundations",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "claude", "codex", "mcp", "workflow", "tutorial"]
     },
     {
       "handle": "@graceleungyl",
       "nome": "Grace Leung",
-      "pasta": "C:\\Projetos\\grace-leung",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "claude", "marketing", "content", "library", "team"]
     },
     {
       "handle": "@AIJasonZ",
       "nome": "AI Jason",
-      "pasta": "C:\\Projetos\\ai-jason",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "automation", "deep dive"]
     },
     {
       "handle": "@maestrosdaia",
       "nome": "Maestros da IA",
-      "pasta": "C:\\Projetos\\maestros-da-ia",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "agente"]
     },
     {
       "handle": "@attekitadev",
       "nome": "Attekita Dev",
-      "pasta": "C:\\Projetos\\attekitadev",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "graph", "orchestration", "claude", "codex", "mcp"]
     },
     {
       "handle": "@FullCycle",
       "nome": "Full Cycle",
-      "pasta": "C:\\Projetos\\full-cycle",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "engenharia"]
     }

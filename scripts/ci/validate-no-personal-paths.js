@@ -22,13 +22,17 @@ const TARGETS = [
   'agents',
   'docs',
   'scripts',
+  'manifests',
   '.opencode/commands',
 ];
 
 // Forensic incident reports under `docs/fixes/` may document a reporter's local
 // machine path, but must be redacted to a placeholder username (`<user>`).
 // Placeholder usernames are already allowed by findLeaks(), so no file is exempt.
-const EXEMPT_PREFIXES = [];
+// Exemptions: o proprio validador (contem os regexes) e arquivos `.local.*` (local-only, gitignored).
+const EXEMPT_PREFIXES = [
+  'scripts/ci/validate-no-personal-paths.js',
+];
 
 const PLACEHOLDER_USERNAMES = new Set([
   'example',
@@ -42,7 +46,9 @@ const PLACEHOLDER_USERNAMES = new Set([
 ]);
 
 const POSIX_USER_RE = /\/Users\/([a-zA-Z][a-zA-Z0-9._-]*)/g;
-const WIN_USER_RE = /C:(?:\\|\\\\)Users(?:\\|\\\\)([a-zA-Z][a-zA-Z0-9._-]*)/gi;
+const WIN_USERS_RE = /[A-Za-z]:(?:\\|\\\\)Users(?:\\|\\\\)([a-zA-Z][a-zA-Z0-9._-]*)/gi;
+// Pastas pessoais comuns (ex.: C:\Projetos\...) — nunca devem vazar para o repo publico.
+const WIN_PROJETOS_RE = /[A-Za-z]:(?:\\|\\\\)Projetos(?:\\|\\\\)/g;
 
 function repoRelative(file) {
   return path.relative(ROOT, file).split(path.sep).join('/');
@@ -50,18 +56,22 @@ function repoRelative(file) {
 
 function isExempt(file) {
   const rel = repoRelative(file);
+  if (rel.includes('.local.')) return true;
   return EXEMPT_PREFIXES.some(prefix => rel.startsWith(prefix));
 }
 
 function findLeaks(content) {
   const leaks = [];
 
-  for (const pattern of [POSIX_USER_RE, WIN_USER_RE]) {
+  for (const pattern of [POSIX_USER_RE, WIN_USERS_RE, WIN_PROJETOS_RE]) {
     pattern.lastIndex = 0;
     let match;
 
     while ((match = pattern.exec(content)) !== null) {
-      if (!PLACEHOLDER_USERNAMES.has(match[1].toLowerCase())) {
+      const captured = match[1];
+      if (captured === undefined) {
+        leaks.push(match[0]);
+      } else if (!PLACEHOLDER_USERNAMES.has(captured.toLowerCase())) {
         leaks.push(match[0]);
       }
     }

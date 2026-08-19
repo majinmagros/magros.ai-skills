@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **322 `SKILL.md`** no total.
-- **284** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **38 autorais** (em português ou originais):
+- **337 `SKILL.md`** no total.
+- **288** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
+- **49 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -52,20 +52,22 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `triagem-ideias` | Pipeline go/kill para ideias cruas (intake→pesquisa→definição→formato→decisão) antes de investir em especificar/codar. | workflow-quality |
 | `triagem-bug` | Avaliar→corrigir→provar com separação de papéis: reproduz e classifica antes de tocar no código, corrige causa-raiz, prova com execução. | workflow-quality |
 
-### Redundância tratada (3 candidatas NÃO adicionadas)
+### Redundância reconciliada (3 variantes PT mantidas)
 
-Na comparação com as 288 skills do upstream, 3 candidatas foram **puladas** por já existirem equivalentes no bundle — seguindo a política do `skill-scout` (não duplicar):
+As skills `prompt-builder`, `encontrar-skill` e `auditar-skills` têm equivalentes no bundle
+(`prompt-optimizer`, `skill-scout`, `skill-stocktake`), mas foram **mantidas no repo como variantes
+em português/enriquecidas** — não são duplicatas cruas:
 
-| Candidata | Equivalente no bundle |
-|-----------|----------------------|
-| `prompt-builder` | `prompt-optimizer` (pipeline de 6 fases, mapeado ao ecossistema ECC) |
-| `encontrar-skill` | `skill-scout` (busca local/GitHub/web + vetting + ranking) |
-| `auditar-skills` | `skill-stocktake` (auditoria com quick/full scan e verdicts) |
+| Skill (PT) | Equivalente no bundle | Motivo de manter |
+|-----------|----------------------|------------------|
+| `prompt-builder` | `prompt-optimizer` (pipeline de 6 fases, mapeado ao ecossistema ECC) | Adaptação em PT com ajustes por modelo/mídia |
+| `encontrar-skill` | `skill-scout` (busca local/GitHub/web + vetting + ranking) | Fluxo de descoberta em PT, filtro por estrelas/instalações |
+| `auditar-skills` | `skill-stocktake` (auditoria com quick/full scan e verdicts) | Scorecard 0–100 em PT, ranking pior→melhor |
 
 ## Estrutura
 
 ```
-skills/          # todas as skills (284 ECC + 38 autorais)
+skills/          # todas as skills (288 ECC + 49 autorais; lista autorais em manifests/skills-autorais.json)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
   grills/                  # autoral
@@ -88,7 +90,7 @@ skills/          # todas as skills (284 ECC + 38 autorais)
   triagem-bug/             # autoral (spec-driven)
 scripts/         # ferramentas, incl. sync do upstream
 manifests/       # install-modules.json (módulos de instalação)
-.github/         # (workflows ECC removidos — não aplicáveis a repo de skills)
+.github/         # deploy-pages (GitHub Pages) + CODEOWNERS/dependabot do autor
 ```
 
 ## Proveniência das skills autorais novas
@@ -114,8 +116,8 @@ git remote add upstream https://github.com/affaan-m/ECC.git
 
 O script `sync-upstream.sh` faz `fetch` + `merge` do branch principal do upstream para o seu `master`.
 Conflitos (ex.: se você editou uma skill que também mudou lá em cima) precisam ser resolvidos
-manualmente — o git vai apontá-los. As suas **13 skills autorais não são tocadas** pelo merge, pois
-não existem no upstream.
+manualmente — o git vai apontá-los. As suas **49 skills autorais** (ver `manifests/skills-autorais.json`)
+não são tocadas pelo merge, pois não existem no upstream.
 
 Recomendação: rode o sync após novas releases do ECC, e rode a skill `doctor` periodicamente para
 remover peso morto acumulado.
@@ -130,15 +132,19 @@ remover peso morto acumulado.
    qualidade/auditoria → `workflow-quality`, automação → `operator-workflows`).
 4. **Validar**: `node scripts/ci/validate-skills.js --strict` e
    `node scripts/ci/validate-install-manifests.js` (requer `npm install` no repo).
-5. **Documentar**: atualize as tabelas deste README (total, autorais, módulo).
+5. **Documentar**: atualize as tabelas deste README (total, autorais, módulo) — os números são
+   gerados por `node scripts/ci/count-skills.js` (fonte única de verdade:
+   `manifests/skills-autorais.json`).
 
 ### 3. Auditoria periódica
 
 - `skill-stocktake` (no bundle): avalia as skills instaladas (Keep/Improve/Update/Retire/Merge).
-- `auditar-skills` (skill local equivalente, fora do repo): scorecard 0–100 com ranking pior→melhor.
-- `validate-no-personal-paths.js`: CI que impede caminhos absolutos pessoais em docs/skills/commands.
+- `auditar-skills` (skill autoral no repo): scorecard 0–100 com ranking pior→melhor.
+- `validate-no-personal-paths.js`: CI que impede caminhos absolutos pessoais em docs/skills/commands/manifests.
 
 ## Autor
+
+> Conteúdo pessoal — não representa o empregador nem reflete políticas de nenhuma instituição financeira.
 
 **William Batista Gomes** — aka **magros Zapatero**
 
@@ -159,5 +165,8 @@ Biografia completa em [`AUTHOR.md`](AUTHOR.md).
 
 ## Licença
 
+> Conteúdo pessoal de uso livre do autor. **Não representa o empregador.** Não use as skills com
+> dados corporativos/internos da sua empresa.
+
 - Conteúdo herdado do ECC: **MIT** (ver `LICENSE` — mantido do upstream `affaan-m/ECC`).
-- Skills autorais (todas as 13 listadas acima): MIT, salvo indicação em contrário.
+- Skills autorais (ver `manifests/skills-autorais.json`): MIT, salvo indicação em contrário.

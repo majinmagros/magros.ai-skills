@@ -362,7 +362,18 @@
         "skills/triagem-ideias",
         "skills/multi-perspective-convergence",
         "skills/coletar-oportunidades-youtube",
-        "skills/avaliar-ferramenta-ia"
+        "skills/avaliar-ferramenta-ia",
+        "skills/plan",
+        "skills/retomar-sessao",
+        "skills/superpowers",
+        "skills/anti-hallucination",
+        "skills/auditar-skills",
+        "skills/doctor",
+        "skills/encontrar-skill",
+        "skills/goal",
+        "skills/grill-with-docs",
+        "skills/grilling",
+        "skills/grills"
       ],
       "targets": [
         "claude",
@@ -523,7 +534,11 @@
         "skills/analise-concorrentes",
         "skills/criar-campanha-visual",
         "skills/humanizar-texto",
-        "skills/plain-language-response"
+        "skills/plain-language-response",
+        "skills/clareza",
+        "skills/conversa",
+        "skills/criatividade",
+        "skills/financiamento-imobiliario"
       ],
       "targets": [
         "claude",
@@ -569,7 +584,9 @@
         "skills/workspace-surface-audit",
         "skills/mailtrap-email-integration",
         "skills/automacao-deterministica",
-        "skills/n8n-agentic-flows"
+        "skills/n8n-agentic-flows",
+        "skills/coordenacao",
+        "skills/obsidian-cli"
       ],
       "targets": [
         "claude",
@@ -696,7 +713,9 @@
         "skills/video-editing",
         "skills/videodb",
         "skills/taste",
-        "skills/pipeline-video-agente"
+        "skills/pipeline-video-agente",
+        "skills/baixar-musica",
+        "skills/dnb-production"
       ],
       "targets": [
         "claude",
@@ -821,7 +840,11 @@
         "skills/gemini-cli-agent-skills",
         "skills/roteamento-modelos-baratos",
         "skills/engenharia-de-grafos",
-        "skills/score-loop"
+        "skills/score-loop",
+        "skills/prompt-builder",
+        "skills/skill-execution-dashboard",
+        "skills/gauntlet-loop",
+        "skills/graph-engineering"
       ],
       "targets": [
         "claude",

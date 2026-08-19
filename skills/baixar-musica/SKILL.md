@@ -5,6 +5,10 @@ description: Use when the user wants to download a song/audio from YouTube. Trig
 
 # Skill: Baixar Música (busca no YouTube + download)
 
+> ⚠️ **Uso pessoal apenas.** Baixar áudio do YouTube pode violar os Termos de Serviço
+> da plataforma e direitos autorais. Use apenas para conteúdo com permissão de download
+> (faixas livres, seu próprio conteúdo) e respeite o copyright.
+
 Procedimento para baixar o áudio de uma música do YouTube, dado nome + artista.
 
 ## Pré-requisitos (verificados)

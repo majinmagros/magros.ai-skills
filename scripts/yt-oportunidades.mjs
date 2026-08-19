@@ -45,6 +45,8 @@ import { fileURLToPath } from 'node:url';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const CHANNELS_CONFIG = join(SCRIPT_DIR, '..', 'manifests', 'canais-vigilados.json');
+// Caminhos locais das transcricoes ficam FORA do repo publico (gitignored).
+const LOCAL_CHANNELS_CONFIG = join(SCRIPT_DIR, '..', 'manifests', 'canais-vigilados.local.json');
 
 const DEFAULT_CHANNEL = 'https://www.youtube.com/@maestrosdaia/videos';
 const DEFAULT_DIRS = `${join(homedir(), 'projetos', 'maestros-da-ia')};${join(homedir(), 'projetos', 'enzo-sparo')}`;
@@ -108,11 +110,22 @@ function allChannelCtxs() {
     process.stderr.write(`Config multi-canal ausente/inválida: ${CHANNELS_CONFIG}\n`);
     process.exit(1);
   }
-  return cfg.canais.map((c) => ({
-    ...ctxFor({ channel: `https://www.youtube.com/${c.handle}/videos`, dirs: [c.pasta], label: c.handle }),
-    nome: c.nome,
-    keywords: c.keywords || [],
-  }));
+  const local = readJson(LOCAL_CHANNELS_CONFIG, null);
+  const pastas = (local && local.pastas) || {};
+  const ctxs = [];
+  for (const c of cfg.canais) {
+    const pasta = c.pasta || pastas[c.handle];
+    if (!pasta) {
+      process.stderr.write(`Sem pasta de transcrições para ${c.handle} (defina em manifests/canais-vigilados.local.json)\n`);
+      continue;
+    }
+    ctxs.push({
+      ...ctxFor({ channel: `https://www.youtube.com/${c.handle}/videos`, dirs: [pasta], label: c.handle }),
+      nome: c.nome,
+      keywords: c.keywords || [],
+    });
+  }
+  return ctxs;
 }
 
 function catalog(ctx) {

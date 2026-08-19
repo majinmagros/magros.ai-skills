@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: No personal paths
+        run: node scripts/ci/validate-no-personal-paths.js
+
+      - name: Validate skills
+        run: node scripts/ci/validate-skills.js --strict
+
+      - name: Validate install manifests
+        run: node scripts/ci/validate-install-manifests.js
+
+      - name: Skill count source of truth
+        run: node scripts/ci/count-skills.js
+
+      - name: Supply-chain IoC scan
+        run: node scripts/ci/scan-supply-chain-iocs.js
