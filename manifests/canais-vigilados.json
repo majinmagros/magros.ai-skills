@@ -55,6 +55,27 @@
       "pasta": "C:\\Projetos\\ai-jason",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "automation", "deep dive"]
+    },
+    {
+      "handle": "@maestrosdaia",
+      "nome": "Maestros da IA",
+      "pasta": "C:\\Projetos\\maestros-da-ia",
+      "idiomas": ["pt", "pt-PT", "en"],
+      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "agente"]
+    },
+    {
+      "handle": "@attekitadev",
+      "nome": "Attekita Dev",
+      "pasta": "C:\\Projetos\\attekitadev",
+      "idiomas": ["pt", "pt-PT", "en"],
+      "keywords": ["skill", "agent", "graph", "orchestration", "claude", "codex", "mcp"]
+    },
+    {
+      "handle": "@FullCycle",
+      "nome": "Full Cycle",
+      "pasta": "C:\\Projetos\\full-cycle",
+      "idiomas": ["pt", "pt-PT", "en"],
+      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "engenharia"]
     }
   ]
 }
