@@ -21,6 +21,38 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 
 ---
 
+## 1.1 Batch 2026-08-19 — canais vigiados (8 canais)
+
+### Skills autoragem (foco da leva)
+
+| Vídeo | Canal | Tema | Decisão |
+|---|---|---|---|
+| `YkpEX_jlb04` | ai-foundations | DBS + anatomia de pasta de skill + departamentos/C-suite | **Enriquecimento**: `criar-skill` |
+| `dTGF-AUpxAQ` | ai-foundations | Framework de 4 passos + filtro EADA (Eliminate/Automate/Delegate/Accelerate) | **Enriquecimento**: `criar-skill` (seção 0) |
+| `UqUx0-A15FY` | ai-foundations | DBS na prática + reverse engineering de skill + eval reviewer do Skill Creator | **Enriquecimento**: `criar-skill` (1.1 e seção 7) |
+| `m-5DjcgFmfQ` | grace-leung | Skills para marketer: 3 formas de criar + skills vs MCP vs projects | **Enriquecimento**: `criar-skill` (seção 0) |
+| `Ph-maUAiSU8` | grace-leung | Marketing skills stack: taxonomia brand/function/specialty, versionamento, biblioteca central | **Enriquecimento**: `criar-skill` (seção 5); resto coberto por `marketing-campaign`/`brand-voice`/`design-system` |
+| `1WImBwiA7RA` | ai-jason | Skills vs MCP (consumo de tokens, progressive disclosure) + anatomia skill.md | **Enriquecimento**: `criar-skill` (seção 3) |
+| `FD53kEpLh9c` | simon-scrapes | Skill systems: orquestrador + skills filhas, anti-mega-skill | **Enriquecimento**: `criar-skill` (seção 5) |
+| `RrMTtG1ZccI` | simon-scrapes | Skill chaining / composição de skills | **Enriquecimento**: `criar-skill` (seção 5) |
+| `-u_igSQHAIo` | simon-scrapes | 7 níveis de maturidade em skills: ≤200 linhas, 15k chars, ~20% ativação, evals/A-B, learnings file | **Enriquecimento**: `criar-skill` (seções 3 e 7) + `auditar-skills` |
+
+### Harness/agentes (cobertura — sem skill nova)
+
+| Vídeo | Canal | Tema | Decisão |
+|---|---|---|---|
+| `arkWBqSI7Uc` | celine-xu | Delegação: 4 quadrantes de conhecimento, blind spot scan, AI entrevista, evidence gates | **Coberto**: `clarificar` + `grilling` + `intent-driven-development` |
+| `MW3t6jP9AOs` | ai-jason | Sistema de docs `.agent` (task PRDs, system docs, SOPs, README index) | **Coberto**: `codebase-onboarding` + `knowledge-ops` |
+| `RairMJflUSA` | indyddevdan | Harness 3 camadas (orchestrator→leads→workers), mental models por agente | **Coberto**: `team-agent-orchestration` + `sessoes-orquestradas` |
+| `2KcITKKJikA` | indyddevdan | 5 pilares do engenheiro agêntico + tokenomics/token arbitrage | **Coberto**: `agentic-engineering` + `cost-aware-llm-pipeline` |
+| `efRIrLXoOVA` | cole-medin | AI layer (7 componentes) p/ codebases grandes: CLAUDE.md hierárquico, path-scoped skills, LSP via MCP | **Coberto**: `graphify` + `codebase-onboarding` + `context-budget` |
+| `HAkSUBdsd6M` | cole-medin | Adversarial dev (GAN): planner→generator+evaluator, contrato de sprint, sycophancy, modelos baratos com harness | **Coberto**: `gan-style-harness` (já materializada do paper da Anthropic) |
+| `t6NxHM5peus` | ai-foundations | Vender sistemas agênticos (Lerty/Leverage): 4 camadas, $500–1000/mês | **Informativo**: modelo de negócio, sem skill |
+
+**Enriquecidas neste lote:** `criar-skill` (filtro EADA, DBS, reverse engineering, progressive disclosure com números reais, taxonomia brand/function/specialty, sistemas de skills, evals/A-B, learnings file) e `auditar-skills` (critério de tamanho/disclosure + 7 níveis de maturidade).
+
+---
+
 ## 2. Skills Materializadas Neste Lote
 
 | Skill | Módulo | Gatilho |
@@ -55,5 +87,8 @@ Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `Y
 ## 4. Próximos Passos
 
 1. Rodar o pipeline em novos vídeos: `node scripts/yt-oportunidades.mjs diff --since <data>`
+   (agora com `--since-last` por canal, via `ULTIMA-COLETA.json`).
 2. Analisar vídeos novos → materializar via `criar-skill`.
-3. Rodar validators (`validate-no-personal-paths.js`, testes CI) antes de qualquer commit.
+3. **Backlog matthew_berman**: ~30 vídeos sem transcrição desde 2026-07-19 —
+   não são do foco "skills" desta leva; coletar quando quiser (assistir IA/LLM geral).
+4. Rodar validators (`validate-no-personal-paths.js`, testes CI) antes de qualquer commit.

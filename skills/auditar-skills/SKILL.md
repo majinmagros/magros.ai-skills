@@ -22,6 +22,7 @@ corrigir primeiro. Baseado na auditoria de skills via workflow paralelo.
 | **Frases gatilho** | A description diz QUANDO usar com palavras concretas (não genérico)? |
 | **Clareza do corpo** | Instruções sem ambiguidade, passo a passo executável? |
 | **Foco** | Skill pequena e especializada vs monólito que tenta fazer tudo? |
+| **Tamanho/disclosure** | `SKILL.md` ≤ 200 linhas (regra de ouro)? Detalhe está em `references/`/`scripts/` (progressive disclosure) em vez de tudo no corpo? |
 | **Overlap** | Duplica outra skill existente? (deduplicar/justificar) |
 | **Correção de maior valor** | Qual a ÚNICA mudança que mais melhora essa skill? |
 
@@ -34,6 +35,9 @@ corrigir primeiro. Baseado na auditoria de skills via workflow paralelo.
    no conjunto (ex.: "todas as descriptions faltam gatilho de quando usar").
 5. Entregue um **scorecard em Markdown** (`auditoria-skills.md`) com:
    ranking, nota por critério, a correção de maior valor por skill e os padrões.
+6. Para skills candidatas a refatorar: considere os 7 níveis de maturidade
+   (instalar pronta → skill própria → biblioteca → orquestração → evals/A-B →
+   auto-melhoria via learnings → "AI workforce") para indicar o próximo passo.
 
 ## 4. Ação recomendada
 

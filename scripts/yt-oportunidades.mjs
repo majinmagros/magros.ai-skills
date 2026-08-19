@@ -11,10 +11,13 @@
  *       Canal -> CATALOGO.json na pasta de transcrições (id, título, data).
  *   node scripts/yt-oportunidades.mjs catalog-all
  *       Cataloga TODOS os canais de manifests/canais-vigilados.json.
- *   node scripts/yt-oportunidades.mjs diff [--since AAAA-MM-DD]
+ *   node scripts/yt-oportunidades.mjs diff [--since AAAA-MM-DD | --since-last]
  *       Canal vs transcrições locais -> sem_transcricao e transcritos_nao_analisados.
- *   node scripts/yt-oportunidades.mjs diff-all [--since AAAA-MM-DD]
+ *       --since-last usa a data gravada em ULTIMA-COLETA.json (só o que é novo).
+ *   node scripts/yt-oportunidades.mjs diff-all [--since AAAA-MM-DD | --since-last]
  *       Igual a diff, mas para todos os canais da config.
+ *   node scripts/yt-oportunidades.mjs last [--canal HANDLE]
+ *       Mostra a data da última coleta registrada (ULTIMA-COLETA.json).
  *   node scripts/yt-oportunidades.mjs download <id> [<id>...]
  *       Baixa auto-subs (pt/en) do vídeo e gera <id>.<lang>.dedup.txt.
  *   node scripts/yt-oportunidades.mjs dedup [arquivo.vtt ...]
@@ -87,6 +90,7 @@ function ctxFor({ channel = DEFAULT_CHANNEL, dirs = null, label = 'default' } = 
     rawDir: join(dir, 'raw'),
     catalogFile: join(dir, 'CATALOGO.json'),
     analyzedFile: join(dir, 'ANALISADOS.json'),
+    lastColetaFile: join(dir, 'ULTIMA-COLETA.json'),
   };
 }
 
@@ -290,7 +294,37 @@ function mark(ctx, ids) {
   const list = new Set(readJson(ctx.analyzedFile, []));
   for (const id of ids) list.add(id);
   writeJson(ctx.analyzedFile, [...list].sort());
+  updateLastColeta(ctx);
   console.log(`[${ctx.label}] Analisados registrados: ${list.size}`);
+}
+
+function updateLastColeta(ctx) {
+  const data = existsSync(ctx.catalogFile) ? readJson(ctx.catalogFile, null) : null;
+  const analyzed = new Set(readJson(ctx.analyzedFile, []));
+  let maxDate = '';
+  if (data && Array.isArray(data.videos)) {
+    for (const v of data.videos) {
+      if (analyzed.has(v.id) && v.upload_date > maxDate) maxDate = v.upload_date;
+    }
+  }
+  const date = maxDate.length === 8 ? `${maxDate.slice(0, 4)}-${maxDate.slice(4, 6)}-${maxDate.slice(6, 8)}` : todayStr();
+  writeJson(ctx.lastColetaFile, { ultimaColeta: date, atualizadoEm: new Date().toISOString() });
+  console.log(`[${ctx.label}] Última coleta registrada: ${date}`);
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function readLastColeta(ctx) {
+  const data = readJson(ctx.lastColetaFile, null);
+  if (data && data.ultimaColeta) return data.ultimaColeta;
+  return null;
+}
+
+function lastColeta(ctx) {
+  const date = readLastColeta(ctx);
+  console.log(`[${ctx.label}] ${date || '(nunca coletado — use --since para a primeira coleta)'}`);
 }
 
 function analyzed(ctx) {
@@ -298,7 +332,10 @@ function analyzed(ctx) {
   console.log(`[${ctx.label}] ${JSON.stringify(list, null, 2)}`);
 }
 
-function sinceArg() {
+function sinceArg(ctx) {
+  if (process.argv.includes('--since-last')) {
+    return readLastColeta(ctx) || undefined;
+  }
   return process.argv.includes('--since')
     ? process.argv[process.argv.indexOf('--since') + 1]
     : undefined;
@@ -308,8 +345,8 @@ function sinceArg() {
 function targetCtx() {
   const i = process.argv.indexOf('--canal');
   if (i === -1) return defaultCtx();
-  const handle = process.argv[i + 1];
-  const ctx = allChannelCtxs().find((c) => c.label === handle);
+  const handle = String(process.argv[i + 1] || '').replace(/^@/, '');
+  const ctx = allChannelCtxs().find((c) => c.label.replace(/^@/, '') === handle);
   if (!ctx) {
     process.stderr.write(`Canal não encontrado na config: ${handle}\n`);
     process.exit(1);
@@ -343,11 +380,11 @@ switch (RUN()) {
   case 'catalog-all': runPerChannel((ctx) => catalog(ctx)); break;
   case 'diff': {
     const ctx = defaultCtx();
-    console.log(JSON.stringify(diff(ctx, sinceArg()), null, 2));
+    console.log(JSON.stringify(diff(ctx, sinceArg(ctx)), null, 2));
     break;
   }
   case 'diff-all': {
-    const results = runPerChannel((ctx) => diff(ctx, sinceArg(), ctx.keywords));
+    const results = runPerChannel((ctx) => diff(ctx, sinceArg(ctx), ctx.keywords));
     console.log(JSON.stringify(results, null, 2));
     break;
   }
@@ -355,8 +392,9 @@ switch (RUN()) {
   case 'dedup': dedup(targetCtx(), posArgs()); break;
   case 'mark': mark(targetCtx(), posArgs()); break;
   case 'analyzed': analyzed(targetCtx()); break;
+  case 'last': lastColeta(targetCtx()); break;
   default:
-    console.log(`Uso: node ${basename(process.argv[1])} {catalog|catalog-all|diff [--since DATA]|diff-all [--since DATA]|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|analyzed [--canal HANDLE]}`);
+    console.log(`Uso: node ${basename(process.argv[1])} {catalog|catalog-all|diff [--since DATA|--since-last]|diff-all [--since DATA|--since-last]|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|analyzed [--canal HANDLE]|last [--canal HANDLE]}`);
     console.log(`  YT_DIR=${defaultCtx().dir}`);
     console.log(`  YT_CHANNEL=${defaultCtx().channel}`);
 }
