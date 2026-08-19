@@ -127,6 +127,12 @@ skills isoladas sem orquestração e mega-skills que tentam fazer tudo.
   rate, tokens/tempo) e compare versões da skill — qual melhora resultado de
   verdade vs só queima tokens? Um *eval reviewer* independente (como no Skill
   Creator) pontua cada caso de teste.
+- **Benchmark por modelo (decide manter/descartar)**: rode a skill em N modelos
+  (barato vs caro), com e sem skill, e compare a assertividade. Regra prática
+  do Skill Creator: se o modelo forte resolve sozinho (ex.: 100/100 com ou sem
+  skill), a skill é desnecessária naquele modelo; se o modelo barato ganha
+  muito com ela (ex.: 90% com vs 50% sem), a skill justifica o custo. Use o
+  delta para decidir onde a skill vive.
 - **Learnings file**: a skill pode manter um `learnings.md`/`rules.md` que
   registra o que deu certo e errado em cada uso, e um *wrap-up* que propõe
   ajustes — a skill aprende com o próprio histórico (pode o `rules-distill`).

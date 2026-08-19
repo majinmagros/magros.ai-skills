@@ -36,6 +36,7 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `FD53kEpLh9c` | simon-scrapes | Skill systems: orquestrador + skills filhas, anti-mega-skill | **Enriquecimento**: `criar-skill` (seção 5) |
 | `RrMTtG1ZccI` | simon-scrapes | Skill chaining / composição de skills | **Enriquecimento**: `criar-skill` (seção 5) |
 | `-u_igSQHAIo` | simon-scrapes | 7 níveis de maturidade em skills: ≤200 linhas, 15k chars, ~20% ativação, evals/A-B, learnings file | **Enriquecimento**: `criar-skill` (seções 3 e 7) + `auditar-skills` |
+| `w2z4Fai2s9c` | full-cycle | Skill Creator (Anthropic) na prática: eval de descrição + benchmark qualitativo por modelo (com/sem skill, delta de 40 pts Haiku vs Opus) | **Enriquecimento**: `criar-skill` (seção 7 — benchmark por modelo decide manter/descartar) |
 
 ### Harness/agentes (cobertura — sem skill nova)
 
@@ -49,7 +50,7 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `HAkSUBdsd6M` | cole-medin | Adversarial dev (GAN): planner→generator+evaluator, contrato de sprint, sycophancy, modelos baratos com harness | **Coberto**: `gan-style-harness` (já materializada do paper da Anthropic) |
 | `t6NxHM5peus` | ai-foundations | Vender sistemas agênticos (Lerty/Leverage): 4 camadas, $500–1000/mês | **Informativo**: modelo de negócio, sem skill |
 
-**Enriquecidas neste lote:** `criar-skill` (filtro EADA, DBS, reverse engineering, progressive disclosure com números reais, taxonomia brand/function/specialty, sistemas de skills, evals/A-B, learnings file) e `auditar-skills` (critério de tamanho/disclosure + 7 níveis de maturidade).
+**Enriquecidas neste lote:** `criar-skill` (filtro EADA, DBS, reverse engineering, progressive disclosure com números reais, taxonomia brand/function/specialty, sistemas de skills, evals/A-B, benchmark por modelo, learnings file) e `auditar-skills` (critério de tamanho/disclosure + 7 níveis de maturidade).
 
 ---
 
@@ -81,6 +82,7 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | Vídeo | Tema | Decisão |
 |---|---|---|
 | `RO5y-fCIBy8` | Novo papel do dev → "engenheiro de IA": dev vira arquiteto que guia agentes; 2 camadas (AI engineering vs software dev); gaps de quem programa com IA (domínio superficial, sem metodologia, pouco paralelismo, sem critério de validação, skills mal feitas) | **Persona materializada**: agente `jarvis` (agents/jarvis.md; aliases Kitt/Mega Brain; subagente opencode em `.opencode/prompts/agents/jarvis.txt`) com as características do vídeo — define direção/limites/critérios, modela o harness, decompõe em workflows paralelos, critério de validação com cutoff, guard rails, equilíbrio custo/latência/segurança/fiabilidade |
+| `w2z4Fai2s9c` | Skill Creator (Anthropic) na prática: eval de descrição + benchmark qualitativo por modelo (com/sem skill; Haiku 90% com vs 50% sem; Opus 100/100 → skill desnecessária no modelo forte) | **Enriquecimento**: `criar-skill` (seção 7 — benchmark por modelo decide manter/descartar). Publicado 2026-08-19; ver batch 1.1 |
 
 Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `YT_DIR`).
 
