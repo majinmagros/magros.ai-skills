@@ -67,8 +67,9 @@ node scripts/yt-oportunidades.mjs diff [--since AAAA-MM-DD]
 node scripts/yt-oportunidades.mjs download <id> <id> ...
 ```
 
-- Usa yt-dlp com auto-subs (`--write-auto-subs`), busca legendas em
-  `pt,pt-PT,pt-BR,en` com fallback.
+- Usa yt-dlp com `--write-subs --write-auto-subs` (prefere a legenda manual
+  quando existe e cai para a automática) e `--sub-langs` em `pt.*,pt-PT,pt-BR,en`
+  (o `--sub-langs` aceita regex por idioma).
 - Rate limit do YouTube (HTTP 429) é transitório: o script tenta de novo e
   troca o idioma se preciso. Não desista no primeiro erro.
 - Depois deduplica os `.vtt`:
@@ -87,6 +88,22 @@ Leia cada `*.dedup.txt` novo e extraia, para cada vídeo:
 | **Skills citadas** | Nomes/recursos de terceiros que aparecem |
 | **Oportunidade** | Qual skill/automação isso sugeriria criar |
 | **Já coberto?** | Cruzar com o inventário (`docs/data/skills.json` + `manifests/`) ANTES de propor |
+| **Fonte oficial conferida** | URL(s) das docs oficiais dos claims centrais (preço, flags/CLI, nome de recursos) |
+
+### Validação contra documentação oficial (não confie só no vídeo)
+
+Antes de propor OU materializar uma skill, confira os claims **centrais** do
+vídeo contra a documentação oficial da ferramenta/plataforma citada (via
+`find-docs`/`context7`/websearch na fonte oficial — nunca na voz do influencer):
+
+- **Preços e limites**: confirme na página de preços oficial (custo por token
+  de modelo citado, tier grátis, quotas) — números do vídeo envelhecem e erram.
+- **Flags/CLI/API**: confirme na docs de referência (ex.: yt-dlp, OpenRouter,
+  Google AI Studio) que o comando/flag existe com aquela sintaxe.
+- **Recursos novos**: confirme que o recurso existe de fato e com o nome certo
+  (o vídeo pode usar nome de marketing ou de outra versão).
+- Registre a URL oficial conferida no relatório (`OPORTUNIDADES.md`); se a
+  skill materializada divergir da doc oficial, corrija a skill antes de gravar.
 
 Regras de ouro do cruzamento:
 - **Se já existe skill cobrindo o conceito → NÃO criar nova.** Registrar como
@@ -100,6 +117,8 @@ Regras de ouro do cruzamento:
 
 Siga `criar-skill` (processo dos engenheiros da Anthropic):
 mapear pipeline → caminhar com o agente → iterar até funcionar → materializar.
+**Antes de gravar, os claims do passo 4 já foram conferidos contra as docs
+oficiais (validação obrigatória).**
 Frontmatter padrão (ver `skills/*/SKILL.md` existentes):
 
 ```yaml
@@ -133,5 +152,7 @@ repo + `RELATORIO.md` local na pasta de transcrições) com a tabela de
 
 - **Estimar defasagem no olho** → use `diff --since`.
 - **Criar skill redundante** → cruze SEMPRE com o inventário antes.
+- **Materializar pelo que o vídeo diz** → confira SEMPRE a documentação
+  oficial antes (preço, flags, nome de recursos); o vídeo erra e envelhece.
 - **Upar transcrição para o repo público** → mantém tudo local.
 - **Desistir do download no 429** → o script já trata retry/fallback de idioma.

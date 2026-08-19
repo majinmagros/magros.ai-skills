@@ -5,26 +5,34 @@ metadata:
   origin: ECC
 ---
 
-# Skill: Sessões Orquestradas (session-to-session no Claude Code)
+# Skill: Sessões Orquestradas (session handoff no Claude Code)
 
-O Claude Code ganhou sessões que podem se falar pelo nome: você dá nome a uma
-sessão e outra sessão envia/recebe contexto dela. Isso habilita orquestração
-nativa sem ferramentas externas (sem tmux, sem agentes de equipe).
+O Claude Code suporta sessões **nomeadas**, resumíveis por nome e
+bifurcáveis: `claude -n <nome>` / `/rename`, `claude --resume <nome>` /
+`/resume <nome>` e `/branch`. Handoff entre sessões = a sessão seguinte
+**retoma a anterior pelo nome** (herda o contexto completo) ou recebe um
+handoff doc. Para PARALELISMO real, use **worktrees** (cada worktree tem suas
+próprias sessões) + sessões separadas. Não existe "uma sessão puxar contexto
+da outra ao vivo" — a comunicação é via resume/handoff.
 
 ## Quando usar
 
-- Dividir uma tarefa grande em sessões paralelas que cooperam.
+- Dividir uma tarefa grande em sessões que cooperam em sequência ou em
+  worktrees paralelas.
 - Pipeline de verificação onde um supervisor avalia o trabalho de executores.
 - Handoff: sessão A termina e passa o bastão para a sessão B.
 
 ## Padrões
 
-### 1. Duas sessões paralelas com handoff
-- Nomeie as sessões de propósito (ex: `pesquisa-layout`, `build-site`).
-- `pesquisa-layout` coleta referências/decide o plano; `build-site` recebe o
-  resultado e constrói.
-- A comunicação é nome-para-nome: a sessão construtora puxa o resumo da
-  pesquisadora em vez de re-analisar do zero.
+### 1. Handoff nome-para-nome
+- Nomeie as sessões de propósito (`claude -n pesquisa-layout` ou `/rename`).
+- `pesquisa-layout` coleta referências/decide o plano; `build-site` retoma com
+  `claude --resume pesquisa-layout` (ou `/resume <nome>`) e herda o contexto
+  completo em vez de re-explicar.
+- `/branch <nome>` cria uma cópia da conversa para tentar caminho alternativo
+  sem perder a original.
+- Para rodar sessões em paralelo de verdade: um worktree por sessão
+  (`git worktree add`) — sessões em worktrees diferentes não interferem.
 
 ### 2. Supervisor loop com nota 0-100
 - Executores (modelo barato, ex: Haiku) geram candidatos.

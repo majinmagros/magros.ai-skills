@@ -48,9 +48,10 @@ exemplo nos `references/` — muito mais preciso do que especificar no vácuo.
 - **Skill Creator** (oficial): descreva a tarefa → ele pergunta até entender →
   formata e salva seguindo as convenções (frontmatter YAML + Markdown). Testa
   2–3 casos reais e gera um **eval reviewer** para aprovar/revisar.
-- **Record a Skill** (Claude Cowork, Mac): grave tela + cliques + voz narrando →
-  ele transcreve e gera a skill. Use SÓ quando não houver conector oficial —
-  navegação por browser quebra quando o layout do site muda.
+- **Record a Skill** (gravação de tela + cliques + voz → gera a skill). Nota:
+  não confirmado nas docs oficiais da Anthropic na validação de 2026-08 —
+  confirme a disponibilidade atual antes de usar. Use SÓ quando não houver
+  conector oficial — navegação por browser quebra quando o layout muda.
 - **Manual**: você mesmo estrutura o arquivo (útil para refinar/editar).
 
 ## 3. Estrutura de uma skill (DBS + 3 camadas)
@@ -121,6 +122,12 @@ skills isoladas sem orquestração e mega-skills que tentam fazer tudo.
 
 ## 7. Verificação (evals, não vibes)
 
+- **Validação de fatos (anti-alucinação) — ANTES de gravar**: confira os
+  claims do material de origem (preço, flags/CLI, nomes de recursos, limites)
+  contra a documentação oficial da ferramenta/plataforma citada, via
+  `find-docs`/`context7`/websearch na fonte oficial. Nunca grave um número,
+  flag ou nome que veio só de um vídeo/post. Registre a URL oficial conferida
+  no relatório da skill.
 - Teste a skill em um caso real. Se errou, atualize a SKILL (regra 4), não dê
   contorno pontual. Repita até o resultado esperado sair sem intervenção.
 - **Evals/A-B**: defina 3–5 critérios mensuráveis (qualidade do output, pass
@@ -136,3 +143,13 @@ skills isoladas sem orquestração e mega-skills que tentam fazer tudo.
 - **Learnings file**: a skill pode manter um `learnings.md`/`rules.md` que
   registra o que deu certo e errado em cada uso, e um *wrap-up* que propõe
   ajustes — a skill aprende com o próprio histórico (pode o `rules-distill`).
+
+## 8. Fontes oficiais (referência)
+
+Conferidas em 2026-08; consulte antes de divergir daqui:
+
+- Skill Authoring Best Practices — https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
+- Agent Skills Overview — https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
+- Claude Code: Extend with skills — https://code.claude.com/docs/en/skills
+- Skill Creator (template oficial) — https://github.com/anthropics/skills/tree/main/skill-creator
+- Guia completo (PDF, Anthropic) — resources.anthropic.com "The Complete Guide to Building Skills for Claude"

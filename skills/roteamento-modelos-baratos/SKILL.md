@@ -24,10 +24,17 @@ volume é barato, quem decide/valida é forte. A métrica que importa é
 - Modelo forte verifica/rankeia — o custo é por verificação, não por geração.
 - Sempre meça nota/qualidade do executor antes de confiar no volume.
 
-### 2. OpenRouter no Claude Code
-- Configure OpenRouter como provider e escolha modelos por custo/task.
-- Para tarefas repetitivas e determinísticas, o barato resolve.
-- Suba de modelo só quando o verificador reprovar de forma consistente.
+### 2. OpenRouter (ou DeepSeek direto) no Claude Code
+- Configure OpenRouter como provider (3 env vars: `ANTHROPIC_BASE_URL`,
+  `ANTHROPIC_AUTH_TOKEN`, `ANTHROPIC_MODEL`) e escolha modelos por custo/task.
+- **Caveat oficial do OpenRouter**: o Claude Code "é garantido só com o
+  provedor first-party da Anthropic" e "é otimizado para modelos Anthropic e
+  pode não funcionar com outros provedores" (tool-use/parsing pode quebrar).
+  Teste o loop antes de depender.
+- Alternativa sem agregador: a DeepSeek expõe endpoint Anthropic-compatível
+  direto (`https://api.deepseek.com/anthropic`) para o Claude Code.
+- Para tarefas repetitivas e determinísticas, o barato resolve. Suba de modelo
+  só quando o verificador reprovar de forma consistente.
 
 ### 3. Custo-por-tarefa como métrica
 - Preço/token é enganoso: tarefa fácil = poucos tokens no barato.
@@ -35,7 +42,11 @@ volume é barato, quem decide/valida é forte. A métrica que importa é
 - Compare o total do loop barato vs rodar tudo no caro uma vez.
 
 ### 4. Quando barato+verificador vira opção
-- DeepSeek V4 Flash (~14¢/M entrada) torna loops "gerar N + verificar" viáveis.
+- DeepSeek V4 Flash: preço vigente (16/08/2026+) tem **peak/off-peak** —
+  off-peak ~$0.22/M entrada e ~$0.66/M saída; peak ~$0.44/$1.32; cache-hit de
+  entrada bem mais barato (~$0.007–$0.014/M). O "14¢/M entrada" do anúncio era
+  o preço até 15/08/2026 — **sempre confira a página oficial de pricing**
+  (preços mudam com frequência).
 - Regra prática: se o custo atual do job em modelo forte é alto, divida entre
   geração barata + amostragem de verificação forte (20-30% do volume).
 
