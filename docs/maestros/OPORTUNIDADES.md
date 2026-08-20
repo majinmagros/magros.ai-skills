@@ -93,6 +93,39 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 
 Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `YT_DIR`).
 
+## 1.2 Batch 2026-08-20 — @Sujeitoprogramador (6 vídeos novos)
+
+### Skills candidatas (gap real)
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `8mNDmxHDmy4` | **Spec Kit**: constitution → specify → plan → tasks → implement com git branch por spec, UV package manager, memory/constitution files | **Skill nova**: `spec-kit` — workflow espec-driven com comandos CLI (`constitution`, `specify`, `plan`, `tasks`, `implement`), branch automática por spec, constituição global do projeto. Não coberto por `blueprint`/`plan`/`orch-*` (são ECC-genéricos; Spec Kit é tool concreta com CLI própria e fluxo opinionado). |
+| `dsOGGuZi-JY` | **Cloud Design** (Claude): prototipagem alta-fidelidade com design system, referências visuais, export HTML/PDF para implementação; limites separados do Cloud Code | **Skill nova**: `cloud-design` — usar Cloud Design para protótipos fiéis, design system versionado, export standalone HTML/PDF, handoff para Cursor/Cloud Code. Gap: `frontend-design-direction`/`make-interfaces-feel-better`/`taste` são direção criativa; Cloud Design é tool concreta com workflow próprio. |
+| `texoSrIvWRQ` | **Playwright MCP vs Agent Browser**: Playwright = determinístico, baixo nível (click, type, navigate, screenshot); Agent Browser (Vercel) = alto nível, objetivo em linguagem natural, navegação autônoma, robusto a variação de layout | **Skill nova**: `agent-browser` — quando usar cada um: Playwright MCP para testes determinísticos/ações precisas; Agent Browser para automações com objetivo vago, responsividade, variação de UI. Gap: `e2e-testing`/`browser-qa` cobrem Playwright; Agent Browser não tem skill. |
+
+### Enriquecimento de skills existentes
+
+| Vídeo | Skill a enriquecer | O que adicionar |
+|---|---|---|
+| `7phrurXJwH8` | `criar-skill` | Referenciar **Cursor Skills** como exemplo de skill system com carregamento sob demanda (description + triggers), scripts Python/JS, instalação project/global. Adicionar nota: skills podem ter código executável → auditar antes de instalar (já avisado no vídeo). |
+| `7phrurXJwH8` | `agent-harness-construction` | Adicionar padrões Cursor: Agent MD (instruções de projeto), Rules (sempre injetadas), Skills (sob demanda), Multitask (subagentes com contexto separado), Model routing (auto/composer/opus/sonnet). |
+| `PNP10gVp4Is` | `agent-harness-construction` | Referenciar frameworks de orquestração: **LangChain** (TypeScript/Python, tools com Zod, session memory), **Crew AI** (multiagentes, roles), **AI SDK** (Vercel, streaming, tool calling), **AG2/AutoGen** (conversação multiagente). Cada um tem tradeoffs: LangChain = flexível/verbose; Crew AI = opinionado/multiagente; AI SDK = integrado Next.js/React; AG2 = conversação. |
+| `8mNDmxHDmy4` | `criar-skill` | Citar **UV** (Astral) como gerenciador de pacotes moderno Python (usado por Spec Kit, ruff, ty); `uv add`, `uv run`, `uv sync` — mais rápido que pip/poetry, lockfile universal. |
+| `dsOGGuZi-JY` | `frontend-design-direction` | Cloud Design como tool de prototipagem alta-fidelidade com design system versionado; export HTML/PDF para handoff; limites de uso separados do Cloud Code. |
+| `texoSrIvWRQ` | `e2e-testing` / `browser-qa` | Adicionar **Agent Browser** (Vercel) como alternativa de alto nível: objetivo em linguagem natural → navegação autônoma; bom para responsividade, variação de layout, automações web; roda Chrome headful/headless; instala via `npm i -g @vercel/agent-browser` + skill. |
+| `7phrurXJwH8` | `roteamento-modelos-baratos` | Cursor model routing nativo: Auto (gerencia custo/qualidade), Composer 2.5 (modelo próprio, barato, bom p/ implementação), Opus/Sonnet/GPT-4.5 (caros, raciocínio). Limite "High" (quase ilimitado no plano Pro) vs API (cobra extra após 100%). Padrão: planejar com caro (Opus) → implementar com barato (Composer/Auto). |
+
+### Já cobertos (não duplicar)
+
+| Vídeo | Tema | Cobertura existente |
+|---|---|---|
+| `6cGoTqevIHo` | AI para aprendizado júnior (não substituir raciocínio) | **Persona/conselho** — sem workflow concreto; `agentic-engineering` já cobre "decompor trabalho em unidades de 15 min", "eval-first"; vídeo é orientação comportamental, não skill. |
+| `7phrurXJwH8` | MCPs (Context7, Playwright, Stripe, etc.) | **Consumo de MCPs** — `mcp-server-patterns` cobre *construir* MCPs; usar MCPs prontos é configuração, não skill nova. |
+| `7phrurXJwH8` | Multiagentes, subagentes, contexto separado | **Coberto**: `sessoes-orquestradas` (sessões nomeadas + handoff), `graph-engineering` (paralelo com verificadores), `agentic-os` (multiagente persistente), `team-agent-orchestration` (Kanban de agentes). |
+| `PNP10gVp4Is` | Session management, tool calling, Zod schemas | **Coberto**: `agent-harness-construction` (tool schemas, observation design), `unified-memory` (memória compartilhada), `contract-first` (schemas tipados). |
+
+---
+
 ## 4. Próximos Passos
 
 1. Rodar o pipeline em novos vídeos: `node scripts/yt-oportunidades.mjs diff --since <data>`

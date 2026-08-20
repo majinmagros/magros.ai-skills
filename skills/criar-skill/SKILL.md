@@ -153,3 +153,34 @@ Conferidas em 2026-08; consulte antes de divergir daqui:
 - Claude Code: Extend with skills — https://code.claude.com/docs/en/skills
 - Skill Creator (template oficial) — https://github.com/anthropics/skills/tree/main/skill-creator
 - Guia completo (PDF, Anthropic) — resources.anthropic.com "The Complete Guide to Building Skills for Claude"
+
+## 9. Exemplos de skill systems reais (enriquecimento 2026-08-20)
+
+### Cursor Skills (referência prática)
+
+O **Cursor** implementa um skill system próprio com características que ilustram os conceitos desta skill:
+
+| Característica | Detalhe |
+|---|---|
+| **Carregamento sob demanda** | Skills têm `description` + `triggers` — só carregam quando o agente detecta relevância (não injetam contexto sempre). |
+| **Scripts executáveis** | Skills podem conter scripts Python/JS (ex.: `script.py`, `script.js`) que rodam deterministicamente. |
+| **Instalação project/global** | `.cursor/skills/` (project) ou `~/.cursor/skills/` (global). Recomenda-se project-scoped. |
+| **Auditoria obrigatória** | >1/3 skills terceiras têm falhas; leia `SKILL.md` completo antes de instalar. |
+
+> **Liçao para ECC**: nosso `progressive disclosure` (frontmatter → body → references/scripts) espelha isso. Description = trigger de ativação; scripts = camada S (solutions determinísticas).
+
+### UV (Astral) — gerenciador Python moderno
+
+Usado pelo **Spec Kit**, **ruff**, **ty** como gerenciador padrão:
+
+```bash
+uv add <pkg>        # adiciona dependência (substitui pip install + poetry add)
+uv run <cmd>        # roda comando no ambiente do projeto (substitui poetry run)
+uv sync             # sincroniza lockfile → ambiente (substitui poetry install)
+uv pip install      # compatível com requirements.txt/pip
+```
+
+- **10-100x mais rápido** que pip/poetry (escrito em Rust).
+- **Lockfile universal** (`uv.lock`) — funciona cross-platform.
+- Substitui: pip, pip-tools, pipx, poetry, pyenv.
+- Docs: https://docs.astral.sh/uv | Repo: https://github.com/astral-sh/uv

@@ -56,3 +56,24 @@ volume é barato, quem decide/valida é forte. A métrica que importa é
 - [ ] Amostragem de verificação existe antes de escalar volume.
 - [ ] OpenRouter configurado como provider (ou equivalente).
 - [ ] Loop barato validado por nota antes de colocar em produção.
+
+## Cursor Model Routing Nativo (enriquecimento 2026-08-20, video `7phrurXJwH8`)
+
+O **Cursor** tem roteamento de modelos embutido (sem OpenRouter) no plano Pro/Max:
+
+| Modo/Modelo | Característica | Quando usar |
+|---|---|---|
+| **Auto** | Gerencia custo/qualidade automaticamente | Maioria das tarefas simples/estudo |
+| **Composer 2.5** | Modelo próprio do Cursor, barato, bom para implementação | Implementar código, escrever arquivos |
+| **Opus / Sonnet / GPT-4.5** | Caros, raciocínio forte | Planejar, arquitetar, debug complexo |
+| **High (quase ilimitado)** | Limite "High" do plano Pro (~quase ilimitado/mês) | Uso diário sem medo de quota |
+| **API (cobra extra após 100%)** | Modelos selecionados manualmente → consome quota API | Tarefas específicas que precisam de modelo específico |
+
+**Padrão recomendado (do vídeo)**:
+```
+1. Planejar com caro (Opus/Sonnet) → /plan mode, especificar arquitetura
+2. Implementar com barato (Composer 2.5 / Auto) → "implementa o plano"
+3. Se travar ou erro complexo → volta pro caro para debug
+```
+
+**Limites**: Plano Pro = limite "High" mensal (reset todo mês). API = cobra extra por token após 100% da quota. Monitorar em Settings → Usage.

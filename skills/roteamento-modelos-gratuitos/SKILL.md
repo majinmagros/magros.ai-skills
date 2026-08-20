@@ -62,7 +62,7 @@ automatizar tarefa determinística (isso é `automacao-deterministica`).
 
 ## Passo a passo (setup + manutenção)
 
-1. **Instale e rode** o 9router (npm global, `C:\Users\rosan\AppData\Roaming\npm\node_modules\9router\`); endpoint em `http://127.0.0.1:20128/v1`.
+1. **Instale e rode** o 9router (npm global, `%APPDATA%\npm\node_modules\9router\` no Windows / `~/.npm-global/lib/node_modules/9router/` no Linux/Mac); endpoint em `http://127.0.0.1:20128/v1`.
 2. **Cadastre provedores** no SQLite (`providerConnections`): teste a chave na
    API real do provedor primeiro (deve responder 200), insira a conexão com
    `data` = `{"apiKey":"...","testStatus":"active",...}`, e faça backup do banco

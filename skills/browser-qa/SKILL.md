@@ -103,3 +103,17 @@ Works with any browser MCP:
 - Direct Puppeteer scripts
 
 Pair with `/canary-watch` for post-deploy monitoring.
+
+## Agent Browser (Vercel) — para automações exploratórias (enriquecimento 2026-08-20)
+
+Adiciona **Agent Browser** (`agent-browser` skill) como ferramenta de "visual QA" automatizado quando o objetivo é vago ou a UI varia:
+
+- **Objetivo em linguagem natural** → navegação autônoma (não seletores fixos)
+- **Responsividade nativa**: "teste breakpoints do header" → redimensiona, detecta, clica hamburger, verifica
+- **Robusto a layout shifts**: raciocina sobre o objetivo, não seletores
+- **Instalação**: `npm i -g agent-browser && agent-browser install` + skill no agente
+
+**Use Playwright MCP** para: testes determinísticos, regressão exata, CI/CD.
+**Use Agent Browser** para: visual QA exploratório, responsividade, variação de UI, automações "vá até X e traga Y".
+
+Referência: skill `agent-browser`, repo https://github.com/vercel-labs/agent-browser

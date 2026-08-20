@@ -65,6 +65,12 @@
       "nome": "Full Cycle",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "engenharia"]
+    },
+    {
+      "handle": "@Sujeitoprogramador",
+      "nome": "Sujeito Programador",
+      "idiomas": ["pt", "pt-PT", "en"],
+      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "backend", "python", "django", "ia"]
     }
   ]
 }

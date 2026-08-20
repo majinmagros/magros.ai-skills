@@ -325,3 +325,28 @@ test('trade execution', async ({ page }) => {
   await expect(page.locator('[data-testid="trade-success"]')).toBeVisible()
 })
 ```
+
+## Agent Browser (Vercel) — alternativa alto nível (enriquecimento 2026-08-20)
+
+**Agent Browser** (`agent-browser` skill) complementa Playwright para casos onde o objetivo é vago ou a UI varia:
+
+| Quando usar Playwright | Quando usar Agent Browser |
+|---|---|
+| Testes determinísticos (click X, fill Y, assert Z) | Objetivo em linguagem natural ("teste responsividade") |
+| Seletores estáveis (`data-testid`) | Layout varia, breakpoints mudam |
+| Regressão exata, CI/CD | Exploratório, visual QA, automações web |
+| Controle total de cada ação | Navegação autônoma, raciocina sobre objetivo |
+
+**Instalação rápida**:
+```bash
+npm i -g agent-browser && agent-browser install
+# Skill para agentes: ensina o agente a invocar o CLI
+```
+
+**Exemplo via agente com skill**:
+```
+"Use o agent browser para testar responsividade do header: diminua tela, veja se hamburger menu abre"
+```
+→ Agente: open → snapshot → redimensiona → detecta breakpoint → clica → verifica → screenshot → relatório.
+
+**Referência**: skill `agent-browser`, repo https://github.com/vercel-labs/agent-browser

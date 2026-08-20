@@ -119,3 +119,8 @@ assets/images/security/badrudi-exploit.mp4
 contexto/transricoes_youtube/
 ANALISADOS.json
 CATALOGO.json
+
+# Skill video artifacts (gerados localmente, binários pesados)
+skills/**/video/
+skills/**/out*.mp4
+**/video/node_modules/

@@ -91,3 +91,32 @@ needs repeated daily use.
 - Motion improves orientation and does not mask sluggishness.
 - The result matches the repo's existing frontend conventions unless there is a
   clear reason to depart.
+
+## Cloud Design (Claude) — tool de prototipagem alta-fidelidade (enriquecimento 2026-08-20)
+
+**Cloud Design** (`cloud-design` skill) é uma ferramenta concreta no Claude (planos Pro/Max) para criar protótipos fiéis **antes** de codar:
+
+| Uso | Como ajuda no design direction |
+|---|---|
+| **Design system versionado** | Anexe JSON/CSS/Figma/URL → garante consistência across telas (cores, fontes, spacing, border radius) |
+| **Referências visuais** | Screenshots Dribbble/Landing Folio/Lapa.Ninja → extrai layout, tipografia, componentes |
+| **Iteração em linguagem natural** | "Remova blog", "mobile first", "fonte do Airbnb" → itera rápido sem recodar |
+| **Export standalone HTML/PDF** | Handoff exato para Cursor/Cloud Code implementar (HTML+CSS+JS zipado) |
+| **Link colaborativo** | Time visualiza/edita no `claude.ai/design` (view/edit) |
+
+**Workflow integrado**:
+```
+Cloud Design (protótipo + design system)
+    ↓ export HTML/PDF
+frontend-design-direction (refinar direção, escolher tone/detail)
+    ↓ handoff
+Cursor / Cloud Code (implementação)
+    → react-patterns, motion-patterns, design-system
+    → e2e-testing / browser-qa (validar)
+```
+
+**Limites**: Cloud Design consome quota **separada** do Cloud Code (~20% limite semanal/sessão complexa). Monitorar em Settings → Usage.
+
+**Alternativa gratuita**: Google Stitch (stitch.withgoogle.com) — ~300 telas/mês grátis, menos fiel em multi-telas.
+
+Referência: skill `cloud-design`, vídeo `dsOGGuZi-JY` (@Sujeitoprogramador)
