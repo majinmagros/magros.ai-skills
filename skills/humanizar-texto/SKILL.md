@@ -40,3 +40,11 @@ os vícios, elimina, mantém a informação e o tom do contexto.
 - Manter o tom, argumentos e fatos originais — humanizar não é mudar conteúdo.
 - Se a marca tem voz própria, use exemplos anteriores (se fornecidos).
 - Não enfeitar: humanizado ≠ mais floreado. Pelo contrário.
+
+## 5. Modo watermark-bypass (EU AI Act art.50, Synth ID) — enriquecimento 2026-08-20
+
+Quando o texto precisa passar em detectores de marca d'água (Anthropic/Google/OpenAI, EU art.50 deadline 2026-12-02, Synth ID):
+1. **Paráfrase com variação lexical** — troque sinônimos de forma não-determinística (evite o padrão pi-like de escolha sequencial descrito em `lhaPanvj2Vg`).
+2. **Quebra de padrão sintático** — altere ordem de orações, use voz ativa/passiva alternada, insira contrações leves.
+3. **Loop de validação** — teste o output em 2-3 detectores públicos até `clean` (regra: não entregue sem teste se o caso for TCC/avaliação stricta).
+4. **Aviso** — se o usuário pedir bypass para fraude acadêmica, alerte risco de falso-positivo ao pedir só correção gramatical (professor pode detectar). Fonte: `lhaPanvj2Vg.pt.dedup.txt`.

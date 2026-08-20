@@ -65,6 +65,10 @@ Agents can read anything but only write to `src/api/`. Destructive commands are 
 /safety-guard off
 ```
 
+## Enriquecimento 2026-08-20 — case PG delete (2PFI-QSyJ9o)
+
+Fonte `2PFI-QSyJ9o` (Claude Code deleted Postgres, 3000 clientes, 2 anos empresa): IA pediu `reset` e usuário aceitou sem `dry-run`. Regra: bloqueie **qualquer `*reset*`/`*drop*`/`*truncate*`/`prisma db push --force-reset`/`drizzle-kit push` sem `--dry-run` + confirmação. Sugira alternativa segura: `pg_dump` antes + `EXPLAIN`/`--dry-run` + confirmação manual. Log para `~/.claude/safety-guard.log`.
+
 ## Implementation
 
 Uses PreToolUse hooks to intercept Bash, Write, Edit, and MultiEdit tool calls. Checks the command/path against the active rules before allowing execution.

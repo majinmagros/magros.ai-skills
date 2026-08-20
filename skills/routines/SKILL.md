@@ -44,3 +44,9 @@ rígido demais) mas não vale o setup de VPS.
 - O que roda na nuvem é uma **sessão completa** do Claude Code, não um script limitado.
 - Tarefa sem decisão/revisão → considere n8n (mais barato/estável).
 - Rotina com chave/credencial: mantenha em `.env`, nunca no repositório público.
+
+## 5. Enriquecimento 2026-08-20 — Loop engineering + 5 tasks + V2 cloud (SimonScrapes)
+
+- **Loop engineering `UfN4l2yCT54`**: loop = repeat until `done` (ex.: `every receipt matched or flagged`). **Done criteria** claro = setup rápido. Triggers: turn-based (mensagem), time-based (schedule Fri/1st), event-based (email/meeting) — event pode ser polled hourly via `check inbox`.
+- **5 tasks exemplo time-based**: use esta taxonomia para desenhar qualquer workflow custom.
+- **V2 Hands-Off `b3OiEUp1GIU`**: evolução v1 local (precisa laptop aberto `stay open`), v2 API `managed agents`, v3 VPS+tmux+Telegram (painful), v4 cloud zero setup (`describe task + pick schedule`, laptop shut, phone view). Matriz 4 opções guia migração VPS→cloud.

@@ -184,3 +184,7 @@ uv pip install      # compatível com requirements.txt/pip
 - **Lockfile universal** (`uv.lock`) — funciona cross-platform.
 - Substitui: pip, pip-tools, pipx, poetry, pyenv.
 - Docs: https://docs.astral.sh/uv | Repo: https://github.com/astral-sh/uv
+
+## 10. Enriquecimento 2026-08-20 — Cowork recorder (SimonScrapes 9QSumbWubZ4)
+
+Fonte `9QSumbWubZ4`: **Record skill via screen** (no API/MCP) — grava clique + voz, Claude reproduz (Instagram DM ManyChat exemplo). Use SÓ quando não há conector: `if conector exists → use conector else screen-record`. Risco: navegação quebra com layout change; fale contexto verbalmente durante gravação.

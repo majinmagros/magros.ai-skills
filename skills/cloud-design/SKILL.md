@@ -129,3 +129,7 @@ Cursor / Cloud Code (implementação)
 - **Google Stitch**: https://stitch.withgoogle.com (gratuito)
 - **Design system references**: Dribbble, Landing Folio, Lapa.Ninja, Figma Community
 - **Vídeo origem**: `dsOGGuZi-JY` — @Sujeitoprogramador (2026-08-20)
+
+## Enriquecimento 2026-08-20 — Figma plugin alternativa (TY9dyCvFc6Q)
+
+Fonte `TY9dyCvFc6Q` (Figma → Claude/Cursor Perfect Layouts): PNG export = dedução LLM (não fiel); **plugin Figma free** gera layout 1:1 via tokens (cores/tipografia/spacing). Use quando já tem Figma: export via plugin → handoff 1:1, em vez de screenshot. Complementa workflow Cloud Design (protótipo) com source Figma existente.

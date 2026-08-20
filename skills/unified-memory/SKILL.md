@@ -174,3 +174,9 @@ It exposes only:
 
 The MCP surface deliberately has no review, promotion, overwrite, transcript
 import, or shell-execution tool.
+
+## Enriquecimento 2026-08-20 — Team memory Notion+supermemory + Hermes-inside-Claude (SimonScrapes)
+
+- **Padrão time `PzaC81yCJg0`**: `Notion` (shared drive + permissions, hold shared context) + `supermemory.ai` (working memory queryable) + `Claude desktop` (UI). Substitua `Notion` por file-sharing equivalente — lógica é tratar contexto como infraestrutura permissionada, não owned per-account. 80% do Claude team system com 20% esforço.
+- **Hermes-inside-Claude `9CiOwbmOKdU`**: 211k★, 1300 Reddit comments, top reason `memory` (30% switches, "Remembering is worth 1000 integrations"). Reconstrua feature de memória dentro do Claude (lembra decisão 6 meses com source) sem VPS/subscription — use Vault + `continuous-learning-v2` para continuidade > chat.
+- **3 funções `4iMZA1omCkM`**: Storage vs Injection vs Recall — out-of-box `CLAUDE.md` hand-maintained + `Memory MD` (5-10 notes após meses, useless) falha em `capture full transcripts`, `inject frequently`, `recall by keywords` token-heavy. Use esta skill + `knowledge-ops` para as 3.

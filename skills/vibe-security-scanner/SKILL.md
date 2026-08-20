@@ -187,6 +187,10 @@ Lista arquivo com arquivo, linha por linha, não pede para resolver também.
 - **production-audit**: Pre-deployment readiness scoring (0-100)
 - **security-bounty-hunter**: Bug bounty focus (HackerOne/Huntr scope)
 
+## Enriquecimento 2026-08-20 — profile JS/TS + escopo funcionalidade (3zrc63xB-hc)
+
+- Fonte `3zrc63xB-hc` (Sujeito Programador): auditoria focada **React/Next/TS + Drizzle/Prisma + Supabase**. 2 modos: `projeto inteiro` (checkup <50 arquivos) vs `funcionalidade` (diff da feature). Para `Prisma/Drizzle`, valide `@@unique`/`relationMode`, `enable RLS` já visto acima, e `supabase.rpc` para admin. Esta skill cobre `npx prisma validate`/`drizzle-kit check` antes de escanear.
+
 ## References
 
 - OWASP Top 10: https://owasp.org/www-project-top-ten/

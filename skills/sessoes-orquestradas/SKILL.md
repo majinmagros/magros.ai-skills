@@ -51,3 +51,6 @@ da outra ao vivo" — a comunicação é via resume/handoff.
 - [ ] Handoff transfere decisões (não re-faz trabalho feito).
 - [ ] Supervisor é independente do executor (não auto-avalia).
 - [ ] Corte de nota definido antes de iterar.
+
+## Enriquecimento 2026-08-20 — sandbox + exe.dev
+- Fonte `SEI_qIW4o2c`/`WAFUMBLOjHo`: para **scale beyond laptop**, mova sessões para `exe.dev` sandbox VM (isolation + scale + agency). Use Herder/Pi SDK padrão Indy; `cmux`/`tmux` (`dmux-workflows`) para acesso programático aos agentes (evita bottleneck `inside the loop`). Regra: factory em sandbox quando risco ou paralelismo > worktree local.

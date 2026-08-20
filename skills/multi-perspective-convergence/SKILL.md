@@ -181,3 +181,7 @@ só o briefing resumo e ofereça o panorama sob demanda.
 - **Sempre 5 perspectivas.** 5 é o padrão, mas 3 já dá valor para questões
   menores. Mais de 7 raramente adiciona perspectiva nova (lei dos retornos
   decrescentes).
+
+## Enriquecimento 2026-08-20 — Model Fusion síncrono (IndyDevDan AQl5Q-0l7FQ)
+
+Complementa ranking 0-10 com **fusão lado-a-lado**: dois modelos baratos geram em paralelo (`opinion` — perspectivas diferentes), depois `fusion` consolida em 1 output + `auto-validate` inteligente. Custo comparativo real `Terra 4.5s 9K in/300 out ~3c vs Sonic 5 double` — `roteamento-modelos-baratos` decide par. Use quando quiser **combinar inteligências** em vez de só ranquear; mantém isolamento mas adiciona síntese validada. Fonte `AQl5Q-0l7FQ.pt.dedup.txt`.

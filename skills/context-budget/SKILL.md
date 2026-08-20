@@ -138,3 +138,7 @@ Skill: Current overhead 33% → adding 5 servers (~50 tools) would add ~25,000 t
 ## Related Skills
 
 - `doctor` — the action counterpart: after a budget audit identifies bloat, doctor removes the dead weight from projects/agents/skills. Budget measures, doctor edits.
+
+## Enriquecimento 2026-08-20 — Fable 5 cost & bloat (d9XCX0PcOq0)
+
+- **Fable 5 $\to$ API** `2026-07-12`: `$10/M in $50/M out`. Flat subscription acaba; token bloat crítico: `Hi` = 31k (19k sky), `context` 37.2k = 4% window (5K system + tools/agents/memory/skills/MCP schemas). Com Fable 30-40c/msg + 3-4c cached vs Sonnet 15c. Checklist: **disable `thinking`**, reduza MCP schemas (cada tool ~500 tokens), corte `CLAUDE.md` >300 lines, limite `SKILL.md` >400, use `cost-tracking` + `roteamento-modelos-baratos` para decidir Fable vs Sonnet (só onde Fable = $ worth).

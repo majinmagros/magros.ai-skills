@@ -190,3 +190,7 @@ Use `seedPaths` when workers need access to dirty or untracked local files that 
 - **Merge conflicts:** Use git worktrees to isolate file changes per pane.
 - **High token usage:** Reduce number of parallel panes. Each pane is a full agent session.
 - **tmux not found:** Install with `brew install tmux` (macOS) or `apt install tmux` (Linux).
+
+## Enriquecimento 2026-08-20 — cmux vs tmux (WAFUMBLOjHo)
+
+- **cmux** (IndyDevDan): wrapper que dá **agentic access programático** a cada agente (poll status, send input, collect output sem estar no loop). **tmux** puro exige `capture-pane` manual. Se precisar orquestrar 3-tier (orchestrator→leads→experts) e evitar `token maxing`, prefira cmux/Herder + Pi SDK. Regra: `inside the loop = bottleneck` → use cmux para agentes se auto-coordenarem.

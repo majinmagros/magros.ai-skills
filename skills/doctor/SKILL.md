@@ -132,3 +132,11 @@ radical revalida as decisões do passado contra os modelos de hoje.
 - **Aprovação em massa sem revisão.** "Apagar tudo de uma vez" só depois que você já confia no processo em vários projetos.
 - **Tratar "antigo" como "morto".** Uma skill não usada há 60 dias pode ser sazonal. Idade é sinal, não veredito — por isso há humano no loop.
 - **Deixar peso morto correr em escala.** US$ 1 extra/execução é nada numa conta — mas vira US$ 900/mês com dezenas de contas em piloto automático.
+
+## Enriquecimento 2026-08-20 — 12 hidden settings (M2p7OvKLAWw)
+
+Fonte `M2p7OvKLAWw` (12 settings `~/.claude/settings.json`): notification sound (`/config` → terminal bell/ghosty + Cloudsounds `github.com/daveschumacher/cloudsounds` hook), language, thinking mode, artifacts, etc. Checklist doctor deve **auditar settings.json** global + projeto (`~/.claude/settings.json` e `.claude/settings.json`) para 12 one-liners: `ghosty` vs `bell`, `language`, `thinking`, `artifacts`. Cada setting = 1 linha, sem código.
+
+## Enriquecimento 2026-08-20 — como melhorar código IA (7rJODY-Krsw)
+
+Complementa estratégia radical: se código IA fraco, não só remova instruções — **melhore geração** com corte de contexto + eval de modelo barato vs caro (`roteamento-modelos-baratos`), não só limpeza.

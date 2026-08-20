@@ -165,3 +165,7 @@ Drive-by cleanup across the module
 - `tdd-workflow` — test-first development
 - `security-review` — security checklist
 - `documentation-lookup` — library docs via Context7 (orthogonal)
+
+## Enriquecimento 2026-08-20 — AI code review tool (NwTZNeTAGsI)
+
+Fonte `NwTZNeTAGsI` (BEST AI code review tool): esta skill é o gate estrutural; combine com review AI (CodeRabbit/Gremlin) para cobertura `health + review`. Use `code_health_review` antes de review AI para baseline, e `code_health_score` após sugestões AI para delta.
