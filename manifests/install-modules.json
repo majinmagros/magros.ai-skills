@@ -720,7 +720,8 @@
         "skills/taste",
         "skills/pipeline-video-agente",
         "skills/baixar-musica",
-        "skills/dnb-production"
+        "skills/dnb-production",
+        "skills/voice-cloning-local"
       ],
       "targets": [
         "claude",

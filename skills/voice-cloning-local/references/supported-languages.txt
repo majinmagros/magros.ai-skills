@@ -1,0 +1,22 @@
+# Qwen3-TTS Supported Languages (10)
+
+Per model card: https://huggingface.co/collections/Qwen/qwen3-tts
+
+1. Chinese (中文) - zh
+2. English - en
+3. Japanese (日本語) - ja
+4. Korean (한국어) - ko
+5. German (Deutsch) - de
+6. French (Français) - fr
+7. Russian (Русский) - ru
+8. Portuguese (Português) - pt
+9. Spanish (Español) - es
+10. Italian (Italiano) - it
+
+Nota: Cross-lingual cloning funciona (ex.: ref em inglês → saída em português),
+mas para melhor qualidade use áudio de referência no idioma alvo.
+
+Não suportados nativamente (precisa fine-tune):
+- Hindi, Tamil, Bengali, Marathi, Telugu, Gujarati, Kannada, Malayalam, Punjabi
+- Árabe, Hebraico, Tailandês, Vietnamita, Indonésio
+- Polonês, Turco, Holandês, Sueco, Dinamarquês, Norueguês, Finlandês
