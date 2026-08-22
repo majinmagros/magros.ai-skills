@@ -539,7 +539,8 @@
         "skills/clareza",
         "skills/conversa",
         "skills/criatividade",
-        "skills/financiamento-imobiliario"
+        "skills/financiamento-imobiliario",
+        "skills/curriculo-ats-optimizer"
       ],
       "targets": [
         "claude",
@@ -587,7 +588,8 @@
         "skills/automacao-deterministica",
         "skills/n8n-agentic-flows",
         "skills/coordenacao",
-        "skills/obsidian-cli"
+        "skills/obsidian-cli",
+        "skills/whatsapp-evolution-go"
       ],
       "targets": [
         "claude",

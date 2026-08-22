@@ -69,6 +69,8 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `agent-guardrails` | security | proteção de agentes contra prompt injection, jailbreak, exfiltração — pipelines em camadas, humano no loop (2026-08-19) |
 | `12-factor-agents` | agentic-patterns | 12 princípios humanlayer para LLM apps de produção: dono do contexto, tools = outputs estruturados, reducer stateless (2026-08-19) |
 | `roteamento-modelos-gratuitos` | agentic-patterns | 9router: tiers gratuitos com failover automático, combo no SQLite, VPS 24/7 (2026-08-19) |
+| `whatsapp-evolution-go` | operator-workflows | Evolution GO (Go+whatsmeow, 626⭐) vs Evolution API (Node+Baileys) vs WhatsApp Cloud oficial — escolha, deploy Docker, multi-instância, webhooks/AMQP/NATS, n8n bridge (2026-08-22) |
+| `curriculo-ats-optimizer` | business-content | Currículo ATS Brasil: parser-safe formatação, 70–80% keywords da vaga, Verbo+Ação+Resultado, Gupy/Kenoby/Lever, Stack Vagas 5k currículos (2026-08-22) |
 
 ## 3. Já Cobertos (não duplicar)
 
@@ -124,6 +126,44 @@ Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `Y
 | `7phrurXJwH8` | Multiagentes, subagentes, contexto separado | **Coberto**: `sessoes-orquestradas` (sessões nomeadas + handoff), `graph-engineering` (paralelo com verificadores), `agentic-os` (multiagente persistente), `team-agent-orchestration` (Kanban de agentes). |
 | `PNP10gVp4Is` | Session management, tool calling, Zod schemas | **Coberto**: `agent-harness-construction` (tool schemas, observation design), `unified-memory` (memória compartilhada), `contract-first` (schemas tipados). |
 
+## 1.3 Batch 2026-08-22 — @maestrosdaia / @matthew_berman / @Sujeitoprogramador (24 vídeos)
+
+### Já cobertos / Enriquecimento (22 vídeos)
+
+| Vídeo | Canal | Tema | Decisão |
+|---|---|---|---|
+| `gwrZlhK_9Ak` | maestrosdaia | Higgsfield vs fal.ai: pagar por geração (coloca crédito, paga só o que gera) vs assinatura; site La Marzocco Micra | **Coberto** `fal-ai-media` + `criar-campanha-visual` — enriquecimento: pay-per-gen vs assinatura, escolher modelo e comparar preço |
+| `wsiVDz5wS6E` | maestrosdaia | Last 30 Days (57k⭐ #1 trending): varre Reddit/Instagram/TikTok/YouTube/LinkedIn/Polymarket/GitHub e sintetiza sentimento real | **Coberto** `pesquisa-social` (é a própria Last 30 Days) |
+| `DzcGXPyYtHs` | maestrosdaia | Record a Skill (21 jul 2026): gravar tela+cliques+voz → skill reutilizável; só no Claude Cowork (app Mac) | **Enriquecimento** `criar-skill` §2 (Record a Skill) — validar disponibilidade (não confirmado nas docs em 2026-08) |
+| `GLA_Lvalo4s` | maestrosdaia | TOP 3 skills mais instaladas (>2M): #3 Context7 (60k⭐, Upstash Mar 2025, modelo inventa 1/5 pacotes), #1 mistério "site roxo" | **Coberto** `find-docs`/`documentation-lookup` (Context7) + `taste`/`frontend-design-direction` (antídoto site roxo) |
+| `tGemYHFE1W8` | maestrosdaia | Scroll World (Fable 5 vs GPT-5.6, Higgsfield MCP, FFMPEG fatia vídeo em frames → rolagem vira timeline) | **Enriquecimento** `pipeline-video-agente` + `fal-ai-media` — padrão ancora→vídeo→FFMPEG→scroll |
+| `6d3xjbh6bno` | maestrosdaia | Graphify (70k⭐ MIT): repo→grafo de conhecimento (arquivos, esquemas, docs, PDFs, mídia), grafo vivo incremental, qualquer agente | **Coberto** `graphify` |
+| `b01fJCB3U74` | maestrosdaia | 6 táticas: subagentes paralelos (research Reddit/Trends/YouTube por tópico, 3× mais rápido), análise funil 5 ações | **Coberto** `engenharia-de-grafos`/`workflows`/`sessoes-orquestradas` + `graph-engineering` |
+| `f3zCuYrJ76k` | maestrosdaia | 6 slash: /clear, /compact (/cct), /btw (chat separado), ; (puxar colega), /statusline, /context, /plan (Shift+Tab), /rewind (Esc) | **Coberto** `strategic-compact` + `plan` + `terminal-ops`; enriquecimento: /btw, /statusline, /rewind |
+| `SCANBhqmXrk` | maestrosdaia | 6 AI Armies: repositórios/pastas com múltiplos agentes e recursos (superpowers = metodologia empacotada, não agente) | **Coberto** `superpowers` + `orch-pipeline` + `claude-devfleet` |
+| `49XJl3LPTBU` | maestrosdaia | /WORKFLOWS Dynamic (Opus 4.8): Cloud escreve JS que orquestra 10–100s agentes paralelos em fases, salvo e reexecutável; custo alto | **Coberto** `workflows` + `dynamic-workflow-mode` + `engenharia-de-grafos` |
+| `G0qgb6b_8sc` | maestrosdaia | 5 meta-skills: prompt-builder (garbage-in garbage-out, 4 pilares, adapta por modelo LLM) | **Coberto** `prompt-builder`/`prompt-optimizer` |
+| `z3uEqe624nw` | maestrosdaia | Intro skills: SKILL.md YAML+Markdown, progressive disclosure, 50–70 skills sem lentidão, capabilities→habilidades | **Coberto** `criar-skill` |
+| `P7jJ3XCQj9c` | maestrosdaia | 4 pilares engenheiros Anthropic: pare de escrever prompts → construa skills, hábitos repetitivos | **Coberto** `criar-skill` + `agentic-engineering` |
+| `JbyLt3fFX2k` | maestrosdaia | skill-creator (skill que cria skills, oficial Anthropic, guiada pergunta-resposta) | **Coberto** `criar-skill` §2 Skill Creator |
+| `xF4OSjO5dBo` | maestrosdaia | Claude Routines (Cloud, não local): funcionários 24/7 sem PC ligado, KPI 6–7h no WhatsApp, RAM 8–40 terminais | **Coberto** `routines` |
+| `r11NfCSepTE` | maestrosdaia | "Pare de construir agentes, construa skills": contexto > modelo; OpenClaw→OpenAI comprou harness, vazamento Cloud Code | **Coberto** `criar-skill` + `context-budget` |
+| `hZqJvWDI0Rs` | matthew_berman | Zuckerberg "The future is for everyone" vs Dario (Anthropic): empowerment individual + invention + balance of power; flaw: finite compute → underclass | **Informativo** — sem workflow; citar em `market-research`/`investor-materials` |
+| `jGR8LnfVPbA` | matthew_berman | 15 Tips Codex: browser use, computer control, voice mode, ChatGPT Sites (private→public), pinning, model selection Luna/Terra/Soul + thinking effort light→max, scheduled tasks, plugins (GitHub/Drive/Gmail/Calendar/Asana/Notion/Linear), skills /slash + create skill, /goal (3h loops), quota banked resets, thread delegation, local/cloud/connections (QR Mac→phone) | **Enriquecimento**: scheduled tasks → `routines`; Sites → `cloud-design` (publish); model routing → `roteamento-modelos-baratos`; plugins → `mcp-server-patterns` |
+| `sYU_BDQO9mk` | sujeito-programador | Caveman (75% output tokens, Spec Kit docs grandes, funciona Cursor/Cloud Code/Codex/Copilot, modelos caros Opus/GPT-5.5) | **Enriquecimento** `token-budget-advisor`/`context-budget`/`cost-aware-llm-pipeline` |
+| `_4lPBQ22rY8` | sujeito-programador | Skills que mais ajudam no front-end (Cursor, teste automático do front) | **Coberto** `frontend-patterns` + `criar-skill` |
+| `3b0Br8Ee9d4` | sujeito-programador | IA para aprender programação: falsa sensação de aprendizado vs aprendizado acelerado | **Informativo** — orientação comportamental, sem skill |
+| `-mjvygG16Bk` | sujeito-programador | O que esperam de Dev Júnior 2026 (antes: contratado para aprender; hoje: já dominar algo, entregar) | **Informativo** — carreira, sem skill |
+
+### Gaps reais → skills novas (2 vídeos)
+
+| Vídeo | Canal | Tema | Decisão |
+|---|---|---|---|
+| `nxvWxQ9Q-6E` | sujeito-programador | Evolution GO (WhatsApp API brasileira, Go + whatsmeow, high-performance, baixa RAM) vs Evolution API (Node/TS + Baileys, integra n8n/Typebot/Chatwoot/OpenAI/Dify) vs API oficial Meta Cloud (BSP/verification, custo por conversa, SLA). Multi-instância (150 GO vs 20 API no NVMe2), QR Code, webhooks/AMQP/NATS/WebSocket, Swagger, Docker, PostgreSQL+Redis, MinIO/S3; risco ban WhatsApp Web (Meta intensificou 2025-26, viola ToS) | **Skill nova**: `whatsapp-evolution-go` — infra self-hosted, escolha API vs GO vs Cloud oficial, deploy Docker, instâncias, webhooks, n8n bridge |
+| `Y4aD-yaDKb4` | sujeito-programador | Currículo ATS sem experiência: 75% eliminados antes do humano (Jobscan), 250 candidaturas/vaga (Catho), 6–7s scan humano, parser falha com colunas/gráficos/tabelas; sistemas Gupy/Kenoby/Lever/Greenhouse; 70–80% keywords da vaga, coluna única Helvetica 2.54cm, Verbo+Ação+Resultado com métricas; Stack Vagas 2 agentes (ATS + qualificador) + gerador, 5k currículos treinados | **Skill nova**: `curriculo-ats-optimizer` — parser-safe formatação + extração de keywords + personalização por vaga + scanner |
+
+**Enriquecidas neste lote:** `criar-skill` (Record a Skill Cowork Mac-only 21/07/2026), `fal-ai-media`/`criar-campanha-visual` (pay-per-gen), `pipeline-video-agente` (Scroll World FFMPEG), `strategic-compact`/`plan` (/btw /statusline /rewind), `routines` (Codex scheduled tasks), `token-budget-advisor` (Caveman 75%).
+
 ---
 
 ## 4. Próximos Passos
@@ -131,8 +171,7 @@ Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `Y
 1. Rodar o pipeline em novos vídeos: `node scripts/yt-oportunidades.mjs diff --since <data>`
    (agora com `--since-last` por canal, via `ULTIMA-COLETA.json`).
 2. Analisar vídeos novos → materializar via `criar-skill`.
-3. **Backlog matthew_berman**: ~30 vídeos sem transcrição desde 2026-07-19 —
-   não são do foco "skills" desta leva; coletar quando quiser (assistir IA/LLM geral).
+3. **Backlog**: 917 `matches_filtro=true` sem transcrição (2026-08-22) — priorizar topo recente: `VnyGs43eiAA` (@ColeMedin 20260807), `hC00Qdhfjww` (@ai-foundations 20260807), `V3Mtur9JuKY` (@FullCycle 20260815).
 4. Rodar validators (`validate-no-personal-paths.js`, testes CI) antes de qualquer commit.
 5. **Validação oficial (nova regra)**: todo claim central de skill materializada
    passa pela conferência contra docs oficiais (passos 4/5 de
@@ -140,7 +179,7 @@ Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `Y
 
 ---
 
-## 5. Validação contra documentação oficial (2026-08-19)
+## 5. Validação contra documentação oficial (2026-08-19 estendido 2026-08-22)
 
 Rodada de conferência dos claims das skills materializadas contra as docs
 oficiais — virou etapa obrigatória do pipeline.
@@ -158,3 +197,5 @@ oficiais — virou etapa obrigatória do pipeline.
 | `ZfpYVS7oG6A` → candidata `a2a-interoperability` | A2A = protocolo aberto agente→agente, complementar ao MCP, sob a Linux Foundation (antes Google) | claim do vídeo confirmado; anotar em qualquer skill que cite A2A: MCP conecta agente a ferramentas; A2A conecta agentes entre si (peer-to-peer) | a2a-protocol.org, github.com/google/A2A, developers.googleblog.com (anúncio 2025-04-09), learn.microsoft.com/en-us/agents/architecture/multi-agent-patterns |
 | `ZfpYVS7oG6A` → candidata `12-factor-agents` | 12 fatores para LLM apps confiáveis em produção (own your context window, tools = structured outputs, small focused agents, stateless reducer...) | claim do vídeo confirmado; humanlayer/12-factor-agents é o framework de referência (não é padrão oficial, é comunidade) | github.com/humanlayer/12-factor-agents |
 | `0I83GmuUjDI` → `roteamento-modelos-gratuitos` | 9router existe e faz fallback automático por status HTTP (429/402/404/410 → `shouldFallback:true`); combo = lista ordenada de modelos no SQLite, ordem = precedência, sem restart (router relê o banco por request); erros embutidos com HTTP 200 (ex.: qoder `403 code 115`) NÃO disparam fallback → manter por último | claims do vídeo confirmados na instalação local real deste ambiente (2026-08-13): runbook `~/.config/opencode/9router-runbook.md` documenta providers (`gemini/*`, `groq/*`, `cbai/*`, `nvidia/*`), limites/resets, e o fix de combo; skill ancorada no comportamento verificado localmente, não apenas no vídeo | runbook local do 9router (estado real 2026-08-13) |
+| `nxvWxQ9Q-6E` → `whatsapp-evolution-go` | Evolution GO = Go 1.24+ + whatsmeow, 626⭐ Apache 2.0, Docker + PostgreSQL + Swagger; Evolution API = Node/TS + Baileys + Redis; GO teto 150 vs API 20 instâncias (HostGator NVMe2) é teto comercial; risco ban WhatsApp Web (Meta 2025-26, ToS), Cloud API com verificação Business + custo por conversa + hub.challenge | Divergência corrigida: vídeo sugere "substitui API oficial sem risco" → skill explicita viola ToS e risco ban, tabela escolha GO vs API vs Cloud; teto 150 não é benchmark prod | github.com/evolution-foundation/evolution-go, docs.evolutionfoundation.com.br/evolution-go, docs.evolutionfoundation.com.br/en/evolution-api, developers.facebook.com/docs/whatsapp/cloud-api, whatsapp.com/legal/terms-of-service, runzos.com/evolution-go-vs-evolution-api-vs-crm-hostgator-2026 |
+| `Y4aD-yaDKb4` → `curriculo-ats-optimizer` | 75% eliminados antes do humano (Jobscan 2023), 250 candidaturas/vaga (Catho), 6–7s scan humano, parser falha com colunas/tabelas/ícones; Gupy/Kenoby/Lever/Greenhouse/Recrut.AI; 70–80% keywords, coluna única Helvetica 2.54cm, Verbo+Ação+Resultado; Stack Vagas 2 agentes + 5k currículos | sem divergência — claims do vídeo batem com fontes ATS; 5k currículos e "2 agentes Stack Vagas" marcados como dado do vídeo (validar em stackvagas local) | airesume.guru (Jobscan), vantage-cv.com, stylingcv.com, cvscore.net/br/blog/palavras-chave-curriculo-ats, airesume.guru/pt/blog/como-otimizar-seu-curriculo-para-ats-..., vídeo Y4aD-yaDKb4 |
