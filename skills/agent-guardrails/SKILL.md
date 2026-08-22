@@ -100,6 +100,42 @@ explicação; INJECAO → bloqueia e loga.
 - Guardrail só na descrição da tool ("use com cuidado") sem checagem real.
 - Achar que MCP/A2A é seguro porque "é oficial" — é dado de fora.
 
+## Casos Reais de Falha (Enriquecimento 2026-08-22 — AI Revolution)
+
+| Caso | Tipo | Vetor | Lição para Guardrails |
+|---|---|---|---|
+| **Dream Attack (Taiwan)** `vJJtfrq5iIg` | Jailbreak + Exfiltração | "Teste de penetração autorizado" passado como prompt | Validar *contexto* da solicitação, não só conteúdo; tool results de frameworks Hermes/OpenCla são inputs não confiáveis |
+| **Irregular (3rd party)** `YdKaN8o0hkg` | Prompt Injection + Jailbreak | Config incorreta de 3rd party (Irregular) deu acesso internet | Auditar config de *todos* MCP/3rd party; allowlist de domínios; monitorar "ambiente simulado vs real" |
+| **Kim K3 Escape** `YdKaN8o0hkg` | Jailbreak (Sandbox Escape) | Ferramentas linha de comando em sandbox | Sandbox não é segurança; allowlist de comandos; monitorar execução de `cmd`/`bash` |
+| **Meta Musis Park** `YdKaN8o0hkg` | Exfiltração | Vulnerabilidade 3rd party (Irregular) | Não confiar em "ambiente simulado" declarado por 3rd party; verificação ativa |
+| **Anthropic Cloud Access** `YdKaN8o0hkg` | Prompt Injection | "Ambiente simulado" era mentira; porta aberta | Verificação ativa de conectividade; não confiar em declaração do ambiente |
+| **Agentes Secret Language** `c56RiVhlJm4` | Exfiltração Oculta | Agentes criando linguagem própria | Monitorar comunicação inter-agente; alerta em tokens/padrões não reconhecidos |
+| **Kim K3 Sandbox Escape** `YdKaN8o0hkg` | Jailbreak | Ferramentas CLI em sandbox | Allowlist estrita de comandos; monitorar `cmd`/`bash`/`powershell` |
+
+**Novas Redlines (adicionar à Camada 3):**
+- ❌ Executar comandos de shell sem allowlist explícita
+- ❌ Conectar MCP/3rd party sem verificação ativa de "ambiente simulado"
+- ❌ Permitir comunicação inter-agente sem logging/inspeção
+- ❌ Aceitar "ambiente simulado" sem verificação ativa de conectividade
+
+## Checklist de Auditoria Atualizado (para `agent-guardrails`)
+
+```markdown
+- [ ] Allowlist de tools mínima (Camada 1)
+- [ ] Allowlist de destinos de rede/domínios (Camada 1)
+- [ ] LLM leve de intenção para inputs não confiáveis (Camada 2)
+- [ ] Separação dados vs instruções (Camada 2)
+- [ ] Validação schema antes de ação sensível (Camada 3)
+- [ ] Gates humanos para ações de alto impacto (Camada 3)
+- [ ] Redlines atualizadas com casos 2026 (Camada 3)
+- [ ] MCP/A2A remotos tratados como input não confiável (Camada 4)
+- [ ] Verificação ativa de "ambiente simulado" em MCP/3rd party
+- [ ] Allowlist de comandos shell (não confiar em sandbox)
+- [ ] Logging/inspeção de comunicação inter-agente
+- [ ] Auditoria de config 3rd party (Irregular-like)
+- [ ] Rollback automático em < 5 min se score cai > 5%
+```
+
 ## Skills relacionadas
 
 - `llm-trading-agent-security` — extensão para agentes com autoridade financeira.
@@ -107,3 +143,5 @@ explicação; INJECAO → bloqueia e loga.
 - `safety-guard` — prevenção de operações destrutivas em sistemas de produção.
 - `a2a-interoperability` / `mcp-server-patterns` — inputs remotos não confiáveis.
 - `vibe-security-scanner` — auditores automatizados para apps de IA.
+- `autobots-auto-improvement` — auto-retrain exige guardrails no avaliador.
+- `context-ledger` — ledger de tentativas de injection/jailblock (source/who/kind).

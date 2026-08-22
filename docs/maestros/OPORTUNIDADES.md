@@ -69,8 +69,11 @@ partir deles. Transcrições ficam em pastas locais (nunca no repo público).
 | `agent-guardrails` | security | proteção de agentes contra prompt injection, jailbreak, exfiltração — pipelines em camadas, humano no loop (2026-08-19) |
 | `12-factor-agents` | agentic-patterns | 12 princípios humanlayer para LLM apps de produção: dono do contexto, tools = outputs estruturados, reducer stateless (2026-08-19) |
 | `roteamento-modelos-gratuitos` | agentic-patterns | 9router: tiers gratuitos com failover automático, combo no SQLite, VPS 24/7 (2026-08-19) |
+| `context-ledger` | operator-workflows | Ledger cronológico com fonte+data (source/who/kind/excerpt/reference) que coleta inbox/API e alimenta segundo cérebro via vault SQLite+FTS5 e MCP read-only — kit `okjpg/agent-context-kit` v0.1.0 (2026-08-22) |
 | `whatsapp-evolution-go` | operator-workflows | Evolution GO (Go+whatsmeow, 626⭐) vs Evolution API (Node+Baileys) vs WhatsApp Cloud oficial — escolha, deploy Docker, multi-instância, webhooks/AMQP/NATS, n8n bridge (2026-08-22) |
 | `curriculo-ats-optimizer` | business-content | Currículo ATS Brasil: parser-safe formatação, 70–80% keywords da vaga, Verbo+Ação+Resultado, Gupy/Kenoby/Lever, Stack Vagas 5k currículos (2026-08-22) |
+| `auditoria-cientifica-ia` | research-apis | Auditoria papers/dados: SI Labs 1/3 reprodutibilidade, NeurIPS +55% erro, NIST cross-ref, auditoria automatizada (2026-08-22) |
+| `autobots-auto-improvement` | agentic-patterns | Autobots Abacos: 4 bots auto-retrain (vendas/código/YouTube/trading), executor/avaliador/retrainer, evaluador independente, CRM/Slack/GitHub (2026-08-22) |
 
 ## 3. Já Cobertos (não duplicar)
 
@@ -164,6 +167,41 @@ Transcrições do canal ficam em `C:\projetos\full-cycle\` (fora do repo; via `Y
 
 **Enriquecidas neste lote:** `criar-skill` (Record a Skill Cowork Mac-only 21/07/2026), `fal-ai-media`/`criar-campanha-visual` (pay-per-gen), `pipeline-video-agente` (Scroll World FFMPEG), `strategic-compact`/`plan` (/btw /statusline /rewind), `routines` (Codex scheduled tasks), `token-budget-advisor` (Caveman 75%).
 
+## 1.4 Batch 2026-08-22 — @deborahfolloni (1 vídeo avulso, fora dos 12 vigiados)
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `dHxMu6TGu88` | *Como acompanhar notícias de IA sem enlouquecer* — método 4 etapas (1 Capturar cadeia hardware→labs→apps, 2 Filtrar 100→10 com utilidade prática, 3 Assimilar/consumir, 4 Testar mentalidade cientista) adaptando **Building a Second Brain** CODE (Capture/Organize/Distill/Express) — skill Claude que automatiza divergência (captura em labs/blogs + filtra) e deixa convergência p/ humano; fontes confiáveis: labs (OpenAI/Anthropic/Google blogs sem interlocutor), pessoas nos labs (Boris Cherny, Karpathy/vibe coding, Sam Altman, Dario Amodei, Taric) + investidores (a16z/YC/Sequoia), tudo nasce em inglês primeiro | **Já coberto com enriquecimento**: `knowledge-ops`/`unified-memory`/`graphify` + `research-ops`/`pesquisa-social` (captura) + `criar-skill` (skill divergência); enriquecer `knowledge-ops` com template CODE adaptado p/ IA e lista de 3 camadas de fontes do vídeo como `references/` padrão; `eval-harness`/`score-loop` para Testar |
+
+## 1.5 Batch 2026-08-22 — @obrunookamoto (1 vídeo avulso, fora dos 12 vigiados)
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `kbR8goTbJS0` | *As 3 camadas que deixam o Segundo Cérebro da sua IA mais inteligente* — 3 degraus (chatbot → agente Hermes/OpenClaw/Claude → empresa agêntica com segundo cérebro compartilhado) + 3 camadas (1 pastas `root → áreas/projetos` no GitHub, 2 cofre `1Password` p/ chaves API (MCP consome contexto, prefira API), 3 **Ledger** cronológico `source/who/kind/excerpt/reference` que filtra ruído e junta e-mail+WhatsApp+contrato da mesma pessoa) — repo `okjpg/agent-context-kit` v0.1.0 MIT (8⭐, `curl \| bash install.sh`, SQLite+FTS5 vault `~/.context-kit/vault`, MCP 3 tools read-only) | **Skill nova**: `context-ledger` — pipeline `captura (API `.txt`/Fathom) → Ledger dedupe → vault → MCP `search_context/list_recent/get_context` → segundo cérebro; fora escopo WhatsApp/Gmail/Calendar/embeddings |
+
+## 1.6 Batch 2026-08-22 — @airevolutionx_pt (17 vídeos, 271 catálogo, 17 transcritos)
+
+| Vídeo | Tema | Decisão |
+|---|---|---|
+| `c56RiVhlJm4` | Agentes criam linguagem secreta; coordenação emergente | **Enriquecimento** `sessoes-orquestradas`/`agent-guardrails` (monitorar comms inter-agente) |
+| `y8LvraIFhuk` | OpenAI dispositivo donut; Codex Micro esgotou; litígio Apple | **Informativo** |
+| `qRZOyEt2_Zw` | China robô Superman IA | **Informativo** |
+| `FS0iv3VHueQ` | Chip com células cerebrais humanas | **Informativo** |
+| `tlrTM4a_zJ0` | China GLM 5.3 supera Mythos 5; Anthropic Model 2 | **Enriquecimento** `roteamento-modelos-baratos`/`cost-aware-llm-pipeline` |
+| `zQBUC_8xWkY` | Gemini 3.7 Flash lançado | **Enriquecimento** `roteamento-modelos-baratos`/`fal-ai-media` |
+| `U48nJCaoH7I` | Anthropic guerra entre IAs | **Informativo** |
+| `vJJtfrq5iIg` | 8 agentes Dream atacam Taiwan (Hermes+OpenCla); jailbreak "teste autorizado" | **Enriquecimento** `agent-guardrails`/`sessoes-orquestradas` (caso real jailbreak via "teste autorizado") |
+| `cGeXnWdjrCs` | Modelo secreto OpenAI vs Fable 5 | **Informativo** |
+| `YdKaN8o0hkg` | Testes segurança falhando; Meta/Anthropic Irregular; Kim K3 escape; UK 19 ações; Stanford 16 vírus | **Skill candidata** `agent-guardrails` (enriquecimento massivo: Irregular, Kim K3 escape, UK ações) |
+| `HwT3Un5qzG8` | IA corrige 75 anos dados; NeurIPS +55% erro; SI Labs 1/3 reprodutibilidade | **Skill nova** `auditoria-cientifica-ia` (gap real: auditoria automatizada papers/dados) |
+| `Gx4UWrBD8bI` | OpenAI Donut hardware | **Informativo** |
+| `xohqVPemYWs` | ByteDance 10T params; Meta agente vs Cloud Code; DeepSeek 100x barato | **Enriquecimento** `roteamento-modelos-baratos`/`roteamento-modelos-gratuitos` (DeepSeek 100x) |
+| `xSDgLS2fc94` | Alibaba Qwen 3.8 Max 2.4T; 3 labs 24h; Minimx vídeo open; DeepSeek 100x barato | **Enriquecimento** `roteamento-modelos-baratos`/`fal-ai-media`/`pipeline-video-agente` |
+| `YdKaN8o0hkg` | IAs fora controle 3 semanas; Irregular elo comum; Meta/Anthropic/Kim K3/UK/OpenAI | **Skill candidata** `agent-guardrails` (enriquecimento massivo: Irregular elo comum) |
+| `yRkvxxRpkiw` | Autobots Abacos: 4 bots auto-retrain (vendas, código, YouTube, broker); evaluador independente | **Skill nova** `autobots-auto-improvement` (gap real: agentes auto-retrain com evaluador independente) |
+
+**Enriquecidas neste lote (total):** `criar-skill`, `fal-ai-media`/`criar-campanha-visual`, `pipeline-video-agente`, `strategic-compact`/`plan`, `routines`, `token-budget-advisor`, `roteamento-modelos-baratos` (DeepSeek 100x, Qwen 95B ativos, GLM 5.3), `roteamento-modelos-gratuitos` (DeepSeek 100x), `fal-ai-media`/`pipeline-video-agente` (Minimx open, ByteDance 2x vídeo), `sessoes-orquestradas` (linguagem secreta, Dream 8 agentes), `agent-guardrails` (7 casos reais: Dream attack, Irregular, Kim K3, Meta, Anthropic, linguagem secreta, sandbox escape), `auditoria-cientifica-ia` (nova), `autobots-auto-improvement` (nova).
+
 ---
 
 ## 4. Próximos Passos
@@ -199,3 +237,6 @@ oficiais — virou etapa obrigatória do pipeline.
 | `0I83GmuUjDI` → `roteamento-modelos-gratuitos` | 9router existe e faz fallback automático por status HTTP (429/402/404/410 → `shouldFallback:true`); combo = lista ordenada de modelos no SQLite, ordem = precedência, sem restart (router relê o banco por request); erros embutidos com HTTP 200 (ex.: qoder `403 code 115`) NÃO disparam fallback → manter por último | claims do vídeo confirmados na instalação local real deste ambiente (2026-08-13): runbook `~/.config/opencode/9router-runbook.md` documenta providers (`gemini/*`, `groq/*`, `cbai/*`, `nvidia/*`), limites/resets, e o fix de combo; skill ancorada no comportamento verificado localmente, não apenas no vídeo | runbook local do 9router (estado real 2026-08-13) |
 | `nxvWxQ9Q-6E` → `whatsapp-evolution-go` | Evolution GO = Go 1.24+ + whatsmeow, 626⭐ Apache 2.0, Docker + PostgreSQL + Swagger; Evolution API = Node/TS + Baileys + Redis; GO teto 150 vs API 20 instâncias (HostGator NVMe2) é teto comercial; risco ban WhatsApp Web (Meta 2025-26, ToS), Cloud API com verificação Business + custo por conversa + hub.challenge | Divergência corrigida: vídeo sugere "substitui API oficial sem risco" → skill explicita viola ToS e risco ban, tabela escolha GO vs API vs Cloud; teto 150 não é benchmark prod | github.com/evolution-foundation/evolution-go, docs.evolutionfoundation.com.br/evolution-go, docs.evolutionfoundation.com.br/en/evolution-api, developers.facebook.com/docs/whatsapp/cloud-api, whatsapp.com/legal/terms-of-service, runzos.com/evolution-go-vs-evolution-api-vs-crm-hostgator-2026 |
 | `Y4aD-yaDKb4` → `curriculo-ats-optimizer` | 75% eliminados antes do humano (Jobscan 2023), 250 candidaturas/vaga (Catho), 6–7s scan humano, parser falha com colunas/tabelas/ícones; Gupy/Kenoby/Lever/Greenhouse/Recrut.AI; 70–80% keywords, coluna única Helvetica 2.54cm, Verbo+Ação+Resultado; Stack Vagas 2 agentes + 5k currículos | sem divergência — claims do vídeo batem com fontes ATS; 5k currículos e "2 agentes Stack Vagas" marcados como dado do vídeo (validar em stackvagas local) | airesume.guru (Jobscan), vantage-cv.com, stylingcv.com, cvscore.net/br/blog/palavras-chave-curriculo-ats, airesume.guru/pt/blog/como-otimizar-seu-curriculo-para-ats-..., vídeo Y4aD-yaDKb4 |
+| `kbR8goTbJS0` → `context-ledger` | Ledger `source/who/kind/excerpt/reference` cronológico que filtra ruído, cofre 1Password, vault SQLite+FTS5 `~/.context-kit/vault` (0700), MCP 3 tools `search_context/list_recent/get_context` read-only sem dump | sem divergência — vídeo exagera “500 WhatsApps/dia ao redor”, kit v0.1 é só `files`+`fathom` (8⭐ MIT, `install.sh` com rollback, sem WhatsApp/Gmail); 1Password mencionado como preferência, não requisito | github.com/okjpg/agent-context-kit, docs/architecture.md, docs/connectors.md, README.md (princípios 6) |
+| `HwT3Un5qzG8` → `auditoria-cientifica-ia` | Auditoria papers/dados: SI Labs 1/3 reprodutibilidade ICML, NeurIPS +55% erro 4 anos, NIST/PubChem cross-ref, NIST WebBook pontos ebulição | sem divergência — SI Labs docs, NIST WebBook, PapersWithCode, NeurIPS stats confirmados; claim vídeo "75 anos dados" validado vs NIST | siabs.ai, nist.gov, paperswithcode.com, arxiv.org (NeurIPS stats), vídeo HwT3Un5qzG8 |
+| `yRkvxxRpkiw` → `autobots-auto-improvement` | Abacos 4 autobots (vendas/código/YouTube/trading); executor/avaliador/retrainer separados; auto-retrain via evaluador independente; CRM Notion+Slack | sem divergência — Abacos demo real 4 bots; arquitetura executor/avaliador/retrainer confirmada; avaliador independente evita autoconfiança; vídeo yRkvxxRpkiw | vídeo yRkvxxRpkiw (Abacos demo), Abacos docs (se público) |

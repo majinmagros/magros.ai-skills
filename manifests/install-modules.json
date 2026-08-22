@@ -492,7 +492,8 @@
         "skills/scientific-thinking-literature-review",
         "skills/scientific-thinking-scholar-evaluation",
         "skills/documentation-lookup",
-        "skills/pesquisa-social"
+        "skills/pesquisa-social",
+        "skills/auditoria-cientifica-ia"
       ],
       "targets": [
         "claude",
@@ -589,7 +590,8 @@
         "skills/n8n-agentic-flows",
         "skills/coordenacao",
         "skills/obsidian-cli",
-        "skills/whatsapp-evolution-go"
+        "skills/whatsapp-evolution-go",
+        "skills/context-ledger"
       ],
       "targets": [
         "claude",
@@ -850,7 +852,8 @@
         "skills/skill-execution-dashboard",
         "skills/gauntlet-loop",
         "skills/graph-engineering",
-        "skills/12-factor-agents"
+        "skills/12-factor-agents",
+        "skills/autobots-auto-improvement"
       ],
       "targets": [
         "claude",
