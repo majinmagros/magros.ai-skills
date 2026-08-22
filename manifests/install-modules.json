@@ -721,7 +721,8 @@
         "skills/pipeline-video-agente",
         "skills/baixar-musica",
         "skills/dnb-production",
-        "skills/voice-cloning-local"
+        "skills/voice-cloning-local",
+        "skills/vidu-s1-realtime-avatar"
       ],
       "targets": [
         "claude",
