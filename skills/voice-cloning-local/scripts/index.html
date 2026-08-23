@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jarvis Voice Clone — Qwen3-TTS</title>
+<style>
+:root { --bg:#0a0e13; --card:#141a22; --border:#1f2a37; --accent:#00d9ff; --accent2:#7c3aed; --text:#e6edf3; --muted:#8b949e; --red:#ff4d6d; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background: radial-gradient(1200px 600px at 50% -10%, #0f2a3a 0%, var(--bg) 60%); color:var(--text); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+.wrap { width:100%; max-width:760px; }
+.header { text-align:center; margin-bottom:20px; }
+.header h1 { font-size:28px; font-weight:800; letter-spacing:-0.02em; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.header p { color:var(--muted); margin-top:6px; font-size:13px; }
+.card { background: var(--card); border:1px solid var(--border); border-radius:18px; padding:22px; box-shadow: 0 12px 40px rgba(0,0,0,0.35); }
+.label { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; display:block; }
+textarea { width:100%; background:#0d1117; border:1px solid var(--border); border-radius:12px; color:var(--text); padding:14px; font-size:15px; line-height:1.5; resize:vertical; outline:none; transition:border 0.15s; }
+textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,217,255,0.15); }
+#text { min-height:120px; }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+select, input[type="text"] { width:100%; background:#0d1117; border:1px solid var(--border); border-radius:10px; color:var(--text); padding:10px 12px; font-size:14px; outline:none; }
+select:focus, input[type="text"]:focus { border-color:var(--accent); }
+.btn { width:100%; margin-top:16px; background: linear-gradient(90deg, var(--accent), var(--accent2)); border:none; border-radius:12px; padding:14px 18px; color:white; font-weight:800; font-size:15px; cursor:pointer; letter-spacing:0.02em; display:flex; align-items:center; justify-content:center; gap:10px; transition: transform 0.08s, opacity 0.15s; }
+.btn:disabled { opacity:0.55; cursor:not-allowed; }
+.btn:active:not(:disabled) { transform: scale(0.98); }
+.btn-sec { background:#1f2a37; border:1px solid var(--border); color:var(--text); font-weight:600; padding:10px 14px; border-radius:10px; cursor:pointer; font-size:13px; }
+.btn-sec:hover { border-color:var(--accent); }
+.btn-rec { background: var(--red); border:none; color:white; font-weight:700; padding:10px 16px; border-radius:999px; cursor:pointer; display:flex; align-items:center; gap:8px; }
+.btn-rec.recording { animation:pulse 1.2s infinite; }
+@keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(255,77,109,0.6)} 70%{box-shadow:0 0 0 10px rgba(255,77,109,0)} 100%{box-shadow:0 0 0 0 rgba(255,77,109,0)} }
+.examples { margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+.chip { background:#0d1117; border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted); cursor:pointer; transition:border 0.15s, color 0.15s; }
+.chip:hover { border-color:var(--accent); color:var(--text); }
+.player-wrap { margin-top:16px; background:#0d1117; border:1px solid var(--border); border-radius:12px; padding:14px; display:none; }
+.player-wrap.show { display:block; }
+audio { width:100%; margin-top:10px; border-radius:8px; }
+.status { font-size:13px; color:var(--muted); min-height:18px; margin-top:10px; }
+.status.loading { color:var(--accent); }
+.status.error { color:#ff6b6b; }
+.status.ok { color:#3fcf8e; }
+.ref-section { margin-top:18px; border-top:1px solid var(--border); padding-top:16px; }
+.tabs { display:flex; gap:6px; margin-bottom:12px; }
+.tab { flex:1; padding:8px 10px; border-radius:10px; border:1px solid var(--border); background:#0d1117; color:var(--muted); font-size:13px; font-weight:600; cursor:pointer; text-align:center; transition:all 0.15s; }
+.tab.active { background: linear-gradient(90deg, rgba(0,217,255,0.15), rgba(124,58,237,0.15)); border-color:var(--accent); color:var(--text); }
+.panel { display:none; background:#0d1117; border:1px solid var(--border); border-radius:12px; padding:14px; }
+.panel.active { display:block; }
+.panel p { font-size:12px; color:var(--muted); line-height:1.4; }
+.file-input { margin-top:8px; width:100%; }
+.hint { font-size:11px; color:var(--muted); margin-top:6px; }
+.counter { font-size:11px; color:var(--muted); text-align:right; margin-top:4px; }
+.counter.warn { color:#ffcc00; }
+.counter.over { color:var(--red); }
+.badge { font-size:11px; font-weight:700; background:rgba(0,217,255,0.12); border:1px solid rgba(0,217,255,0.25); color:var(--accent); padding:4px 8px; border-radius:999px; }
+.footer { text-align:center; margin-top:14px; color:var(--muted); font-size:11px; }
+.spinner { width:16px; height:16px; border:2px solid rgba(255,255,255,0.3); border-top-color:white; border-radius:50%; animation:spin 0.7s linear infinite; display:none; }
+.btn.loading .spinner { display:block; }
+@keyframes spin { to { transform:rotate(360deg);} }
+.grid2 { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:end; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1>Jarvis Voice Clone</h1>
+    <p>Qwen3-TTS local — 2000 caracteres • voz do Jarvis ou sua própria voz</p>
+  </div>
+
+  <div class="card">
+    <label class="label" for="text">Texto para falar (max 2000)</label>
+    <textarea id="text" placeholder="Ex: Olá, aqui é o Jarvis. Todos os sistemas estão operacionais e prontos para a festa."></textarea>
+    <div id="counter" class="counter">0 / 2000</div>
+    <div class="examples">
+      <span class="chip" data-text="Olá, aqui é o Jarvis. Todos os sistemas estão operacionais.">Olá Jarvis</span>
+      <span class="chip" data-text="Bom dia, são oito horas. A temperatura interna permanece estável e a rede local já foi restabelecida.">Bom dia</span>
+      <span class="chip" data-text="Atenção galera, vai começar o drop! Mão pro alto e sente o grave. Esse é o poder da clonagem local com Qwen3.">Drop DnB</span>
+      <span class="chip" data-text="This is Jarvis speaking. All systems are nominal and ready for deployment. Voice cloning is working perfectly offline.">English test</span>
+    </div>
+
+    <div class="row">
+      <div>
+        <label class="label">Idioma</label>
+        <select id="lang">
+          <option value="Portuguese" selected>Portuguese 🇧🇷</option>
+          <option value="English">English 🇺🇸</option>
+          <option value="Spanish">Spanish 🇪🇸</option>
+          <option value="Japanese">Japanese 🇯🇵</option>
+          <option value="German">German 🇩🇪</option>
+          <option value="French">French 🇫🇷</option>
+          <option value="Russian">Russian 🇷🇺</option>
+          <option value="Italian">Italian 🇮🇹</option>
+        </select>
+      </div>
+      <div>
+        <label class="label">Modelo (VRAM)</label>
+        <select id="model">
+          <option value="0.6B" selected>0.6B — 1.8GB (GTX 1650)</option>
+          <option value="1.7B">1.7B — 3.9GB (melhor quali)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Seção Voz de Referência -->
+    <div class="ref-section">
+      <label class="label">Voz de referência</label>
+      <div class="tabs">
+        <button class="tab active" data-tab="jarvis">🤖 Jarvis padrão</button>
+        <button class="tab" data-tab="upload">📁 Subir áudio</button>
+        <button class="tab" data-tab="mic">🎙️ Gravar mic</button>
+      </div>
+
+      <div id="panel-jarvis" class="panel active">
+        <p>Usa <code>jarvis_ref_10s.wav</code> (10s) já no servidor. Hall de entrada do Jarvis, ideal para testes rápidos.</p>
+        <audio controls src="/api/ref-audio" style="width:100%; margin-top:10px; height:36px;"></audio>
+      </div>
+
+      <div id="panel-upload" class="panel">
+        <p>Suba um áudio limpo de 3–15s (WAV/MP3/M4A) sem música de fundo. <b>Qualidade depende de áudio sem ruído.</b></p>
+        <input id="fileInput" class="file-input" type="file" accept=".wav,.mp3,.m4a,.ogg,.flac,.webm,audio/*" />
+        <audio id="uploadPreview" controls style="display:none; width:100%; margin-top:10px; height:36px;"></audio>
+        <label class="label" style="margin-top:12px;">Transcrição EXATA do áudio enviado *</label>
+        <textarea id="refTextUpload" rows="2" placeholder="Digite exatamente o que é dito no áudio de referência, palavra por palavra..."></textarea>
+        <div class="hint">Ex: "Bom dia, são oito horas. Os sistemas estão operacionais."</div>
+      </div>
+
+      <div id="panel-mic" class="panel">
+        <p>Grave 5–10s falando de forma clara, sem ruído. Depois digite a transcrição exata.</p>
+        <div style="display:flex; gap:10px; align-items:center; margin-top:10px;">
+          <button id="btnRecord" class="btn-rec">● Gravar</button>
+          <span id="recStatus" style="font-size:13px; color:var(--muted);">pronto para gravar</span>
+        </div>
+        <audio id="micPreview" controls style="display:none; width:100%; margin-top:10px; height:36px;"></audio>
+        <label class="label" style="margin-top:12px;">Transcrição EXATA da gravação *</label>
+        <textarea id="refTextMic" rows="2" placeholder="Digite exatamente o que você falou na gravação..."></textarea>
+        <div class="hint">Dica: fale "Olá, meu nome é João e estou testando a clonagem de voz local."</div>
+      </div>
+    </div>
+
+    <button id="btn" class="btn"><span class="spinner"></span><span id="btnText">▶ Clonar e tocar</span></button>
+    <div id="status" class="status"></div>
+
+    <div id="playerWrap" class="player-wrap">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="label" style="margin:0;">Resultado</span>
+        <a id="download" download="jarvis_clone.wav" style="font-size:12px; color:var(--accent); text-decoration:none; display:none;">⬇ baixar wav</a>
+      </div>
+      <audio id="player" controls></audio>
+      <div id="genInfo" style="font-size:11px; color:var(--muted); margin-top:6px;"></div>
+    </div>
+  </div>
+
+  <div class="footer">Local • Qwen3-TTS 12Hz • 2000 chars • Apache 2.0 • 100% offline</div>
+</div>
+
+<script>
+const $text = document.getElementById('text');
+const $counter = document.getElementById('counter');
+const $lang = document.getElementById('lang');
+const $model = document.getElementById('model');
+const $btn = document.getElementById('btn');
+const $btnText = document.getElementById('btnText');
+const $status = document.getElementById('status');
+const $player = document.getElementById('player');
+const $wrap = document.getElementById('playerWrap');
+const $download = document.getElementById('download');
+const $genInfo = document.getElementById('genInfo');
+
+const $fileInput = document.getElementById('fileInput');
+const $uploadPreview = document.getElementById('uploadPreview');
+const $refTextUpload = document.getElementById('refTextUpload');
+const $refTextMic = document.getElementById('refTextMic');
+const $micPreview = document.getElementById('micPreview');
+const $btnRecord = document.getElementById('btnRecord');
+const $recStatus = document.getElementById('recStatus');
+
+let activeTab = 'jarvis';
+let micBlob = null;
+let recordedFile = null;
+
+$text.value = "Olá, aqui é o Jarvis clonado pela Qwen3-TTS. Se você está ouvindo isso, a clonagem funcionou perfeitamente. Agora com até dois mil caracteres, posso falar textos bem mais longos e ainda usar sua própria voz gravada pelo microfone.";
+
+// Tabs
+document.querySelectorAll('.tab').forEach(t=>{
+  t.onclick = ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('panel-'+t.dataset.tab).classList.add('active');
+    activeTab = t.dataset.tab;
+  }
+});
+
+// Counter 2000
+function updateCounter(){
+  const n = $text.value.length;
+  $counter.textContent = `${n} / 2000`;
+  $counter.className = 'counter' + (n>1800 ? ' warn' : '') + (n>2000 ? ' over' : '');
+}
+$text.addEventListener('input', updateCounter);
+updateCounter();
+
+// Chips
+document.querySelectorAll('.chip').forEach(c=>{
+  c.onclick = ()=> { $text.value = c.dataset.text; updateCounter(); $text.focus(); }
+});
+
+// File upload preview
+$fileInput.addEventListener('change', ()=>{
+  const f = $fileInput.files[0];
+  if(!f){ $uploadPreview.style.display='none'; return; }
+  const url = URL.createObjectURL(f);
+  $uploadPreview.src = url;
+  $uploadPreview.style.display='block';
+  // tenta pré-preencher transcrição se nome tiver pista? não
+});
+
+// Mic recording
+let mediaRecorder, chunks = [], recStart = 0, recTimer = null;
+$btnRecord.onclick = async ()=>{
+  if(mediaRecorder && mediaRecorder.state === 'recording'){
+    mediaRecorder.stop();
+    return;
+  }
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({ audio:{ channelCount:1, sampleRate:24000, echoCancellation:true, noiseSuppression:true } });
+    chunks = [];
+    mediaRecorder = new MediaRecorder(stream, { mimeType: MediaRecorder.isTypeSupported('audio/webm') ? 'audio/webm' : 'audio/ogg' });
+    mediaRecorder.ondataavailable = e=>{ if(e.data.size>0) chunks.push(e.data); };
+    mediaRecorder.onstart = ()=>{
+      recStart = Date.now();
+      $btnRecord.textContent = '■ Parar';
+      $btnRecord.classList.add('recording');
+      $recStatus.textContent = 'gravando... 0.0s';
+      recTimer = setInterval(()=>{
+        const s = (Date.now()-recStart)/1000;
+        $recStatus.textContent = `gravando... ${s.toFixed(1)}s` + (s>15 ? ' (max 15s)' : '');
+        if(s>15){ mediaRecorder.stop(); }
+      }, 100);
+    };
+    mediaRecorder.onstop = ()=>{
+      clearInterval(recTimer);
+      $btnRecord.textContent = '● Gravar';
+      $btnRecord.classList.remove('recording');
+      stream.getTracks().forEach(t=>t.stop());
+      const blob = new Blob(chunks, { type: mediaRecorder.mimeType });
+      micBlob = blob;
+      recordedFile = new File([blob], `mic_${Date.now()}.webm`, { type: blob.type });
+      const url = URL.createObjectURL(blob);
+      $micPreview.src = url;
+      $micPreview.style.display='block';
+      $recStatus.textContent = `gravado ${(blob.size/1024).toFixed(0)} KB • ${((Date.now()-recStart)/1000).toFixed(1)}s — digite a transcrição abaixo`;
+      if(!$refTextMic.value.trim()){
+        $refTextMic.focus();
+      }
+    };
+    mediaRecorder.start();
+  } catch(e){
+    setStatus('Microfone negado ou não disponível: '+e.message, 'error');
+  }
+};
+
+async function clone(){
+  const text = $text.value.trim();
+  if(!text){ setStatus('Digite um texto primeiro.', 'error'); return; }
+  if(text.length > 2000){ setStatus(`Texto muito longo (${text.length}/2000). Encurte.`, 'error'); return; }
+
+  // valida ref custom
+  let refFile = null, refText = null;
+  if(activeTab === 'upload'){
+    refFile = $fileInput.files[0];
+    if(!refFile){ setStatus('Selecione um áudio de referência ou volte para Jarvis padrão.', 'error'); return; }
+    refText = $refTextUpload.value.trim();
+    if(!refText){ setStatus('Digite a transcrição EXATA do áudio enviado (obrigatória para qualidade).', 'error'); $refTextUpload.focus(); return; }
+  } else if(activeTab === 'mic'){
+    if(!recordedFile){ setStatus('Grave um áudio primeiro (botão Gravar).', 'error'); return; }
+    refFile = recordedFile;
+    refText = $refTextMic.value.trim();
+    if(!refText){ setStatus('Digite a transcrição EXATA da gravação.', 'error'); $refTextMic.focus(); return; }
+  }
+
+  $btn.disabled = true;
+  $btn.classList.add('loading');
+  $btnText.textContent = refFile ? 'Gerando com voz customizada...' : 'Gerando...';
+  setStatus(refFile ? 'Enviando áudio de referência e sintetizando...' : 'Sintetizando com voz Jarvis... primeira vez ~10s', 'loading');
+  $wrap.classList.remove('show');
+
+  try{
+    let res;
+    if(refFile){
+      const fd = new FormData();
+      fd.append('text', text);
+      fd.append('language', $lang.value);
+      fd.append('model_size', $model.value);
+      fd.append('ref_text', refText);
+      fd.append('ref_audio', refFile, refFile.name);
+      res = await fetch('/api/clone', { method:'POST', body: fd });
+    } else {
+      res = await fetch('/api/clone', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ text, language: $lang.value, model_size: $model.value })
+      });
+    }
+    if(!res.ok){
+      let msg = `HTTP ${res.status}`;
+      try{ const j = await res.json(); msg = j.detail || msg; } catch{ try{ msg = await res.text(); }catch{} }
+      throw new Error(msg);
+    }
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    $player.src = url;
+    $wrap.classList.add('show');
+    $download.href = url;
+    $download.style.display = 'inline';
+    $genInfo.textContent = `${(blob.size/1024).toFixed(0)} KB • ${text.length} chars • ${$lang.value} • ${$model.value} • ref: ${activeTab}`;
+    try{ await $player.play(); }catch{}
+    setStatus(`Pronto!`, 'ok');
+  } catch(e){
+    setStatus('Erro: ' + e.message, 'error');
+  } finally {
+    $btn.disabled = false;
+    $btn.classList.remove('loading');
+    $btnText.textContent = '▶ Clonar e tocar';
+  }
+}
+
+function setStatus(msg, cls){
+  $status.textContent = msg;
+  $status.className = 'status ' + (cls||'');
+}
+
+$btn.onclick = clone;
+$text.addEventListener('keydown', e=>{
+  if((e.ctrlKey || e.metaKey) && e.key === 'Enter') clone();
+});
+</script>
+</body>
+</html>

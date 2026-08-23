@@ -1,0 +1,11 @@
+torch>=2.5.1
+torchaudio>=2.5.1
+qwen-tts>=0.1.1
+fastapi>=0.141
+uvicorn>=0.52
+python-multipart>=0.0.32
+librosa>=1.0
+soundfile>=0.14
+accelerate>=1.12
+transformers>=4.57
+numpy>=2.0

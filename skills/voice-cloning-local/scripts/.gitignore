@@ -1,0 +1,13 @@
+# Áudios locais (exemplos pesados)
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+*.webm
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+# Temp
+*.tmp

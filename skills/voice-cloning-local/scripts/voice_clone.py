@@ -41,13 +41,21 @@ def clone_voice(
         ref_text=ref_text,
     )
     
-    # wavs can be list or tensor depending on version
+    # wavs can be list[tensor|ndarray] or tensor/ndarray depending on version
+    import numpy as np
     if isinstance(wavs, list):
-        wavs = torch.stack(wavs)
+        if isinstance(wavs[0], np.ndarray):
+            wavs = torch.from_numpy(np.concatenate(wavs) if len(wavs) > 1 else wavs[0])
+            if wavs.dim() == 1:
+                wavs = wavs.unsqueeze(0)
+        else:
+            wavs = torch.stack(wavs)
+    if isinstance(wavs, np.ndarray):
+        wavs = torch.from_numpy(wavs)
     if wavs.dim() == 1:
         wavs = wavs.unsqueeze(0)
     
-    torchaudio.save(output_path, wavs, sr)
+    torchaudio.save(output_path, wavs.cpu(), sr)
     return output_path
 
 

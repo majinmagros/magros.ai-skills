@@ -265,6 +265,30 @@ def batch_clone(texts: list, ref_audio: str, ref_text: str, language: str, model
 | `voice_design.py` | Voice design via descrição |
 | `tts_cli.py` | CLI unificado (`python tts_cli.py clone/design ...`) |
 | `batch_clone.py` | Processamento em lote |
+| `web_clone_server.py` | Servidor Web FastAPI + Web UI (2000 chars, voz custom) |
+| `index.html` | Interface HTML (player, upload, gravação mic) |
+
+### 6. Web UI Server (FastAPI + HTML — 2000 chars + voz customizada)
+
+Servidor local que sobe em `http://localhost:7861` e carrega o modelo uma vez (cache).
+
+```bash
+cd skills/voice-cloning-local/scripts
+pip install -r requirements.txt   # torch, qwen-tts, fastapi, uvicorn, etc.
+python web_clone_server.py        # abre browser automaticamente
+# API direta:
+curl -X POST http://localhost:7861/api/clone \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Olá Jarvis","language":"Portuguese","model_size":"0.6B"}' --output clone.wav
+
+# Com voz customizada (multipart):
+# curl -F "text=Teste" -F "language=Portuguese" -F "ref_text=transcrição exata" \
+#      -F "ref_audio=@meu_ref.wav" http://localhost:7861/api/clone --output clone.wav
+```
+
+**UI:** `index.html` → textarea 2000 chars (chunk automático 900), tabs **Jarvis padrão | Upload áudio | Gravar mic**, campo transcrição EXATA obrigatório para qualidade Qwen, player HTML5 + download WAV.
+
+Arquitetura: **local-only** (modelo roda na GPU do usuário, 1.8GB 0.6B / 3.9GB 1.7B, offline, não roda no GitHub Pages — estático não executa Python/GPU).
 
 ---
 
