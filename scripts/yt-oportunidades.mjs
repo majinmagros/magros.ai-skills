@@ -40,7 +40,7 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
-import { basename, dirname, join } from 'node:path';
+import { basename, dirname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -103,7 +103,10 @@ function defaultCtx() {
   });
 }
 
-/** Lê manifests/canais-vigilados.json e devolve ctxs por canal. */
+/** Lê manifests/canais-vigilados.json e devolve ctxs por canal.
+ *  Falha ALTO se a pasta de algum canal estiver ausente ou não for absoluta —
+ *  paths relativos resolvem contra o cwd e espalham catálogos/transcrições
+ *  pela raiz do projeto (bug real de 2026-08-20). */
 function allChannelCtxs() {
   const cfg = readJson(CHANNELS_CONFIG, null);
   if (!cfg || !Array.isArray(cfg.canais) || cfg.canais.length === 0) {
@@ -112,11 +115,16 @@ function allChannelCtxs() {
   }
   const local = readJson(LOCAL_CHANNELS_CONFIG, null);
   const pastas = (local && local.pastas) || {};
+  const problemas = [];
   const ctxs = [];
   for (const c of cfg.canais) {
     const pasta = c.pasta || pastas[c.handle];
     if (!pasta) {
-      process.stderr.write(`Sem pasta de transcrições para ${c.handle} (defina em manifests/canais-vigilados.local.json)\n`);
+      problemas.push(`${c.handle}: sem pasta (defina em manifests/canais-vigilados.local.json)`);
+      continue;
+    }
+    if (!isAbsolute(pasta)) {
+      problemas.push(`${c.handle}: pasta "${pasta}" não é caminho absoluto`);
       continue;
     }
     ctxs.push({
@@ -124,6 +132,14 @@ function allChannelCtxs() {
       nome: c.nome,
       keywords: c.keywords || [],
     });
+  }
+  if (problemas.length > 0) {
+    process.stderr.write(
+      `Config de canais inválida (${problemas.length} problema(s)) — corrija antes de coletar:\n` +
+        problemas.map((p) => `  - ${p}`).join('\n') +
+        '\n',
+    );
+    process.exit(1);
   }
   return ctxs;
 }
