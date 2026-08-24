@@ -158,3 +158,16 @@ user message ──► gate (Haiku + policy.md) ──allow──► agente prin
 ```
 
 Por que funciona: decisão de permissão é classificação simples → modelo barato resolve; policy fica versionada em arquivo, não em prompt solto. Implementável via hooks (`before_agent_start`/`tool_call` block) no Pi, ou PreToolUse hook no Claude Code que chama o gate. Complementa (não substitui) as camadas 1-3 acima.
+
+## Enriquecimento 2026-08-24b — arquitetura de aprovação autônoma (auto mode oficial)
+
+Fonte `b8SV4U6fEIc` (canal oficial Claude/Anthropic — fonte primária, claims auto-validados). Como aprovar ações sem fadiga de permissão SEM o modelo revisar a si mesmo:
+
+1. **Classificador independente**: vê as mensagens do usuário + as tool calls, mas NÃO vê o raciocínio/respostas/tool outputs do modelo → julgamento sem viés de contexto compartilhado ("quem escreve não revisa o próprio PR"). Compara cada ação contra a INTENÇÃO do usuário; sinaliza deriva para ação irreversível/destrutiva.
+2. **Sonda anti-injeção pré-contexto**: varre todo tool result procurando instruções escondidas ANTES de entrar no contexto e inunda conteúdo suspeito com aviso de ceticismo. Ataque precisa passar pelas DUAS camadas (sonda + classificador) → taxa de sucesso de injection caiu a zero nos evals oficiais.
+3. **Tier check**: ações read-only/recuperáveis pular o classificador; shell/web-fetch/tudo que sai do ambiente passa.
+4. **Auto-recuperação em negação**: negado, o modelo tenta caminho mais seguro sozinho (force push main → branch nova); negações repetidas → pausa e escala para humano.
+5. **Fronteira de confiança configurável**: campo environment descreve infra interna em linguagem natural (org GitHub, buckets, serviços); allow / soft deny / hard deny como GUIDANCIA do classificador — limites DUROS continuam sendo regras deny/ask (hooks), que o modelo não raciocina por cima.
+6. **Rollout**: começar estreito, observar negações, alargar. Operações high-stakes (prod) seguem com revisão humana.
+
+Implementável fora do Claude Code: gate-classificador com modelo barato lendo {pedido do usuário + ação proposta} (sem o trace interno), allowlist de tiers, e hooks PreToolUse para os limites duros. É a versão institucional do permission gate já anotado acima.
