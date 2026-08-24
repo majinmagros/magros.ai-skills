@@ -373,7 +373,8 @@
         "skills/goal",
         "skills/grill-with-docs",
         "skills/grilling",
-        "skills/grills"
+        "skills/grills",
+        "skills/model-reflection-tuning"
       ],
       "targets": [
         "claude",
@@ -591,7 +592,8 @@
         "skills/coordenacao",
         "skills/obsidian-cli",
         "skills/whatsapp-evolution-go",
-        "skills/context-ledger"
+        "skills/context-ledger",
+        "skills/book-to-skill"
       ],
       "targets": [
         "claude",
@@ -854,7 +856,8 @@
         "skills/gauntlet-loop",
         "skills/graph-engineering",
         "skills/12-factor-agents",
-        "skills/autobots-auto-improvement"
+        "skills/autobots-auto-improvement",
+        "skills/spatial-intelligence-world-models"
       ],
       "targets": [
         "claude",

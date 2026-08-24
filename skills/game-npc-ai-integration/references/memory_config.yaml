@@ -1,0 +1,79 @@
+# Memory System Configuration
+# Retention policies, forgetting curves, and storage settings
+
+episodic_memory:
+  max_entries: 10000
+  importance_threshold: 0.3  # Below this, memories decay faster
+  retention:
+    # Half-life in hours for each importance tier
+    critical: 8760      # 1 year - never forget (importance >= 0.9)
+    high: 720           # 30 days (importance >= 0.7)
+    medium: 168         # 1 week (importance >= 0.5)
+    low: 24             # 1 day (importance >= 0.3)
+    trivial: 2          # 2 hours (importance < 0.3)
+
+  retrieval:
+    similarity_weight: 0.4
+    recency_weight: 0.3
+    importance_weight: 0.3
+    max_results: 10
+
+  consolidation:
+    # Move important episodic to semantic after N retrievals
+    retrieval_threshold: 3
+    consolidation_interval_hours: 24
+
+semantic_memory:
+  max_facts_per_subject: 50
+  confidence_decay:
+    # Daily decay rate for unconfirmed facts
+    unconfirmed: 0.02
+    hearsay: 0.05
+    observation: 0.01
+    deduction: 0.005
+
+  contradiction_handling:
+    reduce_confidence: 0.5  # Multiply confidence by this when contradicted
+    min_confidence: 0.1
+
+  expiration:
+    # Auto-expire facts after time unless verified
+    default_days: 30
+    verified_multiplier: 10  # Verified facts last 10x longer
+
+working_memory:
+  capacity: 50
+  default_ttl_seconds: 300  # 5 minutes
+  attention_decay_factor: 0.9  # Per tick
+  context_types:
+    recent_event: {ttl: 300, priority: 1.0}
+    nearby_entity: {ttl: 60, priority: 0.8}
+    active_quest: {ttl: 3600, priority: 1.2}
+    immediate_goal: {ttl: 1800, priority: 1.1}
+    conversation: {ttl: 120, priority: 0.9}
+    combat: {ttl: 30, priority: 1.5}
+
+  focus_boost: 2.0  # Multiplier when attention focused
+
+storage:
+  backend: "file"  # "memory" or "file"
+  file_path: "./npc_memory"
+  backup_interval_hours: 6
+  compression: true
+  encryption: false
+
+  # For distributed deployments
+  redis:
+    enabled: false
+    host: "localhost"
+    port: 6379
+    db: 0
+    key_prefix: "npc:memory:"
+
+performance:
+  batch_writes: true
+  batch_size: 100
+  async_writes: true
+  indexing:
+    enabled: true
+    fields: ["timestamp", "importance", "event_type", "subject", "participants"]

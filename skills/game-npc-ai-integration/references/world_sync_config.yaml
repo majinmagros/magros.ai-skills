@@ -1,0 +1,115 @@
+# World State Synchronization Configuration
+
+sync:
+  interval_seconds: 0.5  # Base sync interval
+  priority_intervals:
+    position: 0.1       # 100ms - critical for movement
+    inventory: 1.0      # 1s - changes less frequently
+    quests: 5.0         # 5s - quest updates are rare
+    factions: 10.0      # 10s - faction changes very rare
+    entities: 0.5       # 500ms - nearby entity awareness
+
+  # Adaptive sync - increase frequency during combat
+  combat_multiplier: 0.5  # Halve intervals during combat
+
+position:
+  precision: 0.01  # Meters - don't sync sub-cm changes
+  prediction:
+    enabled: true
+    horizon_seconds: 2.0
+    method: "linear"  # linear, kalman, neural
+
+  dimension_tracking: true
+  death_respawn_handling: true
+
+inventory:
+  track_slots: true
+  track_equipment: true
+  track_currency: true
+  ignore_stack_changes_below: 1  # Only sync when count changes by >= 1
+  sync_on_pickup: true
+  sync_on_drop: true
+  sync_on_use: true
+  sync_on_craft: true
+
+quests:
+  auto_discover: true  # Auto-add quests from game engine
+  track_objectives: true
+  track_progress: true
+  notify_on_complete: true
+  notify_on_fail: true
+  prerequisites_check: true
+
+factions:
+  track_standing: true
+  track_allies_enemies: true
+  standing_change_threshold: 10  # Only sync changes >= 10
+  war_status_sync: true
+
+entities:
+  awareness_radius: 50.0  # Meters
+  track_players: true
+  track_npcs: true
+  track_mobs: true
+  track_vehicles: true
+  track_items: false  # Ground items - too noisy
+  entity_types:
+    player: {priority: 1.0, radius: 100.0}
+    npc: {priority: 0.8, radius: 50.0}
+    hostile_mob: {priority: 1.2, radius: 40.0}
+    passive_mob: {priority: 0.3, radius: 30.0}
+    vehicle: {priority: 0.7, radius: 60.0}
+
+  # Update frequency based on distance
+  distance_tiers:
+    close: {radius: 10.0, interval: 0.1}
+    medium: {radius: 30.0, interval: 0.5}
+    far: {radius: 100.0, interval: 2.0}
+
+locations:
+  auto_discover: true
+  discovery_radius: 5.0
+  important_types:
+    - "town"
+    - "dungeon"
+    - "vendor"
+    - "quest_giver"
+    - "crafting_station"
+    - "fast_travel"
+    - "safe_zone"
+    - "boss_arena"
+
+effects:
+  track_buffs: true
+  track_debuffs: true
+  track_cooldowns: true
+  min_duration_seconds: 1.0
+
+currency:
+  track_types:
+    - "gold"
+    - "silver"
+    - "copper"
+    - "tokens"
+    - "reputation"
+  sync_on_change: true
+
+network:
+  # For multiplayer sync
+  authoritative_server: true
+  client_prediction: true
+  reconciliation:
+    enabled: true
+    max_correction_distance: 2.0
+    correction_interval: 1.0
+
+  # Bandwidth optimization
+  delta_compression: true
+  priority_queue: true
+  max_updates_per_tick: 50
+
+persistence:
+  save_interval_seconds: 30
+  save_on_disconnect: true
+  save_on_major_event: true
+  backup_count: 5

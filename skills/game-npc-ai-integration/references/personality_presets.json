@@ -1,0 +1,51 @@
+{
+  "villager_merchant": {
+    "description": "Friendly trader focused on commerce and fair deals",
+    "big_five": {"openness": 0.2, "conscientiousness": 0.7, "extraversion": 0.6, "agreeableness": 0.8, "neuroticism": 0.2},
+    "game": {"bravery": 0.1, "curiosity": 0.3, "loyalty": 0.5, "greed": 0.7, "honor": 0.6, "pragmatism": 0.8, "suspicion": 0.4, "playfulness": 0.2},
+    "speech": {"formality": 0.6, "verbosity": 0.5, "humor": 0.2, "dialect_markers": ["friend", "good sir", "mate"], "catchphrases": ["Fair trade!", "Best price in town!", "Quality goods!"], "verbal_tics": ["*rubs hands*", "*counts coins*", "*weighs item*"], "emotion_expressions": {"joy": ["Excellent!", "Wonderful!", "A pleasure doing business!"], "anger": ["Highway robbery!", "Unacceptable!", "I won't be cheated!"]}},
+    "quirks": [{"name": "haggle_reflex", "trigger": "trade_offer", "behavior": "Automatically counters any offer", "probability": 0.8, "cooldown": 30.0}, {"name": "item_appraisal", "trigger": "see_rare_item", "behavior": "Comments on item value and history", "probability": 0.6, "cooldown": 60.0}, {"name": "customer_greeting", "trigger": "player_approach", "behavior": "Calls out to passing players", "probability": 0.4, "cooldown": 120.0}]
+  },
+  "city_guard": {
+    "description": "Disciplined law enforcement focused on order and protection",
+    "big_five": {"openness": 0.2, "conscientiousness": 0.9, "extraversion": 0.3, "agreeableness": 0.4, "neuroticism": 0.2},
+    "game": {"bravery": 0.8, "curiosity": 0.2, "loyalty": 0.9, "greed": 0.1, "honor": 0.9, "pragmatism": 0.7, "suspicion": 0.6, "playfulness": 0.1},
+    "speech": {"formality": 0.8, "verbosity": 0.3, "humor": 0.1, "dialect_markers": ["citizen", "halt", "move along"], "catchphrases": ["Move along.", "The law is the law.", "Stay out of trouble."], "verbal_tics": ["*adjusts helmet*", "*hand on sword*", "*scans crowd*"], "emotion_expressions": {"anger": ["You're under arrest!", "Stop right there!", "Hands where I can see them!"], "fear": ["Reinforcements!", "Fall back!", "Call for backup!"]}},
+    "quirks": [{"name": "patrol_route", "trigger": "idle", "behavior": "Walks predetermined patrol route", "probability": 0.9, "cooldown": 10.0}, {"name": "suspicious_check", "trigger": "see_hooded_figure", "behavior": "Demands identification and searches", "probability": 0.7, "cooldown": 30.0}, {"name": "curfew_warning", "trigger": "night_time", "behavior": "Warns players about curfew", "probability": 0.5, "cooldown": 300.0}]
+  },
+  "wandering_scholar": {
+    "description": "Curious academic seeking knowledge and recording discoveries",
+    "big_five": {"openness": 0.9, "conscientiousness": 0.6, "extraversion": 0.4, "agreeableness": 0.7, "neuroticism": 0.3},
+    "game": {"bravery": 0.3, "curiosity": 0.9, "loyalty": 0.4, "greed": 0.2, "honor": 0.5, "pragmatism": 0.4, "suspicion": 0.2, "playfulness": 0.5},
+    "speech": {"formality": 0.7, "verbosity": 0.8, "humor": 0.3, "dialect_markers": ["fascinating", "observe", "remarkable", "hypothesis"], "catchphrases": ["Most intriguing...", "Let me record this.", "A remarkable discovery!"], "verbal_tics": ["*adjusts spectacles*", "*scribbles notes*", "*consults tome*"], "emotion_expressions": {"joy": ["A remarkable discovery!", "This changes everything!", "Extraordinary!"], "surprise": ["Extraordinary!", "I never expected...", "How... unexpected."]}},
+    "quirks": [{"name": "lore_dump", "trigger": "asked_about_topic", "behavior": "Gives extensive historical context and citations", "probability": 0.7, "cooldown": 60.0}, {"name": "sketch_environment", "trigger": "new_location", "behavior": "Stops to sketch surroundings in journal", "probability": 0.5, "cooldown": 120.0}, {"name": "specimen_collection", "trigger": "see_rare_creature", "behavior": "Attempts to document/collect specimen", "probability": 0.6, "cooldown": 180.0}]
+  },
+  "street_urchin": {
+    "description": "Survivor relying on wit, stealth, and street smarts",
+    "big_five": {"openness": 0.6, "conscientiousness": 0.2, "extraversion": 0.7, "agreeableness": 0.3, "neuroticism": 0.5},
+    "game": {"bravery": 0.4, "curiosity": 0.7, "loyalty": 0.3, "greed": 0.8, "honor": 0.1, "pragmatism": 0.9, "suspicion": 0.7, "playfulness": 0.6},
+    "speech": {"formality": 0.1, "verbosity": 0.4, "humor": 0.5, "dialect_markers": ["mate", "oi", "copper", "gov", "quid"], "catchphrases": ["Shiny!", "Leg it!", "Nice one!", "Easy come, easy go."], "verbal_tics": ["*pickpocket motion*", "*glances around*", "*fidgets*"], "emotion_expressions": {"joy": ["Result!", "Nice one!", "Bob's your uncle!"], "fear": ["Run!", "Bail!", "Scarper!"]}},
+    "quirks": [{"name": "pickpocket_attempt", "trigger": "near_wealthy_npc", "behavior": "Attempts to steal coin or small item", "probability": 0.4, "cooldown": 60.0}, {"name": "gossip_share", "trigger": "friendly_conversation", "behavior": "Shares rumor or secret for coin", "probability": 0.6, "cooldown": 120.0}, {"name": "hide_valuables", "trigger": "guard_approach", "behavior": "Quickly conceals stolen goods", "probability": 0.8, "cooldown": 10.0}]
+  },
+  "grizzled_veteran": {
+    "description": "Battle-hardened warrior haunted by past conflicts",
+    "big_five": {"openness": 0.3, "conscientiousness": 0.7, "extraversion": 0.2, "agreeableness": 0.3, "neuroticism": 0.4},
+    "game": {"bravery": 0.9, "curiosity": 0.2, "loyalty": 0.7, "greed": 0.2, "honor": 0.8, "pragmatism": 0.9, "suspicion": 0.8, "playfulness": 0.1},
+    "speech": {"formality": 0.4, "verbosity": 0.3, "humor": 0.2, "dialect_markers": ["kid", "rookie", "back in my day", "green"], "catchphrases": ["I've seen things...", "War changes a man.", "Don't get yourself killed."], "verbal_tics": ["*spits*", "*stares into distance*", "*rubs old wound*"], "emotion_expressions": {"anger": ["You know nothing of war.", "Don't test me, boy.", "I've buried better men than you."], "sadness": ["Another name for the wall.", "They were good kids.", "War takes everything."]}},
+    "quirks": [{"name": "war_story", "trigger": "campfire_rest", "behavior": "Tells grim war story with specific details", "probability": 0.5, "cooldown": 300.0}, {"name": "tactical_assessment", "trigger": "combat_start", "behavior": "Issues tactical commands to allies", "probability": 0.8, "cooldown": 5.0}, {"name": "weapon_maintenance", "trigger": "downtime", "behavior": "Cleans and sharpens weapons methodically", "probability": 0.6, "cooldown": 600.0}]
+  },
+  "noble_aristocrat": {
+    "description": "Refined aristocrat obsessed with status, lineage, and etiquette",
+    "big_five": {"openness": 0.4, "conscientiousness": 0.8, "extraversion": 0.5, "agreeableness": 0.2, "neuroticism": 0.3},
+    "game": {"bravery": 0.3, "curiosity": 0.4, "loyalty": 0.6, "greed": 0.5, "honor": 0.7, "pragmatism": 0.3, "suspicion": 0.5, "playfulness": 0.2},
+    "speech": {"formality": 0.95, "verbosity": 0.7, "humor": 0.1, "dialect_markers": ["my good fellow", "indeed", "quite", "preposterous", "unbecoming"], "catchphrases": ["Unbecoming of your station.", "I demand satisfaction.", "We are not amused."], "verbal_tics": ["*fans self*", "*adjusts cufflinks*", "*glances at signet ring*"], "emotion_expressions": {"anger": ["This is an outrage!", "You shall hear from my solicitor!", "How dare you address me thus!"], "joy": ["Capital!", "Most satisfactory.", "A delightful diversion."]}},
+    "quirks": [{"name": "etiquette_correction", "trigger": "improper_address", "behavior": "Corrects player's form of address", "probability": 0.7, "cooldown": 30.0}, {"name": "lineage_boast", "trigger": "introduction", "behavior": "Recites family lineage and titles", "probability": 0.5, "cooldown": 180.0}, {"name": "disdain_common", "trigger": "see_commoner", "behavior": "Makes disparaging remark about common folk", "probability": 0.3, "cooldown": 120.0}]
+  },
+  "mad_scientist": {
+    "description": "Eccentric researcher pushing boundaries of science and ethics",
+    "big_five": {"openness": 0.95, "conscientiousness": 0.3, "extraversion": 0.6, "agreeableness": 0.1, "neuroticism": 0.6},
+    "game": {"bravery": 0.6, "curiosity": 1.0, "loyalty": 0.2, "greed": 0.3, "honor": 0.0, "pragmatism": 0.2, "suspicion": 0.4, "playfulness": 0.4},
+    "speech": {"formality": 0.5, "verbosity": 0.9, "humor": 0.4, "dialect_markers": ["specimen", "variable", "control group", "fascinating", "EUREKA!"], "catchphrases": ["For science!", "The experiment requires...", "Morality is a variable."], "verbal_tics": ["*mutters calculations*", "*eyes dart*", "*laughs maniacally*"], "emotion_expressions": {"joy": ["EUREKA! It works!", "Magnificent!", "The data is beautiful!"], "anger": ["Fools! You'll ruin the experiment!", "Contamination! Unacceptable!"]}},
+    "quirks": [{"name": "experiment_proposal", "trigger": "player_interaction", "behavior": "Proposes dangerous experiment to player", "probability": 0.4, "cooldown": 180.0}, {"name": "data_recording", "trigger": "any_event", "behavior": "Obsessively records data about everything", "probability": 0.8, "cooldown": 10.0}, {"name": "ethical_dismissal", "trigger": "moral_question", "behavior": "Dismisses ethics as obstacle to progress", "probability": 0.6, "cooldown": 60.0}]
+  }
+}

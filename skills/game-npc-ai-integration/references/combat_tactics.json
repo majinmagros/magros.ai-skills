@@ -1,0 +1,240 @@
+{
+  "roles": {
+    "tank": {
+      "description": "Absorbs damage, controls enemy positioning, generates threat",
+      "primary_stats": ["health", "armor", "threat_generation"],
+      "priority_targets": ["boss", "elite", "caster"],
+      "abilities": {
+        "taunt": {"cooldown": 8, "priority": 1.0, "condition": "target_not_on_me"},
+        "shield_block": {"cooldown": 12, "priority": 0.9, "condition": "taking_heavy_damage"},
+        "interrupt": {"cooldown": 15, "priority": 0.8, "condition": "enemy_casting"},
+        "positioning": {"priority": 0.7, "condition": "always"}
+      },
+      "positioning": "front_center",
+      "health_thresholds": {"defensive": 0.4, "critical": 0.2}
+    },
+    "dps_melee": {
+      "description": "High sustained damage from close range",
+      "primary_stats": ["attack_power", "crit_chance", "haste"],
+      "priority_targets": ["focus_target", "low_health", "caster"],
+      "abilities": {
+        "burst": {"cooldown": 120, "priority": 1.0, "condition": "boss_or_elite"},
+        "execute": {"cooldown": 0, "priority": 0.9, "condition": "target_below_20pct"},
+        "cleave": {"cooldown": 8, "priority": 0.7, "condition": "multiple_targets"},
+        "movement": {"priority": 0.6, "condition": "avoid_aoe"}
+      },
+      "positioning": "behind_target",
+      "health_thresholds": {"cautious": 0.5, "defensive": 0.3}
+    },
+    "dps_ranged": {
+      "description": "High sustained damage from distance",
+      "primary_stats": ["attack_power", "crit_chance", "range"],
+      "priority_targets": ["focus_target", "caster", "healer"],
+      "abilities": {
+        "burst": {"cooldown": 120, "priority": 1.0, "condition": "boss_or_elite"},
+        "execute": {"cooldown": 0, "priority": 0.9, "condition": "target_below_20pct"},
+        "multi_dot": {"cooldown": 15, "priority": 0.8, "condition": "multiple_targets"},
+        "kiting": {"priority": 0.7, "condition": "enemy_approaching"}
+      },
+      "positioning": "max_range_safe",
+      "health_thresholds": {"cautious": 0.6, "defensive": 0.4}
+    },
+    "healer": {
+      "description": "Restores health, removes debuffs, provides utility",
+      "primary_stats": ["spell_power", "mana_regen", "haste"],
+      "priority_targets": ["lowest_health", "tank", "dps_with_debuff"],
+      "abilities": {
+        "emergency_heal": {"cooldown": 30, "priority": 1.0, "condition": "ally_below_30pct"},
+        "tank_heal": {"cooldown": 1.5, "priority": 0.9, "condition": "tank_below_70pct"},
+        "aoe_heal": {"cooldown": 45, "priority": 0.8, "condition": "3plus_allies_below_60pct"},
+        "dispel": {"cooldown": 8, "priority": 0.7, "condition": "ally_has_dispellable_debuff"},
+        "mana_conserve": {"priority": 0.6, "condition": "mana_below_30pct"}
+      },
+      "positioning": "backline_covered",
+      "health_thresholds": {"cautious": 0.7, "defensive": 0.5}
+    },
+    "support": {
+      "description": "Buffs allies, debuffs enemies, provides crowd control",
+      "primary_stats": ["spell_power", "duration", "cooldown_reduction"],
+      "priority_targets": ["enemy_caster", "buff_allies", "cc_priority_target"],
+      "abilities": {
+        "buff": {"cooldown": 30, "priority": 0.9, "condition": "pre_combat_or_faded"},
+        "debuff": {"cooldown": 15, "priority": 0.8, "condition": "boss_or_elite"},
+        "crowd_control": {"cooldown": 20, "priority": 0.9, "condition": "dangerous_add"},
+        "utility": {"cooldown": 60, "priority": 0.7, "condition": "specific_mechanic"}
+      },
+      "positioning": "midline_flexible",
+      "health_thresholds": {"cautious": 0.5, "defensive": 0.3}
+    },
+    "scout": {
+      "description": "Reconnaissance, stealth, trap detection, initiation",
+      "primary_stats": ["stealth", "perception", "movement_speed"],
+      "priority_targets": ["isolated_enemy", "objective", "enemy_healer"],
+      "abilities": {
+        "stealth": {"cooldown": 10, "priority": 1.0, "condition": "approaching_undetected"},
+        "reveal": {"cooldown": 30, "priority": 0.8, "condition": "suspected_stealth"},
+        "trap_disarm": {"cooldown": 5, "priority": 0.9, "condition": "trap_detected"},
+        "initiate": {"cooldown": 60, "priority": 0.8, "condition": "favorable_position"}
+      },
+      "positioning": "flank_stealth",
+      "health_thresholds": {"cautious": 0.5, "defensive": 0.2}
+    },
+    "leader": {
+      "description": "Coordinates party, makes tactical calls, adjusts strategy",
+      "primary_stats": ["awareness", "communication", "adaptability"],
+      "priority_targets": ["strategic_objective", "enemy_leader"],
+      "abilities": {
+        "call_focus": {"cooldown": 5, "priority": 1.0, "condition": "target_priority_change"},
+        "call_retreat": {"cooldown": 30, "priority": 1.0, "condition": "wipe_imminent"},
+        "call_cooldowns": {"cooldown": 10, "priority": 0.9, "condition": "burst_window"},
+        "assign_roles": {"cooldown": 120, "priority": 0.8, "condition": "composition_change"}
+      },
+      "positioning": "overview_position",
+      "health_thresholds": {"cautious": 0.6, "defensive": 0.4}
+    }
+  },
+
+  "callouts": {
+    "target_focus": {
+      "description": "Designate primary focus target for all DPS",
+      "urgency": 0.9,
+      "duration": 10,
+      "triggers": ["new_boss_phase", "add_spawn", "target_swap_needed"]
+    },
+    "peel": {
+      "description": "Request tank/peel for ally being attacked",
+      "urgency": 0.8,
+      "duration": 8,
+      "triggers": ["ally_attacked_by_multiple", "healer_threatened", "squishy_targeted"]
+    },
+    "heal": {
+      "description": "Request immediate healing on target",
+      "urgency": 0.95,
+      "duration": 5,
+      "triggers": ["ally_below_30pct", "tank_taking_spike", "debuff_requires_heal"]
+    },
+    "interrupt": {
+      "description": "Request interrupt on enemy cast",
+      "urgency": 0.85,
+      "duration": 3,
+      "triggers": ["enemy_casting_dangerous", "boss_mechanic_cast"]
+    },
+    "cooldown": {
+      "description": "Coordinate major cooldown usage",
+      "urgency": 0.7,
+      "duration": 15,
+      "triggers": ["burst_phase", "boss_vulnerable", "enrage_timer"]
+    },
+    "retreat": {
+      "description": "Order tactical withdrawal",
+      "urgency": 1.0,
+      "duration": 30,
+      "triggers": ["wipe_imminent", "mechanic_failed", "overwhelmed"]
+    },
+    "engage": {
+      "description": "Initiate combat on favorable terms",
+      "urgency": 0.6,
+      "duration": 10,
+      "triggers": ["ambush_ready", "enemy_isolated", "cooldowns_ready"]
+    },
+    "dispel": {
+      "description": "Request dispel on ally",
+      "urgency": 0.75,
+      "duration": 8,
+      "triggers": ["ally_ccd", "ally_debuffed", "mechanic_requires_dispel"]
+    },
+    "stack": {
+      "description": "Order party to stack for aoe heal/buff",
+      "urgency": 0.6,
+      "duration": 5,
+      "triggers": ["aoe_heal_ready", "shared_buff", "mechanic_requires_stack"]
+    },
+    "spread": {
+      "description": "Order party to spread out",
+      "urgency": 0.8,
+      "duration": 5,
+      "triggers": ["aoe_incoming", "chain_mechanic", "bomb_mechanic"]
+    }
+  },
+
+  "formations": {
+    "standard": {
+      "tank": {"x": 0, "y": 0},
+      "healer": {"x": 0, "y": -15},
+      "dps_melee": {"x": 3, "y": 2},
+      "dps_ranged": {"x": 0, "y": -20},
+      "support": {"x": -3, "y": -10},
+      "scout": {"x": 20, "y": 0}
+    },
+    "spread": {
+      "tank": {"x": 0, "y": 0},
+      "healer": {"x": -10, "y": -15},
+      "dps_melee": {"x": 5, "y": 5},
+      "dps_ranged": {"x": 10, "y": -20},
+      "support": {"x": -5, "y": -15},
+      "scout": {"x": 25, "y": 10}
+    },
+    "stack": {
+      "tank": {"x": 0, "y": 0},
+      "healer": {"x": 0, "y": -3},
+      "dps_melee": {"x": 1, "y": -1},
+      "dps_ranged": {"x": -1, "y": -3},
+      "support": {"x": 1, "y": -3},
+      "scout": {"x": 0, "y": -2}
+    },
+    "line": {
+      "tank": {"x": -10, "y": 0},
+      "dps_melee": {"x": -5, "y": 0},
+      "support": {"x": 0, "y": 0},
+      "healer": {"x": 5, "y": 0},
+      "dps_ranged": {"x": 10, "y": 0},
+      "scout": {"x": 20, "y": 0}
+    }
+  },
+
+  "priority_systems": {
+    "target_priority": [
+      "boss_mechanic_target",
+      "enemy_healer",
+      "enemy_caster",
+      "low_health_enemy",
+      "focus_target",
+      "nearest_threat"
+    ],
+    "heal_priority": [
+      "tank_below_40pct",
+      "any_below_20pct",
+      "tank_below_70pct",
+      "dps_with_debuff",
+      "any_below_50pct",
+      "pre_hot_tank"
+    ],
+    "buff_priority": [
+      "pre_combat",
+      "burst_phase",
+      "tank",
+      "healer",
+      "dps",
+      "support"
+    ]
+  },
+
+  "adaptive_behavior": {
+    "phase_transitions": {
+      "enabled": true,
+      "detection": "health_percentage_or_ability",
+      "reaction_time": 2.0
+    },
+    "enrage_handling": {
+      "enabled": true,
+      "trigger": "boss_enrage_or_timer",
+      "response": "pop_all_cooldowns_focus_burn"
+    },
+    "wipe_recovery": {
+      "enabled": true,
+      "analyze_cause": true,
+      "adjust_strategy": true,
+      "max_attempts": 5
+    }
+  }
+}
