@@ -405,7 +405,7 @@ function runPerChannel(fn) {
 }
 
 switch (RUN()) {
-  case 'catalog': catalog(defaultCtx()); break;
+  case 'catalog': catalog(targetCtx()); break;
   case 'catalog-all': runPerChannel((ctx) => catalog(ctx)); break;
   case 'diff': {
     const ctx = defaultCtx();

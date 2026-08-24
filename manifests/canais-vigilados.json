@@ -3,86 +3,390 @@
     {
       "handle": "@IndyDevDan",
       "nome": "Indy Dev Dan",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "subagent", "orchestration"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "subagent",
+        "orchestration"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@ColeMedin",
       "nome": "Cole Medin",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "subagent", "agent team", "rag"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "subagent",
+        "agent team",
+        "rag"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@matthew_berman",
       "nome": "Matthew Berman",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "llm", "openai", "anthropic"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "llm",
+        "openai",
+        "anthropic"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@SimonScrapes",
       "nome": "Simon Scrapes",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "claude", "codex", "workflow", "prompt", "1%", "agent"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "claude",
+        "codex",
+        "workflow",
+        "prompt",
+        "1%",
+        "agent"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@celinexu6598",
       "nome": "Celine Xu",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "mcp", "governance", "claude", "agent", "security", "enterprise", "compliance"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "mcp",
+        "governance",
+        "claude",
+        "agent",
+        "security",
+        "enterprise",
+        "compliance"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@ai-foundations",
       "nome": "AI Foundations",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "claude", "codex", "mcp", "workflow", "tutorial"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "tutorial"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@graceleungyl",
       "nome": "Grace Leung",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "claude", "marketing", "content", "library", "team"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "claude",
+        "marketing",
+        "content",
+        "library",
+        "team"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@AIJasonZ",
       "nome": "AI Jason",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "automation", "deep dive"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "automation",
+        "deep dive"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@maestrosdaia",
       "nome": "Maestros da IA",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "agente"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "agente"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@attekitadev",
       "nome": "Attekita Dev",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "graph", "orchestration", "claude", "codex", "mcp"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "graph",
+        "orchestration",
+        "claude",
+        "codex",
+        "mcp"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@FullCycle",
       "nome": "Full Cycle",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "engenharia"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "engenharia"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@Sujeitoprogramador",
       "nome": "Sujeito Programador",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "backend", "python", "django", "ia"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "backend",
+        "python",
+        "django",
+        "ia"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@airevolutionx_pt",
       "nome": "AI Revolution em Português",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "inteligência artificial", "automação", "agente", "notícias ia", "ferramentas ia"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "inteligência artificial",
+        "automação",
+        "agente",
+        "notícias ia",
+        "ferramentas ia"
+      ],
+      "tier": "core"
     },
     {
       "handle": "@inteligenciamilgrau",
       "nome": "Inteligência Mil Grau",
-      "idiomas": ["pt", "pt-PT", "en"],
-      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "inteligência artificial", "automação", "agente", "notícias ia", "ferramentas ia", "robótica", "openrouter", "qwen", "glm"]
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "inteligência artificial",
+        "automação",
+        "agente",
+        "notícias ia",
+        "ferramentas ia",
+        "robótica",
+        "openrouter",
+        "qwen",
+        "glm"
+      ],
+      "tier": "core"
+    },
+    {
+      "handle": "@anthropic-ai",
+      "nome": "Anthropic (oficial)",
+      "tier": "core",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "routine",
+        "mcp",
+        "code"
+      ]
+    },
+    {
+      "handle": "@claude",
+      "nome": "Claude (oficial produto)",
+      "tier": "core",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "routine",
+        "mcp",
+        "code"
+      ]
+    },
+    {
+      "handle": "@aicodeking",
+      "nome": "AI Code King",
+      "tier": "core",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "claude",
+        "agent",
+        "mcp",
+        "tool"
+      ]
+    },
+    {
+      "handle": "@pavanadhav",
+      "nome": "Pavan Adhav",
+      "tier": "core",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "subagent",
+        "agent team",
+        "skill",
+        "claude",
+        "hook"
+      ]
+    },
+    {
+      "handle": "@nateherk",
+      "nome": "Nate Herk (n8n)",
+      "tier": "radar",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "n8n",
+        "automation",
+        "agent",
+        "claude",
+        "workflow",
+        "skill"
+      ]
+    },
+    {
+      "handle": "@sabrinaramonov",
+      "nome": "Sabrina Ramonov",
+      "tier": "radar",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "agent",
+        "automation",
+        "claude",
+        "business",
+        "skill"
+      ]
     }
   ]
 }
