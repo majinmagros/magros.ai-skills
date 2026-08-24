@@ -77,6 +77,12 @@
       "nome": "AI Revolution em Português",
       "idiomas": ["pt", "pt-PT", "en"],
       "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "inteligência artificial", "automação", "agente", "notícias ia", "ferramentas ia"]
+    },
+    {
+      "handle": "@inteligenciamilgrau",
+      "nome": "Inteligência Mil Grau",
+      "idiomas": ["pt", "pt-PT", "en"],
+      "keywords": ["skill", "agent", "claude", "codex", "mcp", "workflow", "ia", "inteligência artificial", "automação", "agente", "notícias ia", "ferramentas ia", "robótica", "openrouter", "qwen", "glm"]
     }
   ]
 }

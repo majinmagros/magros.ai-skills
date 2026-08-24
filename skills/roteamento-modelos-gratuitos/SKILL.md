@@ -96,9 +96,24 @@ automatizar tarefa determinística (isso é `automacao-deterministica`).
 - **Não é SLAs**: providers gratuitos podem sumir da noite pro dia; tenha um
   plano B pago (OpenRouter/DeepSeek, ver `roteamento-modelos-baratos`) para o que importa.
 
+## Nota: tiers gratuitos via OpenRouter (stealth) — 2026-08-23
+
+**Ox Alpha Free** na OpenRouter (`stealth/ox-alpha`, Free/Free, 1M ctx — https://openrouter.ai/stealth/ox-alpha) é um exemplo de tier free temporário via agregador pago. Diferença vs 9router:
+
+| Agregador | Quem paga? | Failover | Risco retenção | Quando usar |
+|---|---|---|---|---|
+| **9router** | VPS + seu tempo (tiers free nativos: Gemini 20 req/dia, Groq, Nvidia, etc.) | automático 429/402/404/410 | baixo (sua conta) | 24/7 barato, controle total do combo |
+| **OpenRouter stealth** | OpenRouter (crédito deles) | manual (trocar `ANTHROPIC_MODEL`) | **alto** — provider anônimo, `openrouter.ai/terms/stealth` permite retenção | teste rápido de modelo stealth, não para dados sensíveis |
+
+Ox Alpha expira em ~1 semana (janela free). Se precisar de free duradouro, prefira 9router com rotação de contas. Se precisar de stealth pontual, use OpenRouter com as 3 env vars (`roteamento-modelos-baratos`).
+
+## Aviso: canal Inteligência Mil Grau — muitos vídeos são members-only
+
+Canal `@inteligenciamilgrau` tem trilha "Inteligência Avançada" exclusiva para membros (nível Aprendiz de IA). IDs como `XaMN61G9cNo`, `jMOYjCCEc2s`, `LqWqm0Kl4Ko`, `Q4B_DVGU_Po` retornam `Join this channel to get access to members-only content` e nunca terão legenda pública. No `diff` eles permanecem em `sem_transcricao` para sempre — filtre-os (pule) no `download`; não é 429 transitório. Pipeline deste repo já pula `XaMN61G9cNo` e detecta `members-only` no log `download.log`.
+
 ## Skills relacionadas
 
-- `roteamento-modelos-baratos` — custo-por-tarefa, OpenRouter, executor barato + verificador forte (complemento pago).
+- `roteamento-modelos-baratos` — custo-por-tarefa, OpenRouter, executor barato + verificador forte (complemento pago) — ver seção "Modelos recentes validados (2026-08-23)" com Qwen/GLM/Grok/Ox Alpha.
 - `routines` — agendar sessões autônomas na nuvem (o "24/7" do uso do VPS).
 - `automacao-deterministica` — o que deve ser script em vez de agente (não queima tokens).
 - `cost-tracking` / `cost-aware-llm-pipeline` — medir o que o roteamento poupa.
