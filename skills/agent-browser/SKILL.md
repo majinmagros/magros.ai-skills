@@ -24,6 +24,15 @@ metadata:
 | **Tokens/consumo** | Baixo (ações diretas) | Mais alto (raciocínio + navegação) |
 | **Casos ideais** | Testes E2E precisos, preencher formulário, screenshot exato, click específico | Automações com objetivo vago, responsividade, variação UI, scraping semântico, "vá até X e me traga Y" |
 
+## Terceira opção: browser-use/browser-harness (CDP direto, enriquecimento 2026-08-24)
+
+Fonte `-EX9I2iYNkU` (Attekita Dev); validado em github.com/browser-use/browser-harness + PyPI `browser-harness`:
+
+- **O que é**: skill que conecta o LLM ao **seu Chrome já aberto** via um websocket CDP editável; o agente lê a **accessibility tree** (`Accessibility.getFullAXTree`) em vez de seletores CSS → imune a mudança de classes/renomeação; escreve helpers reutilizáveis em `agent_helpers.py` no workspace (o harness melhora a cada tarefa).
+- **Diferencial vs Playwright MCP**: usa o navegador real com a sua **sessão autenticada** (logins, cookies) — resolve casos tipo "tirar print do YouTube Studio para relatório" onde API não serve e login é obrigatório.
+- **Quando usar cada um**: Playwright MCP = teste determinístico/CI · Agent Browser = objetivo em linguagem natural sem sessão · browser-harness = sessão autenticada real + páginas hostis (classes randomizadas, popups z-index).
+- ⚠️ Segurança: agente age COM seu usuário logado — use conta com permissão mínima/read-only quando possível; modelo fraco pode escrever script ruim que quebra a página (visto em stress test do vídeo).
+
 ## Instalação
 
 ```bash

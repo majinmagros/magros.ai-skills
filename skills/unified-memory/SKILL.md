@@ -180,3 +180,14 @@ import, or shell-execution tool.
 - **Padrão time `PzaC81yCJg0`**: `Notion` (shared drive + permissions, hold shared context) + `supermemory.ai` (working memory queryable) + `Claude desktop` (UI). Substitua `Notion` por file-sharing equivalente — lógica é tratar contexto como infraestrutura permissionada, não owned per-account. 80% do Claude team system com 20% esforço.
 - **Hermes-inside-Claude `9CiOwbmOKdU`**: 211k★, 1300 Reddit comments, top reason `memory` (30% switches, "Remembering is worth 1000 integrations"). Reconstrua feature de memória dentro do Claude (lembra decisão 6 meses com source) sem VPS/subscription — use Vault + `continuous-learning-v2` para continuidade > chat.
 - **3 funções `4iMZA1omCkM`**: Storage vs Injection vs Recall — out-of-box `CLAUDE.md` hand-maintained + `Memory MD` (5-10 notes após meses, useless) falha em `capture full transcripts`, `inject frequently`, `recall by keywords` token-heavy. Use esta skill + `knowledge-ops` para as 3.
+
+## Enriquecimento 2026-08-24 — governança de memória de agentes (proveniência/TTL/rollback)
+
+Fonte `U48nJCaoH7I` (padrão reportado por time de segurança da Anthropic — claim de vídeo, não doc oficial). Quando memória vira infraestrutura compartilhada entre agentes, persistência não basta; faltam 4 propriedades:
+
+- **Proveniência**: toda entrada carrega origem (quem/qual agente/fonte escreveu e quando) — memória sem fonte não é confiável para decisão.
+- **TTL/expiração**: estado antigo apodrece ("memory rot" — Full Cycle `mG7ZC63xS-k`); entradas operacionais devem expirar ou serem re-validadas.
+- **Consolidação com aprovação humana**: promover memória efêmera → permanente exige gate humano (mesmo princípio do merge gate).
+- **Rollback/undo**: memória corrompida ou envenenada precisa ser reversível — snapshot antes de escrita em massa.
+
+Hoje o Vault cobre storage/injeção/recall; estas 4 propriedades são checklist para quando a memória for multi-agente/sensível.

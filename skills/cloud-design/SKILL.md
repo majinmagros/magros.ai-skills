@@ -133,3 +133,6 @@ Cursor / Cloud Code (implementação)
 ## Enriquecimento 2026-08-20 — Figma plugin alternativa (TY9dyCvFc6Q)
 
 Fonte `TY9dyCvFc6Q` (Figma → Claude/Cursor Perfect Layouts): PNG export = dedução LLM (não fiel); **plugin Figma free** gera layout 1:1 via tokens (cores/tipografia/spacing). Use quando já tem Figma: export via plugin → handoff 1:1, em vez de screenshot. Complementa workflow Cloud Design (protótipo) com source Figma existente.
+## Enriquecimento 2026-08-24 — pipeline template → skill de marketing
+
+Fonte `aF57uCHuXgY` (Grace Leung). Regra prática pós-projeto no Cloud Design: ativo que se repete (carrossel semanal, deck padrão, lead magnet) não deve nascer do zero a cada vez — transforme o design system + template validado em skill ("ativo repetível = skill; one-off = gerar direto"). Fluxo: design system da marca → template com placeholders → export standalone HTML → empacotar como skill com os tokens fixados. Complementa `criar-campanha-visual`.

@@ -142,3 +142,11 @@ Skill: Current overhead 33% → adding 5 servers (~50 tools) would add ~25,000 t
 ## Enriquecimento 2026-08-20 — Fable 5 cost & bloat (d9XCX0PcOq0)
 
 - **Fable 5 $\to$ API** `2026-07-12`: `$10/M in $50/M out`. Flat subscription acaba; token bloat crítico: `Hi` = 31k (19k sky), `context` 37.2k = 4% window (5K system + tools/agents/memory/skills/MCP schemas). Com Fable 30-40c/msg + 3-4c cached vs Sonnet 15c. Checklist: **disable `thinking`**, reduza MCP schemas (cada tool ~500 tokens), corte `CLAUDE.md` >300 lines, limite `SKILL.md` >400, use `cost-tracking` + `roteamento-modelos-baratos` para decidir Fable vs Sonnet (só onde Fable = $ worth).
+
+## Enriquecimento 2026-08-24 — comprimir output de tools (padrão pi-hyper)
+
+Fonte `MsPhMhfvgD4` (AIJasonZ): hook que intercepta o RESULTADO de tools (ex.: bash) e devolve ao modelo só o mínimo relevante. Exemplo citado: `git log` completo (hash+author+date+body+diff por commit) → só o resumo que importa; cortes medidos de **80–96% nos tokens desse tipo de chamada**.
+
+Limitação: pre-tool-use hooks normalmente só *anexam* contexto; modificar o resultado exige interceptação pós-execução (Pi expõe isso nas extensions). No Claude Code, aproximação = **filtrar na origem**: flags/CLI certos (`git log --oneline` em vez de `git log`, `--name-only` em vez de diff completo) ou wrapper script.
+
+Regra prática: filtre na fonte quando puder; hook de pós-processamento só quando a ferramenta não oferece filtro.

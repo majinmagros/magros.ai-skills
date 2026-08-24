@@ -763,3 +763,7 @@ Before marking the agent complete:
 A complete working agent built with this exact architecture would collect from 4+ sources,
 batch Gemini calls, learn from Applied/Rejected decisions stored in Notion, and run
 100% free on GitHub Actions. Follow Steps 1–9 above to build your own.
+
+## Enriquecimento 2026-08-24 — tracker semanal de visibilidade de marca em engines de IA
+
+Fonte `qiqw-_6TUZ0` (Grace Leung/Cowork). Receita: agente roda prompts de compra típicos ("melhor ferramenta para X") em Perplexity/ChatGPT/AI Overviews via browser, registra se/quando a marca aparece, acumula em planilha com abas por engine e coluna de tendência semana a semana. Agendar como job semanal (`routines`). É o "SEO da era answer-engine" — mesmo molde do data-scraper, alvo diferente. Claims do vídeo sobre features específicas do Cowork ainda requerem validação oficial antes de depender delas.

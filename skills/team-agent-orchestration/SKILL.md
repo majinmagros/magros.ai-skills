@@ -109,3 +109,31 @@ Finish each orchestration pass with:
 - Tests and eval evidence.
 - Blockers with owner and next action.
 - New shared skill candidates.
+
+## Enrichment 2026-08-24 — isolated cloud test sandbox per worktree (Crabbox)
+
+Source `1HkqTlXbQmQ` (AIJasonZ); validated: github.com/openclaw/crabbox + crabbox.sh.
+
+**Problem**: N parallel agents in worktrees still share the local dev server,
+ports, and DB instance — one agent's schema migration breaks every other
+session, and modern repos are too heavy to run 10× locally.
+
+**Pattern**: each worktree gets its own disposable cloud box:
+
+1. `Dockerfile` with everything the repo needs (Node, Docker-in, CLIs).
+2. Repo config `.crabbox.yaml`: provider (Daytona/Hetzner/AWS/... snapshot),
+   sync excludes (heavy dirs), env keys pushed over SSH.
+3. Agent flow: warm up box → sync **uncommitted dirty diff** from worktree
+   (rsync over SSH; fingerprint skip on no-op) → run setup + tests remotely →
+   fix locally → next run auto-syncs → release/delete box.
+4. Evidence loop: screenshots/video recordings auto-collected as artifacts,
+   publishable inline in PRs (S3 or GitHub release assets).
+
+**Merge-gate upgrade**: require "crabbox run <e2e suite> passed + artifact
+attached" as the card's evidence before merge — turns review into checking
+proof instead of trusting chat output. `crabbox init --detect` generates a
+repo-local Agent Skill for discovery by coding agents.
+
+Alternatives: exe.dev sandboxes (see `sessoes-orquestradas` enrichment) for
+full VM per agent; local containers when repo is light. Not a CI replacement
+(Crabbox docs are explicit about that).

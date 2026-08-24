@@ -45,3 +45,7 @@ SKILL.md              # instruções de funcionamento
 - **Posse**: prompts e arquivos ficam locais — cancele assinatura sem perder nada.
 - Chaves em `.env`, `.gitignore` cobrindo o arquivo.
 - Se um modelo/fornecedor sumir, o histórico permite regenerar em outro.
+
+## Enriquecimento 2026-08-24 — instruction file de estilo visual aprovado
+
+Fonte `hC00Qdhfjww` (AI Foundations). Quando uma imagem/capa gerada for aprovada: extraia o estilo dela ("extraia este estilo") e persista em `image-styles/<nome>.md` reutilizável — próximas gerações partem do estilo congelado em vez de re-descrever do zero. Mesmo princípio do warm start do `score-loop`, aplicado a identidade visual.

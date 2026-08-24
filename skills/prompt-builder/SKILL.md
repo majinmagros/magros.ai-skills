@@ -43,3 +43,22 @@ Resolve a "preguiça humana": a IA só responde tão bem quanto a instrução
 ## 5. Regra
 
 - Prompt bom não é prompt longo — é prompt que preenche os 4 pilares sem encher linguiça.
+
+## 6. Modo system-prompt (para agentes, 2026-08-24)
+
+Os 4 pilares valem para **user prompts**; para agentes que rodam muitas vezes, o
+maior leverage é o **system prompt** (aplica-se a toda entrada/saída). Padrões
+validados (fonte: IndyDevDan `S_QdQ1G4GlU`; flags em code.claude.com/docs/en/cli-reference):
+
+| Padrão | O que escrever |
+|---|---|
+| **Positive/negative patterns** | Seção "replicue estes padrões" + seção "evite estas palavras/padrões" (lista explícita de tiques do modelo). |
+| **Reference points** | Códigos curtos por categoria (D1/D2=decisões, R1..Rn=risks, F=findings); "preserve os códigos na conversa; não crie códigos para respostas curtas". Permite retomar com "fale mais sobre R6". |
+| **Hard operational boundaries** | "Entregue só o pedido no escopo; não expanda para cleanup/refactor; não afirme conclusão sem evidência; nunca adicione co-author em commit." |
+| **Aliases** | Códigos que expandem na hora (SCR=simplifique/comprima/reponha; ELI18; FOC=sinal principal). Se aparecerem dentro de string maior, não expandir. |
+| **Exemplos reais** | Par user→resposta boa vs user→resposta ruim ("in-context distillation"). Copie a resposta do modelo que você gosta, edite, e use como exemplo. |
+
+Flags oficiais Claude Code: `--append-system-prompt` (preserva o default — usar
+na maioria dos casos), `--system-prompt` (substitui tudo — cuidado), `-file`
+variações (as file são Print-only). Efeito colateral desejado: menos output
+tokens = menos custo e resposta mais rápida.

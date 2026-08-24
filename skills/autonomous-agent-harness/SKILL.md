@@ -281,3 +281,17 @@ Trigger: 30 min before each calendar event
 - Remote dispatch may have rate limits. Design crons with appropriate intervals.
 - Memory files should be kept concise. Archive old data rather than letting files grow unbounded.
 - Always verify that scheduled tasks completed successfully. Add error handling to cron prompts.
+
+## Enriquecimento 2026-08-24 — runbook operacional Hermes Agent (ponta a ponta)
+
+Fonte `KmJ-PUsxMHo` (AI Foundations); comandos validados em hermes-agent.nousresearch.com/docs (Nous Research, conferido 24/08/2026). Complementa `hermes-imports` (que pressupõe Hermes já rodando).
+
+**5 camadas do "funcionário digital 24/7":**
+
+1. **Online**: VPS barato (ex.: KVM2) > máquina local (precisa estar ligada). Instalar: `curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash` → `hermes setup --portal` (OAuth único: modelo + Tool Gateway) ou `hermes setup` completo com chaves próprias.
+2. **Comunicação**: `hermes gateway setup` (plataforma interativa; Telegram/Discord/Slack/WhatsApp/Teams...) · Slack: `hermes slack manifest --write` → colar em api.slack.com/apps (regenerar após `hermes update`) + OAuth bot token + allowlist de member IDs.
+3. **Perfis por papel**: um bot/perfil por função (research, analista...) com modelo próprio e SOUL.md curto (peça ao próprio Hermes para redigir); perfil default = chief-of-staff que roteia pedidos.
+4. **Toolsets mínimos**: memory, cron, session search, task planning, web search; chaves custom e MCP conectados pelo próprio agente.
+5. **Skills auto-melhoráveis**: descreva a rotina ("monitore top 5 concorrentes todo dia e poste briefing no #hermes-research") → cron dispara o perfil certo; feedback ("gostei/não") atualiza a skill.
+
+**Troubleshooting oficial**: respostas vazias → `hermes model`; gateway sem mensagens → re-checar token/allowlist + `hermes gateway status`; sessão perdida → `hermes sessions list`. Migração de máquina: `hermes backup`.

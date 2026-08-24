@@ -54,3 +54,11 @@ da outra ao vivo" — a comunicação é via resume/handoff.
 
 ## Enriquecimento 2026-08-20 — sandbox + exe.dev
 - Fonte `SEI_qIW4o2c`/`WAFUMBLOjHo`: para **scale beyond laptop**, mova sessões para `exe.dev` sandbox VM (isolation + scale + agency). Use Herder/Pi SDK padrão Indy; `cmux`/`tmux` (`dmux-workflows`) para acesso programático aos agentes (evita bottleneck `inside the loop`). Regra: factory em sandbox quando risco ou paralelismo > worktree local.
+
+## Enriquecimento 2026-08-24 — sidekick persistente vs subagent one-shot
+Fonte `wCSPgHpcxdc` (AIJasonZ) + Devin Fusion validado (cognition.com/blog/devin-fusion):
+
+- **Subagent one-shot** (padrão Task): nova sessão a cada spawn → feedback = re-spawn sem contexto → re-trabalho caro.
+- **Sidekick persistente**: sub-agent mantém sessão resumível; o lead manda follow-up pelo mesmo canal e herda todo o contexto — tokens de histórico saem a preço de **cache (~10% do input novo)**.
+- **Advisor perde para orchestrator**: chamar um modelo forte como "conselheiro" exige reenviar o histórico inteiro full-price a cada consulta; orchestrator+executor com contextos próprios cacheados é mais barato e melhor (Devin Fusion: -35% custo no FrontierCode; Fable+sidekick -54% vs Fable puro).
+- No Claude Code isso é o padrão **agent teams** (SendMessage a sessão existente até shutdown explícito). Em tmux puro: `send-keys` + `wait-for -s <sinal>` como sinal de fim (ver `dmux-workflows`).

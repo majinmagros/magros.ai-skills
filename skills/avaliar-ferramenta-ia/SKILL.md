@@ -105,3 +105,12 @@ stack atual, resultado do trial e o veredito com 1 linha de recomendação.
 - `product-lens` — validar o "porquê" antes de construir.
 - `pesquisa-social` / `research-ops` — evidência de usuários reais sobre a ferramenta.
 - `ml-adoption-playbook` — quando a decisão já é adotar um algoritmo no código.
+## Case registrado 2026-08-24 — Pi agent (harness adaptável)
+
+Fonte `MsPhMhfvgD4` (AIJasonZ); repo validado: github.com/earendil-works/pi (npm @earendil-works/pi-coding-agent).
+
+**Promessa**: "o harness deve se adaptar ao usuário, não o contrário" — agente mínimo (read/write/edit/bash) que o próprio agente estende via TypeScript em `.pi/extensions` (`pi.registerTool`, evento `before_agent_start`, `/reload`).
+
+**Leitura pela lente desta skill**: não é concorrente do Claude Code — é aposta diferente. Claude Code/Codex expõem hooks cada vez mais ricos mas o core é fechado; Pi entrega o core aberto e deixa TUDO (UI incluída) como extensão. Custo definidor: você vira mantenedor das suas extensões e herda o risco "extensão de terceiro roda com acesso total" (warning oficial dos pi packages).
+
+**Veredicto sugerido**: adotar como *runtime para produtos* (SDK p/ agente hosted/local, ex.: sessões em DB + tools wrappadas em sandbox) ou se você precisa modificar comportamento impossível via hooks; **wait/ignore** como substituto diário do Claude Code se seu fluxo já resolve com skills+hooks. O padrão aproveitável independente de adoção: permission gate com modelo barato (`agent-guardrails`) e compressão de tool output (`context-budget`).

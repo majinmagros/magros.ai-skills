@@ -204,3 +204,19 @@ npx --yes --package ecc-universal ecc welcome --action configured
 ```
 
 Do not claim that Kimi installed or configured ECC lifecycle hooks.
+
+## Enriquecimento 2026-08-24 — migração de workspace entre harnesses (Claude Code ↔ Codex)
+
+Fonte `cAeKDWa77xI` (Grace Leung). Cenário: o mesmo projeto precisa rodar em outro harness (ou o time usa os dois) sem perder skills, instruções, subagents e MCP.
+
+**O que já existe no repo**: `scripts/sync-ecc-to-codex.sh` — sync ECC→Codex one-way (backup de ~/.codex, merge marker-based do AGENTS.md, prompts gerados dos commands, git hooks, merge add-only de MCP no config.toml; `--dry-run` para prévia).
+
+**Checklist geral de migração (qualquer par de harnesses):**
+
+1. **Scan**: inventariar `.claude/` (skills/agents/commands/hooks/settings) vs destinos canônicos do Codex (`.codex/`, `.agents/`, `AGENTS.md`) — ou equivalentes do harness alvo.
+2. **Plano + backup** antes de converter (o script já faz backup automático).
+3. **Converter formatos**: commands → prompt files; agents → formato de subagent do alvo; skills são portáveis (Agent Skills spec), instruções vão para o arquivo de contexto certo (CLAUDE.md vs AGENTS.md).
+4. **Reconectar MCP**: re-declarar servers na config do alvo (add-only, nunca sobrescrever os existentes).
+5. **Limitação conhecida**: migração NÃO sincroniza arquivos de memória/histórico de sessão — contexto conversacional fica no harness de origem (ver `unified-memory` para compartilhar memória entre harnesses).
+
+Para o caminho reverso (Codex→ECC) ou pares não cobertos pelo script, siga o checklist manual acima e registre divergências como issues do script.

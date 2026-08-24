@@ -145,3 +145,16 @@ explicação; INJECAO → bloqueia e loga.
 - `vibe-security-scanner` — auditores automatizados para apps de IA.
 - `autobots-auto-improvement` — auto-retrain exige guardrails no avaliador.
 - `context-ledger` — ledger de tentativas de injection/jailblock (source/who/kind).
+
+## Enriquecimento 2026-08-24 — permission gate com modelo barato (pré-sessão)
+
+Fonte `MsPhMhfvgD4` (AIJasonZ, extensão do Pi agent; API validada em github.com/earendil-works/pi docs/extensions.md):
+
+Padrão para agentes usados por **time** com níveis de permissão diferentes: antes da mensagem chegar ao agente principal, um **modelo barato e rápido** (ex.: Haiku) decide allow/deny comparando o pedido contra um arquivo de policy (`permission.md` no root). Deny = bloqueia a sessão antes de gastar token do modelo caro ou tocar dado sensível.
+
+```text
+user message ──► gate (Haiku + policy.md) ──allow──► agente principal
+                          └──deny──► "sem permissão para acesso a receita"
+```
+
+Por que funciona: decisão de permissão é classificação simples → modelo barato resolve; policy fica versionada em arquivo, não em prompt solto. Implementável via hooks (`before_agent_start`/`tool_call` block) no Pi, ou PreToolUse hook no Claude Code que chama o gate. Complementa (não substitui) as camadas 1-3 acima.
