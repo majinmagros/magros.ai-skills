@@ -118,3 +118,18 @@ Canal `@inteligenciamilgrau` tem trilha "Inteligência Avançada" exclusiva para
 - `automacao-deterministica` — o que deve ser script em vez de agente (não queima tokens).
 - `cost-tracking` / `cost-aware-llm-pipeline` — medir o que o roteamento poupa.
 - `agent-guardrails` — proteger o agente que você vai rodar 24/7.
+
+### Enriquecimento 2026-08-24 — FCC (Free Claude Code) como proxy multi-provider
+
+Fonte `eVdXom5XDo0` (AI Code King); validado no repo oficial github.com/Alishahryar1/free-claude-code (~48k estrelas, MIT, conferido 24/08/2026).
+
+Proxy local Python que intercepta as chamadas Anthropic Messages de vários coding agents e roteia para providers gratuitos/pagos/locais:
+
+- **49 providers ToS-friendly** (NVIDIA NIM, OpenRouter free tier, Gemini AI Studio, Groq, Cerebras, GitHub Models, DeepSeek direto, Ollama/LM Studio/llama.cpp locais...) — claim de 1.3B+ tokens grátis/mês; remove integrações que violam termos.
+- **Roteamento por tier**: `MODEL_OPUS` / `MODEL_SONNET` / `MODEL_HAIKU` / `MODEL` (fallback) apontam cada classe para um provider diferente — ex.: Opus→Kimi no NIM, Sonnet→OpenRouter free, Haiku→GLM local.
+- **9 agentes suportados**: Claude Code, Codex, Pi, OpenCode, Cline, Hermes, DeepSeek Harness, Grok Build, Muse Code — wrappers `fcc-claude`/`fcc-codex`/`fcc-pi` injetam env/porta/token automaticamente (porta default 8082, Admin UI em `/admin`, hot-reload).
+- **Extras**: fallback chain por modelo, bots Discord/Telegram p/ sessão remota, transcrição de voz via Whisper local ou NIM (`--voice-local`/`--voice-nim`).
+
+Comparado ao 9router (padrão principal desta skill): FCC é mais amplo (multi-agente + tier routing nativo + voz); 9router continua melhor p/ combos com failover automático entre contas. Ambos podem coexistir — FCC expõe endpoint OpenAI-compatible que o 9router pode consumir.
+
+⚠️ "Grátis" depende dos free tiers de terceiros: confira quotas atuais na página de cada provider antes de apostar produção (regra permanente desta skill).
