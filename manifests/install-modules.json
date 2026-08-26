@@ -857,7 +857,10 @@
         "skills/graph-engineering",
         "skills/12-factor-agents",
         "skills/autobots-auto-improvement",
-        "skills/spatial-intelligence-world-models"
+        "skills/spatial-intelligence-world-models",
+        "skills/rlm-recursive-agent",
+        "skills/zed-deltadb-versioning",
+        "skills/buzz-workspace-teaming"
       ],
       "targets": [
         "claude",

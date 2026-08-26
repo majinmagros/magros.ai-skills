@@ -72,6 +72,7 @@ node scripts/yt-oportunidades.mjs download <id> <id> ...
   (o `--sub-langs` aceita regex por idioma).
 - Rate limit do YouTube (HTTP 429) é transitório: o script tenta de novo e
   troca o idioma se preciso. Não desista no primeiro erro.
+- **Volume massivo / timeout:** acervos >1k vídeos sem transcrição estouram timeout síncrono. Não baixe tudo de uma vez. Use lotes fracionados (ex: 50/batch por canal com backoff exponencial) via `download-missing.cjs` — idempotente (pula `.dedup.txt`/`.vtt` existente). Re-rode até zerar `sem_transcricao` no `diff`.
 - Depois deduplica os `.vtt`:
 
 ```
