@@ -1,0 +1,138 @@
+# Fusion Harness Model Stack Template
+# Copy to .fusion-harness/config/model-stack.yaml and customize
+
+models:
+  # ============ S TIER - Architect / Verifier (expensive, powerful) ============
+  - id: claude-opus-5
+    alias: "Rune"
+    provider: anthropic
+    tier: S
+    cost_per_1k_in: 0.015
+    cost_per_1k_out: 0.075
+    max_tokens: 200000
+    role: [architect, verifier, final-integration]
+    hidden_name: true
+    api_env: ANTHROPIC_API_KEY
+    # model: "claude-opus-5-202608"  # versão específica se necessário
+
+  # - id: gpt-5.6-soul
+  #   alias: "Oracle"
+  #   provider: openai
+  #   tier: S
+  #   cost_per_1k_in: 0.030
+  #   cost_per_1k_out: 0.150
+  #   max_tokens: 128000
+  #   role: [architect, verifier]
+  #   hidden_name: true
+  #   api_env: OPENAI_API_KEY
+
+  # ============ A TIER - Builders (cost-effective, fast) ============
+  - id: gemini-3.7-flash
+    alias: "Flux"
+    provider: google
+    tier: A
+    cost_per_1k_in: 0.00035
+    cost_per_1k_out: 0.00035
+    max_tokens: 1000000
+    role: [builder, fast-research, code-generation]
+    hidden_name: true
+    api_env: GOOGLE_API_KEY
+    # base_url: "https://generativelanguage.googleapis.com/v1beta"
+
+  - id: deepseek-v4-pro
+    alias: "Drift"
+    provider: openrouter
+    tier: A
+    cost_per_1k_in: 0.0005
+    cost_per_1k_out: 0.0005
+    max_tokens: 128000
+    role: [builder, deep-thinking, analysis]
+    hidden_name: true
+    api_env: OPENROUTER_API_KEY
+    # base_url: "https://openrouter.ai/api/v1"
+
+  - id: qwen-3.8-27b
+    alias: "Local"
+    provider: local
+    tier: A
+    cost_per_1k_in: 0
+    cost_per_1k_out: 0
+    max_tokens: 32768
+    role: [builder, local-only, privacy-sensitive]
+    hidden_name: true
+    # local config:
+    # endpoint: "http://localhost:11434"  # ollama
+    # model: "qwen2.5:27b"
+    # or: "http://localhost:8000/v1"  # vllm
+
+  - id: kimi-k3
+    alias: "Kimi"
+    provider: openrouter
+    tier: A
+    cost_per_1k_in: 0
+    cost_per_1k_out: 0
+    max_tokens: 200000
+    role: [builder, free-tier, long-context]
+    hidden_name: true
+    api_env: OPENROUTER_API_KEY
+    # free tier on OpenRouter
+
+  - id: glm-5.3-flash
+    alias: "GLM"
+    provider: openrouter
+    tier: A
+    cost_per_1k_in: 0.0001
+    cost_per_1k_out: 0.0001
+    max_tokens: 128000
+    role: [builder, code-generation, chinese]
+    hidden_name: true
+    api_env: OPENROUTER_API_KEY
+
+  # ============ B TIER - Specialized / Lightweight ============
+  - id: claude-sonnet-4
+    alias: "Sonnet"
+    provider: anthropic
+    tier: B
+    cost_per_1k_in: 0.003
+    cost_per_1k_out: 0.015
+    max_tokens: 200000
+    role: [builder, balanced, daily-driver]
+    hidden_name: true
+    api_env: ANTHROPIC_API_KEY
+
+  - id: gpt-5.6-terra
+    alias: "Terra"
+    provider: openai
+    tier: B
+    cost_per_1k_in: 0.005
+    cost_per_1k_out: 0.025
+    max_tokens: 128000
+    role: [builder, balanced]
+    hidden_name: true
+    api_env: OPENAI_API_KEY
+
+  # ============ LOCAL ONLY (no API cost) ============
+  # Adicione modelos locais via ollama/vllm:
+  # - id: llama-3.1-70b
+  #   alias: "Llama70B"
+  #   provider: local
+  #   tier: A
+  #   cost_per_1k_in: 0
+  #   cost_per_1k_out: 0
+  #   max_tokens: 128000
+  #   role: [builder, local-only]
+  #   hidden_name: true
+  #   endpoint: "http://localhost:11434"
+
+# ============ GLOBAL SETTINGS ============
+settings:
+  default_architect: "Rune"
+  default_builders: ["Flux", "Drift", "Local"]
+  max_parallel_builders: 3
+  debate_rounds: 3
+  consensus_threshold: 1.0  # 1.0 = unanimous
+  cost_budget_per_session_usd: 10.0
+  cost_budget_per_workflow_usd: 50.0
+  auto_track_costs: true
+  hide_model_names: true
+  log_level: INFO

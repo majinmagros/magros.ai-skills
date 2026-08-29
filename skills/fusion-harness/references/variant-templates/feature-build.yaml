@@ -1,0 +1,73 @@
+# Feature Build Variant — On-demand feature development
+# Copy to .fusion-harness/config/variants/feature-build.yaml
+
+name: "feature-build"
+description: "Full feature development: spec → tickets → implement → verify"
+trigger:
+  type: "manual"
+  # Or: schedule for sprint planning
+
+model_stack: "model-stack.yaml"
+
+phases:
+  - name: "grill"
+    command: "fh-collaborate"
+    args: >
+      /fh grill with docs
+      Interactive requirements gathering for: $FEATURE_DESCRIPTION
+      Output: decisions.md with all architectural decisions.
+
+  - name: "to-spec"
+    command: "fh-collaborate"
+    args: >
+      Create detailed technical specification from decisions.md.
+      Include: API contracts, data models, UI/UX specs, 
+      error handling, edge cases, migration plan.
+      Output: SPEC.md
+
+  - name: "to-tickets"
+    command: "fh-collaborate"
+    args: >
+      Break SPEC.md into atomic tickets (T1, T2...).
+      Each ticket: description, acceptance criteria, 
+      dependencies, owner (builder), estimated complexity.
+      Output: TICKETS.json
+
+  - name: "implement"
+    command: "fh-collaborate"
+    args: >
+      Execute tickets in dependency order.
+      For each ticket:
+      1. Builder writes implementation
+      2. Builder writes tests (TDD)
+      3. Run tests + lint + typecheck
+      4. If fail: iterate fix (max 3 attempts)
+      5. Commit with conventional commit message
+      Parallelize independent tickets.
+
+  - name: "integrate"
+    command: "fh-collaborate"
+    args: >
+      Architect integrates all tickets.
+      Run full test suite.
+      Verify against SPEC.md acceptance criteria.
+      Generate integration test if needed.
+
+  - name: "verify"
+    command: "fh-opinion"
+    args: >
+      Final verification:
+      - All acceptance criteria met?
+      - Performance benchmarks pass?
+      - Security scan clean?
+      - Documentation updated?
+      - Ready for PR?
+      Output: VERIFICATION_REPORT.md
+
+  - name: "create-pr"
+    command: "gh"
+    args: "pr create --title \"feat: $FEATURE_NAME\" --body-file VERIFICATION_REPORT.md"
+
+cost_budget_usd: 20.0
+max_parallel_builders: 3
+require_human_approval: ["grill", "verify"]

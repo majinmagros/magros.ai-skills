@@ -1,0 +1,53 @@
+# PR Review Variant — Triggered on GitHub push/PR
+# Copy to .fusion-harness/config/variants/pr-review.yaml
+
+name: "pr-review"
+description: "Automated PR review with multi-model analysis"
+trigger:
+  type: "webhook"
+  events: ["pull_request.opened", "pull_request.synchronize"]
+  secret_env: "GITHUB_WEBHOOK_SECRET"
+
+model_stack: "model-stack.yaml"
+
+phases:
+  - name: "fetch-pr"
+    command: "gh"
+    args: "pr view --json files,title,body,baseRefName,headRefName"
+
+  - name: "analyze-changes"
+    command: "fh-collaborate"
+    args: >
+      Analyze the PR changes for:
+      1. Code correctness and logic errors
+      2. Security vulnerabilities
+      3. Performance regressions
+      4. Test coverage gaps
+      5. Architectural consistency
+      6. Breaking changes
+      Output structured findings with severity (critical/high/medium/low).
+
+  - name: "debate-findings"
+    command: "fh-debate"
+    args: >
+      Thesis: "This PR is ready to merge without changes"
+      Debate each finding. Reach consensus on required changes.
+
+  - name: "generate-review"
+    command: "fh-collaborate"
+    args: >
+      Create comprehensive PR review comment with:
+      - Summary (approve / request changes / comment)
+      - Critical findings (must fix)
+      - Suggestions (nice to have)
+      - Questions for author
+      - Automated test results
+      Post as PR review via GitHub API.
+
+  - name: "update-status"
+    command: "gh"
+    args: "pr checks update --status completed --conclusion success"
+
+cost_budget_usd: 2.0
+timeout_minutes: 30
+require_approval_for_critical: true

@@ -1,0 +1,55 @@
+# Nightly Refactor Variant — Runs daily at 02:00
+# Copy to .fusion-harness/config/variants/nightly-refactor.yaml
+
+name: "nightly-refactor"
+description: "Automated nightly refactoring with tests"
+schedule:
+  cron: "0 2 * * *"  # Daily at 02:00
+  timezone: "UTC"
+
+model_stack: "model-stack.yaml"
+
+phases:
+  - name: "setup"
+    command: "fh-collaborate"
+    args: >
+      Analyze the codebase for refactoring opportunities.
+      Focus on: duplicate code, long functions, unclear naming, 
+      missing tests, performance bottlenecks.
+      Output a prioritized list of refactoring tasks with risk assessment.
+
+  - name: "grill"
+    command: "fh-opinion"
+    args: >
+      For each refactoring task identified, what's the best approach?
+      Consider: risk vs reward, test coverage needed, migration strategy.
+
+  - name: "to-spec"
+    command: "fh-collaborate"
+    args: >
+      Create detailed refactoring specs for top 3 priority tasks.
+      Include: current code, target code, test plan, rollback plan.
+
+  - name: "to-tickets"
+    command: "fh-collaborate"
+    args: >
+      Break each spec into atomic tickets with dependencies.
+      Assign to builders based on expertise.
+
+  - name: "implement"
+    command: "fh-collaborate"
+    args: >
+      Execute refactoring tickets. Run tests after each.
+      If tests fail, revert and try alternative approach.
+      Commit each successful refactor separately.
+
+  - name: "verify"
+    command: "fh-opinion"
+    args: >
+      Review all changes. Did we improve code quality?
+      Run full test suite. Check performance benchmarks.
+      Approve or request revisions.
+
+cost_budget_usd: 5.0
+notify_on_failure: true
+notify_on_success: false
