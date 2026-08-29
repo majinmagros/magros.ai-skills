@@ -389,6 +389,27 @@
         "automação"
       ],
       "tier": "radar"
+    },
+    {
+      "handle": "@anwarhermuche",
+      "nome": "Anwar Hermuche",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "automação",
+        "agente"
+      ],
+      "tier": "core"
     }
   ]
 }
