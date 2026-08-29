@@ -374,19 +374,21 @@
       ]
     },
     {
-      "handle": "@sabrinaramonov",
-      "nome": "Sabrina Ramonov",
-      "tier": "radar",
+      "handle": "@gabrieladamuchi",
+      "nome": "Gabriel Adamuchi - IA Fácil",
       "idiomas": [
+        "pt",
+        "pt-PT",
         "en"
       ],
       "keywords": [
-        "agent",
-        "automation",
+        "skill",
         "claude",
-        "business",
-        "skill"
-      ]
+        "agent",
+        "ia",
+        "automação"
+      ],
+      "tier": "radar"
     }
   ]
 }

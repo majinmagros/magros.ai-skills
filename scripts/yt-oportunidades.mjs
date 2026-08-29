@@ -374,8 +374,8 @@ function sinceArg(ctx) {
 function targetCtx() {
   const i = process.argv.indexOf('--canal');
   if (i === -1) return defaultCtx();
-  const handle = String(process.argv[i + 1] || '').replace(/^@/, '');
-  const ctx = allChannelCtxs().find((c) => c.label.replace(/^@/, '') === handle);
+  const handle = String(process.argv[i + 1] || '').replace(/^@/, '').toLowerCase();
+  const ctx = allChannelCtxs().find((c) => c.label.replace(/^@/, '').toLowerCase() === handle || c.nome.toLowerCase().includes(handle));
   if (!ctx) {
     process.stderr.write(`Canal não encontrado na config: ${handle}\n`);
     process.exit(1);
