@@ -1,0 +1,112 @@
+{
+  "total_checks": 9,
+  "passed": 2,
+  "failed": 5,
+  "warnings": 2,
+  "checks": [
+    {
+      "check": "email_strategy",
+      "passed": true,
+      "details": "Email pessoal configurado (nao corporativo)",
+      "recommendations": [
+        "Use email pessoal (Gmail/Outlook/Proton) que voce controle",
+        "Evite email corporativo/universitário",
+        "Configure 2FA no provedor de email",
+        "Configure recovery email"
+      ]
+    },
+    {
+      "check": "memory_import",
+      "passed": false,
+      "details": "Memory import nao encontrado",
+      "recommendations": [
+        "Exporte memory do ChatGPT/outra ferramenta",
+        "Importe no Claude: Settings → Memory → Import",
+        "Execute entrevista de validacao via voz (Sponcle)"
+      ]
+    },
+    {
+      "check": "model_routing",
+      "passed": false,
+      "details": "Model routing nao configurado",
+      "recommendations": [
+        "Crie .claude/model-routing.yaml com routing_rules",
+        "Configure: daily_tasks → sonet, complex_tasks → opus, reasoning_tasks → fable",
+        "Defina swap_rules para troca automática por complexidade/custo"
+      ]
+    },
+    {
+      "check": "project_templates",
+      "passed": false,
+      "details": "Diretorio .claude/project-templates nao encontrado",
+      "recommendations": [
+        "Crie diretorio .claude/project-templates/",
+        "Adicione templates: course, client-project, automation, product, research, minimal"
+      ]
+    },
+    {
+      "check": "connectors",
+      "passed": true,
+      "details": "Conectores verificados via API do Claude",
+      "recommendations": [
+        "Prioridade 1: gmail, google_calendar",
+        "Prioridade 2: google_drive, notion",
+        "Prioridade 3: github, linear, slack",
+        "MCP: filesystem, postgres, redis"
+      ]
+    },
+    {
+      "check": "skills",
+      "passed": false,
+      "details": "1 skills instaladas",
+      "recommendations": [
+        "Instale skills base: meeting-notes-to-notion, weekly-report-generator, code-review-automation, email-triage, calendar-optimizer, file-organizer, research-synthesis, code-review-checklist, deploy-checklist, security-audit"
+      ]
+    },
+    {
+      "check": "settings_hooks",
+      "passed": false,
+      "details": "Nenhum hook",
+      "missing_hooks": [
+        "PreToolUse: ['pretool-block-env', 'pretool-block-rm-rf']",
+        "PreToolUse: ['pretool-block-env', 'pretool-block-rm-rf']",
+        "PostToolUse: ['cost-tracker']",
+        "Stop: ['stop-run-tests']",
+        "StartSession: ['startsession-inject-context']"
+      ],
+      "recommendations": [
+        "Adicione hook: PreToolUse: ['pretool-block-env', 'pretool-block-rm-rf']",
+        "Adicione hook: PreToolUse: ['pretool-block-env', 'pretool-block-rm-rf']",
+        "Adicione hook: PostToolUse: ['cost-tracker']",
+        "Adicione hook: Stop: ['stop-run-tests']",
+        "Adicione hook: StartSession: ['startsession-inject-context']"
+      ]
+    },
+    {
+      "check": "vps_setup",
+      "passed": false,
+      "details": "Cloud Code VPS nao configurado (opcional)",
+      "recommendations": [
+        "Para uso 24/7: Configure VPS (Hostinger KVM1, DigitalOcean, AWS)",
+        "Instale code-cloud app via Hostinger",
+        "Configure web console e IDE integration"
+      ]
+    },
+    {
+      "check": "cloud_code",
+      "passed": false,
+      "details": "Cloud Code nao verificado (opcional)",
+      "recommendations": [
+        "Instale Cloud Code: local, IDE (VS Code/Cursor), ou VPS",
+        "Para VPS: use Hostinger KVM1 + code-cloud app"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "passed": 2,
+    "failed": 5,
+    "warnings": 2,
+    "score": "2/7 obrigatorios OK"
+  }
+}

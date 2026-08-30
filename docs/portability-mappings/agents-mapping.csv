@@ -1,0 +1,6 @@
+﻿agent,claude-code,claude-project,opencode,cursor,codex,gemini-cli,zed,hermes,openclaw,antigravity,notes
+planner,.claude/agents/,.opencode/agents/,.cursor/agents/,codex-agents.md,Agent Skills,extension,.hermes/agents/,.openclaw/agents/,custom,
+architect,.claude/agents/,.opencode/agents/,.cursor/agents/,codex-agents.md,Agent Skills,extension,.hermes/agents/,.openclaw/agents/,custom,
+tdd-guide,.claude/agents/,.opencode/agents/,.cursor/agents/,codex-agents.md,Agent Skills,extension,.hermes/agents/,.openclaw/agents/,custom,
+code-reviewer,.claude/agents/,.opencode/agents/,.cursor/agents/,codex-agents.md,Agent Skills,extension,.hermes/agents/,.openclaw/agents/,custom,
+security-reviewer,.claude/agents/,.opencode/agents/,.cursor/agents/,codex-agents.md,Agent Skills,extension,.hermes/agents/,.openclaw/agents/,custom

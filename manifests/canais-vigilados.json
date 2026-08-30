@@ -410,6 +410,128 @@
         "agente"
       ],
       "tier": "core"
+    },
+    {
+      "handle": "@gucampelo",
+      "nome": "Gustavo Campelo - Desenvolvedor",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "skills",
+        "threejs",
+        "gsap",
+        "3d",
+        "web-design",
+        "img2threejs",
+        "gsap-skills",
+        "motion-design",
+        "scroll-animations",
+        "awwwards",
+        "portfolio",
+        "three.js",
+        "scrolltrigger",
+        "webgl",
+        "react-three-fiber",
+        "r3f",
+        "shader",
+        "blender",
+        "spline"
+      ],
+      "tier": "core"
+    },
+    {
+      "handle": "@joydevstudio",
+      "nome": "Joy Dev Studio",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "skills",
+        "threejs",
+        "unreal-engine",
+        "unreal",
+        "ue5",
+        "game-dev",
+        "3d-modeling",
+        "3d-modeling-ai",
+        "rodin",
+        "hyper3d",
+        "chatavatar",
+        "3d-face-modeling",
+        "game-dev-ai",
+        "voidlessdev",
+        "hyper3d-rodin",
+        "metahuman",
+        "ue5-7"
+      ],
+      "tier": "core"
+    },
+    {
+      "handle": "@LucianaPapini",
+      "nome": "Luciana Papini | Automação com IA",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "skills",
+        "claude",
+        "automation",
+        "automacao",
+        "workflow",
+        "mcp",
+        "prompt-engineering",
+        "prompt",
+        "agent",
+        "agents",
+        "produtividade",
+        "produtividade-ia",
+        "no-code",
+        "low-code",
+        "business-automation",
+        "workflow-automation"
+      ],
+      "tier": "core"
+    },
+    {
+      "handle": "@KarineLago",
+      "nome": "Karine Lago",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "skills",
+        "automation",
+        "automacao",
+        "productivity",
+        "produtividade",
+        "ai",
+        "ia",
+        "workflow",
+        "development",
+        "desenvolvimento",
+        "programming",
+        "programacao",
+        "no-code",
+        "low-code",
+        "business-automation",
+        "workflow-automation",
+        "ai-tools",
+        "ferramentas-ia"
+      ],
+      "tier": "core"
     }
   ]
 }

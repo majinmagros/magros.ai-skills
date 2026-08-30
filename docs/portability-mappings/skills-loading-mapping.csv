@@ -1,0 +1,4 @@
+﻿skill,claude-code,claude-project,opencode,cursor,codex,gemini-cli,zed,qwen,kimi,hermes,openclaw,antigravity,notes
+*,auto: .claude/skills/,auto: .opencode/skills/,auto: .cursor/skills/,auto: .codex/skills/,Agent Skills format,via extensions,auto: .qwen/skills/,auto: .kimi/skills/,auto: .hermes/skills/,auto: .openclaw/skills/,custom,
+fusion-harness,auto,auto,auto,auto,Agent Skills,manual,manual,manual,auto,auto,custom,requires adapters for commands/hooks
+rules-to-hooks-auditor,auto,auto,auto,auto,Agent Skills,manual,manual,manual,auto,auto,custom,requires adapters for hooks

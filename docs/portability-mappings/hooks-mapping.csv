@@ -1,0 +1,7 @@
+﻿event,claude-code,claude-project,opencode,cursor,codex,gemini-cli,zed,hermes,openclaw,antigravity,notes
+PreToolUse,PreToolUse,PreToolUse,pre_tool,onSave,pre_exec,via Agent Skills,extension API,PreToolUse,PreToolUse,custom,
+PostToolUse,PostToolUse,PostToolUse,post_tool,onRun,post_exec,via Agent Skills,extension API,PostToolUse,PostToolUse,custom,
+Stop,Stop,Stop,stop,onTerminal,stop,via Agent Skills,extension API,Stop,Stop,custom,
+StartSession,StartSession,StartSession,start_session,,,via Agent Skills,,StartSession,StartSession,custom,
+SubAgentStop,SubAgentStop,SubAgentStop,,,via Agent Skills,,SubAgentStop,SubAgentStop,custom,
+Notification,Notification,Notification,,,via Agent Skills,,Notification,Notification,custom
