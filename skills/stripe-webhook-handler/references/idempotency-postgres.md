@@ -1,0 +1,3 @@
+# Postgres idempotency
+
+SQL + helper

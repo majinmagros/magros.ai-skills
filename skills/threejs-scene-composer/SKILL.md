@@ -1,454 +1,446 @@
 ---
 name: threejs-scene-composer
-description: |
-  Composição modular de cenas Three.js: pipeline modular estilo "elemento por elemento" para criar cenas 3D complexas bloco por bloco (geometrias, materiais, iluminação, câmera, física, animações). Baseado no workflow do Gustavo Campelo (vídeo "Dessa Forma Crio Sites 3D Interativos com IA").
-  Use quando: "compor cena threejs", "threejs scene composition", "modular threejs scene", "element by element threejs", "threejs scene pipeline", "compor cena 3d bloco a bloco".
-  Não use para: deploy (use threejs-deploy-pipeline), shaders (use threejs-shader-effects), voxel systems (use threejs-voxel-block-system).
-  Outcome: Pipeline modular para compor cenas Three.js complexas elemento por elemento com registry de geometrias, materiais, iluminação, câmera, física e animações.
+description: Use when building Three.js 3D sites with modular scene composition — referências visuais → img2threejs (blocos individuais) → composição Three.js elemento por elemento (geometrias, materiais, iluminação, câmera, física, animações) → GSAP ScrollTrigger → deploy Hostinger/Vite. Based on Gustavo Campelo workflow "Dessa Forma Crio Sites 3D Interativos com IA". Triggers: "threejs scene composition", "composição modular threejs", "element by element threejs", "threejs scene pipeline", "img2threejs to threejs", "modular 3d scene blocks".
 metadata:
-  origin: AUTORAL
-  source_docs:
-    - https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
-    - https://threejs.org/docs/#manual/en/introduction/How-to-animate
-    - https://github.com/mrdoob/three.js/tree/dev/examples
-  platforms: [claude-code, opencode, cursor, codex, gemini-cli, hermes, openclaw]
-  requires_adapters: []
+  origin: ECC
+  module: framework-language
+  cost: medium
+  stability: beta
+  defaultInstall: false
 ---
 
-# Three.js Scene Composer — Compositor Modular de Cenas Three.js
+# Skill: threejs-scene-composer — Composição Modular de Cenas Three.js
 
-Pipeline modular para compor cenas Three.js complexas **elemento por elemento** (geometrias, materiais, iluminação, câmera, física, animações) seguindo o workflow "bloco por bloco" do Gustavo Campelo.
+Pipeline modular estilo "elemento por elemento" para criar cenas 3D complexas bloco por bloco (geometrias, materiais, iluminação, câmera, física, animações). Baseado no workflow do Gustavo Campelo (vídeo "Dessa Forma Crio Sites 3D Interativos com IA").
 
-## Quando usar (gatilhos concretos)
+## Validação Oficial
 
-- "Componha esta cena Three.js elemento por elemento"
-- "Crie pipeline modular para cena 3D complexa"
-- "Estruture cena Three.js com registry de geometrias/materiais/luzes"
-- "Componha cena 3D bloco a bloco (estilo Minecraft)"
-- "Estruture scene graph Three.js de forma modular"
+| Claim | Status | Fonte |
+|---|---|---|
+| Three.js r110+ scene composition | ✅ | Context7 `/mrdoob/three.js` |
+| GSAP ScrollTrigger animations | ✅ | Context7 `/greensock/gsap-skills` |
+| Vite build + deploy | ✅ | Context7 `/vitejs/vite` |
+| Hostinger VPS deploy | ✅ | Context7 `/hostinger/api-cli` |
+| img2threejs blocos individuais | ✅ | Video Gustavo Campelo (gucampelo) |
+| GSAP ScrollTrigger pin/scrub | ✅ | Context7 `/greensock/gsap-skills` |
 
-## Quando NÃO usar
+---
 
-- Deploy de site 3D → use `threejs-deploy-pipeline`
-- Shaders customizados → use `threejs-shader-effects`
-- Sistema voxel estilo Minecraft → use `threejs-voxel-block-system`
-- Patterns responsivos → use `threejs-responsive-patterns`
-- Constants para tuning → use `threejs-config-constants`
+## Quando usar
 
-## Pipeline Modular (Workflow "Elemento por Elemento")
+- "Quero compor uma cena Three.js bloco por bloco"
+- "Pipeline modular: referências → img2threejs → Three.js → GSAP → deploy"
+- "Criar blocos 3D estilo Minecraft (grama, pedra, portal, cerejeira)"
+- "Constants expostas para tuning: câmera, portal, elevação, velocidades"
+- "Shaders customizados: pixelation, comet trails, mouse distortion"
+- "Patterns responsivos: mobile/desktop, touch vs mouse, LOD"
+- "Deploy Vite + Hostinger KVM1"
 
-### 1. Scene Registry (Fundação)
+---
 
-```javascript
-// scene-registry.js — Registry central da cena
-export class SceneRegistry {
-  constructor() {
-    this.geometries = new Map();
-    this.materials = new Map();
-    this.meshes = new Map();
-    this.lights = new Map();
-    this.cameras = new Map();
-    this.animations = new Map();
-    this.physics = new Map();
-  }
+## Pipeline (6 etapas)
 
-  // Geometrias
-  registerGeometry(name, geometry) { this.geometries.set(name, geometry); }
-  getGeometry(name) { return this.geometries.get(name); }
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ 1. REFS     │───▶│ 2. IMG2     │───▶│ 3. COMPOSE  │───▶│ 4. ANIMATE  │───▶│ 5. RESPONSIVE│───▶│ 6. DEPLOY   │
+│ Visual      │    │ THREEJS     │    │ SCENE       │    │ GSAP        │    │ PATTERNS    │    │ VITE+HOST   │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+```
 
-  // Materiais
-  registerMaterial(name, material) { this.materials.set(name, material); }
-  getMaterial(name) { return this.materials.get(name); }
+---
 
-  // Meshes (combinação geometria + material)
-  registerMesh(name, mesh) { this.meshes.set(name, mesh); }
-  getMesh(name) { return this.meshes.get(name); }
+## Etapa 1: REFS — Referências Visuais
 
-  // Limpeza
-  dispose() {
-    this.geometries.forEach(g => g.dispose());
-    this.materials.forEach(m => m.dispose());
-  }
+**Input:** Screenshots, URLs, Figma, conceitos visuais
+**Processo:** Análise de formas geométricas, materiais, iluminação, câmera
+**Output:** Especificação de blocos (geometrias, materiais, posições)
+
+```json
+{
+  "blocks": [
+    { "id": "grass", "type": "box", "material": "MeshStandardMaterial", "color": "#4CAF50", "position": [0,0,0] },
+    { "id": "stone", "type": "box", "material": "MeshStandardMaterial", "texture": "stone.jpg", "position": [1,0,0] },
+    { "id": "portal", "type": "ring", "material": "ShaderMaterial", "uniforms": {...}, "position": [0,2,0] }
+  ],
+  "camera": { "position": [10,10,10], "target": [0,0,0], "fov": 60 },
+  "lighting": { "ambient": 0x404040, "directional": { "color": 0xffffff, "intensity": 1, "position": [10,20,10] } }
 }
 ```
 
-### 2. Geometry Factory (Blocos Básicos)
+---
 
+## Etapa 2: IMG2THREEJS — Blocos Individuais
+
+**Tool:** `img2threejs` (skill existente)
+**Input:** Imagem de referência + especificação do bloco
+**Output:** Código Three.js por bloco (geometry + material + mesh)
+
+**Exemplo bloco grama:**
 ```javascript
-// geometry-factory.js — Factory de geometrias reutilizáveis
-import * as THREE from 'three';
-
-export class GeometryFactory {
-  static createBox(size = 1, options = {}) {
-    const { width = size, height = size, depth = size } = options;
-    return new THREE.BoxGeometry(width, height, depth);
-  }
-
-  static createSphere(radius = 1, options = {}) {
-    const { widthSegments = 32, heightSegments = 16 } = options;
-    return new THREE.SphereGeometry(radius, widthSegments, heightSegments);
-  }
-
-  static createCylinder(radiusTop = 1, radiusBottom = 1, height = 1, options = {}) {
-    const { radialSegments = 32 } = options;
-    return new THREE.CylinderGeometry(radiusTop, radiusBottom, height, radialSegments);
-  }
-
-  static createPlane(width = 1, height = 1, options = {}) {
-    const { widthSegments = 1, heightSegments = 1 } = options;
-    return new THREE.PlaneGeometry(width, height, widthSegments, heightSegments);
-  }
-
-  // Minecraft-style blocks
-  static createBlock(type, options = {}) {
-    const { size = 1 } = options;
-    switch (type) {
-      case 'grass': return this.createBox(size);
-      case 'stone': return this.createBox(size);
-      case 'dirt': return this.createBox(size);
-      case 'wood': return this.createBox(size);
-      case 'leaves': return this.createBox(size);
-      case 'water': return this.createPlane(size, size);
-      default: return this.createBox(size);
-    }
-  }
+// grass-block.js
+export function createGrassBlock(position = [0,0,0]) {
+  const geometry = new THREE.BoxGeometry(1, 1, 1);
+  const material = new THREE.MeshStandardMaterial({ 
+    color: 0x4CAF50,
+    roughness: 0.8,
+    metalness: 0.1
+  });
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.position.set(...position);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  return mesh;
 }
 ```
 
-### 3. Material Registry (PBR + Estilizados)
-
+**Registry de blocos:**
 ```javascript
-// material-registry.js — Registry de materiais PBR e estilizados
-import * as THREE from 'three';
-
-export class MaterialRegistry {
-  constructor() {
-    this.materials = new Map();
-    this._createDefaults();
-  }
-
-  _createDefaults() {
-    // PBR Realistas
-    this.register('grass', new THREE.MeshStandardMaterial({
-      color: 0x4a7c2e,
-      roughness: 0.8,
-      metalness: 0.0,
-      roughnessMap: null,
-      normalMap: null
-    }));
-
-    this.register('stone', new THREE.MeshStandardMaterial({
-      color: 0x888888,
-      roughness: 0.9,
-      metalness: 0.1
-    }));
-
-    this.register('water', new THREE.MeshPhysicalMaterial({
-      color: 0x006994,
-      transmission: 0.9,
-      opacity: 0.8,
-      roughness: 0.1,
-      metalness: 0.0,
-      ior: 1.33,
-      thickness: 0.5
-    }));
-
-    // Estilizados (toon/cartoon)
-    this.register('toon-grass', new THREE.MeshToonMaterial({
-      color: 0x4a7c2e,
-      gradientMap: this._createToonGradient()
-    }));
-
-    this.register('toon-stone', new THREE.MeshToonMaterial({
-      color: 0x888888,
-      gradientMap: this._createToonGradient()
-    });
-  }
-
-  _createToonGradient() {
-    const canvas = document.createElement('canvas');
-    canvas.width = 256; canvas.height = 1;
-    const ctx = canvas.getContext('2d');
-    const gradient = ctx.createLinearGradient(0, 0, 256, 0);
-    gradient.addColorStop(0, '#2d5a1a');
-    gradient.addColorStop(0.5, '#4a7c2e');
-    gradient.addColorStop(1, '#6db83a');
-    const texture = new THREE.CanvasTexture(canvas);
-    texture.minFilter = THREE.NearestFilter;
-    texture.magFilter = THREE.NearestFilter;
-    return texture;
-  }
-
-  register(name, material) { this.materials.set(name, material); }
-  get(name) { return this.materials.get(name); }
-}
+// blocks/registry.js
+export const blockRegistry = {
+  grass: createGrassBlock,
+  stone: createStoneBlock,
+  obsidian: createObsidianBlock,
+  portal: createPortalBlock,
+  cherry: createCherryBlock,
+  log: createLogBlock
+};
 ```
 
-### 4. Scene Composer (Orquestrador Principal)
+---
+
+## Etapa 3: COMPOSE — Scene Composition
+
+**Arquitetura modular (scene-composer.js):**
 
 ```javascript
-// scene-composer.js — Orquestrador principal da composição
+// scene-composer.js
 import * as THREE from 'three';
-import { SceneRegistry } from './scene-registry.js';
-import { GeometryFactory } from './geometry-factory.js';
-import { MaterialRegistry } from './material-registry.js';
+import { blockRegistry } from './blocks/registry.js';
+import { CONFIG } from './config/constants.js';
 
 export class SceneComposer {
-  constructor() {
-    this.registry = new SceneRegistry();
-    this.geometryFactory = new GeometryFactory();
-    this.materialRegistry = new MaterialRegistry();
+  constructor(canvas) {
     this.scene = new THREE.Scene();
-    this._setupDefaults();
-  }
-
-  _setupDefaults() {
-    // Background
-    this.scene.background = new THREE.Color(0x87ceeb);
-    
-    // Fog
-    this.scene.fog = new THREE.Fog(0x87ceeb, 50, 200);
-  }
-
-  // === BLOCOS BÁSICOS ===
-  
-  addBlock(type, position, options = {}) {
-    const geometry = this.geometryFactory.createBlock(type, options);
-    const material = this.materialRegistry.get(type) || this.materialRegistry.get('stone');
-    const mesh = new THREE.Mesh(geometry, material);
-    
-    mesh.position.copy(position);
-    mesh.castShadow = true;
-    mesh.receiveShadow = true;
-    
-    this.registry.registerMesh(`${type}-${position.x}-${position.y}-${position.z}`, mesh);
-    this.scene.add(mesh);
-    
-    return mesh;
-  }
-
-  addCustomBlock(geometryName, materialName, position, options = {}) {
-    const geometry = this.registry.getGeometry(geometryName) || 
-                     this.geometryFactory.createBox(1, options);
-    const material = this.registry.getMaterial(materialName) || 
-                     this.materialRegistry.get('stone');
-    
-    const mesh = new THREE.Mesh(geometry, material);
-    mesh.position.copy(position);
-    mesh.castShadow = true;
-    mesh.receiveShadow = true;
-    
-    const name = `custom-${position.x}-${position.y}-${position.z}`;
-    this.registry.registerMesh(name, mesh);
-    this.scene.add(mesh);
-    
-    return mesh;
-  }
-
-  // === ILUMINAÇÃO ===
-  
-  setupLighting(config = {}) {
-    const { 
-      ambientColor = 0xffffff, 
-      ambientIntensity = 0.5,
-      directionalColor = 0xffffff,
-      directionalIntensity = 1,
-      directionalPosition = new THREE.Vector3(50, 100, 50),
-      enableShadows = true
-    } = config;
-
-    // Ambient
-    const ambient = new THREE.AmbientLight(ambientColor, ambientIntensity);
-    this.scene.add(ambient);
-    this.registry.lights.set('ambient', ambient);
-
-    // Directional (Sol)
-    const directional = new THREE.DirectionalLight(directionalColor, directionalIntensity);
-    directional.position.copy(directionalPosition);
-    
-    if (enableShadows) {
-      directional.castShadow = true;
-      directional.shadow.mapSize.width = 2048;
-      directional.shadow.mapSize.height = 2048;
-      directional.shadow.camera.near = 0.5;
-      directional.shadow.camera.far = 200;
-      directional.shadow.camera.left = -50;
-      directional.shadow.camera.right = 50;
-      directional.shadow.camera.top = 50;
-      directional.shadow.camera.bottom = -50;
-      directional.shadow.bias = -0.001;
-    }
-    
-    this.scene.add(directional);
-    this.registry.lights.set('directional', directional);
-
-    return { ambient, directional };
-  }
-
-  // === CÂMERA ===
-  
-  setupCamera(config = {}) {
-    const { 
-      fov = 60, 
-      aspect = window.innerWidth / window.innerHeight, 
-      near = 0.1, 
-      far = 1000,
-      position = new THREE.Vector3(0, 20, 30),
-      target = new THREE.Vector3(0, 0, 0)
-    } = config;
-
-    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.copy(position);
-    camera.lookAt(target);
-    
-    this.registry.cameras.set('main', camera);
-    return camera;
-  }
-
-  // === FÍSICA (Opcional - Cannon.js / Rapier) ===
-  
-  setupPhysics(config = {}) {
-    // Integração opcional com Rapier.js ou Cannon-es
-    // this.physics = new PhysicsWorld(config);
-    // this.registry.physics.set('world', this.physics);
-  }
-
-  // === ANIMAÇÃO ===
-  
-  addAnimation(name, animation) {
-    this.registry.animations.set(name, animation);
-  }
-
-  // === RENDER LOOP ===
-  
-  animate(renderer, clock) {
-    const delta = clock.getDelta();
-    
-    // Update animations
-    this.registry.animations.forEach(anim => {
-      if (anim.update) anim.update(delta);
+    this.camera = new THREE.PerspectiveCamera(
+      CONFIG.camera.fov,
+      window.innerWidth / window.innerHeight,
+      0.1, 1000
+    );
+    this.renderer = new THREE.WebGLRenderer({ 
+      canvas, 
+      antialias: true, 
+      alpha: true,
+      powerPreference: 'high-performance'
     });
-
-    // Update physics
-    // if (this.physics) this.physics.step(delta);
-
-    renderer.render(this.scene, this.registry.cameras.get('main'));
+    this.blocks = new Map();
+    this.init();
   }
 
-  // === UTILITÁRIOS ===
-  
-  getScene() { return this.scene; }
-  getRegistry() { return this.registry; }
-  
-  dispose() {
-    this.registry.dispose();
-    this.scene.clear();
+  init() {
+    this.setupRenderer();
+    this.setupCamera();
+    this.setupLighting();
+    this.setupControls();
+    this.composeScene();
+    this.animate();
+  }
+
+  composeScene() {
+    // Compor bloco por bloco conforme registry
+    Object.entries(this.sceneSpec.blocks).forEach(([id, spec]) => {
+      const createBlock = blockRegistry[spec.type];
+      if (createBlock) {
+        const block = createBlock(spec.position, spec.options);
+        this.scene.add(block);
+        this.blocks.set(id, block);
+      }
+    });
+    
+    // Portal center
+    if (this.sceneSpec.portal) {
+      const portal = blockRegistry.portal(this.sceneSpec.portal.position);
+      this.scene.add(portal);
+      this.blocks.set('portal', portal);
+    }
+  }
+
+  addBlock(type, position, options = {}) {
+    const createBlock = blockRegistry[type];
+    if (!createBlock) throw new Error(`Block type ${type} not registered`);
+    const block = createBlock(position, options);
+    this.scene.add(block);
+    return block;
+  }
+
+  removeBlock(id) {
+    const block = this.blocks.get(id);
+    if (block) {
+      this.scene.remove(block);
+      this.blocks.delete(id);
+    }
   }
 }
 ```
 
-### 5. Uso Prático (Exemplo Completo)
+**Constants expostas (config/constants.js):**
+```javascript
+export const CONFIG = {
+  camera: {
+    fov: 60,
+    position: [15, 15, 15],
+    target: [0, 0, 0],
+    minZoom: 5,
+    maxZoom: 50
+  },
+  portal: {
+    center: [0, 2, 0],
+    radius: 2,
+    rotationSpeed: 0.01
+  },
+  island: {
+    elevation: 0.5,
+    position: [0, 0, 0]
+  },
+  speeds: {
+    rotation: 0.005,
+    float: 0.02,
+    camera: 0.05
+  },
+  materials: {
+    grass: { color: 0x4CAF50, roughness: 0.8 },
+    stone: { color: 0x757575, roughness: 0.9 },
+    portal: { 
+      vertexShader: portalVertexShader,
+      fragmentShader: portalFragmentShader,
+      uniforms: { time: { value: 0 }, colorA: { value: new THREE.Color(0x00ffff) }, colorB: { value: new THREE.Color(0xff00ff) } }
+    }
+  }
+};
+```
+
+---
+
+## Etapa 4: ANIMATE — GSAP ScrollTrigger
+
+**Integração GSAP + Three.js:**
 
 ```javascript
-// main.js — Exemplo de uso completo
-import * as THREE from 'three';
-import { SceneComposer } from './scene-composer.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// animations/scroll-animations.js
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Setup
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-document.body.appendChild(renderer.domElement);
+gsap.registerPlugin(ScrollTrigger);
 
-const composer = new SceneComposer();
-const camera = composer.setupCamera();
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
+export function setupScrollAnimations(composer) {
+  const { camera, blocks, portal } = composer;
 
-composer.setupLighting({
-  enableShadows: true,
-  directionalPosition: new THREE.Vector3(50, 100, 50)
-});
+  // Camera scroll animation
+  gsap.to(camera.position, {
+    z: 50,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#canvas-container',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1
+    }
+  });
 
-// === COMPOSIÇÃO ELEMENTO POR ELEMENTO ===
+  // Portal rotation
+  gsap.to(portal.rotation, {
+    y: Math.PI * 2,
+    ease: 'none',
+    repeat: -1,
+    duration: 20
+  });
 
-// Chão
-composer.addBlock('grass', new THREE.Vector3(0, -0.5, 0), { size: 100 });
+  // Block float animation
+  blocks.forEach((block, id) => {
+    gsap.to(block.position, {
+      y: '+=0.5',
+      duration: 2 + Math.random() * 2,
+      ease: 'sine.inOut',
+      yoyo: true,
+      repeat: -1
+    });
+  });
 
-// Blocos estilo Minecraft
-const blocks = [
-  { type: 'grass', pos: [0, 0, 0] },
-  { type: 'stone', pos: [1, 0, 0] },
-  { type: 'dirt', pos: [0, 0, 1] },
-  { type: 'wood', pos: [2, 0, 0] },
-];
+  // Camera orbit on scroll
+  ScrollTrigger.create({
+    trigger: '#canvas-container',
+    start: 'top top',
+    end: 'bottom bottom',
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const radius = 30;
+      camera.position.x = Math.sin(progress * Math.PI * 4) * radius;
+      camera.position.z = Math.cos(progress * Math.PI * 4) * radius;
+      camera.lookAt(0, 0, 0);
+    }
+  });
 
-blocks.forEach(b => composer.addBlock(b.type, new THREE.Vector3(...b.pos)));
-
-// Árvore simples
-const trunk = composer.addBlock('wood', new THREE.Vector3(5, 0.5, 5), { size: 1 });
-const leaves = composer.addBlock('leaves', new THREE.Vector3(5, 2, 5), { size: 3 });
-
-// Água
-const water = composer.addBlock('water', new THREE.Vector3(-10, -0.4, -10), { size: 20 });
-
-// Objeto customizado
-const customGeo = new THREE.ConeGeometry(1, 2, 8);
-composer.registry.registerGeometry('cone', customGeo);
-composer.registry.registerMaterial('red', new THREE.MeshStandardMaterial({ color: 0xff0000 }));
-composer.addCustomBlock('cone', 'red', new THREE.Vector3(-5, 1, 0));
-
-// === ANIMAÇÃO ===
-const clock = new THREE.Clock();
-
-function animate() {
-  requestAnimationFrame(animate);
-  composer.animate(renderer, clock);
-  controls.update();
+  // Pin section
+  ScrollTrigger.create({
+    trigger: '#canvas-section',
+    start: 'top top',
+    end: '+=3000',
+    pin: true,
+    pinSpacing: true,
+    scrub: 1
+  });
 }
-
-animate();
 ```
 
 ---
 
-## Referências Oficiais (Validados 2026-08-30)
+## Etapa 5: RESPONSIVE — Patterns
 
-- [Three.js Scene Creation](https://threejs.org/docs/#manual/en/introduction/Creating-a-scene)
-- [Three.js Animation System](https://threejs.org/docs/#manual/en/introduction/How-to-animate)
-- [Three.js Examples](https://github.com/mrdoob/three.js/tree/dev/examples)
+**Adaptive Quality (responsive-renderer.js):**
+```javascript
+export class ResponsiveRenderer {
+  constructor(canvas, options = {}) {
+    this.canvas = canvas;
+    this.qualityPresets = {
+      low: { pixelRatio: 1, shadowMap: false, antialias: false },
+      medium: { pixelRatio: Math.min(window.devicePixelRatio, 1.5), shadowMap: true, antialias: true },
+      high: { pixelRatio: window.devicePixelRatio, shadowMap: true, antialias: true, toneMapping: THREE.ACESFilmicToneMapping }
+    };
+    this.currentPreset = 'medium';
+    this.renderer = this._createRenderer();
+    this._setupResizeObserver();
+    this._setupDevicePixelRatio();
+  }
+
+  _createRenderer() {
+    const preset = this.qualityPresets[this.currentPreset];
+    return new THREE.WebGLRenderer({
+      canvas: this.canvas,
+      antialias: preset.antialias,
+      alpha: true,
+      powerPreference: 'high-performance'
+    });
+  }
+
+  setQuality(preset) {
+    if (this.qualityPresets[preset]) {
+      this.currentPreset = preset;
+      this.renderer.dispose();
+      this.renderer = this._createRenderer();
+      this.resize();
+    }
+  }
+
+  resize() {
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setPixelRatio(this.qualityPresets[this.currentPreset].pixelRatio);
+  }
+}
+```
+
+**Touch vs Mouse Unificado:**
+```javascript
+export function setupUnifiedControls(renderer, camera) {
+  let isTouch = false;
+  
+  renderer.domElement.addEventListener('touchstart', () => { isTouch = true; });
+  renderer.domElement.addEventListener('mousedown', () => { isTouch = false; });
+
+  // Unified pointer events
+  renderer.domElement.addEventListener('pointerdown', onPointerDown);
+  renderer.domElement.addEventListener('pointermove', onPointerMove);
+  renderer.domElement.addEventListener('pointerup', onPointerUp);
+}
+```
 
 ---
 
-## Checklist de Entrega
+## Etapa 6: DEPLOY — Vite + Hostinger
 
-- [ ] `SceneRegistry` implementado com Maps tipados
-- [ ] `GeometryFactory` com blocos Minecraft + custom
-- [ ] `MaterialRegistry` com PBR + Toon materials
-- [ ] `SceneComposer` orquestrando tudo
-- [ ] `setupLighting()` com sombras configuráveis
-- [ ] `setupCamera()` com OrbitControls
-- [ ] Exemplo `main.js` funcional
-- [ ] `dispose()` para limpeza de memória
+**vite.config.js otimizado:**
+```javascript
+// vite.config.js
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+
+export default defineConfig({
+  root: '.',
+  publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.debug']
+      }
+    },
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
+      output: {
+        manualChunks: {
+          three: ['three'],
+          gsap: ['gsap', 'gsap/ScrollTrigger'],
+          vendor: ['dat.gui', 'stats.js']
+        }
+      }
+    }
+  },
+  server: {
+    port: 3000,
+    open: true
+  }
+});
+```
+
+**Deploy Hostinger (GitHub Actions):**
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to Hostinger
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASS }}
+          local-dir: ./dist/
+          server-dir: public_html/
+```
 
 ---
 
-## Adapters (Por Plataforma)
+## Referências
 
-```
-adapters/
-├── opencode/
-│   ├── hooks/
-│   ├── commands/
-│   └── README.md
-├── cursor/
-│   ├── hooks/
-│   └── README.md
-├── codex/
-│   ├── hooks/
-│   └── README.md
-└── ...
-```
+- `references/threejs-composition.md` — Scene composition patterns
+- `references/gsap-scrolltrigger.md` — GSAP + Three.js integration
+- `references/vite-deploy.md` — Vite build + Hostinger deploy
+- `references/config-constants.md` — Exposed constants system
+- `references/responsive-patterns.md` — Mobile/desktop, LOD, adaptive quality
+
+---
+
+## Scripts
+
+- `scripts/compose-scene.js` — SceneComposer class + block registry
+- `scripts/scroll-animations.js` — GSAP ScrollTrigger integration
+- `scripts/responsive-renderer.js` — Adaptive quality + touch/mouse
+- `scripts/deploy-hostinger.js` — FTP deploy to Hostinger
+- `scripts/config-constants.js` — Exposed constants for tuning
