@@ -1,5 +1,5 @@
 ---
-name: pubmed-database
+name: scientific-db-pubmed-database
 description: Direct PubMed and NCBI E-utilities search workflows for biomedical literature, MeSH queries, PMID lookup, citation retrieval, and API-backed literature monitoring.
 metadata:
   origin: community

@@ -1,6 +1,6 @@
 ---
 name: claude-md-auditor
-description: |
+description: >-
   `/doctor` automation: mede linhas/palavras do CLAUDE.md, sugere trims, path-specific rules, HTML comments, prompt-for-next-session. Baseado no vídeo do Simon Scrapes "19 Claude Code Mistakes".
   Use quando: "claude md auditor", "claude md length auditor", "claude md trim", "claude md path specific rules", "claude md html comments", "claude md prompt for next session", "doctor claude".
   Não use para: general context budget (use context-budget), strategic compact (use strategic-compact).

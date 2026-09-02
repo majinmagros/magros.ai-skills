@@ -1,6 +1,6 @@
 ---
 name: claude-model-router
-description: |
+description: >-
   Estratégia de roteamento de modelos: Sonet (diário), Opus/Fable (complexo), swap mid-task, cost tracking per task. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "claude model router", "roteamento modelos claude", "sonet vs opus", "swap model mid task", "cost tracking per task", "model routing strategy".
   Não use para: roteamento geral de LLMs (use roteamento-modelos-baratos), cost tracking geral (use cost-aware-llm-pipeline).

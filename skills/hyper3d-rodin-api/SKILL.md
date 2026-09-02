@@ -1,6 +1,6 @@
 ---
 name: hyper3d-rodin-api
-description: |
+description: >-
   API/credits system, model versions (DreamFace v1/v2, cartoon, hero), download formats (FBX/GLB/USDZ), MetaHuman/Studio export, credit optimization strategies. Baseado no vídeo Joy Dev Studio "3D Face Modeling is a THING OF THE PAST!".
   Use quando: "hyper3d rodin api", "rodin api credits", "rodin model versions", "rodin download formats", "rodin api credits", "rodin credit optimization", "hyper3d rodin api key".
   Não use para: ChatAvatar pipeline (use hyper3d-rodin-pipeline), MetaHuman Identity (use metahuman-identity-pipeline), MetaHuman to Unreal (use metahuman-to-unreal-pipeline).

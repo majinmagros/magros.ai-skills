@@ -1,6 +1,6 @@
 ---
 name: img2threejs
-description: |
+description: >-
   Converte imagem estática em código Three.js/WebGL otimizado do zero. Analisa a imagem, identifica formas geométricas, materiais, iluminação e gera cena 3D interativa renderizada via WebGL/WebGPU. Use quando: "imagem para 3D", "img2threejs", "image to threejs", "gerar threejs de imagem", "static image to interactive 3D", "webgl from image". Non-triggers: modelagem 3D manual, GLTF/USDZ loaders, photogrammetry, AI 3D generation (Meshy, Tripo, CSM), Lottie/SVG animation. Outcome: código Three.js completo (scene, camera, renderer, geometry, materials, lights, controls, animation loop) escrito do zero, otimizado para performance, interativo (OrbitControls), sem depender de assets externos.
 metadata:
   origin: ECC

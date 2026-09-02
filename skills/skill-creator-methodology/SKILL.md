@@ -1,6 +1,6 @@
 ---
 name: skill-creator-methodology
-description: |
+description: >-
   Metodologia Skill Creator: detectar repetição → documentar → criar → testar → versionar → share. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "criar skill methodology", "metodologia criar skill", "skill creator process", "como criar skill", "skill development lifecycle". Non-triggers: usar skill existente (use skill-scout), instalar skill (use encontrar-skill).
   Outcome: Metodologia padronizada para criar skills: detectar repetição → documentar processo → criar skill → testar → versionar → share.

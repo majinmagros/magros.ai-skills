@@ -1,6 +1,6 @@
 ---
 name: metahuman-unreal-blueprint
-description: |
+description: >-
   BP setup: Character BP, Camera, Movement, Animation BP, IK Rig reference, Foot locking, Virtual bones. Baseado no vídeo Joy Dev Studio "3D Face Modeling is a THING OF THE PAST!".
   Use quando: "metahuman blueprint setup", "metahuman character blueprint", "metahuman unreal blueprint", "metahuman character bp", "metahuman anim bp", "metahuman camera setup", "metahuman movement setup", "metahuman ik rig reference".
   Não use para: MetaHuman Identity Solve (use metahuman-identity-pipeline), Animation retarget (use metahuman-animation-retarget), MetaHuman to Unreal (use metahuman-to-unreal-pipeline).

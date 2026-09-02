@@ -1,6 +1,6 @@
 ---
 name: threejs-responsive-patterns
-description: |
+description: >-
   Patterns responsivos Three.js: mobile/desktop, touch vs mouse, performance scaling, LOD (Level of Detail), adaptive quality. Baseado no vídeo do Gustavo Campelo (responsivo mobile/desktop, touch vs mouse).
   Use quando: "threejs responsive", "threejs mobile desktop", "threejs touch mouse", "threejs LOD", "threejs performance scaling", "threejs adaptive quality", "threejs mobile optimization".
   Não use para: composição de cena (use threejs-scene-composer), shaders (use threejs-shader-effects), deploy (use threejs-deploy-pipeline).

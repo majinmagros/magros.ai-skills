@@ -1,6 +1,6 @@
 ---
 name: motion-design-skill
-description: |
+description: >-
   Official LottieFiles Motion Design Skill — teaches AI to implement microinteractions and smooth transitions (fade-ins, button effects, SVG/Lottie animations) automatically using Lottie-web best practices. Use when: "lottie", "lottiefiles", "microinteractions", "fade in animation", "button hover effect", "card entrance animation", "svg animation", "lottie json", "bodymovin", "ux motion", "polish ui". Non-triggers: GSAP/ScrollTrigger, Framer Motion, Three.js, CSS animations only, video editing. Outcome: AI produces Lottie-web code with SVG renderer, proper cleanup, performance optimization (quality/subframe), event handling, and automatic microinteraction patterns for cards, buttons, modals, loading states.
 metadata:
   origin: ECC

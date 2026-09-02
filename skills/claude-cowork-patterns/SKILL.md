@@ -1,6 +1,6 @@
 ---
 name: claude-cowork-patterns
-description: |
+description: >-
   Cowork patterns: task execution, file ops, folder processing, recurring tasks. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "claude cowork patterns", "cowork patterns claude", "task execution patterns", "file operations patterns", "folder processing patterns", "recurring tasks claude". Non-triggers: automação apenas API, automação desktop-only.
   Outcome: Padrões Cowork: task execution, file ops, folder processing, recurring tasks, approval gates.

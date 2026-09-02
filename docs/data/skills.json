@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-02T14:52:07.926Z",
+  "generatedAt": "2026-09-02T15:14:36.755Z",
   "repo": "majinmagros/magros.ai-skills",
   "counts": {
-    "total": 406,
+    "total": 409,
     "autorais": 45,
-    "ecc": 361,
+    "ecc": 364,
     "modules": 20
   },
   "skills": [
@@ -599,13 +599,13 @@
     {
       "id": "buzz-workspace-teaming",
       "name": "buzz-workspace-teaming",
-      "description": "Use when implementing Block Buzz workspace — humans and AI agents as teammates with shared workspace, identity system, starter agents, per-agent model routing, and free-tier AP usage (Kimi K3 via free APIs). Triggers on \"Buzz\", \"Block Buzz\", \"workspace teammates\", \"human-agent teaming\", \"Kimi K3 free\", \"starter agents\".",
+      "description": "Use when implementing Block Buzz workspace — humans and AI agents as teammates with shared workspace, identity keys, VPS relay, worktrees, per-agent model routing, and free-tier (Kimi K3 via OpenRouter). Triggers on \"Buzz\", \"Block Buzz\", \"workspace teammates\", \"human-agent teaming\", \"Kimi K3 free\", \"starter agents\", \"bus.xyz\", \"WSS relay\".",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
       "stability": "stable",
       "defaultInstall": false,
-      "body": "# Buzz Workspace Teaming\n\nImplement multi-agent team workspaces where humans and AI agents act as peers (Block Buzz pattern).\n\n## Core Concepts\n- **Shared Workspace**: Channel-based context where humans and agents collaborate.\n- **Identity System**: Cryptographic or structured agent identities with distinct roles (e.g., researcher, copywriter, reviewer).\n- **Per-Agent Model Routing**: Assign lightweight models for coordination/routing and frontier models for complex code generation.\n- **Free/Cost-Effective Tiers**: Connect harness endpoints to low-cost or free-tier providers (OpenRouter, Nvidia Build API, local runtimes).\n\n## Implementation Steps\n1. Configure channel topologies and roles.\n2. Set up agent harnesses (Claude Code, Codex, Goose) via Agent Client Protocol (ACP).\n3. Bind specific models and routing rules per agent.\n4. Establish verification gates to ensure agents do not merge unverified outputs.",
+      "body": "# Buzz Workspace Teaming — Block Buzz (Jack Dorsey) + VPS 24/7\n\n> Fonte: `Maestros da IA — DpiAtwZODnw` (1041 linhas, bus.xyz, Jack Dorsey/Block), transcript `DpiAtwZODnw.pt.dedup.txt:6-1030`\n\nChat de equipe onde humanos e agentes sentam como pares, com cadeira e crachá, delegam entre si sem aprovação por mensagem.\n\n## Quando usar\n\n- Workspace 24/7 onde agentes conversam e repassam tarefas sem você acordado\n- Múltiplos harnesses (Claude Code, Codex, Cursor, Hermes, OpenClaw) na mesma comunidade\n- Precisa de audit trail assinado + worktrees paralelos + mobile\n\n## Arquitetura (3 peças)\n\n- **Desktop App** (`bus.xyz`) — janela de comunicação, conecta harnesses\n- **Community** na **VPS** (Hostinger KVM2 Docker) — não fecha com notebook; `WSS` relay URL `wss://...cloud`\n- **Buzz Relay** (centro) + Postgres/Redis/files/Git/search; `worktrees` para agentes paralelos sem conflito; toda ação assinada crypto + registrada\n\nBuzz não tem modelo; modelos são seus agentes.\n\n## Deploy VPS (Hostinger)\n\n1. `bus.xyz` → Desktop (ou Android) → criar identidade → salvar **chave privada** (sem senha, `public=address`)\n2. VPS → Gerenciar Docker → Catálogo → `bus` → colar código relay → Implantar → Abrir → copiar `WSS` até `cloud`\n3. Buzz App → Join Community → colar `WSS` → nome + emoji → `Take me Buzz` → Settings → Agents → escolher provider/harness (Cloud Code, Codex, Hermes, `bus agent` + OpenRouter + API key) → Save\n\n## Identidade e Permissões\n\n- Par de chaves por humano/agente; tudo assinado\n- Níveis por canal e repositório; Git nativo nos worktrees\n\n## Persona starter library (9 do vídeo)\n\n| Agente | Papel | Prompt essencial | Harness sugerido |\n|---|---|---|---|\n| Caio | Roteirista | `Use pauta + pesquisa para roteiro PT-BR com hook 20s, blocos, brow, CTA comunidade; sem hype` | Claude Code (Anthropic humanizado) |\n| Davi | Produtor técnico | `Roteiro → plano executável: comandos, código, N8N, env, riscos + alternativa segura` | Codex GPT-5.6 |\n| Kengi/KJ | Design visual | `Analisa thumbnail/página: composição, hierarquia, contraste, tipografia; briefing minimalista` | Cloud Code |\n| Carol | Carrossel | `Ideia complexa → sequência visual persuasiva, títulos, CTAs` | Codex |\n| Laura | Copy | `Analisa oferta: clareza, promessa, prova, CTA → títulos/hooks sem clichê` | Cloud Code |\n| Lia | Diretora criativa | `YouTube packaging: 3 títulos + thumb texto/composição, casal protagonista quando aplicável` | Cloud Code |\n| Lisa | Pesquisadora conteúdo | `Encontra fatos confiáveis, insites, temas em alta sobre IA` | Codex GPT-5.6 Terra |\n| Nina | Pesquisadora técnica | `Valida afirmações, limitações, custos, checklist técnico; não escreva roteiro final` | Codex Sol |\n| Zeca | Estrategista | `Tendência → ângulo, promessa, público, 5 títulos, briefing thumb, estrutura; sinalize o que verificar` | Cloud Code |\n\nCrie via `Agents → +` → nome + system prompt + modelo → Save.\n\n## Canais e roteamento por agente\n\n- **Canais**: `Channels → Create` → nome/descrição, expiração (temp/indefinido), visibilidade private/public (equipe só vê public)\n- **Model routing**: `bus agent` → Provider `OpenRouter` → `Kimi K3` free tier; por agente escolha `Cloud Code` (escrita) vs `Codex GPT-5.6 Terra` (barato técnico) vs `Sol` (custo/velocidade)\n\n## Delegation chain (multi-agente auditado)\n\nMencione com `@` senão não respondem. Ex `marketing maestros na IA`:\n```\n@laura analise landing https://... : clareza, promessa, prova, CTA → resumo + pontos fracos + nova copy por sessão (não invente)\n@kengi analise design com copy da Laura → HTML responsivo único com diagnóstico/executivo/antes-depois/prévia + checklist; escolha reviewer entre agentes (ex: Lia) para checar copy/design/responsivo; se falhar, devolva para Laura/Kengi; só entregue HTML após aprovação + 5 mudanças impacto\n```\nAcompanhe em `Inbox` e via navegador Playwright MCP ao vivo.\n\n## Mobile\n\nSettings → Mobile → escanear QR no app celular → todo time + agentes no bolso.\n\n## Referências\n\n- `references/personas.md` — 9 prompts completos\n- `references/delegation-pattern.md` — template chain auditada\n- Vídeo: https://www.youtube.com/watch?v=DpiAtwZODnw",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/buzz-workspace-teaming"
     },
     {
@@ -670,7 +670,7 @@
     },
     {
       "id": "ck-cli",
-      "name": "ck",
+      "name": "ck-cli",
       "description": "Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js scripts — behavior is consistent across model versions.",
       "origin": "ecc",
       "module": null,
@@ -707,7 +707,7 @@
     {
       "id": "claude-account-optimizer",
       "name": "claude-account-optimizer",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -719,7 +719,7 @@
     {
       "id": "claude-chrome-automation",
       "name": "claude-chrome-automation",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -731,7 +731,7 @@
     {
       "id": "claude-connector-strategy",
       "name": "claude-connector-strategy",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -743,7 +743,7 @@
     {
       "id": "claude-cowork-patterns",
       "name": "claude-cowork-patterns",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -767,7 +767,7 @@
     {
       "id": "claude-md-auditor",
       "name": "claude-md-auditor",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -779,7 +779,7 @@
     {
       "id": "claude-model-router",
       "name": "claude-model-router",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -791,7 +791,7 @@
     {
       "id": "claude-project-template",
       "name": "claude-project-template",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -799,6 +799,18 @@
       "defaultInstall": null,
       "body": "# Claude Project Template — Templates de Projeto por Tipo\n\nTemplates de projeto por tipo: **course, client-project, automation, product, research** — com structure, .claude/, docs, scripts, connectors.\n\n## Quando usar (gatilhos concretos)\n\n- \"Template de projeto para curso\"\n- \"Estrutura de projeto para cliente\"\n- \"Template de automação\"\n- \"Estrutura de produto/SaaS\"\n- \"Template de pesquisa\"\n\n## Quando NÃO usar\n\n- Prototipagem rápida sem estrutura\n- Projetos sem estrutura definida\n- Scripts únicos sem reutilização\n\n## Templates Disponíveis\n\n### 1. Course Template\n\n```\ncourse/\n├── .claude/\n│   ├── project-instructions.md\n│   ├── skills/ (course-specific)\n│   └── connectors/ (youtube, drive)\n├── modules/\n│   ├── module-01/\n│   │   ├── lessons/\n│   │   ├── assets/\n│   │   └── quizzes/\n│   └── ...\n├── assets/\n│   ├── images/\n│   ├── videos/\n│   └── downloads/\n├── scripts/\n│   ├── build.py\n│   └── deploy.py\n└── README.md\n```\n\n### 2. Client Project Template\n\n```\nclient-project/\n├── .claude/\n│   ├── project-instructions.md\n│   ├── skills/ (client-specific)\n│   └── connectors/ (gmail, calendar, drive, notion)\n├── docs/\n│   ├── requirements.md\n│   ├── architecture.md\n│   ├── deploy.md\n│   └── api-contracts.md\n├── src/\n├── tests/\n├── deploy/\n└── README.md\n```\n\n### 3. Automation Template\n\n```\nautomation/\n├── .claude/\n│   ├── project-instructions.md\n│   ├── skills/ (workflow skills)\n│   └── connectors/ (gmail, calendar, drive, sheets)\n├── workflows/\n│   ├── daily-report.yaml\n│   ├── weekly-review.yaml\n│   └── monthly-billing.yaml\n├── scripts/\n│   ├── run-daily.py\n│   └── deploy.py\n└── schedules/\n    └── cron.yaml\n```\n\n### 4. Product Template\n\n```\nproduct/\n├── .claude/\n│   ├── project-instructions.md\n│   ├── skills/ (feature-dev, code-review)\n│   └── connectors/ (github, linear, slack)\n├── specs/\n├── src/\n├── tests/\n├── .github/\n│   └── workflows/\n└── docs/\n```\n\n### 5. Research Template\n\n```\nresearch/\n├── .claude/\n│   ├── project-instructions.md\n│   ├── skills/ (deep-research, synthesis)\n│   └── connectors/ (web, arxiv, github)\n├── sources/\n├── analysis/\n├── reports/\n└── README.md\n```\n\n---\n\n## Criar Projeto a partir de Template\n\n```bash\n# CLI usage\nclaude-project-template create --template course --name \"My Course\"\nclaude-project-template create --template client-project --name \"Client ABC\"\nclaude-project-template create --template automation --name \"Daily Reports\"\n```\n\n```python\n# create-project-from-template.py\nTEMPLATES = {\n    \"course\": {\"description\": \"Curso online com módulos, aulas, assets\", \"structure\": {...}},\n    \"client-project\": {\"description\": \"Projeto de cliente com requirements, arch, deploy\", \"structure\": {...}},\n    \"automation\": {\"description\": \"Automação com workflows, scripts, cron\", \"structure\": {...}},\n    \"product\": {\"description\": \"Produto/SaaS com specs, src, tests, CI/CD\", \"structure\": {...}},\n    \"research\": {\"description\": \"Pesquisa com sources, analysis, reports\", \"structure\": {...}},\n    \"minimal\": {\"description\": \"Projeto mínimo apenas com .claude/\", \"structure\": {...}}\n}\n\ndef create_project(template, name, target_dir):\n    template_info = TEMPLATES[template]\n    target = Path(target_dir) / name\n    \n    # Create structure\n    for path, content in template_info[\"structure\"].items():\n        # Create dirs/files\n    \n    # Create .claude/project-instructions.md\n    # Create skills/ connectors/ as per template\n    \n    return {\"success\": True, \"created\": created_files}\n```\n\n---\n\n## .claude/project-instructions.md Template\n\n```markdown\n# {{PROJECT_NAME}} - Project Instructions\n\n## Overview\n{{DESCRIPTION}}\n\n## Project Type\n{{TEMPLATE_TYPE}}\n\n## Conventions\n- Code style: {{STYLE_GUIDE}}\n- Git: {{GIT_CONVENTIONS}}\n- Commits: {{COMMIT_CONVENTION}}\n\n## Commands\n- dev: {{DEV_COMMAND}}\n- test: {{TEST_COMMAND}}\n- build: {{BUILD_COMMAND}}\n- lint: {{LINT_COMMAND}}\n\n## Skills Available\n{{SKILLS_LIST}}\n\n## Connectors Configured\n{{CONNECTORS_LIST}}\n\n## Project Structure\n{{STRUCTURE_TREE}}\n\n## Important Files\n- `docs/requirements.md` - Requirements\n- `docs/architecture.md` - Architecture decisions\n- `.claude/project-instructions.md` - This file\n```\n\n---\n\n## Integração com Skill Creator\n\n```python\n# Integration with criar-skill\n# When creating a new skill, it can suggest project template\n\ndef suggest_template(project_type: str) -> str:\n    templates = {\n        \"course\": \"course\",\n        \"client\": \"client-project\",\n        \"automation\": \"automation\",\n        \"saas\": \"product\",\n        \"research\": \"research\",\n        \"quick\": \"minimal\"\n    }\n    return templates.get(project_type, \"minimal\")\n```\n\n---\n\n## Referências Oficiais\n\n- [Luciana Papini Video](https://www.youtube.com/watch?v=Bezlzmti6_U)\n\n---\n\n## Adapters (Por Plataforma)\n\n```\nadapters/\n├── opencode/\n│   ├── hooks/\n│   └── README.md\n├── cursor/\n│   ├── hooks/\n│   └── README.md\n├── codex/\n│   ├── hooks/\n│   └── README.md\n└── ...\n```",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/claude-project-template"
+    },
+    {
+      "id": "claude-voice-workflow",
+      "name": "claude-voice-workflow",
+      "description": "Use when dictating prompts via voice (Sponcle/Whisper) to Claude — voice interview, transcription cleanup, prompt engineering from audio. Triggers on \"voice workflow\", \"Sponcle\", \"ditado por voz\", \"entrevista por voz\", \"Whisper prompt\".",
+      "origin": "ecc",
+      "module": null,
+      "cost": null,
+      "stability": null,
+      "defaultInstall": null,
+      "body": "# Claude Voice Workflow — Ditado por Voz para Prompts\n\n> Fonte: `Maestros da IA — Luciana Papini` (pending materialization). Exclusivo comunidade, aqui stub ECC.\n\nTransforma áudio em prompt estruturado sem fricção.\n\n## Quando usar\n\n- Quer ditar ideia longa caminhando, sem digitar\n- Entrevista por voz para extrair requisitos (prompt interview)\n- Transcrição ruidosa que precisa virar prompt dos 4 pilares\n\n## Workflow\n\n1. Grave em Sponcle/Whisper (pt-BR) → `transcript.txt`\n2. Limpe: remova hesitações, normalize, preserve intenção\n3. Converta para prompt dos 4 pilares (`prompt-builder`) → valide com usuário\n4. Envie para Claude/Code\n\n## Checklist\n\n- [ ] Áudio 3-60s com contexto\n- [ ] Transcript limpo\n- [ ] Prompt validado antes de executar",
+      "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/claude-voice-workflow"
     },
     {
       "id": "click-path-audit",
@@ -823,6 +835,30 @@
       "defaultInstall": false,
       "body": "# ClickHouse Analytics Patterns\n\nClickHouse-specific patterns for high-performance analytics and data engineering.\n\n## When to Activate\n\n- Designing ClickHouse table schemas (MergeTree engine selection)\n- Writing analytical queries (aggregations, window functions, joins)\n- Optimizing query performance (partition pruning, projections, materialized views)\n- Ingesting large volumes of data (batch inserts, Kafka integration)\n- Migrating from PostgreSQL/MySQL to ClickHouse for analytics\n- Implementing real-time dashboards or time-series analytics\n\n## Overview\n\nClickHouse is a column-oriented database management system (DBMS) for online analytical processing (OLAP). It's optimized for fast analytical queries on large datasets.\n\n**Key Features:**\n- Column-oriented storage\n- Data compression\n- Parallel query execution\n- Distributed queries\n- Real-time analytics\n\n## Table Design Patterns\n\n### MergeTree Engine (Most Common)\n\n```sql\nCREATE TABLE markets_analytics (\n    date Date,\n    market_id String,\n    market_name String,\n    volume UInt64,\n    trades UInt32,\n    unique_traders UInt32,\n    avg_trade_size Float64,\n    created_at DateTime\n) ENGINE = MergeTree()\nPARTITION BY toYYYYMM(date)\nORDER BY (date, market_id)\nSETTINGS index_granularity = 8192;\n```\n\n### ReplacingMergeTree (Deduplication)\n\n```sql\n-- For data that may have duplicates (e.g., from multiple sources)\nCREATE TABLE user_events (\n    event_id String,\n    user_id String,\n    event_type String,\n    timestamp DateTime,\n    properties String\n) ENGINE = ReplacingMergeTree()\nPARTITION BY toYYYYMM(timestamp)\nORDER BY (user_id, event_id, timestamp)\nPRIMARY KEY (user_id, event_id);\n```\n\n### AggregatingMergeTree (Pre-aggregation)\n\n```sql\n-- For maintaining aggregated metrics\nCREATE TABLE market_stats_hourly (\n    hour DateTime,\n    market_id String,\n    total_volume AggregateFunction(sum, UInt64),\n    total_trades AggregateFunction(count, UInt32),\n    unique_users AggregateFunction(uniq, String)\n) ENGINE = AggregatingMergeTree()\nPARTITION BY toYYYYMM(hour)\nORDER BY (hour, market_id);\n\n-- Query aggregated data\nSELECT\n    hour,\n    market_id,\n    sumMerge(total_volume) AS volume,\n    countMerge(total_trades) AS trades,\n    uniqMerge(unique_users) AS users\nFROM market_stats_hourly\nWHERE hour >= toStartOfHour(now() - INTERVAL 24 HOUR)\nGROUP BY hour, market_id\nORDER BY hour DESC;\n```\n\n## Query Optimization Patterns\n\n### Efficient Filtering\n\n```sql\n-- PASS: GOOD: Use indexed columns first\nSELECT *\nFROM markets_analytics\nWHERE date >= '2025-01-01'\n  AND market_id = 'market-123'\n  AND volume > 1000\nORDER BY date DESC\nLIMIT 100;\n\n-- FAIL: BAD: Filter on non-indexed columns first\nSELECT *\nFROM markets_analytics\nWHERE volume > 1000\n  AND market_name LIKE '%election%'\n  AND date >= '2025-01-01';\n```\n\n### Aggregations\n\n```sql\n-- PASS: GOOD: Use ClickHouse-specific aggregation functions\nSELECT\n    toStartOfDay(created_at) AS day,\n    market_id,\n    sum(volume) AS total_volume,\n    count() AS total_trades,\n    uniq(trader_id) AS unique_traders,\n    avg(trade_size) AS avg_size\nFROM trades\nWHERE created_at >= today() - INTERVAL 7 DAY\nGROUP BY day, market_id\nORDER BY day DESC, total_volume DESC;\n\n-- PASS: Use quantile for percentiles (more efficient than percentile)\nSELECT\n    quantile(0.50)(trade_size) AS median,\n    quantile(0.95)(trade_size) AS p95,\n    quantile(0.99)(trade_size) AS p99\nFROM trades\nWHERE created_at >= now() - INTERVAL 1 HOUR;\n```\n\n### Window Functions\n\n```sql\n-- Calculate running totals\nSELECT\n    date,\n    market_id,\n    volume,\n    sum(volume) OVER (\n        PARTITION BY market_id\n        ORDER BY date\n        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n    ) AS cumulative_volume\nFROM markets_analytics\nWHERE date >= today() - INTERVAL 30 DAY\nORDER BY market_id, date;\n```\n\n## Data Insertion Patterns\n\n### Bulk Insert (Recommended)\n\n```typescript\nimport { createClient } from '@clickhouse/client'\n\nconst clickhouse = createClient({\n  url: process.env.CLICKHOUSE_URL ?? 'http://localhost:8123',\n  username: process.env.CLICKHOUSE_USER,\n  password: process.env.CLICKHOUSE_PASSWORD\n})\n\n// PASS: Batch insert (efficient)\nasync function bulkInsertTrades(trades: Trade[]) {\n  await clickhouse.insert({\n    table: 'trades',\n    values: trades.map(trade => ({\n      id: trade.id,\n      market_id: trade.market_id,\n      user_id: trade.user_id,\n      amount: trade.amount,\n      timestamp: trade.timestamp.toISOString()\n    })),\n    format: 'JSONEachRow'\n  })\n}\n\n// FAIL: Individual inserts (slow)\nasync function insertTrade(trade: Trade) {\n  // Don't do this in a loop!\n  await clickhouse.insert({\n    table: 'trades',\n    values: [{\n      id: trade.id,\n      market_id: trade.market_id,\n      user_id: trade.user_id,\n      amount: trade.amount,\n      timestamp: trade.timestamp.toISOString()\n    }],\n    format: 'JSONEachRow'\n  })\n}\n```\n\n### Streaming Insert\n\n```typescript\n// For continuous data ingestion\nimport { Readable } from 'node:stream'\n\nasync function streamInserts(dataSource: AsyncIterable<Record<string, unknown>>) {\n  await clickhouse.insert({\n    table: 'trades',\n    values: Readable.from(dataSource, { objectMode: true }),\n    format: 'JSONEachRow'\n  })\n}\n```\n\n## Materialized Views\n\n### Real-time Aggregations\n\n```sql\n-- Create materialized view for hourly stats\nCREATE MATERIALIZED VIEW market_stats_hourly_mv\nTO market_stats_hourly\nAS SELECT\n    toStartOfHour(timestamp) AS hour,\n    market_id,\n    sumState(amount) AS total_volume,\n    countState() AS total_trades,\n    uniqState(user_id) AS unique_users\nFROM trades\nGROUP BY hour, market_id;\n\n-- Query the materialized view\nSELECT\n    hour,\n    market_id,\n    sumMerge(total_volume) AS volume,\n    countMerge(total_trades) AS trades,\n    uniqMerge(unique_users) AS users\nFROM market_stats_hourly\nWHERE hour >= now() - INTERVAL 24 HOUR\nGROUP BY hour, market_id;\n```\n\n## Performance Monitoring\n\n### Query Performance\n\n```sql\n-- Check slow queries\nSELECT\n    query_id,\n    user,\n    query,\n    query_duration_ms,\n    read_rows,\n    read_bytes,\n    memory_usage\nFROM system.query_log\nWHERE type = 'QueryFinish'\n  AND query_duration_ms > 1000\n  AND event_time >= now() - INTERVAL 1 HOUR\nORDER BY query_duration_ms DESC\nLIMIT 10;\n```\n\n### Table Statistics\n\n```sql\n-- Check table sizes\nSELECT\n    database,\n    table,\n    formatReadableSize(sum(bytes)) AS size,\n    sum(rows) AS rows,\n    max(modification_time) AS latest_modification\nFROM system.parts\nWHERE active\nGROUP BY database, table\nORDER BY sum(bytes) DESC;\n```\n\n## Common Analytics Queries\n\n### Time Series Analysis\n\n```sql\n-- Daily active users\nSELECT\n    toDate(timestamp) AS date,\n    uniq(user_id) AS daily_active_users\nFROM events\nWHERE timestamp >= today() - INTERVAL 30 DAY\nGROUP BY date\nORDER BY date;\n\n-- Retention analysis\nSELECT\n    signup_date,\n    countIf(days_since_signup = 0) AS day_0,\n    countIf(days_since_signup = 1) AS day_1,\n    countIf(days_since_signup = 7) AS day_7,\n    countIf(days_since_signup = 30) AS day_30\nFROM (\n    SELECT\n        user_id,\n        min(toDate(timestamp)) AS signup_date,\n        toDate(timestamp) AS activity_date,\n        dateDiff('day', signup_date, activity_date) AS days_since_signup\n    FROM events\n    GROUP BY user_id, activity_date\n)\nGROUP BY signup_date\nORDER BY signup_date DESC;\n```\n\n### Funnel Analysis\n\n```sql\n-- Conversion funnel\nSELECT\n    countIf(step = 'viewed_market') AS viewed,\n    countIf(step = 'clicked_trade') AS clicked,\n    countIf(step = 'completed_trade') AS completed,\n    round(clicked / viewed * 100, 2) AS view_to_click_rate,\n    round(completed / clicked * 100, 2) AS click_to_completion_rate\nFROM (\n    SELECT\n        user_id,\n        session_id,\n        event_type AS step\n    FROM events\n    WHERE event_date = today()\n)\nGROUP BY session_id;\n```\n\n### Cohort Analysis\n\n```sql\n-- User cohorts by signup month\nSELECT\n    toStartOfMonth(signup_date) AS cohort,\n    toStartOfMonth(activity_date) AS month,\n    dateDiff('month', cohort, month) AS months_since_signup,\n    count(DISTINCT user_id) AS active_users\nFROM (\n    SELECT\n        user_id,\n        min(toDate(timestamp)) OVER (PARTITION BY user_id) AS signup_date,\n        toDate(timestamp) AS activity_date\n    FROM events\n)\nGROUP BY cohort, month, months_since_signup\nORDER BY cohort, months_since_signup;\n```\n\n## Data Pipeline Patterns\n\n### ETL Pattern\n\n```typescript\n// Extract, Transform, Load\nasync function etlPipeline() {\n  // 1. Extract from source\n  const rawData = await extractFromPostgres()\n\n  // 2. Transform\n  const transformed = rawData.map(row => ({\n    date: new Date(row.created_at).toISOString().split('T')[0],\n    market_id: row.market_slug,\n    volume: parseFloat(row.total_volume),\n    trades: parseInt(row.trade_count)\n  }))\n\n  // 3. Load to ClickHouse\n  await bulkInsertToClickHouse(transformed)\n}\n\n// Run periodically\nsetInterval(etlPipeline, 60 * 60 * 1000)  // Every hour\n```\n\n### Change Data Capture (CDC)\n\n```typescript\n// Listen to PostgreSQL changes and sync to ClickHouse\nimport { Client } from 'pg'\n\nconst pgClient = new Client({ connectionString: process.env.DATABASE_URL })\n\npgClient.query('LISTEN market_updates')\n\npgClient.on('notification', async (msg) => {\n  const update = JSON.parse(msg.payload)\n\n  await clickhouse.insert({\n    table: 'market_updates',\n    values: [\n      {\n        market_id: update.id,\n        event_type: update.operation,  // INSERT, UPDATE, DELETE\n        timestamp: new Date(),\n        data: JSON.stringify(update.new_data)\n      }\n    ],\n    format: 'JSONEachRow'\n  })\n})\n```\n\n## Best Practices\n\n### 1. Partitioning Strategy\n- Partition by time (usually month or day)\n- Avoid too many partitions (performance impact)\n- Use DATE type for partition key\n\n### 2. Ordering Key\n- Put most frequently filtered columns first\n- Consider cardinality (high cardinality first)\n- Order impacts compression\n\n### 3. Data Types\n- Use smallest appropriate type (UInt32 vs UInt64)\n- Use LowCardinality for repeated strings\n- Use Enum for categorical data\n\n### 4. Avoid\n- SELECT * (specify columns)\n- FINAL (merge data before query instead)\n- Too many JOINs (denormalize for analytics)\n- Small frequent inserts (batch instead)\n\n### 5. Monitoring\n- Track query performance\n- Monitor disk usage\n- Check merge operations\n- Review slow query log\n\n**Remember**: ClickHouse excels at analytical workloads. Design tables for your query patterns, batch inserts, and leverage materialized views for real-time aggregations.",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/clickhouse-io"
+    },
+    {
+      "id": "cloud-code-internal-tools",
+      "name": "cloud-code-internal-tools",
+      "description": "Use when building internal tools from spreadsheets — sheet to app, automated reports, dashboards, internal APIs. Triggers on \"internal tools\", \"planilha para app\", \"ferramenta interna\", \"dashboard interno\", \"relatorio automatizado\".",
+      "origin": "ecc",
+      "module": null,
+      "cost": null,
+      "stability": null,
+      "defaultInstall": null,
+      "body": "# Cloud Code Internal Tools — Planilha → App\n\n> Fonte: `Luciana Papini — Internal Tools` (pending).\n\nConverte planilha/processo manual em ferramenta interna sem reinventar harness.\n\n## Quando usar\n\n- Planilha crítica que virou gargalo\n- Relatórios manuais repetitivos\n- Dashboard interno com dados sensíveis\n\n## Workflow\n\n1. Mapeie planilha → schema + regras\n2. Gere app (CRUD + auth + import CSV) via `orch-build-mvp`\n3. Valide com dono do processo; itere\n4. Deploy restrito (VPS/Cloud Code) + audit log\n\n## Checklist\n\n- [ ] Schema validado\n- [ ] Import/export CSV\n- [ ] Permissão por papel",
+      "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/cloud-code-internal-tools"
+    },
+    {
+      "id": "cloud-code-vps-deploy",
+      "name": "cloud-code-vps-deploy",
+      "description": "Use when deploying Claude Code to a VPS (Hostinger KVM1, DigitalOcean, AWS) for 24/7 agents. Triggers on \"Cloud Code VPS\", \"deploy Claude Code\", \"Hostinger VPS\", \"KVM1\", \"code-cloud app\".",
+      "origin": "ecc",
+      "module": null,
+      "cost": null,
+      "stability": null,
+      "defaultInstall": null,
+      "body": "# Cloud Code VPS Deploy — 24/7 na Nuvem\n\n> Fonte: `Luciana Papini — Cloud Code na VPS` (pending). Veja `claude-cowork-patterns` para uso pós-deploy.\n\n## Quando usar\n\n- Precisa de agente rodando sem seu PC ligado\n- Quer `code-cloud` + web console + IDE remote\n\n## Deploy (Hostinger KVM1)\n\n1. VPS → Docker → catálogo `code-cloud` → implantar\n2. Copiar `WSS` / `code-cloud` URL → salvar\n3. Conectar harness (Cloud Code) via `code-cloud` CLI\n4. Validar `code-cloud status` + web console\n\n## Checklist\n\n- [ ] VPS KVM1+ com Docker\n- [ ] WSS salvo\n- [ ] Agente 24/7 validado",
+      "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/cloud-code-vps-deploy"
     },
     {
       "id": "cloud-design",
@@ -1883,7 +1919,7 @@
     {
       "id": "fusion-harness",
       "name": "fusion-harness",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1895,7 +1931,7 @@
     {
       "id": "game-npc-ai-integration",
       "name": "game-npc-ai-integration",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -2063,7 +2099,7 @@
     {
       "id": "graph-engineering-patterns",
       "name": "graph-engineering-patterns",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2135,7 +2171,7 @@
     {
       "id": "gsap-skills",
       "name": "gsap-skills",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2315,7 +2351,7 @@
     {
       "id": "hyper3d-rodin-api",
       "name": "hyper3d-rodin-api",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2327,7 +2363,7 @@
     {
       "id": "hyper3d-rodin-pipeline",
       "name": "hyper3d-rodin-pipeline",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2351,7 +2387,7 @@
     {
       "id": "img2threejs",
       "name": "img2threejs",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2879,7 +2915,7 @@
     {
       "id": "memory-import-workflow",
       "name": "memory-import-workflow",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -2915,7 +2951,7 @@
     {
       "id": "metahuman-animation-retarget",
       "name": "metahuman-animation-retarget",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2927,7 +2963,7 @@
     {
       "id": "metahuman-identity-pipeline",
       "name": "metahuman-identity-pipeline",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2939,7 +2975,7 @@
     {
       "id": "metahuman-to-unreal-pipeline",
       "name": "metahuman-to-unreal-pipeline",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2951,7 +2987,7 @@
     {
       "id": "metahuman-unreal-blueprint",
       "name": "metahuman-unreal-blueprint",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3011,7 +3047,7 @@
     {
       "id": "motion-design-skill",
       "name": "motion-design-skill",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3923,7 +3959,7 @@
     {
       "id": "rules-to-hooks-auditor",
       "name": "rules-to-hooks-auditor",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3982,7 +4018,7 @@
     },
     {
       "id": "scientific-db-pubmed-database",
-      "name": "pubmed-database",
+      "name": "scientific-db-pubmed-database",
       "description": "Direct PubMed and NCBI E-utilities search workflows for biomedical literature, MeSH queries, PMID lookup, citation retrieval, and API-backed literature monitoring.",
       "origin": "ecc",
       "module": "research-apis",
@@ -3994,7 +4030,7 @@
     },
     {
       "id": "scientific-db-uspto-database",
-      "name": "uspto-database",
+      "name": "scientific-db-uspto-database",
       "description": "USPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs.",
       "origin": "ecc",
       "module": "research-apis",
@@ -4006,7 +4042,7 @@
     },
     {
       "id": "scientific-pkg-gget",
-      "name": "gget",
+      "name": "scientific-pkg-gget",
       "description": "gget CLI and Python workflow for quick genomic database queries, sequence lookup, BLAST-style searches, enrichment checks, and reproducible bioinformatics evidence logs.",
       "origin": "ecc",
       "module": "research-apis",
@@ -4018,7 +4054,7 @@
     },
     {
       "id": "scientific-thinking-literature-review",
-      "name": "literature-review",
+      "name": "scientific-thinking-literature-review",
       "description": "Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging.",
       "origin": "ecc",
       "module": "research-apis",
@@ -4030,7 +4066,7 @@
     },
     {
       "id": "scientific-thinking-scholar-evaluation",
-      "name": "scholar-evaluation",
+      "name": "scientific-thinking-scholar-evaluation",
       "description": "Structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback.",
       "origin": "ecc",
       "module": "research-apis",
@@ -4163,7 +4199,7 @@
     {
       "id": "skill-creator-methodology",
       "name": "skill-creator-methodology",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -4343,7 +4379,7 @@
     {
       "id": "sub-agent-cost-guard",
       "name": "sub-agent-cost-guard",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4487,7 +4523,7 @@
     {
       "id": "threejs-config-constants",
       "name": "threejs-config-constants",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4499,7 +4535,7 @@
     {
       "id": "threejs-deploy-pipeline",
       "name": "threejs-deploy-pipeline",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4511,7 +4547,7 @@
     {
       "id": "threejs-responsive-patterns",
       "name": "threejs-responsive-patterns",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4535,7 +4571,7 @@
     {
       "id": "threejs-shader-effects",
       "name": "threejs-shader-effects",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4547,7 +4583,7 @@
     {
       "id": "threejs-voxel-block-system",
       "name": "threejs-voxel-block-system",
-      "description": "|",
+      "description": ">-",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4673,7 +4709,7 @@
       "cost": null,
       "stability": null,
       "defaultInstall": null,
-      "body": "﻿---\nname: universal-portability\ndescription: |\n  Guia de autoria de skills portáveis + validação de portabilidade cross-platform. Use quando: \\\"criar skill portável\\\", \\\"validar portabilidade\\\", \\\"portar skill para outra plataforma\\\", \\\"adapter pattern\\\", \\\"cross-platform skill\\\". Non-triggers: skill apenas para Claude Code, skill sem integrações nativas. Outcome: skill segue regras de portabilidade (core Markdown + scripts determinísticos + adapters isolados) + validação CI passa.\nmetadata:\n  origin: ECC\n  source_docs:\n    - docs/PORTABILITY.md\n    - docs/command-registry.json\n    - docs/portability-mappings/\n---\n\n# Universal Portability — Autoria de Skills Portáveis + Validação\n\nEste skill ensina a **criar skills que funcionam em qualquer plataforma** (Claude Code, OpenCode, Cursor, Codex, Gemini CLI, Zed, Qwen, Kimi, Hermes, OpenClaw, antigravity) e a **validar** se uma skill existente é portável.\n\n## Quando usar (gatilhos concretos)\n\n- \\\"Crie uma skill que funcione no OpenCode e Cursor também\\\"\n- \\\"Valide se minha skill é portável\\\"\n- \\\"Como faço um adapter para o Cursor?\\\"\n- \\\"Minha skill usa hooks — como portar para Codex?\\\"\n- \\\"Qual a estrutura padrão de adapters?\\\"\n\n## Quando NÃO usar\n\n- Skill que **só** será usada no Claude Code (sem planos de portar)\n- Skill **sem integrações nativas** (apenas SKILL.md + \references/ + scripts/) — essas já são portáveis por padrão\n- Skill que depende de APIs privadas do Claude Code\n\n---\n\n## Regras de Ouro da Autoria Portável (Obrigatórias)\n\n### 1. Core Portável Primeiro (Regra #1)\n\n**Todo logic vivo em SKILL.md + \references/ + scripts/** — texto, Python, JS, YAML, Bash.\n- SKILL.md: workflow, regras, anti-patterns, exemplos — **Markdown puro**\n- \references/: cheatsheets, templates, configs, exemplos — **arquivos estáticos**\n- scripts/: Python, Node.js, Bash, PowerShell — **determinísticos, sem estado**\n\n> **Teste:** Se você copiar a pasta da skill para outro projeto e rodar python3 scripts/foo.py, funciona sem modificação.\n\n### 2. Integrações Isoladas em \u0007dapters/ (Regra #2)\n\n**Nada de hooks, slash commands, MCP configs, agents no core da skill.**\n\nEstrutura obrigatória para skills com integrações nativas:\n\n`\nskills/<skill-name>/\n├── SKILL.md                    # Core portável (sempre)\n├── references/                 # Core portável (sob demanda)\n│   ├── portable-patterns.md    # Link obrigatório para skills autorais\n│   ├── anti-patterns.md        # O que evitar\n│   └── adapter-checklist.md    # Checklist para criar adapters\n├── scripts/                    # Core portável (determinísticos)\n│   ├── foo.py\n│   └── bar.js\n└── adapters/                   # Isolamento por plataforma\n    ├── opencode/\n    │   ├── hooks/              # .opencode/hooks.json + scripts\n    │   ├── commands/           # .opencode/commands/*.md\n    │   ├── mcp/                # .opencode/mcp.json\n    │   └── README.md           # Instruções de instalação\n    ├── cursor/\n    │   ├── hooks/              # .cursor/rules/ + scripts\n    │   ├── commands/           # .cursor/commands/*.md\n    │   ├── mcp/                # .cursor/mcp.json\n    │   └── README.md\n    ├── codex/\n    │   ├── hooks/              # codex-hooks.json + scripts\n    │   ├── commands/           # CODEX_COMMANDS.md\n    │   └── README.md\n    ├── gemini-cli/\n    │   ├── skills/             # Agent Skills format\n    │   ├── mcp/                # .gemini/mcp.json\n    │   └── README.md\n    └── ...\n`\n\n### 3. Frontmatter Universal (Regra #3)\n\nSKILL.md **sempre** começa com frontmatter YAML:\n\n`yaml\n---\nname: kebab-case-name\ndescription: |\n  Gatilhos concretos (quando usar) + não-gatilhos (quando NÃO usar) + outcome.\n  Mínimo 3 linhas, máximo 15k chars.\nmetadata:\n  origin: ECC|AUTORAL\n  source_docs:\n    - https://docs.oficial.com/feature\n  platforms: [claude-code, opencode, cursor, codex, gemini-cli, hermes, openclaw]\n  requires_adapters: [hooks, commands, mcp]  # se houver integrações nativas\n---\n`\n\n### 4. Scripts Determinísticos (Regra #4)\n\nScripts em scripts/ **devem rodar igual em qualquer lugar**:\n- **Python:** #!/usr/bin/env python3, stdlib apenas ou \requirements.txt declarado\n- **Node.js:** #!/usr/bin/env node, ES modules, package.json se precisar deps\n- **Bash/PowerShell:** POSIX-compliant ou declarar dependências\n- **Sem paths absolutos** — use process.cwd(), __dirname, variáveis de ambiente\n- **Exit codes:** 0=sucesso, 1=erro, 2=bloqueio (para hooks)\n\n### 5. Referências Oficiais Validadas (Regra #5)\n\n**Antes de gravar**, valide claims técnicos contra docs oficiais:\n- \find-docs / context7 / websearch na **fonte oficial**\n- Registre URLs validadas em metadata.source_docs\n- Não confie em vídeos, posts, hearsay\n\n---\n\n## Padrões Portáveis (Use Livremente)\n\n| Padrão | Exemplo | Por que funciona |\n|---|---|---|\n| **Workflow em Markdown** | Passo 1 → Passo 2 → Passo 3 | Qualquer LLM entende |\n| **Templates em \references/** | \references/template.yaml | Arquivo estático, copiável |\n| **Scripts Python/Node** | scripts/transform.py | Roda em qualquer host |\n| **Config em YAML/JSON** | \references/config.yaml | Parseável universalmente |\n| **Variáveis de ambiente** | process.env.MY_VAR | Funciona em todo host |\n\n## Anti-Patterns (Evite)\n\n| Anti-pattern | Problema | Alternativa |\n|---|---|---|\n| Hooks no SKILL.md | Só funciona no Claude Code | Mova para \u0007dapters/claude-code/hooks/ |\n| Slash commands no SKILL.md | Sintaxe claude-specific | Mova para \u0007dapters/<plataforma>/commands/ |\n| Paths absolutos (/home/user/...) | Quebra em outros hosts | Use process.cwd(), os.getcwd(), $PWD |\n| claude -p em scripts | Só existe no Claude Code | Use scripts/ puro Python/Node |\n| MCP config hardcoded | Formato claude-specific | Mova para \u0007dapters/<plataforma>/mcp/ |\n| Assumir settings.json | Só Claude Code | Documente equivalentes por plataforma |\n\n---\n\n## Validação de Portabilidade (CI)\n\nScript: scripts/ci/validate-portability.js\n\n### O que valida\n\n1. **Skills com \requires_adapters** têm pasta \u0007dapters/ com pelo menos 3 plataformas\n2. **SKILL.md não contém** padrões claude-specific sem fallback documentado:\n   - PreToolUse, PostToolUse, Stop, StartSession (hooks)\n   - slash command, /command (slash commands)\n   - .claude/, settings.json (paths claude-specific)\n   - mcp-config.json sem equivalente documentado\n3. **\references/portable-patterns.md** existe e é linkado no SKILL.md (skills autorais)\n4. **\u0007dapters/** seguem estrutura padrão (hooks/, commands/, mcp/, README.md)\n5. **Scripts em scripts/** têm shebang, exit codes, sem paths absolutos\n\n### Rodar validação\n\n`\bash\n# Validar todo repo\nnode scripts/ci/validate-portability.js\n\n# Validar skill específica\nnode scripts/ci/validate-portability.js --skill fusion-harness\n\n# Output JSON para CI\nnode scripts/ci/validate-portability.js --json > portability-report.json\n`\n\n### Códigos de saída\n\n- \u0000 = Tudo ok\n- 1 = Warnings (não bloqueia)\n- 2 = Errors (bloqueia commit/PR)\n\n---\n\n## Adapter Checklist (Para Criar Adapters)\n\nUse \references/adapter-checklist.md ao criar adapters:\n\n### Por Plataforma\n\n#### OpenCode\n- [ ] .opencode/hooks.json com eventos pre_tool, post_tool, stop, start_session\n- [ ] .opencode/commands/*.md (frontmatter compatível)\n- [ ] .opencode/mcp.json se skill usa MCP\n- [ ] .opencode/agents/ se skill define agentes\n- [ ] README.md com opencode install <skill>\n\n#### Cursor\n- [ ] .cursor/rules/ para hooks (event-based)\n- [ ] .cursor/commands/*.md (frontmatter compatível)\n- [ ] .cursor/mcp.json se skill usa MCP\n- [ ] README.md com instruções Cursor\n\n#### Codex\n- [ ] codex-hooks.json com eventos pre_exec, post_exec\n- [ ] CODEX_COMMANDS.md (formato single-file)\n- [ ] README.md com instruções Codex\n\n#### Gemini CLI\n- [ ] Agent Skills format (JSON com \name, description, \triggers)\n- [ ] .gemini/mcp.json se skill usa MCP\n- [ ] README.md com instruções Gemini\n\n#### Hermes / OpenClaw\n- [ ] .hermes/hooks.json / .openclaw/hooks.json\n- [ ] .hermes/commands/ / .openclaw/commands/\n- [ ] README.md com instruções\n\n---\n\n## Matriz de Portabilidade (Referência Rápida)\n\n| Skill | Core Portável | Hooks | Commands | MCP | Settings | Adapters Prontos |\n|---|---|---|---|---|---|---|\n| fusion-harness | ✅ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | opencode, cursor, codex (parcial) |\n| rules-to-hooks-auditor | ✅ | ⚠️ | — | — | ⚠️ | opencode, cursor (parcial) |\n| gsap-skills | ✅ | — | — | — | — | — (core only) |\n| img2threejs | ✅ | — | — | — | — | — (core only) |\n| motion-design-skill | ✅ | — | — | — | — | — (core only) |\n| buzz-workspace-teaming | ✅ | ⚠️ | ⚠️ | ⚠️ | — | pendente |\n| autonomous-agent-harness | ✅ | ⚠️ | ⚠️ | ⚠️ | — | pendente |\n| mcp-server-patterns | ✅ | — | — | ⚠️ | — | pendente |\n| agent-guardrails | ✅ | — | — | — | — | — (core only) |\n\n**Legenda:** ✅ = pronto | ⚠️ = tem integração nativa, precisa adapter | — = não se aplica\n\n---\n\n## Referências\n\n- docs/PORTABILITY.md — Guia completo\n- docs/command-registry.json — Registro canônico\n- docs/portability-mappings/*.csv — 8 tabelas de mapeamento\n- manifests/install-modules.json — Módulos por plataforma\n- scripts/ci/validate-portability.js — Validação CI",
+      "body": "﻿---\nname: universal-portability\ndescription: >-\n  Guia de autoria de skills portáveis + validação de portabilidade cross-platform. Use quando: \\\"criar skill portável\\\", \\\"validar portabilidade\\\", \\\"portar skill para outra plataforma\\\", \\\"adapter pattern\\\", \\\"cross-platform skill\\\". Non-triggers: skill apenas para Claude Code, skill sem integrações nativas. Outcome: skill segue regras de portabilidade (core Markdown + scripts determinísticos + adapters isolados) + validação CI passa.\nmetadata:\n  origin: ECC\n  source_docs:\n    - docs/PORTABILITY.md\n    - docs/command-registry.json\n    - docs/portability-mappings/\n---\n\n# Universal Portability — Autoria de Skills Portáveis + Validação\n\nEste skill ensina a **criar skills que funcionam em qualquer plataforma** (Claude Code, OpenCode, Cursor, Codex, Gemini CLI, Zed, Qwen, Kimi, Hermes, OpenClaw, antigravity) e a **validar** se uma skill existente é portável.\n\n## Quando usar (gatilhos concretos)\n\n- \\\"Crie uma skill que funcione no OpenCode e Cursor também\\\"\n- \\\"Valide se minha skill é portável\\\"\n- \\\"Como faço um adapter para o Cursor?\\\"\n- \\\"Minha skill usa hooks — como portar para Codex?\\\"\n- \\\"Qual a estrutura padrão de adapters?\\\"\n\n## Quando NÃO usar\n\n- Skill que **só** será usada no Claude Code (sem planos de portar)\n- Skill **sem integrações nativas** (apenas SKILL.md + \references/ + scripts/) — essas já são portáveis por padrão\n- Skill que depende de APIs privadas do Claude Code\n\n---\n\n## Regras de Ouro da Autoria Portável (Obrigatórias)\n\n### 1. Core Portável Primeiro (Regra #1)\n\n**Todo logic vivo em SKILL.md + \references/ + scripts/** — texto, Python, JS, YAML, Bash.\n- SKILL.md: workflow, regras, anti-patterns, exemplos — **Markdown puro**\n- \references/: cheatsheets, templates, configs, exemplos — **arquivos estáticos**\n- scripts/: Python, Node.js, Bash, PowerShell — **determinísticos, sem estado**\n\n> **Teste:** Se você copiar a pasta da skill para outro projeto e rodar python3 scripts/foo.py, funciona sem modificação.\n\n### 2. Integrações Isoladas em \u0007dapters/ (Regra #2)\n\n**Nada de hooks, slash commands, MCP configs, agents no core da skill.**\n\nEstrutura obrigatória para skills com integrações nativas:\n\n`\nskills/<skill-name>/\n├── SKILL.md                    # Core portável (sempre)\n├── references/                 # Core portável (sob demanda)\n│   ├── portable-patterns.md    # Link obrigatório para skills autorais\n│   ├── anti-patterns.md        # O que evitar\n│   └── adapter-checklist.md    # Checklist para criar adapters\n├── scripts/                    # Core portável (determinísticos)\n│   ├── foo.py\n│   └── bar.js\n└── adapters/                   # Isolamento por plataforma\n    ├── opencode/\n    │   ├── hooks/              # .opencode/hooks.json + scripts\n    │   ├── commands/           # .opencode/commands/*.md\n    │   ├── mcp/                # .opencode/mcp.json\n    │   └── README.md           # Instruções de instalação\n    ├── cursor/\n    │   ├── hooks/              # .cursor/rules/ + scripts\n    │   ├── commands/           # .cursor/commands/*.md\n    │   ├── mcp/                # .cursor/mcp.json\n    │   └── README.md\n    ├── codex/\n    │   ├── hooks/              # codex-hooks.json + scripts\n    │   ├── commands/           # CODEX_COMMANDS.md\n    │   └── README.md\n    ├── gemini-cli/\n    │   ├── skills/             # Agent Skills format\n    │   ├── mcp/                # .gemini/mcp.json\n    │   └── README.md\n    └── ...\n`\n\n### 3. Frontmatter Universal (Regra #3)\n\nSKILL.md **sempre** começa com frontmatter YAML:\n\n`yaml\n---\nname: kebab-case-name\ndescription: |\n  Gatilhos concretos (quando usar) + não-gatilhos (quando NÃO usar) + outcome.\n  Mínimo 3 linhas, máximo 15k chars.\nmetadata:\n  origin: ECC|AUTORAL\n  source_docs:\n    - https://docs.oficial.com/feature\n  platforms: [claude-code, opencode, cursor, codex, gemini-cli, hermes, openclaw]\n  requires_adapters: [hooks, commands, mcp]  # se houver integrações nativas\n---\n`\n\n### 4. Scripts Determinísticos (Regra #4)\n\nScripts em scripts/ **devem rodar igual em qualquer lugar**:\n- **Python:** #!/usr/bin/env python3, stdlib apenas ou \requirements.txt declarado\n- **Node.js:** #!/usr/bin/env node, ES modules, package.json se precisar deps\n- **Bash/PowerShell:** POSIX-compliant ou declarar dependências\n- **Sem paths absolutos** — use process.cwd(), __dirname, variáveis de ambiente\n- **Exit codes:** 0=sucesso, 1=erro, 2=bloqueio (para hooks)\n\n### 5. Referências Oficiais Validadas (Regra #5)\n\n**Antes de gravar**, valide claims técnicos contra docs oficiais:\n- \find-docs / context7 / websearch na **fonte oficial**\n- Registre URLs validadas em metadata.source_docs\n- Não confie em vídeos, posts, hearsay\n\n---\n\n## Padrões Portáveis (Use Livremente)\n\n| Padrão | Exemplo | Por que funciona |\n|---|---|---|\n| **Workflow em Markdown** | Passo 1 → Passo 2 → Passo 3 | Qualquer LLM entende |\n| **Templates em \references/** | \references/template.yaml | Arquivo estático, copiável |\n| **Scripts Python/Node** | scripts/transform.py | Roda em qualquer host |\n| **Config em YAML/JSON** | \references/config.yaml | Parseável universalmente |\n| **Variáveis de ambiente** | process.env.MY_VAR | Funciona em todo host |\n\n## Anti-Patterns (Evite)\n\n| Anti-pattern | Problema | Alternativa |\n|---|---|---|\n| Hooks no SKILL.md | Só funciona no Claude Code | Mova para \u0007dapters/claude-code/hooks/ |\n| Slash commands no SKILL.md | Sintaxe claude-specific | Mova para \u0007dapters/<plataforma>/commands/ |\n| Paths absolutos (/home/user/...) | Quebra em outros hosts | Use process.cwd(), os.getcwd(), $PWD |\n| claude -p em scripts | Só existe no Claude Code | Use scripts/ puro Python/Node |\n| MCP config hardcoded | Formato claude-specific | Mova para \u0007dapters/<plataforma>/mcp/ |\n| Assumir settings.json | Só Claude Code | Documente equivalentes por plataforma |\n\n---\n\n## Validação de Portabilidade (CI)\n\nScript: scripts/ci/validate-portability.js\n\n### O que valida\n\n1. **Skills com \requires_adapters** têm pasta \u0007dapters/ com pelo menos 3 plataformas\n2. **SKILL.md não contém** padrões claude-specific sem fallback documentado:\n   - PreToolUse, PostToolUse, Stop, StartSession (hooks)\n   - slash command, /command (slash commands)\n   - .claude/, settings.json (paths claude-specific)\n   - mcp-config.json sem equivalente documentado\n3. **\references/portable-patterns.md** existe e é linkado no SKILL.md (skills autorais)\n4. **\u0007dapters/** seguem estrutura padrão (hooks/, commands/, mcp/, README.md)\n5. **Scripts em scripts/** têm shebang, exit codes, sem paths absolutos\n\n### Rodar validação\n\n`\bash\n# Validar todo repo\nnode scripts/ci/validate-portability.js\n\n# Validar skill específica\nnode scripts/ci/validate-portability.js --skill fusion-harness\n\n# Output JSON para CI\nnode scripts/ci/validate-portability.js --json > portability-report.json\n`\n\n### Códigos de saída\n\n- \u0000 = Tudo ok\n- 1 = Warnings (não bloqueia)\n- 2 = Errors (bloqueia commit/PR)\n\n---\n\n## Adapter Checklist (Para Criar Adapters)\n\nUse \references/adapter-checklist.md ao criar adapters:\n\n### Por Plataforma\n\n#### OpenCode\n- [ ] .opencode/hooks.json com eventos pre_tool, post_tool, stop, start_session\n- [ ] .opencode/commands/*.md (frontmatter compatível)\n- [ ] .opencode/mcp.json se skill usa MCP\n- [ ] .opencode/agents/ se skill define agentes\n- [ ] README.md com opencode install <skill>\n\n#### Cursor\n- [ ] .cursor/rules/ para hooks (event-based)\n- [ ] .cursor/commands/*.md (frontmatter compatível)\n- [ ] .cursor/mcp.json se skill usa MCP\n- [ ] README.md com instruções Cursor\n\n#### Codex\n- [ ] codex-hooks.json com eventos pre_exec, post_exec\n- [ ] CODEX_COMMANDS.md (formato single-file)\n- [ ] README.md com instruções Codex\n\n#### Gemini CLI\n- [ ] Agent Skills format (JSON com \name, description, \triggers)\n- [ ] .gemini/mcp.json se skill usa MCP\n- [ ] README.md com instruções Gemini\n\n#### Hermes / OpenClaw\n- [ ] .hermes/hooks.json / .openclaw/hooks.json\n- [ ] .hermes/commands/ / .openclaw/commands/\n- [ ] README.md com instruções\n\n---\n\n## Matriz de Portabilidade (Referência Rápida)\n\n| Skill | Core Portável | Hooks | Commands | MCP | Settings | Adapters Prontos |\n|---|---|---|---|---|---|---|\n| fusion-harness | ✅ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | opencode, cursor, codex (parcial) |\n| rules-to-hooks-auditor | ✅ | ⚠️ | — | — | ⚠️ | opencode, cursor (parcial) |\n| gsap-skills | ✅ | — | — | — | — | — (core only) |\n| img2threejs | ✅ | — | — | — | — | — (core only) |\n| motion-design-skill | ✅ | — | — | — | — | — (core only) |\n| buzz-workspace-teaming | ✅ | ⚠️ | ⚠️ | ⚠️ | — | pendente |\n| autonomous-agent-harness | ✅ | ⚠️ | ⚠️ | ⚠️ | — | pendente |\n| mcp-server-patterns | ✅ | — | — | ⚠️ | — | pendente |\n| agent-guardrails | ✅ | — | — | — | — | — (core only) |\n\n**Legenda:** ✅ = pronto | ⚠️ = tem integração nativa, precisa adapter | — = não se aplica\n\n---\n\n## Referências\n\n- docs/PORTABILITY.md — Guia completo\n- docs/command-registry.json — Registro canônico\n- docs/portability-mappings/*.csv — 8 tabelas de mapeamento\n- manifests/install-modules.json — Módulos por plataforma\n- scripts/ci/validate-portability.js — Validação CI",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/universal-portability"
     },
     {

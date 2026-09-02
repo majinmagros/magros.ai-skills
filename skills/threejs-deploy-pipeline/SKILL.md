@@ -1,6 +1,6 @@
 ---
 name: threejs-deploy-pipeline
-description: |
+description: >-
   Pipeline de deploy para sites Three.js: Vite build → zip → Hostinger/Netlify/Vercel → CI/CD automático. Baseado no deploy do Gustavo Campelo (Hostinger KVM1 + Vite + Node.js).
   Use quando: "deploy threejs site", "vite build threejs", "hostinger deploy threejs", "netlify threejs deploy", "vercel threejs deploy", "ci/cd threejs".
   Não use para: composição de cena (use threejs-scene-composer), shaders (use threejs-shader-effects).

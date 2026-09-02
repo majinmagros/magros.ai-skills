@@ -1,6 +1,6 @@
 ---
 name: claude-project-template
-description: |
+description: >-
   Templates de projeto por tipo: curso, cliente, produto, automação, pesquisa — com docs, instructions, connectors. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "claude project template", "project template claude", "project structure claude", "claude project structure", "template projeto claude". Non-triggers: projeto sem estrutura definida, prototipagem rápida.
   Outcome: Templates de projeto por tipo (course, client-project, automation, product, research) com structure, .claude/, docs, scripts, connectors.

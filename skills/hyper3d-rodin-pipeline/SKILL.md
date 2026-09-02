@@ -1,6 +1,6 @@
 ---
 name: hyper3d-rodin-pipeline
-description: |
+description: >-
   Pipeline completo ChatAvatar/Rodin: text-to-face, image-to-3D, prompt engineering com weights/seeds, seed control, model versions (DreamFace v1/v2, cartoon, hero), download formats (FBX/GLB/USDZ), MetaHuman/Studio export. Baseado no vídeo Joy Dev Studio "3D Face Modeling is a THING OF THE PAST!".
   Use quando: "hyper3d rodin pipeline", "chatavatar pipeline", "rodin pipeline", "text to face 3d", "image to 3d face", "hyper3d rodin", "rodin text to 3d", "rodin image to 3d".
   Não use para: MetaHuman Identity Solve (use metahuman-identity-pipeline), MetaHuman to Unreal (use metahuman-to-unreal-pipeline), animation retarget (use metahuman-animation-retarget).

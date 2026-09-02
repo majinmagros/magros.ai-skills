@@ -1,5 +1,5 @@
 ---
-name: scholar-evaluation
+name: scientific-thinking-scholar-evaluation
 description: Structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback.
 metadata:
   origin: community

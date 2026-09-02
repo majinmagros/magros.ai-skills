@@ -1,6 +1,6 @@
 ---
 name: graph-engineering-patterns
-description: |
+description: >-
   Templates unificados para Graph Engineering: code-as-graph (dynamic workflow) + LLM-as-graph (skill + SOP + scripts). I/O schemas, state management, verifier/planner separation. Baseado no vídeo do AI Jason "I don't prompt agents anymore..." e práticas de engenharia de grafos.
   Use quando: "graph engineering patterns", "code as graph", "llm as graph", "dynamic workflow templates", "llm as graph templates", "graph engineering templates".
   Não use para: orchestration runtime (use orchestration skills), basic workflow (use routines).

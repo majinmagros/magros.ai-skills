@@ -1,6 +1,6 @@
 ---
 name: claude-account-optimizer
-description: |
+description: >-
   Otimização completa de conta Claude: email strategy, memory import workflow, model routing rules, project templates, connector defaults.
   Use quando: "otimizar conta claude", "configurar claude do zero", "melhorar setup claude", "email da conta claude", "memory import claude", "model routing claude", "project template claude", "connector strategy claude".
   Não use para: criar skills do zero (use `criar-skill`), hooks (use `rules-to-hooks-auditor`), deploy (use `cloud-code-vps-deploy`).

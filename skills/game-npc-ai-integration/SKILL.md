@@ -1,6 +1,6 @@
 ---
 name: game-npc-ai-integration
-description: |
+description: >-
   Integrate LLMs into game NPCs with persistent memory, personality, world state sync, and multi-player coordination.
   
   **Triggers (when to use):**

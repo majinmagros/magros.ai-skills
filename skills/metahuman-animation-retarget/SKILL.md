@@ -1,6 +1,6 @@
 ---
 name: metahuman-animation-retarget
-description: |
+description: >-
   Retarget ABP mannequin to MetaHuman: animation blueprint copy, virtual bones (vbot, vbfk, vbik_fot, vbkf_r/l), foot locking. Baseado no vídeo Joy Dev Studio "3D Face Modeling is a THING OF THE PAST!".
   Use quando: "metahuman animation retarget", "metahuman animation retargeting", "metahuman abp retarget", "metahuman animation blueprint retarget", "metahuman foot locking", "metahuman virtual bones", "metahuman vbot", "metahuman vbik".
   Não use para: MetaHuman Identity Solve (use metahuman-identity-pipeline), MetaHuman to Unreal (use metahuman-to-unreal-pipeline), MetaHuman Blueprint setup (use metahuman-unreal-blueprint).

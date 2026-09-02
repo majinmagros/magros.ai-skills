@@ -1,6 +1,6 @@
 ---
 name: threejs-shader-effects
-description: |
+description: >-
   Efeitos customizados Three.js: pixelation, comet trails, mouse distortion, post-processing, shadertoy integration, custom shaders GLSL. Baseado nos efeitos do Gustavo Campelo (pixelation, comet trails, mouse distortion).
   Use quando: "threejs custom shader", "threejs pixelation effect", "threejs mouse distortion", "threejs post processing", "threejs comet trails", "threejs shadertoy", "glsl threejs".
   Não use para: composição de cena (use threejs-scene-composer), deploy (use threejs-deploy-pipeline), patterns responsivos (use threejs-responsive-patterns).

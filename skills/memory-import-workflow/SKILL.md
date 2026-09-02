@@ -1,6 +1,6 @@
 ---
 name: memory-import-workflow
-description: |
+description: >-
   Workflow padronizado de importação de memória: export memory → prompt interview → voice input (Sponcle) → validate → sync across sessions. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "memory import workflow", "importar memoria claude", "exportar memoria chatgpt para claude", "entrevista memoria voz", "sponcle voice workflow", "sincronizar memoria sessoes". Non-triggers: criar skills do zero (use criar-skill), configurar conta do zero (use claude-account-optimizer).
   Outcome: Workflow padronizado memory import + voice interview (Sponcle) + validação + sync cross-session.

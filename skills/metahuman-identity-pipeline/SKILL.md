@@ -1,6 +1,6 @@
 ---
 name: metahuman-identity-pipeline
-description: |
+description: >-
   MetaHuman Identity Solve: photo requirements, marker placement, eye texture importance, auto-rigging, eye/mouth correction, neutral pose. Baseado no vídeo Joy Dev Studio "3D Face Modeling is a THING OF THE PAST!".
   Use quando: "metahuman identity solve", "metahuman identity pipeline", "metahuman photo requirements", "metahuman marker placement", "metahuman eye texture", "metahuman auto rigging", "metahuman eye alignment", "metahuman neutral pose".
   Não use para: ChatAvatar/Rodin pipeline (use hyper3d-rodin-pipeline), MetaHuman to Unreal (use metahuman-to-unreal-pipeline), animation retarget (use metahuman-animation-retarget).

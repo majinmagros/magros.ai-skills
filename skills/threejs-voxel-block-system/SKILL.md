@@ -1,6 +1,6 @@
 ---
 name: threejs-voxel-block-system
-description: |
+description: >-
   Sistema modular blocos estilo Minecraft: registry, geometries, materials, instancing, instanced mesh. Baseado no vídeo do Gustavo Campelo (bloco por bloco: grama, pedra, obsidiana, portal, cerejeira, tronco).
   Use quando: "threejs voxel system", "threejs minecraft blocks", "threejs block registry", "threejs instanced mesh blocks", "threejs block system", "threejs voxel blocks".
   Não use para: composição geral de cena (use threejs-scene-composer), shaders (use threejs-shader-effects), deploy (use threejs-deploy-pipeline).

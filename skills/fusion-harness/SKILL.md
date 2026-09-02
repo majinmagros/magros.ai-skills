@@ -1,6 +1,6 @@
 ---
 name: fusion-harness
-description: |
+description: >-
   Multi-model agent orchestration harness (Fusion Harness V2) — architect + builders pattern, debate/collaborate modes, cost-aware model routing, token/speed/cost tracking per model, software factory out-loop orchestration. Based on IndyDevDan's "Intelligence EXPLOSION: Harness Engineering with Pi Agent". Use quando: "fusion harness", "multi-model orchestration", "architect builder pattern", "model debate collaboration", "cost-aware agent routing", "software factory agents", "out-loop agentic coding", "combine compute don't select". Non-triggers: single-model workflows, simple sub-agent delegation, basic /task usage. Outcome: harness config + orchestration scripts (Python) + model stack registry + cost tracker + debate/collab workflows + software factory scheduler.
 metadata:
   origin: ECC

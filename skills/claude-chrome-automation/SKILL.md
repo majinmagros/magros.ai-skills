@@ -1,6 +1,6 @@
 ---
 name: claude-chrome-automation
-description: |
+description: >-
   Padrões Chrome Ext: navegação autônoma, scraping, pesquisa, preenchimento, approval gates. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "claude chrome automation", "chrome extension automation", "browser automation claude", "web scraping claude", "chrome extension claude", "browser automation claude". Non-triggers: automação desktop, automação mobile, automação API only.
   Outcome: Padrões para automação Chrome: navegação autônoma, scraping ético, pesquisa multi-aba, preenchimento, approval gates.

@@ -1,6 +1,6 @@
 ---
 name: claude-connector-strategy
-description: |
+description: >-
   Guia de conectores: priorização (Gmail/Calendar/Drive/Notion), MCP vs nativo, permissions granulares, OAuth flow. Baseado no vídeo da Luciana Papini "Me de 34 minutos e eu te darei 10 000 horas de conhecimento do Claude".
   Use quando: "claude connector strategy", "connector strategy claude", "gmail connector claude", "calendar connector claude", "mcp vs nativo", "connector permissions", "oauth flow claude". Non-triggers: conector específico não listado, configuração única.
   Outcome: Guia de conectores: priorização (Gmail/Calendar/Drive/Notion), MCP vs nativo, permissions granulares, OAuth flow.

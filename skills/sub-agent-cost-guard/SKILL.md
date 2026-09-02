@@ -1,6 +1,6 @@
 ---
 name: sub-agent-cost-guard
-description: |
+description: >-
   Detecta quando sub-agents 7x tokens; sugere main context vs fork; fast mode guardrail (API credits, uncached penalty). Baseado no vídeo do Simon Scrapes "19 Claude Code Mistakes".
   Use quando: "sub-agent cost guard", "sub-agent token optimizer", "claude sub-agent cost", "fast mode guardrail", "sub-agent token limit", "api credits guardrail".
   Não use para: general cost tracking (use cost-aware-llm-pipeline), model routing (use claude-model-router).

@@ -1,6 +1,6 @@
 ---
 name: threejs-config-constants
-description: |
+description: >-
   Sistema de constants expostas para tuning: posição câmera, elevação, centro portal, velocidades — sem tocar código. Baseado no vídeo do Gustavo Campelo (constants para customização: portal center, elevação, posição ilha, velocidades).
   Use quando: "threejs constants", "threejs config constants", "threejs tuning constants", "threejs exposed constants", "threejs runtime config", "threejs tweakable parameters".
   Não use para: composição de cena (use threejs-scene-composer), shaders (use threejs-shader-effects), deploy (use threejs-deploy-pipeline).
