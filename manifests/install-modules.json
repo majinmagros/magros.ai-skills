@@ -241,7 +241,10 @@
         "skills/ai-tutor-system",
         "skills/cloud-design-prototyping",
         "skills/hyperledger-fabric-generator",
-        "skills/stripe-webhook-handler"
+        "skills/stripe-webhook-handler",
+        "skills/unlazy",
+        "skills/capricho",
+        "skills/validacao-ideia-24h"
       ],
       "targets": [
         "claude",
