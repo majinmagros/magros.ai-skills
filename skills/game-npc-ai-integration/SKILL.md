@@ -1,23 +1,6 @@
 ---
 name: game-npc-ai-integration
-description: >-
-  Integrate LLMs into game NPCs with persistent memory, personality, world state sync, and multi-player coordination.
-  
-  **Triggers (when to use):**
-  - "NPC com IA", "NPC autônomo", "game NPC LLM", "personagem não-jogador inteligente"
-  - "memória persistente NPC", "personalidade NPC", "world state sync NPC"
-  - "multi-player NPC coordination", "party chat NPC", "combate tático NPC"
-  - "Mineflayer NPC AI", "FiveM NPC LLM", "RageMP NPC AI", "Unity NPC LLM", "Unreal NPC AI"
-  - "NPC dialogue system", "NPC relationship system", "NPC quest integration"
-  
-  **Non-triggers (when NOT to use):**
-  - Generic agent harness construction (use agent-harness-construction)
-  - Non-game AI agents (use agentic-engineering, autonomous-agent-harness)
-  - Simple chatbot without game context (use agent-harness-construction)
-  - Game logic without LLM integration (use game-dev-patterns if available)
-  
-  **Outcome:** Production-ready NPC AI integration with episodic/semantic/working memory, personality engine, world state synchronization, and multi-player coordination for Mineflayer (Minecraft), FiveM/RageMP (GTA V), Unity, and Unreal.
-module: agentic-patterns
+description: "Use when integrate LLMs into game NPCs with persistent memory, personality, world state sync, and multi-player coordination. **Triggers (when to use):** - \"NPC com IA\", \"NPC autônomo\", \"game NPC LLM\", \"personagem não-jogador inteligente\" - \"memória... Triggers on \"game-npc-ai-integration\", \"game npc ai integration\", \"integration\"."module: agentic-patterns
 version: 1.0.0
 stability: beta
 cost: medium

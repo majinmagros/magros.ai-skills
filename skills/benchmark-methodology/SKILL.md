@@ -1,12 +1,6 @@
 ---
 name: benchmark-methodology
-description: >-
-  Use after competitive-platform-analysis has produced a tiered competitor set.
-  Scores each competitor across nine weighted dimensions (positioning, voice,
-  visual craft, offer packaging, evidence, enterprise-readiness, thought
-  leadership, pricing, client's strategic tension) with explicit 1–5 rubrics
-  and a tension-plot. Precedes competitive-report-structure.
-license: MIT
+description: "Use when use after competitive-platform-analysis has produced a tiered competitor set. Scores each competitor across nine weighted dimensions (positioning, voice, visual craft, offer packaging, evidence, enterprise-readiness, thought leadership, pricing... Triggers on \"benchmark-methodology\", \"benchmark methodology\", \"methodology\"."license: MIT
 ---
 
 # Benchmark Methodology

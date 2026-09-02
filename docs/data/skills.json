@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T15:27:21.804Z",
+  "generatedAt": "2026-09-02T15:32:42.885Z",
   "repo": "majinmagros/magros.ai-skills",
   "counts": {
     "total": 409,
@@ -221,7 +221,7 @@
       "cost": null,
       "stability": null,
       "defaultInstall": null,
-      "body": "# AI Media Generator\n\n> Original skill with 55+ files was a gitlink submodule (edc8aa5). This is a minimal ECC wrapper restored after bulk fix. See references for full platform docs.\n\nGenerates high-quality AI media prompts and automates browser execution.\n\n## When to Use\n\n- Text-to-image/video/audio\n- Need platform-specific prompt crafting (Kling, Seedance, Suno, etc.)\n- Want automated site operation via click-protocol\n\n## Core Workflow\n\n1. Select platform via `references/selector.md`\n2. Read platform reference (kling.md, seedance.md, suno.md, etc.)\n3. Craft prompt with 5-8 high-signal tokens\n4. Validate with 10-point gate (≥8) before submit\n5. Automate via `automation/click-protocol.md` if requested\n\n## References\n\n- `references/selector.md` — platform picker\n- `templates/preset-packs.md` — 30+ presets\n- Full docs in original submodule commit edc8aa5\n\n## Checklist\n\n- [ ] Platform selected with trigger\n- [ ] Prompt scored ≥8\n- [ ] No generic slop tokens",
+      "body": "# AI Media Generator\n\nGenerates high-quality AI media prompts and automates browser execution.\n\n## When to Use\n\n- Text-to-image/video/audio\n- Need platform-specific prompt crafting (Kling, Seedance, Suno, etc.)\n- Want automated site operation via click-protocol\n\n## Core Workflow\n\n1. Select platform via `references/selector.md`\n2. Read platform reference (kling.md, seedance.md, suno.md, etc.)\n3. Craft prompt with 5-8 high-signal tokens\n4. Validate with 10-point gate (≥8) before submit\n5. Automate via `automation/click-protocol.md` if requested\n\n## References\n\n- `references/selector.md` — platform picker\n- `templates/preset-packs.md` — 30+ presets\n- Full docs in original submodule commit edc8aa5\n\n## Checklist\n\n- [ ] Platform selected with trigger\n- [ ] Prompt scored ≥8\n- [ ] No generic slop tokens",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/ai-media-generator"
     },
     {
@@ -491,7 +491,7 @@
     {
       "id": "benchmark-methodology",
       "name": "benchmark-methodology",
-      "description": ">-",
+      "description": "\"Use when use after competitive-platform-analysis has produced a tiered competitor set. Scores each competitor across nine weighted dimensions (positioning, voice, visual craft, offer packaging, evidence, enterprise-readiness, thought leadership, pricing... Triggers on \\\"benchmark-methodology\\\", \\\"benchmark methodology\\\", \\\"methodology\\\".\"license: MIT",
       "origin": "ecc",
       "module": "optimization-workflows",
       "cost": "medium",
@@ -527,7 +527,7 @@
     {
       "id": "blueprint",
       "name": "blueprint",
-      "description": ">-",
+      "description": "\"Use when turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects. Each step has a self-contained context brief so a fresh agent can execute it cold. Includes adversarial review gate, dependency graph, parallel step detection, anti-pattern catalo... Triggers on \\\"blueprint\\\".\"metadata:",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -971,7 +971,7 @@
     {
       "id": "competitive-report-structure",
       "name": "competitive-report-structure",
-      "description": ">-",
+      "description": "\"Use when use after benchmark-methodology has produced scored competitor profile cards. Assembles findings into a decision-grade report: landscape map, competitor profiles, benchmarking matrix, white-space analysis, strategic recommendations,... Triggers on \\\"competitive-report-structure\\\", \\\"competitive report structure\\\", \\\"structure\\\".\"",
       "origin": "ecc",
       "module": "business-content",
       "cost": "heavy",
@@ -1931,7 +1931,7 @@
     {
       "id": "game-npc-ai-integration",
       "name": "game-npc-ai-integration",
-      "description": ">-",
+      "description": "\"Use when integrate LLMs into game NPCs with persistent memory, personality, world state sync, and multi-player coordination. **Triggers (when to use):** - \\\"NPC com IA\\\", \\\"NPC autônomo\\\", \\\"game NPC LLM\\\", \\\"personagem não-jogador inteligente\\\" - \\\"memória... Triggers on \\\"game-npc-ai-integration\\\", \\\"game npc ai integration\\\", \\\"integration\\\".\"module: agentic-patterns",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -3251,7 +3251,7 @@
     {
       "id": "obsidian-cli",
       "name": "obsidian-cli",
-      "description": ">",
+      "description": "\"Use when use this skill whenever the user wants Claude to directly interact with their Obsidian vault — reading a note or daily note, writing or appending content, searching vault contents, counting or listing notes, managing tasks, moving or renaming files, finding orphaned notes or b... Triggers on \\\"obsidian-cli\\\", \\\"obsidian cli\\\".\"triggers:",
       "origin": "ecc",
       "module": "operator-workflows",
       "cost": "medium",
@@ -4607,7 +4607,7 @@
     {
       "id": "token-budget-advisor",
       "name": "token-budget-advisor",
-      "description": ">-",
+      "description": "\"Use when offers the user an informed choice about how much response depth to consume before answering. Use this skill when the user explicitly wants to control response length, depth, or token budget. TRIGGER when: \\\"token budget\\\", \\\"token count\\\", \\\"token usage\\\"... Triggers on \\\"token-budget-advisor\\\", \\\"token budget advisor\\\", \\\"advisor\\\".\"metadata:",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
