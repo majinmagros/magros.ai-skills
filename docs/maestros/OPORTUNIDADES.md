@@ -192,6 +192,11 @@ Transcrições baixadas e analisadas: **42 vídeos** (marcados em `ANALISADOS.js
 | 58 | **5 HACKS That Solve 99% of Claude Code Problems** (K__4uua27u8) | Cloud Video vision 4 modos, NotebookLM P, Graphify, Impeccable 44k 23 cmds live, Pony Tail 20% | ✅ **Analisado 2026-09-02** | **2 NEW** `claude-video` + `impeccable-design` + enrich `token-budget-advisor` |
 | 59 | **The WAR Between OpenAI and Apple Has Begun** (_4Ae-0KgJEE) | Apple vs OpenAI: 400 hires, Jony Ive $6.5B, supplier leak, prototype smuggling, 2-week spy guide | ✅ **Analisado 2026-09-02** | **NEW** `guerra-talentos-ip-ia` ou enrich `geopolitica-regulacao-ia` |
 | 60 | **Kimi K3 vs. CLAUDE vs. GPT: China's Assassin** (aZGK99JBSNA) | Kimi K3 open beats Fable/GPT, 4 sims, local HW, jailbreak sec, 300 daily tasks | ✅ **Analisado 2026-09-02** | **Enrich** `agent-eval` + `local-ai-hardware` + `vibe-security-scanner` |
+| 61 | **Fable 5 ends in 5 hours... 5 things you NEED to do NOW** (CEP76xS4Xbs) | Fable 5 window 01-07/jul, Opus 4.8 plan → Fable exec, Local Scribe Whisper+Ollama, auditoria 6 subagentes → melhorias.md, painel agêntico OS, World Demo PRD | ✅ **Analisado 2026-09-02** | **Enrich** `claude-model-router` + `agentic-os` + `local-llm-efficiency` |
+| 62 | **1000+ Hours of Claude Knowledge in 30 Minutes** (wfuGz1Q6208) | Escada 8 níveis: chat→integrações→computador→browser→agentes/skills→agendamento→OS→especialista | ✅ **Analisado 2026-09-02** | **Enrich** `roteiro-engenheiro-ia-2026` ou novo `ai-competency-ladder-8-levels` |
+| 63 | **Claude Fable 5 Built a $10,000 Website in Minutes** (vl9Tod1b1yw) | Cinematic 3D agent: Nano Banana image → Veo 8s → last-frame stitch → scroll scrub | ✅ **Analisado 2026-09-02** | **Gap** `cinematic-3d-website` — enrich `ai-media-generator` |
+| 64 | **DeepSeek Just Turbocharged All LLMs. For Free.** (b0cs56RQzyQ) | DeepSpec 3 caixas (plano/critérios/relatório) + loop + draft/master speculative | ✅ **Analisado 2026-09-02** | **Enrich** `spec-kit` com DeepSpec 3 caixas |
+| 65 | **These Claude HACKS Will Make You So Productive It Should Be ILLEGAL** (wSarW_ArefY) | ultra think 32k, /voice spacebar PT-BR, /remote control mobile, agent view, subagents x10, HTML reporting | ✅ **Analisado 2026-09-02** | **Enrich** `claude-voice-workflow` (P0) + novo `claude-code-power-hacks` |
 
 ---
 
