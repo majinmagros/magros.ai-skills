@@ -249,7 +249,9 @@
         "skills/local-ai-hardware",
         "skills/vox-style-video",
         "skills/autopilot-content-factory",
-        "skills/notebooklm-claude-rag"
+        "skills/notebooklm-claude-rag",
+        "skills/claude-video",
+        "skills/impeccable-design"
       ],
       "targets": [
         "claude",
