@@ -197,6 +197,11 @@ Transcrições baixadas e analisadas: **42 vídeos** (marcados em `ANALISADOS.js
 | 63 | **Claude Fable 5 Built a $10,000 Website in Minutes** (vl9Tod1b1yw) | Cinematic 3D agent: Nano Banana image → Veo 8s → last-frame stitch → scroll scrub | ✅ **Analisado 2026-09-02** | **Gap** `cinematic-3d-website` — enrich `ai-media-generator` |
 | 64 | **DeepSeek Just Turbocharged All LLMs. For Free.** (b0cs56RQzyQ) | DeepSpec 3 caixas (plano/critérios/relatório) + loop + draft/master speculative | ✅ **Analisado 2026-09-02** | **Enrich** `spec-kit` com DeepSpec 3 caixas |
 | 65 | **These Claude HACKS Will Make You So Productive It Should Be ILLEGAL** (wSarW_ArefY) | ultra think 32k, /voice spacebar PT-BR, /remote control mobile, agent view, subagents x10, HTML reporting | ✅ **Analisado 2026-09-02** | **Enrich** `claude-voice-workflow` (P0) + novo `claude-code-power-hacks` |
+| 66 | **Mastering Claude for Marketing (From Beginner to Advanced)** (65j2rqKsAnc) | Claude+Playwright marketing, 300 tarefas/dia, Ads Library PDF WhatsApp, SRT-sync + 3 writers | ✅ **Analisado 2026-09-02** | **Enrich** `autopilot-content-factory` + `data-scraper-agent` |
+| 67 | **If you want to make money with AI, watch this video** (Wg46GvIXxQQ) | Open Design → Netlify, PostHog CRO loop autônomo, dashboards NL (n8n+Supabase), tráfego Meta, WhatsApp SDR | ✅ **Analisado 2026-09-02** | **Gap** `posthog-cro-loop` + `marketing-funnel-ops` |
+| 68 | **Anthropic has no limits...** (kevDbTC8PeM) | Cowork Slack @claude, GitHub connector, 3 fases Karpathy, Rabbit R1 visão | ✅ **Analisado 2026-09-02** | **Coberto** por `claude-cowork-patterns` + `buzz-workspace-teaming` |
+| 69 | **The Age of AI Avatars is HERE** (lUfiPk17_FU) | Avatares indistinguíveis 90%, pipeline 1/min, escala 1000 contas, janela competitiva | ✅ **Analisado 2026-09-02** | **Coberto** por `autopilot-content-factory` |
+| 70 | **FABLE 5 IS BACK** (sVEfiAYMOKo) | Fable 5 unban geopolítico, token burn, GLM 5.2 margem open-source 10-20% | ✅ **Analisado 2026-09-02** | **Enrich** `claude-model-router` + `llm-leaderboard-tracker` |
 
 ---
 
