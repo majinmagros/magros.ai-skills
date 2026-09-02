@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-02T15:47:17.339Z",
+  "generatedAt": "2026-09-02T15:56:38.484Z",
   "repo": "majinmagros/magros.ai-skills",
   "counts": {
-    "total": 413,
+    "total": 414,
     "autorais": 45,
-    "ecc": 368,
+    "ecc": 369,
     "modules": 20
   },
   "skills": [
@@ -3259,6 +3259,18 @@
       "defaultInstall": false,
       "body": "# Node.js Keccak-256\n\nEthereum uses Keccak-256, not the NIST-standardized SHA3 variant exposed by Node's `crypto.createHash('sha3-256')`.\n\n## When to Use\n\n- Computing Ethereum function selectors or event topics\n- Building EIP-712, signature, Merkle, or storage-slot helpers in JS/TS\n- Reviewing any code that hashes Ethereum data with Node crypto directly\n\n## How It Works\n\nThe two algorithms produce different outputs for the same input, and Node will not warn you.\n\n```javascript\nimport crypto from 'crypto';\nimport { keccak256, toUtf8Bytes } from 'ethers';\n\nconst data = 'hello';\nconst nistSha3 = crypto.createHash('sha3-256').update(data).digest('hex');\nconst keccak = keccak256(toUtf8Bytes(data)).slice(2);\n\nconsole.log(nistSha3 === keccak); // false\n```\n\n## Examples\n\n### ethers v6\n\n```typescript\nimport { keccak256, toUtf8Bytes, solidityPackedKeccak256, id } from 'ethers';\n\nconst hash = keccak256(new Uint8Array([0x01, 0x02]));\nconst hash2 = keccak256(toUtf8Bytes('hello'));\nconst topic = id('Transfer(address,address,uint256)');\nconst packed = solidityPackedKeccak256(\n  ['address', 'uint256'],\n  ['0x742d35Cc6634C0532925a3b8D4C9B569890FaC1c', 100n],\n);\n```\n\n### viem\n\n```typescript\nimport { keccak256, toBytes } from 'viem';\n\nconst hash = keccak256(toBytes('hello'));\n```\n\n### web3.js\n\n```javascript\nconst hash = web3.utils.keccak256('hello');\nconst packed = web3.utils.soliditySha3(\n  { type: 'address', value: '0x742d35Cc6634C0532925a3b8D4C9B569890FaC1c' },\n  { type: 'uint256', value: '100' },\n);\n```\n\n### Common patterns\n\n```typescript\nimport { id, keccak256, AbiCoder } from 'ethers';\n\nconst selector = id('transfer(address,uint256)').slice(0, 10);\nconst typeHash = keccak256(toUtf8Bytes('Transfer(address from,address to,uint256 value)'));\n\nfunction getMappingSlot(key: string, mappingSlot: number): string {\n  return keccak256(\n    AbiCoder.defaultAbiCoder().encode(['address', 'uint256'], [key, mappingSlot]),\n  );\n}\n```\n\n### Address from public key\n\n```typescript\nimport { keccak256 } from 'ethers';\n\nfunction pubkeyToAddress(pubkeyBytes: Uint8Array): string {\n  const hash = keccak256(pubkeyBytes.slice(1));\n  return '0x' + hash.slice(-40);\n}\n```\n\n### Audit your codebase\n\n```bash\ngrep -rn \"createHash.*sha3\" --include=\"*.ts\" --include=\"*.js\" --exclude-dir=node_modules .\ngrep -rn \"keccak256\" --include=\"*.ts\" --include=\"*.js\" . | grep -v node_modules\n```\n\n## Rule\n\nFor Ethereum contexts, never use `crypto.createHash('sha3-256')`. Use Keccak-aware helpers from `ethers`, `viem`, `web3`, or another explicit Keccak implementation.",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/nodejs-keccak256"
+    },
+    {
+      "id": "notebooklm-claude-rag",
+      "name": "notebooklm-claude-rag",
+      "description": "\"Use NotebookLM 2.0 as RAG infra-free with Claude Code — chat to PPTX/XLSX/PDF, cloud sandbox, gap-agent, batch ingest. Triggers on \\\"NotebookLM\\\", \\\"NotebookLM 2.0\\\", \\\"claude rag\\\", \\\"gap agent\\\", \\\"batch ingest\\\"\"",
+      "origin": "ecc",
+      "module": "framework-language",
+      "cost": "medium",
+      "stability": "stable",
+      "defaultInstall": false,
+      "body": "# NotebookLM Claude RAG — Infra-Free\n\n> Fonte: `Maestros da IA — YtrlYm10RRA` (NotebookLM 2.0, 451 linhas), transcript `YtrlYm10RRA.pt.dedup.txt:40-380`\n\nNotebookLM vira biblioteca agêntica; Claude Code vira executor. Sem indexar/fatiar manual.\n\n## Quando usar\n\n- Biblioteca ancorada em fontes com artefatos editáveis (PPTX/XLSX/PDF)\n- Precisa gap-agent que audita o que falta e importa com aprovação\n- Quer batch ingest 50 arquivos ou council multi-notebook\n\n## Workflows (5)\n\n1. **Batch ingest** — pasta → NotebookLM (50 arquivos, workaround Ultra)\n2. **Private-data analysis** — CSV Ads → framework → XLSX estratégico\n3. **Council** — pergunte a Hormozi/Russell/Cialdini em paral. → tabela comparativa\n4. **Gap-closer** — `o que falta?` → busca web → relatório → `importar?`\n5. **Response→Product** — query → PPTX/XLSX/web (10% chat, 90% infra)\n\n## Infra 2.0\n\n- Chat → artefato editável (ex: 6 princípios Cialdini)\n- Cloud sandbox por notebook (code execution)\n- Gap-agent + approved import (RAG-grounded)\n\n## Checklist\n\n- [ ] Notebook com fontes + chat artefato\n- [ ] Gap-agent validado\n- [ ] Claude Code batch ingest ok\n\n## Referências\n\n- `references/rag-patterns.md` — NotebookLM como vector store",
+      "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/notebooklm-claude-rag"
     },
     {
       "id": "nutrient-document-processing",

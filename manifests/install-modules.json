@@ -248,7 +248,8 @@
         "skills/local-llm-efficiency",
         "skills/local-ai-hardware",
         "skills/vox-style-video",
-        "skills/autopilot-content-factory"
+        "skills/autopilot-content-factory",
+        "skills/notebooklm-claude-rag"
       ],
       "targets": [
         "claude",
