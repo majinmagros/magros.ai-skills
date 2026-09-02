@@ -1,6 +1,6 @@
 ---
 name: rust-patterns
-description: Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.
+description: "Use when idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications. Triggers on \"rust-patterns\", \"rust patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

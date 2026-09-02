@@ -1,6 +1,6 @@
 ---
 name: agentic-engineering
-description: Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.
+description: "Use when operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing. Triggers on \"agentic-engineering\", \"agentic engineering\", \"engineering\"."
 metadata:
   origin: ECC
 ---

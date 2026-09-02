@@ -1,6 +1,6 @@
 ---
 name: postgres-patterns
-description: PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.
+description: "Use when postgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices. Triggers on \"postgres-patterns\", \"postgres patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

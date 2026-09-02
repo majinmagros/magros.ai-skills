@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T15:14:36.755Z",
+  "generatedAt": "2026-09-02T15:27:21.804Z",
   "repo": "majinmagros/magros.ai-skills",
   "counts": {
     "total": 409,
@@ -59,7 +59,7 @@
     {
       "id": "accessibility",
       "name": "accessibility",
-      "description": "Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA",
+      "description": "\"Use when design, implement, and audit inclusive digital products using WCAG 2.2 Level AA. Triggers on \\\"accessibility\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -71,7 +71,7 @@
     {
       "id": "agent-architecture-audit",
       "name": "agent-architecture-audit",
-      "description": "Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature.",
+      "description": "\"Use when full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code... Triggers on \\\"agent-architecture-audit\\\", \\\"agent architecture audit\\\", \\\"audit\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -95,7 +95,7 @@
     {
       "id": "agent-eval",
       "name": "agent-eval",
-      "description": "Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics",
+      "description": "\"Use when head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics. Triggers on \\\"agent-eval\\\", \\\"agent eval\\\", \\\"eval\\\".\"",
       "origin": "ecc",
       "module": "optimization-workflows",
       "cost": "medium",
@@ -119,7 +119,7 @@
     {
       "id": "agent-harness-construction",
       "name": "agent-harness-construction",
-      "description": "Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.",
+      "description": "\"Use when design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates. Triggers on \\\"agent-harness-construction\\\", \\\"agent harness construction\\\", \\\"construction\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -131,7 +131,7 @@
     {
       "id": "agent-introspection-debugging",
       "name": "agent-introspection-debugging",
-      "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+      "description": "\"Use when structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. Triggers on \\\"agent-introspection-debugging\\\", \\\"agent introspection debugging\\\", \\\"debugging\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -143,7 +143,7 @@
     {
       "id": "agent-payment-x402",
       "name": "agent-payment-x402",
-      "description": "Add x402 payment execution to AI agents with per-task budgets, spending controls, and non-custodial wallets. Supports Base through agentwallet-sdk and X Layer through OKX Payments / OKX Agent Payments Protocol.",
+      "description": "\"Use when add x402 payment execution to AI agents with per-task budgets, spending controls, and non-custodial wallets. Supports Base through agentwallet-sdk and X Layer through OKX Payments / OKX Agent Payments Protocol. Triggers on \\\"agent-payment-x402\\\", \\\"agent payment x402\\\", \\\"x402\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -155,7 +155,7 @@
     {
       "id": "agent-self-evaluation",
       "name": "agent-self-evaluation",
-      "description": "Use after completing any non-trivial task. The agent self-rates its output on 5 axes — accuracy, completeness, clarity, actionability, conciseness — with concrete evidence per criterion. Produces a structured 1-5 scorecard with specific improvement suggestions.",
+      "description": "\"Use when use after completing any non-trivial task. The agent self-rates its output on 5 axes — accuracy, completeness, clarity, actionability, conciseness — with concrete evidence per criterion. Produces a structured 1-5 scorecard with specific improvem... Triggers on \\\"agent-self-evaluation\\\", \\\"agent self evaluation\\\", \\\"evaluation\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -179,7 +179,7 @@
     {
       "id": "agentic-engineering",
       "name": "agentic-engineering",
-      "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+      "description": "\"Use when operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing. Triggers on \\\"agentic-engineering\\\", \\\"agentic engineering\\\", \\\"engineering\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -191,7 +191,7 @@
     {
       "id": "agentic-os",
       "name": "agentic-os",
-      "description": "Build persistent multi-agent operating systems on Claude Code. Covers kernel architecture, specialist agents, slash commands, file-based memory, scheduled automation, and state management without external databases.",
+      "description": "\"Use when build persistent multi-agent operating systems on Claude Code. Covers kernel architecture, specialist agents, slash commands, file-based memory, scheduled automation, and state management without external databases. Triggers on \\\"agentic-os\\\", \\\"agentic os\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -203,7 +203,7 @@
     {
       "id": "ai-first-engineering",
       "name": "ai-first-engineering",
-      "description": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+      "description": "\"Use when engineering operating model for teams where AI agents generate a large share of implementation output. Triggers on \\\"ai-first-engineering\\\", \\\"ai first engineering\\\", \\\"engineering\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -215,19 +215,19 @@
     {
       "id": "ai-media-generator",
       "name": "ai-media-generator",
-      "description": "為使用者產生高品質的 AI 生圖、生影片、生音樂提示詞，並在需要時透過瀏覽器自動化實際送到目標平台。涵蓋 OiiOii、Kling 3.0/O-series、Seedance 2.0/2.5、Suno v5.5、Seedream 5.0/4.0、Vidu Q3、Midjourney V8.1、Flux 1.1 Pro / Kontext、Runway Gen-4.5 / Aleph、Google Veo 3.1、Ideogram 3、Nano Banana Pro、Stable Diffusion 3.5（⚠️ OpenAI Sora 2 已於 2026-04-26 停運，API 撐到 2026-09-24，預設改推 Runway/Veo/Kling）。只要使用者提到「AI 生圖」「AI 影片」「AI 音樂」「做 MV」「做 storyboard」「寫 prompt 給 XXX」「我想用 Kling/Suno/Midjourney/Runway/Veo...」「幫我操作 OiiOii / 即夢 / 可靈」「txt2img / img2video / 文生圖 / 文生影片 / 圖生影片」「角色一致性」「多鏡頭分鏡」「運鏡」「結果有瑕疵 / 不夠精緻 / 怎麼修」，或任何跟上述平台或影像/影片/音樂生成工作流相關的任務，都要用這個 skill。即使他們沒講明平台，只要任務是要餵給某個生成模型的 prompt，就用這個 skill 幫他們選對的平台、寫對的格式。",
+      "description": "\"Use when generating AI images, video, or audio via fal.ai, Kling, Seedance, Suno, Midjourney. Triggers on \\\"ai-media-generator\\\", \\\"ai media generator\\\", \\\"gerar imagem\\\", \\\"gerar video\\\"\"",
       "origin": "ecc",
       "module": null,
       "cost": null,
       "stability": null,
       "defaultInstall": null,
-      "body": "# AI Media Generator\r\n\r\n> **Codex compatibility:** References that still say “Claude in Chrome” or “Chrome MCP” describe legacy browser behavior. On Codex, load `chrome:control-chrome` and use the currently available Chrome tools; never invent or call legacy `mcp__Claude_in_Chrome__*`, `javascript_tool`, or `browser_batch` names.\r\n\r\n幫使用者把想法變成高品質的 AI 生成內容 (圖片、影片、音樂)，核心工作是 **寫對每個平台的 prompt** 以及 **必要時自動操作網站**。\r\n\r\n**AI 短劇邊界：** 使用者要做 AI 短劇／漫劇、重生／系統／逆襲／隱藏大佬、分集連載或整季架構時，先由 [`ai-short-drama`](https://github.com/Hao0321/ai-short-drama) 建題材、Bible、pilot、分集狀態與 production pack；本 Skill 只接下游角色圖、場景圖、逐鏡影片／聲音 prompt 與模型執行，不自行重寫季弧。\r\n\r\n## 🤖 Auto-Pilot Mode (超傻瓜一句話到成品)\r\n\r\n**觸發：** 使用者說「幫我做 X」「做一個 X」「生個 X」「我要 X」這類命令式、且 X 含媒體類型 (圖/影片/音樂/MV/短片/海報/動畫) 或風格關鍵字 → **直接進 auto-pilot 不問**。\r\n\r\n**流程 (見 [templates/auto-pilot.md](templates/auto-pilot.md) 完整版)：**\r\n1. **Intent Parser** — 一句話拆 9 slot (媒體/長度/畫面比/主題/風格/角色/場景/音訊/語言)\r\n2. **Fill Defaults** — 沒講的用預設 (video 預設 10s 16:9；動漫預設 Shinkai+Ghibli；電影預設 Deakins DP…)\r\n3. **Platform Decider** — 按 [references/selector.md](references/selector.md) + quick pick 矩陣自動選\r\n4. **Script + Storyboard Auto-gen** — 自動寫 logline + 角色卡 + 分鏡\r\n5. **Prompt Crafting** — 強制套語彙庫 (見下方硬規則)\r\n6. **Preview + Go** — 30-秒 override 視窗，使用者回「go/確認/OK」才執行；無回 + 需花錢 → 停；無回 + 免費 → 30 秒後自動繼續\r\n7. **Execution + Report** — 按 [automation/click-protocol.md](automation/click-protocol.md) + [site-profiles/](automation/site-profiles/) 協議操作\r\n\r\n**Auto-Pilot 必停的 checkpoint (不代做)：**\r\n- ⛔ 付費 paywall / 升級提示\r\n- ⛔ 送出前最終一次確認\r\n- ⛔ 下載 / 分享 / 公開發布\r\n- ⛔ 敏感內容 (真人照片疑似裸露/暴力/政治人物)\r\n- ⛔ click-protocol.md 定義的「irreversible action」\r\n\r\n**Auto-Pilot 禁止行為：**\r\n- ❌ 幫 Claude 已知的事問使用者 (「你要幾秒的影片？」— 10s 預設就好)\r\n- ❌ 一次拋多選項 — 選 1 個最佳 commit，讓使用者在 Preview 階段才決定改不改\r\n- ❌ 寫純 generic 填詞 prompt (`beautiful / masterpiece / detailed`) — 違反下方硬規則（注意：`cinematic / 4K / 8K` 在新一代模型如 Seedance 2.0 是有效 token，看平台分流）\r\n- ❌ 代付款\r\n\r\n**使用者自然語言 flags 可 override 預設：** 使用者一句話可帶「用 Kling / 5 秒 / 豎屏 / 免費 / Ghibli 風 / 有對白」等自然語言 flag，auto-pilot 掃 [templates/user-flags.md](templates/user-flags.md) 對照表自動套用。使用者不懂術語也 OK — 「做個抖音」「可愛一點」「夢幻」都有對應翻譯。\r\n\r\n**⚡ Token-Efficient Mode (大專案必讀)：** 本 skill 55+ 檔 / 14000+ 行，全量讀會爆 context。Auto-Pilot 預設套 [templates/token-efficient-mode.md](templates/token-efficient-mode.md) 的 7 層策略 (lazy load / grep / 子代理 / preset 跳過 / cache polling)。**一般任務目標 ~25-40k tokens，不是 100k+**。豪華模式 (全量讀) 只在 benchmark / 學 skill / 陌生平台探索時啟用。\r\n\r\n## 🎯 快查表：3 秒找對檔案（更直覺入口）\r\n\r\n**先看這張表 → 對到使用者說的話 → 直接讀那個檔。** 找不到再往下走完整流程。\r\n\r\n| 使用者說… | 讀這個檔 | 為什麼 |\r\n|---|---|---|\r\n| 「AI短劇/AI漫劇/爽劇/重生/系統/逆襲/隱藏大佬/分集連載」 | [`ai-short-drama`](https://github.com/Hao0321/ai-short-drama) | 先鎖故事、角色、揭露梯與 state；媒體 prompt 再回本 Skill |\r\n| 「結果有瑕疵/爛掉/不夠精緻/閃爍/變形/塑膠感/文字怪」 | [quality-control.md](references/quality-control.md) | 7+1 類瑕疵系統診斷 + 對症修法 |\r\n| 「prompt 沒主題/畫面很空/不知道在拍什麼/效果差」 | [concept-first-prompting.md](references/concept-first-prompting.md) | 先定 concept 再加技術詞 |\r\n| 「怎麼把想法組成強 prompt/太慢/每次從零想/要打分」 | [prompt-craft-engine.md](references/prompt-craft-engine.md) | 6層骨架 + 填空模板 + 10分評分閘（更快更強）|\r\n| 「成品要更高級/更精美/更貴/像 editorial/反塑膠感」 | [aesthetic-grade.md](references/aesthetic-grade.md) | 打光比/調色/材質/鏡頭 DP 級配方（更精美）|\r\n| 「不知道用哪個模型/該用哪個平台/不熟各家」 | [model-picker.md](references/model-picker.md) | 決策樹 + 各家最強情境 |\r\n| 「角色要一致/同一個人出現多鏡/風格鎖定」 | [asset-library.md](templates/asset-library.md) + [multimodel-video-cheatsheet.md](references/multimodel-video-cheatsheet.md) | 角色卡 + @element 身份鎖 |\r\n| 「Seedance 2.5/30秒/社群案例/UGC/Vlog/多參考/硬切/提示詞案例」 | [seedance-2-5-community-playbook.md](references/seedance-2-5-community-playbook.md) + [seedance.md](references/seedance.md) | 證據分級 + capability gate + 社群案例蒸餾 + 六類模板 |\r\n| 「Seedance 商業/企業/建商/建築/房地產/廣告/產品/汽車/美食/電影/動畫」 | [seedance-domain-playbook.md](references/seedance-domain-playbook.md) + [seedance.md](references/seedance.md) | 八個垂直領域的 reference map、truth lock、物理帳本、原創模板與 QA |\r\n| 「Seedance 長片/參考圖角色/首鏡後鎖定/時間凍結或倒轉/複雜事件連續性」 | [seedance-longform-continuity.md](references/seedance-longform-continuity.md) + [seedance.md](references/seedance.md) | 不變量帳本 + 時間碼 + 事件狀態機 + 15 秒切段 |\r\n| 「圖生影片/i2v/img2video/參考圖鎖死/產品廣告鎖形狀」 | [image-to-video-workflow.md](references/image-to-video-workflow.md) | i2v 鎖形狀 SOP（產品廣告最穩） |\r\n| 「寫歌/純音樂」→[suno.md](references/suno.md)｜「對白/音效/配樂/原生音訊」→[sound-design.md](references/sound-design.md) | 二選一 | 純音樂 vs 影片內音訊分流 |\r\n| 「做 MV/卡點/轉場/剪接節奏」 | [music-video.md](templates/music-video.md) + [editing-transitions.md](references/editing-transitions.md) | BPM 同步 + match cut/J-cut |\r\n| 「要現成 prompt/範本/某某風格(Wes Anderson/賽博龐克)」 | [preset-packs.md](templates/preset-packs.md) | 30+ preset 換占位符即用 |\r\n| 「想抄某導演/DP/品牌/製作公司風格」 | [director-style-library.md](references/director-style-library.md) | 簽名 token（⚠️ Flux/Nano 洗掉導演名）|\r\n| 「超短廣告/TikTok/10秒快剪」 | [nano-banana.md](references/nano-banana.md) | <30 token 超精簡 prompt |\r\n| 「Wan 2.7/Kling Omni/HappyHorse/拉片復刻/多模型省成本」 | [multimodel-video-cheatsheet.md](references/multimodel-video-cheatsheet.md) | 2026 新模型招牌技巧 |\r\n| 「幫我直接操作 OiiOii/Flow/Kling」 | [click-protocol.md](automation/click-protocol.md) + [site-profiles/](automation/site-profiles/README.md) | 自動化協議 + 各站 UI 地圖 |\r\n| 「免費/不想花錢」 | [selector.md](references/selector.md) Cost 欄 + 各平台檔 Free tier | 免費額度速查 |\r\n\r\n> **🔴 OiiOii 專用：** OiiOii **2026-06-08 大改版**，最新 UI/流程/成本/i2v/選模型/新模型（Oii Image 2 / Gemini Omni / Oii X Imagine）一律以 [`automation/site-profiles/oiioii.md §0`](automation/site-profiles/oiioii.md) 為準（**SOURCE OF TRUTH**）。`references/oiioii.md` 只看 prompt 哲學，UI 別照它。\r\n\r\n## 🔴 硬規則 (Mandatory)\r\n\r\n### Meta 優先序（2026-04-21 實戰鐵律）\r\n\r\n**Prompt 寫對一次 ≫ 操作快 10 次。**\r\n\r\n根因：寫錯 prompt → 重做 → 等 8-10 分鐘。操作 25 秒 vs 5 分鐘差距（~4.5 分鐘），**遠遠小於「一次 prompt 失敗」成本（~10 分鐘等待 + token 浪費）**。所以速度優化的**真正**優先序：\r\n\r\n1. **第一優先：查平台簽名 + 寫對 prompt** → [references/community-prompt-patterns.md](references/community-prompt-patterns.md)（跨 X/Threads/Reddit/小紅書/Bilibili 社群驗證，單一 source of truth）\r\n2. **第二優先：單次提交極速化** → [automation/site-profiles/](automation/site-profiles/)\r\n3. **第三優先：等待不 polling** → `Bash run_in_background:true + sleep 400`\r\n\r\n順序反了 = 浪費 40+ 分鐘做 4-5 次嘗試才生出可用的。\r\n\r\n### Prompt 必備語彙\r\n\r\n**每次產 image / video / music prompt，都必須從 skill 進階語彙庫挑 token — 不是選配，是必做。**\r\n\r\n**流程：**\r\n1. **最優先查**：[references/community-prompt-patterns.md](references/community-prompt-patterns.md) — 按**目標模型**查簽名 token + 長度甜蜜點 + 禁忌（⚠️ 平台吃不同 token，Seedance/Wan 吃導演名 = 災難）\r\n2. 決定任務類型 (攝影感/電影感/廣告/時尚/MV/VFX/社群短片)\r\n3. **挑對應 reference 檔讀：**\r\n   - 電影/攝影類 → [cinematic-direction.md](references/cinematic-direction.md) 必讀\r\n   - 廣告/時尚/MV/品牌 → [commercial-direction.md](references/commercial-direction.md)\r\n   - 特效/物理/大氣 → [vfx-effects.md](references/vfx-effects.md)\r\n   - 原生音訊 (Veo/Sora/Vidu Q3) → [sound-design.md](references/sound-design.md)\r\n   - 多鏡/剪接/節奏 → [editing-transitions.md](references/editing-transitions.md)\r\n4. **快速路徑**：先查 [preset-packs.md](templates/preset-packs.md) 找最近的 preset，換占位符即可\r\n5. **每個 prompt 至少嵌入 5-8 個高訊號 token**，從下列層挑（**看平台分流**）：\r\n   - 導演/DP 名 (Deakins、Lubezki、Hoytema、王家衛、新海誠…) — ✅ MJ/Sora 2/Veo；❌ Flux/Nano Banana Pro/Seedance/Wan\r\n   - 鏡頭/焦段 (Panavision anamorphic / 85mm / C-Series 等) — 通吃\r\n   - 底片/感光 (Kodak Vision3 500T / Cinestill 800T 等) — ✅ Flux/MJ；❌ Seedance\r\n   - 光比/燈光 (Rembrandt / 4:1 contrast / volumetric god rays 等) — 通吃\r\n   - 色彩分級 (teal-orange / bleach bypass / A24 indie 等) — 通吃\r\n   - 構圖/景別 (rule of thirds / medium close-up 等) — 通吃\r\n   - VFX/大氣 (halation / Tyndall effect / particles 等) — 通吃\r\n   - (Veo/Sora) 音訊三層 (Dialogue / SFX / Soundtrack)\r\n\r\n### 禁用模式（通用 + 平台特定）\r\n\r\n**通用原則：** **寧可 5 個具體 token，不要 20 個泛詞。** 但 generic 與否**看平台**。\r\n\r\n**真正全平台垃圾（任何時候都別用）：**\r\n- `beautiful / masterpiece / detailed / high quality / professional`（這幾個從沒在新一代模型有實證效果）\r\n- `--no blur` 等 flag-style 負面 prompt（多數模型不吃，用自然語言 `no blur` 反而 OK）\r\n\r\n**⚠️ 平台特定（注意「2026-04-21 vs 2026-05-18 推翻」— 模型升級會改變斷言）：**\r\n- ⚠️ `cinematic` / `4K` / `8K` / `35mm-50mm-85mm` — **舊版 Seedance 1.0 弱，Seedance 2.0 大量吃**（v1.1.0 修正）。Kling / Sora 2 / Veo 3.1 / MJ v7 / Flux 全吃。\r\n- ❌ **Seedance 2.0**：`fast`（改 `extreme speed / kinetic / rapid`）、多動詞同句、多主體獨立動作、chaotic wide 無時間區塊、個別 DP 名（藝術運動 / 品牌風格 OK）\r\n- ❌ **Flux / Nano Banana Pro**：artist names（訓練時被 scrub）、`--ar` 語法\r\n- ❌ **Runway Gen-4**：>60 字 prompt（最短的模型）、synonym drift\r\n- ❌ **Kling**：stacking 多個相機運動、>4-5 distinct nouns\r\n\r\n**先查 [community-prompt-patterns.md](references/community-prompt-patterns.md)** — 該檔每個模型都有「禁忌」section，且註明 cross-platform 推翻歷史。\r\n\r\n### 驗證自檢（送出前必過 10 分評分閘）\r\n\r\n**每個 prompt 送出前，用 [prompt-craft-engine.md §3 的 10 分品質評分表](references/prompt-craft-engine.md) 打分 —— ≥8 才送，<8 回去補。** 每個跨平台垃圾詞（beautiful/masterpiece/detailed/high quality）額外 −1。\r\n\r\n10 項速記：①具體主體 ②可視動詞 ③2-4場景元素 ④鏡頭精度 ⑤單一風格錨 ⑥長度甜蜜點 ⑦無自相矛盾 ⑧平台簽名對 ⑨負面對症 ⑩存在性測試。\r\n\r\n**快速 4 題版（趕時間）：** 查過 community-prompt-patterns.md 目標模型？Token 符合平台簽名？避開禁忌？長度甜蜜點？—— 4 過才送。\r\n\r\n## 核心原則\r\n\r\n1. **先問清楚「要什麼」，再決定「用哪個」**。同一個想法送到不同模型，prompt 寫法完全不同。先釐清：\r\n   - 媒體類型：靜態圖 / 影片 / 音樂 / 複合 (MV、分鏡動畫)\r\n   - 用途：社群貼文 / 廣告 / 電影感短片 / 角色一致性專案 / 文字海報\r\n   - 手上資源：有沒有參考圖、首尾幀、角色圖、歌詞\r\n   - 預算/可用性：免費網站 / 付費會員 / API 金鑰\r\n\r\n2. **讀對應的 reference 檔**。本 skill 的知識是分散式的。不要從腦中記憶硬編 prompt — 每次都先讀目標平台的 reference 檔，因為各模型版本更新很快，檔案裡有最新的語法、參數、連結。\r\n\r\n3. **中英混寫時有規則**：主體名詞、運鏡術語、模型參數用英文；情感描述、文化元素 (漢服、水墨、國風)、旁白/歌詞用中文。Seedream 與 Kling 的中文支援最好；Midjourney、Flux、Runway、Veo 英文效果明顯較佳。\r\n\r\n4. **Prompt 長度**。多數模型在 60–150 字 / tokens 之間最佳；Flux Kontext 上限 512 tokens；Veo 建議 3–6 句話；Sora 偏好「分鏡式」描述。reference 檔有每個模型的具體上限。\r\n\r\n5. **輸出格式**。除非使用者明說只要 prompt 本文，否則給他們：\r\n   - 一個 **可複製的 prompt 區塊** (通常英文)\r\n   - 一段 **繁中說明**：這個 prompt 為什麼這樣寫、哪些 token 可以換掉、預期輸出會長怎樣\r\n   - 一組 **建議參數** (aspect ratio、時長、model variant、seed 等)\r\n   - 如果有平台特殊語法 (tag、metatag、參考圖槽位)，把它結構化呈現\r\n\r\n## 工作流\r\n\r\n### Step 1 — 選平台\r\n\r\n如果使用者已指定平台 (「用 Kling」「幫我寫 Suno prompt」)，直接跳 Step 2。\r\n\r\n否則讀 [references/selector.md](references/selector.md) 按「媒體類型 × 用途 × 資源」選出 1–2 個最佳候選平台，並把推薦理由用 2–3 句話告訴使用者。如果落差很大 (例如「免費 vs 付費最佳」)，給使用者選擇。\r\n\r\n### Step 2 — 讀對應的 reference 檔\r\n\r\n根據選定平台，**一定要** 讀對應檔案，不要憑記憶寫 prompt：\r\n\r\n> **🧭 不確定選哪個模型？先讀 [references/model-picker.md](references/model-picker.md)** — OiiOii 全模型 + 各平台「選誰 / 招牌 prompt 技巧」總表 + 30 秒決策樹。**使用者嫌「不熟模型」「該用哪個」時必讀。**\r\n\r\n**影片 (Video)**\r\n- Kling 3.0 / O-series（V3 畫質 / Omni 參考驅動 / O1 首尾幀，三者不同）→ [references/kling.md](references/kling.md)\r\n- Seedance 2.0 / 2.5 / 1.x（`@AssetName` 標記；2.5 先做 provider capability gate）→ [references/seedance.md](references/seedance.md)。**2.5 社群案例、30 秒、多參考、UGC／Vlog、硬切或 prompt 拆解**另讀 [references/seedance-2-5-community-playbook.md](references/seedance-2-5-community-playbook.md)；**商業、建商、廣告、產品、汽車、美食、電影或動畫**另讀 [references/seedance-domain-playbook.md](references/seedance-domain-playbook.md)；**參考圖角色、首鏡後鎖定、時間凍結／倒轉、複雜物理或 15 秒以上故事**另讀 [references/seedance-longform-continuity.md](references/seedance-longform-continuity.md)\r\n- Vidu Q3 Mix/Ref/Pro（動漫 + 多角色一致，`@tag` 多參 + HEX 鎖色）→ [references/vidu.md](references/vidu.md)\r\n- Runway Gen-4.5 / Aleph / Act-Two → [references/runway.md](references/runway.md)\r\n- Google **Veo 3.1** → [references/veo.md](references/veo.md)｜🆕 **Gemini Omni**（對話式多模態、多輪編輯、any-to-any）→ [references/gemini-omni.md](references/gemini-omni.md)（Google 雙旗艦：4K 畫質線 + 對話編輯線）\r\n- 🆕 **Hailuo 2.3 Pro/Std**（角色表演/微表情旗艦，5s）→ [references/hailuo.md](references/hailuo.md)\r\n- Wan 2.7·2.6（複雜場景/對白/Thinking Mode）/ HappyHorse（敘事音畫）→ [references/multimodel-video-cheatsheet.md](references/multimodel-video-cheatsheet.md) + [model-picker.md](references/model-picker.md)\r\n- ⚠️ OpenAI Sora 2 → [references/sora.md](references/sora.md)（**已停運** — app 2026-04-26 關，API 2026-09-24 關。讀此檔只為了解替代方案；新任務改用 Veo/Gemini Omni/Runway/Kling）\r\n\r\n**圖片 (Image)**\r\n- **🆕 Oii Image 2 [Best]**（OiiOii 圖片旗艦：文字渲染+寫實最強，代替已移除的 GPT-Image2）→ 見 [site-profiles/oiioii.md §0](automation/site-profiles/oiioii.md)。⚠️ **GPT-Image2 已從 OiiOii 移除 2026-06-08**；圖內精準文字改用 Oii Image 2 / Ideogram 3 / Nano Banana Pro\r\n- Seedream 5.0 / 4.0 → [references/seedream.md](references/seedream.md)\r\n- Midjourney V8.1 / niji 7（⚠️ `--oref` 為 V7-only） → [references/midjourney.md](references/midjourney.md)\r\n- Flux 1.1 Pro / Kontext → [references/flux.md](references/flux.md)\r\n- Ideogram 3（文字/海報/Logo 精準渲染）→ [references/ideogram.md](references/ideogram.md)\r\n- Nano Banana Pro（超短 10s 廣告 / TikTok，<30 token 精簡 prompt）→ [references/nano-banana.md](references/nano-banana.md)\r\n- Stable Diffusion 3.5 / SDXL → [references/stable-diffusion.md](references/stable-diffusion.md)\r\n\r\n**音樂 (Music)**\r\n- Suno v5.5（Personas 已改名 Voices） → [references/suno.md](references/suno.md)\r\n\r\n**複合 / 多智能體**\r\n- **OiiOii.ai** → 自動化/UI/最新模型：[site-profiles/oiioii.md §0](automation/site-profiles/oiioii.md)（**SOURCE OF TRUTH**）｜prompt 哲學：[references/oiioii.md](references/oiioii.md)（⚠️ §1-§12 舊 UI 勿照）\r\n\r\n**跨平台共通**\r\n- 鏡頭語言 (影片類都適用) → [references/camera-language.md](references/camera-language.md)\r\n\r\n**進階導演 / VFX / 音效 / 剪接 級別 prompt 設計** (當使用者要「電影級」「廣告級」「奢侈品級」「完整影視團隊」時**必讀**)\r\n- 電影導演 / 攝影指導 / 底片 / 燈光 / 構圖 / meta tokens → [references/cinematic-direction.md](references/cinematic-direction.md)\r\n- 廣告 / 時尚 / MV 導演 / 品牌調性 / 社群短影音 → [references/commercial-direction.md](references/commercial-direction.md)\r\n- VFX 總監 / 大氣 / 物理 / 特效 recipes → [references/vfx-effects.md](references/vfx-effects.md)\r\n- **音效設計** (對白 / SFX / Foley / 配樂) → [references/sound-design.md](references/sound-design.md) — Veo 3.1 / Vidu Q3 原生音訊必讀\r\n- **剪接 / 轉場 / 節奏** (match cut / whip pan / J-L cut / ASL 律動) → [references/editing-transitions.md](references/editing-transitions.md) — 多鏡故事、storyboard、MV 必讀\r\n- **🎬 概念先行 Prompting** (prompt 沒主題/畫面很空/效果差/不知道在拍什麼) → [references/concept-first-prompting.md](references/concept-first-prompting.md) — **使用者嫌「prompt 沒主題」「有些畫面不知道在幹嘛」「影片效果差」時必讀**。治「技術詞堆疊但空洞」：先定一句話 concept → 3-beat 敘事弧 → 每個鏡頭做存在性測試 → 才加技術詞。含 6 個產品廣告概念框架\r\n- **⚙️ Prompt 組裝引擎**（有 concept 了但不知怎麼組成強 prompt / 想更快 / 要品質評分）→ [references/prompt-craft-engine.md](references/prompt-craft-engine.md) — **更強+更快的 META 引擎**：通用 6 層解剖（弱形容詞→強具體事實 before/after）+ 6 種媒材 <60 秒填空骨架 + **10 分品質評分閘（≥8 才送）**。流程位置：concept-first →（本檔組裝+評分）→ vocab 檔填字 → quality-control 修\r\n- **💎 精緻度分級（更精美）**（成品要像 editorial/commercial-award 級 / 反 AI 塑膠感 / 要「貴」）→ [references/aesthetic-grade.md](references/aesthetic-grade.md) — DP 級**可貼入配方**：打光 setup（方向+質感+光比）、調色科學（Kelvin/hue）、材質表面渲染（玻璃/金屬/皮膚/食物反塑膠 phrase）、鏡頭光學、大氣。比 cinematic-direction 的選單更深、給整段配方\r\n- **🔧 反瑕疵品質控制** (結果爛了/有瑕疵/不夠精緻怎麼修) → [references/quality-control.md](references/quality-control.md) — **使用者嫌結果有瑕疵、產品變形、塑膠感、閃爍、文字鬼影、動得很假時必讀**。系統化分類 7 類瑕疵 + 對症修法（鎖時間/鎖物理/鎖主體）+ 平台物理強弱速查\r\n- **🧭 模型選擇大全** (該用哪個模型 / 不熟各家模型) → [references/model-picker.md](references/model-picker.md) — OiiOii 全模型 + Gemini Omni / Kling O-series / Vidu / Hailuo / Wan / Seedance 各家「最強情境 + 招牌 prompt 技巧 + 何時選」+ 命名混淆對照（Gemini Omni vs Kling Omni）\r\n- **🎬 多模型影片操作手冊** (Wan 2.7 / Kling 3.0 Omni / HappyHorse 怎麼下 prompt / 拉片復刻 / 多模型省成本) → [references/multimodel-video-cheatsheet.md](references/multimodel-video-cheatsheet.md) — Wan 2.7 Thinking Mode 完整 brief + Kling Omni 身份鎖(@element)+物理事件 + HappyHorse 短 prompt+原生音訊 + 拉片復刻先選模式 + 多模型 tier-by-cost/frame-chaining/per-model 重寫 + shot-type 選模型表。**用 OiiOii 新影片模型或要省成本跑多模型時必讀（2026-06 研究+實測）**\r\n- **📋 經驗證 Prompt 庫** (要現成高品質 prompt / 不想從零寫 / 要範本) → [references/proven-prompts.md](references/proven-prompts.md) — **26+ 個逐字可貼的高品質 prompt**（Google 官方 Veo/Omni guide、Kling 官方、Seedance/Vidu @語法實例、廣告/美食/汽車/精品/多鏡頭/對白），按用途分類 + 來源 + 跨模型語法速查。**使用者要「更好的 prompt / 範例 / 範本」時必讀**\r\n\r\n這三個進階檔是 **語彙庫**，不是流程手冊。使用方式：\r\n1. 先照平台的 reference (kling.md / flux.md 等) 確定該平台的 prompt 結構\r\n2. 再從進階檔挑 **5-8 個高質量 token** 填進結構裡\r\n3. 不要整段 copy — 挑對情緒、對平台、對故事的那幾個詞\r\n\r\n一個人身高不同，鏡頭焦段/燈光/底片的「關鍵詞組合」就不同。「超級資深影視導演」的 prompt = 四層堆疊 `[導演/DP] + [鏡頭/底片] + [燈光/色調] + [動作/構圖]`，每層挑最契合的 1-2 個 token。\r\n\r\n### Step 3 — 根據任務類型參考 template\r\n\r\n- **快速：抽一個現成 preset 套用** (30 個電影/廣告/MV/VFX/短影音 preset) → [templates/preset-packs.md](templates/preset-packs.md)\r\n- **複雜多步驟任務 (> 15s 影片 / 多角色一致 / 品牌包 / 專輯 / MV 一條龍)** → [templates/advanced-recipes.md](templates/advanced-recipes.md) 13 個 chain workflow (Extend / Persona / Motion Control / Cameo 等進階功能組合)\r\n- **重用角色/風格/場景卡** → [templates/asset-library.md](templates/asset-library.md)\r\n- 多鏡頭 / 分鏡故事片 → [templates/storyboard.md](templates/storyboard.md)\r\n- 音樂影片 / MV → [templates/music-video.md](templates/music-video.md)\r\n- 常用負面提示詞 → [templates/negative-bank.md](templates/negative-bank.md)\r\n- **社群多版本 / 預算 flag / 平台 flag / 風格 flag** → [templates/user-flags.md](templates/user-flags.md)\r\n- **大專案省 token** → [templates/token-efficient-mode.md](templates/token-efficient-mode.md)\r\n\r\n**preset-packs.md 的用法：** 使用者要「Wes Anderson 風」「Nike 廣告感」「賽博龐克雨夜」「水下夢境」等明確風格時，**先到 preset-packs.md 找最近的 preset**，換占位符即可，不用每次從零組 prompt。若使用者要的風格不在 preset 裡，再從 [cinematic-direction.md](references/cinematic-direction.md) / [commercial-direction.md](references/commercial-direction.md) / [vfx-effects.md](references/vfx-effects.md) 現場組。\r\n\r\n### Step 4 — 組出 prompt 並輸出\r\n\r\n依 reference 檔給的公式組出 prompt。每個平台有自己的 order、特殊符號、tag — **嚴格按 reference 檔的格式寫**。\r\n\r\n**輸出格式**：可複製的 prompt 區塊 + negative + 參數 + 繁中 why (每個 token 為什麼選)。完整範例見 [preset-packs.md](templates/preset-packs.md) 的 30 個 preset，每個都是 ready-to-use 格式。\r\n\r\n### Step 5 (選配) — 瀏覽器自動化執行\r\n\r\n如果使用者要求「幫我直接做」「幫我貼上去按產生」「操作 OiiOii/Kling/Suno」等，這套檔要讀：\r\n\r\n**1. 通用 click 協議 (所有網站都要遵循)**\r\n- [automation/click-protocol.md](automation/click-protocol.md) — Click 決策樹、ref 保質期、座標精準技巧、驗證 selected 的方法、scroll-aware 座標、paywall 偵測、等待策略、驗證循環、速度優化\r\n\r\n**2. 網站特定 profile (該站的 UI 地圖 + 座標 + 陷阱)** — 索引見 [site-profiles/README.md](automation/site-profiles/README.md)\r\n\r\n**✅ 完整驗證（可放心自動化）：**\r\n  - [oiioii.md](automation/site-profiles/oiioii.md) — OiiOii 整合，**§0 = 2026-06-08 大改版 SOURCE OF TRUTH**（新入口/Agent▾選模型/i2v/一致性/新模型）\r\n  - [flow.md](automation/site-profiles/flow.md) — Google Veo 3.1 + Gemini Omni Flash（完整 Phase 1-6 + 生成偵測看 gallery tile）\r\n  - [kling.md](automation/site-profiles/kling.md) — Kling 3.0（完整 Phase 1-7 + credits + Fast-Track）\r\n\r\n**⚠️ 部分/stub（有 UI 地圖但未全驗）：** suno / midjourney / seedream / runway / vidu / ideogram\r\n\r\n**🔴 停運：** sora（不支援自動化，新案改 Veo/Kling/Runway）\r\n\r\n**📝 [_template.md](automation/site-profiles/_template.md)** — 新網站 profile 模板\r\n\r\n> 使用者說「幫我直接操作 XXX」時：先確認該站在上列。**未列出者告知「該平台暫不支援全自動化，但我可代寫 prompt 讓你貼上去」**。\r\n\r\n**3. 高層流程速查 (每站登入與主流程概述)**\r\n- [automation/browser-guide.md](automation/browser-guide.md)\r\n\r\n**送出前必做的安全檢查 (見 click-protocol.md 詳細)：**\r\n- 確認使用者已登入目標站 (**絕不代輸入密碼**)\r\n- 把即將輸入的 prompt 完整貼給使用者，**等確認再送**\r\n- 首次操作某站 → screenshot 對照 site-profile，UI 改版就更新 profile\r\n- 送出前 screenshot (before)，送出後 screenshot (after)，**比對 UI 變化確認真送出**\r\n- 撞到 paywall / modal / 非預期彈窗 → **立刻停下問使用者**，不代付款\r\n\r\n**reliability 核心原則 (來自 OiiOii demo 踩坑紀錄)：**\r\n1. **不信任記憶中的座標** — 5 秒前的 screenshot 可能已過期，click 前必須剛截圖\r\n2. **ref 很短命** — `find` 完 **立刻** click，中間不插其他 tool call\r\n3. **selected state 看填底色，不是粉色 ring** (那是 hover)\r\n4. **click 沒中別亂重試** — 先 screenshot 診斷 (paywall？disabled？座標偏？)\r\n5. **Polling 不要 < 60s 也不要 > 3min** — 互動 UI 60-90s，純背後等待 3-5min\r\n\r\n**⚡ Chain workflow 強制節省 (來自 Suno 5 首歌 chain 慘痛教訓 2026-04-20)：**\r\n連跑多任務 (做 5 首歌、5 張圖、多支影片) 時：\r\n1. **中間禁 screenshot** — 只第 1 task 後 + 全部完成各 1 張 (浪費點 #1)\r\n2. **中間禁 TodoWrite** — chain 完成後一次性更新即可 (浪費點 #2)\r\n3. **clear field 用 1-click** — 點 trash icon 或 ctrl+a 覆寫，禁用 triple-click + Ctrl+A + Delete 三步走\r\n4. **內容寫標準長度** — Suno 歌詞 ~25 行 / Veo prompt ~80 字 / MJ keyword 30-50 字 / Seedream 80-120 字，超寫不加分\r\n5. **平台有 Series Mode/Multi-Shot/Multi-Reference → 用內建批次** 不要 N 次 chain (Suno Persona / Kling Multi-Shot / Seedream Series / MJ omni-ref / Vidu Q3 multi-entity)\r\n\r\n**檢測標準：** 5 task chain 應 ≤ 36 tool calls + ≤ 1.5k token + < 5 分鐘。違反任一就要修。詳見 [click-protocol.md §「Token + 時間最佳化」](automation/click-protocol.md)。\r\n\r\n## 關鍵品質檢查 (在交付 prompt 前跑一遍)\r\n\r\n- [ ] 有沒有「具體的主體描述」— 不只是 \"a person\" 而是 \"a woman in her 30s with chin-length silver hair\"\r\n- [ ] 動作有沒有可視化的動詞 — \"walks slowly\" / \"tilts her head\" 優於 \"is moving\"\r\n- [ ] 場景有沒有 2–4 個具體元素 — 時間、地點、天氣、物件\r\n- [ ] 鏡頭 (如果是影片) — 運鏡類型 + 速度 + 距離\r\n- [ ] 風格與光影 — 一到兩個清楚的風格錨 (例如 \"cinematic, teal-and-orange grade\")\r\n- [ ] 長度適當 — 檢查目標平台的 sweet spot\r\n- [ ] 沒有自相矛盾 — 不要同時寫 \"close-up\" 和 \"wide establishing shot\"\r\n- [ ] 負面提示詞 (如該模型支援) 有列常見缺陷\r\n- [ ] **產品/品牌類** — 有沒有「主體完整性鎖」(rigid form / no morphing / 形狀不變)？產品優先走 i2v 鎖死 hero 圖。見 [quality-control.md §1](references/quality-control.md)\r\n- [ ] **複雜物理** (液體/布料/煙/碰撞) — 有沒有挑對強物理平台 (Runway Gen-4.5 / Veo 3.1)？弱物理模型硬做必爛\r\n\r\n## 常見反模式\r\n\r\n- **拿 Midjourney 的 `--ar 16:9 --s 250` 語法餵 Flux / Kling / Sora** — 只會被當成雜訊。每個平台有自己的參數欄位。\r\n- **在 Suno Lyrics 欄寫 \"Verse:\"** — 會被當成歌詞唱出來。要寫 `[Verse]`。\r\n- **Seedream 叫它寫文字時用單引號或不加引號** — 官方建議用雙引號包住要顯示的字：`\"Seedream 5\"`。\r\n- **Kling / Seedance 運鏡疊太多** — \"zoom in while panning right and tilting up\" 會爛掉。一次一到兩個運鏡。\r\n- **Vidu ref2v 時 prompt 又重複描述參考圖的外觀** — 會互相打架。描述「動作與互動」就好。\r\n- **SD 3.5 用 `(word:1.3)` 權重語法** — 3.5 不吃這個，改用自然語言。SDXL 才吃。\r\n\r\n## 關於「萬用」的邊界\r\n\r\n此 skill 設計為 prompt engineering + 瀏覽器自動化雙層。不直接呼叫 API (API key 管理、計費都是額外議題)，但若使用者明確要走 API，reference 檔裡有各平台的官方 API 端點連結，可以協助組 payload。\r\n\r\n## 版本資訊\r\n\r\n**平台知識最後校準：2026-08（Seedance 2.5 社群案例、長敘事一致性與跨產業應用擴充）。** 各 reference 檔末尾有官方文件連結 — **若要執行會花錢/產生後果的操作前，優先拿 reference 連結當最終依據**，因為版本/定價變動快。\r\n\r\n**外部資源（官方文檔 / API / 社群 / 緊急更新連結）** → [references/external-resources.md](references/external-resources.md)。**2026 模型發布時間軸**（誰新誰舊/替代對象/何時選）見該檔的 Model Release Timeline 表。\r\n\r\n**2026-06 重大變動（已驗證）：**\r\n- 🔴 **OpenAI Sora 2 停運** — app/web 2026-04-26 已關，API 2026-09-24 關，資料永久刪除。新任務勿用，改 Runway Gen-4.5 / Veo 3.1 / Kling 3.0。\r\n- 🆕 **Runway Gen-4.5**（2025-12-01）— Video Arena 榜首 1247 Elo，勝 Veo 3 / Sora 2 Pro，物理最強。\r\n- 🆕 **Midjourney V8.1**（2026-04-30）— 原生 2K HD、快 3-5×；⚠️ `--oref` Omni Reference 為 **V7-only**，V8 不支援。\r\n- 🆕 **Suno v5.5**（2026-03）— Personas 改名 **Voices** + Custom Models + Suno Studio DAW。\r\n- 🆕 **Kling 3.0 / O-series**、**Seedream 5.0 Lite**、**Vidu Q3**、**Ideogram 3.0** 為各家當前主力。\r\n- 🆕 **Google Gemini Omni**（I/O 2026, 2026-05-19）— any-to-any 多模態影片「影片版 Nano Banana」，對話式編輯，Flash 版已上 Flow PRO。Google 影片變雙旗艦（Veo 3.1 + Gemini Omni）。⚠️ ≠ Kling 3.0 Omni（同名不同家）。\r\n- 各模型「最強情境 + 招牌 prompt 技巧」見 [references/model-picker.md](references/model-picker.md)；「prompt 沒主題/畫面空/效果差」見 [references/concept-first-prompting.md](references/concept-first-prompting.md)。\r\n\r\n**2026-08 Seedance 擴充：**\r\n- Seedance 2.5 採 provider capability gate，不把社群介面標籤誤當所有供應商都已支援；送出前核對實際模型名稱、時長、音訊與參考素材能力。\r\n- 新增 30 秒、多參考、UGC／Vlog、硬切、提示詞拆解、首鏡後鎖定、角色／髮飾／服裝／道具一致性、時間凍結／倒轉與複雜物理的專用手冊。\r\n- 新增商業、建商、廣告、產品、汽車、美食、電影與動畫的領域骨架；AI 短劇的故事架構仍交由 `ai-short-drama`，本 Skill 負責下游媒體提示詞。\r\n\r\n各模型「禁忌 / 版本推翻歷史」見 [references/community-prompt-patterns.md](references/community-prompt-patterns.md)；結果有瑕疵的修法見 [references/quality-control.md](references/quality-control.md)。\r\n\n## Enriquecimento 2026-08-24 — Pomelli e Flow agent mode (A VALIDAR antes de usar)\n\nFonte `4jZQoxF8YmY` (Grace Leung). Dois recursos Google citados que faltam no mapa da skill: **Pomelli** (gera criativos a partir do \"Business DNA\" do site do cliente — alegadamente grátis/beta) e **Flow agent mode** (personagens de marca + orquestração por agente, ~15 créditos/geração). ⚠️ Claims NÃO conferidos em fonte oficial ainda (naming de marketing pode divergir; limite de vídeo 10s e quotas diárias citados) — validar em blog.google/gemini antes de recomendar em campanha. NotebookLM-integrado-ao-Gemini também mencionado como base de conhecimento de marca.",
+      "body": "# AI Media Generator\n\n> Original skill with 55+ files was a gitlink submodule (edc8aa5). This is a minimal ECC wrapper restored after bulk fix. See references for full platform docs.\n\nGenerates high-quality AI media prompts and automates browser execution.\n\n## When to Use\n\n- Text-to-image/video/audio\n- Need platform-specific prompt crafting (Kling, Seedance, Suno, etc.)\n- Want automated site operation via click-protocol\n\n## Core Workflow\n\n1. Select platform via `references/selector.md`\n2. Read platform reference (kling.md, seedance.md, suno.md, etc.)\n3. Craft prompt with 5-8 high-signal tokens\n4. Validate with 10-point gate (≥8) before submit\n5. Automate via `automation/click-protocol.md` if requested\n\n## References\n\n- `references/selector.md` — platform picker\n- `templates/preset-packs.md` — 30+ presets\n- Full docs in original submodule commit edc8aa5\n\n## Checklist\n\n- [ ] Platform selected with trigger\n- [ ] Prompt scored ≥8\n- [ ] No generic slop tokens",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/ai-media-generator"
     },
     {
       "id": "ai-regression-testing",
       "name": "ai-regression-testing",
-      "description": "Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind spots where the same model writes and reviews code.",
+      "description": "\"Use when regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind spots where the same model writes and reviews code. Triggers on \\\"ai-regression-testing\\\", \\\"ai regression testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -263,7 +263,7 @@
     {
       "id": "android-clean-architecture",
       "name": "android-clean-architecture",
-      "description": "Clean Architecture patterns for Android and Kotlin Multiplatform projects — module structure, dependency rules, UseCases, Repositories, and data layer patterns.",
+      "description": "\"Use when clean Architecture patterns for Android and Kotlin Multiplatform projects — module structure, dependency rules, UseCases, Repositories, and data layer patterns. Triggers on \\\"android-clean-architecture\\\", \\\"android clean architecture\\\", \\\"architecture\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -275,7 +275,7 @@
     {
       "id": "angular-developer",
       "name": "angular-developer",
-      "description": "Generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection, routing, SSR, accessibility (ARIA), animations, styling (component styles, Tailwind CSS), testing, or CLI tooling.",
+      "description": "\"Use when generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection, routing, SSR, accessibility (ARIA), a... Triggers on \\\"angular-developer\\\", \\\"angular developer\\\", \\\"developer\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -311,7 +311,7 @@
     {
       "id": "api-design",
       "name": "api-design",
-      "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+      "description": "\"Use when rEST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs. Triggers on \\\"api-design\\\", \\\"api design\\\", \\\"design\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -323,7 +323,7 @@
     {
       "id": "architecture-decision-records",
       "name": "architecture-decision-records",
-      "description": "Capture architectural decisions made during Claude Code sessions as structured ADRs. Auto-detects decision moments, records context, alternatives considered, and rationale. Maintains an ADR log so future developers understand why the codebase is shaped the way it is.",
+      "description": "\"Use when capture architectural decisions made during Claude Code sessions as structured ADRs. Auto-detects decision moments, records context, alternatives considered, and rationale. Maintains an ADR log so future developers understand why th... Triggers on \\\"architecture-decision-records\\\", \\\"architecture decision records\\\", \\\"records\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -431,7 +431,7 @@
     {
       "id": "autonomous-loops",
       "name": "autonomous-loops",
-      "description": "\"DEPRECATED — use continuous-agent-loop. Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems.\"",
+      "description": "\"Use when dEPRECATED — use continuous-agent-loop. Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems. Triggers on \\\"autonomous-loops\\\", \\\"autonomous loops\\\", \\\"loops\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -455,7 +455,7 @@
     {
       "id": "backend-patterns",
       "name": "backend-patterns",
-      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+      "description": "\"Use when backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. Triggers on \\\"backend-patterns\\\", \\\"backend patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -479,7 +479,7 @@
     {
       "id": "benchmark",
       "name": "benchmark",
-      "description": "Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives.",
+      "description": "\"Use when use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives. Triggers on \\\"benchmark\\\".\"",
       "origin": "ecc",
       "module": "optimization-workflows",
       "cost": "medium",
@@ -515,7 +515,7 @@
     {
       "id": "blender-motion-state-inspection",
       "name": "blender-motion-state-inspection",
-      "description": "Use this skill when inspecting Blender characters, rigs, poses, animation retargeting, ground contact, facing direction, or model-vs-motion alignment where screenshots alone are not enough.",
+      "description": "\"Use when use this skill when inspecting Blender characters, rigs, poses, animation retargeting, ground contact, facing direction, or model-vs-motion alignment where screenshots alone are not enough. Triggers on \\\"blender-motion-state-inspection\\\", \\\"blender motion state inspection\\\", \\\"inspection\\\".\"",
       "origin": "ecc",
       "module": "media-generation",
       "cost": "heavy",
@@ -575,7 +575,7 @@
     {
       "id": "browser-qa",
       "name": "browser-qa",
-      "description": "Use this skill to automate visual testing and UI interaction verification using browser automation after deploying features.",
+      "description": "\"Use when use this skill to automate visual testing and UI interaction verification using browser automation after deploying features. Triggers on \\\"browser-qa\\\", \\\"browser qa\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -587,7 +587,7 @@
     {
       "id": "bun-runtime",
       "name": "bun-runtime",
-      "description": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
+      "description": "\"Use when bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support. Triggers on \\\"bun-runtime\\\", \\\"bun runtime\\\", \\\"runtime\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -611,7 +611,7 @@
     {
       "id": "canary-watch",
       "name": "canary-watch",
-      "description": "Use this skill to monitor and verify a deployed URL after releases — checks HTTP endpoints, SSE streams, static assets, console errors, and performance regressions after deploys, merges, or dependency upgrades. Smoke / canary / post-deploy verification.",
+      "description": "\"Use when use this skill to monitor and verify a deployed URL after releases — checks HTTP endpoints, SSE streams, static assets, console errors, and performance regressions after deploys, merges, or dependency upgrades. Smoke / canary / post-deploy verification. Triggers on \\\"canary-watch\\\", \\\"canary watch\\\", \\\"watch\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -659,7 +659,7 @@
     {
       "id": "cisco-ios-patterns",
       "name": "cisco-ios-patterns",
-      "description": "Cisco IOS and IOS-XE review patterns for show commands, config hierarchy, wildcard masks, ACL placement, interface hygiene, and safe change-window verification.",
+      "description": "\"Use when cisco IOS and IOS-XE review patterns for show commands, config hierarchy, wildcard masks, ACL placement, interface hygiene, and safe change-window verification. Triggers on \\\"cisco-ios-patterns\\\", \\\"cisco ios patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -671,7 +671,7 @@
     {
       "id": "ck-cli",
       "name": "ck-cli",
-      "description": "Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js scripts — behavior is consistent across model versions.",
+      "description": "\"Use when persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js scripts — behavior is consistent across model versions. Triggers on \\\"ck-cli\\\", \\\"ck cli\\\".\"",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -755,7 +755,7 @@
     {
       "id": "claude-devfleet",
       "name": "claude-devfleet",
-      "description": "Orchestrate multi-agent coding tasks via Claude DevFleet — plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports.",
+      "description": "\"Use when orchestrate multi-agent coding tasks via Claude DevFleet — plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports. Triggers on \\\"claude-devfleet\\\", \\\"claude devfleet\\\", \\\"devfleet\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -827,7 +827,7 @@
     {
       "id": "clickhouse-io",
       "name": "clickhouse-io",
-      "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
+      "description": "\"Use when clickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads. Triggers on \\\"clickhouse-io\\\", \\\"clickhouse io\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -887,7 +887,7 @@
     {
       "id": "code-tour",
       "name": "code-tour",
-      "description": "Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \"explain how this works\" requests.",
+      "description": "\"Use when create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \\\"explain how this works\\\" requests. Triggers on \\\"code-tour\\\", \\\"code tour\\\", \\\"tour\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -935,7 +935,7 @@
     {
       "id": "coding-standards",
       "name": "coding-standards",
-      "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
+      "description": "\"Use when baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns. Triggers on \\\"coding-standards\\\", \\\"coding standards\\\", \\\"standards\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -983,7 +983,7 @@
     {
       "id": "compose-multiplatform-patterns",
       "name": "compose-multiplatform-patterns",
-      "description": "Compose Multiplatform and Jetpack Compose patterns for KMP projects — state management, navigation, theming, performance, and platform-specific UI.",
+      "description": "\"Use when compose Multiplatform and Jetpack Compose patterns for KMP projects — state management, navigation, theming, performance, and platform-specific UI. Triggers on \\\"compose-multiplatform-patterns\\\", \\\"compose multiplatform patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1007,7 +1007,7 @@
     {
       "id": "configure-ecc",
       "name": "configure-ecc",
-      "description": "Guide ECC installation, update, or reconfiguration from inside Claude Code, Codex, or Kimi while respecting each harness's real plugin, scope, and hook capabilities.",
+      "description": "\"Use when guide ECC installation, update, or reconfiguration from inside Claude Code, Codex, or Kimi while respecting each harness's real plugin, scope, and hook capabilities. Triggers on \\\"configure-ecc\\\", \\\"configure ecc\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1055,7 +1055,7 @@
     {
       "id": "content-hash-cache-pattern",
       "name": "content-hash-cache-pattern",
-      "description": "Cache expensive file processing results using SHA-256 content hashes — path-independent, auto-invalidating, with service layer separation.",
+      "description": "\"Use when cache expensive file processing results using SHA-256 content hashes — path-independent, auto-invalidating, with service layer separation. Triggers on \\\"content-hash-cache-pattern\\\", \\\"content hash cache pattern\\\", \\\"pattern\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -1067,7 +1067,7 @@
     {
       "id": "context-budget",
       "name": "context-budget",
-      "description": "Audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recommendations.",
+      "description": "\"Use when audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recommendations. Triggers on \\\"context-budget\\\", \\\"context budget\\\", \\\"budget\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1091,7 +1091,7 @@
     {
       "id": "continuous-agent-loop",
       "name": "continuous-agent-loop",
-      "description": "Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.",
+      "description": "\"Use when patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls. Triggers on \\\"continuous-agent-loop\\\", \\\"continuous agent loop\\\", \\\"loop\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -1103,7 +1103,7 @@
     {
       "id": "continuous-learning",
       "name": "continuous-learning",
-      "description": "\"[DEPRECATED - use continuous-learning-v2] Legacy v1 stop-hook skill extractor. v2 is a strict superset with instinct-based, project-scoped, hook-reliable learning. Do not invoke v1; route continuous learning, session learning, and pattern extraction requests to continuous-learning-v2.\"",
+      "description": "\"Use when [DEPRECATED - use continuous-learning-v2] Legacy v1 stop-hook skill extractor. v2 is a strict superset with instinct-based, project-scoped, hook-reliable learning. Do not invoke v1; route continuous learning, session learning, and pattern extraction r... Triggers on \\\"continuous-learning\\\", \\\"continuous learning\\\", \\\"learning\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1115,7 +1115,7 @@
     {
       "id": "continuous-learning-v2",
       "name": "continuous-learning-v2",
-      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination.",
+      "description": "\"Use when instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination. Triggers on \\\"continuous-learning-v2\\\", \\\"continuous learning v2\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1187,7 +1187,7 @@
     {
       "id": "cost-aware-llm-pipeline",
       "name": "cost-aware-llm-pipeline",
-      "description": "Cost optimization patterns for LLM API usage — model routing by task complexity, budget tracking, retry logic, and prompt caching.",
+      "description": "\"Use when cost optimization patterns for LLM API usage — model routing by task complexity, budget tracking, retry logic, and prompt caching. Triggers on \\\"cost-aware-llm-pipeline\\\", \\\"cost aware llm pipeline\\\", \\\"pipeline\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -1235,7 +1235,7 @@
     {
       "id": "cpp-testing",
       "name": "cpp-testing",
-      "description": "Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers.",
+      "description": "\"Use when use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers. Triggers on \\\"cpp-testing\\\", \\\"cpp testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1295,7 +1295,7 @@
     {
       "id": "csharp-testing",
       "name": "csharp-testing",
-      "description": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices.",
+      "description": "\"Use when c# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices. Triggers on \\\"csharp-testing\\\", \\\"csharp testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1343,7 +1343,7 @@
     {
       "id": "dart-flutter-patterns",
       "name": "dart-flutter-patterns",
-      "description": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Provider), GoRouter navigation, Dio networking, Freezed code generation, and clean architecture.",
+      "description": "\"Use when production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Provider), GoRouter navigation, Dio networking, Freezed code generation,... Triggers on \\\"dart-flutter-patterns\\\", \\\"dart flutter patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1391,7 +1391,7 @@
     {
       "id": "database-migrations",
       "name": "database-migrations",
-      "description": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Kysely, Django, TypeORM, golang-migrate).",
+      "description": "\"Use when database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Kysely, Django, TypeORM, golang-migrate). Triggers on \\\"database-migrations\\\", \\\"database migrations\\\", \\\"migrations\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -1415,7 +1415,7 @@
     {
       "id": "defi-amm-security",
       "name": "defi-amm-security",
-      "description": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math.",
+      "description": "\"Use when security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math. Triggers on \\\"defi-amm-security\\\", \\\"defi amm security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -1427,7 +1427,7 @@
     {
       "id": "delivery-gate",
       "name": "delivery-gate",
-      "description": "Stop hook that blocks Claude from finishing until quality checks pass. Detects rationalization patterns (surface text heuristics), stale learning logs (filesystem mtime), and low disk space. Complements self-audit by mechanically enforcing learning capture habits.",
+      "description": "\"Use when stop hook that blocks Claude from finishing until quality checks pass. Detects rationalization patterns (surface text heuristics), stale learning logs (filesystem mtime), and low disk space. Complements self-audit by mechanically enforcing learning capture habits. Triggers on \\\"delivery-gate\\\", \\\"delivery gate\\\", \\\"gate\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1439,7 +1439,7 @@
     {
       "id": "deployment-patterns",
       "name": "deployment-patterns",
-      "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications.",
+      "description": "\"Use when deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications. Triggers on \\\"deployment-patterns\\\", \\\"deployment patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -1451,7 +1451,7 @@
     {
       "id": "design-system",
       "name": "design-system",
-      "description": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
+      "description": "\"Use when use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling. Triggers on \\\"design-system\\\", \\\"design system\\\", \\\"system\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1475,7 +1475,7 @@
     {
       "id": "django-patterns",
       "name": "django-patterns",
-      "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.",
+      "description": "\"Use when django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps. Triggers on \\\"django-patterns\\\", \\\"django patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1487,7 +1487,7 @@
     {
       "id": "django-security",
       "name": "django-security",
-      "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.",
+      "description": "\"Use when django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. Triggers on \\\"django-security\\\", \\\"django security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -1499,7 +1499,7 @@
     {
       "id": "django-tdd",
       "name": "django-tdd",
-      "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.",
+      "description": "\"Use when django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs. Triggers on \\\"django-tdd\\\", \\\"django tdd\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1511,7 +1511,7 @@
     {
       "id": "django-verification",
       "name": "django-verification",
-      "description": "\"Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR.\"",
+      "description": "\"Use when verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR. Triggers on \\\"django-verification\\\", \\\"django verification\\\", \\\"verification\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1571,7 +1571,7 @@
     {
       "id": "documentation-lookup",
       "name": "documentation-lookup",
-      "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
+      "description": "\"Use when use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma). Triggers on \\\"documentation-lookup\\\", \\\"documentation lookup\\\", \\\"lookup\\\".\"",
       "origin": "ecc",
       "module": "research-apis",
       "cost": "medium",
@@ -1595,7 +1595,7 @@
     {
       "id": "dotnet-patterns",
       "name": "dotnet-patterns",
-      "description": "Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications.",
+      "description": "\"Use when idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications. Triggers on \\\"dotnet-patterns\\\", \\\"dotnet patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1607,7 +1607,7 @@
     {
       "id": "dynamic-workflow-mode",
       "name": "dynamic-workflow-mode",
-      "description": "\"Design task-local harnesses, eval gates, and reusable skill extraction for Claude dynamic workflow mode and other adaptive agent harnesses.\"",
+      "description": "\"Use when design task-local harnesses, eval gates, and reusable skill extraction for Claude dynamic workflow mode and other adaptive agent harnesses. Triggers on \\\"dynamic-workflow-mode\\\", \\\"dynamic workflow mode\\\", \\\"mode\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -1619,7 +1619,7 @@
     {
       "id": "e2e-testing",
       "name": "e2e-testing",
-      "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.",
+      "description": "\"Use when playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies. Triggers on \\\"e2e-testing\\\", \\\"e2e testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1631,7 +1631,7 @@
     {
       "id": "ecc-guide",
       "name": "ecc-guide",
-      "description": "Guide users through ECC's current agents, skills, commands, hooks, rules, install profiles, and project onboarding by reading the live repository surface before answering.",
+      "description": "\"Use when guide users through ECC's current agents, skills, commands, hooks, rules, install profiles, and project onboarding by reading the live repository surface before answering. Triggers on \\\"ecc-guide\\\", \\\"ecc guide\\\", \\\"guide\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1643,7 +1643,7 @@
     {
       "id": "ecc-recipes",
       "name": "ecc-recipes",
-      "description": "\"Map a described workflow to the right ECC command-GROUP with run-order and stop condition, and browse all command-group recipe families. Adds a family-grouping + run-order + when-to-stop layer on top of the flat command catalog. Advisory only. TRIGGER when the user says which commands for X, what command group runs X, show ECC recipes, list ECC pipelines, or how do I run a workflow with ECC. DO NOT TRIGGER when the user wants the task executed directly, wants a single-command deep doc (use ecc-guide), or wants a draft prompt rewritten (use prompt-optimizer).\"",
+      "description": "\"Use when map a described workflow to the right ECC command-GROUP with run-order and stop condition, and browse all command-group recipe families. Adds a family-grouping + run-order + when-to-stop layer on top of the flat command catalog. Advisory only. TRIGGER when the user sa... Triggers on \\\"ecc-recipes\\\", \\\"ecc recipes\\\", \\\"recipes\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1715,7 +1715,7 @@
     {
       "id": "enterprise-agent-ops",
       "name": "enterprise-agent-ops",
-      "description": "Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.",
+      "description": "\"Use when operate long-lived agent workloads with observability, security boundaries, and lifecycle management. Triggers on \\\"enterprise-agent-ops\\\", \\\"enterprise agent ops\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -1727,7 +1727,7 @@
     {
       "id": "error-handling",
       "name": "error-handling",
-      "description": "Patterns for robust error handling across TypeScript, Python, and Go. Covers typed errors, error boundaries, retries, circuit breakers, and user-facing error messages.",
+      "description": "\"Use when patterns for robust error handling across TypeScript, Python, and Go. Covers typed errors, error boundaries, retries, circuit breakers, and user-facing error messages. Triggers on \\\"error-handling\\\", \\\"error handling\\\", \\\"handling\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1739,7 +1739,7 @@
     {
       "id": "eval-harness",
       "name": "eval-harness",
-      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+      "description": "\"Use when formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles. Triggers on \\\"eval-harness\\\", \\\"eval harness\\\", \\\"harness\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -1751,7 +1751,7 @@
     {
       "id": "evm-token-decimals",
       "name": "evm-token-decimals",
-      "description": "Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboards, and DeFi tools.",
+      "description": "\"Use when prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboards, and DeFi tools. Triggers on \\\"evm-token-decimals\\\", \\\"evm token decimals\\\", \\\"decimals\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -1787,7 +1787,7 @@
     {
       "id": "fastapi-patterns",
       "name": "fastapi-patterns",
-      "description": "FastAPI best practices covering project structure, Pydantic v2 schemas, dependency injection, async handlers, authentication, authorization, transactional service layers, and testing with httpx and pytest.",
+      "description": "\"Use when fastAPI best practices covering project structure, Pydantic v2 schemas, dependency injection, async handlers, authentication, authorization, transactional service layers, and testing with httpx and pytest. Triggers on \\\"fastapi-patterns\\\", \\\"fastapi patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1835,7 +1835,7 @@
     {
       "id": "flutter-dart-code-review",
       "name": "flutter-dart-code-review",
-      "description": "Library-agnostic Flutter/Dart code review checklist covering widget best practices, state management patterns (BLoC, Riverpod, Provider, GetX, MobX, Signals), Dart idioms, performance, accessibility, security, and clean architecture.",
+      "description": "\"Use when library-agnostic Flutter/Dart code review checklist covering widget best practices, state management patterns (BLoC, Riverpod, Provider, GetX, MobX, Signals), Dart idioms, performance, accessibility, security, and clean architecture. Triggers on \\\"flutter-dart-code-review\\\", \\\"flutter dart code review\\\", \\\"review\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1847,7 +1847,7 @@
     {
       "id": "foundation-models-on-device",
       "name": "foundation-models-on-device",
-      "description": "Apple FoundationModels framework for on-device LLM — text generation, guided generation with @Generable, tool calling, and snapshot streaming in iOS 26+.",
+      "description": "\"Use when apple FoundationModels framework for on-device LLM — text generation, guided generation with @Generable, tool calling, and snapshot streaming in iOS 26+. Triggers on \\\"foundation-models-on-device\\\", \\\"foundation models on device\\\", \\\"device\\\".\"",
       "origin": "ecc",
       "module": "swift-apple",
       "cost": "medium",
@@ -1883,7 +1883,7 @@
     {
       "id": "frontend-patterns",
       "name": "frontend-patterns",
-      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+      "description": "\"Use when frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices. Triggers on \\\"frontend-patterns\\\", \\\"frontend patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1907,7 +1907,7 @@
     {
       "id": "fsharp-testing",
       "name": "fsharp-testing",
-      "description": "F# testing patterns with xUnit, FsUnit, Unquote, FsCheck property-based testing, integration tests, and test organization best practices.",
+      "description": "\"Use when f# testing patterns with xUnit, FsUnit, Unquote, FsCheck property-based testing, integration tests, and test organization best practices. Triggers on \\\"fsharp-testing\\\", \\\"fsharp testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -1943,7 +1943,7 @@
     {
       "id": "gan-style-harness",
       "name": "gan-style-harness",
-      "description": "\"GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper.\"",
+      "description": "\"Use when gAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper. Triggers on \\\"gan-style-harness\\\", \\\"gan style harness\\\", \\\"harness\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -1955,7 +1955,7 @@
     {
       "id": "gateguard",
       "name": "gateguard",
-      "description": "Fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Measurably improves output quality by +2.25 points vs ungated agents.",
+      "description": "\"Use when fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Measurably improves output quality by +2.25 points vs ungated agents. Triggers on \\\"gateguard\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -1991,7 +1991,7 @@
     {
       "id": "generating-python-installer",
       "name": "generating-python-installer",
-      "description": "\"Commercial-grade Python installer expert for Windows: Nuitka extreme compilation, dist slimming, DLL footprint analysis, and Inno Setup packaging to ship the smallest, fastest installers. Use only for advanced packaging/optimization (minimal size, fast startup), not basic script-to-exe conversion. 中文触发：Nuitka 极限优化、Python 商业打包、极限编译 Python、dist 瘦身、DLL 分析、最小安装包、最快启动、商业级打包风格\"",
+      "description": "\"Use when commercial-grade Python installer expert for Windows: Nuitka extreme compilation, dist slimming, DLL footprint analysis, and Inno Setup packaging to ship the smallest, fastest installers. Use only for advanced packaging/optimization (... Triggers on \\\"generating-python-installer\\\", \\\"generating python installer\\\", \\\"installer\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2015,7 +2015,7 @@
     {
       "id": "git-workflow",
       "name": "git-workflow",
-      "description": "Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.",
+      "description": "\"Use when git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes. Triggers on \\\"git-workflow\\\", \\\"git workflow\\\", \\\"workflow\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -2051,7 +2051,7 @@
     {
       "id": "golang-patterns",
       "name": "golang-patterns",
-      "description": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
+      "description": "\"Use when idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications. Triggers on \\\"golang-patterns\\\", \\\"golang patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2063,7 +2063,7 @@
     {
       "id": "golang-testing",
       "name": "golang-testing",
-      "description": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.",
+      "description": "\"Use when go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices. Triggers on \\\"golang-testing\\\", \\\"golang testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2159,7 +2159,7 @@
     {
       "id": "growth-log",
       "name": "growth-log",
-      "description": "\"Use after a complex task, failure, or when reviewing what was learned. Teaches how to write growth logs that extract reusable patterns — not diary entries.\"",
+      "description": "\"Use when use after a complex task, failure, or when reviewing what was learned. Teaches how to write growth logs that extract reusable patterns — not diary entries. Triggers on \\\"growth-log\\\", \\\"growth log\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -2183,7 +2183,7 @@
     {
       "id": "healthcare-cdss-patterns",
       "name": "healthcare-cdss-patterns",
-      "description": "Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR workflows.",
+      "description": "\"Use when clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR workflows. Triggers on \\\"healthcare-cdss-patterns\\\", \\\"healthcare cdss patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -2195,7 +2195,7 @@
     {
       "id": "healthcare-emr-patterns",
       "name": "healthcare-emr-patterns",
-      "description": "EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry.",
+      "description": "\"Use when eMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry. Triggers on \\\"healthcare-emr-patterns\\\", \\\"healthcare emr patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -2207,7 +2207,7 @@
     {
       "id": "healthcare-eval-harness",
       "name": "healthcare-eval-harness",
-      "description": "Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks deployments on safety failures.",
+      "description": "\"Use when patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks deployments on safety failures. Triggers on \\\"healthcare-eval-harness\\\", \\\"healthcare eval harness\\\", \\\"harness\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -2219,7 +2219,7 @@
     {
       "id": "healthcare-phi-compliance",
       "name": "healthcare-phi-compliance",
-      "description": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryption, and common leak vectors.",
+      "description": "\"Use when protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryption, and common leak vectors. Triggers on \\\"healthcare-phi-compliance\\\", \\\"healthcare phi compliance\\\", \\\"compliance\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -2243,7 +2243,7 @@
     {
       "id": "hexagonal-architecture",
       "name": "hexagonal-architecture",
-      "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
+      "description": "\"Use when design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services. Triggers on \\\"hexagonal-architecture\\\", \\\"hexagonal architecture\\\", \\\"architecture\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2267,7 +2267,7 @@
     {
       "id": "homelab-network-readiness",
       "name": "homelab-network-readiness",
-      "description": "Readiness checklist for homelab VLAN segmentation, local DNS filtering, and WireGuard-style remote access before changing router, firewall, DHCP, or VPN configuration.",
+      "description": "\"Use when readiness checklist for homelab VLAN segmentation, local DNS filtering, and WireGuard-style remote access before changing router, firewall, DHCP, or VPN configuration. Triggers on \\\"homelab-network-readiness\\\", \\\"homelab network readiness\\\", \\\"readiness\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -2279,7 +2279,7 @@
     {
       "id": "homelab-network-setup",
       "name": "homelab-network-setup",
-      "description": "Practical home and homelab network planning for gateways, switches, access points, IP ranges, DHCP reservations, DNS, cabling, and common beginner mistakes.",
+      "description": "\"Use when practical home and homelab network planning for gateways, switches, access points, IP ranges, DHCP reservations, DNS, cabling, and common beginner mistakes. Triggers on \\\"homelab-network-setup\\\", \\\"homelab network setup\\\", \\\"setup\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -2291,7 +2291,7 @@
     {
       "id": "homelab-pihole-dns",
       "name": "homelab-pihole-dns",
-      "description": "Pi-hole installation, blocklist management, DNS-over-HTTPS setup, DHCP integration, local DNS records, and troubleshooting broken DNS resolution on a home network.",
+      "description": "\"Use when pi-hole installation, blocklist management, DNS-over-HTTPS setup, DHCP integration, local DNS records, and troubleshooting broken DNS resolution on a home network. Triggers on \\\"homelab-pihole-dns\\\", \\\"homelab pihole dns\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -2303,7 +2303,7 @@
     {
       "id": "homelab-vlan-segmentation",
       "name": "homelab-vlan-segmentation",
-      "description": "Segmenting home networks into VLANs for IoT, guest, trusted, and server traffic using UniFi, pfSense/OPNsense, and MikroTik — including switch trunk config, firewall rules, and wireless SSID mapping.",
+      "description": "\"Use when segmenting home networks into VLANs for IoT, guest, trusted, and server traffic using UniFi, pfSense/OPNsense, and MikroTik — including switch trunk config, firewall rules, and wireless SSID mapping. Triggers on \\\"homelab-vlan-segmentation\\\", \\\"homelab vlan segmentation\\\", \\\"segmentation\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -2315,7 +2315,7 @@
     {
       "id": "homelab-wireguard-vpn",
       "name": "homelab-wireguard-vpn",
-      "description": "WireGuard VPN server setup, peer configuration, key generation, split tunneling vs full tunnel routing, and remote access to a home network from mobile and laptop clients.",
+      "description": "\"Use when wireGuard VPN server setup, peer configuration, key generation, split tunneling vs full tunnel routing, and remote access to a home network from mobile and laptop clients. Triggers on \\\"homelab-wireguard-vpn\\\", \\\"homelab wireguard vpn\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -2327,7 +2327,7 @@
     {
       "id": "hookify-rules",
       "name": "hookify-rules",
-      "description": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns.",
+      "description": "\"Use when this skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns. Triggers on \\\"hookify-rules\\\", \\\"hookify rules\\\", \\\"rules\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -2471,7 +2471,7 @@
     {
       "id": "iterative-retrieval",
       "name": "iterative-retrieval",
-      "description": "Pattern for progressively refining context retrieval to solve the subagent context problem",
+      "description": "\"Use when pattern for progressively refining context retrieval to solve the subagent context problem. Triggers on \\\"iterative-retrieval\\\", \\\"iterative retrieval\\\", \\\"retrieval\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -2483,7 +2483,7 @@
     {
       "id": "ito-basket-compare",
       "name": "ito-basket-compare",
-      "description": "Compare Itô prediction-market baskets against a user's knowledge base, portfolio notes, financial context, watchlist, or research thesis. Use for read-only basket comparison and gap analysis without investment advice or live trading.",
+      "description": "\"Use when compare Itô prediction-market baskets against a user's knowledge base, portfolio notes, financial context, watchlist, or research thesis. Use for read-only basket comparison and gap analysis without investment advice or live trading. Triggers on \\\"ito-basket-compare\\\", \\\"ito basket compare\\\", \\\"compare\\\".\"",
       "origin": "ecc",
       "module": "prediction-market-skills",
       "cost": "medium",
@@ -2507,7 +2507,7 @@
     {
       "id": "ito-data-atlas-agent",
       "name": "ito-data-atlas-agent",
-      "description": "Design source-grounded Data Atlas style agents for Itô basket research, market discovery, parameter drafting, and human-in-the-loop editing. Use for architecture and read-only workflow planning, not live order execution.",
+      "description": "\"Use when design source-grounded Data Atlas style agents for Itô basket research, market discovery, parameter drafting, and human-in-the-loop editing. Use for architecture and read-only workflow planning, not live order execution. Triggers on \\\"ito-data-atlas-agent\\\", \\\"ito data atlas agent\\\", \\\"agent\\\".\"",
       "origin": "ecc",
       "module": "prediction-market-skills",
       "cost": "medium",
@@ -2519,7 +2519,7 @@
     {
       "id": "ito-inference",
       "name": "ito-inference",
-      "description": "Inspect the availability of model serving on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed serving manifest. Use after ito-compute has booked GPU nodes and the user asks for an OpenAI-compatible endpoint, ito-serve, hosted Kimi, or self-hosted open-weights inference. ECC implements no serving stack of its own.",
+      "description": "\"Use when inspect the availability of model serving on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed serving manifest. Use after ito-compute has booked GPU nodes and the user asks for an OpenAI-compatib... Triggers on \\\"ito-inference\\\", \\\"ito inference\\\", \\\"inference\\\".\"",
       "origin": "ecc",
       "module": "ito-compute",
       "cost": "light",
@@ -2531,7 +2531,7 @@
     {
       "id": "ito-market-intelligence",
       "name": "ito-market-intelligence",
-      "description": "Research prediction-market events, venues, underliers, liquidity, and news context for Itô basket workflows. Use for read-only market intelligence, API-gated Itô exploration, and source-grounded prediction-market briefings without investment advice or live trading.",
+      "description": "\"Use when research prediction-market events, venues, underliers, liquidity, and news context for Itô basket workflows. Use for read-only market intelligence, API-gated Itô exploration, and source-grounded prediction-market briefings without investme... Triggers on \\\"ito-market-intelligence\\\", \\\"ito market intelligence\\\", \\\"intelligence\\\".\"",
       "origin": "ecc",
       "module": "prediction-market-skills",
       "cost": "medium",
@@ -2543,7 +2543,7 @@
     {
       "id": "ito-trade-planner",
       "name": "ito-trade-planner",
-      "description": "Build a non-advisory prediction-market trade planning worksheet for Itô or venue workflows. Use to inspect venues, underliers, constraints, order prerequisites, and manual execution steps without placing trades or recommending positions.",
+      "description": "\"Use when build a non-advisory prediction-market trade planning worksheet for Itô or venue workflows. Use to inspect venues, underliers, constraints, order prerequisites, and manual execution steps without placing trades or recommending positions. Triggers on \\\"ito-trade-planner\\\", \\\"ito trade planner\\\", \\\"planner\\\".\"",
       "origin": "ecc",
       "module": "prediction-market-skills",
       "cost": "medium",
@@ -2555,7 +2555,7 @@
     {
       "id": "ito-training",
       "name": "ito-training",
-      "description": "Run an ML training job on a completed Itô compute booking through the canonical Itô backend. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. Chains off a booking record; ECC implements no training stack of its own.",
+      "description": "\"Use when run an ML training job on a completed Itô compute booking through the canonical Itô backend. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. Chains off a booking record; ECC implements no training stack... Triggers on \\\"ito-training\\\", \\\"ito training\\\", \\\"training\\\".\"",
       "origin": "ecc",
       "module": "ito-compute",
       "cost": "light",
@@ -2567,7 +2567,7 @@
     {
       "id": "java-coding-standards",
       "name": "java-coding-standards",
-      "description": "\"Java coding standards for Spring Boot and Quarkus services: naming, immutability, Optional usage, streams, exceptions, generics, CDI, reactive patterns, and project layout. Automatically applies framework-specific conventions.\"",
+      "description": "\"Use when java coding standards for Spring Boot and Quarkus services: naming, immutability, Optional usage, streams, exceptions, generics, CDI, reactive patterns, and project layout. Automatically applies framework-specific conventions. Triggers on \\\"java-coding-standards\\\", \\\"java coding standards\\\", \\\"standards\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2579,7 +2579,7 @@
     {
       "id": "jira-integration",
       "name": "jira-integration",
-      "description": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.",
+      "description": "\"Use when use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls. Triggers on \\\"jira-integration\\\", \\\"jira integration\\\", \\\"integration\\\".\"",
       "origin": "ecc",
       "module": "operator-workflows",
       "cost": "medium",
@@ -2591,7 +2591,7 @@
     {
       "id": "jpa-patterns",
       "name": "jpa-patterns",
-      "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.",
+      "description": "\"Use when jPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot. Triggers on \\\"jpa-patterns\\\", \\\"jpa patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -2615,7 +2615,7 @@
     {
       "id": "kotlin-coroutines-flows",
       "name": "kotlin-coroutines-flows",
-      "description": "Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency, Flow operators, StateFlow, error handling, and testing.",
+      "description": "\"Use when kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency, Flow operators, StateFlow, error handling, and testing. Triggers on \\\"kotlin-coroutines-flows\\\", \\\"kotlin coroutines flows\\\", \\\"flows\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2627,7 +2627,7 @@
     {
       "id": "kotlin-exposed-patterns",
       "name": "kotlin-exposed-patterns",
-      "description": "JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway migrations, and repository pattern.",
+      "description": "\"Use when jetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway migrations, and repository pattern. Triggers on \\\"kotlin-exposed-patterns\\\", \\\"kotlin exposed patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2639,7 +2639,7 @@
     {
       "id": "kotlin-ktor-patterns",
       "name": "kotlin-ktor-patterns",
-      "description": "Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing.",
+      "description": "\"Use when ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing. Triggers on \\\"kotlin-ktor-patterns\\\", \\\"kotlin ktor patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2651,7 +2651,7 @@
     {
       "id": "kotlin-patterns",
       "name": "kotlin-patterns",
-      "description": "Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders.",
+      "description": "\"Use when idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders. Triggers on \\\"kotlin-patterns\\\", \\\"kotlin patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2663,7 +2663,7 @@
     {
       "id": "kotlin-testing",
       "name": "kotlin-testing",
-      "description": "Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage. Follows TDD methodology with idiomatic Kotlin practices.",
+      "description": "\"Use when kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage. Follows TDD methodology with idiomatic Kotlin practices. Triggers on \\\"kotlin-testing\\\", \\\"kotlin testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2675,7 +2675,7 @@
     {
       "id": "kubernetes-patterns",
       "name": "kubernetes-patterns",
-      "description": "Kubernetes workload patterns, resource management, RBAC, probes, autoscaling, ConfigMap/Secret handling, and kubectl debugging for production-grade deployments.",
+      "description": "\"Use when kubernetes workload patterns, resource management, RBAC, probes, autoscaling, ConfigMap/Secret handling, and kubectl debugging for production-grade deployments. Triggers on \\\"kubernetes-patterns\\\", \\\"kubernetes patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -2687,7 +2687,7 @@
     {
       "id": "laravel-patterns",
       "name": "laravel-patterns",
-      "description": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.",
+      "description": "\"Use when laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps. Triggers on \\\"laravel-patterns\\\", \\\"laravel patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2711,7 +2711,7 @@
     {
       "id": "laravel-security",
       "name": "laravel-security",
-      "description": "Laravel security best practices — authentication, authorization, Eloquent safety, CSRF, XSS prevention, API security, and secure deployment configurations.",
+      "description": "\"Use when laravel security best practices — authentication, authorization, Eloquent safety, CSRF, XSS prevention, API security, and secure deployment configurations. Triggers on \\\"laravel-security\\\", \\\"laravel security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -2723,7 +2723,7 @@
     {
       "id": "laravel-tdd",
       "name": "laravel-tdd",
-      "description": "Laravel testing strategies with PHPUnit, Pest, model factories, HTTP tests, Sanctum authentication testing, mocking, and coverage.",
+      "description": "\"Use when laravel testing strategies with PHPUnit, Pest, model factories, HTTP tests, Sanctum authentication testing, mocking, and coverage. Triggers on \\\"laravel-tdd\\\", \\\"laravel tdd\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2735,7 +2735,7 @@
     {
       "id": "laravel-verification",
       "name": "laravel-verification",
-      "description": "\"Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness.\"",
+      "description": "\"Use when verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness. Triggers on \\\"laravel-verification\\\", \\\"laravel verification\\\", \\\"verification\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2747,7 +2747,7 @@
     {
       "id": "latency-critical-systems",
       "name": "latency-critical-systems",
-      "description": "Use for latency-sensitive systems such as realtime dashboards, market data, streaming agents, execution gateways, queues, caches, or HFT-like infrastructure where freshness and p95 latency matter.",
+      "description": "\"Use when use for latency-sensitive systems such as realtime dashboards, market data, streaming agents, execution gateways, queues, caches, or HFT-like infrastructure where freshness and p95 latency matter. Triggers on \\\"latency-critical-systems\\\", \\\"latency critical systems\\\", \\\"systems\\\".\"",
       "origin": "ecc",
       "module": "optimization-workflows",
       "cost": "medium",
@@ -2771,7 +2771,7 @@
     {
       "id": "liquid-glass-design",
       "name": "liquid-glass-design",
-      "description": "iOS 26 Liquid Glass design system — dynamic glass material with blur, reflection, and interactive morphing for SwiftUI, UIKit, and WidgetKit.",
+      "description": "\"Use when iOS 26 Liquid Glass design system — dynamic glass material with blur, reflection, and interactive morphing for SwiftUI, UIKit, and WidgetKit. Triggers on \\\"liquid-glass-design\\\", \\\"liquid glass design\\\", \\\"design\\\".\"",
       "origin": "ecc",
       "module": "swift-apple",
       "cost": "medium",
@@ -2795,7 +2795,7 @@
     {
       "id": "llm-trading-agent-security",
       "name": "llm-trading-agent-security",
-      "description": "Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection, and key handling.",
+      "description": "\"Use when security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection, and key handling. Triggers on \\\"llm-trading-agent-security\\\", \\\"llm trading agent security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -2891,7 +2891,7 @@
     {
       "id": "marketing-campaign",
       "name": "marketing-campaign",
-      "description": "End-to-end marketing campaign planning and execution. Covers audience research, positioning, campaign angle definition, landing page copy, email sequences, social posts, ad copy, short-form video scripts, and content calendars. Use as the orchestration layer for multi-channel product launches.",
+      "description": "\"Use when end-to-end marketing campaign planning and execution. Covers audience research, positioning, campaign angle definition, landing page copy, email sequences, social posts, ad copy, short-form video scripts, and content calendars. Use as the orchestration... Triggers on \\\"marketing-campaign\\\", \\\"marketing campaign\\\", \\\"campaign\\\".\"",
       "origin": "ecc",
       "module": "business-content",
       "cost": "heavy",
@@ -2903,7 +2903,7 @@
     {
       "id": "mcp-server-patterns",
       "name": "mcp-server-patterns",
-      "description": "Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.",
+      "description": "\"Use when build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API. Triggers on \\\"mcp-server-patterns\\\", \\\"mcp server patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -2999,7 +2999,7 @@
     {
       "id": "ml-adoption-playbook",
       "name": "ml-adoption-playbook",
-      "description": "End-to-end methodology for AI agents and software engineers to add machine learning algorithms to existing non-ML codebases. Covers problem framing, data readiness, architectural decoupling, and baseline model integration.",
+      "description": "\"Use when end-to-end methodology for AI agents and software engineers to add machine learning algorithms to existing non-ML codebases. Covers problem framing, data readiness, architectural decoupling, and baseline model integration. Triggers on \\\"ml-adoption-playbook\\\", \\\"ml adoption playbook\\\", \\\"playbook\\\".\"",
       "origin": "ecc",
       "module": "machine-learning",
       "cost": "medium",
@@ -3023,7 +3023,7 @@
     {
       "id": "model-reflection-tuning",
       "name": "model-reflection-tuning",
-      "description": "Pipeline reflection-tuning (auto-crítica 2 estágios) com validação reproduzível via HashHop. Gera datasets CoT→crítica→correção, treina modelos abertos, detecta benchmarks não reproduzíveis (ex.: Reflection 70B).",
+      "description": "\"Use when pipeline reflection-tuning (auto-crítica 2 estágios) com validação reproduzível via HashHop. Gera datasets CoT→crítica→correção, treina modelos abertos, detecta benchmarks não reproduzíveis (ex.: Reflection 70B). Triggers on \\\"model-reflection-tuning\\\", \\\"model reflection tuning\\\", \\\"tuning\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3035,7 +3035,7 @@
     {
       "id": "motion-advanced",
       "name": "motion-advanced",
-      "description": "Advanced motion patterns for React / Next.js — drag & drop, gestures, text animations, SVG path drawing, custom hooks, imperative sequences (useAnimate), loaders, and the full API decision tree. Requires motion-foundations.",
+      "description": "\"Use when advanced motion patterns for React / Next.js — drag & drop, gestures, text animations, SVG path drawing, custom hooks, imperative sequences (useAnimate), loaders, and the full API decision tree. Requires motion-foundations. Triggers on \\\"motion-advanced\\\", \\\"motion advanced\\\", \\\"advanced\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3059,7 +3059,7 @@
     {
       "id": "motion-foundations",
       "name": "motion-foundations",
-      "description": "Motion tokens, spring presets, performance rules, device adaptation, accessibility enforcement, and SSR safety for React / Next.js using motion/react. Foundation layer — all other motion skills depend on this.",
+      "description": "\"Use when motion tokens, spring presets, performance rules, device adaptation, accessibility enforcement, and SSR safety for React / Next.js using motion/react. Foundation layer — all other motion skills depend on this. Triggers on \\\"motion-foundations\\\", \\\"motion foundations\\\", \\\"foundations\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3071,7 +3071,7 @@
     {
       "id": "motion-patterns",
       "name": "motion-patterns",
-      "description": "Production-ready animation patterns for React / Next.js — button, modal, toast, stagger, page transitions, exit animations, scroll, and layout — built on motion-foundations tokens and springs.",
+      "description": "\"Use when production-ready animation patterns for React / Next.js — button, modal, toast, stagger, page transitions, exit animations, scroll, and layout — built on motion-foundations tokens and springs. Triggers on \\\"motion-patterns\\\", \\\"motion patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3107,7 +3107,7 @@
     {
       "id": "mysql-patterns",
       "name": "mysql-patterns",
-      "description": "MySQL and MariaDB schema, query, indexing, transaction, replication, and connection-pool patterns for production backends.",
+      "description": "\"Use when mySQL and MariaDB schema, query, indexing, transaction, replication, and connection-pool patterns for production backends. Triggers on \\\"mysql-patterns\\\", \\\"mysql patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -3119,7 +3119,7 @@
     {
       "id": "n8n-agentic-flows",
       "name": "n8n-agentic-flows",
-      "description": "Use para orquestrar agentes autônomos dentro do N8N 2.0 usando MCP, nós de IA (Gemini/Claude), guardrails, e automações visuais com triggers de webhooks/GitHub. Triggers em \"n8n\", \"automação visual\", \"nós de agentes\", \"guardrails n8n\", \"MCP no n8n\". Foca em separar o nó de automação (N8N) do nó de inteligência (Agente de IA via MCP), aplicando a separação entre orquestração visual e lógica de raciocínio.",
+      "description": "\"Use when use para orquestrar agentes autônomos dentro do N8N 2.0 usando MCP, nós de IA (Gemini/Claude), guardrails, e automações visuais com triggers de webhooks/GitHub. Triggers em \\\"n8n\\\", \\\"automação visual\\\", \\\"nós de agentes\\\", \\\"guardrails n8n\\\", \\\"MCP no n8n\\\". Foca em... Triggers on \\\"n8n-agentic-flows\\\", \\\"n8n agentic flows\\\", \\\"flows\\\".\"",
       "origin": "ecc",
       "module": "operator-workflows",
       "cost": "medium",
@@ -3131,7 +3131,7 @@
     {
       "id": "nanoclaw-repl",
       "name": "nanoclaw-repl",
-      "description": "Operate and extend NanoClaw v2, ECC's zero-dependency session-aware REPL built on claude -p.",
+      "description": "\"Use when operate and extend NanoClaw v2, ECC's zero-dependency session-aware REPL built on claude -p. Triggers on \\\"nanoclaw-repl\\\", \\\"nanoclaw repl\\\", \\\"repl\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3143,7 +3143,7 @@
     {
       "id": "nestjs-patterns",
       "name": "nestjs-patterns",
-      "description": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.",
+      "description": "\"Use when nestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends. Triggers on \\\"nestjs-patterns\\\", \\\"nestjs patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3155,7 +3155,7 @@
     {
       "id": "netmiko-ssh-automation",
       "name": "netmiko-ssh-automation",
-      "description": "Safe Python Netmiko patterns for read-only collection, bounded batch SSH, TextFSM parsing, guarded config changes, timeouts, and network automation error handling.",
+      "description": "\"Use when safe Python Netmiko patterns for read-only collection, bounded batch SSH, TextFSM parsing, guarded config changes, timeouts, and network automation error handling. Triggers on \\\"netmiko-ssh-automation\\\", \\\"netmiko ssh automation\\\", \\\"automation\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -3167,7 +3167,7 @@
     {
       "id": "network-bgp-diagnostics",
       "name": "network-bgp-diagnostics",
-      "description": "Diagnostics-only BGP troubleshooting patterns for neighbor state, route exchange, prefix policy, AS path inspection, and safe evidence collection.",
+      "description": "\"Use when diagnostics-only BGP troubleshooting patterns for neighbor state, route exchange, prefix policy, AS path inspection, and safe evidence collection. Triggers on \\\"network-bgp-diagnostics\\\", \\\"network bgp diagnostics\\\", \\\"diagnostics\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -3179,7 +3179,7 @@
     {
       "id": "network-config-validation",
       "name": "network-config-validation",
-      "description": "Pre-deployment checks for router and switch configuration, including dangerous commands, duplicate addresses, subnet overlaps, stale references, management-plane risk, and IOS-style security hygiene.",
+      "description": "\"Use when pre-deployment checks for router and switch configuration, including dangerous commands, duplicate addresses, subnet overlaps, stale references, management-plane risk, and IOS-style security hygiene. Triggers on \\\"network-config-validation\\\", \\\"network config validation\\\", \\\"validation\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -3191,7 +3191,7 @@
     {
       "id": "network-interface-health",
       "name": "network-interface-health",
-      "description": "Diagnose interface errors, drops, CRCs, duplex mismatches, flapping, speed negotiation issues, and counter trends on routers, switches, and Linux hosts.",
+      "description": "\"Use when diagnose interface errors, drops, CRCs, duplex mismatches, flapping, speed negotiation issues, and counter trends on routers, switches, and Linux hosts. Triggers on \\\"network-interface-health\\\", \\\"network interface health\\\", \\\"health\\\".\"",
       "origin": "ecc",
       "module": "devops-infra",
       "cost": "medium",
@@ -3203,7 +3203,7 @@
     {
       "id": "nextjs-turbopack",
       "name": "nextjs-turbopack",
-      "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+      "description": "\"Use when next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack. Triggers on \\\"nextjs-turbopack\\\", \\\"nextjs turbopack\\\", \\\"turbopack\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3215,7 +3215,7 @@
     {
       "id": "nodejs-keccak256",
       "name": "nodejs-keccak256",
-      "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation.",
+      "description": "\"Use when prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation. Triggers on \\\"nodejs-keccak256\\\", \\\"nodejs keccak256\\\", \\\"keccak256\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -3227,7 +3227,7 @@
     {
       "id": "nutrient-document-processing",
       "name": "nutrient-document-processing",
-      "description": "Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API. Works with PDFs, DOCX, XLSX, PPTX, HTML, and images.",
+      "description": "\"Use when process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API. Works with PDFs, DOCX, XLSX, PPTX, HTML, and images. Triggers on \\\"nutrient-document-processing\\\", \\\"nutrient document processing\\\", \\\"processing\\\".\"",
       "origin": "ecc",
       "module": "document-processing",
       "cost": "medium",
@@ -3239,7 +3239,7 @@
     {
       "id": "nuxt4-patterns",
       "name": "nuxt4-patterns",
-      "description": "Nuxt 4 app patterns for hydration safety, performance, route rules, lazy loading, and SSR-safe data fetching with useFetch and useAsyncData.",
+      "description": "\"Use when nuxt 4 app patterns for hydration safety, performance, route rules, lazy loading, and SSR-safe data fetching with useFetch and useAsyncData. Triggers on \\\"nuxt4-patterns\\\", \\\"nuxt4 patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3257,13 +3257,13 @@
       "cost": "medium",
       "stability": "beta",
       "defaultInstall": false,
-      "body": "# Obsidian CLI\r\n\r\nThe official Obsidian CLI (released in v1.12, February 2026) lets you control every aspect of Obsidian from the terminal. It communicates with a running Obsidian desktop instance via IPC.\r\n\r\n> Read `references/command-reference.md` when you need specific flags, output formats, or\r\n> subcommands for any command group. It covers all 130+ commands with full parameter tables\r\n> and has a table of contents at the top.\r\n\r\n## Prerequisites\r\n\r\n| Requirement | Details |\r\n|---|---|\r\n| Obsidian Desktop | **v1.12.0+** |\r\n| CLI enabled | Settings → Command line interface → Toggle ON |\r\n| Obsidian running | The desktop app **must be running** for CLI to work (IPC) |\r\n\r\n### Platform Notes\r\n\r\n- **macOS / Linux**: The `obsidian` binary is registered in PATH automatically when you enable CLI in settings.\r\n- **Windows**: Requires an `Obsidian.com` redirector file placed alongside `Obsidian.exe`. **Must run with normal user privileges** — admin terminals produce silent failures.\r\n  - If colon subcommands (`property:set`, `daily:append`, etc.) with parameters return exit 127, check that `Obsidian.com` exists alongside `Obsidian.exe`. If missing, you have an outdated installer — download the latest from [obsidian.md/download](https://obsidian.md/download) and reinstall.\r\n  - **Git Bash / MSYS2 users**: Bash resolves `obsidian` to `Obsidian.exe` (GUI) instead of `Obsidian.com` (CLI), causing colon+params to fail with exit 127 even when `Obsidian.com` is present. Create a wrapper script — see Troubleshooting.\r\n- **Headless Linux**: Use the `.deb` package (not snap). Run under `xvfb`. Prefix commands with `DISPLAY=:5` (or your xvfb display number). Ensure `PrivateTmp=false` if running as a service.\r\n\r\n## Syntax\r\n\r\nAll parameters use **`key=value`** syntax. Quote values containing spaces.\r\n\r\n```bash\r\nobsidian <command> [subcommand] [key=value ...] [flags]\r\n```\r\n\r\n### Multi-Vault\r\n\r\nTarget a specific vault by making it the **first argument**:\r\n\r\n```bash\r\nobsidian \"My Vault\" daily:read\r\nobsidian \"Work Notes\" search query=\"meeting\"\r\n```\r\n\r\nIf omitted, the CLI targets the most recently active vault.\r\n\r\n## Command Overview\r\n\r\nThe CLI provides **130+ commands** across these groups:\r\n\r\n| Group | Key Commands | Purpose |\r\n|---|---|---|\r\n| **files** | `read`, `create`, `append`, `prepend`, `move`, `rename`, `delete`, `files`, `folders`, `file`, `random` | Note CRUD and file discovery |\r\n| **daily** | `daily`, `daily:read`, `daily:append`, `daily:prepend`, `daily:path` | Daily note operations |\r\n| **search** | `search`, `search:context` | Full-text search; `search:context` returns matching lines |\r\n| **properties** | `properties`, `property:read`, `property:set`, `property:remove`, `aliases` | Frontmatter/metadata management |\r\n| **tags** | `tags`, `tag` | Tag listing, counts, and filtering |\r\n| **tasks** | `tasks`, `task` | Task querying, filtering, and toggling |\r\n| **links** | `backlinks`, `links`, `unresolved`, `orphans`, `deadends` | Graph and link analysis |\r\n| **bookmarks** | `bookmarks`, `bookmark` | List and add bookmarks |\r\n| **templates** | `templates`, `template:read`, `template:insert` | Template listing, rendering, insertion |\r\n| **plugins** | `plugins`, `plugin`, `plugin:enable`, `plugin:disable`, `plugin:install`, `plugin:uninstall`, `plugins:restrict` | Plugin management |\r\n| **sync** | `sync`, `sync:status`, `sync:history`, `sync:read`, `sync:restore`, `sync:deleted` | Obsidian Sync operations |\r\n| **themes** | `themes`, `theme`, `theme:set`, `theme:install`, `theme:uninstall` | Theme management |\r\n| **snippets** | `snippets`, `snippets:enabled`, `snippet:enable`, `snippet:disable` | CSS snippet management |\r\n| **commands** | `commands`, `command`, `hotkeys`, `hotkey` | Execute Obsidian commands by ID; inspect hotkeys |\r\n| **bases** | `bases`, `base:query`, `base:views`, `base:create` | Obsidian Bases (v1.12+ database feature) |\r\n| **history** | `history`, `history:list`, `history:read`, `history:restore` | File version recovery (File Recovery plugin) |\r\n| **workspace** | `workspace`, `tabs`, `tab:open` | Workspace layout and tab management |\r\n| **diff** | `diff` | Compare local vs sync file versions |\r\n| **dev** | `eval`, `dev:screenshot`, `dev:debug`, `dev:console`, `dev:errors`, `dev:css`, `dev:dom`, `devtools` | Developer/debugging tools |\r\n| **vault** | `vault`, `vaults`, `version`, `reload`, `restart` | Vault info and app control |\r\n| **other** | `outline`, `wordcount`, `recents` | Utility commands |\r\n\r\n## Quick Reference — Most Common Commands\r\n\r\n### Reading & Writing Notes\r\n\r\n```bash\r\nobsidian read path=\"folder/note.md\"\r\nobsidian create path=\"folder/note\" content=\"# New Note\"\r\nobsidian create path=\"folder/note\" template=\"meeting-notes\"\r\nobsidian append path=\"folder/note.md\" content=\"New paragraph\"\r\nobsidian prepend path=\"folder/note.md\" content=\"Top content\"\r\nobsidian move path=\"old/note.md\" to=\"new/note.md\"\r\nobsidian delete path=\"folder/note.md\"\r\nobsidian delete path=\"folder/note.md\" permanent\r\n```\r\n\r\n### Daily Notes\r\n\r\n```bash\r\nobsidian daily                          # Open today's daily note\r\nobsidian daily:read                     # Print content of today's note\r\nobsidian daily:append content=\"- [ ] New task\"\r\nobsidian daily:prepend content=\"## Morning Notes\"\r\n```\r\n\r\n### Search\r\n\r\n```bash\r\nobsidian search query=\"project alpha\"\r\nobsidian search query=\"TODO\" path=\"projects\" limit=10\r\nobsidian search query=\"meeting\" format=json   # Returns JSON array of file paths\r\nobsidian search query=\"urgent\" case\r\n```\r\n\r\n### Properties & Tags\r\n\r\n```bash\r\nobsidian properties path=\"note.md\"\r\nobsidian property:set path=\"note.md\" name=\"status\" value=\"active\"\r\nobsidian property:read path=\"note.md\" name=\"status\"\r\nobsidian property:remove path=\"note.md\" name=\"draft\"\r\nobsidian tags counts sort=count\r\nobsidian tag name=\"project/alpha\"\r\n```\r\n\r\n### Tasks\r\n\r\n```bash\r\nobsidian tasks                          # All tasks (done + todo) — same as tasks all in v1.12\r\nobsidian tasks all                      # All tasks (done + todo)\r\nobsidian tasks done                     # Completed only\r\nobsidian tasks daily                    # Tasks in today's daily note\r\nobsidian task path=\"note.md\" line=12 toggle\r\nobsidian tasks | grep \"\\[ \\]\"           # Workaround: filter to incomplete only\r\n```\r\n\r\n### Developer & Automation\r\n\r\n```bash\r\nobsidian eval code=\"app.vault.getFiles().length\"\r\nobsidian dev:screenshot path=\"folder/screenshot.png\"  # Path must be vault-relative\r\nobsidian dev:debug on                                 # Required before dev:console\r\nobsidian dev:console limit=20\r\nobsidian dev:errors\r\n```\r\n\r\n## TUI Mode\r\n\r\nRunning `obsidian` with no arguments launches an interactive TUI (Terminal User Interface):\r\n\r\n| Key | Action |\r\n|---|---|\r\n| `↑↓` | Navigate files |\r\n| `Enter` | Open file |\r\n| `/` | Search |\r\n| `n` | Create new file |\r\n| `d` | Delete file |\r\n| `r` | Rename file |\r\n| `q` | Quit |\r\n\r\n## Common Agent Patterns\r\n\r\n### Daily Journal Automation\r\n\r\n```bash\r\n# Append a timestamped entry\r\nobsidian daily:append content=\"## $(date '+%H:%M') — Status Update\r\n- Completed: feature branch merge\r\n- Next: code review for PR #42\r\n- Blocked: waiting on API credentials\"\r\n```\r\n\r\n### Create Note from Template with Metadata\r\n\r\n```bash\r\nobsidian create path=\"projects/new-feature\" template=\"project-template\"\r\nobsidian property:set path=\"projects/new-feature.md\" name=\"status\" value=\"planning\"\r\nobsidian property:set path=\"projects/new-feature.md\" name=\"created\" value=\"$(date -I)\"\r\nobsidian daily:append content=\"- Started [[projects/new-feature|New Feature]]\"\r\n```\r\n\r\n### Vault Analytics Script\r\n\r\n```bash\r\nobsidian files total                    # Total file count\r\nobsidian tags counts sort=count         # Most used tags\r\nobsidian tasks | grep \"\\[ \\]\"          # Incomplete tasks across vault\r\nobsidian orphans                        # Notes needing integration\r\nobsidian unresolved                     # Broken links to fix\r\n```\r\n\r\n### Search and Extract for AI Processing\r\n\r\n```bash\r\nobsidian search query=\"meeting notes\" format=json | jq '.[]'\r\nobsidian read path=\"meetings/standup.md\" | grep \"Action item\"\r\n```\r\n\r\n### Sync Management\r\n\r\n```bash\r\nobsidian sync:status                    # Check sync health\r\nobsidian sync:history path=\"important.md\"  # Version history\r\nobsidian sync:restore path=\"important.md\" version=3  # Rollback\r\n```\r\n\r\n### Execute Obsidian Commands\r\n\r\n```bash\r\n# Find a command ID, then execute it\r\nobsidian commands | grep \"graph\"\r\nobsidian command id=\"graph:open\"\r\n\r\n# Open settings, trigger a plugin action\r\nobsidian command id=\"app:open-settings\"\r\nobsidian command id=\"dataview:dataview-force-refresh-views\"\r\n```\r\n\r\n## Tips\r\n\r\n1. **Paths are vault-relative** — use `folder/note.md`, not absolute filesystem paths.\r\n2. **`create` paths omit `.md`** — the extension is added automatically.\r\n3. **`move` requires full target path** including `.md` extension.\r\n4. **Pipe-friendly** — plain text output works with `grep`, `awk`, `sed`, `jq`.\r\n5. **JSON output** — use `format=json` on `search` for a JSON array of file paths. The `files` command does not support JSON output.\r\n6. **Stderr noise** — GPU/Electron warnings on headless are harmless; filter with `2>/dev/null`.\r\n7. **`daily:prepend`** inserts content after frontmatter, not at byte 0.\r\n8. **Use `eval`** to run arbitrary JavaScript against the Obsidian API (`app.*`).\r\n9. **`template:insert`** inserts into the currently active file in the Obsidian UI — it does not accept a `path=` parameter. If no file is open, it returns `Error: No active editor. Open a file first.` To create a file from a template via CLI, use `obsidian create path=\"...\" template=\"...\"` instead.\r\n10. **`property:set` stores list values as strings** — `value=\"tag1, tag2\"` writes a literal comma-separated string, not a YAML array. For proper array fields, edit the note's frontmatter directly (e.g. via `read` → modify → `create --force`) or use `eval` to call the Obsidian API.\r\n11. **`eval` requires single-line JavaScript** — multiline JS passed inline fails with a token error. Write the script to a temp file instead:\r\n    ```bash\r\n    cat > /tmp/obs.js << 'JS'\r\n    var files = app.vault.getMarkdownFiles();\r\n    files.length;\r\n    JS\r\n    obsidian eval code=\"$(cat /tmp/obs.js)\"\r\n    ```\r\n12. **Multi-vault targeting may not work in all environments** — `obsidian \"My Vault\" command` can return `Error: Command \"My Vault\" not found` on some setups. If this happens, omit the vault name (CLI targets the most recently active vault) and switch vaults manually in the Obsidian UI.\r\n13. **When colon subcommands are unavailable** (e.g. Windows Git Bash without wrapper), prefer non-colon alternatives: use `properties` instead of `property:read`, and `obsidian daily:path` + `append` instead of `daily:append`.\r\n\r\n## Troubleshooting\r\n\r\n| Problem | Cause | Fix |\r\n|---|---|---|\r\n| Empty output / hangs | Obsidian not running, or admin terminal (Windows) | Start Obsidian; use normal-privilege terminal |\r\n| Command not found | CLI not registered in PATH | Re-enable CLI in Settings; restart terminal |\r\n| Unicode errors | Fixed in v1.12.2+ | Update Obsidian |\r\n| Wrong vault targeted | Multi-vault ambiguity | Pass vault name as first arg |\r\n| IPC socket not found (Linux) | `PrivateTmp=true` in systemd | Set `PrivateTmp=false` |\r\n| Snap confinement issues | Snap restricts IPC | Use `.deb` package instead |\r\n| Multi-vault `\"Name\" command` fails | Vault name matching issue | Omit vault name; target most recent vault |\r\n| `property:set` list value is a string | CLI stores value as-is | Edit frontmatter directly or use `eval` |\r\n| Colon+params exit 127 (missing `.com`) | Outdated installer — `Obsidian.com` absent | Reinstall from [obsidian.md/download](https://obsidian.md/download) |\r\n| Colon+params exit 127 (Git Bash / MSYS2) | Bash resolves `obsidian` to `.exe` not `.com` | Create `~/bin/obsidian` wrapper: `#!/bin/bash` / `/c/path/to/Obsidian.com \"$@\"` and add `export PATH=\"$HOME/bin:$PATH\"` to `~/.bashrc` |",
+      "body": "# Obsidian CLI\n\nThe official Obsidian CLI (released in v1.12, February 2026) lets you control every aspect of Obsidian from the terminal. It communicates with a running Obsidian desktop instance via IPC.\n\n> Read `references/command-reference.md` when you need specific flags, output formats, or\n> subcommands for any command group. It covers all 130+ commands with full parameter tables\n> and has a table of contents at the top.\n\n## Prerequisites\n\n| Requirement | Details |\n|---|---|\n| Obsidian Desktop | **v1.12.0+** |\n| CLI enabled | Settings → Command line interface → Toggle ON |\n| Obsidian running | The desktop app **must be running** for CLI to work (IPC) |\n\n### Platform Notes\n\n- **macOS / Linux**: The `obsidian` binary is registered in PATH automatically when you enable CLI in settings.\n- **Windows**: Requires an `Obsidian.com` redirector file placed alongside `Obsidian.exe`. **Must run with normal user privileges** — admin terminals produce silent failures.\n  - If colon subcommands (`property:set`, `daily:append`, etc.) with parameters return exit 127, check that `Obsidian.com` exists alongside `Obsidian.exe`. If missing, you have an outdated installer — download the latest from [obsidian.md/download](https://obsidian.md/download) and reinstall.\n  - **Git Bash / MSYS2 users**: Bash resolves `obsidian` to `Obsidian.exe` (GUI) instead of `Obsidian.com` (CLI), causing colon+params to fail with exit 127 even when `Obsidian.com` is present. Create a wrapper script — see Troubleshooting.\n- **Headless Linux**: Use the `.deb` package (not snap). Run under `xvfb`. Prefix commands with `DISPLAY=:5` (or your xvfb display number). Ensure `PrivateTmp=false` if running as a service.\n\n## Syntax\n\nAll parameters use **`key=value`** syntax. Quote values containing spaces.\n\n```bash\nobsidian <command> [subcommand] [key=value ...] [flags]\n```\n\n### Multi-Vault\n\nTarget a specific vault by making it the **first argument**:\n\n```bash\nobsidian \"My Vault\" daily:read\nobsidian \"Work Notes\" search query=\"meeting\"\n```\n\nIf omitted, the CLI targets the most recently active vault.\n\n## Command Overview\n\nThe CLI provides **130+ commands** across these groups:\n\n| Group | Key Commands | Purpose |\n|---|---|---|\n| **files** | `read`, `create`, `append`, `prepend`, `move`, `rename`, `delete`, `files`, `folders`, `file`, `random` | Note CRUD and file discovery |\n| **daily** | `daily`, `daily:read`, `daily:append`, `daily:prepend`, `daily:path` | Daily note operations |\n| **search** | `search`, `search:context` | Full-text search; `search:context` returns matching lines |\n| **properties** | `properties`, `property:read`, `property:set`, `property:remove`, `aliases` | Frontmatter/metadata management |\n| **tags** | `tags`, `tag` | Tag listing, counts, and filtering |\n| **tasks** | `tasks`, `task` | Task querying, filtering, and toggling |\n| **links** | `backlinks`, `links`, `unresolved`, `orphans`, `deadends` | Graph and link analysis |\n| **bookmarks** | `bookmarks`, `bookmark` | List and add bookmarks |\n| **templates** | `templates`, `template:read`, `template:insert` | Template listing, rendering, insertion |\n| **plugins** | `plugins`, `plugin`, `plugin:enable`, `plugin:disable`, `plugin:install`, `plugin:uninstall`, `plugins:restrict` | Plugin management |\n| **sync** | `sync`, `sync:status`, `sync:history`, `sync:read`, `sync:restore`, `sync:deleted` | Obsidian Sync operations |\n| **themes** | `themes`, `theme`, `theme:set`, `theme:install`, `theme:uninstall` | Theme management |\n| **snippets** | `snippets`, `snippets:enabled`, `snippet:enable`, `snippet:disable` | CSS snippet management |\n| **commands** | `commands`, `command`, `hotkeys`, `hotkey` | Execute Obsidian commands by ID; inspect hotkeys |\n| **bases** | `bases`, `base:query`, `base:views`, `base:create` | Obsidian Bases (v1.12+ database feature) |\n| **history** | `history`, `history:list`, `history:read`, `history:restore` | File version recovery (File Recovery plugin) |\n| **workspace** | `workspace`, `tabs`, `tab:open` | Workspace layout and tab management |\n| **diff** | `diff` | Compare local vs sync file versions |\n| **dev** | `eval`, `dev:screenshot`, `dev:debug`, `dev:console`, `dev:errors`, `dev:css`, `dev:dom`, `devtools` | Developer/debugging tools |\n| **vault** | `vault`, `vaults`, `version`, `reload`, `restart` | Vault info and app control |\n| **other** | `outline`, `wordcount`, `recents` | Utility commands |\n\n## Quick Reference — Most Common Commands\n\n### Reading & Writing Notes\n\n```bash\nobsidian read path=\"folder/note.md\"\nobsidian create path=\"folder/note\" content=\"# New Note\"\nobsidian create path=\"folder/note\" template=\"meeting-notes\"\nobsidian append path=\"folder/note.md\" content=\"New paragraph\"\nobsidian prepend path=\"folder/note.md\" content=\"Top content\"\nobsidian move path=\"old/note.md\" to=\"new/note.md\"\nobsidian delete path=\"folder/note.md\"\nobsidian delete path=\"folder/note.md\" permanent\n```\n\n### Daily Notes\n\n```bash\nobsidian daily                          # Open today's daily note\nobsidian daily:read                     # Print content of today's note\nobsidian daily:append content=\"- [ ] New task\"\nobsidian daily:prepend content=\"## Morning Notes\"\n```\n\n### Search\n\n```bash\nobsidian search query=\"project alpha\"\nobsidian search query=\"TODO\" path=\"projects\" limit=10\nobsidian search query=\"meeting\" format=json   # Returns JSON array of file paths\nobsidian search query=\"urgent\" case\n```\n\n### Properties & Tags\n\n```bash\nobsidian properties path=\"note.md\"\nobsidian property:set path=\"note.md\" name=\"status\" value=\"active\"\nobsidian property:read path=\"note.md\" name=\"status\"\nobsidian property:remove path=\"note.md\" name=\"draft\"\nobsidian tags counts sort=count\nobsidian tag name=\"project/alpha\"\n```\n\n### Tasks\n\n```bash\nobsidian tasks                          # All tasks (done + todo) — same as tasks all in v1.12\nobsidian tasks all                      # All tasks (done + todo)\nobsidian tasks done                     # Completed only\nobsidian tasks daily                    # Tasks in today's daily note\nobsidian task path=\"note.md\" line=12 toggle\nobsidian tasks | grep \"\\[ \\]\"           # Workaround: filter to incomplete only\n```\n\n### Developer & Automation\n\n```bash\nobsidian eval code=\"app.vault.getFiles().length\"\nobsidian dev:screenshot path=\"folder/screenshot.png\"  # Path must be vault-relative\nobsidian dev:debug on                                 # Required before dev:console\nobsidian dev:console limit=20\nobsidian dev:errors\n```\n\n## TUI Mode\n\nRunning `obsidian` with no arguments launches an interactive TUI (Terminal User Interface):\n\n| Key | Action |\n|---|---|\n| `↑↓` | Navigate files |\n| `Enter` | Open file |\n| `/` | Search |\n| `n` | Create new file |\n| `d` | Delete file |\n| `r` | Rename file |\n| `q` | Quit |\n\n## Common Agent Patterns\n\n### Daily Journal Automation\n\n```bash\n# Append a timestamped entry\nobsidian daily:append content=\"## $(date '+%H:%M') — Status Update\n- Completed: feature branch merge\n- Next: code review for PR #42\n- Blocked: waiting on API credentials\"\n```\n\n### Create Note from Template with Metadata\n\n```bash\nobsidian create path=\"projects/new-feature\" template=\"project-template\"\nobsidian property:set path=\"projects/new-feature.md\" name=\"status\" value=\"planning\"\nobsidian property:set path=\"projects/new-feature.md\" name=\"created\" value=\"$(date -I)\"\nobsidian daily:append content=\"- Started [[projects/new-feature|New Feature]]\"\n```\n\n### Vault Analytics Script\n\n```bash\nobsidian files total                    # Total file count\nobsidian tags counts sort=count         # Most used tags\nobsidian tasks | grep \"\\[ \\]\"          # Incomplete tasks across vault\nobsidian orphans                        # Notes needing integration\nobsidian unresolved                     # Broken links to fix\n```\n\n### Search and Extract for AI Processing\n\n```bash\nobsidian search query=\"meeting notes\" format=json | jq '.[]'\nobsidian read path=\"meetings/standup.md\" | grep \"Action item\"\n```\n\n### Sync Management\n\n```bash\nobsidian sync:status                    # Check sync health\nobsidian sync:history path=\"important.md\"  # Version history\nobsidian sync:restore path=\"important.md\" version=3  # Rollback\n```\n\n### Execute Obsidian Commands\n\n```bash\n# Find a command ID, then execute it\nobsidian commands | grep \"graph\"\nobsidian command id=\"graph:open\"\n\n# Open settings, trigger a plugin action\nobsidian command id=\"app:open-settings\"\nobsidian command id=\"dataview:dataview-force-refresh-views\"\n```\n\n## Tips\n\n1. **Paths are vault-relative** — use `folder/note.md`, not absolute filesystem paths.\n2. **`create` paths omit `.md`** — the extension is added automatically.\n3. **`move` requires full target path** including `.md` extension.\n4. **Pipe-friendly** — plain text output works with `grep`, `awk`, `sed`, `jq`.\n5. **JSON output** — use `format=json` on `search` for a JSON array of file paths. The `files` command does not support JSON output.\n6. **Stderr noise** — GPU/Electron warnings on headless are harmless; filter with `2>/dev/null`.\n7. **`daily:prepend`** inserts content after frontmatter, not at byte 0.\n8. **Use `eval`** to run arbitrary JavaScript against the Obsidian API (`app.*`).\n9. **`template:insert`** inserts into the currently active file in the Obsidian UI — it does not accept a `path=` parameter. If no file is open, it returns `Error: No active editor. Open a file first.` To create a file from a template via CLI, use `obsidian create path=\"...\" template=\"...\"` instead.\n10. **`property:set` stores list values as strings** — `value=\"tag1, tag2\"` writes a literal comma-separated string, not a YAML array. For proper array fields, edit the note's frontmatter directly (e.g. via `read` → modify → `create --force`) or use `eval` to call the Obsidian API.\n11. **`eval` requires single-line JavaScript** — multiline JS passed inline fails with a token error. Write the script to a temp file instead:\n    ```bash\n    cat > /tmp/obs.js << 'JS'\n    var files = app.vault.getMarkdownFiles();\n    files.length;\n    JS\n    obsidian eval code=\"$(cat /tmp/obs.js)\"\n    ```\n12. **Multi-vault targeting may not work in all environments** — `obsidian \"My Vault\" command` can return `Error: Command \"My Vault\" not found` on some setups. If this happens, omit the vault name (CLI targets the most recently active vault) and switch vaults manually in the Obsidian UI.\n13. **When colon subcommands are unavailable** (e.g. Windows Git Bash without wrapper), prefer non-colon alternatives: use `properties` instead of `property:read`, and `obsidian daily:path` + `append` instead of `daily:append`.\n\n## Troubleshooting\n\n| Problem | Cause | Fix |\n|---|---|---|\n| Empty output / hangs | Obsidian not running, or admin terminal (Windows) | Start Obsidian; use normal-privilege terminal |\n| Command not found | CLI not registered in PATH | Re-enable CLI in Settings; restart terminal |\n| Unicode errors | Fixed in v1.12.2+ | Update Obsidian |\n| Wrong vault targeted | Multi-vault ambiguity | Pass vault name as first arg |\n| IPC socket not found (Linux) | `PrivateTmp=true` in systemd | Set `PrivateTmp=false` |\n| Snap confinement issues | Snap restricts IPC | Use `.deb` package instead |\n| Multi-vault `\"Name\" command` fails | Vault name matching issue | Omit vault name; target most recent vault |\n| `property:set` list value is a string | CLI stores value as-is | Edit frontmatter directly or use `eval` |\n| Colon+params exit 127 (missing `.com`) | Outdated installer — `Obsidian.com` absent | Reinstall from [obsidian.md/download](https://obsidian.md/download) |\n| Colon+params exit 127 (Git Bash / MSYS2) | Bash resolves `obsidian` to `.exe` not `.com` | Create `~/bin/obsidian` wrapper: `#!/bin/bash` / `/c/path/to/Obsidian.com \"$@\"` and add `export PATH=\"$HOME/bin:$PATH\"` to `~/.bashrc` |",
       "github": "https://github.com/majinmagros/magros.ai-skills/tree/master/skills/obsidian-cli"
     },
     {
       "id": "openclaw-persona-forge",
       "name": "openclaw-persona-forge",
-      "description": "\"为 OpenClaw AI Agent 锻造完整的龙虾灵魂方案。根据用户偏好或随机抽卡， 输出身份定位、灵魂描述(SOUL.md)、角色化底线规则、名字和头像生图提示词。 如当前环境提供已审核的生图 skill，可自动生成统一风格头像图片。 当用户需要创建、设计或定制 OpenClaw 龙虾灵魂时使用。 不适用于：微调已有 SOUL.md、非 OpenClaw 平台的角色设计、纯工具型无性格 Agent。 触发词：龙虾灵魂、虾魂、OpenClaw 灵魂、养虾灵魂、龙虾角色、龙虾定位、 龙虾剧本杀角色、龙虾游戏角色、龙虾 NPC、龙虾性格、龙虾背景故事、 lobster soul、lobster character、抽卡、随机龙虾、龙虾 SOUL、gacha。\"",
+      "description": "\"Use when 为 OpenClaw AI Agent 锻造完整的龙虾灵魂方案。根据用户偏好或随机抽卡， 输出身份定位、灵魂描述(SOUL.md)、角色化底线规则、名字和头像生图提示词。 如当前环境提供已审核的生图 skill，可自动生成统一风格头像图片。 当用户需要创建、设计或定制 OpenClaw 龙虾灵魂时使用。 不适用于：微调已有 SOUL.md、非 OpenClaw 平台的角色设计、纯工具型无性格 Agent。 触发词：龙虾灵魂、虾魂、OpenClaw 灵魂、养虾灵魂、龙虾角色、龙虾定位、 龙虾剧... Triggers on \\\"openclaw-persona-forge\\\", \\\"openclaw persona forge\\\", \\\"forge\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3275,7 +3275,7 @@
     {
       "id": "opensource-pipeline",
       "name": "opensource-pipeline",
-      "description": "\"Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for open source'.\"",
+      "description": "\"Use when open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for open source'. Triggers on \\\"opensource-pipeline\\\", \\\"opensource pipeline\\\", \\\"pipeline\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3299,7 +3299,7 @@
     {
       "id": "orch-build-mvp",
       "name": "orch-build-mvp",
-      "description": "Orchestrate bootstrapping a working MVP from a design or spec document — ingest the doc, plan thin vertical slices, scaffold the first end-to-end slice, then TDD-implement, review, and gated commit. Use to turn an SDD/PRD into a running starting point.",
+      "description": "\"Use when orchestrate bootstrapping a working MVP from a design or spec document — ingest the doc, plan thin vertical slices, scaffold the first end-to-end slice, then TDD-implement, review, and gated commit. Use to turn an SDD/PRD into a running starting point. Triggers on \\\"orch-build-mvp\\\", \\\"orch build mvp\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3335,7 +3335,7 @@
     {
       "id": "orch-pipeline",
       "name": "orch-pipeline",
-      "description": "Shared orchestration engine for the orch-* skill family. Defines the gated Research-Plan-TDD-Review-Commit pipeline, the size classifier, the agent map, and the two human gates that the orch-* operation skills delegate to. Not usually invoked directly.",
+      "description": "\"Use when shared orchestration engine for the orch-* skill family. Defines the gated Research-Plan-TDD-Review-Commit pipeline, the size classifier, the agent map, and the two human gates that the orch-* operation skills delegate to. Not usually invoked directly. Triggers on \\\"orch-pipeline\\\", \\\"orch pipeline\\\", \\\"pipeline\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3371,7 +3371,7 @@
     {
       "id": "perl-patterns",
       "name": "perl-patterns",
-      "description": "Modern Perl 5.36+ idioms, best practices, and conventions for building robust, maintainable Perl applications.",
+      "description": "\"Use when modern Perl 5.36+ idioms, best practices, and conventions for building robust, maintainable Perl applications. Triggers on \\\"perl-patterns\\\", \\\"perl patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3383,7 +3383,7 @@
     {
       "id": "perl-security",
       "name": "perl-security",
-      "description": "Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries, web security (XSS/SQLi/CSRF), and perlcritic security policies.",
+      "description": "\"Use when comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries, web security (XSS/SQLi/CSRF), and perlcritic security policies. Triggers on \\\"perl-security\\\", \\\"perl security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -3395,7 +3395,7 @@
     {
       "id": "perl-testing",
       "name": "perl-testing",
-      "description": "Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodology.",
+      "description": "\"Use when perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodology. Triggers on \\\"perl-testing\\\", \\\"perl testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3479,7 +3479,7 @@
     {
       "id": "plankton-code-quality",
       "name": "plankton-code-quality",
-      "description": "\"Write-time code quality enforcement using Plankton — auto-formatting, linting, and Claude-powered fixes on every file edit via hooks.\"",
+      "description": "\"Use when write-time code quality enforcement using Plankton — auto-formatting, linting, and Claude-powered fixes on every file edit via hooks. Triggers on \\\"plankton-code-quality\\\", \\\"plankton code quality\\\", \\\"quality\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3491,7 +3491,7 @@
     {
       "id": "postgres-patterns",
       "name": "postgres-patterns",
-      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+      "description": "\"Use when postgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices. Triggers on \\\"postgres-patterns\\\", \\\"postgres patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -3503,7 +3503,7 @@
     {
       "id": "prediction-market-oracle-research",
       "name": "prediction-market-oracle-research",
-      "description": "Research prediction markets as data sources or oracle signals for products, agents, dashboards, and corporate decision intelligence. Use for source-grounded analysis of market-implied probabilities, caveats, and integration patterns without investment advice.",
+      "description": "\"Use when research prediction markets as data sources or oracle signals for products, agents, dashboards, and corporate decision intelligence. Use for source-grounded analysis of market-implied probabilities, caveats, and integration... Triggers on \\\"prediction-market-oracle-research\\\", \\\"prediction market oracle research\\\", \\\"research\\\".\"",
       "origin": "ecc",
       "module": "prediction-market-skills",
       "cost": "medium",
@@ -3515,7 +3515,7 @@
     {
       "id": "prediction-market-risk-review",
       "name": "prediction-market-risk-review",
-      "description": "Review prediction-market, basket, oracle, and trading-agent workflows for compliance, safety, data-quality, privacy, and execution risk. Use before any workflow handles venue auth, user portfolio data, API keys, or trade planning.",
+      "description": "\"Use when review prediction-market, basket, oracle, and trading-agent workflows for compliance, safety, data-quality, privacy, and execution risk. Use before any workflow handles venue auth, user portfolio data, API keys, or trade planning. Triggers on \\\"prediction-market-risk-review\\\", \\\"prediction market risk review\\\", \\\"review\\\".\"",
       "origin": "ecc",
       "module": "prediction-market-skills",
       "cost": "medium",
@@ -3527,7 +3527,7 @@
     {
       "id": "prisma-patterns",
       "name": "prisma-patterns",
-      "description": "Prisma ORM patterns for TypeScript backends — schema design, query optimization, transactions, pagination, and critical traps like updateMany returning count not records, $transaction timeouts, migrate dev resetting the DB, @updatedAt skipped on bulk writes, and serverless connection exhaustion.",
+      "description": "\"Use when prisma ORM patterns for TypeScript backends — schema design, query optimization, transactions, pagination, and critical traps like updateMany returning count not records, $transaction timeouts, migrate dev resetting the DB, @updatedAt skipped on bulk writes,... Triggers on \\\"prisma-patterns\\\", \\\"prisma patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -3551,7 +3551,7 @@
     {
       "id": "product-lens",
       "name": "product-lens",
-      "description": "Use this skill to validate the \"why\" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract.",
+      "description": "\"Use when use this skill to validate the \\\"why\\\" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract. Triggers on \\\"product-lens\\\", \\\"product lens\\\", \\\"lens\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3563,7 +3563,7 @@
     {
       "id": "production-audit",
       "name": "production-audit",
-      "description": "Local-evidence production readiness audit for shipped apps, pre-launch reviews, post-merge checks, and \"what breaks in prod?\" questions without sending repo data to an external audit service.",
+      "description": "\"Use when local-evidence production readiness audit for shipped apps, pre-launch reviews, post-merge checks, and \\\"what breaks in prod?\\\" questions without sending repo data to an external audit service. Triggers on \\\"production-audit\\\", \\\"production audit\\\", \\\"audit\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3623,7 +3623,7 @@
     {
       "id": "python-patterns",
       "name": "python-patterns",
-      "description": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.",
+      "description": "\"Use when pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications. Triggers on \\\"python-patterns\\\", \\\"python patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3635,7 +3635,7 @@
     {
       "id": "python-testing",
       "name": "python-testing",
-      "description": "Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.",
+      "description": "\"Use when python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements. Triggers on \\\"python-testing\\\", \\\"python testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3647,7 +3647,7 @@
     {
       "id": "pytorch-patterns",
       "name": "pytorch-patterns",
-      "description": "PyTorch deep learning patterns and best practices for building robust, efficient, and reproducible training pipelines, model architectures, and data loading.",
+      "description": "\"Use when pyTorch deep learning patterns and best practices for building robust, efficient, and reproducible training pipelines, model architectures, and data loading. Triggers on \\\"pytorch-patterns\\\", \\\"pytorch patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "machine-learning",
       "cost": "medium",
@@ -3671,7 +3671,7 @@
     {
       "id": "quarkus-patterns",
       "name": "quarkus-patterns",
-      "description": "Quarkus 3.x LTS architecture patterns with Camel for messaging, RESTful API design, CDI services, data access with Panache, and async processing. Use for Java Quarkus backend work with event-driven architectures.",
+      "description": "\"Use when quarkus 3.x LTS architecture patterns with Camel for messaging, RESTful API design, CDI services, data access with Panache, and async processing. Use for Java Quarkus backend work with event-driven architectures. Triggers on \\\"quarkus-patterns\\\", \\\"quarkus patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3683,7 +3683,7 @@
     {
       "id": "quarkus-security",
       "name": "quarkus-security",
-      "description": "Quarkus Security best practices for authentication, authorization, JWT/OIDC, RBAC, input validation, CSRF, secrets management, and dependency security.",
+      "description": "\"Use when quarkus Security best practices for authentication, authorization, JWT/OIDC, RBAC, input validation, CSRF, secrets management, and dependency security. Triggers on \\\"quarkus-security\\\", \\\"quarkus security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -3707,7 +3707,7 @@
     {
       "id": "quarkus-verification",
       "name": "quarkus-verification",
-      "description": "\"Verification loop for Quarkus projects: build, static analysis, tests with coverage, security scans, native compilation, and diff review before release or PR.\"",
+      "description": "\"Use when verification loop for Quarkus projects: build, static analysis, tests with coverage, security scans, native compilation, and diff review before release or PR. Triggers on \\\"quarkus-verification\\\", \\\"quarkus verification\\\", \\\"verification\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3719,7 +3719,7 @@
     {
       "id": "ralphinho-rfc-pipeline",
       "name": "ralphinho-rfc-pipeline",
-      "description": "RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration.",
+      "description": "\"Use when rFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration. Triggers on \\\"ralphinho-rfc-pipeline\\\", \\\"ralphinho rfc pipeline\\\", \\\"pipeline\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3779,7 +3779,7 @@
     {
       "id": "recsys-pipeline-architect",
       "name": "recsys-pipeline-architect",
-      "description": "Design composable recommendation, ranking, and feed pipelines using the six-stage Source→Hydrator→Filter→Scorer→Selector→SideEffect framework popularized by xAI's open-sourced For You algorithm. Use this skill whenever the user is building any system that picks \"the top K items for a (user, context)\" — social feeds, content CMSs, RAG rerankers, task prioritizers, notification triage, search reranking, ad ranking.",
+      "description": "\"Use when design composable recommendation, ranking, and feed pipelines using the six-stage Source→Hydrator→Filter→Scorer→Selector→SideEffect framework popularized by xAI's open-sourced For You algorithm. Use this skill whenever the user is buildin... Triggers on \\\"recsys-pipeline-architect\\\", \\\"recsys pipeline architect\\\", \\\"architect\\\".\"",
       "origin": "ecc",
       "module": "machine-learning",
       "cost": "medium",
@@ -3803,7 +3803,7 @@
     {
       "id": "redis-patterns",
       "name": "redis-patterns",
-      "description": "Redis data structure patterns, caching strategies, distributed locks, rate limiting, pub/sub, and connection management for production applications.",
+      "description": "\"Use when redis data structure patterns, caching strategies, distributed locks, rate limiting, pub/sub, and connection management for production applications. Triggers on \\\"redis-patterns\\\", \\\"redis patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "database",
       "cost": "medium",
@@ -3815,7 +3815,7 @@
     {
       "id": "regex-vs-llm-structured-text",
       "name": "regex-vs-llm-structured-text",
-      "description": "Decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases.",
+      "description": "\"Use when decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases. Triggers on \\\"regex-vs-llm-structured-text\\\", \\\"regex vs llm structured text\\\", \\\"text\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -3827,7 +3827,7 @@
     {
       "id": "remotion-video-creation",
       "name": "remotion-video-creation",
-      "description": "Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more.",
+      "description": "\"Use when best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more. Triggers on \\\"remotion-video-creation\\\", \\\"remotion video creation\\\", \\\"creation\\\".\"",
       "origin": "ecc",
       "module": "media-generation",
       "cost": "heavy",
@@ -3839,7 +3839,7 @@
     {
       "id": "repo-scan",
       "name": "repo-scan",
-      "description": "Cross-stack source code asset audit — classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports.",
+      "description": "\"Use when cross-stack source code asset audit — classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports. Triggers on \\\"repo-scan\\\", \\\"repo scan\\\", \\\"scan\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3863,7 +3863,7 @@
     {
       "id": "retomar-sessao",
       "name": "retomar-sessao",
-      "description": "Recupera o historico de uma sessao do opencode travada/perdida e exporta para um arquivo markdown de retomada. Triggers em \"perdi a sessao\", \"janela travou\", \"recupera historico\", \"retoma a tarefa\", \"meu contexto sumiu\", \"opencode.db\". Lê o SQLite de sessoes, lista as recentes e exporta a conversa completa (texto, raciocinio e ferramentas) para %USERPROFILE%\\projetos\\retomadas\\.",
+      "description": "\"Use when recupera o historico de uma sessao do opencode travada/perdida e exporta para um arquivo markdown de retomada. Triggers em \\\"perdi a sessao\\\", \\\"janela travou\\\", \\\"recupera historico\\\", \\\"retoma a tarefa\\\", \\\"meu contexto sumiu\\\", \\\"opencode.db\\\". Lê o SQLite de sessoes, lis... Triggers on \\\"retomar-sessao\\\", \\\"retomar sessao\\\", \\\"sessao\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3947,7 +3947,7 @@
     {
       "id": "rules-distill",
       "name": "rules-distill",
-      "description": "\"Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files\"",
+      "description": "\"Use when scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files. Triggers on \\\"rules-distill\\\", \\\"rules distill\\\", \\\"distill\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -3971,7 +3971,7 @@
     {
       "id": "rust-patterns",
       "name": "rust-patterns",
-      "description": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.",
+      "description": "\"Use when idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications. Triggers on \\\"rust-patterns\\\", \\\"rust patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3983,7 +3983,7 @@
     {
       "id": "rust-testing",
       "name": "rust-testing",
-      "description": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.",
+      "description": "\"Use when rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology. Triggers on \\\"rust-testing\\\", \\\"rust testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -3995,7 +3995,7 @@
     {
       "id": "safety-guard",
       "name": "safety-guard",
-      "description": "Use this skill to prevent destructive operations when working on production systems or running agents autonomously.",
+      "description": "\"Use when use this skill to prevent destructive operations when working on production systems or running agents autonomously. Triggers on \\\"safety-guard\\\", \\\"safety guard\\\", \\\"guard\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -4007,7 +4007,7 @@
     {
       "id": "santa-method",
       "name": "santa-method",
-      "description": "\"Multi-agent adversarial verification with convergence loop. Two independent review agents must both pass before output ships.\"",
+      "description": "\"Use when multi-agent adversarial verification with convergence loop. Two independent review agents must both pass before output ships. Triggers on \\\"santa-method\\\", \\\"santa method\\\", \\\"method\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -4019,7 +4019,7 @@
     {
       "id": "scientific-db-pubmed-database",
       "name": "scientific-db-pubmed-database",
-      "description": "Direct PubMed and NCBI E-utilities search workflows for biomedical literature, MeSH queries, PMID lookup, citation retrieval, and API-backed literature monitoring.",
+      "description": "\"Use when direct PubMed and NCBI E-utilities search workflows for biomedical literature, MeSH queries, PMID lookup, citation retrieval, and API-backed literature monitoring. Triggers on \\\"scientific-db-pubmed-database\\\", \\\"scientific db pubmed database\\\", \\\"database\\\".\"",
       "origin": "ecc",
       "module": "research-apis",
       "cost": "medium",
@@ -4031,7 +4031,7 @@
     {
       "id": "scientific-db-uspto-database",
       "name": "scientific-db-uspto-database",
-      "description": "USPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs.",
+      "description": "\"Use when uSPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs. Triggers on \\\"scientific-db-uspto-database\\\", \\\"scientific db uspto database\\\", \\\"database\\\".\"",
       "origin": "ecc",
       "module": "research-apis",
       "cost": "medium",
@@ -4043,7 +4043,7 @@
     {
       "id": "scientific-pkg-gget",
       "name": "scientific-pkg-gget",
-      "description": "gget CLI and Python workflow for quick genomic database queries, sequence lookup, BLAST-style searches, enrichment checks, and reproducible bioinformatics evidence logs.",
+      "description": "\"Use when gget CLI and Python workflow for quick genomic database queries, sequence lookup, BLAST-style searches, enrichment checks, and reproducible bioinformatics evidence logs. Triggers on \\\"scientific-pkg-gget\\\", \\\"scientific pkg gget\\\", \\\"gget\\\".\"",
       "origin": "ecc",
       "module": "research-apis",
       "cost": "medium",
@@ -4055,7 +4055,7 @@
     {
       "id": "scientific-thinking-literature-review",
       "name": "scientific-thinking-literature-review",
-      "description": "Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging.",
+      "description": "\"Use when systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging. Triggers on \\\"scientific-thinking-literature-review\\\", \\\"scientific thinking literature review\\\", \\\"review\\\".\"",
       "origin": "ecc",
       "module": "research-apis",
       "cost": "medium",
@@ -4067,7 +4067,7 @@
     {
       "id": "scientific-thinking-scholar-evaluation",
       "name": "scientific-thinking-scholar-evaluation",
-      "description": "Structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback.",
+      "description": "\"Use when structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback. Triggers on \\\"scientific-thinking-scholar-evaluation\\\", \\\"scientific thinking scholar evaluation\\\", \\\"evaluation\\\".\"",
       "origin": "ecc",
       "module": "research-apis",
       "cost": "medium",
@@ -4091,7 +4091,7 @@
     {
       "id": "search-first",
       "name": "search-first",
-      "description": "Research-before-coding workflow. Search for existing tools, libraries, and patterns before writing custom code. Invokes the researcher agent.",
+      "description": "\"Use when research-before-coding workflow. Search for existing tools, libraries, and patterns before writing custom code. Invokes the researcher agent. Triggers on \\\"search-first\\\", \\\"search first\\\", \\\"first\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -4115,7 +4115,7 @@
     {
       "id": "security-bounty-hunter",
       "name": "security-bounty-hunter",
-      "description": "Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.",
+      "description": "\"Use when hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings. Triggers on \\\"security-bounty-hunter\\\", \\\"security bounty hunter\\\", \\\"hunter\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -4127,7 +4127,7 @@
     {
       "id": "security-review",
       "name": "security-review",
-      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+      "description": "\"Use when use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns. Triggers on \\\"security-review\\\", \\\"security review\\\", \\\"review\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -4139,7 +4139,7 @@
     {
       "id": "security-scan",
       "name": "security-scan",
-      "description": "Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, MCP servers, hooks, and agent definitions.",
+      "description": "\"Use when scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, MCP servers, hooks, and agent definitions. Triggers on \\\"security-scan\\\", \\\"security scan\\\", \\\"scan\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -4187,7 +4187,7 @@
     {
       "id": "skill-comply",
       "name": "skill-comply",
-      "description": "Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines",
+      "description": "\"Use when visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines. Triggers on \\\"skill-comply\\\", \\\"skill comply\\\", \\\"comply\\\".\"",
       "origin": "ecc",
       "module": null,
       "cost": null,
@@ -4283,7 +4283,7 @@
     {
       "id": "spatial-intelligence-world-models",
       "name": "spatial-intelligence-world-models",
-      "description": "Interface for World Labs Marble/LWM APIs (3D scene generation, spatial reasoning, robotics integration). Benchmarks spatial tasks (object permanence, physics prediction, affordance detection). Integrates with robotics (robotic arm door opening, sandwich making per Fei-Fei Li/World Labs demos). Follows Agent Skills pattern: frontmatter, clear triggers, 3 layers (direction, blueprints, solutions).",
+      "description": "\"Use when interface for World Labs Marble/LWM APIs (3D scene generation, spatial reasoning, robotics integration). Benchmarks spatial tasks (object permanence, physics prediction, affordance detection). Integrates with robotics (roboti... Triggers on \\\"spatial-intelligence-world-models\\\", \\\"spatial intelligence world models\\\", \\\"models\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -4307,7 +4307,7 @@
     {
       "id": "springboot-patterns",
       "name": "springboot-patterns",
-      "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work.",
+      "description": "\"Use when spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work. Triggers on \\\"springboot-patterns\\\", \\\"springboot patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4319,7 +4319,7 @@
     {
       "id": "springboot-security",
       "name": "springboot-security",
-      "description": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services.",
+      "description": "\"Use when spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services. Triggers on \\\"springboot-security\\\", \\\"springboot security\\\", \\\"security\\\".\"",
       "origin": "ecc",
       "module": "security",
       "cost": "medium",
@@ -4343,7 +4343,7 @@
     {
       "id": "springboot-verification",
       "name": "springboot-verification",
-      "description": "\"Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR.\"",
+      "description": "\"Use when verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR. Triggers on \\\"springboot-verification\\\", \\\"springboot verification\\\", \\\"verification\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4355,7 +4355,7 @@
     {
       "id": "strategic-compact",
       "name": "strategic-compact",
-      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+      "description": "\"Use when suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction. Triggers on \\\"strategic-compact\\\", \\\"strategic compact\\\", \\\"compact\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -4403,7 +4403,7 @@
     {
       "id": "swift-actor-persistence",
       "name": "swift-actor-persistence",
-      "description": "Thread-safe data persistence in Swift using actors — in-memory cache with file-backed storage, eliminating data races by design.",
+      "description": "\"Use when thread-safe data persistence in Swift using actors — in-memory cache with file-backed storage, eliminating data races by design. Triggers on \\\"swift-actor-persistence\\\", \\\"swift actor persistence\\\", \\\"persistence\\\".\"",
       "origin": "ecc",
       "module": "swift-apple",
       "cost": "medium",
@@ -4415,7 +4415,7 @@
     {
       "id": "swift-concurrency-6-2",
       "name": "swift-concurrency-6-2",
-      "description": "Swift 6.2 Approachable Concurrency — single-threaded by default, @concurrent for explicit background offloading, isolated conformances for main actor types.",
+      "description": "\"Use when swift 6.2 Approachable Concurrency — single-threaded by default, @concurrent for explicit background offloading, isolated conformances for main actor types. Triggers on \\\"swift-concurrency-6-2\\\", \\\"swift concurrency 6 2\\\".\"",
       "origin": "ecc",
       "module": "swift-apple",
       "cost": "medium",
@@ -4427,7 +4427,7 @@
     {
       "id": "swift-protocol-di-testing",
       "name": "swift-protocol-di-testing",
-      "description": "Protocol-based dependency injection for testable Swift code — mock file system, network, and external APIs using focused protocols and Swift Testing.",
+      "description": "\"Use when protocol-based dependency injection for testable Swift code — mock file system, network, and external APIs using focused protocols and Swift Testing. Triggers on \\\"swift-protocol-di-testing\\\", \\\"swift protocol di testing\\\", \\\"testing\\\".\"",
       "origin": "ecc",
       "module": "swift-apple",
       "cost": "medium",
@@ -4439,7 +4439,7 @@
     {
       "id": "swiftui-patterns",
       "name": "swiftui-patterns",
-      "description": "SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimization, and modern iOS/macOS UI best practices.",
+      "description": "\"Use when swiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimization, and modern iOS/macOS UI best practices. Triggers on \\\"swiftui-patterns\\\", \\\"swiftui patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "swift-apple",
       "cost": "medium",
@@ -4463,7 +4463,7 @@
     {
       "id": "tdd-workflow",
       "name": "tdd-workflow",
-      "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+      "description": "\"Use when use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests. Triggers on \\\"tdd-workflow\\\", \\\"tdd workflow\\\", \\\"workflow\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -4475,7 +4475,7 @@
     {
       "id": "team-agent-orchestration",
       "name": "team-agent-orchestration",
-      "description": "\"Run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs.\"",
+      "description": "\"Use when run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs. Triggers on \\\"team-agent-orchestration\\\", \\\"team agent orchestration\\\", \\\"orchestration\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -4487,7 +4487,7 @@
     {
       "id": "team-builder",
       "name": "team-builder",
-      "description": "Interactive agent picker for composing and dispatching parallel teams",
+      "description": "\"Use when interactive agent picker for composing and dispatching parallel teams. Triggers on \\\"team-builder\\\", \\\"team builder\\\", \\\"builder\\\".\"",
       "origin": "ecc",
       "module": "agentic-patterns",
       "cost": "medium",
@@ -4739,7 +4739,7 @@
     {
       "id": "verification-loop",
       "name": "verification-loop",
-      "description": "\"A comprehensive verification system for Claude Code sessions.\"",
+      "description": "\"Use when a comprehensive verification system for Claude Code sessions. Triggers on \\\"verification-loop\\\", \\\"verification loop\\\", \\\"loop\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",
@@ -4775,7 +4775,7 @@
     {
       "id": "videodb",
       "name": "videodb",
-      "description": "See, Understand, Act on video and audio. See- ingest from local files, URLs, RTSP/live feeds, or live record desktop; return realtime context and playable stream links. Understand- extract frames, build visual/semantic/temporal indexes, and search moments with timestamps and auto-clips. Act- transcode and normalize (codec, fps, resolution, aspect ratio), perform timeline edits (subtitles, text/image overlays, branding, audio overlays, dubbing, translation), generate media assets (image, audio, video), and create real time alerts for events from live streams or desktop capture.",
+      "description": "\"Use when see, Understand, Act on video and audio. See- ingest from local files, URLs, RTSP/live feeds, or live record desktop; return realtime context and playable stream links. Understand- extract frames, build visual/semantic/temporal indexes, and search moments with timestamps and auto-clips. Act- trans... Triggers on \\\"videodb\\\".\"",
       "origin": "ecc",
       "module": "media-generation",
       "cost": "heavy",
@@ -4787,7 +4787,7 @@
     {
       "id": "visa-doc-translate",
       "name": "visa-doc-translate",
-      "description": "Translate visa application documents (images) to English and create a bilingual PDF with original and translation",
+      "description": "\"Use when translate visa application documents (images) to English and create a bilingual PDF with original and translation. Triggers on \\\"visa-doc-translate\\\", \\\"visa doc translate\\\", \\\"translate\\\".\"",
       "origin": "ecc",
       "module": "document-processing",
       "cost": "medium",
@@ -4799,7 +4799,7 @@
     {
       "id": "vite-patterns",
       "name": "vite-patterns",
-      "description": "Vite build tool patterns including config, plugins, HMR, env variables, proxy setup, SSR, library mode, dependency pre-bundling, and build optimization. Activate when working with vite.config.ts, Vite plugins, or Vite-based projects.",
+      "description": "\"Use when vite build tool patterns including config, plugins, HMR, env variables, proxy setup, SSR, library mode, dependency pre-bundling, and build optimization. Activate when working with vite.config.ts, Vite plugins, or Vite-based projects. Triggers on \\\"vite-patterns\\\", \\\"vite patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4823,7 +4823,7 @@
     {
       "id": "vue-patterns",
       "name": "vue-patterns",
-      "description": "Vue.js 3 Composition API patterns, component architecture, reactivity best practices, Pinia state management, Vue Router navigation, and Nuxt SSR patterns. Activates for Vue, Nuxt, Vite, or Pinia projects.",
+      "description": "\"Use when vue.js 3 Composition API patterns, component architecture, reactivity best practices, Pinia state management, Vue Router navigation, and Nuxt SSR patterns. Activates for Vue, Nuxt, Vite, or Pinia projects. Triggers on \\\"vue-patterns\\\", \\\"vue patterns\\\", \\\"patterns\\\".\"",
       "origin": "ecc",
       "module": "framework-language",
       "cost": "medium",
@@ -4859,7 +4859,7 @@
     {
       "id": "windows-desktop-e2e",
       "name": "windows-desktop-e2e",
-      "description": "E2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation.",
+      "description": "\"Use when e2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation. Triggers on \\\"windows-desktop-e2e\\\", \\\"windows desktop e2e\\\".\"",
       "origin": "ecc",
       "module": "workflow-quality",
       "cost": "medium",

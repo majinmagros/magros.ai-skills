@@ -1,6 +1,6 @@
 ---
 name: scientific-db-uspto-database
-description: USPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs.
+description: "Use when uSPTO patent and trademark data workflow for official record lookup, PatentSearch queries, TSDR checks, assignment data, and reproducible IP research logs. Triggers on \"scientific-db-uspto-database\", \"scientific db uspto database\", \"database\"."
 metadata:
   origin: community
 ---

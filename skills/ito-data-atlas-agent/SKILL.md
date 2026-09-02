@@ -1,6 +1,6 @@
 ---
 name: ito-data-atlas-agent
-description: Design source-grounded Data Atlas style agents for Itô basket research, market discovery, parameter drafting, and human-in-the-loop editing. Use for architecture and read-only workflow planning, not live order execution.
+description: "Use when design source-grounded Data Atlas style agents for Itô basket research, market discovery, parameter drafting, and human-in-the-loop editing. Use for architecture and read-only workflow planning, not live order execution. Triggers on \"ito-data-atlas-agent\", \"ito data atlas agent\", \"agent\"."
 metadata:
   origin: ECC
 ---

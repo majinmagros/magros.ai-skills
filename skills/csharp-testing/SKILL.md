@@ -1,6 +1,6 @@
 ---
 name: csharp-testing
-description: C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices.
+description: "Use when c# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices. Triggers on \"csharp-testing\", \"csharp testing\", \"testing\"."
 metadata:
   origin: ECC
 ---

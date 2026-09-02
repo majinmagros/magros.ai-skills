@@ -1,6 +1,6 @@
 ---
 name: visa-doc-translate
-description: Translate visa application documents (images) to English and create a bilingual PDF with original and translation
+description: "Use when translate visa application documents (images) to English and create a bilingual PDF with original and translation. Triggers on \"visa-doc-translate\", \"visa doc translate\", \"translate\"."
 ---
 
 You are helping translate visa application documents for visa applications.

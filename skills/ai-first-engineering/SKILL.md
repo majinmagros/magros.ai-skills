@@ -1,6 +1,6 @@
 ---
 name: ai-first-engineering
-description: Engineering operating model for teams where AI agents generate a large share of implementation output.
+description: "Use when engineering operating model for teams where AI agents generate a large share of implementation output. Triggers on \"ai-first-engineering\", \"ai first engineering\", \"engineering\"."
 metadata:
   origin: ECC
 ---

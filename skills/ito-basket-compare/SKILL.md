@@ -1,6 +1,6 @@
 ---
 name: ito-basket-compare
-description: Compare Itô prediction-market baskets against a user's knowledge base, portfolio notes, financial context, watchlist, or research thesis. Use for read-only basket comparison and gap analysis without investment advice or live trading.
+description: "Use when compare Itô prediction-market baskets against a user's knowledge base, portfolio notes, financial context, watchlist, or research thesis. Use for read-only basket comparison and gap analysis without investment advice or live trading. Triggers on \"ito-basket-compare\", \"ito basket compare\", \"compare\"."
 metadata:
   origin: ECC
 ---

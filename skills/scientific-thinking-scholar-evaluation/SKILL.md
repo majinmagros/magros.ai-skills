@@ -1,6 +1,6 @@
 ---
 name: scientific-thinking-scholar-evaluation
-description: Structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback.
+description: "Use when structured scholarly-work evaluation for papers, proposals, literature reviews, methods sections, evidence quality, citation support, and research-writing feedback. Triggers on \"scientific-thinking-scholar-evaluation\", \"scientific thinking scholar evaluation\", \"evaluation\"."
 metadata:
   origin: community
 ---

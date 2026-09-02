@@ -1,6 +1,6 @@
 ---
 name: model-reflection-tuning
-description: Pipeline reflection-tuning (auto-crítica 2 estágios) com validação reproduzível via HashHop. Gera datasets CoT→crítica→correção, treina modelos abertos, detecta benchmarks não reproduzíveis (ex.: Reflection 70B).
+description: "Use when pipeline reflection-tuning (auto-crítica 2 estágios) com validação reproduzível via HashHop. Gera datasets CoT→crítica→correção, treina modelos abertos, detecta benchmarks não reproduzíveis (ex.: Reflection 70B). Triggers on \"model-reflection-tuning\", \"model reflection tuning\", \"tuning\"."
 metadata:
   origin: ECC
   module: workflow-quality

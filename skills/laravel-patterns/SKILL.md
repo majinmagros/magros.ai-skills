@@ -1,6 +1,6 @@
 ---
 name: laravel-patterns
-description: Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.
+description: "Use when laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps. Triggers on \"laravel-patterns\", \"laravel patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

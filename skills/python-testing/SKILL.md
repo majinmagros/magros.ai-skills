@@ -1,6 +1,6 @@
 ---
 name: python-testing
-description: Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.
+description: "Use when python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements. Triggers on \"python-testing\", \"python testing\", \"testing\"."
 metadata:
   origin: ECC
 ---

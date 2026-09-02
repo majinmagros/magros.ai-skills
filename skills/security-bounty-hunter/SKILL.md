@@ -1,6 +1,6 @@
 ---
 name: security-bounty-hunter
-description: Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.
+description: "Use when hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings. Triggers on \"security-bounty-hunter\", \"security bounty hunter\", \"hunter\"."
 metadata:
   origin: ECC direct-port adaptation
 version: "1.0.0"

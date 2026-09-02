@@ -1,6 +1,6 @@
 ---
 name: safety-guard
-description: Use this skill to prevent destructive operations when working on production systems or running agents autonomously.
+description: "Use when use this skill to prevent destructive operations when working on production systems or running agents autonomously. Triggers on \"safety-guard\", \"safety guard\", \"guard\"."
 metadata:
   origin: ECC
 ---

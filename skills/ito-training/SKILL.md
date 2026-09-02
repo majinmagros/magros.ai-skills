@@ -1,6 +1,6 @@
 ---
 name: ito-training
-description: Run an ML training job on a completed Itô compute booking through the canonical Itô backend. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. Chains off a booking record; ECC implements no training stack of its own.
+description: "Use when run an ML training job on a completed Itô compute booking through the canonical Itô backend. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. Chains off a booking record; ECC implements no training stack... Triggers on \"ito-training\", \"ito training\", \"training\"."
 metadata:
   origin: ECC
 ---

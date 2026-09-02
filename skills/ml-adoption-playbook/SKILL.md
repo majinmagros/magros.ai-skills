@@ -1,6 +1,6 @@
 ---
 name: ml-adoption-playbook
-description: End-to-end methodology for AI agents and software engineers to add machine learning algorithms to existing non-ML codebases. Covers problem framing, data readiness, architectural decoupling, and baseline model integration.
+description: "Use when end-to-end methodology for AI agents and software engineers to add machine learning algorithms to existing non-ML codebases. Covers problem framing, data readiness, architectural decoupling, and baseline model integration. Triggers on \"ml-adoption-playbook\", \"ml adoption playbook\", \"playbook\"."
 origin: ECC
 ---
 

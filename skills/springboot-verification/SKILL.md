@@ -1,6 +1,6 @@
 ---
 name: springboot-verification
-description: "Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR."
+description: "Use when verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR. Triggers on \"springboot-verification\", \"springboot verification\", \"verification\"."
 metadata:
   origin: ECC
 ---

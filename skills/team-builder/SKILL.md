@@ -1,6 +1,6 @@
 ---
 name: team-builder
-description: Interactive agent picker for composing and dispatching parallel teams
+description: "Use when interactive agent picker for composing and dispatching parallel teams. Triggers on \"team-builder\", \"team builder\", \"builder\"."
 metadata:
   origin: community
 ---

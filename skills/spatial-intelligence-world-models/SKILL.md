@@ -1,6 +1,6 @@
 ---
 name: spatial-intelligence-world-models
-description: Interface for World Labs Marble/LWM APIs (3D scene generation, spatial reasoning, robotics integration). Benchmarks spatial tasks (object permanence, physics prediction, affordance detection). Integrates with robotics (robotic arm door opening, sandwich making per Fei-Fei Li/World Labs demos). Follows Agent Skills pattern: frontmatter, clear triggers, 3 layers (direction, blueprints, solutions).
+description: "Use when interface for World Labs Marble/LWM APIs (3D scene generation, spatial reasoning, robotics integration). Benchmarks spatial tasks (object permanence, physics prediction, affordance detection). Integrates with robotics (roboti... Triggers on \"spatial-intelligence-world-models\", \"spatial intelligence world models\", \"models\"."
 metadata:
   origin: ECC
 tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch

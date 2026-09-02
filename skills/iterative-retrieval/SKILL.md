@@ -1,6 +1,6 @@
 ---
 name: iterative-retrieval
-description: Pattern for progressively refining context retrieval to solve the subagent context problem
+description: "Use when pattern for progressively refining context retrieval to solve the subagent context problem. Triggers on \"iterative-retrieval\", \"iterative retrieval\", \"retrieval\"."
 metadata:
   origin: ECC
 ---

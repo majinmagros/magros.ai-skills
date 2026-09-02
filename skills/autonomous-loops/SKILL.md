@@ -1,6 +1,6 @@
 ---
 name: autonomous-loops
-description: "DEPRECATED — use continuous-agent-loop. Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems."
+description: "Use when dEPRECATED — use continuous-agent-loop. Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems. Triggers on \"autonomous-loops\", \"autonomous loops\", \"loops\"."
 metadata:
   origin: ECC
   status: deprecated

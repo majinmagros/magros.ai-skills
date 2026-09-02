@@ -1,6 +1,6 @@
 ---
 name: n8n-agentic-flows
-description: Use para orquestrar agentes autônomos dentro do N8N 2.0 usando MCP, nós de IA (Gemini/Claude), guardrails, e automações visuais com triggers de webhooks/GitHub. Triggers em "n8n", "automação visual", "nós de agentes", "guardrails n8n", "MCP no n8n". Foca em separar o nó de automação (N8N) do nó de inteligência (Agente de IA via MCP), aplicando a separação entre orquestração visual e lógica de raciocínio.
+description: "Use when use para orquestrar agentes autônomos dentro do N8N 2.0 usando MCP, nós de IA (Gemini/Claude), guardrails, e automações visuais com triggers de webhooks/GitHub. Triggers em \"n8n\", \"automação visual\", \"nós de agentes\", \"guardrails n8n\", \"MCP no n8n\". Foca em... Triggers on \"n8n-agentic-flows\", \"n8n agentic flows\", \"flows\"."
 ---
 
 # Skill: N8N 2.0 Agentic Flows — Orquestração Visual com MCP

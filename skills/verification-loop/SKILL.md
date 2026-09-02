@@ -1,6 +1,6 @@
 ---
 name: verification-loop
-description: "A comprehensive verification system for Claude Code sessions."
+description: "Use when a comprehensive verification system for Claude Code sessions. Triggers on \"verification-loop\", \"verification loop\", \"loop\"."
 license: MIT
 metadata:
   origin: ECC

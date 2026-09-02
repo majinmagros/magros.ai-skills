@@ -1,6 +1,6 @@
 ---
 name: strategic-compact
-description: Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.
+description: "Use when suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction. Triggers on \"strategic-compact\", \"strategic compact\", \"compact\"."
 metadata:
   origin: ECC
 ---

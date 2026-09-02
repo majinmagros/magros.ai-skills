@@ -1,6 +1,6 @@
 ---
 name: continuous-agent-loop
-description: Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.
+description: "Use when patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls. Triggers on \"continuous-agent-loop\", \"continuous agent loop\", \"loop\"."
 metadata:
   origin: ECC
 ---

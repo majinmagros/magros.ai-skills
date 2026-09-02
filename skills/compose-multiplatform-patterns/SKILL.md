@@ -1,6 +1,6 @@
 ---
 name: compose-multiplatform-patterns
-description: Compose Multiplatform and Jetpack Compose patterns for KMP projects — state management, navigation, theming, performance, and platform-specific UI.
+description: "Use when compose Multiplatform and Jetpack Compose patterns for KMP projects — state management, navigation, theming, performance, and platform-specific UI. Triggers on \"compose-multiplatform-patterns\", \"compose multiplatform patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

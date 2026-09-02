@@ -1,6 +1,6 @@
 ---
 name: network-bgp-diagnostics
-description: Diagnostics-only BGP troubleshooting patterns for neighbor state, route exchange, prefix policy, AS path inspection, and safe evidence collection.
+description: "Use when diagnostics-only BGP troubleshooting patterns for neighbor state, route exchange, prefix policy, AS path inspection, and safe evidence collection. Triggers on \"network-bgp-diagnostics\", \"network bgp diagnostics\", \"diagnostics\"."
 metadata:
   origin: community
 ---

@@ -1,6 +1,6 @@
 ---
 name: growth-log
-description: "Use after a complex task, failure, or when reviewing what was learned. Teaches how to write growth logs that extract reusable patterns — not diary entries."
+description: "Use when use after a complex task, failure, or when reviewing what was learned. Teaches how to write growth logs that extract reusable patterns — not diary entries. Triggers on \"growth-log\", \"growth log\"."
 version: 1.1.0
 metadata:
   origin: ECC

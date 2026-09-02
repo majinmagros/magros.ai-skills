@@ -1,6 +1,6 @@
 ---
 name: retomar-sessao
-description: Recupera o historico de uma sessao do opencode travada/perdida e exporta para um arquivo markdown de retomada. Triggers em "perdi a sessao", "janela travou", "recupera historico", "retoma a tarefa", "meu contexto sumiu", "opencode.db". Lê o SQLite de sessoes, lista as recentes e exporta a conversa completa (texto, raciocinio e ferramentas) para %USERPROFILE%\projetos\retomadas\.
+description: "Use when recupera o historico de uma sessao do opencode travada/perdida e exporta para um arquivo markdown de retomada. Triggers em \"perdi a sessao\", \"janela travou\", \"recupera historico\", \"retoma a tarefa\", \"meu contexto sumiu\", \"opencode.db\". Lê o SQLite de sessoes, lis... Triggers on \"retomar-sessao\", \"retomar sessao\", \"sessao\"."
 ---
 
 # Retomar Sessao Perdida

@@ -1,6 +1,6 @@
 ---
 name: regex-vs-llm-structured-text
-description: Decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases.
+description: "Use when decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases. Triggers on \"regex-vs-llm-structured-text\", \"regex vs llm structured text\", \"text\"."
 metadata:
   origin: ECC
 ---
