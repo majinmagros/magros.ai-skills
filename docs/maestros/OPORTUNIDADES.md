@@ -1,8 +1,8 @@
 ﻿# Oportunidades do YouTube — Relatório de Análise
 
-Data: 2026-09-03  
+Data: 2026-09-03 (atualizado 2026-09-04 — Batch 8: +10 vídeos)  
 Canais analisados: IndyDevDan, ColeMedin, SimonScrapes, AI Foundations, AI Jason, Maestros da IA, Attekita Dev, Sujeito Programador, AI Revolution PT, Inteligência Mil Grau, AI Code King, Claude Oficial, Nate Herk, Anwar Hermuche, **Gustavo Campelo (@gucampelo)**, **Joy Dev Studio (@joydevstudio)**, **Luciana Papini (@LucianaPapini)**, **Karine Lago (@KarineLago)**, **Pavan Adhav (@pavanadhav)**  
-Transcrições baixadas e analisadas: **78 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
+Transcrições baixadas e analisadas: **88 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
 
 ---
 
@@ -245,3 +245,43 @@ Transcrições baixadas e analisadas: **78 vídeos** (marcados em `ANALISADOS.js
 | 76 | **RAG Explained: How to Give Your AI Agents Knowledge** (`SWXa7z_64-g` — attekitadev) | RAG não é só vector DB, arquitetura RAG estruturada, simplificação conceitual | ✅ **Analisado 2026-09-03** | **Coberto** por `rag-patterns` / `knowledge-ops`; gap leve `rag-concept-simplifier` |
 | 77 | **China foi longe demais com os vídeos de IA — ficou surreal!** (`DUKHqDVvvSU` — airevolutionx_pt) | Vídeo IA surreal: 135min gerado em 2-3 meses por 1 pessoa em laptop vs Odisseia $1.4B, geração vídeo longa duração | ⚠️ **Notícia/Exemplo** | Gap `ai-longform-video` — parcial `video-editing`/`vox-style-video` |
 | 78 | **Novo chip de IA da OpenAI chega com tudo e supera a NVIDIA** (`XZPQCgLtgAU` — airevolutionx_pt) | Chip OpenAI 100x perf/W vs GB300, asterisk 104x, Fable 5.1 shadow release | ✅ **Analisado 2026-09-03** | **Enrich** `local-ai-hardware` + `llm-leaderboard-tracker` com métricas chip |
+
+---
+
+## Nova Análise — Batch 8 (2026-09-04) — 10 vídeos de 03-04/09 (transcrições em `C:\Users\magro\projetos\yt`)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 79 | **AI Software Factories Are the Next Big Thing (And I'm Building You One)** (`DcLj_SO8JNk` — ColeMedin) | PRD-in → código deployado sem humano (dark factory nível 5, Archon workflows, DynaChat, open-source factory) | ✅ **Analisado 2026-09-04** | **Coberto** por `fusion-harness` + `autonomous-loops`/`continuous-agent-loop` — **nenhum gap** |
+| 80 | **5 Things AI Will NEVER Be Able to Do No Matter How Smart It Gets** (`pBfRhdqqm_4` — Celine Xu) | 5 blind spots: confiança≠correção, sem fact-check próprio, viés oculto, decisão humana, média≠verdade (sem tools) | ⚠️ **Notícia/Análise** | Parcial: `anti-hallucination` + `search-hallucination-detection` + `agent-guardrails`; ensaio sem ferramenta — sem gap |
+| 81 | **The bare minimum to sell websites (even as a beginner)** (`Jhro81qrql4` — Sujeito Programador) | Mínimo freelance: base HTML/CSS/JS + SEO/deploy Vercel, landing R$500-4k, prospecção via Google Maps com auditoria de site automatizável | ✅ **NOVO** | Parcial: `lead-intelligence` (só Exa/X/LinkedIn, sem Maps); **Gap**: `prospeccao-maps-freelance` |
+| 82 | **I've had early access to Astra... it's INSANE** (`ZTgFyP0PZJo` — matthew_berman) | Demos Astra 1-prompt (Fall Guys, cidade ASCII, SimCity 5 dias via /goal) + browser/computer-use (eBay, Excalidraw auto-gravado) + eval Box AI | ✅ **Analisado 2026-09-04** | **Coberto** por `agent-browser`, `autonomous-agent-harness`, `browser-qa`/`claude-chrome-automation`, `workflows` (/goal) — sem gap |
+| 83 | **ASTRA IS HERE (GPT-6 RELEASED)** (`xdXLzFzxA9Q` — matthew_berman) | Lançamento GPT-6 Astra (benchmarks saturados, preço $10/$50 + fast mode, alinhamento pós-HF hack) + publish instantâneo via agente | ✅ **Analisado 2026-09-04** | **Coberto** por `cost-aware-llm-pipeline`, `roteamento-modelos-baratos`/`claude-model-router`, `llm-leaderboard-tracker`/`agent-eval`, `agent-guardrails` — sem gap |
+| 84 | **GOOGLE IS BACK! (Gemini 3.8 Flash)** (`2uVH2WUYb5E` — matthew_berman) | Flash barato custo-por-task (DeepSWE≈Opus), melhor-em-domínio (Harvey legal #1, HLE #1), Flash Cyber/Fair Wind + demos | ✅ **Analisado 2026-09-04** | **Coberto** por `cost-aware-llm-pipeline`, `roteamento-modelos-baratos`/`claude-model-router`, `llm-leaderboard-tracker`/`agent-eval` — sem gap |
+| 85 | **Fable 5.1 FINALLY puts an end to generic AI websites (AI Slop is a thing of the past)** (`qrRYcK4cEKQ` — maestrosdaia) | Fable 5.1 proativo gera sites/dashboards/jogo/e-commerce funcionais com 1 parágrafo via maestro/chief-of-staff + heads/workers + Unlazy/capricho | ✅ **Analisado 2026-09-04** | **Coberto** por `unlazy` + `capricho` + `claude-model-router` + `agent-eval` + `frontend-design-direction` + `cloud-design-prototyping` — sem gap |
+| 86 | **Apple Is Now Leading the Future of AI (Yes, Apple)** (`9jq4Czbbxu4` — maestrosdaia) | Apple hardware consumidor para IA local (memória unificada+banda, 512GB/1.2TB/s supera DGX Spark) + tese IA local privada com open-weights + quantização/MoE/Colibri | ✅ **Analisado 2026-09-04** | **Coberto** por `local-ai-hardware` + `local-llm-efficiency` + `roteamento-modelos-baratos` + `engenharia-de-grafos` — sem gap |
+| 87 | **Fable 5.1 acabou de colocar a Anthropic de volta ao topo** (`7sy8PHBJU8A` — airevolutionx_pt) | Agentes longa-duração (38h Ramp, browser-use 82%) com prompt-cache -75% e roteamento Opus barato/Fable difícil | ✅ **Analisado 2026-09-04** | **Coberto** por `cost-aware-llm-pipeline`, `claude-model-router`, `agent-browser`, `autonomous-agent-harness` — sem gap |
+| 88 | **OpenAI acaba de confirmar: AGI está chegando ainda este ano** (`VZ54DeDOa2M` — airevolutionx_pt) | Claim AGI até fim/2026 via Astra não lançado/não verificado + Codex modo persistente + escape sandbox Hugging Face | ⚠️ **Notícia/Análise** | Não actionable (Astra sem docs/benchmark externo); parte acionável coberta por `autonomous-agent-harness`, `routines`, `agent-guardrails` |
+
+### Gap novo do Batch 8 (adicionar à ALTA PRIORIDADE)
+
+| Oportunidade | Descrição | Skill(s) Relacionada(s) | Ação Sugerida |
+|---|---|---|---|
+| **prospeccao-maps-freelance** | Prospecção freelancer via Google Maps: buscar negócios locais sem site/site ruim → auditoria automatizada (SEO, performance, mobile) → proposta; pricing landing R$500-4k + deploy Vercel | `lead-intelligence`, `deployment-patterns` | **Criar skill `prospeccao-maps-freelance`** — validar Google Maps Places API, Search Console API, Vercel docs |
+
+### Triagem leve — 13 vídeos de 03-04/09 sem transcrição (baixar quando o 429 aliviar)
+
+| Prioridade | Vídeo (Canal) | Por que |
+|---|---|---|
+| 🔴 Alta | **Claude and Mobile Robotics... ESP32 Cam** (`ZYNeNfflBZU` — inteligenciamilgrau, match filtro `claude`) | Hardware/IoT + Claude — cruza com gap `mcp-hardware-arduino` |
+| 🔴 Alta | **How the Claude Code team uses Claude Code** (`S-sYlFiGFv8` — @claude, match filtro `claude`) | Dogfooding oficial — padrões de uso real |
+| 🔴 Alta | **Find Security Vulnerabilities in Your Project** (`h54usfCmPMk` — @gucampelo) | Security — cruza com `vibe-security-scanner` |
+| 🟡 Média | **How Anthropic ACTUALLY Prompts Fable 5.1** (`FBVNS1l5Vb8` — @nateherk) | Prompting oficial — enrich `claude-model-router`/evals |
+| 🟡 Média | **Fable 5.1 (Fully Tested & Real cost comparisons)** (`UZ2PRAjEPRY` — @aicodeking) | Custo real — enrich `cost-aware-llm-pipeline` |
+| 🟡 Média | **Fable 5.1 FINALLY Kills AI Website Slop** (`FFWtxjvW2ts` — @nateherk) | Contraponto ao #85 |
+| 🟡 Média | **Fable 5.1 Quebrou Todos os RECORDES** (`UxFSZMYZBIk` — @maestrosdaia) | ⚠️ Sem legenda ainda (tentado 04/09) — retentar depois |
+| 🟢 Baixa | **NEW GPT 6 Astra...** (`Oitvsim4JX8`), **NEW Gemini 3.8...** (`uLgVMS5NZMg`), **NEW Fable and Mythos 5.1...** (`8KiaZNChbyg` — inteligenciamilgrau) | Notícias de modelo — cobertas pelo Batch 8 (#82-84) |
+| 🟢 Baixa | **AI News in 5 Mins: GPT-6 Astra** (`NbUTIFEEXLY` — @nateherk), **Muse Spark 1.3 & Gemini 3.8 Flash** (`WZDtEAFHj7k` — @aicodeking) | Roundup de notícias |
+| 🟢 Baixa | **Arquitetura Transformer EXPLICADA** (`5mXAGu0Mu20` — @anwarhermuche) | Educacional, evergreen — sem urgência |
+
+> **Nota coleta 2026-09-04**: `catalog-all` atualizou 15/25 canais (timeout no `@claude` — 10 catálogos seguem de 03/09). Downloads em lotes de 3-5 com fallback de idioma; 429 forte mas contornado. Apenas 2/23 com `matches_filtro=true` — considerar inverter o funil (triagem leve por título/descrição antes do download) e baixar 1 idioma só.
