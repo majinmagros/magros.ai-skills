@@ -4,29 +4,29 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 88.2/100 (boa — v1 83.9 → 87.8 rodada 1 → 88.2 lote 2)
+- **Media geral:** 88.7/100 (boa — v1 83.9 → 88.2 lote 2 → 88.7 lote 3)
 - **Pastas sem SKILL.md:** 0 (ok)
 - **Description sem gatilho quando usar:** 0 / 416 (0%). **Descoberta resolvida.**
 - **Description com literal block `|:** 0 (ok)
 - **Name != pasta:** 0 (ok)
-- **SKILL.md >200 linhas:** 160 (38.5%) — era 168. -8 fatiamentos.
-- **SKILL.md >500 linhas:** 39 (9.4%) — era 47. -8.
-- **Com progressive disclosure (mencao references/scripts no corpo):** 81 / 416 (19.5%). Pastas fisicas `references/`+`scripts/`: 41 / 416 (9.9%, +8 neste turno).
-- **Distribuicao por faixa:** 40-59:0 | 60-79:108 | 80-99:165 | 100:143 (soma 416)
-- **Evolucao vs v1:** faixa fraca 40-59 colapsou 29→0; nota 100 subiu 101→143 (+42); >500 caiu 47→39.
-- **Conclusao:** fatiamento em ritmo (8 monolitos → 100 pts). Restam 39 mega-monolitos; clusters template com exclusividade. Proximo: lote 3 (kotlin-testing, python-testing, golang-testing?) e gigantes manuais.
+- **SKILL.md >200 linhas:** 154 (37.0%) — era 168. -14 fatiamentos.
+- **SKILL.md >500 linhas:** 33 (7.9%) — era 47. -14.
+- **Com progressive disclosure (mencao references/scripts no corpo):** 87 / 416 (20.9%). Pastas fisicas `references/`+`scripts/`: 47 / 416 (11.3%, +6 lote 3).
+- **Distribuicao por faixa:** 40-59:0 | 60-79:102 | 80-99:165 | 100:149 (soma 416)
+- **Evolucao vs v1:** faixa fraca 40-59 colapsou 29→0; nota 100 subiu 101→149 (+48); >500 caiu 47→33.
+- **Conclusao:** fatiamento em ritmo (14 monolitos → 100 pts). Restam 33 mega-monolitos. Proximo: lote 4 (quarkus/laravel/springboot-tdd, django-security) e gigantes manuais.
 
 ## Evolucao desde v1 (o que mudou)
 
 | Item | v1 (02/09, 409) | v2 (05/09, 416) | Delta |
 |---|---|---|---|
-| Media | 83.9 | 88.2 | +4.3 (+0.4 lote 2) |
+| Media | 83.9 | 88.7 | +4.8 (+0.5 lote 3) |
 | Sem gatilho | 46 | 0 | -46 (dashboard corrigida) |
 | Name mismatch | 6 | 0 | -6 |
-| Nota 100 | 101 | 143 | +42 (+6 lote 2) |
+| Nota 100 | 101 | 149 | +48 (+6 lote 3) |
 | Faixa 40-59 | 29 | 0 | -29 |
-| >200 linhas | 168 | 160 | -8 fatiamentos |
-| >500 linhas | 47 | 39 | -8 |
+| >200 linhas | 168 | 154 | -14 fatiamentos |
+| >500 linhas | 47 | 33 | -14 |
 | Piores exemplos | `universal-portability` 39, 8 skills com 45 | pior agora e 51 (`skill-execution-dashboard`) | cauda critica eliminada |
 | Ex-fracas que subiram | — | `universal-portability` 39→79, `claude-md-auditor` 45→70, `graph-engineering-patterns` 45→70, `threejs-voxel-block-system` 45→70, `frontend-a11y` 53→73, `prompt-optimizer` 53→73 | gatilho adicionado, mas tamanho trava em ~70 |
 
@@ -53,34 +53,34 @@
 | 2 | **70** | 949 | `laravel-security` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
 | 3 | **70** | 889 | `windows-desktop-e2e` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
 | 4 | **70** | 856 | `threejs-responsive-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 5 | **70** | 826 | `kotlin-testing` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 6 | **70** | 821 | `generating-python-installer` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 7 | **70** | 818 | `graph-engineering-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 8 | **70** | 818 | `python-testing` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 9 | **70** | 813 | `quarkus-tdd` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 10 | **70** | 804 | `threejs-config-constants` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 11 | **70** | 770 | `data-scraper-agent` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 12 | **70** | 757 | `kubernetes-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 13 | **70** | 736 | `django-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 14 | **70** | 731 | `django-tdd` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 15 | **70** | 725 | `cpp-coding-standards` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 16 | **70** | 724 | `quarkus-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 17 | **70** | 722 | `golang-testing` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 18 | **70** | 721 | `kotlin-exposed-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 19 | **70** | 717 | `git-workflow` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 20 | **70** | 691 | `kotlin-ktor-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 21 | **70** | 690 | `claude-md-auditor` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 22 | **70** | 676 | `laravel-tdd` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 23 | **70** | 661 | `metahuman-identity-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 24 | **70** | 658 | `frontend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 25 | **70** | 645 | `django-security` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 26 | **70** | 624 | `hyperledger-fabric-generator` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 27 | **70** | 614 | `autonomous-loops` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas |
-| 28 | **70** | 606 | `threejs-deploy-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 29 | **70** | 597 | `motion-advanced` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 30 | **70** | 584 | `tdd-workflow` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas |
+| 5 | **70** | 821 | `generating-python-installer` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 6 | **70** | 818 | `graph-engineering-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 7 | **70** | 813 | `quarkus-tdd` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 8 | **70** | 804 | `threejs-config-constants` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 9 | **70** | 770 | `data-scraper-agent` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 10 | **70** | 757 | `kubernetes-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 11 | **70** | 725 | `cpp-coding-standards` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 12 | **70** | 721 | `kotlin-exposed-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 13 | **70** | 717 | `git-workflow` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 14 | **70** | 691 | `kotlin-ktor-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 15 | **70** | 690 | `claude-md-auditor` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 16 | **70** | 676 | `laravel-tdd` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 17 | **70** | 661 | `metahuman-identity-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 18 | **70** | 658 | `frontend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 19 | **70** | 645 | `django-security` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 20 | **70** | 624 | `hyperledger-fabric-generator` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
+| 21 | **70** | 614 | `autonomous-loops` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas |
+| 22 | **70** | 606 | `threejs-deploy-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
+| 23 | **70** | 597 | `motion-advanced` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 24 | **70** | 584 | `tdd-workflow` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas |
+| 25 | **70** | 577 | `motion-ui` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 26 | **70** | 576 | `react-performance` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 27 | **70** | 565 | `dart-flutter-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 28 | **70** | 563 | `backend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 29 | **70** | 552 | `coding-standards` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 30 | **70** | 534 | `docker-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
 
-> Correcao de maior valor = a unica mudanca que mais aumenta score/impacto. Lote 2 removeu do Top 30: `python-patterns`, `kotlin-patterns`, `golang-patterns` (fatiados p/ 100), `perl-patterns`, `perl-security` (fatiados p/ 100).
+> Correcao de maior valor = a unica mudanca que mais aumenta score/impacto. Lote 3 removeu do Top 30: `kotlin-testing`, `python-testing`, `golang-testing`, `django-patterns`, `django-tdd`, `quarkus-patterns` (fatiados p/ 100).
 
 ## Amostra do Top 15 Melhores (referencia de qualidade)
 
@@ -136,7 +136,7 @@ Outras 100pts (amostra): `perl-patterns`, `perl-security`, `golang-patterns`, `p
 ### Faixa 40-59 (Critica/Fraca - 0 skills)
 Faixa zerada nesta rodada (era 29 no v1). Ultima remanescente `skill-execution-dashboard` corrigida 51→100.
 
-### Faixa 60-79 (Regular - 108 skills)
+### Faixa 60-79 (Regular - 102 skills)
 Amostra: `docker-patterns`(70, ganhou Quando Ativar — falta fatiar 534 linhas), `fastapi-patterns`(70, idem 528), `flutter-dart-code-review`(73), `mysql-patterns`(73, `## Activation`→`## When to Activate`), `threejs-voxel-block-system`(70), `laravel-security`(70), `windows-desktop-e2e`(70) ... ver JSON para lista completa. Perfil tipico: gatilho OK, mas >350 linhas sem disclosure.
 
 ### Faixa 80-99 (Boa - 165 skills) & 100 (Excelente - 134 skills)
@@ -148,9 +148,9 @@ Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79
 - [x] Triggers em 189 descriptions, literal blocks, pastas vazias, name mismatch (v1→v2)
 - [x] `skill-execution-dashboard` — frontmatter + gatilhos + Quando usar/NAO usar + exemplo (51→100, esta rodada). Pendencia: criar `scripts/dashboard_tracker.js` e `docs/EXECUTION-DASHBOARD.md` referenciados (marcados como planejados no SKILL.md).
 
-### Fase 2 — Fatiamento (em andamento: 8/47 concluidos)
-0. [x] **Concluidos (70→100):** `rust-patterns` (500→84, 11 refs), `rust-testing` (501→118, 12 refs), `perl-patterns` (505→~95, 8 refs), `perl-security` (504→~115, 8 refs), `security-review` (504→~70, 5 refs), `golang-patterns` (676→~100, 8 refs), `python-patterns` (751→~120, 11 refs), `kotlin-patterns` (712→~150, 9 refs). Metodo: script de split por faixas + SKILL.md com indice + exemplo + quick reference. Scripts em `C:\Users\magro\AppData\Local\Temp\opencode\slice_*.py`.
-1. **Restam 39 mega-monolitos >500 linhas** — proximo lote mecanico: `kotlin-testing` (826), `python-testing` (818), `golang-testing` (722), `django-patterns` (736), `django-tdd` (731), `quarkus-patterns` (724).
+### Fase 2 — Fatiamento (em andamento: 14/47 concluidos)
+0. [x] **Concluidos (70→100):** `rust-patterns` (500→84, 11 refs), `rust-testing` (501→118, 12 refs), `perl-patterns` (505→~95, 8 refs), `perl-security` (504→~115, 8 refs), `security-review` (504→~70, 5 refs), `golang-patterns` (676→~100, 8 refs), `python-patterns` (751→~120, 11 refs), `kotlin-patterns` (712→~150, 9 refs), `kotlin-testing` (825→130, 6 refs), `python-testing` (817→129, 10 refs), `golang-testing` (721→120, 5 refs), `django-patterns` (735→72, 6 refs), `django-tdd` (730→103, 4 refs), `quarkus-patterns` (723→127, 5 refs). Metodo: script de split por faixas + SKILL.md com indice + exemplo + quick reference. Scripts em `C:\Users\magro\AppData\Local\Temp\opencode\slice_*.py`.
+1. **Restam 33 mega-monolitos >500 linhas** — proximo lote mecanico: `quarkus-tdd` (813), `laravel-tdd` (676), `django-security` (645), `springboot-tdd`, `springboot-patterns`, `quarkus-security`.
 2. **Depois os gigantes manuais:** threejs-voxel-block-system (1290), laravel-security (949), windows-desktop-e2e (889) — exigem leitura integral e quebra em 2-4 skills.
 3. **Na sequencia:** 37 skills 351-500 + 84 skills 201-350 — disclosure progressivo. Meta: 160→<50 skills >200 linhas.
 
@@ -171,10 +171,11 @@ Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79
 | 6 | `rust-testing` | 70, 501 linhas monolito | 100, 118 linhas + 12 refs | idem |
 | 7 | `perl-patterns`, `perl-security`, `security-review` | 70, ~504 monolitos | 100 (lote 2) | split mecanico + SKILL.md indice |
 | 8 | `golang-patterns` (676), `python-patterns` (751), `kotlin-patterns` (712) | 70 monolitos | 100 (lote 2) | idem |
-| Efeito global | media 87.5, 1 sem gatilho, 168 >200, 47 >500, 134×100 | media 88.2, 0 sem gatilho, 160 >200, 39 >500, 143×100 | — |
+| 9 | `kotlin-testing` (825), `python-testing` (817), `golang-testing` (721), `django-patterns` (735), `django-tdd` (730), `quarkus-patterns` (723) | 70 monolitos | 100 (lote 3) | idem |
+| Efeito global | media 87.5, 1 sem gatilho, 168 >200, 47 >500, 134×100 | media 88.7, 0 sem gatilho, 154 >200, 33 >500, 149×100 | — |
 
 ### Fase 4 — Maturidade (continuo)
-- **Nivel atual estimado:** 2-3 (skill propria -> biblioteca) para maioria; 143 skills em padrao premium (100 pts).
+- **Nivel atual estimado:** 2-3 (skill propria -> biblioteca) para maioria; 149 skills em padrao premium (100 pts).
 - **Proximo nivel:** 5 (evals/A-B) — criar evals de ativacao: medir taxa de trigger correto vs falso positivo, antes/depois do fatiamento.
 - **CI:** travar regressao — validar em `scripts/ci/validate-skills.js`: frontmatter obrigatorio, `Use when|Use quando` na description, `name==pasta`, `description: >` (nao `|`), limite 200 linhas com excecao se tiver references/.
 
@@ -196,7 +197,7 @@ Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79
 - **Limitacao:** clareza semantica real exige leitura humana; heuristica de headers/exemplos e proxy. Jaccard em descriptions e triagem, nao prova de duplicata.
 - **Arquivos:** `skills/*/SKILL.md` (416 pastas). Backup do v1 em `C:\Users\magro\AppData\Local\Temp\opencode\auditoria-skills-2026-09-02.bak.*`.
 - **Reproducibilidade:** scripts temp em `C:\Users\magro\AppData\Local\Temp\opencode\audit_calc.py` (score), `audit_dup.py` (clusters+Jaccard), `audit_tables.py` (tabelas); `auditoria-skills.json` ordenado pior→melhor.
-- **Distribuicao de linhas:** <=200:256 (61.5%) | 201-350:84 | 351-500:37 | >500:39.
+- **Distribuicao de linhas:** <=200:262 (63.0%) | 201-350:84 | 351-500:37 | >500:33.
 
 ---
 *Nota e meio, nao fim: objetivo e 1 correcao acionavel por skill. Fase 1 concluida — comece pelo `skill-execution-dashboard` (15 min) e depois pelo maior monolito `threejs-voxel-block-system` (1290 linhas).*

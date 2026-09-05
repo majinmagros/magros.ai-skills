@@ -42,16 +42,6 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "kotlin-testing",
-    "score": 70,
-    "lines": 826,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "generating-python-installer",
     "score": 70,
     "lines": 821,
@@ -68,16 +58,6 @@
     "lines": 818,
     "reasons": [
       "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "python-testing",
-    "score": 70,
-    "lines": 818,
-    "reasons": [
       ">500 linhas",
       "sem disclosure"
     ],
@@ -126,49 +106,9 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "django-patterns",
-    "score": 70,
-    "lines": 736,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "django-tdd",
-    "score": 70,
-    "lines": 731,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "cpp-coding-standards",
     "score": 70,
     "lines": 725,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "quarkus-patterns",
-    "score": 70,
-    "lines": 724,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "golang-testing",
-    "score": 70,
-    "lines": 722,
     "reasons": [
       ">500 linhas",
       "sem disclosure"
@@ -3482,6 +3422,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "kotlin-testing",
+    "score": 100,
+    "lines": 130,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "verification-loop",
     "score": 100,
     "lines": 130,
@@ -3509,9 +3458,27 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "python-testing",
+    "score": 100,
+    "lines": 129,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "context-ledger",
     "score": 100,
     "lines": 128,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "quarkus-patterns",
+    "score": 100,
+    "lines": 127,
     "reasons": [
       "desc longa"
     ],
@@ -3582,6 +3549,15 @@
   },
   {
     "name": "browser-qa",
+    "score": 100,
+    "lines": 120,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "golang-testing",
     "score": 100,
     "lines": 120,
     "reasons": [
@@ -3712,6 +3688,15 @@
     "lines": 103,
     "reasons": [
       "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "django-tdd",
+    "score": 100,
+    "lines": 103,
+    "reasons": [
+      "ok"
     ],
     "fix": "Manter como referencia de qualidade"
   },
@@ -3926,6 +3911,15 @@
     "name": "capricho",
     "score": 100,
     "lines": 74,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "django-patterns",
+    "score": 100,
+    "lines": 72,
     "reasons": [
       "ok"
     ],
