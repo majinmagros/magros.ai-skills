@@ -1,6 +1,6 @@
 ---
 name: dotnet-patterns
-description: "Use when idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications. Triggers on \"dotnet-patterns\", \"dotnet patterns\", \"patterns\"."
+description: "Use when idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications. Only for C#/.NET — not for other languages. Triggers on \"dotnet-patterns\", \"dotnet patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

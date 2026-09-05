@@ -7,6 +7,19 @@ description: Docker and Docker Compose patterns for local development, hardened 
 
 Docker and Docker Compose best practices for containerized development.
 
+## When to Activate
+
+- Creating or reviewing Dockerfiles and Compose services
+- Testing installer harnesses across Linux distributions
+- Configuring container networking, volumes, or multi-service orchestration
+- Hardening containers (non-root, secrets, image scanning)
+- Planning native macOS and Windows validation of containerized apps
+
+## When NOT to Use
+
+- Kubernetes manifests/Helm (use `kubernetes-patterns`)
+- CI/CD pipeline definitions (use `deployment-patterns`)
+
 ## Docker Compose for Local Development
 
 ### Standard Web App Stack

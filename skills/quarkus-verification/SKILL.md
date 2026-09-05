@@ -1,6 +1,6 @@
 ---
 name: quarkus-verification
-description: "Use when verification loop for Quarkus projects: build, static analysis, tests with coverage, security scans, native compilation, and diff review before release or PR. Triggers on \"quarkus-verification\", \"quarkus verification\", \"verification\"."
+description: "Use when verification loop for Quarkus projects: build, static analysis, tests with coverage, security scans, native compilation, and diff review before release or PR. Only for Quarkus — not for other stacks. Triggers on \"quarkus-verification\", \"quarkus verification\", \"verification\"."
 metadata:
   origin: ECC
 ---

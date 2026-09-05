@@ -1,6 +1,6 @@
 ---
 name: golang-patterns
-description: "Use when idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications. Triggers on \"golang-patterns\", \"golang patterns\", \"patterns\"."
+description: "Use when idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications. Only for Go — not for other languages. Triggers on \"golang-patterns\", \"golang patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

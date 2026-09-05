@@ -1,6 +1,6 @@
 ---
 name: python-patterns
-description: "Use when pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications. Triggers on \"python-patterns\", \"python patterns\", \"patterns\"."
+description: "Use when pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications. Only for Python — not for other languages. Triggers on \"python-patterns\", \"python patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

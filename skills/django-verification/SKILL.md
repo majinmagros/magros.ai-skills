@@ -1,6 +1,6 @@
 ---
 name: django-verification
-description: "Use when verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR. Triggers on \"django-verification\", \"django verification\", \"verification\"."
+description: "Use when verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR. Only for Django — not for other stacks. Triggers on \"django-verification\", \"django verification\", \"verification\"."
 metadata:
   origin: ECC
 ---

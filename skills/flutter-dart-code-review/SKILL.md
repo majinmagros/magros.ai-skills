@@ -9,6 +9,18 @@ metadata:
 
 Comprehensive, library-agnostic checklist for reviewing Flutter/Dart applications. These principles apply regardless of which state management solution, routing library, or DI framework is used.
 
+## When to Activate
+
+- Reviewing Flutter/Dart pull requests or auditing an existing codebase
+- Checking widget best practices, state management (BLoC, Riverpod, Provider, GetX, MobX, Signals), or Dart idioms
+- Evaluating Flutter app performance, accessibility, or security
+- Enforcing clean architecture in a Dart/Flutter project
+
+## When NOT to Use
+
+- Native Android (Kotlin) or iOS (Swift) code (use platform-specific skills)
+- Backend Dart servers (use `backend-patterns`)
+
 ---
 
 ## 1. General Project Health

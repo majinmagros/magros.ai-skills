@@ -13,7 +13,7 @@ production database configuration. Prefer exact version checks before applying a
 feature-specific pattern because MySQL and MariaDB have diverged in several SQL
 details.
 
-## Activation
+## When to Activate
 
 - Designing MySQL or MariaDB tables, indexes, and constraints
 - Reviewing migrations before they run on large production tables

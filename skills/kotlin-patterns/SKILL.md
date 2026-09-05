@@ -1,6 +1,6 @@
 ---
 name: kotlin-patterns
-description: "Use when idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders. Triggers on \"kotlin-patterns\", \"kotlin patterns\", \"patterns\"."
+description: "Use when idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders. Only for Kotlin — not for other languages. Triggers on \"kotlin-patterns\", \"kotlin patterns\", \"patterns\"."
 metadata:
   origin: ECC
 ---

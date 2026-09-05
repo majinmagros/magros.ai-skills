@@ -1,6 +1,6 @@
 ---
 name: fsharp-testing
-description: "Use when f# testing patterns with xUnit, FsUnit, Unquote, FsCheck property-based testing, integration tests, and test organization best practices. Triggers on \"fsharp-testing\", \"fsharp testing\", \"testing\"."
+description: "Use when f# testing patterns with xUnit, FsUnit, Unquote, FsCheck property-based testing, integration tests, and test organization best practices. Only for F# — not for other languages. Triggers on \"fsharp-testing\", \"fsharp testing\", \"testing\"."
 metadata:
   origin: ECC
 ---

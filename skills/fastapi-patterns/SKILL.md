@@ -9,6 +9,19 @@ metadata:
 
 Modern, production-grade FastAPI development: project layout, Pydantic v2 schemas, dependency injection, async patterns, auth, transactional service methods, and testing.
 
+## When to Activate
+
+- Scaffolding or restructuring a FastAPI project (routers, services, schemas)
+- Writing async handlers with dependency injection
+- Adding authentication/authorization to FastAPI endpoints
+- Implementing transactional service layers
+- Testing APIs with httpx and pytest
+
+## When NOT to Use
+
+- Django/Flask projects (use `django-patterns`)
+- Frontend work (use `frontend-patterns`)
+
 ## Project Structure
 
 ```text

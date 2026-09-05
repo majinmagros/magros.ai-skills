@@ -1,6 +1,6 @@
 ---
 name: django-security
-description: "Use when django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. Triggers on \"django-security\", \"django security\", \"security\"."
+description: "Use when django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. Only for Django — not for other frameworks. Triggers on \"django-security\", \"django security\", \"security\"."
 metadata:
   origin: ECC
 ---
