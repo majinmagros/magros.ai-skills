@@ -64,16 +64,6 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "quarkus-tdd",
-    "score": 70,
-    "lines": 813,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "threejs-config-constants",
     "score": 70,
     "lines": 804,
@@ -157,16 +147,6 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "laravel-tdd",
-    "score": 70,
-    "lines": 676,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "metahuman-identity-pipeline",
     "score": 70,
     "lines": 661,
@@ -181,16 +161,6 @@
     "name": "frontend-patterns",
     "score": 70,
     "lines": 658,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "django-security",
-    "score": 70,
-    "lines": 645,
     "reasons": [
       ">500 linhas",
       "sem disclosure"
@@ -395,16 +365,6 @@
     "name": "django-verification",
     "score": 73,
     "lines": 471,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "quarkus-security",
-    "score": 73,
-    "lines": 469,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -3161,6 +3121,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "quarkus-tdd",
+    "score": 100,
+    "lines": 151,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "roteamento-modelos-baratos",
     "score": 100,
     "lines": 151,
@@ -3593,6 +3562,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "quarkus-security",
+    "score": 100,
+    "lines": 116,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "research-ops",
     "score": 100,
     "lines": 114,
@@ -3668,6 +3646,15 @@
     "name": "messages-ops",
     "score": 100,
     "lines": 106,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "laravel-tdd",
+    "score": 100,
+    "lines": 105,
     "reasons": [
       "ok"
     ],
@@ -3902,6 +3889,15 @@
     "name": "unlazy",
     "score": 100,
     "lines": 78,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "django-security",
+    "score": 100,
+    "lines": 75,
     "reasons": [
       "ok"
     ],
