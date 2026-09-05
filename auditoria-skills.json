@@ -126,16 +126,6 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "python-patterns",
-    "score": 70,
-    "lines": 752,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "django-patterns",
     "score": 70,
     "lines": 736,
@@ -206,16 +196,6 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "kotlin-patterns",
-    "score": 70,
-    "lines": 713,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "kotlin-ktor-patterns",
     "score": 70,
     "lines": 691,
@@ -231,16 +211,6 @@
     "lines": 690,
     "reasons": [
       "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "golang-patterns",
-    "score": 70,
-    "lines": 677,
-    "reasons": [
       ">500 linhas",
       "sem disclosure"
     ],
@@ -424,36 +394,6 @@
     "lines": 517,
     "reasons": [
       "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "perl-patterns",
-    "score": 70,
-    "lines": 506,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "perl-security",
-    "score": 70,
-    "lines": 505,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "security-review",
-    "score": 70,
-    "lines": 505,
-    "reasons": [
       ">500 linhas",
       "sem disclosure"
     ],
@@ -3326,6 +3266,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "kotlin-patterns",
+    "score": 100,
+    "lines": 148,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "llm-trading-agent-security",
     "score": 100,
     "lines": 148,
@@ -3623,6 +3572,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "python-patterns",
+    "score": 100,
+    "lines": 121,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "browser-qa",
     "score": 100,
     "lines": 120,
@@ -3680,6 +3638,15 @@
     "name": "project-flow-ops",
     "score": 100,
     "lines": 113,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "perl-security",
+    "score": 100,
+    "lines": 112,
     "reasons": [
       "ok"
     ],
@@ -3776,6 +3743,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "perl-patterns",
+    "score": 100,
+    "lines": 102,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "security-bounty-hunter",
     "score": 100,
     "lines": 101,
@@ -3795,6 +3771,15 @@
   },
   {
     "name": "cost-tracking",
+    "score": 100,
+    "lines": 98,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "golang-patterns",
     "score": 100,
     "lines": 98,
     "reasons": [
@@ -3952,6 +3937,15 @@
     "lines": 71,
     "reasons": [
       "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "security-review",
+    "score": 100,
+    "lines": 67,
+    "reasons": [
+      "desc longa"
     ],
     "fix": "Manter como referencia de qualidade"
   },
