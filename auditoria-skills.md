@@ -4,29 +4,29 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 89.4/100 (boa — v1 83.9 → 88.9 lote 4 → 89.4 lote 5)
+- **Media geral:** 89.8/100 (boa — v1 83.9 → 89.4 lote 5 → 89.8 lote 6)
 - **Pastas sem SKILL.md:** 0 (ok)
 - **Description sem gatilho quando usar:** 0 / 416 (0%). **Descoberta resolvida.**
 - **Description com literal block `|:** 0 (ok)
 - **Name != pasta:** 0 (ok)
-- **SKILL.md >200 linhas:** 144 (34.6%) — era 168. -24 fatiamentos.
-- **SKILL.md >500 linhas:** 24 (5.8%) — era 47. -23.
-- **Com progressive disclosure (mencao references/scripts no corpo):** 97 / 416 (23.3%). Pastas fisicas `references/`+`scripts/`: 57 / 416 (13.7%, +6 lote 5).
-- **Distribuicao por faixa:** 40-59:0 | 60-79:92 | 80-99:165 | 100:159 (soma 416)
-- **Evolucao vs v1:** faixa fraca 40-59 colapsou 29→0; nota 100 subiu 101→159 (+58); >500 caiu 47→24.
-- **Conclusao:** fatiamento em ritmo (24 monolitos → 100 pts). Restam 24 mega-monolitos (todos os 70s restantes). Proximo: lote 6 (git-workflow, metahuman-identity-pipeline, frontend-patterns, hyperledger-fabric-generator, autonomous-loops, tdd-workflow) e gigantes manuais.
+- **SKILL.md >200 linhas:** 138 (33.2%) — era 168. -30 fatiamentos.
+- **SKILL.md >500 linhas:** 18 (4.3%) — era 47. -29.
+- **Com progressive disclosure (mencao references/scripts no corpo):** 100 / 416 (24.0%). Pastas fisicas `references/`+`scripts/`: 62 / 416 (14.9%, +5 lote 6 — hyperledger ja tinha).
+- **Distribuicao por faixa:** 40-59:0 | 60-79:86 | 80-99:165 | 100:165 (soma 416)
+- **Evolucao vs v1:** faixa fraca 40-59 colapsou 29→0; nota 100 subiu 101→165 (+64); >500 caiu 47→18.
+- **Conclusao:** fatiamento em ritmo (30 monolitos → 100 pts). Restam 18 mega-monolitos (todos os 70s restantes). Proximo: lote 7 (threejs-deploy, motion-advanced/ui, react-performance, dart-flutter-patterns, backend-patterns) e gigantes manuais.
 
 ## Evolucao desde v1 (o que mudou)
 
 | Item | v1 (02/09, 409) | v2 (05/09, 416) | Delta |
 |---|---|---|---|
-| Media | 83.9 | 89.4 | +5.5 (+0.5 lote 5) |
+| Media | 83.9 | 89.8 | +5.9 (+0.4 lote 6) |
 | Sem gatilho | 46 | 0 | -46 (dashboard corrigida) |
 | Name mismatch | 6 | 0 | -6 |
-| Nota 100 | 101 | 159 | +58 (+6 lote 5) |
+| Nota 100 | 101 | 165 | +64 (+6 lote 6) |
 | Faixa 40-59 | 29 | 0 | -29 |
-| >200 linhas | 168 | 144 | -24 fatiamentos |
-| >500 linhas | 47 | 24 | -23 |
+| >200 linhas | 168 | 138 | -30 fatiamentos |
+| >500 linhas | 47 | 18 | -29 |
 | Piores exemplos | `universal-portability` 39, 8 skills com 45 | pior agora e 51 (`skill-execution-dashboard`) | cauda critica eliminada |
 | Ex-fracas que subiram | — | `universal-portability` 39→79, `claude-md-auditor` 45→70, `graph-engineering-patterns` 45→70, `threejs-voxel-block-system` 45→70, `frontend-a11y` 53→73, `prompt-optimizer` 53→73 | gatilho adicionado, mas tamanho trava em ~70 |
 
@@ -56,31 +56,31 @@
 | 5 | **70** | 821 | `generating-python-installer` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
 | 6 | **70** | 818 | `graph-engineering-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
 | 7 | **70** | 804 | `threejs-config-constants` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 8 | **70** | 717 | `git-workflow` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 9 | **70** | 661 | `metahuman-identity-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 10 | **70** | 658 | `frontend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 11 | **70** | 624 | `hyperledger-fabric-generator` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 12 | **70** | 614 | `autonomous-loops` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas |
-| 13 | **70** | 606 | `threejs-deploy-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 14 | **70** | 597 | `motion-advanced` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 15 | **70** | 584 | `tdd-workflow` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas |
-| 16 | **70** | 577 | `motion-ui` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 17 | **70** | 576 | `react-performance` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 18 | **70** | 565 | `dart-flutter-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 19 | **70** | 563 | `backend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 20 | **70** | 552 | `coding-standards` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 21 | **70** | 534 | `docker-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 22 | **70** | 528 | `fastapi-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 23 | **70** | 525 | `api-design` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 24 | **70** | 517 | `hyper3d-rodin-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 25 | **73** | 498 | `flox-environments` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 26 | **73** | 484 | `metahuman-unreal-blueprint` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 27 | **73** | 481 | `quarkus-verification` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 28 | **73** | 477 | `perl-testing` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 29 | **73** | 472 | `vue-patterns` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 30 | **73** | 471 | `django-verification` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 8 | **70** | 606 | `threejs-deploy-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
+| 9 | **70** | 597 | `motion-advanced` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 10 | **70** | 577 | `motion-ui` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 11 | **70** | 576 | `react-performance` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 12 | **70** | 565 | `dart-flutter-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 13 | **70** | 563 | `backend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 14 | **70** | 552 | `coding-standards` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 15 | **70** | 534 | `docker-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
+| 16 | **70** | 528 | `fastapi-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 17 | **70** | 525 | `api-design` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 18 | **70** | 517 | `hyper3d-rodin-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
+| 19 | **73** | 498 | `flox-environments` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 20 | **73** | 484 | `metahuman-unreal-blueprint` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 21 | **73** | 481 | `quarkus-verification` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 22 | **73** | 477 | `perl-testing` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 23 | **73** | 472 | `vue-patterns` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 24 | **73** | 471 | `django-verification` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 25 | **73** | 467 | `ui-demo` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 26 | **73** | 459 | `django-celery` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 27 | **73** | 451 | `vite-patterns` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 28 | **73** | 449 | `flutter-dart-code-review` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 29 | **73** | 447 | `frontend-a11y` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 30 | **73** | 446 | `clickhouse-io` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
 
-> Correcao de maior valor = a unica mudanca que mais aumenta score/impacto. Lote 5 removeu do Top 30: `kotlin-ktor/exposed`, `claude-md-auditor`, `cpp-coding-standards`, `data-scraper-agent`, `kubernetes-patterns` (fatiados p/ 100). Grupo 70 agora tem so 24 skills — o Top 30 alcanca a faixa 73 (351-500 linhas).
+> Correcao de maior valor = a unica mudanca que mais aumenta score/impacto. Lote 6 removeu do Top 30: `git-workflow`, `metahuman-identity-pipeline`, `frontend-patterns`, `hyperledger-fabric-generator`, `autonomous-loops` (stub + legado), `tdd-workflow` (fatiados p/ 100). Grupo 70 agora tem so 18 skills.
 
 ## Amostra do Top 15 Melhores (referencia de qualidade)
 
@@ -136,7 +136,7 @@ Outras 100pts (amostra): `perl-patterns`, `perl-security`, `golang-patterns`, `p
 ### Faixa 40-59 (Critica/Fraca - 0 skills)
 Faixa zerada nesta rodada (era 29 no v1). Ultima remanescente `skill-execution-dashboard` corrigida 51→100.
 
-### Faixa 60-79 (Regular - 92 skills)
+### Faixa 60-79 (Regular - 86 skills)
 Amostra: `docker-patterns`(70, ganhou Quando Ativar — falta fatiar 534 linhas), `fastapi-patterns`(70, idem 528), `flutter-dart-code-review`(73), `mysql-patterns`(73, `## Activation`→`## When to Activate`), `threejs-voxel-block-system`(70), `laravel-security`(70), `windows-desktop-e2e`(70) ... ver JSON para lista completa. Perfil tipico: gatilho OK, mas >350 linhas sem disclosure.
 
 ### Faixa 80-99 (Boa - 165 skills) & 100 (Excelente - 134 skills)
@@ -148,9 +148,9 @@ Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79
 - [x] Triggers em 189 descriptions, literal blocks, pastas vazias, name mismatch (v1→v2)
 - [x] `skill-execution-dashboard` — frontmatter + gatilhos + Quando usar/NAO usar + exemplo (51→100, esta rodada). Pendencia: criar `scripts/dashboard_tracker.js` e `docs/EXECUTION-DASHBOARD.md` referenciados (marcados como planejados no SKILL.md).
 
-### Fase 2 — Fatiamento (em andamento: 24/47 concluidos)
-0. [x] **Concluidos (70→100):** `rust-patterns` (500→84, 11 refs), `rust-testing` (501→118, 12 refs), `perl-patterns` (505→~95, 8 refs), `perl-security` (504→~115, 8 refs), `security-review` (504→~70, 5 refs), `golang-patterns` (676→~100, 8 refs), `python-patterns` (751→~120, 11 refs), `kotlin-patterns` (712→~150, 9 refs), `kotlin-testing` (825→130, 6 refs), `python-testing` (817→129, 10 refs), `golang-testing` (721→120, 5 refs), `django-patterns` (735→72, 6 refs), `django-tdd` (730→103, 4 refs), `quarkus-patterns` (723→127, 5 refs), `quarkus-tdd` (812→151, 7 refs), `laravel-tdd` (676→105, 5 refs), `django-security` (645→75, 6 refs), `quarkus-security` (468→116, 4 refs), `kotlin-ktor-patterns` (691→75, 6 refs), `kotlin-exposed-patterns` (721→104, 5 refs), `claude-md-auditor` (690→80, 4 refs), `cpp-coding-standards` (725→89, 8 refs), `data-scraper-agent` (770→90, 5 refs), `kubernetes-patterns` (757→115, 6 refs). Metodo: script de split por faixas + SKILL.md com indice + exemplo + quick reference. Scripts em `C:\Users\magro\AppData\Local\Temp\opencode\slice_*.py`.
-1. **Restam 24 mega-monolitos >500 linhas** — proximo lote mecanico: `git-workflow` (717), `metahuman-identity-pipeline` (661), `frontend-patterns` (658), `hyperledger-fabric-generator` (624), `autonomous-loops` (614), `tdd-workflow` (584).
+### Fase 2 — Fatiamento (em andamento: 30/47 concluidos)
+0. [x] **Concluidos (70→100):** `rust-patterns` (500→84, 11 refs), `rust-testing` (501→118, 12 refs), `perl-patterns` (505→~95, 8 refs), `perl-security` (504→~115, 8 refs), `security-review` (504→~70, 5 refs), `golang-patterns` (676→~100, 8 refs), `python-patterns` (751→~120, 11 refs), `kotlin-patterns` (712→~150, 9 refs), `kotlin-testing` (825→130, 6 refs), `python-testing` (817→129, 10 refs), `golang-testing` (721→120, 5 refs), `django-patterns` (735→72, 6 refs), `django-tdd` (730→103, 4 refs), `quarkus-patterns` (723→127, 5 refs), `quarkus-tdd` (812→151, 7 refs), `laravel-tdd` (676→105, 5 refs), `django-security` (645→75, 6 refs), `quarkus-security` (468→116, 4 refs), `kotlin-ktor-patterns` (691→75, 6 refs), `kotlin-exposed-patterns` (721→104, 5 refs), `claude-md-auditor` (690→80, 4 refs), `cpp-coding-standards` (725→89, 8 refs), `data-scraper-agent` (770→90, 5 refs), `kubernetes-patterns` (757→115, 6 refs), `git-workflow` (717→71, 5 refs), `metahuman-identity-pipeline` (661→115, 5 refs), `frontend-patterns` (658→54, 4 refs), `hyperledger-fabric-generator` (624→94, refs ja existiam), `autonomous-loops` (613→44 stub+legado), `tdd-workflow` (584→94, 3 refs). Metodo: script de split por faixas + SKILL.md com indice + exemplo + quick reference. Scripts em `C:\Users\magro\AppData\Local\Temp\opencode\slice_*.py`.
+1. **Restam 18 mega-monolitos >500 linhas** — proximo lote mecanico: `threejs-deploy-pipeline` (606), `motion-advanced` (597), `motion-ui` (577), `react-performance` (576), `dart-flutter-patterns` (565), `backend-patterns` (563).
 2. **Depois os gigantes manuais:** threejs-voxel-block-system (1290), laravel-security (949), windows-desktop-e2e (889) — exigem leitura integral e quebra em 2-4 skills.
 3. **Na sequencia:** 37 skills 351-500 + 84 skills 201-350 — disclosure progressivo. Meta: 160→<50 skills >200 linhas.
 
@@ -174,10 +174,11 @@ Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79
 | 9 | `kotlin-testing` (825), `python-testing` (817), `golang-testing` (721), `django-patterns` (735), `django-tdd` (730), `quarkus-patterns` (723) | 70 monolitos | 100 (lote 3) | idem |
 | 10 | `quarkus-tdd` (812), `laravel-tdd` (676), `django-security` (645), `quarkus-security` (468) | 70-73 monolitos | 100 (lote 4) | idem |
 | 11 | `kotlin-ktor-patterns` (691), `kotlin-exposed-patterns` (721), `claude-md-auditor` (690), `cpp-coding-standards` (725), `data-scraper-agent` (770), `kubernetes-patterns` (757) | 70 monolitos | 100 (lote 5) | idem |
-| Efeito global | media 87.5, 1 sem gatilho, 168 >200, 47 >500, 134×100 | media 89.4, 0 sem gatilho, 144 >200, 24 >500, 159×100 | — |
+| 12 | `git-workflow` (717), `metahuman-identity-pipeline` (661), `frontend-patterns` (658), `hyperledger-fabric-generator` (624, refs ja existiam), `autonomous-loops` (613→stub+legado), `tdd-workflow` (584) | 70 monolitos | 100 (lote 6) | split + stub deprecated |
+| Efeito global | media 87.5, 1 sem gatilho, 168 >200, 47 >500, 134×100 | media 89.8, 0 sem gatilho, 138 >200, 18 >500, 165×100 | — |
 
 ### Fase 4 — Maturidade (continuo)
-- **Nivel atual estimado:** 2-3 (skill propria -> biblioteca) para maioria; 159 skills em padrao premium (100 pts).
+- **Nivel atual estimado:** 2-3 (skill propria -> biblioteca) para maioria; 165 skills em padrao premium (100 pts).
 - **Proximo nivel:** 5 (evals/A-B) — criar evals de ativacao: medir taxa de trigger correto vs falso positivo, antes/depois do fatiamento.
 - **CI:** travar regressao — validar em `scripts/ci/validate-skills.js`: frontmatter obrigatorio, `Use when|Use quando` na description, `name==pasta`, `description: >` (nao `|`), limite 200 linhas com excecao se tiver references/.
 
@@ -199,7 +200,7 @@ Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79
 - **Limitacao:** clareza semantica real exige leitura humana; heuristica de headers/exemplos e proxy. Jaccard em descriptions e triagem, nao prova de duplicata.
 - **Arquivos:** `skills/*/SKILL.md` (416 pastas). Backup do v1 em `C:\Users\magro\AppData\Local\Temp\opencode\auditoria-skills-2026-09-02.bak.*`.
 - **Reproducibilidade:** scripts temp em `C:\Users\magro\AppData\Local\Temp\opencode\audit_calc.py` (score), `audit_dup.py` (clusters+Jaccard), `audit_tables.py` (tabelas); `auditoria-skills.json` ordenado pior→melhor.
-- **Distribuicao de linhas:** <=200:272 (65.4%) | 201-350:84 | 351-500:36 | >500:24.
+- **Distribuicao de linhas:** <=200:278 (66.8%) | 201-350:84 | 351-500:36 | >500:18.
 
 ---
 *Nota e meio, nao fim: objetivo e 1 correcao acionavel por skill. Fase 1 concluida — comece pelo `skill-execution-dashboard` (15 min) e depois pelo maior monolito `threejs-voxel-block-system` (1290 linhas).*

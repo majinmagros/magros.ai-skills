@@ -75,56 +75,6 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "git-workflow",
-    "score": 70,
-    "lines": 717,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "metahuman-identity-pipeline",
-    "score": 70,
-    "lines": 661,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "frontend-patterns",
-    "score": 70,
-    "lines": 658,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "hyperledger-fabric-generator",
-    "score": 70,
-    "lines": 624,
-    "reasons": [
-      "desc longa",
-      ">500 linhas"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "autonomous-loops",
-    "score": 70,
-    "lines": 614,
-    "reasons": [
-      ">500 linhas"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "threejs-deploy-pipeline",
     "score": 70,
     "lines": 606,
@@ -142,15 +92,6 @@
       "desc longa",
       ">500 linhas",
       "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "tdd-workflow",
-    "score": 70,
-    "lines": 584,
-    "reasons": [
-      ">500 linhas"
     ],
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
@@ -3518,6 +3459,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "metahuman-identity-pipeline",
+    "score": 100,
+    "lines": 115,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "research-ops",
     "score": 100,
     "lines": 114,
@@ -3743,7 +3693,25 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "hyperledger-fabric-generator",
+    "score": 100,
+    "lines": 94,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "product-lens",
+    "score": 100,
+    "lines": 94,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "tdd-workflow",
     "score": 100,
     "lines": 94,
     "reasons": [
@@ -3914,6 +3882,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "git-workflow",
+    "score": 100,
+    "lines": 71,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "mcp-server-patterns",
     "score": 100,
     "lines": 71,
@@ -3944,6 +3921,15 @@
     "name": "nextjs-turbopack",
     "score": 100,
     "lines": 59,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "frontend-patterns",
+    "score": 100,
+    "lines": 54,
     "reasons": [
       "ok"
     ],
@@ -3989,6 +3975,15 @@
     "name": "orch-refine-code",
     "score": 100,
     "lines": 45,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "autonomous-loops",
+    "score": 100,
+    "lines": 44,
     "reasons": [
       "ok"
     ],
