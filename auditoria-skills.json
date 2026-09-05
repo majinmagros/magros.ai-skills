@@ -75,72 +75,10 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "data-scraper-agent",
-    "score": 70,
-    "lines": 770,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "kubernetes-patterns",
-    "score": 70,
-    "lines": 757,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "cpp-coding-standards",
-    "score": 70,
-    "lines": 725,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "kotlin-exposed-patterns",
-    "score": 70,
-    "lines": 721,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "git-workflow",
     "score": 70,
     "lines": 717,
     "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "kotlin-ktor-patterns",
-    "score": 70,
-    "lines": 691,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "claude-md-auditor",
-    "score": 70,
-    "lines": 690,
-    "reasons": [
-      "desc longa",
       ">500 linhas",
       "sem disclosure"
     ],
@@ -3571,6 +3509,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "kubernetes-patterns",
+    "score": 100,
+    "lines": 115,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "research-ops",
     "score": 100,
     "lines": 114,
@@ -3655,6 +3602,15 @@
     "name": "laravel-tdd",
     "score": 100,
     "lines": 105,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "kotlin-exposed-patterns",
+    "score": 100,
+    "lines": 104,
     "reasons": [
       "ok"
     ],
@@ -3805,9 +3761,27 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "data-scraper-agent",
+    "score": 100,
+    "lines": 90,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "hermes-imports",
     "score": 100,
     "lines": 90,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "cpp-coding-standards",
+    "score": 100,
+    "lines": 89,
     "reasons": [
       "ok"
     ],
@@ -3859,6 +3833,15 @@
     "fix": "Manter como referencia de qualidade"
   },
   {
+    "name": "claude-md-auditor",
+    "score": 100,
+    "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
     "name": "repo-scan",
     "score": 100,
     "lines": 80,
@@ -3896,6 +3879,15 @@
   },
   {
     "name": "django-security",
+    "score": 100,
+    "lines": 75,
+    "reasons": [
+      "ok"
+    ],
+    "fix": "Manter como referencia de qualidade"
+  },
+  {
+    "name": "kotlin-ktor-patterns",
     "score": 100,
     "lines": 75,
     "reasons": [
