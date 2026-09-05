@@ -532,6 +532,34 @@
         "ferramentas-ia"
       ],
       "tier": "core"
+    },
+    {
+      "handle": "@ratosdeia",
+      "nome": "Ratos de IA",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "skills",
+        "claude",
+        "claude-code",
+        "agent",
+        "agente",
+        "agentes",
+        "automacao",
+        "marketing",
+        "ia",
+        "curadoria",
+        "tutorial",
+        "cowork",
+        "mcp",
+        "workflow",
+        "negocios"
+      ],
+      "tier": "core"
     }
   ]
 }
