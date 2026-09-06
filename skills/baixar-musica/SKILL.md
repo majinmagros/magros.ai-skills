@@ -14,7 +14,7 @@ Procedimento para baixar o áudio de uma música do YouTube, dado nome + artista
 ## Pré-requisitos (verificados)
 
 - `baixar_audio.ps1` em `~\baixar_audio.ps1` (e o `.bat` de duplo clique ao lado).
-- `yt-dlp`, `ffmpeg` e `node` disponíveis no PATH (scoop).
+- `yt-dlp`, `ffmpeg` e `node` disponíveis no PATH (scoop). O `ffmpeg` é obrigatório para converter em mp3.
 - Pasta de saída padrão: `%USERPROFILE%\Music\YouTube Audio` (config do `baixar_audio.ps1`).
 
 ## 1. Capturar o pedido
@@ -59,13 +59,19 @@ O `baixar_audio.ps1` aceita **lista de URLs**. Para lote:
 - `-Parallel N` baixa N vídeos simultaneamente (2–8 recomendado).
 - Se houver playlist: `-Urls "<url>" -Playlist` baixa tudo dentro dela.
 
-## 4. Baixar via baixar_audio.ps1
+## 4. Baixar e converter para mp3 (deletar vídeo após)
 
-Invoque na sessão atual (funciona para 1 ou várias URLs):
+Invoque na sessão atual (o script já passa `-x` ao yt-dlp internamente e o
+padrão é mp3 — NÃO passe `-x` na linha de comando, o script não tem esse parâmetro):
 
 ```powershell
 & "~\baixar_audio.ps1" -Urls "https://www.youtube.com/watch?v=<id>"
 ```
+
+> O script extrai o áudio e converte para mp3 sozinho.
+> Padrão: formato mp3, pasta `Music\YouTube Audio`.
+
+> Após o download, o script mantém apenas o arquivo mp3 e remove o vídeo original.
 
 > Alternativa para duplo clique (1 faixa, sem lote):
 > `powershell -ExecutionPolicy Bypass -File "~\baixar_audio.ps1" -Urls "<url>"`
@@ -75,16 +81,26 @@ Invoque na sessão atual (funciona para 1 ou várias URLs):
 Se o usuário pedir formato ou pasta diferentes, repasse os parâmetros:
 
 ```powershell
-... -Urls "<url>" -Format m4a -OutputDir "E:\Downloads\musicas" -Parallel 3
+... -Urls "<url>" -OutputDir "E:\Downloads\musicas" -Parallel 3
 ```
 
-Formatos válidos do script: mp3, m4a, opus, flac, wav, ogg. Pasta deve existir.
+> O script sempre extrai só o áudio em mp3 e descarta o vídeo.
 
 ### Playlist/canal
 
 ```powershell
 ... -Urls "<url_playlist>" -Playlist
 ```
+
+Download múltiplo: converte cada vídeo da playlist para mp3, mantendo só os áudios.
+
+### Pasta de saída personalizada
+
+```powershell
+& "~\baixar_audio.ps1" -Urls "https://www.youtube.com/watch?v=<id>" -OutputDir "C:\Minhas\Musicas"
+```
+
+Pasta deve existir. O script remove o vídeo source após conversão bem-sucedida, mantendo só o mp3.
 
 ## 5. Confirmar resultado
 
@@ -98,3 +114,15 @@ Informe ao usuário:
 - **Sempre confirmar a faixa com o usuário** antes de baixar.
 - Se a busca falhar, tente `ytsearch5:` com query limpa (sem parênteses/aspas, nomes alternativos).
 - Se o usuário pedir várias faixas, baixe em sequência confirmando cada URL.
+
+## Problemas conhecidos
+
+- **HTTP Error 403: Forbidden no download (`unable to download video data`)**,
+  mesmo com metadados resolvendo normalmente: quase sempre é o `yt-dlp`
+  desatualizado frente às mudanças do YouTube. Antes de tentar qualquer outra
+  coisa, atualize e repita o download:
+  ```powershell
+  yt-dlp -U
+  ```
+  (Caso real 2026-09-06: versão `2026.07.04` dava 403 em tudo; após atualizar
+  para `2026.08.19` os mesmos 3 vídeos baixaram de primeira, com o mesmo comando.)
