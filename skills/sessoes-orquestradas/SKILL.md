@@ -62,3 +62,12 @@ Fonte `wCSPgHpcxdc` (AIJasonZ) + Devin Fusion validado (cognition.com/blog/devin
 - **Sidekick persistente**: sub-agent mantém sessão resumível; o lead manda follow-up pelo mesmo canal e herda todo o contexto — tokens de histórico saem a preço de **cache (~10% do input novo)**.
 - **Advisor perde para orchestrator**: chamar um modelo forte como "conselheiro" exige reenviar o histórico inteiro full-price a cada consulta; orchestrator+executor com contextos próprios cacheados é mais barato e melhor (Devin Fusion: -35% custo no FrontierCode; Fable+sidekick -54% vs Fable puro).
 - No Claude Code isso é o padrão **agent teams** (SendMessage a sessão existente até shutdown explícito). Em tmux puro: `send-keys` + `wait-for -s <sinal>` como sinal de fim (ver `dmux-workflows`).
+
+## Enriquecimento 2026-09-06 — cross-session messaging nativo + fork default (AI Code King `6m1vJqdsanQ`, conferido)
+Fontes oficiais: https://code.claude.com/docs/en/cross-session-messaging, https://code.claude.com/docs/en/whats-new/2026-w32
+
+- **Shipped**: v2.1.224 cross-session (macOS/Linux primeiro, Windows depois); v2.1.232 `@`-mention + nomes únicos automáticos. On por padrão, sem config.
+- **Mecanismo**: tools `ListAgents` (descobre) + `SendMessage` (entrega por nome). Mensagem = texto + reply address (sem histórico/arquivos), via Unix socket local — não passa pela Anthropic.
+- **Limites de segurança**: não aprova permission pending, não toca `CLAUDE.md`/settings, slash vira texto; throttle com dedupe + cap 50 unread; inbound depende de permission mode (`crossSessionInbound`).
+- **Fork default**: `subagent_type: "fork"` herda conversa completa + prompt cache (override `CLAUDE_CODE_FORK_SUBAGENT=0/1`); 20 subagents concorrentes default.
+- **Quando usar o quê**: resume/handoff = herda tudo (mesma linha); messaging = nota fina entre sessões independentes; subagents/teams = dentro da sessão.

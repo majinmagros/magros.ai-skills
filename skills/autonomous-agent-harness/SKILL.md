@@ -295,3 +295,9 @@ Fonte `KmJ-PUsxMHo` (AI Foundations); comandos validados em hermes-agent.nousres
 5. **Skills auto-melhoráveis**: descreva a rotina ("monitore top 5 concorrentes todo dia e poste briefing no #hermes-research") → cron dispara o perfil certo; feedback ("gostei/não") atualiza a skill.
 
 **Troubleshooting oficial**: respostas vazias → `hermes model`; gateway sem mensagens → re-checar token/allowlist + `hermes gateway status`; sessão perdida → `hermes sessions list`. Migração de máquina: `hermes backup`.
+
+## Enriquecimento 2026-09-06 — managed vs VPS (Nate Herk `gQef3d3erOs`)
+
+- **Managed (~$6/mês)**: sem Docker/SSH/env, Telegram pré-instalado, um agente por app, sem updates/backups/firewall p/ gerenciar. Autentica com a **assinatura ChatGPT via OAuth** (mais barato que API key) + Telegram via BotFather (newbot → token + user ID). Painel + Telegram sincronizados, mobile no bolso.
+- **VPS**: root total, múltiplos agentes Hermes + N8N/OpenClaw na mesma caixa, escala CPU/RAM, sem custo extra além do VPS — mas updates/backups/firewall são seus.
+- **Regra 98%**: comece no managed; migre p/ VPS quando precisar de multi-agente/colocation/escala. Inclui 1.000 créditos web-scraping free + Agentic Mail opcional (email próprio p/ o agente).

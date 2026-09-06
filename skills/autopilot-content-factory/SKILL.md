@@ -40,3 +40,11 @@ Arquitetura: per-skill context isolation, queue file, fragmented skills.
 
 - `references/trigger-split.md` — 3-trigger pattern
 - Depende de `data-scraper-agent`, `content-engine`, `video-editing`, `autonomous-agent-harness`
+
+## Enriquecimento 2026-09-06 — pattern GrokBot (Gabriel Adamuchi `azJHZfaVeJc`)
+
+Produto fechado (sem docs oficiais) com 3 ideias reaproveitáveis na factory:
+
+- **Time de 4 papéis**: minerador (Scrape Creators API no IG-alvo → dataset dos melhores posts) → copywriter → engenheiro audiovisual → social media (agenda/publica). Espelha os 7 estágios da factory.
+- **Chat inter-bot nativo + routines**: bots enxergam o chat um do outro e trocam info direto (no Claude/Codex o equivalente é `/handover` manual) — para `sessoes-orquestradas`, prefira messaging nativo a copiar/colar entre sessões.
+- **Templates compartilháveis**: exporte cada papel como template instalável (e importe de Hermes/OpenClaw) — pacotes de templates são também produto vendável.

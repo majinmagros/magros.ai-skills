@@ -17,7 +17,7 @@ Baseado no vídeo do Gustavo Campelo "O comando /design do Cloud Code" + Open De
 
 | Claim | Status | Fonte |
 |---|---|---|
-| Cloud Design `/design` command: canvas 3 styles, interactive edit | ✅ Video Gustavo Campelo (M7ie0MRsmsk) | Transcrição analisada |
+| Cloud Design `/design` command: canvas artboards, interactive edit | ✅ Video Gustavo Campelo (M7ie0MRsmsk) + docs oficiais Week 34 (research preview, CLI+Desktop, Pro/Max/Team/Enterprise, built on artifacts, v2.1.233+) | https://code.claude.com/docs/en/whats-new/2026-w34 + transcrição analisada; re-validado via AI Code King `6m1vJqdsanQ` (2026-09-06) |
 | Artifact sharing (shareable links) | ✅ Video + Anthropic Artifacts API | `platform.claude.com/docs/en/api/admin/analytics/artifacts` |
 | Mobile/desktop preview | ✅ Video demonstration | Transcrição |
 | Open Design: local-first, BYOK, 5 directions, DESIGN.md | ✅ GitHub nexu-io/open-design | Context7 `/nexu-io/open-design` |

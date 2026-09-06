@@ -47,3 +47,10 @@ orch-build-mvp: civicpulse/docs/SDD-v0.6.md
 → /gan-build --skip-planner (generator → evaluator loop) scores vs spec → review
 → commit feat:  [GATE 2: confirm] → next slice
 ```
+
+## Enriquecimento 2026-09-06 — caso Snag Time, clone de Calendly em 5 dias (Nate Herk `PYjbeY8sGLs`)
+
+Evidência real de SaaS-clone com agentes (Codex): research de concorrentes (reviews) → plan de features → build com subagentes + DB + integrações (Google Calendar, Stripe) → **swarm de ~50 agentes testando em loop build→test→fix por dias** → rebrand (saída inicial com cara de "vibe coded") → perf via prompt `/goal` (1s→10ms) → mais testes.
+
+- **Números**: 5d5h wall-clock (2 semanas corridas), 334h-agente agregadas, 76 subagentes únicos, 300+ delegações, 32B tokens in + 47M out ≈ **$15k de inferência** — coberto pelo plano Codex $200/mês (yield ≈ $14k; plano Claude $200 ≈ $8k). Out-of-pocket real: ~$150.
+- **Caveat do autor**: interno/small-team ≠ escalar ($10k+/mês: inference, DB, bugs, features, ownership). Não venda "few prompts = SaaS" sem o custo de manutenção.

@@ -62,3 +62,12 @@ Track per task:
 - success/failure
 
 Escalate model tier only when lower tier fails with a clear reasoning gap.
+
+## Agentic Operating Levels (enriquecimento 2026-09-06 — IndyDevDan `rPWCYB62wvI`)
+
+Where you + your agents focus attention. Bottom→top: lines/blocks/functions/types/classes → file/dir structure → DB tables + databases → scripts/CLIs → app (vibe-coding level) → repo (apps/) → plan/docs/intent → AI dev workflow → software factory.
+
+- Higher = leverage + speed, lower = control + understanding. Higher is NOT better.
+- Choose leverage when: you understand the domain, work is familiar/repeated (3x = automate: skill → reusable agent → ADW), many artifacts/steps, and you have raw agentic skill (prompt/context/harness/multi-agent/model routing).
+- Move down (control) when: low domain understanding, unfamiliar system/new codebase, high-risk/high-impact domain, weak validation evidence, performance/detail/taste matters, or out-of-distribution work.
+- Minimum bar for mid/long-term projects: media-rich docs (images/SVG), designed DB tables, known dir/file layout + types; lines only rarely. Never scale (factory/workflows) what you do not understand.

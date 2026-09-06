@@ -148,3 +148,17 @@ Fonte `zQBUC_8xWkY`; validado em blog.google/innovation-and-ai/models-and-resear
 - **Intro $0.75 / $3.75 por MTok** (in/out, thinking incluído) — **expira 31/12/2026**; a partir de 01/01/2027 vira $1.50/$7.50. Cache $0.075/M/h.
 - Posição no mapa de rotas: entre Luna ($0.20/$1.20) e Terra ($2/$12) — candidato forte a executor de loops agênticos enquanto o promo durar (model card compara direto: Sonnet 5 $2/$10, Terra $2/$12).
 - Regra da skill vale em dobro aqui: preço promocional é janela, não piso — anote data de expiração em qualquer decisão de roteamento baseada nele.
+
+### Enriquecimento 2026-09-06 — comparativo BR Cursor/Codex/Claude/OpenCode (Sujeito Programador `66JPboo8WeI`)
+
+Opinião do autor do vídeo (não docs oficiais — preços/limites mudam, confira antes de orçar):
+
+| Ferramenta | Plano citado | Veredito do autor |
+|---|---|---|
+| **Cursor** | Grátis generoso; pago ~R$90-100, Auto/Composer/Grok barato, high-mode quase-ilimitado | Melhor CxB p/ plano básico; aguenta semana de trabalho |
+| **OpenCode** | Open-source, GO R$50, modelos low-cost | Melhor entrada grátis→pago mais barato |
+| **Codex** | Plano $20 (~R$100-120), limite generoso | Empatado com Cursor no básico |
+| **Claude Code** | Básico R$90-120 | Melhor harness (ferramentas/contexto), mas "chupacabra de token" em uso massivo — uso moderado ou API/plano maior |
+| **Copilot / Antigravity** | — | Reprovados pelo autor (harness fraco, erros) |
+
+Pattern: multi-harness sem lock-in (mesmo padrão de desenvolvimento em Cloud+Codex+Cursor).

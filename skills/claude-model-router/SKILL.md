@@ -183,12 +183,21 @@ claude-model-router status  # Shows current model, session cost, budget
 | Swap mid-task economiza | Luciana Papini video | ✅ Confirmado |
 | Cost tracking per task | Anthropic Docs | ✅ Confirmado |
 
+## Enriquecimento 2026-09-06 — Opus 5 + rate limits (AI Code King `6m1vJqdsanQ`, conferido nas docs oficiais)
+
+- **Opus 5**: model ID `claude-opus-5`, contexto **1M default e máximo**, 128K output, thinking on — https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5. Preço API **$5/$25** por MTok.
+- **Correção**: os **$10/$50** citados no vídeo são do **Fast mode / era Opus 4.8** (Week 30 digest), não do Opus 5 base. Não orçar Opus 5 a $10/$50.
+- **Rate limits (14/set)**: boost temporário de 50% expira 13/set; aumento permanente de 25% sobre o baseline = **-17% vs o que você tem hoje** (admitido pela Anthropic). Limites 5h dobrados (maio) permanecem. Auto-mode classifier calls não contam mais no uso; auto-continue no reset reduz babysitting.
+- Regra de roteamento: Opus 5 1M não dispensa curadoria — 1M cheio de ruído perde para 200K limpo (retrieval MRCR v2 cai com volume).
+
 ---
 
 ## Referências Oficiais
 
 - [Luciana Papini Video](https://www.youtube.com/watch?v=Bezlzmti6_U)
 - [Anthropic Model Docs](https://docs.anthropic.com/en/docs/claude-code/settings)
+- [What's new in Claude Opus 5](https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5)
+- [Claude Code Week 30 — fast mode Opus 4.8 $10/$50](https://code.claude.com/docs/en/whats-new)
 
 ---
 

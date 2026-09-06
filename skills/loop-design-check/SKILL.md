@@ -154,3 +154,9 @@ The naive loop and the reviewed loop differ by four lines of constraint — and 
 
 > Lineage: Wiener's two-level feedback (*The Human Use of Human Beings*, 1950) for the judgment/execution split and red lines; the plan/build/judge pattern from Anatoli's *Loops explained* and Addy's *Loop Engineering*.
 > Mechanism layer (how to wire the loop architecture): see `autonomous-loops` / `continuous-agent-loop`. This skill does not re-implement mechanism; it covers goal definition and runaway prevention only.
+
+## Enriquecimento 2026-09-06 — verifier-first + mocks anti-pattern (AI Code King `6m1vJqdsanQ`)
+
+- **Boris Cherny thesis**: "don't write prompts, write the loop" — trigger/goal/work/memory/verification; o bloco que diz "não, ainda não pronto" (feedback gate) é o que decide a qualidade.
+- **Caso real do vídeo**: loop 2 dias verde em unit tests contra os próprios mocks, mas checkout morto p/ usuário real. Green na máquina do agente prova nada → failure modes #2 + #3 + "prefer reconciliation".
+- **Antibody**: verifier-first — defina o verificador antes do modelo; verificação = app live/deployado se comportando p/ usuário real (ex: TestSprite CLI open-source Apache 2.0 dirigindo o app, devolvendo screenshot do que o usuário veria), nunca "looks right" nem só asserts próprios.

@@ -27,3 +27,13 @@ Converte planilha/processo manual em ferramenta interna sem reinventar harness.
 - [ ] Schema validado
 - [ ] Import/export CSV
 - [ ] Permissão por papel
+
+## Enriquecimento 2026-09-06 — Excel→dashboard em <15min (Karine Lago `CqvRVemfsBA`)
+
+Caso real: planilha Excel → dashboard web com Cloud Code em <15min (vs 1 dia–1 semana em Power BI/Tableau), publicado no próprio domínio com login/senha, sem licença BI por usuário — mesmo processo vale p/ site institucional, landing e sistema interno pequeno.
+
+- **Validação numérica obrigatória**: confira totais no Excel (tabela dinâmica) antes de aceitar — "IA é copiloto; se mostrar valor errado, a culpa é sua".
+- **Auth**: peça camada login/senha + painel admin de usuários junto na primeira geração.
+- **Versionamento**: conector GitHub → repo privado; cada iteração commitada permite rollback.
+- **Limites de governança**: IA tem limite de linhas lidas (arquivo de 1GB não passa); empresas listadas/alta governança exigem estrutura completa de análise + auditoria — este fluxo é p/ projetos que precisam de flexibilidade e iteração rápida. Dados sensíveis → versões enterprise (sem treino com seus dados).
+- **Stack gerada**: PHP + migrations + README; deploy via conector de hospedagem (ex: Hostinger) + domínio.
