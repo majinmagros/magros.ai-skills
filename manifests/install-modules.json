@@ -570,6 +570,7 @@
         "skills/competitive-report-structure",
         "skills/marketing-campaign",
         "skills/analise-concorrentes",
+        "skills/ads-operator",
         "skills/criar-campanha-visual",
         "skills/humanizar-texto",
         "skills/plain-language-response",
@@ -628,7 +629,8 @@
         "skills/obsidian-cli",
         "skills/whatsapp-evolution-go",
         "skills/context-ledger",
-        "skills/book-to-skill"
+        "skills/book-to-skill",
+        "skills/alpaca-broker-ops"
       ],
       "targets": [
         "claude",
@@ -758,7 +760,8 @@
         "skills/pipeline-video-agente",
         "skills/baixar-musica",
         "skills/dnb-production",
-        "skills/voice-cloning-local"
+        "skills/voice-cloning-local",
+        "skills/blender-mcp-ops"
       ],
       "targets": [
         "claude",
@@ -895,7 +898,8 @@
         "skills/spatial-intelligence-world-models",
         "skills/rlm-recursive-agent",
         "skills/zed-deltadb-versioning",
-        "skills/buzz-workspace-teaming"
+        "skills/buzz-workspace-teaming",
+        "skills/agent-swarm-ops"
       ],
       "targets": [
         "claude",
