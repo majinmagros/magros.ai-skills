@@ -251,7 +251,12 @@
         "skills/autopilot-content-factory",
         "skills/notebooklm-claude-rag",
         "skills/claude-video",
-        "skills/impeccable-design"
+        "skills/impeccable-design",
+        "skills/site-clone-migration",
+        "skills/visual-qa-designer",
+        "skills/astro-site-ops",
+        "skills/mcp-hardware-arduino",
+        "skills/design-iterate-in-place"
       ],
       "targets": [
         "claude",
@@ -409,7 +414,11 @@
         "skills/grill-with-docs",
         "skills/grilling",
         "skills/grills",
-        "skills/model-reflection-tuning"
+        "skills/model-reflection-tuning",
+        "skills/skill-eval-runner",
+        "skills/rule-drift-auditor",
+        "skills/self-improving-skill",
+        "skills/plan-duel"
       ],
       "targets": [
         "claude",
@@ -578,7 +587,12 @@
         "skills/conversa",
         "skills/criatividade",
         "skills/financiamento-imobiliario",
-        "skills/curriculo-ats-optimizer"
+        "skills/curriculo-ats-optimizer",
+        "skills/prospeccao-maps-freelance",
+        "skills/agent-commerce-interface",
+        "skills/ads-creative-factory",
+        "skills/ads-reporter-multi",
+        "skills/aeo-geo-visibility"
       ],
       "targets": [
         "claude",
@@ -630,7 +644,12 @@
         "skills/whatsapp-evolution-go",
         "skills/context-ledger",
         "skills/book-to-skill",
-        "skills/alpaca-broker-ops"
+        "skills/alpaca-broker-ops",
+        "skills/rag-corporativo-seguro",
+        "skills/slack-tag-ops",
+        "skills/approval-loop-morning-digest",
+        "skills/meeting-task-listener",
+        "skills/telegram-channel-operator"
       ],
       "targets": [
         "claude",
@@ -723,7 +742,8 @@
       "paths": [
         "skills/crosspost",
         "skills/x-api",
-        "skills/social-publisher"
+        "skills/social-publisher",
+        "skills/dm-keyword-automation"
       ],
       "targets": [
         "claude",
@@ -761,7 +781,8 @@
         "skills/baixar-musica",
         "skills/dnb-production",
         "skills/voice-cloning-local",
-        "skills/blender-mcp-ops"
+        "skills/blender-mcp-ops",
+        "skills/video-cut-pipeline"
       ],
       "targets": [
         "claude",
@@ -899,7 +920,11 @@
         "skills/rlm-recursive-agent",
         "skills/zed-deltadb-versioning",
         "skills/buzz-workspace-teaming",
-        "skills/agent-swarm-ops"
+        "skills/agent-swarm-ops",
+        "skills/agnostic-repo-mirror",
+        "skills/squad-builder",
+        "skills/ramp-ops",
+        "skills/grokbot-team-ops"
       ],
       "targets": [
         "claude",
@@ -942,7 +967,8 @@
         "skills/homelab-vlan-segmentation",
         "skills/homelab-wireguard-vpn",
         "skills/kubernetes-patterns",
-        "skills/uncloud"
+        "skills/uncloud",
+        "skills/vps-guided-install"
       ],
       "targets": [
         "claude",
@@ -1035,7 +1061,8 @@
       "description": "Document processing, conversion, and translation skills.",
       "paths": [
         "skills/nutrient-document-processing",
-        "skills/visa-doc-translate"
+        "skills/visa-doc-translate",
+        "skills/word-revision-workflow"
       ],
       "targets": [
         "claude",

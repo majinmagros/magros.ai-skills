@@ -48,3 +48,20 @@ Produto fechado (sem docs oficiais) com 3 ideias reaproveitáveis na factory:
 - **Time de 4 papéis**: minerador (Scrape Creators API no IG-alvo → dataset dos melhores posts) → copywriter → engenheiro audiovisual → social media (agenda/publica). Espelha os 7 estágios da factory.
 - **Chat inter-bot nativo + routines**: bots enxergam o chat um do outro e trocam info direto (no Claude/Codex o equivalente é `/handover` manual) — para `sessoes-orquestradas`, prefira messaging nativo a copiar/colar entre sessões.
 - **Templates compartilháveis**: exporte cada papel como template instalável (e importe de Hermes/OpenClaw) — pacotes de templates são também produto vendável.
+
+## Boss-of-Bots + Teach-by-Recording (GrokBot, 2026-09)
+
+Fonte: Batch 14 re-analise #113/#127 (videos Karine Lago + Gabriel Adamuchi).
+
+- **Boss-of-bots**: bot-chefe orquestra sub-bots por papel fixo:
+  pesquisa YT/IG/X -> escreve no tom do dono -> agenda/publica.
+- **Delegacao bot-to-bot**: bots trocam info direto entre si, sem
+  handover manual (equivalente em Claude/Codex: `/handover` ou
+  messaging em `sessoes-orquestradas`).
+- **Teach-by-recording**: grava a navegacao do usuario -> gera skill
+  reutilizavel a partir dos passos observados.
+- **Quando reaproveitar**: time minerador -> copywriter -> audiovisual
+  -> social media espelha a factory; rotina agenda dispara o chefe.
+- **Preco**: valor citado no video envelheceu. Confira o plano vigente
+  em x.ai/news/grok-bot-more-plans antes de orcar. Nao use preco de
+  video como cotacao.

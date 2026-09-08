@@ -162,3 +162,24 @@ Opinião do autor do vídeo (não docs oficiais — preços/limites mudam, confi
 | **Copilot / Antigravity** | — | Reprovados pelo autor (harness fraco, erros) |
 
 Pattern: multi-harness sem lock-in (mesmo padrão de desenvolvimento em Cloud+Codex+Cursor).
+
+## Snapshot 2026-09-08 (Astra / Hy-4 / GLM 5.3 / Gemini 3.8)
+
+Fonte: Batch 14 #184-186 + re-analises Batch 8-9. Precos abaixo sao
+tabela do vendor em 2026-09-08, reconfirmar antes de usar.
+
+- **GPT-6 Astra**: $10 entrada / $50 saida por MTok; fast mode custa 2x.
+  Ref: developers.openai.com/api/docs/pricing. Usar como forte que
+  verifica/orquestra, nao para gerar volume.
+- **Gemini 3.8 Flash**: $0.75 entrada / $3.75 saida por MTok, preco
+  introdutorio ate o fim do ano. Ref: ai.google.dev/gemini-api/docs/pricing.
+  Candidato a executor barato de loops enquanto durar a promo.
+- **Tencent Hy-4 Preview**: MoE aberto 770B total / 49B ativos, 1M ctx,
+  Apache 2.0. Ref: github.com/Tencent-Hunyuan/Hy4-preview. Precos ainda
+  instaveis, confirmar no OpenRouter antes de orcar.
+- **z-ai/glm-5.3-flash**: 320B-A18B, 1M ctx, MIT.
+  Ref: openrouter.ai/z-ai/glm-5.3-flash. Barato; falha first-pass mas
+  com loop verificador/supervisor chega igual por cerca de metade do
+  custo (caso Batch 14 #186).
+- **Tese**: barato+loop vence first-pass caro. Gere com barato, valide
+  com forte; meca custo-por-tarefa, nao preco/token.

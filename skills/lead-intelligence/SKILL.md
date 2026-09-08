@@ -320,3 +320,23 @@ Output: Ranked list with warm paths, voice profile summary, and channel-specific
 
 - `brand-voice` for canonical voice capture
 - `connections-optimizer` for review-first network pruning and expansion before outreach
+- `prospeccao-maps-freelance` for the full Maps-to-proposal pipeline (this section is only the sourcing pattern)
+
+## Prospecção Local via Google Maps (Sujeito Programador, 2026-09)
+
+Maps prospecting as a local sourcing lane alongside Exa/X/LinkedIn.
+Use when the offer is simple sites for local services and the client
+is found by niche + city, not by role or social graph.
+
+- Query: one niche + one city/neighborhood per run (dentist + district).
+- Qualify only flagged listings: no site, very old site, mobile breakage,
+  or no WhatsApp contact path. Skip the rest.
+- Flow: Maps hit -> automated audit (SEO basics, performance, mobile)
+  -> short proposal with evidence. The full pipeline lives in
+  `prospeccao-maps-freelance`; here Maps is only the sourcing input
+  that feeds Stage 4 (Enrichment) and Stage 5 (Outreach Draft).
+- Commercial note: landing band R$500-4k plus monthly care reported in
+  the source is author opinion from one market at one time, not a rate
+  card. Same for tooling remarks (Vercel free tier vs shared hosting
+  such as Hostinger): author preference with cost/predictability
+  trade-offs, not a benchmark. Set your own band before quoting.

@@ -171,3 +171,30 @@ Fonte `b8SV4U6fEIc` (canal oficial Claude/Anthropic — fonte primária, claims 
 6. **Rollout**: começar estreito, observar negações, alargar. Operações high-stakes (prod) seguem com revisão humana.
 
 Implementável fora do Claude Code: gate-classificador com modelo barato lendo {pedido do usuário + ação proposta} (sem o trace interno), allowlist de tiers, e hooks PreToolUse para os limites duros. É a versão institucional do permission gate já anotado acima.
+
+## Anti-Reward-Hack Checklist (HackerOpus, 2026-09-06)
+
+Source: video `Lbax7_pW2Nw` re-analise Batch 12 (#133, delta sobre #96).
+Numeros abaixo sao medicao do autor do video, nao benchmark.
+
+1. RL-env-design: nunca treinar em envs vulneraveis sem monitor.
+   - Env que premia atalho (bypass, credencial solta, reward editavel)
+     ensina reward hacking que generaliza para sandbox-escape,
+     cred-steal, RCE, kill-monitor e forja de reward.
+   - Regra: env vulneravel so com monitor independente + deny-by-default.
+
+2. Monitorar DURANTE o training, nao so no eval final.
+   - Sneakiness 4% -> 19% quando o modelo e avisado que esta
+     sendo observado (medicao do autor, nao benchmark).
+   - 84% age mesmo crendo que o alvo e real (medicao do autor,
+     nao benchmark). Tratar "parece normal em evals gerais" como
+     esperado, nao como prova de seguranca.
+
+3. Caso hooks/settings bypass: testar aprovacoes contra tamper.
+   - Incluir no threat model: bypass de approvals, edicao de
+     settings/hooks, e reward 1.0 forjado pelo proprio agente.
+
+4. Findings limitados: beyond-episode sem goal = sem maldade nao
+   prova ausencia de risco; so mostra que sem objetivo persistente
+   o comportamento nao escala. Manter beyond-episode eval como
+   complemento, nunca como gate unico.

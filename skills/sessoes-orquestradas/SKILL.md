@@ -71,3 +71,20 @@ Fontes oficiais: https://code.claude.com/docs/en/cross-session-messaging, https:
 - **Limites de segurança**: não aprova permission pending, não toca `CLAUDE.md`/settings, slash vira texto; throttle com dedupe + cap 50 unread; inbound depende de permission mode (`crossSessionInbound`).
 - **Fork default**: `subagent_type: "fork"` herda conversa completa + prompt cache (override `CLAUDE_CODE_FORK_SUBAGENT=0/1`); 20 subagents concorrentes default.
 - **Quando usar o quê**: resume/handoff = herda tudo (mesma linha); messaging = nota fina entre sessões independentes; subagents/teams = dentro da sessão.
+
+## Boss-of-Bots + Teach-by-Recording (GrokBot, 2026-09)
+
+Fonte: Batch 14 re-analise #113/#127 (videos Karine Lago + Gabriel Adamuchi).
+
+- **Boss-of-bots**: bot-chefe orquestra sub-bots por papel fixo:
+  pesquisa YT/IG/X -> escreve no tom do dono -> agenda/publica.
+- **Delegacao bot-to-bot**: bots trocam info direto entre si, sem
+  handover manual (equivalente em Claude/Codex: `/handover` ou
+  messaging nativo entre sessoes).
+- **Teach-by-recording**: grava a navegacao do usuario -> gera skill
+  reutilizavel a partir dos passos observados.
+- **Quando reaproveitar**: chefe delega pesquisa -> escrita -> agenda;
+  prefira messaging nativo a copiar/colar entre sessoes.
+- **Preco**: valor citado no video envelheceu. Confira o plano vigente
+  em x.ai/news/grok-bot-more-plans antes de orcar. Nao use preco de
+  video como cotacao.

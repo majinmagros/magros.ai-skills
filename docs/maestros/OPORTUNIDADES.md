@@ -1,8 +1,8 @@
 ﻿# Oportunidades do YouTube — Relatório de Análise
 
-Data: 2026-09-03 (atualizado 2026-09-07 — Batch 13: +9 transcrições de 07/09)  
+Data: 2026-09-03 (atualizado 2026-09-08 — Batch 14: +16 transcrições de 08/09, sendo 6 inéditas + 10 re-análises cross-machine confirmando Batches 8–9)  
 Canais analisados: IndyDevDan, ColeMedin, SimonScrapes, AI Foundations, AI Jason, Maestros da IA, Attekita Dev, Sujeito Programador, AI Revolution PT, Inteligência Mil Grau, AI Code King, Claude Oficial, Nate Herk, Anwar Hermuche, **Gustavo Campelo (@gucampelo)**, **Joy Dev Studio (@joydevstudio)**, **Luciana Papini (@LucianaPapini)**, **Karine Lago (@KarineLago)**, **Pavan Adhav (@pavanadhav)**, **Ratos de IA (@ratosdeia)**  
-Transcrições baixadas e analisadas: **192 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
+Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
 
 ---
 
@@ -473,3 +473,65 @@ Transcrições baixadas e analisadas: **192 vídeos** (marcados em `ANALISADOS.j
 | G23 | **agent-swarm-ops** (mailbox/thread, `claim-file` locking, budget-aware, `done`+bail-out, referee/canonical, métricas de coordenação, sandbox last-line) | 175 | ✅ **Materializada em `skills/agent-swarm-ops/` (2026-09-07, módulo `agentic-patterns`)** |
 | G24 | **alpaca-broker-ops** (Alpaca paper vs live, `APCA_API_BASE_URL`, paper-first, 6-wakeups+handoff, guardrails financeiros) | 178 | ✅ **Materializada em `skills/alpaca-broker-ops/` (2026-09-07, módulo `operator-workflows`; paper-trading validado em https://docs.alpaca.markets/us/docs/paper-trading)** |
 | G25 | **blender-mcp-ops** (Blender via MCP: primitivas, SVG→mesh, screenshot-verify, cost-gate SVG-primeiro, loop imagem→reanexa→converge) | 180 | ✅ **Materializada em `skills/blender-mcp-ops/` (2026-09-07, módulo `media-generation`; repo validado: https://github.com/ahujasid/blender-mcp)** |
+
+---
+
+## Nova Análise - Batch 14 (2026-09-08) - 16 vídeos via `catalog-all` + `diff-all --since-last` (ver #184-189)
+
+> **Nota coleta 2026-09-08**: `catalog-all` nos 26 canais (todos OK). `diff-all --since-last` → 15 `sem_transcricao` + 7 do `@claude` com date-wobble (upload_date ±1 dia após re-catalogar; os 6 shorts seguem sem legenda — dead-end legítimo, ver #174). Baixados 22 ids em lotes por canal com retry+fallback (429 forte no endpoint pt, contornado via en/pt fallback): **16 transcrições** (6 shorts sem legenda em nenhum idioma). **Achado cross-machine**: 10/16 já analisados nos Batches 8–9 noutra máquina — esta estação não tinha os `.dedup.txt`, então o `diff` os listou como novos. Re-análise cega em 5 agentes paralelos **confirmou os vereditos anteriores sem contradição** (detalhes novos: preços Astra $10/$50 e Flash $0.75/$3.75 confirmados nas docs oficiais). 6 vídeos inéditos abaixo como #184–189. Regra de ouro respeitada: 0 skill nova, 0 redundância.
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 184 | **I Tested GPT-6 Astra vs Fable 5.1 on 15 Real Use Cases** (`WfJPBVXPt8k` - nateherk) | Head-to-head real em 15 casos com custo+tempo por caso; placar 10–5 p/ Astra; total Astra $326,98/11h19 vs Fable $513,36/9h35 (N=1, sem isolamento) | ✅ **NOVO** | **Coberto** por `agent-eval` (mais rigoroso) + `roteamento-modelos-baratos` + `llm-leaderboard-tracker` — custos = medição do autor; modelos reais em openai.com/index/gpt-6-astra e artificialanalysis.ai |
+| 185 | **Hy-4 Preview (Fully FREE): RIP Astra?** (`Dmlszfz2LjM` - aicodeking) | Tencent Hy-4 Preview: MoE aberto 770B/49B ativos, 1M ctx, Apache 2.0, focado em agentes; API barata + grátis 2 semanas no Work Buddy; demos (platformer, jogo Three.js, auditoria 24 reembolsos, deck 10 slides) | ✅ **NOVO** | **Coberto** por `roteamento-modelos-baratos` (executor barato) + `llm-leaderboard-tracker` (registrar snapshot quando preços estabilizarem no OpenRouter/Token Hub); família real: tencent.com/en-us/articles/2202386.html, github.com/Tencent-Hunyuan/Hy4-preview |
+| 186 | **THE MYSTERIOUS MODEL That Anthropic and OpenAI Fear** (`69ni47WyEFI` - maestrosdaia) | Modelo stealth `stealth/ox-alpha` → `z-ai/glm-5.3-flash` (320B-A18B, 1M ctx, MIT) no OpenRouter: benchmark vibe-coding (pomodoro, runner, predador-presa, mundo 3D) — Fable acerta de 1ª, GLM falha 3/4 mas com loops de verificação/supervisor chega igual por ~metade do custo | ✅ **NOVO** | **Coberto** por `roteamento-modelos-baratos` + `9router-gateway`/`9router-resilient-fallback` + `loop-design-check` + `agent-eval` — valida tese "barato+loop vence first-pass caro"; https://openrouter.ai/z-ai/glm-5.3-flash |
+| 187 | **OpenAI revela MENTE ALIENÍGENA** (`IBYs5ZLrNKI` - airevolutionx_pt, 08/09) | Resumo do ensaio Pachocki (mente alienígena) + dados internos (3,1 agent-days/human-day, ~$600/dia, pesquisador full-auto mar/2028) + treta AGI Huang vs Marcus + eval-awareness | ⚠️ **Notícia** | Não actionable; reaproveitável já coberto por `agent-guardrails` + `verification-loop` + `agent-architecture-audit`; https://openai.com/index/an-alien-mind/ |
+| 188 | **How to Get AI to Recommend Your Brand in 16 minutes \| AEO Playbook** (`L-X6HIrzrBI` - graceleungyl) | AEO/GEO: 1) entidade de marca consistente, 2) dominar 1 tópico com profundidade/originalidade (information gain), 3) menções third-party (80–90% das citações) + tracking de visibilidade por prompt/jornada (HubSpot AEO, Semrush, SparkToro, AirOps) | ✅ **NOVO** | **Confirma e detalha G11 `astro-site-ops + aeo-geo`**: grep em 420 skills = 0 hits p/ aeo/answer-engine; `seo` = só clássico. Vídeo patrocinado HubSpot — validar claims (information-gain patent, rater guidelines) antes de materializar; decisão pendente: skill standalone vs seção em `seo` (ver #122, conservador) |
+| 189 | **3 AI Mindset Shifts Every Business Professional Needs in 2026** (`zwNW5sWIuDA` - celinexu6598) | Trocar representação pelo real (protótipo vs slide); colapsar handoffs p/ org AI-native; externalizar julgamento tácito em rubricas/contexto reusável | ✅ **NOVO** | **Coberto** (parcial) por `domain-context-model` (julgamento → CONTEXT.md/rubricas) + `automacao-deterministica`/`agentic-engineering` — opinião/metodologia, sem ferramenta |
+| — | **Re-análises cross-machine (10)** (`DcLj_SO8JNk`=#79, `pBfRhdqqm_4`=#80, `Jhro81qrql4`=#81, `ZTgFyP0PZJo`=#82, `xdXLzFzxA9Q`=#83, `2uVH2WUYb5E`=#84, `Gb1vss1SvwI`=#112, `q-1IkmBOqh4`=#113, `5mXAGu0Mu20`=#115, `FoteuzPpx7E`=#116) | Re-análise cega confirmou os vereditos dos Batches 8–9 sem contradição; deltas: preços Astra/Flash confirmados nas docs oficiais; Karine `q-1IkmBOqh4` é continuação do #127 (boss-of-bots + teach-by-recording, preço do vídeo envelheceu — oficial x.ai/news/grok-bot-more-plans); FullCycle SoT/ToT 30pts → enrich `prompt-builder`/`prompt-optimizer`; Sujeito Maps → enrich `lead-intelligence`/`data-scraper-agent` (converge com gap `prospeccao-maps-freelance` do Batch 8) | ✅ **Re-analisados 2026-09-08** | Sem gap novo; enriches registrados nos deltas |
+
+### Gaps novos do Batch 14
+
+| # | Oportunidade | Evidência (nº) | Ação Sugerida |
+|---|---|---|---|
+| — | *Nenhum G novo* | — | **G11 confirmado e detalhado** por #188 (playbook AEO completo: entidade + buyer-prompts + third-party + visibility tracking). Decisão pendente: materializar skill standalone `aeo-geo-visibility` vs seção em `seo` — validar fontes oficiais (Google, HubSpot, Semrush) antes, conforme passo 4 da skill |
+
+---
+
+## Materialização em lote (2026-09-08) — todos os gaps abertos materializados
+
+> Execução do passo 5 da skill em cima dos Batches 8–14: 27 skills novas criadas em 7 lotes paralelos (frontmatter validado, corpo ≤200 linhas, ASCII, sem paths pessoais), 9 skills existentes enriquecidas, `manifests/install-modules.json` atualizado (9 módulos), `docs/data/skills.json` regenerado via `scripts/build-catalog.js` (420 → **447 skills**). `validate-skills` OK (447 dirs). Falhas restantes de CI são pré-existentes e intocadas por este lote: `validate-install-manifests` (`skills/ck` ausente + ~28 skills sem módulo), `validate-no-personal-paths` (5 paths `C:\Users\magro` em Batches 7–13), `check-unicode-safety` (emojis repo-wide, 0 nas novas), `catalog:check` (README sem marker do bundle).
+
+| Skill nova | Gap | Módulo | Status |
+|---|---|---|---|
+| `ads-operator` | G1 | business-content | Já existia (commit c1ba387) — cobre Google + Meta lean; #159 absorvido |
+| `vps-guided-install` | G2 | devops-infra | Criada (estende `cloud-code-vps-deploy`) |
+| `skill-eval-runner` | G3 | workflow-quality | Criada |
+| `agnostic-repo-mirror` | G4 | agentic-patterns | Criada |
+| `rag-corporativo-seguro` | G5 | operator-workflows | Criada |
+| `slack-tag-ops` | G6 | operator-workflows | Criada |
+| `ramp-ops` | G7 | agentic-patterns | Criada |
+| `rule-drift-auditor` | G8 | workflow-quality | Criada |
+| `word-revision-workflow` | G9 | document-processing | Criada |
+| `squad-builder` | G10 | agentic-patterns | Criada |
+| `astro-site-ops` | G11a | framework-language | Criada |
+| `aeo-geo-visibility` | G11b/#188 | business-content | Criada — claims validados: Rater Guidelines (reputação por fontes independentes), patente US20200349181A1 (information-gain), HubSpot AEO, Semrush 4.4x, Semrush+Indig 50k marcas, AirOps 85% third-party, SparkToro 2.961 runs; NÃO validados (marcados na skill): 3-4x conversão, 97% visibilidade, Reddit dominante, antitrust-trial |
+| `design-iterate-in-place` | G12 | framework-language | Criada |
+| `approval-loop-morning-digest` | G13 | operator-workflows | Criada |
+| `video-cut-pipeline` | G14 | media-generation | Criada |
+| `site-clone-migration` | G15 | framework-language | Criada (gap puro) |
+| `dm-keyword-automation` | G16 | social-distribution | Criada |
+| `telegram-channel-operator` | G17a | operator-workflows | Criada |
+| `self-improving-skill` | G17b | workflow-quality | Criada |
+| `meeting-task-listener` | G18 | operator-workflows | Criada |
+| `plan-duel` | G19a | workflow-quality | Criada |
+| `visual-qa-designer` | G19b | framework-language | Criada |
+| `agent-guardrails` + `eval-harness` | G20 | — (enrich) | Enrich aplicado (Anti-Reward-Hack Checklist HackerOpus) |
+| `agent-commerce-interface` | G21 | business-content | Criada (DoorDash marcado a validar) |
+| `mcp-hardware-arduino` | G22 | framework-language | Criada (prioridade era baixa; gap #102/#134 confirmado) |
+| `prospeccao-maps-freelance` | Batch 8 | business-content | Criada |
+| `grokbot-team-ops` | Batch 9 #97 | agentic-patterns | Criada (sem preço gravado) |
+| `ads-creative-factory` | #158 | business-content | Criada |
+| `ads-reporter-multi` | #158 | business-content | Criada |
+
+Enriches laterais aplicados: `prompt-builder` + `prompt-optimizer` (bench SoT/ToT/ReAct #112), `lead-intelligence` + `data-scraper-agent` (sourcing via Maps #81), `autopilot-content-factory` + `sessoes-orquestradas` (boss-of-bots + teach-by-recording #113), `roteamento-modelos-baratos` (snapshot Astra/Hy-4/GLM 5.3/Gemini 3.8 2026-09-08).

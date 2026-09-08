@@ -62,3 +62,28 @@ Flags oficiais Claude Code: `--append-system-prompt` (preserva o default — usa
 na maioria dos casos), `--system-prompt` (substitui tudo — cuidado), `-file`
 variações (as file são Print-only). Efeito colateral desejado: menos output
 tokens = menos custo e resposta mais rápida.
+
+## SoT / ToT / ReAct Bench (FullCycle, 2026-09)
+
+Demo autoral, N=1, nao benchmark. Fonte: video #112 `Gb1vss1SvwI`
+("Are more complex prompts better?"). Mesma task nos 5 prompts:
+gerar PR de issue+diff+CI+template via LangChain/GPT-5.5.
+
+| # | Prompt | Formato |
+|---|---|---|
+| 1 | direct | pedido direto, sem raciocinio exposto |
+| 2 | CoT auditavel | passo a passo verificavel |
+| 3 | Skeleton-of-Thought (SoT) | skeleton de 5 secoes -> loop expand |
+| 4 | Tree-of-Thoughts (ToT) | 3 candidatos + score + voto |
+| 5 | ReAct agent | tools read-issue/diff/tests/conventions/save-PR |
+
+LLM-as-judge (autor do video): SoT 30, ToT 30,
+direct 27, CoT 27, ReAct 27. Leitura: sofisticacao != melhor
+neste caso; diferenca de 3 pts em N=1 nao prova superioridade.
+
+Quando usar cada um:
+- direct -> tarefa trivial ou bem especificada, custo minimo.
+- CoT auditavel -> precisa rastrear o raciocinio e achar erro.
+- SoT -> resposta longa paralelizavel em secoes independentes.
+- ToT -> espaco de solucoes aberto, vale comparar candidatos.
+- ReAct -> tarefa com ferramentas e estado externo (repo, CI).

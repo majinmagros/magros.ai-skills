@@ -87,3 +87,23 @@ Fonte `qiqw-_6TUZ0` (Grace Leung/Cowork). Receita: agente roda prompts de compra
 - `references/connectors-ai.md` — conector, cliente IA, pipeline
 - `references/feedback-storage.md` — memoria, storage, main.py
 - `references/ops-patterns.md` — Actions, config.yaml, padroes, limites
+
+## Prospecção Local via Google Maps (Sujeito Programador, 2026-09)
+
+Padrao de sourcing local para o molde collect -> enrich -> store:
+varredura agendada de negocios por nicho + cidade; so avanca quem
+tem sinal fraco de presenca web.
+
+- Coleta: busca por nicho + cidade/bairro, uma rodada por nicho;
+  guarda nome, categoria, avaliacoes, telefone e URL do site.
+- Flag de sourcing: sem site, site muito antigo, quebra no mobile,
+  ou sem caminho de WhatsApp. Deduplica por place id/URL antes de salvar.
+- Fluxo: achado do Maps -> auditoria automatizada (SEO, performance,
+  mobile) -> proposta curta com evidencias. O pipeline completo esta em
+  `prospeccao-maps-freelance`; aqui o Maps e so a fonte do coletor,
+  que alimenta enrich (score) + storage (planilha/DB) + feedback.
+- Nota comercial: faixa R$500-4k + recorrencia de manutencao, e os
+  comentarios sobre ferramentas (tier gratuito tipo Vercel vs
+  hospedagem compartilhada tipo Hostinger), sao opiniao do autor em
+  um mercado e uma epoca, nao tabela. Defina sua faixa local antes
+  de orcar.
