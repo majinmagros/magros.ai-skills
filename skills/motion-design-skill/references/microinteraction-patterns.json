@@ -1,0 +1,32 @@
+{
+  "card": {
+    "animation": "fade-in + slide-up",
+    "duration_ms": 250,
+    "easing": "ease-out",
+    "trigger": "mount / IntersectionObserver"
+  },
+  "button": {
+    "animation": "scale 0.95 (tap) / 1.02 (hover) + ripple",
+    "trigger": "hover / active / focus"
+  },
+  "modal_toast": {
+    "animation": "fade-in + scale 0.95→1 (spring)",
+    "trigger": "open"
+  },
+  "loading": {
+    "animation": "infinite loop (spinner, pulse, skeleton)",
+    "trigger": "mount"
+  },
+  "icon": {
+    "animation": "morph / bounce / rotate 150-250ms",
+    "trigger": "hover / click / state change"
+  },
+  "list_item": {
+    "animation": "stagger fade-in, 50ms delay per item",
+    "trigger": "mount / filter"
+  },
+  "page_transition": {
+    "animation": "slide + fade 300ms",
+    "trigger": "route change"
+  }
+}

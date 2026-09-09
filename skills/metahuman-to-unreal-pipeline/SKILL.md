@@ -1,10 +1,6 @@
 ---
 name: metahuman-to-unreal-pipeline
-description: >-
-  Export FBX (Blender) → MetaHuman Identity → Body setup → Animation retarget → UE5 BP setup (camera, movement, virtual bones foot locking). Baseado no vídeo Joy Dev Studio "3D Face Modeling is a THING OF THE PAST!".
-  Use quando: "metahuman to unreal pipeline", "metahuman export unreal", "metahuman fbx export", "metahuman blender to unreal", "metahuman unreal pipeline", "metahuman fbx export blender".
-  Não use para: MetaHuman Identity Solve (use metahuman-identity-pipeline), Animation retarget (use metahuman-animation-retarget), MetaHuman Blueprint setup (use metahuman-unreal-blueprint).
-  Outcome: Pipeline completo MetaHuman to Unreal Engine 5: FBX export (Blender) to MetaHuman Identity to Body setup to Animation retarget to UE5 BP setup (camera, movement, virtual bones foot locking).
+description: Use when exporting Blender FBX through MetaHuman Identity, body setup, animation retarget to UE5 blueprint setup — camera, movement, virtual bones foot locking. Triggers on "metahuman to unreal pipeline", "metahuman export unreal", "metahuman fbx export", "metahuman blender to unreal", "metahuman unreal pipeline".
 metadata:
   origin: AUTORAL
   source_docs:

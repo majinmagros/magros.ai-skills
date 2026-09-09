@@ -1,7 +1,6 @@
 ---
 name: rules-to-hooks-auditor
-description: >-
-  Audita CLAUDE.md / AGENTS.md / .claude/rules/ e extrai processos probabilísticos que devem virar hooks determinísticos (stop, pre-tool-use, post-tool-use, start-session, sub-agent-stop). Gera hooks prontos com templates baseados em hookify-rules + agent-guardrails. Use quando: "auditoria rules hooks", "converter rules em hooks", "hooks create skill", "garantias determinísticas", "test enforcement", ".env block", "security hooks", "stop hook tests". Non-triggers: criar hooks do zero sem rules existentes, hooks para eventos não mapeados em rules. Outcome: relatório de migração (rule → hook type + script template + settings.json patch) + hooks prontos para instalar.
+description: Use when auditing CLAUDE.md / AGENTS.md / rules and migrating probabilistic processes to deterministic hooks — stop, pre-tool-use, post-tool-use, start-session, sub-agent-stop. Triggers on "auditoria rules hooks", "converter rules em hooks", "hooks create skill", "garantias determinísticas", "test enforcement", ".env block", "security hooks", "stop hook tests".
 metadata:
   origin: ECC
   source_docs:

@@ -1,7 +1,6 @@
 ---
 name: gsap-skills
-description: >-
-  Official GreenSock GSAP AI Skills — teaches AI to apply GSAP/ScrollTrigger best practices, performance optimizations, and official patterns from the GSAP documentation. Use when creating scroll-linked animations, interactive effects, or when AI generates buggy/complex GSAP logic. Triggers: "gsap", "scrolltrigger", "scroll animation", "pinning", "scrub", "greensock", "animation performance", "timeline sequencing". Non-triggers: generic CSS animations, Framer Motion, Lottie, non-GSAP animation libraries. Outcome: AI produces optimized, bug-free GSAP code following official patterns (transforms over layout props, proper plugin registration, debounced ScrollTrigger.refresh, scoped React cleanup).
+description: Use when applying GSAP/ScrollTrigger best practices — scroll-linked animations, interactive effects, buggy GSAP logic fixes. Triggers on "gsap", "scrolltrigger", "scroll animation", "pinning", "scrub", "greensock", "animation performance", "timeline sequencing".
 metadata:
   origin: ECC
   source_docs:

@@ -1,39 +1,5 @@
 [
   {
-    "name": "universal-portability",
-    "score": 61,
-    "lines": 240,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-account-optimizer",
-    "score": 63,
-    "lines": 317,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-cowork-patterns",
-    "score": 63,
-    "lines": 319,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "e2e-testing",
     "score": 66,
     "lines": 353,
@@ -43,61 +9,6 @@
       "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "claude-chrome-automation",
-    "score": 68,
-    "lines": 252,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-model-router",
-    "score": 68,
-    "lines": 218,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-project-template",
-    "score": 68,
-    "lines": 244,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "motion-design-skill",
-    "score": 68,
-    "lines": 203,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "skill-creator-methodology",
-    "score": 68,
-    "lines": 210,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "agentic-os",
@@ -558,36 +469,6 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "brand-discovery",
-    "score": 80,
-    "lines": 146,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-connector-strategy",
-    "score": 80,
-    "lines": 157,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-md-auditor",
-    "score": 80,
-    "lines": 80,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "codebase-deepening-audit",
     "score": 80,
     "lines": 21,
@@ -619,36 +500,6 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "gsap-skills",
-    "score": 80,
-    "lines": 103,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "img2threejs",
-    "score": 80,
-    "lines": 138,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "memory-import-workflow",
-    "score": 80,
-    "lines": 133,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "meta-muse-spark",
     "score": 80,
     "lines": 20,
@@ -658,36 +509,6 @@
       "pouca estrutura"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "metahuman-identity-pipeline",
-    "score": 80,
-    "lines": 115,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-to-unreal-pipeline",
-    "score": 80,
-    "lines": 186,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "rules-to-hooks-auditor",
-    "score": 80,
-    "lines": 193,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "setup-interactive-wizard",
@@ -2723,6 +2544,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "brand-discovery",
+    "score": 100,
+    "lines": 141,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "browser-qa",
     "score": 100,
     "lines": 120,
@@ -2772,6 +2600,34 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "claude-account-optimizer",
+    "score": 100,
+    "lines": 77,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-chrome-automation",
+    "score": 100,
+    "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-connector-strategy",
+    "score": 100,
+    "lines": 154,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-cowork-patterns",
+    "score": 100,
+    "lines": 64,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "claude-devfleet",
     "score": 100,
     "lines": 113,
@@ -2782,6 +2638,27 @@
     "name": "claude-managed-agents-patterns",
     "score": 100,
     "lines": 103,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-md-auditor",
+    "score": 100,
+    "lines": 76,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-model-router",
+    "score": 100,
+    "lines": 67,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-project-template",
+    "score": 100,
+    "lines": 59,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3160,6 +3037,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "gsap-skills",
+    "score": 100,
+    "lines": 102,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "healthcare-emr-patterns",
     "score": 100,
     "lines": 161,
@@ -3215,6 +3099,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "img2threejs",
+    "score": 100,
+    "lines": 137,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -3376,6 +3267,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "memory-import-workflow",
+    "score": 100,
+    "lines": 130,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "messages-ops",
     "score": 100,
     "lines": 106,
@@ -3386,6 +3284,20 @@
     "name": "metahuman-animation-retarget",
     "score": 100,
     "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "metahuman-identity-pipeline",
+    "score": 100,
+    "lines": 111,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "metahuman-to-unreal-pipeline",
+    "score": 100,
+    "lines": 182,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3414,6 +3326,13 @@
     "name": "motion-advanced",
     "score": 100,
     "lines": 110,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "motion-design-skill",
+    "score": 100,
+    "lines": 89,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3669,6 +3588,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "rules-to-hooks-auditor",
+    "score": 100,
+    "lines": 192,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "rust-patterns",
     "score": 100,
     "lines": 84,
@@ -3763,6 +3691,13 @@
   },
   {
     "name": "skill-comply",
+    "score": 100,
+    "lines": 60,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "skill-creator-methodology",
     "score": 100,
     "lines": 60,
     "reasons": [],
@@ -3953,6 +3888,13 @@
     "name": "unified-notifications-ops",
     "score": 100,
     "lines": 189,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "universal-portability",
+    "score": 100,
+    "lines": 133,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
