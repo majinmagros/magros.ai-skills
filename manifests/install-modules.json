@@ -924,7 +924,19 @@
         "skills/agnostic-repo-mirror",
         "skills/squad-builder",
         "skills/ramp-ops",
-        "skills/grokbot-team-ops"
+        "skills/grokbot-team-ops",
+        "skills/claude-managed-agents-patterns",
+        "skills/outcome-rubric-verification",
+        "skills/managed-agent-memory-architecture",
+        "skills/testsprite-cli-integration",
+        "skills/subscription-tier-routing",
+        "skills/glm-integration-patterns",
+        "skills/closed-loop-verifier-pattern",
+        "skills/agent-cost-optimization-batch",
+        "skills/model-migration-strategy",
+        "skills/biomedical-ai-pipeline",
+        "skills/computer-use-agent-patterns",
+        "skills/ai-governance-monitor"
       ],
       "targets": [
         "claude",

@@ -1,8 +1,8 @@
 ﻿# Oportunidades do YouTube — Relatório de Análise
 
-Data: 2026-09-03 (atualizado 2026-09-08 — Batch 14: +16 transcrições de 08/09, sendo 6 inéditas + 10 re-análises cross-machine confirmando Batches 8–9)  
+Data: 2026-09-03 (atualizado 2026-09-09 — Batch 15: +3 transcrições novas analisadas: AI Revolution PT, Claude Oficial, AI Code King)  
 Canais analisados: IndyDevDan, ColeMedin, SimonScrapes, AI Foundations, AI Jason, Maestros da IA, Attekita Dev, Sujeito Programador, AI Revolution PT, Inteligência Mil Grau, AI Code King, Claude Oficial, Nate Herk, Anwar Hermuche, **Gustavo Campelo (@gucampelo)**, **Joy Dev Studio (@joydevstudio)**, **Luciana Papini (@LucianaPapini)**, **Karine Lago (@KarineLago)**, **Pavan Adhav (@pavanadhav)**, **Ratos de IA (@ratosdeia)**  
-Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
+Transcrições baixadas e analisadas: **201 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
 
 ---
 
@@ -249,7 +249,7 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 
 ---
 
-## Nova Análise — Batch 7 (2026-09-03) — 8 vídeos pós-02/09 (transcrições em `C:\Users\magro\projetos\yt`)
+## Nova Análise — Batch 7 (2026-09-03) — 8 vídeos pós-02/09 (transcrições em `~/projetos/yt`)
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
 |---|---|---|---|---|
@@ -264,7 +264,7 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 
 ---
 
-## Nova Análise — Batch 8 (2026-09-04) — 10 vídeos de 03-04/09 (transcrições em `C:\Users\magro\projetos\yt`)
+## Nova Análise — Batch 8 (2026-09-04) — 10 vídeos de 03-04/09 (transcrições em `~/projetos/yt`)
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
 |---|---|---|---|---|
@@ -304,7 +304,7 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 
 ---
 
-## Nova Análise - Batch 9 (2026-09-04/05) - 28 vídeos pós-Batch 8 (transcrições em `C:\Users\magro\projetos\yt`)
+## Nova Análise - Batch 9 (2026-09-04/05) - 28 vídeos pós-Batch 8 (transcrições em `~/projetos/yt`)
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
 |---|---|---|---|---|
@@ -348,7 +348,7 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 
 ---
 
-## Nova Análise - Batch 10 (2026-09-05) - canal novo @ratosdeia, 7 vídeos (transcrições em `C:\Users\magro\projetos\yt\ratosdeia`)
+## Nova Análise - Batch 10 (2026-09-05) - canal novo @ratosdeia, 7 vídeos (transcrições em `~/projetos/yt\ratosdeia`)
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
 |---|---|---|---|---|
@@ -366,7 +366,7 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 
 ## Nova Análise - Batch 12 (2026-09-06) - 51 transcrições: 39 inéditas + 12 re-análises com delta + 3 recuperadas de VTTs obsoletos
 
-> **Nota coleta 2026-09-06**: `catalog-all` nos 26 canais (exigiu criar pasta + mapear `@ratosdeia` em `canais-vigilados.local.json`). `diff-all --since-last` → 57 com `matches_filtro=true`; baixados 51 (6 shorts do `@claude` sem legenda em nenhum idioma — `G3vwVsh9RtU`, `S9IJ1GgAAxE`, `KcRcbHxeoKk`, `3TJ9vWl0Ewo`, `Rfhb8EzILmM`, `PK_twqwWqp4` — dead-end legítimo). 429 forte no endpoint de legendas (2 timeouts de 15/30min no lote `@ratosdeia`); retry+fallback do script contornou. Achado: `raw/*.vtt` obsoletos do `@claude` nunca deduplicados escondiam 3 análises (Ramp, auto-mode, Word) marcadas como analisadas mas ausentes do relatório — recuperadas abaixo como R1–R3. Análise paralelizada em 4 agentes. Batches 9–11 rodaram noutra máquina (`C:\Users\magro\...`); 12 ids re-analisados aquiCOLLIDEM com #96/#102/#106/#109/#110/#114/#117–#122 — registrado como **delta**, não duplicata.
+> **Nota coleta 2026-09-06**: `catalog-all` nos 26 canais (exigiu criar pasta + mapear `@ratosdeia` em `canais-vigilados.local.json`). `diff-all --since-last` → 57 com `matches_filtro=true`; baixados 51 (6 shorts do `@claude` sem legenda em nenhum idioma — `G3vwVsh9RtU`, `S9IJ1GgAAxE`, `KcRcbHxeoKk`, `3TJ9vWl0Ewo`, `Rfhb8EzILmM`, `PK_twqwWqp4` — dead-end legítimo). 429 forte no endpoint de legendas (2 timeouts de 15/30min no lote `@ratosdeia`); retry+fallback do script contornou. Achado: `raw/*.vtt` obsoletos do `@claude` nunca deduplicados escondiam 3 análises (Ramp, auto-mode, Word) marcadas como analisadas mas ausentes do relatório — recuperadas abaixo como R1–R3. Análise paralelizada em 4 agentes. Batches 9–11 rodaram noutra máquina (`~/...`); 12 ids re-analisados aquiCOLLIDEM com #96/#102/#106/#109/#110/#114/#117–#122 — registrado como **delta**, não duplicata.
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
 |---|---|---|---|---|
@@ -500,7 +500,7 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 
 ## Materialização em lote (2026-09-08) — todos os gaps abertos materializados
 
-> Execução do passo 5 da skill em cima dos Batches 8–14: 27 skills novas criadas em 7 lotes paralelos (frontmatter validado, corpo ≤200 linhas, ASCII, sem paths pessoais), 9 skills existentes enriquecidas, `manifests/install-modules.json` atualizado (9 módulos), `docs/data/skills.json` regenerado via `scripts/build-catalog.js` (420 → **447 skills**). `validate-skills` OK (447 dirs). Falhas restantes de CI são pré-existentes e intocadas por este lote: `validate-install-manifests` (`skills/ck` ausente + ~28 skills sem módulo), `validate-no-personal-paths` (5 paths `C:\Users\magro` em Batches 7–13), `check-unicode-safety` (emojis repo-wide, 0 nas novas), `catalog:check` (README sem marker do bundle).
+> Execução do passo 5 da skill em cima dos Batches 8–14: 27 skills novas criadas em 7 lotes paralelos (frontmatter validado, corpo ≤200 linhas, ASCII, sem paths pessoais), 9 skills existentes enriquecidas, `manifests/install-modules.json` atualizado (9 módulos), `docs/data/skills.json` regenerado via `scripts/build-catalog.js` (420 → **447 skills**). `validate-skills` OK (447 dirs). Falhas restantes de CI são pré-existentes e intocadas por este lote: `validate-install-manifests` (`skills/ck` ausente + ~28 skills sem módulo), `validate-no-personal-paths` (5 paths `~/projetos/yt` em Batches 7–13), `check-unicode-safety` (emojis repo-wide, 0 nas novas), `catalog:check` (README sem marker do bundle).
 
 | Skill nova | Gap | Módulo | Status |
 |---|---|---|---|
@@ -535,3 +535,66 @@ Transcrições baixadas e analisadas: **198 vídeos** (marcados em `ANALISADOS.j
 | `ads-reporter-multi` | #158 | business-content | Criada |
 
 Enriches laterais aplicados: `prompt-builder` + `prompt-optimizer` (bench SoT/ToT/ReAct #112), `lead-intelligence` + `data-scraper-agent` (sourcing via Maps #81), `autopilot-content-factory` + `sessoes-orquestradas` (boss-of-bots + teach-by-recording #113), `roteamento-modelos-baratos` (snapshot Astra/Hy-4/GLM 5.3/Gemini 3.8 2026-09-08).
+
+---
+
+## Batch 15 — 2026-09-09 (3 vídeos analisados)
+
+### Novos Vídeos Analisados
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 42 | **IA Acaba de Fazer o Impossível: Reverteu o Envelhecimento Humano** (AI Revolution PT) | Descoberta de drogas por IA (In Silico Medicine), relógios biológicos de envelhecimento (6 modelos consenso), GPT-6 Astra uso de computador (OS World 72.6%), governança IA na ONU (risk existencial), Mistral €3B funding | ✅ **NOVO** | Gaps: **biomedical-ai-pipeline** (drug discovery + aging clocks validation), **computer-use-agent-patterns** (OS World, Computer Use API), **ai-governance-monitor** (UN, regulatory tracking) |
+| 43 | **How founders build on Claude Managed Agents** (Claude Oficial) | Mesa redonda: Managed Agents SDK - meeting prep agents (briefs), sales Watchtower (cross-account memory + code writing + fan-out), product analytics (sandboxing + codebase snapshots), **Outcomes** (rubric-driven verification), memory architecture (per-account + org-wide + user-level), build vs buy decision framework, eval strategies (vibes → curated → customer queries), cost optimization (batch mode 50-75% savings), model migration (Opus→Sonnet, failure modes) | ✅ **NOVO** | **Crítico**: **claude-managed-agents-patterns** (SDK patterns: outcomes, memory, sandboxing, briefs), **outcome-rubric-verification** (rubric-driven agent iteration), **managed-agent-memory-architecture** (per-account + cross-account + org-wide), **agent-cost-optimization-batch** (batch mode patterns), **model-migration-strategy** (failure modes per model family) |
+| 44 | **I Mathematically CALCULATED the worth of Codex & Claude Code PLANS** (AI Code King) | Análise de valor subscriptions: Codex Pro 20X ~$4900 API equiv/mês, Claude Max 20X ~$2013, **GLM $18 plano** como opção orçamentária, **TestSprite CLI** para closed-loop verification (deployed app vs mocks), cache impact (94% Astra, 79% Sonnet), desktop app workflow (browser + image gen), fast mode tradeoffs | ✅ **NOVO** | **Crítico**: **testsprite-cli-integration** (runtime verifier for closed loops), **subscription-tier-routing** (weekly allowances, cache-aware routing), **glm-integration-patterns** (browser automation, C coding, generous limits), **cost-modeling-subscriptions** (API equiv methodology), **closed-loop-verifier-pattern** (deployed vs mock testing) |
+
+### 🔴 NOVOS Gaps de Alta Prioridade (Não Cobertos)
+
+| Oportunidade | Descrição | Skill(s) Relacionada(s) | Ação Sugerida |
+|---|---|---|---|
+| **claude-managed-agents-patterns** | SDK patterns oficiais: Outcomes (rubric verification), Memory (per-account + cross-account + org-wide), Sandboxing (codebase snapshots, PR generation), Briefs (meeting prep), Watchtower (cross-account code fan-out) | `autonomous-agent-harness`, `continuous-agent-loop`, `loop-design-check` | Criar skill `claude-managed-agents-patterns` |
+| **outcome-rubric-verification** | Padrão reutilizável: rubric-driven agent iteration com verifier independente (clean context window), hill-climbing até satisfazer rubrica, choose-not-to-show se falhar | `loop-design-check`, `grill-with-docs`, `santa-method` | Criar skill `outcome-rubric-verification` |
+| **managed-agent-memory-architecture** | Arquitetura de memória em 3 níveis: account agent (perene, detalhada, indexada), cross-account concepts (forecasting, org processes), user/org preferences (managed memory) | `unified-memory`, `agent-swarm-ops`, `context-ledger` | Criar skill `managed-agent-memory-architecture` |
+| **testsprite-cli-integration** | TestSprite CLI (open source Apache 2.0): agent chama mid-build, drive live app como usuário real, screenshot de falha, patch + rerun automático | `agent-guardrails`, `verification-loop`, `loop-design-check` | Criar skill `testsprite-cli-integration` |
+| **subscription-tier-routing** | Roteamento ciente de tier: weekly allowances (Codex 5X/20X, Claude 5X/20X), cache-aware routing (94% Astra cache), fast mode tradeoff, banked resets, GLM $18 como budget tier | `roteamento-modelos-baratos`, `claude-model-router`, `cost-aware-llm-pipeline` | Criar skill `subscription-tier-routing` |
+| **glm-integration-patterns** | GLM/Z.ai patterns: browser automation (interface interaction), C coding strength, longer task persistence, generous quota ($18/mo), trial quota for new users | `roteamento-modelos-gratuitos`, `local-llm-efficiency` | Criar skill `glm-integration-patterns` |
+| **closed-loop-verifier-pattern** | Padrão closed-loop: deployed app behaving for real user = única sinal que fecha loop; TestSprite/Playwright/Puppeteer como verifier runtime; mocks não provam nada | `verification-loop`, `loop-design-check`, `gan-style-harness` | Criar skill `closed-loop-verifier-pattern` |
+| **agent-cost-optimization-batch** | Batch mode para Managed Agents: 50-75% savings rodando 24h antes, pre-warm sandboxes para latency-sensitive, multi-model cost allocation (frontier para coordenação, barato para fan-out) | `cost-aware-llm-pipeline`, `roteamento-modelos-baratos`, `autonomous-agent-harness` | Criar skill `agent-cost-optimization-batch` |
+| **model-migration-strategy** | Estratégia migração modelos: eval suite primeiro, evitar hyper-optimization para família específica, novos gotchas (ex: GPT-5 series mais "AI telltale signs" - em dashes, sentence structures) | `roteamento-modelos-baratos`, `claude-model-router`, `eval-harness` | Criar skill `model-migration-strategy` |
+| **biomedical-ai-pipeline** | Pipeline descoberta drogas IA: target identification (literature + health data) → molecule generation → clinical trial → aging clocks validation (6 independent clocks consensus), UK Biobank 55k comparison | `api-connector-builder`, `scientific-pkg-gget`, `eval-harness` | Criar skill `biomedical-ai-pipeline` |
+| **computer-use-agent-patterns** | OS World benchmark, Computer Use API: screen reading, mouse/keyboard, slide controls, drag-drop, function keys, self-correction, 150k context window, 40min task memory | `agent-harness-construction`, `browser-qa`, `autonomous-agent-harness` | Criar skill `computer-use-agent-patterns` |
+| **ai-governance-monitor** | Monitoramento governança IA: UN Human Rights (existential risk), harmonized regulations, supply chain red lines, corporate pressure (Anthropic, OpenAI, Google), Mistral sovereignty argument | `geopolitica-regulacao-ia`, `market-research` | Criar skill `ai-governance-monitor` |
+
+### 🟡 Novas Oportunidades de Média Prioridade (Extensões)
+
+| Oportunidade | Descrição | Skill Base | Ação |
+|---|---|---|---|
+| **TestSprite Eval Mode para GAN Harness** | Integrar TestSprite como `--eval-mode testsprite` no gan-harness (substituir playwright para validação de app deployed) | `gan-style-harness`, `testsprite-cli-integration` | Estender `gan-style-harness` |
+| **Batch Mode Flag para Roteamento** | Adicionar `--batch-mode` flag em `roteamento-modelos-baratos` para jobs 24h+ com 50-75% savings | `roteamento-modelos-baratos`, `agent-cost-optimization-batch` | Estender skill |
+| **GLM como Verifier Barato** | Usar GLM ($18) como verifier em loops cheap+verifier (substituir DeepSeek Flash) | `roteamento-modelos-baratos`, `glm-integration-patterns` | Documentar em skill existente |
+| **Pre-warm Sandboxes Pattern** | Pattern para pre-warm sandboxes em partes latency-sensitive do produto (Managed Agents insight) | `autonomous-agent-harness`, `agent-cost-optimization-batch` | Documentar |
+
+### ✅ Confirmações de Cobertura Existente
+
+| Conceito do Vídeo | Skill ECC que Já Cobre |
+|---|---|
+| Build vs Buy (harness não é core competency) | `loop-design-check` (gate "should you even build it") |
+| Vibes-based → Evals transition | `eval-harness`, `verification-loop`, `score-loop` |
+| Independent verifier agent (clean context) | `santa-method`, `loop-design-check` (judgment layer) |
+| Memory corruption over time / indexing | `unified-memory`, `context-ledger` |
+| Cost attribution / fine-grained telemetry | `cost-aware-llm-pipeline`, `cost-tracking` |
+| Prompt caching (94% Astra, 79% Sonnet) | `cost-aware-llm-pipeline` (já documenta caching) |
+| Subscription unpredictability concern | `roteamento-modelos-baratos` (já alerta sobre regras mudando) |
+
+---
+
+### Atualização de Status de Skills Criadas (pós Batch 14)
+
+| Skill | Origem | Módulo | Status |
+|---|---|---|---|
+| `agent-commerce-interface` | G21 | business-content | ✅ Criada (DoorDash marcado a validar) |
+| `mcp-hardware-arduino` | G22 | framework-language | ✅ Criada (gap #102/#134 confirmado) |
+| `prospeccao-maps-freelance` | Batch 8 | business-content | ✅ Criada |
+| `grokbot-team-ops` | Batch 9 #97 | agentic-patterns | ✅ Criada |
+| `ads-creative-factory` | #158 | business-content | ✅ Criada |
+| `ads-reporter-multi` | #158 | business-content | ✅ Criada |
