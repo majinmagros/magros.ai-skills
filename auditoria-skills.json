@@ -71,16 +71,6 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "django-verification",
-    "score": 73,
-    "lines": 471,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "error-handling",
     "score": 73,
     "lines": 378,
@@ -2808,6 +2798,13 @@
     "name": "django-tdd",
     "score": 100,
     "lines": 103,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "django-verification",
+    "score": 100,
+    "lines": 61,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

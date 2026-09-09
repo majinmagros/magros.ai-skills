@@ -1,0 +1,61 @@
+# ci.yml — GitHub Actions Django verification (Postgres service, pip cache, coverage upload)
+# Extraído de SKILL.md (2026-09-09). Copie para .github/workflows/django-verification.yml
+name: Django Verification
+
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install ruff black mypy pytest pytest-django pytest-cov bandit safety pip-audit
+
+      - name: Code quality checks
+        run: |
+          ruff check .
+          black . --check
+          isort . --check-only
+          mypy .
+
+      - name: Security scan
+        run: |
+          bandit -r . -f json -o bandit-report.json
+          safety check --full-report
+          pip-audit
+
+      - name: Run tests
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
+          DJANGO_SECRET_KEY: test-secret-key
+        run: |
+          pytest --cov=apps --cov-report=xml --cov-report=term-missing
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
