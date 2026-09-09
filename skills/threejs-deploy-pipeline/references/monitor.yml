@@ -1,0 +1,22 @@
+# .github/workflows/monitor.yml — Monitoramento agendado (cron 15min) via health-check.js
+# Extraído de SKILL.md (2026-09-09). Copie para .github/workflows/monitor.yml do projeto.
+name: Monitor Production
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # A cada 15 min
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: node scripts/health-check.js
+        env:
+          SITE_URL: https://seu-dominio.com

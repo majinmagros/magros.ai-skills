@@ -1,71 +1,5 @@
 [
   {
-    "name": "graph-engineering-patterns",
-    "score": 52,
-    "lines": 818,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "hyper3d-rodin-pipeline",
-    "score": 52,
-    "lines": 517,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-config-constants",
-    "score": 52,
-    "lines": 804,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-deploy-pipeline",
-    "score": 52,
-    "lines": 606,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-responsive-patterns",
-    "score": 52,
-    "lines": 856,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-voxel-block-system",
-    "score": 52,
-    "lines": 1290,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      ">500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "frontend-a11y",
     "score": 53,
     "lines": 447,
@@ -3454,6 +3388,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "graph-engineering-patterns",
+    "score": 100,
+    "lines": 91,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "grills",
     "score": 100,
     "lines": 53,
@@ -3499,6 +3440,13 @@
     "name": "homelab-network-setup",
     "score": 100,
     "lines": 131,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hyper3d-rodin-pipeline",
+    "score": 100,
+    "lines": 80,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -4089,6 +4037,34 @@
     "name": "testsprite-cli-integration",
     "score": 100,
     "lines": 121,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "threejs-config-constants",
+    "score": 100,
+    "lines": 78,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "threejs-deploy-pipeline",
+    "score": 100,
+    "lines": 77,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "threejs-responsive-patterns",
+    "score": 100,
+    "lines": 79,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "threejs-voxel-block-system",
+    "score": 100,
+    "lines": 75,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

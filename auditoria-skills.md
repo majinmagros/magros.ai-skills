@@ -4,23 +4,23 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 88.4/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 89.0/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
-- **Description sem gatilho quando usar:** 41 / 459 (8.9%) — **padrao critico**
+- **Description sem gatilho quando usar:** 35 / 459 (7.6%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
-- **SKILL.md >200 linhas:** 139 (30.3%) | >500 linhas: 18
+- **SKILL.md >200 linhas:** 133 (29.0%) | >500 linhas: 12
 - **Com progressive disclosure (references/scripts):** 109 / 459 (23.7%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:18 | 60-79:71 | 80-99:205
-- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 30.3% violam regra de ouro <=200 linhas e 8.9% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:12 | 60-79:71 | 80-99:205
+- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 29.0% violam regra de ouro <=200 linhas e 7.6% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
 
 | Padrao | Evidencia | Impacto | Acao sistemica |
 |---|---|---|---|
-| Descriptions sem gatilho | 41 skills (8.9%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |
+| Descriptions sem gatilho | 35 skills (7.6%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |
 | Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
-| Monolitos >200 linhas | 139 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
-| Mega-monolitos >500 linhas | 18 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
+| Monolitos >200 linhas | 133 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
+| Mega-monolitos >500 linhas | 12 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
 | Sem progressive disclosure | 350 sem references/scripts | Tudo no SKILL.md | Criar references/ |
 | Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
 | Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **52** | 818 | `graph-engineering-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >500 linhas |
-| 2 | **52** | 517 | `hyper3d-rodin-pipeline` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >500 linhas |
-| 3 | **52** | 804 | `threejs-config-constants` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >500 linhas |
-| 4 | **52** | 606 | `threejs-deploy-pipeline` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >500 linhas |
-| 5 | **52** | 856 | `threejs-responsive-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >500 linhas |
-| 6 | **52** | 1290 | `threejs-voxel-block-system` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >500 linhas |
-| 7 | **53** | 447 | `frontend-a11y` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 8 | **53** | 424 | `prompt-optimizer` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 9 | **54** | 213 | `carrier-relationship-management` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 10 | **54** | 215 | `competitive-platform-analysis` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 11 | **54** | 264 | `customs-trade-compliance` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 12 | **54** | 229 | `energy-procurement` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 13 | **54** | 248 | `inventory-demand-planning` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 14 | **54** | 223 | `logistics-exception-management` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 15 | **54** | 239 | `production-scheduling` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 16 | **54** | 261 | `quality-nonconformance` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 17 | **54** | 241 | `returns-reverse-logistics` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 18 | **56** | 329 | `voice-cloning-local` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
-| 19 | **60** | 433 | `fusion-harness` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 20 | **60** | 417 | `hyper3d-rodin-api` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 21 | **60** | 422 | `metahuman-animation-retarget` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 22 | **60** | 484 | `metahuman-unreal-blueprint` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 23 | **60** | 441 | `sub-agent-cost-guard` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 24 | **60** | 408 | `threejs-shader-effects` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
-| 25 | **61** | 240 | `universal-portability` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
-| 26 | **63** | 317 | `claude-account-optimizer` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
-| 27 | **63** | 319 | `claude-cowork-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
-| 28 | **66** | 353 | `e2e-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | sem secao Quando Ativar; 350-500 linhas; sem disclosure |
-| 29 | **68** | 252 | `claude-chrome-automation` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
-| 30 | **68** | 218 | `claude-model-router` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 1 | **53** | 447 | `frontend-a11y` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 2 | **53** | 424 | `prompt-optimizer` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 3 | **54** | 213 | `carrier-relationship-management` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 4 | **54** | 215 | `competitive-platform-analysis` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 5 | **54** | 264 | `customs-trade-compliance` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 6 | **54** | 229 | `energy-procurement` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 7 | **54** | 248 | `inventory-demand-planning` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 8 | **54** | 223 | `logistics-exception-management` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 9 | **54** | 239 | `production-scheduling` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 10 | **54** | 261 | `quality-nonconformance` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 11 | **54** | 241 | `returns-reverse-logistics` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 12 | **56** | 329 | `voice-cloning-local` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 13 | **60** | 433 | `fusion-harness` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 14 | **60** | 417 | `hyper3d-rodin-api` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 15 | **60** | 422 | `metahuman-animation-retarget` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 16 | **60** | 484 | `metahuman-unreal-blueprint` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 17 | **60** | 441 | `sub-agent-cost-guard` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 18 | **60** | 408 | `threejs-shader-effects` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 19 | **61** | 240 | `universal-portability` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 20 | **63** | 317 | `claude-account-optimizer` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 21 | **63** | 319 | `claude-cowork-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 22 | **66** | 353 | `e2e-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | sem secao Quando Ativar; 350-500 linhas; sem disclosure |
+| 23 | **68** | 252 | `claude-chrome-automation` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 24 | **68** | 218 | `claude-model-router` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 25 | **68** | 244 | `claude-project-template` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 26 | **68** | 203 | `motion-design-skill` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 27 | **68** | 210 | `skill-creator-methodology` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
+| 28 | **70** | 525 | `api-design` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 29 | **70** | 563 | `backend-patterns` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
+| 30 | **70** | 552 | `coding-standards` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -103,14 +103,8 @@
 
 ### Faixa 0-39 (Critica - 0 skills)
 
-### Faixa 40-59 (Fraca - 18 skills)
+### Faixa 40-59 (Fraca - 12 skills)
 > Amostra:
-- `graph-engineering-patterns` — 52 pts, 818 linhas — sem gatilho quando usar; desc curta
-- `hyper3d-rodin-pipeline` — 52 pts, 517 linhas — sem gatilho quando usar; desc curta
-- `threejs-config-constants` — 52 pts, 804 linhas — sem gatilho quando usar; desc curta
-- `threejs-deploy-pipeline` — 52 pts, 606 linhas — sem gatilho quando usar; desc curta
-- `threejs-responsive-patterns` — 52 pts, 856 linhas — sem gatilho quando usar; desc curta
-- `threejs-voxel-block-system` — 52 pts, 1290 linhas — sem gatilho quando usar; desc curta
 - `frontend-a11y` — 53 pts, 447 linhas — sem gatilho quando usar; desc curta
 - `prompt-optimizer` — 53 pts, 424 linhas — sem gatilho quando usar; desc curta
 - `carrier-relationship-management` — 54 pts, 213 linhas — sem gatilho quando usar; desc curta
@@ -120,13 +114,16 @@
 - `inventory-demand-planning` — 54 pts, 248 linhas — sem gatilho quando usar; desc curta
 - `logistics-exception-management` — 54 pts, 223 linhas — sem gatilho quando usar; desc curta
 - `production-scheduling` — 54 pts, 239 linhas — sem gatilho quando usar; desc curta
-... +3 outras
+- `quality-nonconformance` — 54 pts, 261 linhas — sem gatilho quando usar; desc curta
+- `returns-reverse-logistics` — 54 pts, 241 linhas — sem gatilho quando usar; desc curta
+- `voice-cloning-local` — 56 pts, 329 linhas — sem gatilho quando usar; desc curta
+... +-3 outras
 
 ### Faixa 60-79 (Regular - 71 skills)
 Amostra: `fusion-harness`(60), `hyper3d-rodin-api`(60), `metahuman-animation-retarget`(60), `metahuman-unreal-blueprint`(60), `sub-agent-cost-guard`(60), `threejs-shader-effects`(60), `universal-portability`(61), `claude-account-optimizer`(63), `claude-cowork-patterns`(63), `e2e-testing`(66) ...
 
-### Faixa 80-99 & 100 (Boa/Excelente - 370 skills)
-Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agnostic-repo-mirror`, `ai-governance-monitor`, `api-connector-builder`, `architecture-decision-records`, `automation-audit-ops`, `autonomous-loops`, `autopilot-content-factory`, `benchmark` ... (165 com 100pts)
+### Faixa 80-99 & 100 (Boa/Excelente - 376 skills)
+Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agnostic-repo-mirror`, `ai-governance-monitor`, `api-connector-builder`, `architecture-decision-records`, `automation-audit-ops`, `autonomous-loops`, `autopilot-content-factory`, `benchmark` ... (171 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 
