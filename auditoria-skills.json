@@ -91,17 +91,6 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "flox-environments",
-    "score": 73,
-    "lines": 498,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "flutter-dart-code-review",
     "score": 73,
     "lines": 449,
@@ -163,16 +152,6 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "perl-testing",
-    "score": 73,
-    "lines": 477,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "prisma-patterns",
     "score": 73,
     "lines": 402,
@@ -186,16 +165,6 @@
     "name": "pytorch-patterns",
     "score": 73,
     "lines": 398,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "quarkus-verification",
-    "score": 73,
-    "lines": 481,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -236,16 +205,6 @@
     "name": "vite-patterns",
     "score": 73,
     "lines": 451,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "vue-patterns",
-    "score": 73,
-    "lines": 472,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -2932,6 +2891,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "flox-environments",
+    "score": 100,
+    "lines": 66,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "frontend-a11y",
     "score": 100,
     "lines": 88,
@@ -3449,6 +3417,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "perl-testing",
+    "score": 100,
+    "lines": 60,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "plan-canvas",
     "score": 100,
     "lines": 197,
@@ -3536,6 +3511,13 @@
     "name": "quarkus-tdd",
     "score": 100,
     "lines": 151,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "quarkus-verification",
+    "score": 100,
+    "lines": 51,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3933,6 +3915,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "vue-patterns",
+    "score": 100,
+    "lines": 59,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
