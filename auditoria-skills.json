@@ -1,72 +1,66 @@
 [
   {
     "name": "graph-engineering-patterns",
-    "score": 45,
+    "score": 52,
     "lines": 818,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "hyper3d-rodin-pipeline",
-    "score": 45,
+    "score": 52,
     "lines": 517,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "threejs-config-constants",
-    "score": 45,
+    "score": 52,
     "lines": 804,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "threejs-deploy-pipeline",
-    "score": 45,
+    "score": 52,
     "lines": 606,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "threejs-responsive-patterns",
-    "score": 45,
+    "score": 52,
     "lines": 856,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "threejs-voxel-block-system",
-    "score": 45,
+    "score": 52,
     "lines": 1290,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
@@ -84,54 +78,6 @@
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "fusion-harness",
-    "score": 53,
-    "lines": 433,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "hyper3d-rodin-api",
-    "score": 53,
-    "lines": 417,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-animation-retarget",
-    "score": 53,
-    "lines": 422,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-unreal-blueprint",
-    "score": 53,
-    "lines": 484,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "prompt-optimizer",
     "score": 53,
     "lines": 424,
@@ -140,30 +86,6 @@
       "desc curta",
       "350-500 linhas",
       "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "sub-agent-cost-guard",
-    "score": 53,
-    "lines": 441,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-shader-effects",
-    "score": 53,
-    "lines": 408,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
@@ -285,43 +207,6 @@
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "universal-portability",
-    "score": 54,
-    "lines": 240,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-account-optimizer",
-    "score": 56,
-    "lines": 317,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-cowork-patterns",
-    "score": 56,
-    "lines": 319,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "voice-cloning-local",
     "score": 56,
     "lines": 329,
@@ -334,124 +219,104 @@
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "claude-chrome-automation",
-    "score": 61,
-    "lines": 252,
+    "name": "fusion-harness",
+    "score": 60,
+    "lines": 433,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "hyper3d-rodin-api",
+    "score": 60,
+    "lines": 417,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-animation-retarget",
+    "score": 60,
+    "lines": 422,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-unreal-blueprint",
+    "score": 60,
+    "lines": 484,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "sub-agent-cost-guard",
+    "score": 60,
+    "lines": 441,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "threejs-shader-effects",
+    "score": 60,
+    "lines": 408,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "universal-portability",
+    "score": 61,
+    "lines": 240,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
       ">200 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "claude-model-router",
-    "score": 61,
-    "lines": 218,
+    "name": "claude-account-optimizer",
+    "score": 63,
+    "lines": 317,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">200 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "claude-project-template",
-    "score": 61,
-    "lines": 244,
+    "name": "claude-cowork-patterns",
+    "score": 63,
+    "lines": 319,
     "reasons": [
       "sem gatilho quando usar",
       "desc curta",
-      "sem secao Quando Ativar",
       ">200 linhas"
     ],
     "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "motion-design-skill",
-    "score": 61,
-    "lines": 203,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "skill-creator-methodology",
-    "score": 61,
-    "lines": 210,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "agent-cost-optimization-batch",
-    "score": 66,
-    "lines": 416,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "ai-governance-monitor",
-    "score": 66,
-    "lines": 438,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "biomedical-ai-pipeline",
-    "score": 66,
-    "lines": 497,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "closed-loop-verifier-pattern",
-    "score": 66,
-    "lines": 445,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "computer-use-agent-patterns",
-    "score": 66,
-    "lines": 493,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
     "name": "e2e-testing",
@@ -465,74 +330,59 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "glm-integration-patterns",
-    "score": 66,
-    "lines": 405,
+    "name": "claude-chrome-automation",
+    "score": 68,
+    "lines": 252,
     "reasons": [
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      ">200 linhas"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "managed-agent-memory-architecture",
-    "score": 66,
-    "lines": 487,
+    "name": "claude-model-router",
+    "score": 68,
+    "lines": 218,
     "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      ">200 linhas"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "model-migration-strategy",
-    "score": 66,
-    "lines": 439,
+    "name": "claude-project-template",
+    "score": 68,
+    "lines": 244,
     "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      ">200 linhas"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "outcome-rubric-verification",
-    "score": 66,
-    "lines": 359,
+    "name": "motion-design-skill",
+    "score": 68,
+    "lines": 203,
     "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      ">200 linhas"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "subscription-tier-routing",
-    "score": 66,
-    "lines": 427,
+    "name": "skill-creator-methodology",
+    "score": 68,
+    "lines": 210,
     "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      ">200 linhas"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "testsprite-cli-integration",
-    "score": 66,
-    "lines": 371,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "api-design",
@@ -676,28 +526,6 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "claude-connector-strategy",
-    "score": 73,
-    "lines": 157,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "claude-md-auditor",
-    "score": 73,
-    "lines": 80,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "clickhouse-io",
     "score": 73,
     "lines": 446,
@@ -779,28 +607,6 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "gsap-skills",
-    "score": 73,
-    "lines": 103,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "img2threejs",
-    "score": 73,
-    "lines": 138,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "intent-driven-development",
     "score": 73,
     "lines": 383,
@@ -830,39 +636,6 @@
       "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "memory-import-workflow",
-    "score": 73,
-    "lines": 133,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-identity-pipeline",
-    "score": 73,
-    "lines": 115,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-to-unreal-pipeline",
-    "score": 73,
-    "lines": 186,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
     "name": "motion-patterns",
@@ -945,28 +718,6 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "rules-to-hooks-auditor",
-    "score": 73,
-    "lines": 193,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-scene-composer",
-    "score": 73,
-    "lines": 446,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "350-500 linhas"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "ui-demo",
     "score": 73,
     "lines": 467,
@@ -995,30 +746,6 @@
       "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "agent-guardrails",
-    "score": 74,
-    "lines": 201,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "claude-managed-agents-patterns",
-    "score": 74,
-    "lines": 285,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "configure-ecc",
@@ -1053,17 +780,6 @@
       "sem disclosure"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ai-tutor-system",
-    "score": 76,
-    "lines": 306,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
     "name": "android-clean-architecture",
@@ -1258,6 +974,26 @@
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
+    "name": "claude-connector-strategy",
+    "score": 80,
+    "lines": 157,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-md-auditor",
+    "score": 80,
+    "lines": 80,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
     "name": "codebase-deepening-audit",
     "score": 80,
     "lines": 21,
@@ -1289,6 +1025,36 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
+    "name": "gsap-skills",
+    "score": 80,
+    "lines": 103,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "img2threejs",
+    "score": 80,
+    "lines": 138,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "memory-import-workflow",
+    "score": 80,
+    "lines": 133,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
     "name": "meta-muse-spark",
     "score": 80,
     "lines": 20,
@@ -1300,6 +1066,36 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
+    "name": "metahuman-identity-pipeline",
+    "score": 80,
+    "lines": 115,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-to-unreal-pipeline",
+    "score": 80,
+    "lines": 186,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "rules-to-hooks-auditor",
+    "score": 80,
+    "lines": 193,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
     "name": "setup-interactive-wizard",
     "score": 80,
     "lines": 20,
@@ -1309,6 +1105,16 @@
       "pouca estrutura"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "threejs-scene-composer",
+    "score": 80,
+    "lines": 446,
+    "reasons": [
+      "desc longa",
+      "350-500 linhas"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
     "name": "videodb",
@@ -1335,6 +1141,17 @@
     "score": 81,
     "lines": 258,
     "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "agent-guardrails",
+    "score": 81,
+    "lines": 201,
+    "reasons": [
+      "desc longa",
       ">200 linhas",
       "sem disclosure"
     ],
@@ -1370,17 +1187,6 @@
       "sem disclosure"
     ],
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "cloud-design-prototyping",
-    "score": 81,
-    "lines": 280,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "code-tour",
@@ -1673,17 +1479,6 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "stripe-webhook-handler",
-    "score": 81,
-    "lines": 266,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "swift-concurrency-6-2",
     "score": 81,
     "lines": 217,
@@ -1724,26 +1519,14 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "12-factor-agents",
-    "score": 86,
-    "lines": 77,
+    "name": "ai-tutor-system",
+    "score": 83,
+    "lines": 306,
     "reasons": [
       "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
+      ">200 linhas"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ads-operator",
-    "score": 86,
-    "lines": 98,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
     "name": "agent-harness-construction",
@@ -1827,17 +1610,6 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "avaliar-ferramenta-ia",
-    "score": 86,
-    "lines": 117,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "clareza",
     "score": 86,
     "lines": 31,
@@ -1853,36 +1625,6 @@
     "lines": 114,
     "reasons": [
       "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "claude-voice-workflow",
-    "score": 86,
-    "lines": 30,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "cloud-code-internal-tools",
-    "score": 86,
-    "lines": 40,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "cloud-code-vps-deploy",
-    "score": 86,
-    "lines": 27,
-    "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
@@ -1951,32 +1693,10 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "engenharia-de-grafos",
-    "score": 86,
-    "lines": 83,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "enterprise-agent-ops",
     "score": 86,
     "lines": 52,
     "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "gemini-cli-agent-skills",
-    "score": 86,
-    "lines": 69,
-    "reasons": [
-      "desc longa",
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
@@ -2046,52 +1766,11 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "local-ai-hardware",
-    "score": 86,
-    "lines": 39,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "local-llm-efficiency",
-    "score": 86,
-    "lines": 42,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "manga-generator",
     "score": 86,
     "lines": 57,
     "reasons": [
       "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "multi-perspective-convergence",
-    "score": 86,
-    "lines": 188,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "n8n-agentic-flows",
-    "score": 86,
-    "lines": 59,
-    "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
@@ -2108,30 +1787,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "notebooklm-claude-rag",
-    "score": 86,
-    "lines": 41,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "pesquisa-social",
     "score": 86,
     "lines": 51,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "pipeline-video-agente",
-    "score": 86,
-    "lines": 55,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -2181,17 +1839,6 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "roteamento-modelos-gratuitos",
-    "score": 86,
-    "lines": 136,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "roteiro-engenheiro-ia-2026",
     "score": 86,
     "lines": 75,
@@ -2223,17 +1870,6 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "sessoes-orquestradas",
-    "score": 86,
-    "lines": 90,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "superpowers",
     "score": 86,
     "lines": 36,
@@ -2249,16 +1885,6 @@
     "lines": 72,
     "reasons": [
       "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "validacao-ideia-24h",
-    "score": 86,
-    "lines": 70,
-    "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
@@ -2291,6 +1917,16 @@
     "reasons": [
       "sem exemplos",
       "pouca estrutura"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "cloud-design-prototyping",
+    "score": 88,
+    "lines": 280,
+    "reasons": [
+      "desc longa",
+      ">200 linhas"
     ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2332,6 +1968,16 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "stripe-webhook-handler",
+    "score": 88,
+    "lines": 266,
+    "reasons": [
+      "desc longa",
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "taste",
     "score": 88,
     "lines": 265,
@@ -2352,6 +1998,16 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "12-factor-agents",
+    "score": 93,
+    "lines": 77,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "a2a-interoperability",
     "score": 93,
     "lines": 95,
@@ -2365,6 +2021,16 @@
     "name": "ads-creative-factory",
     "score": 93,
     "lines": 69,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ads-operator",
+    "score": 93,
+    "lines": 98,
     "reasons": [
       "desc longa",
       "sem exemplos"
@@ -2390,16 +2056,6 @@
       "sem exemplos"
     ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "agent-browser",
-    "score": 93,
-    "lines": 139,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "agent-commerce-interface",
@@ -2489,22 +2145,14 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "autonomous-loops",
+    "name": "avaliar-ferramenta-ia",
     "score": 93,
-    "lines": 44,
+    "lines": 117,
     "reasons": [
-      "sem secao Quando Ativar"
+      "desc longa",
+      "sem exemplos"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "autopilot-content-factory",
-    "score": 93,
-    "lines": 68,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "baixar-musica",
@@ -2535,15 +2183,6 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "book-to-skill",
-    "score": 93,
-    "lines": 118,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "brand-voice",
     "score": 93,
     "lines": 103,
@@ -2551,24 +2190,6 @@
       "sem exemplos"
     ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "buzz-workspace-teaming",
-    "score": 93,
-    "lines": 78,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "capricho",
-    "score": 93,
-    "lines": 74,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "checklist-requisitos",
@@ -2590,33 +2211,31 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "claude-video",
+    "name": "claude-voice-workflow",
     "score": 93,
-    "lines": 45,
+    "lines": 30,
     "reasons": [
-      "sem secao Quando Ativar"
+      "sem exemplos"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "cloud-design",
+    "name": "cloud-code-internal-tools",
     "score": 93,
-    "lines": 139,
+    "lines": 40,
     "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
+      "sem exemplos"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "coletar-oportunidades-youtube",
+    "name": "cloud-code-vps-deploy",
     "score": 93,
-    "lines": 159,
+    "lines": 27,
     "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
+      "sem exemplos"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "competitive-report-structure",
@@ -2761,16 +2380,6 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "doctor",
-    "score": 93,
-    "lines": 142,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "documentation-lookup",
     "score": 93,
     "lines": 92,
@@ -2784,6 +2393,16 @@
     "score": 93,
     "lines": 162,
     "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "engenharia-de-grafos",
+    "score": 93,
+    "lines": 83,
+    "reasons": [
+      "desc longa",
       "sem exemplos"
     ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
@@ -2806,6 +2425,16 @@
       "sem secao Quando Ativar"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "gemini-cli-agent-skills",
+    "score": 93,
+    "lines": 69,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "grill-with-docs",
@@ -2840,25 +2469,6 @@
     "name": "hookify-rules",
     "score": 93,
     "lines": 129,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "hyperledger-fabric-generator",
-    "score": 93,
-    "lines": 94,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "impeccable-design",
-    "score": 93,
-    "lines": 38,
     "reasons": [
       "sem secao Quando Ativar"
     ],
@@ -2957,6 +2567,24 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
+    "name": "local-ai-hardware",
+    "score": 93,
+    "lines": 39,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "local-llm-efficiency",
+    "score": 93,
+    "lines": 42,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "market-research",
     "score": 93,
     "lines": 77,
@@ -3004,6 +2632,34 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "multi-perspective-convergence",
+    "score": 93,
+    "lines": 188,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "n8n-agentic-flows",
+    "score": 93,
+    "lines": 59,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "notebooklm-claude-rag",
+    "score": 93,
+    "lines": 41,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "orch-pipeline",
     "score": 93,
     "lines": 122,
@@ -3020,6 +2676,16 @@
       "sem secao Quando Ativar"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "pipeline-video-agente",
+    "score": 93,
+    "lines": 55,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "plain-language-response",
@@ -3107,24 +2773,14 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "rlm-recursive-agent",
+    "name": "roteamento-modelos-gratuitos",
     "score": 93,
-    "lines": 103,
+    "lines": 136,
     "reasons": [
       "desc longa",
-      "sem secao Quando Ativar"
+      "sem exemplos"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "roteamento-modelos-baratos",
-    "score": 93,
-    "lines": 186,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "rule-drift-auditor",
@@ -3156,6 +2812,16 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "sessoes-orquestradas",
+    "score": 93,
+    "lines": 90,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "site-clone-migration",
     "score": 93,
     "lines": 87,
@@ -3174,15 +2840,6 @@
       "sem exemplos"
     ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "skill-execution-dashboard",
-    "score": 93,
-    "lines": 40,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "skill-map",
@@ -3211,16 +2868,6 @@
       "sem exemplos"
     ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "spec-kit",
-    "score": 93,
-    "lines": 120,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "telegram-channel-operator",
@@ -3253,13 +2900,13 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "unlazy",
+    "name": "validacao-ideia-24h",
     "score": 93,
-    "lines": 78,
+    "lines": 70,
     "reasons": [
-      "sem secao Quando Ativar"
+      "sem exemplos"
     ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "video-cut-pipeline",
@@ -3291,15 +2938,6 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "vox-style-video",
-    "score": 93,
-    "lines": 43,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "whatsapp-evolution-go",
     "score": 93,
     "lines": 170,
@@ -3329,18 +2967,25 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "zed-deltadb-versioning",
-    "score": 93,
-    "lines": 83,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "accessibility",
     "score": 100,
     "lines": 148,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "agent-browser",
+    "score": 100,
+    "lines": 139,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "agent-cost-optimization-batch",
+    "score": 100,
+    "lines": 99,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3384,6 +3029,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "ai-governance-monitor",
+    "score": 100,
+    "lines": 82,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "api-connector-builder",
     "score": 100,
     "lines": 122,
@@ -3405,6 +3057,20 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "autonomous-loops",
+    "score": 100,
+    "lines": 44,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "autopilot-content-factory",
+    "score": 100,
+    "lines": 68,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "benchmark",
     "score": 100,
     "lines": 96,
@@ -3421,6 +3087,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "biomedical-ai-pipeline",
+    "score": 100,
+    "lines": 96,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "blender-motion-state-inspection",
     "score": 100,
     "lines": 166,
@@ -3431,6 +3104,13 @@
     "name": "blueprint",
     "score": 100,
     "lines": 97,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "book-to-skill",
+    "score": 100,
+    "lines": 118,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3449,9 +3129,23 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "buzz-workspace-teaming",
+    "score": 100,
+    "lines": 78,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "canary-watch",
     "score": 100,
     "lines": 109,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "capricho",
+    "score": 100,
+    "lines": 74,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3470,9 +3164,55 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "claude-managed-agents-patterns",
+    "score": 100,
+    "lines": 103,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-video",
+    "score": 100,
+    "lines": 45,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "closed-loop-verifier-pattern",
+    "score": 100,
+    "lines": 95,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "cloud-design",
+    "score": 100,
+    "lines": 139,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "codehealth-mcp",
     "score": 100,
     "lines": 172,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "coletar-oportunidades-youtube",
+    "score": 100,
+    "lines": 159,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "computer-use-agent-patterns",
+    "score": 100,
+    "lines": 87,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3593,6 +3333,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "doctor",
+    "score": 100,
+    "lines": 142,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "dynamic-workflow-mode",
     "score": 100,
     "lines": 125,
@@ -3677,6 +3426,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "glm-integration-patterns",
+    "score": 100,
+    "lines": 117,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "golang-patterns",
     "score": 100,
     "lines": 98,
@@ -3743,6 +3499,22 @@
     "name": "homelab-network-setup",
     "score": 100,
     "lines": 131,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hyperledger-fabric-generator",
+    "score": 100,
+    "lines": 94,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "impeccable-design",
+    "score": 100,
+    "lines": 38,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3856,6 +3628,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "managed-agent-memory-architecture",
+    "score": 100,
+    "lines": 97,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "manim-video",
     "score": 100,
     "lines": 91,
@@ -3873,6 +3652,13 @@
     "name": "messages-ops",
     "score": 100,
     "lines": 106,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "model-migration-strategy",
+    "score": 100,
+    "lines": 94,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3964,6 +3750,13 @@
     "name": "orch-refine-code",
     "score": 100,
     "lines": 45,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "outcome-rubric-verification",
+    "score": 100,
+    "lines": 104,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -4063,6 +3856,24 @@
     "score": 100,
     "lines": 114,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "rlm-recursive-agent",
+    "score": 100,
+    "lines": 103,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "roteamento-modelos-baratos",
+    "score": 100,
+    "lines": 186,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -4166,6 +3977,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "skill-execution-dashboard",
+    "score": 100,
+    "lines": 40,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "skill-scout",
     "score": 100,
     "lines": 142,
@@ -4184,6 +4002,15 @@
     "score": 100,
     "lines": 131,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "spec-kit",
+    "score": 100,
+    "lines": 120,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -4206,6 +4033,13 @@
     "name": "strategic-compact",
     "score": 100,
     "lines": 143,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "subscription-tier-routing",
+    "score": 100,
+    "lines": 103,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -4252,6 +4086,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "testsprite-cli-integration",
+    "score": 100,
+    "lines": 121,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "token-budget-advisor",
     "score": 100,
     "lines": 122,
@@ -4282,9 +4123,23 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "unlazy",
+    "score": 100,
+    "lines": 78,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "verification-loop",
     "score": 100,
     "lines": 130,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "vox-style-video",
+    "score": 100,
+    "lines": 43,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -4295,6 +4150,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "zed-deltadb-versioning",
+    "score": 100,
+    "lines": 83,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   }
 ]

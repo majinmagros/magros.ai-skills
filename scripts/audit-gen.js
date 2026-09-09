@@ -28,7 +28,7 @@ function analyze(dir){
     if(descLine.length>350) reasons.push('desc longa');
     if(descLine.length<30) reasons.push('desc curta');
   }
-  if(/## Quando Ativar|## When to Activate|When to Use/i.test(text)) clarity+=7; else reasons.push('sem secao Quando Ativar');
+  if(/## Quando (Ativar|usar|Utilizar)|## When to Activate|When to Use/i.test(text)) clarity+=7; else reasons.push('sem secao Quando Ativar');
   if(/```/.test(text)) clarity+=7; else reasons.push('sem exemplos');
   if((text.match(/^##/gm)||[]).length>=3) clarity+=6; else reasons.push('pouca estrutura');
   if(lines>500) {foco=0; reasons.push('>500 linhas');}
