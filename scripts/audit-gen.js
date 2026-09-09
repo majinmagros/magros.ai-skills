@@ -61,7 +61,7 @@ results.sort((a,b)=>a.score-b.score);
 
 let md='';
 md+='# Auditoria de Skills — Scorecard de Clareza e Saude\n\n';
-md+='> Gerado automaticamente em 2026-09-02 | Projeto: magros.ai-skills | Total: '+results.length+' pastas em skills/\n\n';
+md+='> Gerado automaticamente em '+new Date().toISOString().slice(0,10)+' | Projeto: magros.ai-skills | Total: '+results.length+' pastas em skills/\n\n';
 md+='## Resumo Executivo\n\n';
 const avg=(results.reduce((s,r)=>s+r.score,0)/results.length).toFixed(1);
 const over200=results.filter(r=>r.lines>200).length;
@@ -70,7 +70,7 @@ const semTrigger=results.filter(r=>r.reasons.includes('sem gatilho quando usar')
 const literal=results.filter(r=>r.reasons.some(x=>x.includes('| literal'))).length;
 const semSKILL=results.filter(r=>r.score===0).length;
 const withRefs=dirs.filter(d=>fs.existsSync(path.join(skillsDir,d,'references'))||fs.existsSync(path.join(skillsDir,d,'scripts'))).length;
-md+='- **Media geral:** '+avg+'/100 (regular — longe do 80+ desejavel para corpus premium)\n';
+md+='- **Media geral:** '+avg+'/100 '+(parseFloat(avg)>=80?'(boa — acima do 80 desejavel para corpus premium)':'(regular — longe do 80+ desejavel para corpus premium)')+'\n';
 md+='- **Pastas sem SKILL.md:** '+semSKILL+' (quebradas, score 0)\n';
 md+='- **Description sem gatilho quando usar:** '+semTrigger+' / '+results.length+' ('+(semTrigger/results.length*100).toFixed(1)+'%) — **padrao critico**\n';
 md+='- **Description com literal block | :** '+literal+' (quebra renderers flat-table)\n';
@@ -82,19 +82,19 @@ md+='- **Distribuicao por faixa:** ';
   md+=th+'-'+(th+19)+':'+cnt+(i<4?' | ':'');
 });
 md+='\n';
-md+='- **Conclusao:** Corpus sofre de **inflacao quantitativa** (406 pastas) sem curadoria de foco; 42% violam regra de ouro <=200 linhas e 57% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.\n\n';
+md+='- **Conclusao:** Corpus sofre de **inflacao quantitativa** ('+results.length+' pastas) sem curadoria de foco; '+(over200/results.length*100).toFixed(1)+'% violam regra de ouro <=200 linhas e '+(semTrigger/results.length*100).toFixed(1)+'% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.\n\n';
 
 md+='## Padroes Repetidos (encontrados no conjunto)\n\n';
 md+='| Padrao | Evidencia | Impacto | Acao sistemica |\n';
 md+='|---|---|---|---|\n';
-md+='| Descriptions sem gatilho | '+semTrigger+' skills (56.7%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |\n';
+md+='| Descriptions sem gatilho | '+semTrigger+' skills ('+(semTrigger/results.length*100).toFixed(1)+'%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |\n';
 md+='| Literal block pipe em description | '+literal+' skills | Quebra renderers flat-table | Trocar pipe por > (folded) |\n';
 md+='| Monolitos >200 linhas | '+over200+' skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |\n';
 md+='| Mega-monolitos >500 linhas | '+over500+' skills | Impossivel manter | Quebrar em 2-4 skills focadas |\n';
 md+='| Sem progressive disclosure | '+(results.length-withRefs)+' sem references/scripts | Tudo no SKILL.md | Criar references/ |\n';
 md+='| Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |\n';
 md+='| Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |\n';
-md+='| 3 pastas vazias | claude-voice-workflow, cloud-code-internal-tools, cloud-code-vps-deploy | Score 0 | Remover ou completar |\n';
+if(semSKILL>0) md+='| Pastas vazias | '+semSKILL+' sem SKILL.md | Score 0 | Remover ou completar |\n';
 md+='\n';
 
 md+='## Ranking Pior -> Melhor (Top 30 Piores - acao prioritaria)\n\n';
@@ -130,7 +130,7 @@ clusters.forEach(c=>{
 });
 md+='\n';
 
-md+='## Tabela Completa (condensada) — Todas as 406 skills por faixa\n\n';
+md+='## Tabela Completa (condensada) — Todas as '+results.length+' skills por faixa\n\n';
 md+='### Faixa 0-39 (Critica - '+results.filter(r=>r.score<40).length+' skills)\n';
 results.filter(r=>r.score<40).forEach(r=> md+='- `'+r.name+'` — '+r.score+' pts, '+r.lines+' linhas — '+r.fix+'\n');
 md+='\n### Faixa 40-59 (Fraca - '+results.filter(r=>r.score>=40 && r.score<60).length+' skills)\n';

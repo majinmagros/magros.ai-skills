@@ -1,10 +1,604 @@
 [
   {
+    "name": "graph-engineering-patterns",
+    "score": 45,
+    "lines": 818,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "hyper3d-rodin-pipeline",
+    "score": 45,
+    "lines": 517,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "threejs-config-constants",
+    "score": 45,
+    "lines": 804,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "threejs-deploy-pipeline",
+    "score": 45,
+    "lines": 606,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "threejs-responsive-patterns",
+    "score": 45,
+    "lines": 856,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
     "name": "threejs-voxel-block-system",
-    "score": 70,
+    "score": 45,
     "lines": 1290,
     "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "frontend-a11y",
+    "score": 53,
+    "lines": 447,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "fusion-harness",
+    "score": 53,
+    "lines": 433,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "hyper3d-rodin-api",
+    "score": 53,
+    "lines": 417,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-animation-retarget",
+    "score": 53,
+    "lines": 422,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-unreal-blueprint",
+    "score": 53,
+    "lines": 484,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "prompt-optimizer",
+    "score": 53,
+    "lines": 424,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "sub-agent-cost-guard",
+    "score": 53,
+    "lines": 441,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "threejs-shader-effects",
+    "score": 53,
+    "lines": 408,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "350-500 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "carrier-relationship-management",
+    "score": 54,
+    "lines": 213,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "competitive-platform-analysis",
+    "score": 54,
+    "lines": 215,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "customs-trade-compliance",
+    "score": 54,
+    "lines": 264,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "energy-procurement",
+    "score": 54,
+    "lines": 229,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "inventory-demand-planning",
+    "score": 54,
+    "lines": 248,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "logistics-exception-management",
+    "score": 54,
+    "lines": 223,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "production-scheduling",
+    "score": 54,
+    "lines": 239,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "quality-nonconformance",
+    "score": 54,
+    "lines": 261,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "returns-reverse-logistics",
+    "score": 54,
+    "lines": 241,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem exemplos",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "universal-portability",
+    "score": 54,
+    "lines": 240,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      "sem exemplos",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-account-optimizer",
+    "score": 56,
+    "lines": 317,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-cowork-patterns",
+    "score": 56,
+    "lines": 319,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "voice-cloning-local",
+    "score": 56,
+    "lines": 329,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-chrome-automation",
+    "score": 61,
+    "lines": 252,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-model-router",
+    "score": 61,
+    "lines": 218,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-project-template",
+    "score": 61,
+    "lines": 244,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "motion-design-skill",
+    "score": 61,
+    "lines": 203,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "skill-creator-methodology",
+    "score": 61,
+    "lines": 210,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "agent-cost-optimization-batch",
+    "score": 66,
+    "lines": 416,
+    "reasons": [
       "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "ai-governance-monitor",
+    "score": 66,
+    "lines": 438,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "biomedical-ai-pipeline",
+    "score": 66,
+    "lines": 497,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "closed-loop-verifier-pattern",
+    "score": 66,
+    "lines": 445,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "computer-use-agent-patterns",
+    "score": 66,
+    "lines": 493,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "e2e-testing",
+    "score": 66,
+    "lines": 353,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "glm-integration-patterns",
+    "score": 66,
+    "lines": 405,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "managed-agent-memory-architecture",
+    "score": 66,
+    "lines": 487,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "model-migration-strategy",
+    "score": 66,
+    "lines": 439,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "outcome-rubric-verification",
+    "score": 66,
+    "lines": 359,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "subscription-tier-routing",
+    "score": 66,
+    "lines": 427,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "testsprite-cli-integration",
+    "score": 66,
+    "lines": 371,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "api-design",
+    "score": 70,
+    "lines": 525,
+    "reasons": [
+      ">500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
+  },
+  {
+    "name": "backend-patterns",
+    "score": 70,
+    "lines": 563,
+    "reasons": [
+      ">500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
+  },
+  {
+    "name": "coding-standards",
+    "score": 70,
+    "lines": 552,
+    "reasons": [
+      ">500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
+  },
+  {
+    "name": "dart-flutter-patterns",
+    "score": 70,
+    "lines": 565,
+    "reasons": [
+      ">500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
+  },
+  {
+    "name": "docker-patterns",
+    "score": 70,
+    "lines": 534,
+    "reasons": [
+      ">500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
+  },
+  {
+    "name": "fastapi-patterns",
+    "score": 70,
+    "lines": 528,
+    "reasons": [
+      ">500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
+  },
+  {
+    "name": "generating-python-installer",
+    "score": 70,
+    "lines": 821,
+    "reasons": [
       ">500 linhas",
       "sem disclosure"
     ],
@@ -21,75 +615,10 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "windows-desktop-e2e",
-    "score": 70,
-    "lines": 889,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "threejs-responsive-patterns",
-    "score": 70,
-    "lines": 856,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "generating-python-installer",
-    "score": 70,
-    "lines": 821,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "graph-engineering-patterns",
-    "score": 70,
-    "lines": 818,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "threejs-config-constants",
-    "score": 70,
-    "lines": 804,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "threejs-deploy-pipeline",
-    "score": 70,
-    "lines": 606,
-    "reasons": [
-      "desc longa",
-      ">500 linhas"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "motion-advanced",
     "score": 70,
     "lines": 597,
     "reasons": [
-      "desc longa",
       ">500 linhas",
       "sem disclosure"
     ],
@@ -117,20 +646,9 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "dart-flutter-patterns",
+    "name": "windows-desktop-e2e",
     "score": 70,
-    "lines": 565,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "backend-patterns",
-    "score": 70,
-    "lines": 563,
+    "lines": 889,
     "reasons": [
       ">500 linhas",
       "sem disclosure"
@@ -138,82 +656,9 @@
     "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
   },
   {
-    "name": "coding-standards",
-    "score": 70,
-    "lines": 552,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "docker-patterns",
-    "score": 70,
-    "lines": 534,
-    "reasons": [
-      "desc longa",
-      ">500 linhas"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "fastapi-patterns",
-    "score": 70,
-    "lines": 528,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "api-design",
-    "score": 70,
-    "lines": 525,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "hyper3d-rodin-pipeline",
-    "score": 70,
-    "lines": 517,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "flox-environments",
+    "name": "agentic-os",
     "score": 73,
-    "lines": 498,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "metahuman-unreal-blueprint",
-    "score": 73,
-    "lines": 484,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "quarkus-verification",
-    "score": 73,
-    "lines": 481,
+    "lines": 400,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -221,9 +666,9 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "perl-testing",
+    "name": "ai-regression-testing",
     "score": 73,
-    "lines": 477,
+    "lines": 387,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -231,9 +676,31 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "vue-patterns",
+    "name": "claude-connector-strategy",
     "score": 73,
-    "lines": 472,
+    "lines": 157,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "claude-md-auditor",
+    "score": 73,
+    "lines": 80,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "clickhouse-io",
+    "score": 73,
+    "lines": 446,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -241,9 +708,9 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "django-verification",
+    "name": "database-migrations",
     "score": 73,
-    "lines": 471,
+    "lines": 431,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -251,9 +718,9 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "ui-demo",
+    "name": "deployment-patterns",
     "score": 73,
-    "lines": 467,
+    "lines": 429,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -271,9 +738,29 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "vite-patterns",
+    "name": "django-verification",
     "score": 73,
-    "lines": 451,
+    "lines": 471,
+    "reasons": [
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "error-handling",
+    "score": 73,
+    "lines": 378,
+    "reasons": [
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "flox-environments",
+    "score": 73,
+    "lines": 498,
     "reasons": [
       "desc longa",
       "350-500 linhas",
@@ -286,57 +773,37 @@
     "score": 73,
     "lines": 449,
     "reasons": [
-      "desc longa",
       "350-500 linhas",
       "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "frontend-a11y",
+    "name": "gsap-skills",
     "score": 73,
-    "lines": 447,
+    "lines": 103,
     "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "clickhouse-io",
+    "name": "img2threejs",
     "score": 73,
-    "lines": 446,
+    "lines": 138,
     "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
     ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+    "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "sub-agent-cost-guard",
+    "name": "intent-driven-development",
     "score": 73,
-    "lines": 441,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "motion-patterns",
-    "score": 73,
-    "lines": 435,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "database-migrations",
-    "score": 73,
-    "lines": 431,
+    "lines": 383,
     "reasons": [
       "desc longa",
       "350-500 linhas",
@@ -345,42 +812,10 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "deployment-patterns",
+    "name": "java-coding-standards",
     "score": 73,
-    "lines": 429,
+    "lines": 385,
     "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "react-testing",
-    "score": 73,
-    "lines": 425,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "metahuman-animation-retarget",
-    "score": 73,
-    "lines": 422,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "hyper3d-rodin-api",
-    "score": 73,
-    "lines": 417,
-    "reasons": [
-      "desc longa",
       "350-500 linhas",
       "sem disclosure"
     ],
@@ -390,6 +825,49 @@
     "name": "laravel-patterns",
     "score": 73,
     "lines": 417,
+    "reasons": [
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "memory-import-workflow",
+    "score": 73,
+    "lines": 133,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-identity-pipeline",
+    "score": 73,
+    "lines": 115,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "metahuman-to-unreal-pipeline",
+    "score": 73,
+    "lines": 186,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "motion-patterns",
+    "score": 73,
+    "lines": 435,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -407,20 +885,9 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "threejs-shader-effects",
+    "name": "perl-testing",
     "score": 73,
-    "lines": 408,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "redis-patterns",
-    "score": 73,
-    "lines": 405,
+    "lines": 477,
     "reasons": [
       "350-500 linhas",
       "sem disclosure"
@@ -432,18 +899,6 @@
     "score": 73,
     "lines": 402,
     "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "prompt-optimizer",
-    "score": 73,
-    "lines": 399,
-    "reasons": [
-      "desc longa",
       "350-500 linhas",
       "sem disclosure"
     ],
@@ -460,132 +915,91 @@
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "ai-regression-testing",
+    "name": "quarkus-verification",
     "score": 73,
-    "lines": 387,
+    "lines": 481,
+    "reasons": [
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "react-testing",
+    "score": 73,
+    "lines": 425,
+    "reasons": [
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "redis-patterns",
+    "score": 73,
+    "lines": 405,
+    "reasons": [
+      "350-500 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "rules-to-hooks-auditor",
+    "score": 73,
+    "lines": 193,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "threejs-scene-composer",
+    "score": 73,
+    "lines": 446,
     "reasons": [
       "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "java-coding-standards",
-    "score": 73,
-    "lines": 385,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "intent-driven-development",
-    "score": 73,
-    "lines": 383,
-    "reasons": [
-      "desc longa",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "error-handling",
-    "score": 73,
-    "lines": 378,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "e2e-testing",
-    "score": 73,
-    "lines": 353,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "voice-cloning-local",
-    "score": 74,
-    "lines": 329,
-    "reasons": [
       "sem secao Quando Ativar",
-      ">200 linhas"
+      "350-500 linhas"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "customs-trade-compliance",
-    "score": 74,
-    "lines": 264,
+    "name": "ui-demo",
+    "score": 73,
+    "lines": 467,
     "reasons": [
-      "desc longa",
-      "sem exemplos",
-      ">200 linhas",
+      "350-500 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "quality-nonconformance",
-    "score": 74,
-    "lines": 261,
+    "name": "vite-patterns",
+    "score": 73,
+    "lines": 451,
     "reasons": [
-      "desc longa",
-      "sem exemplos",
-      ">200 linhas",
+      "350-500 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "inventory-demand-planning",
-    "score": 74,
-    "lines": 248,
+    "name": "vue-patterns",
+    "score": 73,
+    "lines": 472,
     "reasons": [
-      "desc longa",
-      "sem exemplos",
-      ">200 linhas",
+      "350-500 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "returns-reverse-logistics",
+    "name": "agent-guardrails",
     "score": 74,
-    "lines": 241,
-    "reasons": [
-      "desc longa",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "production-scheduling",
-    "score": 74,
-    "lines": 239,
-    "reasons": [
-      "desc longa",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "ito-basket-compare",
-    "score": 74,
-    "lines": 230,
+    "lines": 201,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -595,28 +1009,27 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "energy-procurement",
+    "name": "claude-managed-agents-patterns",
     "score": 74,
-    "lines": 229,
+    "lines": 285,
     "reasons": [
       "desc longa",
-      "sem exemplos",
+      "sem secao Quando Ativar",
       ">200 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "logistics-exception-management",
+    "name": "configure-ecc",
     "score": 74,
     "lines": 223,
     "reasons": [
-      "desc longa",
-      "sem exemplos",
+      "sem secao Quando Ativar",
       ">200 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "financiamento-imobiliario",
@@ -631,58 +1044,26 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "competitive-platform-analysis",
+    "name": "ito-basket-compare",
     "score": 74,
-    "lines": 215,
+    "lines": 230,
+    "reasons": [
+      "sem secao Quando Ativar",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ai-tutor-system",
+    "score": 76,
+    "lines": 306,
     "reasons": [
       "desc longa",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
+      "sem secao Quando Ativar",
+      ">200 linhas"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "carrier-relationship-management",
-    "score": 74,
-    "lines": 213,
-    "reasons": [
-      "desc longa",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "mle-workflow",
-    "score": 76,
-    "lines": 349,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "uncloud",
-    "score": 76,
-    "lines": 345,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "react-patterns",
-    "score": 76,
-    "lines": 343,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
     "name": "android-clean-architecture",
@@ -692,132 +1073,18 @@
       ">200 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "react-native-patterns",
-    "score": 76,
-    "lines": 327,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "cpp-testing",
-    "score": 76,
-    "lines": 326,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "csharp-testing",
-    "score": 76,
-    "lines": 323,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "dotnet-patterns",
-    "score": 76,
-    "lines": 323,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "lead-intelligence",
-    "score": 76,
-    "lines": 323,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "claude-cowork-patterns",
-    "score": 76,
-    "lines": 319,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "springboot-patterns",
-    "score": 76,
-    "lines": 316,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "homelab-vlan-segmentation",
-    "score": 76,
-    "lines": 313,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "video-editing",
-    "score": 76,
-    "lines": 312,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "santa-method",
-    "score": 76,
-    "lines": 308,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "homelab-wireguard-vpn",
-    "score": 76,
-    "lines": 307,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "jira-integration",
+    "name": "autonomous-agent-harness",
     "score": 76,
     "lines": 304,
     "reasons": [
+      "desc longa",
       ">200 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
     "name": "compose-multiplatform-patterns",
@@ -827,113 +1094,298 @@
       ">200 linhas",
       "sem disclosure"
     ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "threejs-scene-composer",
-    "score": 78,
-    "lines": 446,
+    "name": "cpp-testing",
+    "score": 76,
+    "lines": 326,
     "reasons": [
-      "desc longa",
-      "350-500 linhas"
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "fusion-harness",
-    "score": 78,
-    "lines": 433,
+    "name": "csharp-testing",
+    "score": 76,
+    "lines": 323,
     "reasons": [
-      "desc longa",
-      "350-500 linhas"
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "agentic-os",
-    "score": 78,
-    "lines": 400,
+    "name": "dotnet-patterns",
+    "score": 76,
+    "lines": 323,
     "reasons": [
-      "350-500 linhas"
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "videodb",
-    "score": 78,
-    "lines": 376,
+    "name": "homelab-vlan-segmentation",
+    "score": 76,
+    "lines": 313,
     "reasons": [
-      "desc longa",
-      "350-500 linhas"
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "homelab-wireguard-vpn",
+    "score": 76,
+    "lines": 307,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "jira-integration",
+    "score": 76,
+    "lines": 304,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "lead-intelligence",
+    "score": 76,
+    "lines": 343,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "mle-workflow",
+    "score": 76,
+    "lines": 349,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "react-native-patterns",
+    "score": 76,
+    "lines": 327,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "react-patterns",
+    "score": 76,
+    "lines": 343,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "santa-method",
+    "score": 76,
+    "lines": 308,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "springboot-patterns",
+    "score": 76,
+    "lines": 316,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "uncloud",
+    "score": 76,
+    "lines": 345,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "video-editing",
+    "score": 76,
+    "lines": 312,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "9router-resilient-fallback",
+    "score": 80,
+    "lines": 22,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos",
+      "pouca estrutura"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "brand-discovery",
+    "score": 80,
+    "lines": 146,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc curta"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "codebase-deepening-audit",
+    "score": 80,
+    "lines": 21,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos",
+      "pouca estrutura"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "continuous-learning-v2",
-    "score": 78,
+    "score": 80,
     "lines": 362,
     "reasons": [
-      "desc longa",
       "350-500 linhas"
     ],
     "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
   },
   {
-    "name": "obsidian-cli",
-    "score": 79,
-    "lines": 275,
+    "name": "domain-context-model",
+    "score": 80,
+    "lines": 21,
     "reasons": [
-      "desc longa",
       "sem secao Quando Ativar",
-      ">200 linhas"
+      "sem exemplos",
+      "pouca estrutura"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "meta-muse-spark",
+    "score": 80,
+    "lines": 20,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos",
+      "pouca estrutura"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "setup-interactive-wizard",
+    "score": 80,
+    "lines": 20,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos",
+      "pouca estrutura"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "videodb",
+    "score": 80,
+    "lines": 376,
+    "reasons": [
+      "350-500 linhas"
+    ],
+    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
+  },
+  {
+    "name": "wayfinder-planning",
+    "score": 80,
+    "lines": 21,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos",
+      "pouca estrutura"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "agent-architecture-audit",
+    "score": 81,
+    "lines": 258,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "universal-portability",
-    "score": 79,
-    "lines": 250,
+    "name": "agent-payment-x402",
+    "score": 81,
+    "lines": 226,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "agent-sort",
+    "score": 81,
+    "lines": 217,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "click-path-audit",
+    "score": 81,
+    "lines": 246,
     "reasons": [
       "desc longa",
-      "sem exemplos",
-      ">200 linhas"
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "configure-ecc",
-    "score": 79,
-    "lines": 223,
+    "name": "cloud-design-prototyping",
+    "score": 81,
+    "lines": 280,
     "reasons": [
+      "desc longa",
       "sem secao Quando Ativar",
       ">200 linhas"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "claude-account-optimizer",
+    "name": "code-tour",
     "score": 81,
-    "lines": 317,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "ai-tutor-system",
-    "score": 81,
-    "lines": 306,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "motion-foundations",
-    "score": 81,
-    "lines": 300,
+    "lines": 255,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -941,20 +1393,9 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "autonomous-agent-harness",
+    "name": "codebase-onboarding",
     "score": 81,
-    "lines": 298,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "fal-ai-media",
-    "score": 81,
-    "lines": 290,
+    "lines": 235,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -972,9 +1413,49 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "kotlin-coroutines-flows",
+    "name": "council",
     "score": 81,
-    "lines": 286,
+    "lines": 205,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "dmux-workflows",
+    "score": 81,
+    "lines": 220,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "eval-harness",
+    "score": 81,
+    "lines": 300,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "fal-ai-media",
+    "score": 81,
+    "lines": 290,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "foundation-models-on-device",
+    "score": 81,
+    "lines": 244,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -992,9 +1473,29 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "liquid-glass-design",
+    "name": "gan-style-harness",
     "score": 81,
     "lines": 280,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "healthcare-cdss-patterns",
+    "score": 81,
+    "lines": 247,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "healthcare-eval-harness",
+    "score": 81,
+    "lines": 209,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1022,9 +1523,9 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "springboot-security",
+    "name": "iterative-retrieval",
     "score": 81,
-    "lines": 274,
+    "lines": 213,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1032,145 +1533,9 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "eval-harness",
+    "name": "kotlin-coroutines-flows",
     "score": 81,
-    "lines": 272,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "plan-orchestrate",
-    "score": 81,
-    "lines": 264,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "swiftui-patterns",
-    "score": 81,
-    "lines": 260,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "agent-architecture-audit",
-    "score": 81,
-    "lines": 258,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "opensource-pipeline",
-    "score": 81,
-    "lines": 257,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "code-tour",
-    "score": 81,
-    "lines": 255,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "claude-chrome-automation",
-    "score": 81,
-    "lines": 252,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "healthcare-cdss-patterns",
-    "score": 81,
-    "lines": 247,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "click-path-audit",
-    "score": 81,
-    "lines": 246,
-    "reasons": [
-      "desc longa",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "foundation-models-on-device",
-    "score": 81,
-    "lines": 244,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "plankton-code-quality",
-    "score": 81,
-    "lines": 238,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "x-api",
-    "score": 81,
-    "lines": 236,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "springboot-verification",
-    "score": 81,
-    "lines": 233,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "nestjs-patterns",
-    "score": 81,
-    "lines": 232,
+    "lines": 286,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1188,9 +1553,9 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "agent-payment-x402",
+    "name": "liquid-glass-design",
     "score": 81,
-    "lines": 226,
+    "lines": 280,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1198,9 +1563,9 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "regex-vs-llm-structured-text",
+    "name": "motion-foundations",
     "score": 81,
-    "lines": 222,
+    "lines": 300,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1208,29 +1573,9 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "agent-sort",
+    "name": "nestjs-patterns",
     "score": 81,
-    "lines": 217,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "swift-concurrency-6-2",
-    "score": 81,
-    "lines": 217,
-    "reasons": [
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "iterative-retrieval",
-    "score": 81,
-    "lines": 213,
+    "lines": 232,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1248,22 +1593,40 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "claude-model-router",
+    "name": "obsidian-cli",
     "score": 81,
-    "lines": 209,
+    "lines": 275,
     "reasons": [
-      "desc longa",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "opensource-pipeline",
+    "score": 81,
+    "lines": 257,
+    "reasons": [
       ">200 linhas",
       "sem disclosure"
     ],
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "healthcare-eval-harness",
+    "name": "plan-orchestrate",
     "score": 81,
-    "lines": 209,
+    "lines": 264,
     "reasons": [
-      "desc longa",
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "plankton-code-quality",
+    "score": 81,
+    "lines": 238,
+    "reasons": [
       ">200 linhas",
       "sem disclosure"
     ],
@@ -1280,9 +1643,60 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "council",
+    "name": "regex-vs-llm-structured-text",
     "score": 81,
-    "lines": 205,
+    "lines": 222,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "springboot-security",
+    "score": 81,
+    "lines": 274,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "springboot-verification",
+    "score": 81,
+    "lines": 233,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "stripe-webhook-handler",
+    "score": 81,
+    "lines": 266,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      ">200 linhas"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "swift-concurrency-6-2",
+    "score": 81,
+    "lines": 217,
+    "reasons": [
+      ">200 linhas",
+      "sem disclosure"
+    ],
+    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
+  },
+  {
+    "name": "swiftui-patterns",
+    "score": 81,
+    "lines": 260,
     "reasons": [
       ">200 linhas",
       "sem disclosure"
@@ -1300,145 +1714,19 @@
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "openclaw-persona-forge",
-    "score": 86,
-    "lines": 290,
+    "name": "x-api",
+    "score": 81,
+    "lines": 236,
     "reasons": [
-      "desc longa",
-      ">200 linhas"
+      ">200 linhas",
+      "sem disclosure"
     ],
     "fix": "Criar references/ para detalhes e reduzir SKILL.md"
   },
   {
-    "name": "cloud-design-prototyping",
+    "name": "12-factor-agents",
     "score": 86,
-    "lines": 280,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "gan-style-harness",
-    "score": 86,
-    "lines": 280,
-    "reasons": [
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "tinystruct-patterns",
-    "score": 86,
-    "lines": 280,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "rules-distill",
-    "score": 86,
-    "lines": 266,
-    "reasons": [
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "stripe-webhook-handler",
-    "score": 86,
-    "lines": 266,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "taste",
-    "score": 86,
-    "lines": 265,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "game-npc-ai-integration",
-    "score": 86,
-    "lines": 249,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "spatial-intelligence-world-models",
-    "score": 86,
-    "lines": 246,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "claude-project-template",
-    "score": 86,
-    "lines": 244,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "codebase-onboarding",
-    "score": 86,
-    "lines": 235,
-    "reasons": [
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "dmux-workflows",
-    "score": 86,
-    "lines": 220,
-    "reasons": [
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "skill-creator-methodology",
-    "score": 86,
-    "lines": 210,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "motion-design-skill",
-    "score": 86,
-    "lines": 203,
-    "reasons": [
-      "desc longa",
-      ">200 linhas"
-    ],
-    "fix": "Criar references/ para detalhes e reduzir SKILL.md"
-  },
-  {
-    "name": "curriculo-ats-optimizer",
-    "score": 86,
-    "lines": 132,
+    "lines": 77,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1447,9 +1735,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "clarificar",
+    "name": "ads-operator",
     "score": 86,
-    "lines": 114,
+    "lines": 98,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1468,6 +1756,56 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
+    "name": "agentic-engineering",
+    "score": 86,
+    "lines": 74,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ai-first-engineering",
+    "score": 86,
+    "lines": 53,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "analise-concorrentes",
+    "score": 86,
+    "lines": 43,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "anti-hallucination",
+    "score": 86,
+    "lines": 52,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "auditar-skills",
+    "score": 86,
+    "lines": 53,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
     "name": "auditoria-artefatos",
     "score": 86,
     "lines": 106,
@@ -1479,9 +1817,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "roteiro-engenheiro-ia-2026",
+    "name": "automacao-deterministica",
     "score": 86,
-    "lines": 75,
+    "lines": 45,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1489,9 +1827,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "triagem-bug",
+    "name": "avaliar-ferramenta-ia",
     "score": 86,
-    "lines": 72,
+    "lines": 117,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1500,9 +1838,19 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "graph-engineering",
+    "name": "clareza",
     "score": 86,
-    "lines": 71,
+    "lines": 31,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "clarificar",
+    "score": 86,
+    "lines": 114,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1511,9 +1859,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "ralphinho-rfc-pipeline",
+    "name": "claude-voice-workflow",
     "score": 86,
-    "lines": 69,
+    "lines": 30,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1521,9 +1869,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "agentic-engineering",
+    "name": "cloud-code-internal-tools",
     "score": 86,
-    "lines": 65,
+    "lines": 40,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1531,33 +1879,30 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "prompt-builder",
+    "name": "cloud-code-vps-deploy",
     "score": 86,
-    "lines": 65,
+    "lines": 27,
     "reasons": [
-      "desc longa",
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "prediction-market-risk-review",
+    "name": "conversa",
     "score": 86,
-    "lines": 62,
+    "lines": 31,
     "reasons": [
-      "desc longa",
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "manga-generator",
+    "name": "coordenacao",
     "score": 86,
-    "lines": 57,
+    "lines": 34,
     "reasons": [
-      "desc longa",
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
@@ -1567,6 +1912,69 @@
     "name": "copyright-compliance-tracking",
     "score": 86,
     "lines": 56,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "criatividade",
+    "score": 86,
+    "lines": 40,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "curriculo-ats-optimizer",
+    "score": 86,
+    "lines": 132,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "encontrar-skill",
+    "score": 86,
+    "lines": 45,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "engenharia-de-grafos",
+    "score": 86,
+    "lines": 83,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "enterprise-agent-ops",
+    "score": 86,
+    "lines": 52,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "gemini-cli-agent-skills",
+    "score": 86,
+    "lines": 69,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1586,9 +1994,19 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "search-hallucination-detection",
+    "name": "goal",
     "score": 86,
-    "lines": 56,
+    "lines": 40,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "graph-engineering",
+    "score": 86,
+    "lines": 71,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1597,9 +2015,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "ai-first-engineering",
+    "name": "graphify",
     "score": 86,
-    "lines": 53,
+    "lines": 50,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1607,20 +2025,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "anti-hallucination",
+    "name": "grilling",
     "score": 86,
-    "lines": 52,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "enterprise-agent-ops",
-    "score": 86,
-    "lines": 52,
+    "lines": 40,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1631,6 +2038,100 @@
     "name": "humanizar-texto",
     "score": 86,
     "lines": 51,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "local-ai-hardware",
+    "score": 86,
+    "lines": 39,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "local-llm-efficiency",
+    "score": 86,
+    "lines": 42,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "manga-generator",
+    "score": 86,
+    "lines": 57,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "multi-perspective-convergence",
+    "score": 86,
+    "lines": 188,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "n8n-agentic-flows",
+    "score": 86,
+    "lines": 59,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "nanoclaw-repl",
+    "score": 86,
+    "lines": 35,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "notebooklm-claude-rag",
+    "score": 86,
+    "lines": 41,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "pesquisa-social",
+    "score": 86,
+    "lines": 51,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "pipeline-video-agente",
+    "score": 86,
+    "lines": 55,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1650,9 +2151,39 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "automacao-deterministica",
+    "name": "prediction-market-risk-review",
     "score": 86,
-    "lines": 45,
+    "lines": 62,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "prompt-builder",
+    "score": 86,
+    "lines": 90,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ralphinho-rfc-pipeline",
+    "score": 86,
+    "lines": 69,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "roteamento-modelos-gratuitos",
+    "score": 86,
+    "lines": 136,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1661,9 +2192,29 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "encontrar-skill",
+    "name": "roteiro-engenheiro-ia-2026",
     "score": 86,
-    "lines": 45,
+    "lines": 75,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "routines",
+    "score": 86,
+    "lines": 53,
+    "reasons": [
+      "sem secao Quando Ativar",
+      "sem exemplos"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "search-hallucination-detection",
+    "score": 86,
+    "lines": 56,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1672,41 +2223,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "analise-concorrentes",
+    "name": "sessoes-orquestradas",
     "score": 86,
-    "lines": 43,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "criatividade",
-    "score": 86,
-    "lines": 40,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "goal",
-    "score": 86,
-    "lines": 40,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "grilling",
-    "score": 86,
-    "lines": 40,
+    "lines": 90,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1719,36 +2238,15 @@
     "score": 86,
     "lines": 36,
     "reasons": [
-      "desc longa",
       "sem secao Quando Ativar",
       "sem exemplos"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "nanoclaw-repl",
+    "name": "triagem-bug",
     "score": 86,
-    "lines": 35,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "coordenacao",
-    "score": 86,
-    "lines": 34,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "clareza",
-    "score": 86,
-    "lines": 31,
+    "lines": 72,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar",
@@ -1757,9 +2255,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "conversa",
+    "name": "validacao-ideia-24h",
     "score": 86,
-    "lines": 31,
+    "lines": 70,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1767,9 +2265,9 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "9router-resilient-fallback",
+    "name": "workflows",
     "score": 86,
-    "lines": 22,
+    "lines": 54,
     "reasons": [
       "sem secao Quando Ativar",
       "sem exemplos"
@@ -1777,148 +2275,203 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "codebase-deepening-audit",
-    "score": 86,
-    "lines": 21,
+    "name": "9router-gateway",
+    "score": 87,
+    "lines": 29,
     "reasons": [
       "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "domain-context-model",
-    "score": 86,
-    "lines": 21,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "wayfinder-planning",
-    "score": 86,
-    "lines": 21,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "meta-muse-spark",
-    "score": 86,
-    "lines": 20,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "setup-interactive-wizard",
-    "score": 86,
-    "lines": 20,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
+      "pouca estrutura"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
     "name": "remotion-video-creation",
-    "score": 90,
+    "score": 87,
     "lines": 44,
     "reasons": [
       "sem exemplos",
       "pouca estrutura"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "skill-stocktake",
-    "score": 93,
-    "lines": 196,
+    "name": "game-npc-ai-integration",
+    "score": 88,
+    "lines": 249,
     "reasons": [
+      "desc longa",
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "openclaw-persona-forge",
+    "score": 88,
+    "lines": 290,
+    "reasons": [
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "rules-distill",
+    "score": 88,
+    "lines": 266,
+    "reasons": [
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "spatial-intelligence-world-models",
+    "score": 88,
+    "lines": 246,
+    "reasons": [
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "taste",
+    "score": 88,
+    "lines": 265,
+    "reasons": [
+      "desc longa",
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "tinystruct-patterns",
+    "score": 88,
+    "lines": 280,
+    "reasons": [
+      "desc longa",
+      ">200 linhas"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "a2a-interoperability",
+    "score": 93,
+    "lines": 95,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ads-creative-factory",
+    "score": 93,
+    "lines": 69,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ads-reporter-multi",
+    "score": 93,
+    "lines": 69,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "aeo-geo-visibility",
+    "score": 93,
+    "lines": 94,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "agent-browser",
+    "score": 93,
+    "lines": 139,
+    "reasons": [
+      "desc longa",
       "sem secao Quando Ativar"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "multi-perspective-convergence",
+    "name": "agent-commerce-interface",
     "score": 93,
-    "lines": 188,
+    "lines": 79,
     "reasons": [
       "desc longa",
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "frontend-slides",
+    "name": "ai-media-generator",
     "score": 93,
-    "lines": 186,
+    "lines": 35,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "alpaca-broker-ops",
+    "score": 93,
+    "lines": 94,
     "reasons": [
       "desc longa",
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "search-first",
-    "score": 93,
-    "lines": 184,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ito-data-atlas-agent",
-    "score": 93,
-    "lines": 167,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ecc-tools-cost-audit",
-    "score": 93,
-    "lines": 162,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "competitive-report-structure",
-    "score": 93,
-    "lines": 158,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "angular-developer",
     "score": 93,
     "lines": 156,
     "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "approval-loop-morning-digest",
+    "score": 93,
+    "lines": 106,
+    "reasons": [
       "desc longa",
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "ito-trade-planner",
+    "name": "article-writing",
     "score": 93,
-    "lines": 156,
+    "lines": 81,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "astro-site-ops",
+    "score": 93,
+    "lines": 70,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "auditoria-cientifica-ia",
+    "score": 93,
+    "lines": 103,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar"
@@ -1926,9 +2479,101 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "ito-compute",
+    "name": "autobots-auto-improvement",
     "score": 93,
-    "lines": 152,
+    "lines": 146,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "autonomous-loops",
+    "score": 93,
+    "lines": 44,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "autopilot-content-factory",
+    "score": 93,
+    "lines": 68,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "baixar-musica",
+    "score": 93,
+    "lines": 128,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "benchmark-optimization-loop",
+    "score": 93,
+    "lines": 72,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "blender-mcp-ops",
+    "score": 93,
+    "lines": 90,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "book-to-skill",
+    "score": 93,
+    "lines": 118,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "brand-voice",
+    "score": 93,
+    "lines": 103,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "buzz-workspace-teaming",
+    "score": 93,
+    "lines": 78,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "capricho",
+    "score": 93,
+    "lines": 74,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "checklist-requisitos",
+    "score": 93,
+    "lines": 126,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar"
@@ -1945,92 +2590,42 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "roteamento-modelos-gratuitos",
+    "name": "claude-video",
     "score": 93,
-    "lines": 136,
+    "lines": 45,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "cloud-design",
+    "score": 93,
+    "lines": 139,
     "reasons": [
       "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "coletar-oportunidades-youtube",
+    "score": 93,
+    "lines": 159,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "competitive-report-structure",
+    "score": 93,
+    "lines": 158,
+    "reasons": [
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "content-engine",
-    "score": 93,
-    "lines": 133,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "hookify-rules",
-    "score": 93,
-    "lines": 129,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "delivery-gate",
-    "score": 93,
-    "lines": 127,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "workspace-surface-audit",
-    "score": 93,
-    "lines": 127,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "checklist-requisitos",
-    "score": 93,
-    "lines": 126,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "convergencia",
-    "score": 93,
-    "lines": 126,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "orch-pipeline",
-    "score": 93,
-    "lines": 122,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "ito-inference",
-    "score": 93,
-    "lines": 120,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "constituicao-projeto",
@@ -2043,406 +2638,18 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "visa-doc-translate",
+    "name": "content-engine",
     "score": 93,
-    "lines": 118,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "avaliar-ferramenta-ia",
-    "score": 93,
-    "lines": 117,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "recsys-pipeline-architect",
-    "score": 93,
-    "lines": 116,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "marketing-campaign",
-    "score": 93,
-    "lines": 115,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "crosspost",
-    "score": 93,
-    "lines": 113,
+    "lines": 133,
     "reasons": [
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "dashboard-builder",
+    "name": "context-ledger",
     "score": 93,
-    "lines": 110,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "brand-voice",
-    "score": 93,
-    "lines": 103,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "baixar-musica",
-    "score": 93,
-    "lines": 100,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "investor-materials",
-    "score": 93,
-    "lines": 98,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "a2a-interoperability",
-    "score": 93,
-    "lines": 95,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "ito-market-intelligence",
-    "score": 93,
-    "lines": 94,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "investor-outreach",
-    "score": 93,
-    "lines": 93,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "documentation-lookup",
-    "score": 93,
-    "lines": 92,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "engenharia-de-grafos",
-    "score": 93,
-    "lines": 83,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "recursive-decision-ledger",
-    "score": 93,
-    "lines": 82,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "article-writing",
-    "score": 93,
-    "lines": 81,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "triagem-ideias",
-    "score": 93,
-    "lines": 81,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "hipaa-compliance",
-    "score": 93,
-    "lines": 80,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "12-factor-agents",
-    "score": 93,
-    "lines": 77,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "market-research",
-    "score": 93,
-    "lines": 77,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "latency-critical-systems",
-    "score": 93,
-    "lines": 76,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "data-throughput-accelerator",
-    "score": 93,
-    "lines": 75,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "parallel-execution-optimizer",
-    "score": 93,
-    "lines": 75,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "dnb-production",
-    "score": 93,
-    "lines": 74,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "benchmark-optimization-loop",
-    "score": 93,
-    "lines": 72,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "validacao-ideia-24h",
-    "score": 93,
-    "lines": 70,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "gemini-cli-agent-skills",
-    "score": 93,
-    "lines": 69,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "prediction-market-oracle-research",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "sessoes-orquestradas",
-    "score": 93,
-    "lines": 64,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "ito-training",
-    "score": 93,
-    "lines": 61,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "n8n-agentic-flows",
-    "score": 93,
-    "lines": 59,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "ml-adoption-playbook",
-    "score": 93,
-    "lines": 58,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "llm-leaderboard-tracker",
-    "score": 93,
-    "lines": 57,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "terminal-opener",
-    "score": 93,
-    "lines": 56,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "pipeline-video-agente",
-    "score": 93,
-    "lines": 55,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "workflows",
-    "score": 93,
-    "lines": 54,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "auditar-skills",
-    "score": 93,
-    "lines": 53,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "routines",
-    "score": 93,
-    "lines": 53,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "criar-campanha-visual",
-    "score": 93,
-    "lines": 52,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "pesquisa-social",
-    "score": 93,
-    "lines": 51,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "graphify",
-    "score": 93,
-    "lines": 50,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "grill-with-docs",
-    "score": 93,
-    "lines": 50,
+    "lines": 128,
     "reasons": [
       "desc longa",
       "sem secao Quando Ativar"
@@ -2459,11 +2666,520 @@
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
+    "name": "convergencia",
+    "score": 93,
+    "lines": 126,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "criar-campanha-visual",
+    "score": 93,
+    "lines": 52,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "criar-skill",
+    "score": 93,
+    "lines": 190,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "crosspost",
+    "score": 93,
+    "lines": 113,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "dashboard-builder",
+    "score": 93,
+    "lines": 110,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "data-throughput-accelerator",
+    "score": 93,
+    "lines": 75,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "delivery-gate",
+    "score": 93,
+    "lines": 127,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "design-iterate-in-place",
+    "score": 93,
+    "lines": 69,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "dm-keyword-automation",
+    "score": 93,
+    "lines": 80,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "dnb-production",
+    "score": 93,
+    "lines": 74,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "doctor",
+    "score": 93,
+    "lines": 142,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "documentation-lookup",
+    "score": 93,
+    "lines": 92,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ecc-tools-cost-audit",
+    "score": 93,
+    "lines": 162,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "frontend-slides",
+    "score": 93,
+    "lines": 186,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "gauntlet-loop",
+    "score": 93,
+    "lines": 107,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "grill-with-docs",
+    "score": 93,
+    "lines": 50,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "grokbot-team-ops",
+    "score": 93,
+    "lines": 73,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hipaa-compliance",
+    "score": 93,
+    "lines": 80,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hookify-rules",
+    "score": 93,
+    "lines": 129,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "hyperledger-fabric-generator",
+    "score": 93,
+    "lines": 94,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "impeccable-design",
+    "score": 93,
+    "lines": 38,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "investor-materials",
+    "score": 93,
+    "lines": 98,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "investor-outreach",
+    "score": 93,
+    "lines": 93,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ito-compute",
+    "score": 93,
+    "lines": 152,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ito-data-atlas-agent",
+    "score": 93,
+    "lines": 167,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ito-inference",
+    "score": 93,
+    "lines": 120,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ito-market-intelligence",
+    "score": 93,
+    "lines": 94,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ito-trade-planner",
+    "score": 93,
+    "lines": 156,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "ito-training",
+    "score": 93,
+    "lines": 61,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "latency-critical-systems",
+    "score": 93,
+    "lines": 76,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "llm-leaderboard-tracker",
+    "score": 93,
+    "lines": 57,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "market-research",
+    "score": 93,
+    "lines": 77,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "marketing-campaign",
+    "score": 93,
+    "lines": 115,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "mcp-hardware-arduino",
+    "score": 93,
+    "lines": 69,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "meeting-task-listener",
+    "score": 93,
+    "lines": 114,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ml-adoption-playbook",
+    "score": 93,
+    "lines": 58,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "orch-pipeline",
+    "score": 93,
+    "lines": 122,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "parallel-execution-optimizer",
+    "score": 93,
+    "lines": 75,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "plain-language-response",
+    "score": 93,
+    "lines": 40,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "plan-duel",
+    "score": 93,
+    "lines": 74,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "prediction-market-oracle-research",
+    "score": 93,
+    "lines": 65,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "prospeccao-maps-freelance",
+    "score": 93,
+    "lines": 80,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "rag-corporativo-seguro",
+    "score": 93,
+    "lines": 86,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ramp-ops",
+    "score": 93,
+    "lines": 81,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "recsys-pipeline-architect",
+    "score": 93,
+    "lines": 116,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "recursive-decision-ledger",
+    "score": 93,
+    "lines": 82,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
     "name": "retomar-sessao",
     "score": 93,
     "lines": 44,
     "reasons": [
       "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "rlm-recursive-agent",
+    "score": 93,
+    "lines": 103,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "roteamento-modelos-baratos",
+    "score": 93,
+    "lines": 186,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "rule-drift-auditor",
+    "score": 93,
+    "lines": 135,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "search-first",
+    "score": 93,
+    "lines": 184,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "self-improving-skill",
+    "score": 93,
+    "lines": 72,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "site-clone-migration",
+    "score": 93,
+    "lines": 87,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "skill-eval-runner",
+    "score": 93,
+    "lines": 136,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "skill-execution-dashboard",
+    "score": 93,
+    "lines": 40,
+    "reasons": [
       "sem secao Quando Ativar"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
@@ -2475,169 +3191,225 @@
     "reasons": [
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "local-llm-efficiency",
+    "name": "skill-stocktake",
     "score": 93,
-    "lines": 42,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "notebooklm-claude-rag",
-    "score": 93,
-    "lines": 41,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "plain-language-response",
-    "score": 93,
-    "lines": 40,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "local-ai-hardware",
-    "score": 93,
-    "lines": 39,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "ai-media-generator",
-    "score": 93,
-    "lines": 35,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "claude-voice-workflow",
-    "score": 93,
-    "lines": 30,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "cloud-code-internal-tools",
-    "score": 93,
-    "lines": 30,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
-  },
-  {
-    "name": "9router-gateway",
-    "score": 93,
-    "lines": 29,
+    "lines": 196,
     "reasons": [
       "sem secao Quando Ativar"
     ],
     "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "cloud-code-vps-deploy",
+    "name": "slack-tag-ops",
     "score": 93,
-    "lines": 27,
+    "lines": 81,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "spec-kit",
+    "score": 93,
+    "lines": 120,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "telegram-channel-operator",
+    "score": 93,
+    "lines": 75,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "terminal-opener",
+    "score": 93,
+    "lines": 56,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "triagem-ideias",
+    "score": 93,
+    "lines": 81,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "unlazy",
+    "score": 93,
+    "lines": 78,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "video-cut-pipeline",
+    "score": 93,
+    "lines": 72,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "visa-doc-translate",
+    "score": 93,
+    "lines": 118,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "visual-qa-designer",
+    "score": 93,
+    "lines": 78,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "vox-style-video",
+    "score": 93,
+    "lines": 43,
+    "reasons": [
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "whatsapp-evolution-go",
+    "score": 93,
+    "lines": 170,
+    "reasons": [
+      "desc longa",
+      "sem secao Quando Ativar"
+    ],
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
+  },
+  {
+    "name": "word-revision-workflow",
+    "score": 93,
+    "lines": 116,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "workspace-surface-audit",
+    "score": 93,
+    "lines": 127,
     "reasons": [
       "sem exemplos"
     ],
-    "fix": "Adicionar 1-2 exemplos minimos de uso"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "plan-canvas",
-    "score": 100,
-    "lines": 197,
+    "name": "zed-deltadb-versioning",
+    "score": 93,
+    "lines": 83,
     "reasons": [
-      "ok"
+      "sem secao Quando Ativar"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
   },
   {
-    "name": "scientific-thinking-literature-review",
+    "name": "accessibility",
     "score": 100,
-    "lines": 194,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 148,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "unified-memory",
+    "name": "agent-eval",
     "score": 100,
-    "lines": 194,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 148,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "rules-to-hooks-auditor",
+    "name": "agent-introspection-debugging",
     "score": 100,
-    "lines": 193,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 155,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "swift-protocol-di-testing",
+    "name": "agent-self-evaluation",
     "score": 100,
-    "lines": 192,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 183,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "connections-optimizer",
+    "name": "agent-swarm-ops",
     "score": 100,
-    "lines": 191,
+    "lines": 99,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "ecc-guide",
+    "name": "agnostic-repo-mirror",
     "score": 100,
-    "lines": 191,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "criar-skill",
-    "score": 100,
-    "lines": 190,
+    "lines": 140,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "unified-notifications-ops",
+    "name": "api-connector-builder",
     "score": 100,
-    "lines": 189,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 122,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "architecture-decision-records",
+    "score": 100,
+    "lines": 181,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "automation-audit-ops",
+    "score": 100,
+    "lines": 144,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "benchmark",
+    "score": 100,
+    "lines": 96,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "benchmark-methodology",
@@ -2646,727 +3418,63 @@
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "metahuman-to-unreal-pipeline",
-    "score": 100,
-    "lines": 186,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "cost-aware-llm-pipeline",
-    "score": 100,
-    "lines": 185,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "model-reflection-tuning",
-    "score": 100,
-    "lines": 185,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "agent-self-evaluation",
-    "score": 100,
-    "lines": 183,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "architecture-decision-records",
-    "score": 100,
-    "lines": 181,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "laravel-verification",
-    "score": 100,
-    "lines": 181,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "scientific-db-uspto-database",
-    "score": 100,
-    "lines": 179,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "scientific-db-pubmed-database",
-    "score": 100,
-    "lines": 177,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "netmiko-ssh-automation",
-    "score": 100,
-    "lines": 175,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "agent-guardrails",
-    "score": 100,
-    "lines": 174,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "codehealth-mcp",
-    "score": 100,
-    "lines": 172,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "homelab-network-readiness",
-    "score": 100,
-    "lines": 171,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "team-builder",
-    "score": 100,
-    "lines": 170,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "whatsapp-evolution-go",
-    "score": 100,
-    "lines": 170,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "network-bgp-diagnostics",
-    "score": 100,
-    "lines": 169,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "nutrient-document-processing",
-    "score": 100,
-    "lines": 169,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "defi-amm-security",
-    "score": 100,
-    "lines": 168,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "scientific-pkg-gget",
-    "score": 100,
-    "lines": 168,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "security-scan",
-    "score": 100,
-    "lines": 167,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "blender-motion-state-inspection",
     "score": 100,
     "lines": 166,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "blueprint",
+    "score": 100,
+    "lines": 97,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "browser-qa",
+    "score": 100,
+    "lines": 120,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "bun-runtime",
+    "score": 100,
+    "lines": 86,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "canary-watch",
+    "score": 100,
+    "lines": 109,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "cisco-ios-patterns",
     "score": 100,
     "lines": 165,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "content-hash-cache-pattern",
+    "name": "claude-devfleet",
     "score": 100,
-    "lines": 163,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 113,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "scientific-thinking-scholar-evaluation",
+    "name": "codehealth-mcp",
     "score": 100,
-    "lines": 162,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "deep-research",
-    "score": 100,
-    "lines": 161,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "healthcare-emr-patterns",
-    "score": 100,
-    "lines": 161,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "springboot-tdd",
-    "score": 100,
-    "lines": 160,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "coletar-oportunidades-youtube",
-    "score": 100,
-    "lines": 159,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "ios-icon-gen",
-    "score": 100,
-    "lines": 159,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "inherit-legacy-style",
-    "score": 100,
-    "lines": 158,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "claude-connector-strategy",
-    "score": 100,
-    "lines": 157,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "loop-design-check",
-    "score": 100,
-    "lines": 157,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "knowledge-ops",
-    "score": 100,
-    "lines": 156,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "seo",
-    "score": 100,
-    "lines": 156,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "social-graph-ranker",
-    "score": 100,
-    "lines": 156,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "agent-introspection-debugging",
-    "score": 100,
-    "lines": 155,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "network-interface-health",
-    "score": 100,
-    "lines": 154,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "context-budget",
-    "score": 100,
-    "lines": 153,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "jpa-patterns",
-    "score": 100,
-    "lines": 153,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "make-interfaces-feel-better",
-    "score": 100,
-    "lines": 153,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "quarkus-tdd",
-    "score": 100,
-    "lines": 151,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "roteamento-modelos-baratos",
-    "score": 100,
-    "lines": 151,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "ecc-recipes",
-    "score": 100,
-    "lines": 150,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "postgres-patterns",
-    "score": 100,
-    "lines": 149,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "accessibility",
-    "score": 100,
-    "lines": 148,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "agent-eval",
-    "score": 100,
-    "lines": 148,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "kotlin-patterns",
-    "score": 100,
-    "lines": 148,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "llm-trading-agent-security",
-    "score": 100,
-    "lines": 148,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "healthcare-phi-compliance",
-    "score": 100,
-    "lines": 147,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "autobots-auto-improvement",
-    "score": 100,
-    "lines": 146,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "brand-discovery",
-    "score": 100,
-    "lines": 146,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "github-ops",
-    "score": 100,
-    "lines": 146,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "swift-actor-persistence",
-    "score": 100,
-    "lines": 145,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "automation-audit-ops",
-    "score": 100,
-    "lines": 144,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "product-capability",
-    "score": 100,
-    "lines": 143,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "strategic-compact",
-    "score": 100,
-    "lines": 143,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "customer-billing-ops",
-    "score": 100,
-    "lines": 142,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "doctor",
-    "score": 100,
-    "lines": 142,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "skill-scout",
-    "score": 100,
-    "lines": 142,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "team-agent-orchestration",
-    "score": 100,
-    "lines": 140,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "agent-browser",
-    "score": 100,
-    "lines": 139,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "cloud-design",
-    "score": 100,
-    "lines": 139,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "img2threejs",
-    "score": 100,
-    "lines": 138,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "ui-to-vue",
-    "score": 100,
-    "lines": 136,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "gateguard",
-    "score": 100,
-    "lines": 134,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "continuous-learning",
-    "score": 100,
-    "lines": 133,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "memory-import-workflow",
-    "score": 100,
-    "lines": 133,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "evm-token-decimals",
-    "score": 100,
-    "lines": 132,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "homelab-network-setup",
-    "score": 100,
-    "lines": 131,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "social-publisher",
-    "score": 100,
-    "lines": 131,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "kotlin-testing",
-    "score": 100,
-    "lines": 130,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "verification-loop",
-    "score": 100,
-    "lines": 130,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "finance-billing-ops",
-    "score": 100,
-    "lines": 129,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "growth-log",
-    "score": 100,
-    "lines": 129,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "python-testing",
-    "score": 100,
-    "lines": 129,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "context-ledger",
-    "score": 100,
-    "lines": 128,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "quarkus-patterns",
-    "score": 100,
-    "lines": 127,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "dynamic-workflow-mode",
-    "score": 100,
-    "lines": 125,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "email-ops",
-    "score": 100,
-    "lines": 123,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "frontend-design-direction",
-    "score": 100,
-    "lines": 123,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "api-connector-builder",
-    "score": 100,
-    "lines": 122,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 172,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "config-gc",
@@ -3375,268 +3483,643 @@
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "token-budget-advisor",
+    "name": "connections-optimizer",
     "score": 100,
-    "lines": 122,
+    "lines": 191,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "content-hash-cache-pattern",
+    "score": 100,
+    "lines": 163,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "context-budget",
+    "score": 100,
+    "lines": 153,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "continuous-learning",
+    "score": 100,
+    "lines": 133,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "cost-aware-llm-pipeline",
+    "score": 100,
+    "lines": 185,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "cost-tracking",
+    "score": 100,
+    "lines": 98,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "cpp-coding-standards",
+    "score": 100,
+    "lines": 89,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "customer-billing-ops",
+    "score": 100,
+    "lines": 142,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "data-scraper-agent",
+    "score": 100,
+    "lines": 110,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "python-patterns",
+    "name": "deep-research",
     "score": 100,
-    "lines": 121,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 161,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "browser-qa",
+    "name": "defi-amm-security",
     "score": 100,
-    "lines": 120,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 168,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "golang-testing",
+    "name": "design-system",
     "score": 100,
-    "lines": 120,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 84,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "spec-kit",
+    "name": "django-patterns",
     "score": 100,
-    "lines": 120,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "book-to-skill",
+    "name": "django-security",
     "score": 100,
-    "lines": 118,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "rust-testing",
-    "score": 100,
-    "lines": 118,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "quarkus-security",
-    "score": 100,
-    "lines": 116,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "kubernetes-patterns",
-    "score": 100,
-    "lines": 115,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "metahuman-identity-pipeline",
-    "score": 100,
-    "lines": 115,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "research-ops",
-    "score": 100,
-    "lines": 114,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "claude-devfleet",
-    "score": 100,
-    "lines": 113,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "project-flow-ops",
-    "score": 100,
-    "lines": 113,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "perl-security",
-    "score": 100,
-    "lines": 112,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "terminal-ops",
-    "score": 100,
-    "lines": 111,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "canary-watch",
-    "score": 100,
-    "lines": 109,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "exa-search",
-    "score": 100,
-    "lines": 109,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "gauntlet-loop",
-    "score": 100,
-    "lines": 107,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "messages-ops",
-    "score": 100,
-    "lines": 106,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "laravel-tdd",
-    "score": 100,
-    "lines": 105,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "kotlin-exposed-patterns",
-    "score": 100,
-    "lines": 104,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "nodejs-keccak256",
-    "score": 100,
-    "lines": 104,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "auditoria-cientifica-ia",
-    "score": 100,
-    "lines": 103,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 75,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "django-tdd",
     "score": 100,
     "lines": 103,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "gsap-skills",
+    "name": "dynamic-workflow-mode",
     "score": 100,
-    "lines": 103,
+    "lines": 125,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ecc-guide",
+    "score": 100,
+    "lines": 191,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ecc-recipes",
+    "score": 100,
+    "lines": 150,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "email-ops",
+    "score": 100,
+    "lines": 123,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "evm-token-decimals",
+    "score": 100,
+    "lines": 132,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "exa-search",
+    "score": 100,
+    "lines": 109,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "finance-billing-ops",
+    "score": 100,
+    "lines": 129,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "frontend-design-direction",
+    "score": 100,
+    "lines": 123,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "frontend-patterns",
+    "score": 100,
+    "lines": 54,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "gateguard",
+    "score": 100,
+    "lines": 134,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "git-workflow",
+    "score": 100,
+    "lines": 71,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "github-ops",
+    "score": 100,
+    "lines": 146,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "golang-patterns",
+    "score": 100,
+    "lines": 98,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "golang-testing",
+    "score": 100,
+    "lines": 120,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "google-workspace-ops",
+    "score": 100,
+    "lines": 97,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "grills",
+    "score": 100,
+    "lines": 53,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "growth-log",
+    "score": 100,
+    "lines": 129,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "healthcare-emr-patterns",
+    "score": 100,
+    "lines": 161,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "healthcare-phi-compliance",
+    "score": 100,
+    "lines": 147,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hermes-imports",
+    "score": 100,
+    "lines": 90,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "homelab-network-readiness",
+    "score": 100,
+    "lines": 171,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "homelab-network-setup",
+    "score": 100,
+    "lines": 131,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "inherit-legacy-style",
+    "score": 100,
+    "lines": 158,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "rlm-recursive-agent",
+    "name": "ios-icon-gen",
     "score": 100,
-    "lines": 103,
+    "lines": 159,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "jpa-patterns",
+    "score": 100,
+    "lines": 153,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "knowledge-ops",
+    "score": 100,
+    "lines": 156,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "kotlin-exposed-patterns",
+    "score": 100,
+    "lines": 104,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "kotlin-ktor-patterns",
+    "score": 100,
+    "lines": 75,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "kotlin-patterns",
+    "score": 100,
+    "lines": 148,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "kotlin-testing",
+    "score": 100,
+    "lines": 130,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "kubernetes-patterns",
+    "score": 100,
+    "lines": 115,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "laravel-tdd",
+    "score": 100,
+    "lines": 105,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "laravel-verification",
+    "score": 100,
+    "lines": 181,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "llm-trading-agent-security",
+    "score": 100,
+    "lines": 148,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "loop-design-check",
+    "score": 100,
+    "lines": 163,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "mailtrap-email-integration",
+    "score": 100,
+    "lines": 78,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "make-interfaces-feel-better",
+    "score": 100,
+    "lines": 153,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "manim-video",
+    "score": 100,
+    "lines": 91,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "mcp-server-patterns",
+    "score": 100,
+    "lines": 71,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "messages-ops",
+    "score": 100,
+    "lines": 106,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "model-reflection-tuning",
+    "score": 100,
+    "lines": 185,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "netmiko-ssh-automation",
+    "score": 100,
+    "lines": 175,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "network-bgp-diagnostics",
+    "score": 100,
+    "lines": 169,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "network-interface-health",
+    "score": 100,
+    "lines": 154,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "nextjs-turbopack",
+    "score": 100,
+    "lines": 59,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "nodejs-keccak256",
+    "score": 100,
+    "lines": 104,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "nutrient-document-processing",
+    "score": 100,
+    "lines": 169,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "nuxt4-patterns",
     "score": 100,
     "lines": 102,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "orch-add-feature",
+    "score": 100,
+    "lines": 46,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "orch-build-mvp",
+    "score": 100,
+    "lines": 57,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "orch-change-feature",
+    "score": 100,
+    "lines": 44,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "orch-fix-defect",
+    "score": 100,
+    "lines": 44,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "orch-refine-code",
+    "score": 100,
+    "lines": 45,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "perl-patterns",
     "score": 100,
     "lines": 102,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "security-bounty-hunter",
+    "name": "perl-security",
     "score": 100,
-    "lines": 101,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 112,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "plan-canvas",
+    "score": 100,
+    "lines": 197,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "postgres-patterns",
+    "score": 100,
+    "lines": 149,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "product-capability",
+    "score": 100,
+    "lines": 143,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "product-lens",
+    "score": 100,
+    "lines": 94,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "project-flow-ops",
+    "score": 100,
+    "lines": 113,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "python-patterns",
+    "score": 100,
+    "lines": 121,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "python-testing",
+    "score": 100,
+    "lines": 129,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "quarkus-patterns",
+    "score": 100,
+    "lines": 127,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "quarkus-security",
+    "score": 100,
+    "lines": 116,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "quarkus-tdd",
+    "score": 100,
+    "lines": 151,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "repo-scan",
+    "score": 100,
+    "lines": 80,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "research-ops",
+    "score": 100,
+    "lines": 114,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "rust-patterns",
+    "score": 100,
+    "lines": 84,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "rust-testing",
+    "score": 100,
+    "lines": 118,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "safety-guard",
+    "score": 100,
+    "lines": 81,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "scientific-db-pubmed-database",
+    "score": 100,
+    "lines": 177,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "scientific-db-uspto-database",
+    "score": 100,
+    "lines": 179,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "scientific-pkg-gget",
+    "score": 100,
+    "lines": 168,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "scientific-thinking-literature-review",
+    "score": 100,
+    "lines": 194,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "scientific-thinking-scholar-evaluation",
+    "score": 100,
+    "lines": 162,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "score-loop",
@@ -3645,402 +4128,173 @@
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "cost-tracking",
+    "name": "security-bounty-hunter",
     "score": 100,
-    "lines": 98,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "golang-patterns",
-    "score": 100,
-    "lines": 98,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "blueprint",
-    "score": 100,
-    "lines": 97,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "google-workspace-ops",
-    "score": 100,
-    "lines": 97,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "benchmark",
-    "score": 100,
-    "lines": 96,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "hyperledger-fabric-generator",
-    "score": 100,
-    "lines": 94,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "product-lens",
-    "score": 100,
-    "lines": 94,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "tdd-workflow",
-    "score": 100,
-    "lines": 94,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "manim-video",
-    "score": 100,
-    "lines": 91,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "data-scraper-agent",
-    "score": 100,
-    "lines": 90,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "hermes-imports",
-    "score": 100,
-    "lines": 90,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "cpp-coding-standards",
-    "score": 100,
-    "lines": 89,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "bun-runtime",
-    "score": 100,
-    "lines": 86,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "design-system",
-    "score": 100,
-    "lines": 84,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "rust-patterns",
-    "score": 100,
-    "lines": 84,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "zed-deltadb-versioning",
-    "score": 100,
-    "lines": 83,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "safety-guard",
-    "score": 100,
-    "lines": 81,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "claude-md-auditor",
-    "score": 100,
-    "lines": 80,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "repo-scan",
-    "score": 100,
-    "lines": 80,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "buzz-workspace-teaming",
-    "score": 100,
-    "lines": 78,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "mailtrap-email-integration",
-    "score": 100,
-    "lines": 78,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "unlazy",
-    "score": 100,
-    "lines": 78,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "django-security",
-    "score": 100,
-    "lines": 75,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "kotlin-ktor-patterns",
-    "score": 100,
-    "lines": 75,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "capricho",
-    "score": 100,
-    "lines": 74,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "django-patterns",
-    "score": 100,
-    "lines": 72,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "git-workflow",
-    "score": 100,
-    "lines": 71,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "mcp-server-patterns",
-    "score": 100,
-    "lines": 71,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 101,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "security-review",
     "score": 100,
     "lines": 67,
-    "reasons": [
-      "desc longa"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "security-scan",
+    "score": 100,
+    "lines": 167,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "seo",
+    "score": 100,
+    "lines": 156,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "skill-comply",
     "score": 100,
     "lines": 60,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "skill-scout",
+    "score": 100,
+    "lines": 142,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "social-graph-ranker",
+    "score": 100,
+    "lines": 156,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "social-publisher",
+    "score": 100,
+    "lines": 131,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "springboot-tdd",
+    "score": 100,
+    "lines": 160,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "squad-builder",
+    "score": 100,
+    "lines": 116,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "nextjs-turbopack",
+    "name": "strategic-compact",
     "score": 100,
-    "lines": 59,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 143,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "frontend-patterns",
+    "name": "swift-actor-persistence",
     "score": 100,
-    "lines": 54,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 145,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "grills",
+    "name": "swift-protocol-di-testing",
     "score": 100,
-    "lines": 53,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 192,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "orch-build-mvp",
+    "name": "tdd-workflow",
     "score": 100,
-    "lines": 50,
+    "lines": 94,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "team-agent-orchestration",
+    "score": 100,
+    "lines": 140,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "team-builder",
+    "score": 100,
+    "lines": 170,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "terminal-ops",
+    "score": 100,
+    "lines": 111,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "token-budget-advisor",
+    "score": 100,
+    "lines": 122,
     "reasons": [
       "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "orch-add-feature",
+    "name": "ui-to-vue",
     "score": 100,
-    "lines": 46,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 136,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "claude-video",
+    "name": "unified-memory",
     "score": 100,
-    "lines": 45,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 194,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "orch-refine-code",
+    "name": "unified-notifications-ops",
     "score": 100,
-    "lines": 45,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 189,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "autonomous-loops",
+    "name": "verification-loop",
     "score": 100,
-    "lines": 44,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "lines": 130,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "orch-change-feature",
+    "name": "vps-guided-install",
     "score": 100,
-    "lines": 44,
+    "lines": 188,
     "reasons": [
-      "ok"
+      "desc longa"
     ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "orch-fix-defect",
-    "score": 100,
-    "lines": 44,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "autopilot-content-factory",
-    "score": 100,
-    "lines": 43,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "vox-style-video",
-    "score": 100,
-    "lines": 43,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "skill-execution-dashboard",
-    "score": 100,
-    "lines": 40,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
-  },
-  {
-    "name": "impeccable-design",
-    "score": 100,
-    "lines": 38,
-    "reasons": [
-      "ok"
-    ],
-    "fix": "Manter como referencia de qualidade"
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   }
 ]

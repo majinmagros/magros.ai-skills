@@ -1,206 +1,171 @@
-# Auditoria de Skills — Scorecard de Clareza e Saude (v2)
+# Auditoria de Skills — Scorecard de Clareza e Saude
 
-> Gerado em 2026-09-05 | Projeto: magros.ai-skills | Total: 416 pastas em skills/ | v1 era 2026-09-02 com 409 pastas | **Correções aplicadas em 2026-09-05: dashboard + 4 Quando Ativar + 13 descriptions exclusivas + fatiamento de 2 monolitos (ver Correções aplicadas)**
+> Gerado automaticamente em 2026-09-09 | Projeto: magros.ai-skills | Total: 459 pastas em skills/
 
 ## Resumo Executivo
 
-- **Media geral:** 89.8/100 (boa — v1 83.9 → 89.4 lote 5 → 89.8 lote 6)
-- **Pastas sem SKILL.md:** 0 (ok)
-- **Description sem gatilho quando usar:** 0 / 416 (0%). **Descoberta resolvida.**
-- **Description com literal block `|:** 0 (ok)
-- **Name != pasta:** 0 (ok)
-- **SKILL.md >200 linhas:** 138 (33.2%) — era 168. -30 fatiamentos.
-- **SKILL.md >500 linhas:** 18 (4.3%) — era 47. -29.
-- **Com progressive disclosure (mencao references/scripts no corpo):** 100 / 416 (24.0%). Pastas fisicas `references/`+`scripts/`: 62 / 416 (14.9%, +5 lote 6 — hyperledger ja tinha).
-- **Distribuicao por faixa:** 40-59:0 | 60-79:86 | 80-99:165 | 100:165 (soma 416)
-- **Evolucao vs v1:** faixa fraca 40-59 colapsou 29→0; nota 100 subiu 101→165 (+64); >500 caiu 47→18.
-- **Conclusao:** fatiamento em ritmo (30 monolitos → 100 pts). Restam 18 mega-monolitos (todos os 70s restantes). Proximo: lote 7 (threejs-deploy, motion-advanced/ui, react-performance, dart-flutter-patterns, backend-patterns) e gigantes manuais.
-
-## Evolucao desde v1 (o que mudou)
-
-| Item | v1 (02/09, 409) | v2 (05/09, 416) | Delta |
-|---|---|---|---|
-| Media | 83.9 | 89.8 | +5.9 (+0.4 lote 6) |
-| Sem gatilho | 46 | 0 | -46 (dashboard corrigida) |
-| Name mismatch | 6 | 0 | -6 |
-| Nota 100 | 101 | 165 | +64 (+6 lote 6) |
-| Faixa 40-59 | 29 | 0 | -29 |
-| >200 linhas | 168 | 138 | -30 fatiamentos |
-| >500 linhas | 47 | 18 | -29 |
-| Piores exemplos | `universal-portability` 39, 8 skills com 45 | pior agora e 51 (`skill-execution-dashboard`) | cauda critica eliminada |
-| Ex-fracas que subiram | — | `universal-portability` 39→79, `claude-md-auditor` 45→70, `graph-engineering-patterns` 45→70, `threejs-voxel-block-system` 45→70, `frontend-a11y` 53→73, `prompt-optimizer` 53→73 | gatilho adicionado, mas tamanho trava em ~70 |
-
-> Leitura: os commits `3194eb7` (183 descriptions), `90699e7` (+6), `0e10b9f` (literal blocks, pastas vazias, name mismatch) e batch 2-4 de skills novas explicam quase todo o ganho. As 5 skills novas em PT (`clareza`, `coordenacao`, `conversa`, `criatividade`, `curriculo-ats-optimizer`) ja nasceram no padrao bom `Use quando ... Triggers em ...` — manter esse template.
+- **Media geral:** 86.5/100 (boa — acima do 80 desejavel para corpus premium)
+- **Pastas sem SKILL.md:** 0 (quebradas, score 0)
+- **Description sem gatilho quando usar:** 41 / 459 (8.9%) — **padrao critico**
+- **Description com literal block | :** 0 (quebra renderers flat-table)
+- **SKILL.md >200 linhas:** 151 (32.9%) | >500 linhas: 18
+- **Com progressive disclosure (references/scripts):** 97 / 459 (21.1%) — 85% sao monolitos
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:27 | 60-79:85 | 80-99:213
+- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 32.9% violam regra de ouro <=200 linhas e 8.9% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
 
 | Padrao | Evidencia | Impacto | Acao sistemica |
 |---|---|---|---|
-| Monolitos >200 linhas | 168 skills (40.4%) | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
-| Mega-monolitos >500 linhas | 47 skills (11.3%) | Impossivel manter | Quebrar em 2-4 skills focadas |
-| Sem progressive disclosure fisico | 383 sem pasta references/scripts | Tudo no SKILL.md | Criar references/ (so 33 tem) |
-| Unica skill sem frontmatter/gatilho | `skill-execution-dashboard` (51 pts, 14 linhas) | Nunca auto-ativa, quebra tooling | Adicionar frontmatter (quick win) |
-| Descriptions longas >300 chars | ~40+ skills (ex: docker-patterns, flutter-dart-code-review, universal-portability) | Ruido no roteamento | Enxugar para 1-2 frases + Use when + Triggers |
-| Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), claude(11), workflows(8), agent*(24), orch*(9), skill*(13) | Overlap e confusao roteamento | Diferenciar com secao Quando NAO usar cruzada |
-| Templates por stack quase identicos | verification (Jaccard 0.52-0.77), patterns (0.57-0.68), tdd, django/laravel-security (0.65) | Descricoes indistinguiveis, risco de trigger errado | Manter por stack mas reescrever descriptions com condicao exclusiva + delegacao para skill base |
-| Name != pasta / literal block | 0 | — | Monitorar em CI (regrediu a zero, manter) |
+| Descriptions sem gatilho | 41 skills (8.9%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |
+| Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
+| Monolitos >200 linhas | 151 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
+| Mega-monolitos >500 linhas | 18 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
+| Sem progressive disclosure | 362 sem references/scripts | Tudo no SKILL.md | Criar references/ |
+| Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
+| Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
 
 ## Ranking Pior -> Melhor (Top 30 Piores - acao prioritaria)
 
-| # | Score | Linhas | Skill | Maior Correcao | Motivos |
-|---|---|---|---|---|---|
-| 1 | **70** | 1290 | `threejs-voxel-block-system` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 2 | **70** | 949 | `laravel-security` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 3 | **70** | 889 | `windows-desktop-e2e` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 4 | **70** | 856 | `threejs-responsive-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 5 | **70** | 821 | `generating-python-installer` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 6 | **70** | 818 | `graph-engineering-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 7 | **70** | 804 | `threejs-config-constants` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 8 | **70** | 606 | `threejs-deploy-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 9 | **70** | 597 | `motion-advanced` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 10 | **70** | 577 | `motion-ui` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 11 | **70** | 576 | `react-performance` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 12 | **70** | 565 | `dart-flutter-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 13 | **70** | 563 | `backend-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 14 | **70** | 552 | `coding-standards` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 15 | **70** | 534 | `docker-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas |
-| 16 | **70** | 528 | `fastapi-patterns` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 17 | **70** | 525 | `api-design` | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 18 | **70** | 517 | `hyper3d-rodin-pipeline` | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 19 | **73** | 498 | `flox-environments` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 20 | **73** | 484 | `metahuman-unreal-blueprint` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 21 | **73** | 481 | `quarkus-verification` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 22 | **73** | 477 | `perl-testing` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 23 | **73** | 472 | `vue-patterns` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 24 | **73** | 471 | `django-verification` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 25 | **73** | 467 | `ui-demo` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 26 | **73** | 459 | `django-celery` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 27 | **73** | 451 | `vite-patterns` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 28 | **73** | 449 | `flutter-dart-code-review` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 29 | **73** | 447 | `frontend-a11y` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 30 | **73** | 446 | `clickhouse-io` | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
+|---|---|---|---|---|---|---|
+| 1 | **45** | 818 | `graph-engineering-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 2 | **45** | 517 | `hyper3d-rodin-pipeline` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 3 | **45** | 804 | `threejs-config-constants` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 4 | **45** | 606 | `threejs-deploy-pipeline` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 5 | **45** | 856 | `threejs-responsive-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 6 | **45** | 1290 | `threejs-voxel-block-system` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 7 | **53** | 447 | `frontend-a11y` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 8 | **53** | 433 | `fusion-harness` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 9 | **53** | 417 | `hyper3d-rodin-api` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 10 | **53** | 422 | `metahuman-animation-retarget` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 11 | **53** | 484 | `metahuman-unreal-blueprint` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 12 | **53** | 424 | `prompt-optimizer` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; 350-500 linhas |
+| 13 | **53** | 441 | `sub-agent-cost-guard` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 14 | **53** | 408 | `threejs-shader-effects` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 15 | **54** | 213 | `carrier-relationship-management` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 16 | **54** | 215 | `competitive-platform-analysis` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 17 | **54** | 264 | `customs-trade-compliance` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 18 | **54** | 229 | `energy-procurement` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 19 | **54** | 248 | `inventory-demand-planning` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 20 | **54** | 223 | `logistics-exception-management` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 21 | **54** | 239 | `production-scheduling` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 22 | **54** | 261 | `quality-nonconformance` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 23 | **54** | 241 | `returns-reverse-logistics` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem exemplos |
+| 24 | **54** | 240 | `universal-portability` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 25 | **56** | 317 | `claude-account-optimizer` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 26 | **56** | 319 | `claude-cowork-patterns` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 27 | **56** | 329 | `voice-cloning-local` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 28 | **61** | 252 | `claude-chrome-automation` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 29 | **61** | 218 | `claude-model-router` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
+| 30 | **61** | 244 | `claude-project-template` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; sem secao Quando Ativar |
 
-> Correcao de maior valor = a unica mudanca que mais aumenta score/impacto. Lote 6 removeu do Top 30: `git-workflow`, `metahuman-identity-pipeline`, `frontend-patterns`, `hyperledger-fabric-generator`, `autonomous-loops` (stub + legado), `tdd-workflow` (fatiados p/ 100). Grupo 70 agora tem so 18 skills.
+> Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
 ## Amostra do Top 15 Melhores (referencia de qualidade)
 
-Todas com 100 pts (137 no total). Use como template:
-
 | # | Score | Linhas | Skill | Por que e boa |
 |---|---|---|---|---|
-| 1 | 100 | 38 | `impeccable-design` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 2 | 100 | 40 | `skill-execution-dashboard` | corrigida nesta rodada (51→100): frontmatter + gatilhos + Quando usar/NAO usar + exemplo |
-| 3 | 100 | 43 | `autopilot-content-factory` | idem (skill nova ja nasce no padrao) |
-| 3 | 100 | 43 | `vox-style-video` | idem |
-| 4 | 100 | 44 | `orch-change-feature` | idem |
-| 5 | 100 | 44 | `orch-fix-defect` | idem |
-| 6 | 100 | 45 | `claude-video` | idem |
-| 7 | 100 | 45 | `orch-refine-code` | idem |
-| 8 | 100 | 46 | `orch-add-feature` | idem |
-| 9 | 100 | 50 | `orch-build-mvp` | idem |
-| 10 | 100 | 53 | `grills` | idem |
-| 11 | 100 | 59 | `nextjs-turbopack` | idem |
-| 12 | 100 | 60 | `skill-comply` | idem |
-| 13 | 100 | 71 | `mcp-server-patterns` | idem |
-| 14 | 100 | 74 | `capricho` | idem |
-| 15 | 100 | 78 | `buzz-workspace-teaming` | idem |
+| 1 | 100 | 148 | `accessibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 2 | 100 | 148 | `agent-eval` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 3 | 100 | 155 | `agent-introspection-debugging` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 4 | 100 | 183 | `agent-self-evaluation` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 5 | 100 | 99 | `agent-swarm-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 6 | 100 | 140 | `agnostic-repo-mirror` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 7 | 100 | 122 | `api-connector-builder` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 8 | 100 | 181 | `architecture-decision-records` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 9 | 100 | 144 | `automation-audit-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 10 | 100 | 96 | `benchmark` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 11 | 100 | 186 | `benchmark-methodology` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 12 | 100 | 166 | `blender-motion-state-inspection` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 13 | 100 | 97 | `blueprint` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 14 | 100 | 120 | `browser-qa` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 15 | 100 | 86 | `bun-runtime` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 
-Outras 100pts (amostra): `perl-patterns`, `perl-security`, `golang-patterns`, `python-patterns`, `kotlin-patterns` (fatiados no lote 2), `rust-patterns` (84 linhas), `rust-testing` (118), `laravel-verification` (181), `mailtrap-email-integration`, `unlazy`, `repo-scan`, `safety-guard`, `zed-deltadb-versioning` ... ver `auditoria-skills.json` completo (ordenado pior→melhor; melhores no fim).
-
-## Clusters de Overlap — Analise de Deduplicacao (atualizada)
+## Clusters de Overlap — Analise de Deduplicacao
 
 - **Three.js (7)**: `img2threejs`, `threejs-config-constants`, `threejs-deploy-pipeline`, `threejs-responsive-patterns`, `threejs-scene-composer`, `threejs-shader-effects`, `threejs-voxel-block-system`
-  - *Diagnostico:* Sub-dominios legitimos, mas 5 com >600 linhas e sem disclosure. *Acao:* manter separadas, reduzir cada para <=250 linhas + cross-ref Quando NAO usar.
+  - *Diagnostico:* Cada uma cobre sub-dominio legitimo, mas 5 tem >600 linhas e literal block. Risco: roteamento confuso. Acao: manter separadas mas padronizar frontmatter e reduzir cada para <=250 linhas + cross-ref Quando NAO usar.
 - **Security (11)**: `defi-amm-security`, `django-security`, `laravel-security`, `llm-trading-agent-security`, `perl-security`, `quarkus-security`, `security-bounty-hunter`, `security-review`, `security-scan`, `springboot-security`, `vibe-security-scanner`
-  - *Diagnostico:* `security-review` (geral) vs `vibe-security-scanner` (SaaS automatizado) vs language-specific. `django-security`↔`laravel-security` com Jaccard 0.65 (descriptions quase identicas). *Acao:* reescrever descriptions com condicao exclusiva: "Use security-review para checklist manual; use vibe-security-scanner para SaaS com scanners; use *-security apenas se projeto for Django/Laravel/...".
+  - *Diagnostico:* Overlap parcial: security-review (geral) vs vibe-security-scanner (vibe coding SaaS) vs language-specific. Acao: manter mas explicitar em description: Use security-review para checklist manual; use vibe-security-scanner para SaaS com scanners automatizados.
 - **Testing (12)**: `ai-regression-testing`, `cpp-testing`, `csharp-testing`, `e2e-testing`, `fsharp-testing`, `golang-testing`, `kotlin-testing`, `perl-testing`, `python-testing`, `react-testing`, `rust-testing`, `swift-protocol-di-testing`
-  - *Diagnostico:* Legitimo por linguagem, mas `python-testing` (818), `kotlin-testing` (826), `golang-testing` (722) gigantes. `csharp-testing`↔`fsharp-testing` Jaccard 0.58. *Acao:* extrair patterns comuns para skill base `testing-base` + delegacao.
-- **Verification (4+):** `django-verification`↔`laravel-verification` (0.68), `quarkus-verification`↔`springboot-verification` (0.77), cruzados 0.52
-  - *Diagnostico:* Template com troca de nome do stack. Corpo difere em tamanho (quarkus 480 vs springboot 232 linhas) mas descriptions indistinguiveis. Maior risco de trigger errado. *Acao prioritaria:* diferenciar descriptions ("apenas se Quarkus...") + criar `verification-loop-base`.
-- **Patterns (N):** `golang-patterns`↔`perl-patterns` (0.68), ↔`kotlin-patterns` (0.65), ↔`python-patterns` (0.57); `dotnet-patterns`↔`golang-patterns` (0.64)
-  - *Diagnostico:* Mesmo template. *Acao:* idem verification.
-- **TDD:** `quarkus-tdd`↔`springboot-tdd` (0.57), `django-tdd`↔`python-testing` (0.48) — revisar escopo tdd vs testing.
+  - *Diagnostico:* Legitimo por linguagem, mas alguns sao gigantes (python-testing 818 linhas). Acao: extrair patterns comuns para skill base.
 - **Homelab (5)**: `homelab-network-readiness`, `homelab-network-setup`, `homelab-pihole-dns`, `homelab-vlan-segmentation`, `homelab-wireguard-vpn`
-  - *Diagnostico:* Foco bom, fragmentado. *Acao:* skill guarda-chuva com referencias cruzadas.
-- **Healthcare (4)**: `healthcare-cdss-patterns`, `healthcare-emr-patterns`, `healthcare-eval-harness`, `healthcare-phi-compliance` (+ `hipaa-compliance` fora do prefixo)
-  - *Diagnostico:* `healthcare-phi-compliance` vs `hipaa-compliance` (HIPAA e subconjunto de PHI). *Acao:* fundir ou hipaa como entrypoint que delega.
-- **Claude family (11, era 9)**: `claude-account-optimizer`, `claude-chrome-automation`, `claude-connector-strategy`, `claude-cowork-patterns`, `claude-devfleet`, `claude-md-auditor`, `claude-model-router`, `claude-project-template`, `claude-video` (nova), `claude-voice-workflow`, + `notebooklm-claude-rag`
-  - *Diagnostico:* Gatilhos corrigidos no v1→v2, mas tamanhos ainda grandes. *Acao:* fatiar + triggers ja ok.
+  - *Diagnostico:* Foco bom, mas fragmentado. Acao: criar skill guarda-chuva com referencias cruzadas e manter.
+- **Healthcare (5)**: `healthcare-cdss-patterns`, `healthcare-emr-patterns`, `healthcare-eval-harness`, `healthcare-phi-compliance`, `hipaa-compliance`
+  - *Diagnostico:* Sobreposicao healthcare-phi-compliance vs hipaa-compliance (HIPAA e subconjunto de PHI). Acao: fundir ou deixar hipaa como entrypoint que delega.
+- **Claude family (9)**: `claude-account-optimizer`, `claude-chrome-automation`, `claude-connector-strategy`, `claude-cowork-patterns`, `claude-devfleet`, `claude-md-auditor`, `claude-model-router`, `claude-project-template`, `claude-voice-workflow`
+  - *Diagnostico:* 8 tem literal block + sem gatilho + >300 linhas. Acao: corrigir lote: pipe->folded + adicionar triggers.
 - **Workflows (8)**: `claude-voice-workflow`, `dmux-workflows`, `dynamic-workflow-mode`, `git-workflow`, `memory-import-workflow`, `mle-workflow`, `tdd-workflow`, `workflows`
-  - *Diagnostico:* `workflows` vs `dynamic-workflow-mode` vs `dmux-workflows` confusos. *Acao:* renomear descriptions para escopo claro.
-- **Novos clusters grandes:** `agent*` (24), `skill*` (13: auditar-skills, book-to-skill, criar-skill, encontrar-skill, ...), `orch*` (9), `motion*` (7), `kotlin*` (5), `django*` (5), `laravel*` (5)
-  - *Acao:* auditar `skill*` (meta-skills que falam de skills — alto risco de auto-referencia) e `agent*` (24 — maior cluster do repo, precisa taxonomia).
+  - *Diagnostico:* workflows vs dynamic-workflow-mode vs dmux-workflows sao confusos. Acao: renomear descriptions para escopo claro.
 
-## Tabela Completa (condensada) — Todas as 416 skills por faixa
+## Tabela Completa (condensada) — Todas as 459 skills por faixa
 
-### Faixa 40-59 (Critica/Fraca - 0 skills)
-Faixa zerada nesta rodada (era 29 no v1). Ultima remanescente `skill-execution-dashboard` corrigida 51→100.
+### Faixa 0-39 (Critica - 0 skills)
 
-### Faixa 60-79 (Regular - 86 skills)
-Amostra: `docker-patterns`(70, ganhou Quando Ativar — falta fatiar 534 linhas), `fastapi-patterns`(70, idem 528), `flutter-dart-code-review`(73), `mysql-patterns`(73, `## Activation`→`## When to Activate`), `threejs-voxel-block-system`(70), `laravel-security`(70), `windows-desktop-e2e`(70) ... ver JSON para lista completa. Perfil tipico: gatilho OK, mas >350 linhas sem disclosure.
+### Faixa 40-59 (Fraca - 27 skills)
+> Amostra:
+- `graph-engineering-patterns` — 45 pts, 818 linhas — sem gatilho quando usar; desc curta
+- `hyper3d-rodin-pipeline` — 45 pts, 517 linhas — sem gatilho quando usar; desc curta
+- `threejs-config-constants` — 45 pts, 804 linhas — sem gatilho quando usar; desc curta
+- `threejs-deploy-pipeline` — 45 pts, 606 linhas — sem gatilho quando usar; desc curta
+- `threejs-responsive-patterns` — 45 pts, 856 linhas — sem gatilho quando usar; desc curta
+- `threejs-voxel-block-system` — 45 pts, 1290 linhas — sem gatilho quando usar; desc curta
+- `frontend-a11y` — 53 pts, 447 linhas — sem gatilho quando usar; desc curta
+- `fusion-harness` — 53 pts, 433 linhas — sem gatilho quando usar; desc curta
+- `hyper3d-rodin-api` — 53 pts, 417 linhas — sem gatilho quando usar; desc curta
+- `metahuman-animation-retarget` — 53 pts, 422 linhas — sem gatilho quando usar; desc curta
+- `metahuman-unreal-blueprint` — 53 pts, 484 linhas — sem gatilho quando usar; desc curta
+- `prompt-optimizer` — 53 pts, 424 linhas — sem gatilho quando usar; desc curta
+- `sub-agent-cost-guard` — 53 pts, 441 linhas — sem gatilho quando usar; desc curta
+- `threejs-shader-effects` — 53 pts, 408 linhas — sem gatilho quando usar; desc curta
+- `carrier-relationship-management` — 54 pts, 213 linhas — sem gatilho quando usar; desc curta
+... +12 outras
 
-### Faixa 80-99 (Boa - 165 skills) & 100 (Excelente - 134 skills)
-Ex-fracas que subiram para 73-79 apos ganhar gatilho: `universal-portability`(79), `frontend-a11y`(73), `prompt-optimizer`(73), `voice-cloning-local`(74), `obsidian-cli`(79), `configure-ecc`(79). Amostra 100pts: `impeccable-design`, `autopilot-content-factory`, `vox-style-video`, `orch-change-feature`, `orch-fix-defect`, `claude-video`, `orch-refine-code`, `orch-add-feature`, `orch-build-mvp`, `grills`, `nextjs-turbopack`, `skill-comply`, `mcp-server-patterns`, `capricho`, `buzz-workspace-teaming` ... (134 com 100pts).
+### Faixa 60-79 (Regular - 85 skills)
+Amostra: `claude-chrome-automation`(61), `claude-model-router`(61), `claude-project-template`(61), `motion-design-skill`(61), `skill-creator-methodology`(61), `agent-cost-optimization-batch`(66), `ai-governance-monitor`(66), `biomedical-ai-pipeline`(66), `closed-loop-verifier-pattern`(66), `computer-use-agent-patterns`(66) ...
+
+### Faixa 80-99 & 100 (Boa/Excelente - 347 skills)
+Amostra 100pts: `accessibility`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agnostic-repo-mirror`, `api-connector-builder`, `architecture-decision-records`, `automation-audit-ops`, `benchmark`, `benchmark-methodology`, `blender-motion-state-inspection`, `blueprint`, `browser-qa`, `bun-runtime` ... (134 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 
-### Fase 1 — Quick wins (CONCLUIDA)
-- [x] Triggers em 189 descriptions, literal blocks, pastas vazias, name mismatch (v1→v2)
-- [x] `skill-execution-dashboard` — frontmatter + gatilhos + Quando usar/NAO usar + exemplo (51→100, esta rodada). Pendencia: criar `scripts/dashboard_tracker.js` e `docs/EXECUTION-DASHBOARD.md` referenciados (marcados como planejados no SKILL.md).
+### Fase 1 — Quick wins (1-2 dias, impacto alto)
+1. **Remover/corrigir 3 pastas vazias** (`claude-voice-workflow`, `cloud-code-internal-tools`, `cloud-code-vps-deploy`) — score 0
+2. **Corrigir 29 literal blocks** — trocar `description: |` por `description: >` em lote
+3. **Reescrever descriptions sem gatilho (230 skills)** — template: Use when ... Triggers on ... — priorizar Top 30 piores
+4. **Renomear 6 name!=pasta** — alinhar frontmatter
 
-### Fase 2 — Fatiamento (em andamento: 30/47 concluidos)
-0. [x] **Concluidos (70→100):** `rust-patterns` (500→84, 11 refs), `rust-testing` (501→118, 12 refs), `perl-patterns` (505→~95, 8 refs), `perl-security` (504→~115, 8 refs), `security-review` (504→~70, 5 refs), `golang-patterns` (676→~100, 8 refs), `python-patterns` (751→~120, 11 refs), `kotlin-patterns` (712→~150, 9 refs), `kotlin-testing` (825→130, 6 refs), `python-testing` (817→129, 10 refs), `golang-testing` (721→120, 5 refs), `django-patterns` (735→72, 6 refs), `django-tdd` (730→103, 4 refs), `quarkus-patterns` (723→127, 5 refs), `quarkus-tdd` (812→151, 7 refs), `laravel-tdd` (676→105, 5 refs), `django-security` (645→75, 6 refs), `quarkus-security` (468→116, 4 refs), `kotlin-ktor-patterns` (691→75, 6 refs), `kotlin-exposed-patterns` (721→104, 5 refs), `claude-md-auditor` (690→80, 4 refs), `cpp-coding-standards` (725→89, 8 refs), `data-scraper-agent` (770→90, 5 refs), `kubernetes-patterns` (757→115, 6 refs), `git-workflow` (717→71, 5 refs), `metahuman-identity-pipeline` (661→115, 5 refs), `frontend-patterns` (658→54, 4 refs), `hyperledger-fabric-generator` (624→94, refs ja existiam), `autonomous-loops` (613→44 stub+legado), `tdd-workflow` (584→94, 3 refs). Metodo: script de split por faixas + SKILL.md com indice + exemplo + quick reference. Scripts em `C:\Users\magro\AppData\Local\Temp\opencode\slice_*.py`.
-1. **Restam 18 mega-monolitos >500 linhas** — proximo lote mecanico: `threejs-deploy-pipeline` (606), `motion-advanced` (597), `motion-ui` (577), `react-performance` (576), `dart-flutter-patterns` (565), `backend-patterns` (563).
-2. **Depois os gigantes manuais:** threejs-voxel-block-system (1290), laravel-security (949), windows-desktop-e2e (889) — exigem leitura integral e quebra em 2-4 skills.
-3. **Na sequencia:** 37 skills 351-500 + 84 skills 201-350 — disclosure progressivo. Meta: 160→<50 skills >200 linhas.
+### Fase 2 — Fatiamento (1 semana)
+5. **Atacar 47 mega-monolitos >500 linhas** — extrair para `references/` + `scripts/` + reduzir SKILL.md para 150-200 linhas. Comecar por: threejs-voxel-block-system (1290), laravel-security (949), windows-desktop-e2e (889)
+6. **Prosseguir nos 122 skills 200-500 linhas** — aplicar progressive disclosure
 
-### Fase 3 — Deduplicacao (em andamento)
-3. [x] Condicao exclusiva (`Only for X — not for other...`) em 13 descriptions boilerplate: 4 verification, `django/laravel-security`, `csharp/fsharp-testing`, 5 patterns (Go/Perl/Kotlin/Python/.NET). Revisar pares Jaccard>=0.45 restantes (tdd, quarkus/springboot-patterns) — adicionar secao Quando NAO usar cruzada.
-4. Revisar clusters Three.js, Security, Testing, Healthcare, agent*(24), skill*(13) — taxonomia + skill base com delegacao.
-5. Auditar global vs projeto (`~/.config/opencode/skills` tinha 408 globais no v1 — re-verificar) — remover duplicatas globais.
-
-## Correcoes aplicadas (2026-09-05, esta rodada)
-
-| # | Skill(s) | Antes | Depois | O que foi feito |
-|---|---|---|---|---|
-| 1 | `skill-execution-dashboard` | 51 pts, 14 linhas, sem frontmatter | 100 pts, 40 linhas | frontmatter + triggers + Quando usar/NAO usar + exemplo; refs marcadas como planejadas (script/dashboard ausentes) |
-| 2 | `docker-patterns`, `fastapi-patterns` | 63, sem Quando Ativar | 70 | secao When to Activate + When NOT to Use |
-| 3 | `flutter-dart-code-review`, `mysql-patterns` | 66 | 73 | idem (`mysql`: `## Activation`→`## When to Activate`) |
-| 4 | 4 verification + 2 security + 2 testing + 5 patterns | triggers genericos indistinguiveis | — | condicao exclusiva `Only for X` nas descriptions |
-| 5 | `rust-patterns` | 70, 500 linhas monolito | 100, 84 linhas + 11 refs | split por script, SKILL.md com indice + exemplo + quick ref |
-| 6 | `rust-testing` | 70, 501 linhas monolito | 100, 118 linhas + 12 refs | idem |
-| 7 | `perl-patterns`, `perl-security`, `security-review` | 70, ~504 monolitos | 100 (lote 2) | split mecanico + SKILL.md indice |
-| 8 | `golang-patterns` (676), `python-patterns` (751), `kotlin-patterns` (712) | 70 monolitos | 100 (lote 2) | idem |
-| 9 | `kotlin-testing` (825), `python-testing` (817), `golang-testing` (721), `django-patterns` (735), `django-tdd` (730), `quarkus-patterns` (723) | 70 monolitos | 100 (lote 3) | idem |
-| 10 | `quarkus-tdd` (812), `laravel-tdd` (676), `django-security` (645), `quarkus-security` (468) | 70-73 monolitos | 100 (lote 4) | idem |
-| 11 | `kotlin-ktor-patterns` (691), `kotlin-exposed-patterns` (721), `claude-md-auditor` (690), `cpp-coding-standards` (725), `data-scraper-agent` (770), `kubernetes-patterns` (757) | 70 monolitos | 100 (lote 5) | idem |
-| 12 | `git-workflow` (717), `metahuman-identity-pipeline` (661), `frontend-patterns` (658), `hyperledger-fabric-generator` (624, refs ja existiam), `autonomous-loops` (613→stub+legado), `tdd-workflow` (584) | 70 monolitos | 100 (lote 6) | split + stub deprecated |
-| Efeito global | media 87.5, 1 sem gatilho, 168 >200, 47 >500, 134×100 | media 89.8, 0 sem gatilho, 138 >200, 18 >500, 165×100 | — |
+### Fase 3 — Deduplicacao (2-3 dias)
+7. Revisar clusters Three.js, Security, Testing, Healthcare — adicionar secao Quando NAO usar cruzada
+8. Auditar global vs projeto (`~/.config/opencode/skills` tem 408 skills!) — remover duplicatas globais
 
 ### Fase 4 — Maturidade (continuo)
-- **Nivel atual estimado:** 2-3 (skill propria -> biblioteca) para maioria; 165 skills em padrao premium (100 pts).
-- **Proximo nivel:** 5 (evals/A-B) — criar evals de ativacao: medir taxa de trigger correto vs falso positivo, antes/depois do fatiamento.
-- **CI:** travar regressao — validar em `scripts/ci/validate-skills.js`: frontmatter obrigatorio, `Use when|Use quando` na description, `name==pasta`, `description: >` (nao `|`), limite 200 linhas com excecao se tiver references/.
+- **Nivel atual estimado:** 2-3 (skill propria -> biblioteca) para maioria; algumas em 4 (orquestracao)
+- **Proximo nivel:** 5 (evals/A-B) — criar evals de ativacao: medir taxa de trigger correto vs falso positivo
+- **Recomendacao:** instrumentar skill_map e medir discoverability antes/depois
 
 ## Criterios de Nota (replicaveis)
 
 | Criterio | Peso | Como foi medido (heuristica automatizada) |
 |---|---|---|
-| Frontmatter valido | 15 | tem name+description (8) + sem literal block (4) + name==pasta (3) |
-| Frases gatilho | 20 | description/FM contem Use when / Use quando / quando / triggers on / gatilho |
-| Clareza do corpo | 20 | tem Quando Ativar (7) + exemplos codigo ``` (7) + >=3 headers (6, 1-2 headers =3) |
+| Frontmatter valido | 15 | tem name+description, sem literal block, name==pasta |
+| Frases gatilho | 20 | description contem Use when/quando/triggers on/gatilho |
+| Clareza do corpo | 20 | tem Quando Ativar (7) + exemplos codigo (7) + >=3 headers (6) |
 | Foco | 10 | <=200=10, 201-350=6, 351-500=3, >500=0 |
-| Tamanho/disclosure | 20 | <=200=20, 201-300=10, 301-500=5, >500=0; -5 sem references/scripts se >200 |
-| Overlap | 15 | baseline 15 (penalidade manual se duplicata confirmada; Jaccard>=0.45 sinaliza revisao) |
+| Tamanho/disclosure | 20 | <=200=20, 201-300=10, 301-500=5, >500=0; -5 sem references se >200 |
+| Overlap | 15 | baseline 15 (penalidade manual se duplicata confirmada) |
 
 ## Anexos
 
-- **Metodo:** leitura automatizada de todas as `skills/*/SKILL.md` (utf-8-sig) + validacao heuristica + amostragem manual de piores/melhores/duplicatas (ex: dashboard lido integralmente; quarkus vs springboot verification comparados; clareza/coordenacao/conversa/curriculo verificados como falso-positivo de regex).
-- **Correcao metodologica v2:** regex de gatilho inclui `Use quando` (PT). No calculo intermediario 5 skills PT foram falso-positivo; numero final correto e 1 sem gatilho, nao 6.
-- **Limitacao:** clareza semantica real exige leitura humana; heuristica de headers/exemplos e proxy. Jaccard em descriptions e triagem, nao prova de duplicata.
-- **Arquivos:** `skills/*/SKILL.md` (416 pastas). Backup do v1 em `C:\Users\magro\AppData\Local\Temp\opencode\auditoria-skills-2026-09-02.bak.*`.
-- **Reproducibilidade:** scripts temp em `C:\Users\magro\AppData\Local\Temp\opencode\audit_calc.py` (score), `audit_dup.py` (clusters+Jaccard), `audit_tables.py` (tabelas); `auditoria-skills.json` ordenado pior→melhor.
-- **Distribuicao de linhas:** <=200:278 (66.8%) | 201-350:84 | 351-500:36 | >500:18.
+- **Metodo:** leitura automatizada de todas as SKILL.md + validacao heuristica + amostragem manual de piores/melhores (ex: threejs-voxel-block-system:1290 linhas foi lido integralmente)
+- **Limitacao:** clareza semantica real exige leitura humana; heuristica de headers/exemplos e proxy
+- **Arquivos:** `skills/*/SKILL.md` (406 pastas) + `.claude/skills` (1) + `.agents/skills` (39) + `~/.config/opencode/skills` (408 globais — nao auditadas em profundidade aqui)
+- **Reproducibilidade:** `node scripts/audit-gen.js` para re-gerar auditoria-skills.md
 
 ---
-*Nota e meio, nao fim: objetivo e 1 correcao acionavel por skill. Fase 1 concluida — comece pelo `skill-execution-dashboard` (15 min) e depois pelo maior monolito `threejs-voxel-block-system` (1290 linhas).*
+*Nota e meio, nao fim: objetivo e 1 correcao acionavel por skill. Comece pela pior — maior ganho por esforco.*
