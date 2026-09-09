@@ -1,71 +1,5 @@
 [
   {
-    "name": "fusion-harness",
-    "score": 60,
-    "lines": 433,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "hyper3d-rodin-api",
-    "score": 60,
-    "lines": 417,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-animation-retarget",
-    "score": 60,
-    "lines": 422,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "metahuman-unreal-blueprint",
-    "score": 60,
-    "lines": 484,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "sub-agent-cost-guard",
-    "score": 60,
-    "lines": 441,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "threejs-shader-effects",
-    "score": 60,
-    "lines": 408,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "universal-portability",
     "score": 61,
     "lines": 240,
@@ -3142,6 +3076,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "fusion-harness",
+    "score": 100,
+    "lines": 80,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "gateguard",
     "score": 100,
     "lines": 134,
@@ -3250,6 +3191,13 @@
     "name": "homelab-network-setup",
     "score": 100,
     "lines": 131,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hyper3d-rodin-api",
+    "score": 100,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3431,6 +3379,20 @@
     "name": "messages-ops",
     "score": 100,
     "lines": 106,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "metahuman-animation-retarget",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "metahuman-unreal-blueprint",
+    "score": 100,
+    "lines": 65,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3867,6 +3829,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "sub-agent-cost-guard",
+    "score": 100,
+    "lines": 71,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "subscription-tier-routing",
     "score": 100,
     "lines": 103,
@@ -3940,6 +3909,13 @@
     "name": "threejs-responsive-patterns",
     "score": 100,
     "lines": 79,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "threejs-shader-effects",
+    "score": 100,
+    "lines": 83,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
