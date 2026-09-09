@@ -1,10 +1,6 @@
 ---
 name: voice-cloning-local
-description: >
-  Use quando precisar clonar voz localmente (offline, grátis, sem API) a partir de 3 segundos de áudio de referência.
-  Gatilhos: "clonar voz local", "voice clone offline", "alternativa ElevenLabs grátis", "Qwen3-TTS", "TTS local Apache 2.0".
-  NÃO use para: síntese de voz genérica sem referência (use fal-ai-media), streaming TTS real-time, ou quando precisar de 50+ idiomas (Qwen3-TTS suporta 10).
-  Outcome: áudio WAV/MP3 com a voz clonada falando qualquer texto nos 10 idiomas suportados, rodando 100% local na sua GPU.
+description: Use when cloning a voice locally (offline, free, no API) from 3 seconds of reference audio with Qwen3-TTS. Triggers on "clonar voz local", "voice clone offline", "alternativa ElevenLabs grátis", "Qwen3-TTS", "TTS local Apache 2.0".
 metadata:
   origin: ECC
   validated: 2026-08-22
@@ -17,313 +13,99 @@ metadata:
 
 ## Pipeline Qwen3-TTS (Voice Cloning Local)
 
-### Visão Geral
-Qwen3-TTS é uma série de modelos TTS open-source (Apache 2.0) da Alibaba Cloud que suporta:
-- **Voice cloning**: 3 segundos de áudio de referência → fala qualquer texto na voz clonada
-- **Voice design**: criar vozes via descrição natural (idade, gênero, idioma, estilo)
-- **Streaming generation**: geração de áudio em tempo real
-- **10 idiomas**: Chinese, English, Japanese, Korean, German, French, Russian, Portuguese, Spanish, Italian
-- **Modelos**: 0.6B (1.8GB VRAM) e 1.7B (3.9GB VRAM) — roda em consumer GPU
-- **Tokenizer**: Qwen3-TTS-Tokenizer-12Hz (0.68GB) — obrigatório para todos modelos
+Qwen3-TTS (Alibaba, Apache 2.0): **voice cloning** (3s de referência → qualquer texto), **voice design** (descrição natural), 10 idiomas, modelos 0.6B (1.8GB) e 1.7B (3.9GB) — roda em GPU consumer, 100% offline.
+
+## Quando usar
+
+- Clonar voz localmente sem API, grátis, offline
+- Criar voz via descrição natural (idade, gênero, estilo)
+- Batch de narrações com a mesma voz clonada
+- Servidor local com Web UI para testes rápidos
+
+## Quando NÃO usar
+
+- Síntese genérica sem referência → use `fal-ai-media`
+- Streaming TTS real-time ou 50+ idiomas (Qwen suporta 10)
 
 ### Validação Oficial (2026-08-22)
 | Claim | Status | Fonte |
 |---|---|---|
-| Apache 2.0 license | ✅ Confirmado | HF model cards, GitHub LICENSE |
-| Voice clone 3s | ✅ Confirmado | Base models (1.7B/0.6B) suportam clone 3s |
-| HF Space funcional | ✅ Confirmado | huggingface.co/spaces/Qwen/Qwen3-TTS |
-| Roda local | ✅ Confirmado | `pip install qwen-tts`, vLLM-Omni, ComfyUI |
-| 10 idiomas | ✅ Confirmado | Model card lista 10 idiomas |
-| Supera ElevenLabs/MiniMax | ✅ Confirmado | Benchmark speaker similarity 0.789 vs 0.75/0.72 |
+| Apache 2.0 | ✅ | HF model cards, GitHub LICENSE |
+| Clone 3s / roda local (`pip install qwen-tts`) | ✅ | Base models, vLLM-Omni, ComfyUI |
+| 10 idiomas | ✅ | Model card |
+| Similarity 0.789 vs ElevenLabs 0.75/MiniMax 0.72 | ✅ | Benchmark (`references/benchmark-comparison.md`) |
 
 ---
 
 ## Passo a Passo
 
-### 1. Preparação do Ambiente
+### 1. Ambiente
 
 ```bash
-# Requisitos
-# - Python 3.10+
-# - GPU CUDA (recomendado 4GB+ VRAM para 0.6B, 8GB+ para 1.7B)
-# - FFmpeg instalado
-
-# Opção A: PyPI package (mais simples)
-pip install -U qwen-tts
-
-# Opção B: HuggingFace CLI (download manual dos pesos)
-pip install -U "huggingface_hub[cli]"
+pip install -U qwen-tts          # simples; + FFmpeg; Python 3.10+, CUDA 4GB+ (0.6B) / 8GB+ (1.7B)
+# Pesos manuais:
 huggingface-cli download Qwen/Qwen3-TTS-Tokenizer-12Hz --local-dir ./Qwen3-TTS-Tokenizer-12Hz
 huggingface-cli download Qwen/Qwen3-TTS-12Hz-1.7B-Base --local-dir ./Qwen3-TTS-12Hz-1.7B-Base
-# Ou modelo menor:
-huggingface-cli download Qwen/Qwen3-TTS-12Hz-0.6B-Base --local-dir ./Qwen3-TTS-12Hz-0.6B-Base
-
-# Opção C: ComfyUI (day-0 support via ComfyUI-Omni)
-# Instalar ComfyUI → baixar componentes do Comfy-Org/MiniMax-H3 repack
 ```
 
-### 2. Voice Cloning Básico (Python)
-
-```python
-# scripts/voice_clone.py
-import torch
-from qwen_tts import Qwen3TTSModel
-
-def clone_voice(
-    text: str,
-    ref_audio: str,
-    ref_text: str,
-    language: str = "English",
-    model_size: str = "1.7B",  # ou "0.6B"
-    device: str = "cuda:0",
-    output_path: str = "output.wav"
-):
-    """
-    Clona voz a partir de áudio de referência (3-30s recomendado).
-    
-    Args:
-        text: Texto para sintetizar na voz clonada
-        ref_audio: Caminho do arquivo de áudio de referência (WAV/MP3)
-        ref_text: Transcrição EXATA do áudio de referência (obrigatório para qualidade)
-        language: Um dos 10 idiomas suportados
-        model_size: "1.7B" (melhor qualidade) ou "0.6B" (menos VRAM)
-        device: "cuda:0" ou "cpu"
-        output_path: Onde salvar o áudio gerado
-    """
-    
-    model_id = f"Qwen/Qwen3-TTS-12Hz-{model_size}-Base"
-    
-    model = Qwen3TTSModel.from_pretrained(
-        model_id,
-        device_map=device,
-        dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
-    )
-    
-    wavs, sr = model.generate_voice_clone(
-        text=text,
-        language=language,
-        ref_audio=ref_audio,
-        ref_text=ref_text,  # CRÍTICO: deve match exato do áudio
-    )
-    
-    # Salvar
-    import torchaudio
-    torchaudio.save(output_path, wavs.unsqueeze(0), sr)
-    return output_path
-
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 4:
-        print("Uso: python voice_clone.py '<texto>' <ref_audio.wav> '<ref_text>' [language] [model_size]")
-        sys.exit(1)
-    
-    text = sys.argv[1]
-    ref_audio = sys.argv[2]
-    ref_text = sys.argv[3]
-    language = sys.argv[4] if len(sys.argv) > 4 else "English"
-    model_size = sys.argv[5] if len(sys.argv) > 5 else "1.7B"
-    
-    out = clone_voice(text, ref_audio, ref_text, language, model_size)
-    print(f"Gerado: {out}")
-```
-
-### 3. Voice Design (Criar Voz via Descrição)
-
-```python
-# scripts/voice_design.py
-import torch
-from qwen_tts import Qwen3TTSModel
-
-def design_voice(
-    text: str,
-    voice_description: str,
-    language: str = "English",
-    model_size: str = "1.7B",
-    device: str = "cuda:0",
-    output_path: str = "output_design.wav"
-):
-    """
-    Gera voz a partir de descrição natural (sem áudio de referência).
-    
-    Exemplos de voice_description:
-    - "young female voice, warm and friendly, speaking slowly"
-    - "middle-aged male, deep voice, professional narrator tone"
-    - "child voice, energetic, Brazilian Portuguese"
-    - "elderly woman, gentle, storytelling style, Japanese"
-    """
-    
-    model_id = f"Qwen/Qwen3-TTS-12Hz-{model_size}-CustomVoice"
-    
-    model = Qwen3TTSModel.from_pretrained(
-        model_id,
-        device_map=device,
-        dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
-    )
-    
-    wavs, sr = model.generate_voice_design(
-        text=text,
-        language=language,
-        voice_description=voice_description,
-    )
-    
-    import torchaudio
-    torchaudio.save(output_path, wavs.unsqueeze(0), sr)
-    return output_path
-```
-
-### 4. Uso via Linha de Comando (Wrapper)
+### 2. Clone / Design / Batch (scripts prontos em `scripts/`)
 
 ```bash
-# scripts/tts_cli.py
-#!/usr/bin/env python3
-"""
-CLI para Qwen3-TTS voice cloning/design.
-Uso:
-  python tts_cli.py clone "Texto para falar" ref.wav "Transcrição do ref" --lang Portuguese --model 1.7B
-  python tts_cli.py design "Texto" "young female, warm, Portuguese" --lang Portuguese
-"""
-import argparse
-import sys
-sys.path.insert(0, "scripts")
-from voice_clone import clone_voice
-from voice_design import design_voice
-
-def main():
-    parser = argparse.ArgumentParser(description="Qwen3-TTS Local Voice Cloning")
-    subparsers = parser.add_subparsers(dest="mode", required=True)
-    
-    # Clone
-    p_clone = subparsers.add_parser("clone", help="Clone voz de áudio de referência")
-    p_clone.add_argument("text", help="Texto para sintetizar")
-    p_clone.add_argument("ref_audio", help="Arquivo de áudio de referência (WAV/MP3)")
-    p_clone.add_argument("ref_text", help="Transcrição EXATA do áudio de referência")
-    p_clone.add_argument("--lang", default="English", help="Idioma (10 suportados)")
-    p_clone.add_argument("--model", default="1.7B", choices=["0.6B", "1.7B"], help="Tamanho do modelo")
-    p_clone.add_argument("--out", default="output.wav", help="Arquivo de saída")
-    p_clone.add_argument("--device", default="cuda:0", help="Device (cuda:0 ou cpu)")
-    
-    # Design
-    p_design = subparsers.add_parser("design", help="Criar voz via descrição")
-    p_design.add_argument("text", help="Texto para sintetizar")
-    p_design.add_argument("description", help="Descrição da voz desejada")
-    p_design.add_argument("--lang", default="English", help="Idioma")
-    p_design.add_argument("--model", default="1.7B", choices=["0.6B", "1.7B"])
-    p_design.add_argument("--out", default="output_design.wav")
-    p_design.add_argument("--device", default="cuda:0")
-    
-    args = parser.parse_args()
-    
-    if args.mode == "clone":
-        out = clone_voice(args.text, args.ref_audio, args.ref_text, args.lang, args.model, args.device, args.out)
-    else:
-        out = design_voice(args.text, args.description, args.lang, args.model, args.device, args.out)
-    
-    print(f"✅ Áudio gerado: {out}")
-
-if __name__ == "__main__":
-    main()
+python scripts/voice_clone.py '<texto>' ref.wav '<transcrição EXATA do ref>' Portuguese 1.7B
+python scripts/voice_design.py  # voz via descrição natural
+python scripts/tts_cli.py clone "Texto" ref.wav "Transcrição" --lang Portuguese --model 1.7B
+python scripts/tts_cli.py design "Texto" "young female, warm, Portuguese" --lang Portuguese
+python scripts/batch_clone.py    # múltiplos textos, mesma voz
 ```
 
-### 5. Batch Processing (Múltiplos Textos)
+Regras: `ref_text` = match EXATO do áudio (crítico p/ qualidade); ref limpo 10-30s, 16kHz+; cross-lingual funciona mas pode vazar sotaque — prefira ref no idioma alvo.
 
-```python
-# scripts/batch_clone.py
-"""Processa múltiplos textos com a mesma voz clonada."""
-from voice_clone import clone_voice
-from pathlib import Path
+### 3. Web UI local (`http://localhost:7861`, modelo em cache)
 
-def batch_clone(texts: list, ref_audio: str, ref_text: str, language: str, model_size: str, out_dir: str):
-    Path(out_dir).mkdir(parents=True, exist_ok=True)
-    results = []
-    for i, text in enumerate(texts):
-        out_path = f"{out_dir}/clone_{i:03d}.wav"
-        clone_voice(text, ref_audio, ref_text, language, model_size, out_path=out_path)
-        results.append(out_path)
-    return results
+```bash
+cd skills/voice-cloning-local/scripts && pip install -r requirements.txt && python web_clone_server.py
+curl -X POST http://localhost:7861/api/clone -H "Content-Type: application/json" \
+  -d '{"text":"Olá Jarvis","language":"Portuguese","model_size":"0.6B"}' --output clone.wav
 ```
 
----
+UI (`index.html`): textarea 2000 chars (chunk 900), tabs padrão/upload/mic, transcrição EXATA obrigatória, player + download. Local-only (não roda em GitHub Pages).
 
 ## Referências (em `references/`)
 
 | Arquivo | Descrição |
 |---|---|
-| `references/qwen3-tts-model-card.md` | Model card oficial copiado do HF |
-| `references/supported-languages.txt` | Lista dos 10 idiomas suportados |
-| `references/benchmark-comparison.md` | Comparativo ElevenLabs/MiniMax/Qwen3-TTS |
-| `references/license-apache2.txt` | Licença Apache 2.0 completa |
-
----
+| `qwen3-tts-model-card.md` | Model card oficial do HF |
+| `supported-languages.txt` | Os 10 idiomas |
+| `benchmark-comparison.md` | ElevenLabs/MiniMax/Qwen3-TTS |
+| `license-apache2.txt` | Licença completa |
 
 ## Scripts (em `scripts/`)
 
 | Script | Uso |
 |---|---|
-| `voice_clone.py` | Função principal de voice cloning |
-| `voice_design.py` | Voice design via descrição |
-| `tts_cli.py` | CLI unificado (`python tts_cli.py clone/design ...`) |
-| `batch_clone.py` | Processamento em lote |
-| `web_clone_server.py` | Servidor Web FastAPI + Web UI (2000 chars, voz custom) |
-| `index.html` | Interface HTML (player, upload, gravação mic) |
-
-### 6. Web UI Server (FastAPI + HTML — 2000 chars + voz customizada)
-
-Servidor local que sobe em `http://localhost:7861` e carrega o modelo uma vez (cache).
-
-```bash
-cd skills/voice-cloning-local/scripts
-pip install -r requirements.txt   # torch, qwen-tts, fastapi, uvicorn, etc.
-python web_clone_server.py        # abre browser automaticamente
-# API direta:
-curl -X POST http://localhost:7861/api/clone \
-  -H "Content-Type: application/json" \
-  -d '{"text":"Olá Jarvis","language":"Portuguese","model_size":"0.6B"}' --output clone.wav
-
-# Com voz customizada (multipart):
-# curl -F "text=Teste" -F "language=Portuguese" -F "ref_text=transcrição exata" \
-#      -F "ref_audio=@meu_ref.wav" http://localhost:7861/api/clone --output clone.wav
-```
-
-**UI:** `index.html` → textarea 2000 chars (chunk automático 900), tabs **Jarvis padrão | Upload áudio | Gravar mic**, campo transcrição EXATA obrigatório para qualidade Qwen, player HTML5 + download WAV.
-
-Arquitetura: **local-only** (modelo roda na GPU do usuário, 1.8GB 0.6B / 3.9GB 1.7B, offline, não roda no GitHub Pages — estático não executa Python/GPU).
-
----
-
-## Checklist de Qualidade (Auto-Avaliação)
-
-- [x] Pipeline mapeado do início ao fim (setup → clone/design → batch)
-- [x] Claims validados contra docs oficiais (HF, GitHub, blog Qwen)
-- [x] Scripts determinísticos para o previsível (download, inferência)
-- [x] Progressive disclosure: SKILL.md ≤ 200 linhas, detalhes em references/scripts
-- [x] Frontmatter com gatilhos concretos e não-gatilhos
-- [x] Licença Apache 2.0 confirmada (uso comercial livre)
-- [x] Requisitos de hardware documentados (VRAM por modelo)
-
----
+| `voice_clone.py` / `voice_design.py` | Clone e design |
+| `tts_cli.py` | CLI unificado clone/design |
+| `batch_clone.py` | Lote |
+| `web_clone_server.py` + `index.html` | Servidor FastAPI + Web UI |
 
 ## Limitações Conhecidas
 
 | Limitação | Detalhe |
 |---|---|
-| **Transcrição obrigatória** | `ref_text` deve match EXATO do áudio — erro reduz qualidade |
-| **Cross-lingual funciona mas...** | Inglês → Português OK, mas sotaque pode vazar; use ref no idioma alvo quando possível |
-| **x_vector_only_mode** | Clona sem transcrição (embedding only) mas qualidade reduzida |
-| **No Indian languages** | Hindi, Tamil, etc. não suportados nativamente (precisa fine-tune) |
-| **GPU dependency** | 0.6B = ~2GB VRAM, 1.7B = ~4GB VRAM; CPU-only impraticável |
-| **vLLM serving** | Offline/batch apenas; online serving ainda pendente |
-| **Legal warning** | Apache 2.0 licencia o SOFTWARE. Clonar voz real sem consentimento pode violar leis de imagem/publicidade |
-
----
+| **Transcrição obrigatória** | `ref_text` EXATO — erro derruba qualidade |
+| **Cross-lingual** | EN→PT OK, sotaque pode vazar |
+| **x_vector_only_mode** | Sem transcrição, qualidade menor |
+| **Idiomas indianos** | Hindi/Tamil exigem fine-tune |
+| **GPU** | 0.6B ~2GB, 1.7B ~4GB; CPU impraticável |
+| **vLLM serving** | Offline/batch; online pendente |
+| **Legal** | Apache 2.0 cobre o SOFTWARE — clonar voz real sem consentimento pode violar leis de imagem |
 
 ## Troubleshooting
 
 | Erro | Solução |
 |---|---|
-| `CUDA out of memory` | Use modelo 0.6B, reduza batch, ou `device_map="auto"` com offload CPU |
-| `ModuleNotFoundError: qwen_tts` | `pip install -U qwen-tts` (ou instale deps: `torch`, `transformers`, `accelerate`) |
-| `ref_text mismatch` | Transcreva manualmente o áudio de referência (Whisper pode ajudar) |
-| `Audio quality poor` | Use ref_audio 10-30s limpo (sem ruído, música de fundo); 16kHz+ sample rate |
-| `Language not supported` | Verifique lista dos 10 idiomas; não force idioma não treinado |
+| `CUDA out of memory` | Modelo 0.6B, ou `device_map="auto"` com offload CPU |
+| `ModuleNotFoundError: qwen_tts` | `pip install -U qwen-tts` (+ torch, transformers, accelerate) |
+| `ref_text mismatch` | Transcreva manualmente (Whisper ajuda) |
+| `Audio quality poor` | Ref 10-30s limpo, 16kHz+ |
+| `Language not supported` | Só os 10 treinados |

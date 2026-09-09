@@ -1,158 +1,5 @@
 [
   {
-    "name": "frontend-a11y",
-    "score": 53,
-    "lines": 447,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "prompt-optimizer",
-    "score": 53,
-    "lines": 424,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "carrier-relationship-management",
-    "score": 54,
-    "lines": 213,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "competitive-platform-analysis",
-    "score": 54,
-    "lines": 215,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "customs-trade-compliance",
-    "score": 54,
-    "lines": 264,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "energy-procurement",
-    "score": 54,
-    "lines": 229,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "inventory-demand-planning",
-    "score": 54,
-    "lines": 248,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "logistics-exception-management",
-    "score": 54,
-    "lines": 223,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "production-scheduling",
-    "score": 54,
-    "lines": 239,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "quality-nonconformance",
-    "score": 54,
-    "lines": 261,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "returns-reverse-logistics",
-    "score": 54,
-    "lines": 241,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem exemplos",
-      ">200 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
-    "name": "voice-cloning-local",
-    "score": 56,
-    "lines": 329,
-    "reasons": [
-      "sem gatilho quando usar",
-      "desc curta",
-      "sem secao Quando Ativar",
-      ">200 linhas"
-    ],
-    "fix": "Reescrever description com Use when + triggers concretos"
-  },
-  {
     "name": "fusion-harness",
     "score": 60,
     "lines": 433,
@@ -3084,6 +2931,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "carrier-relationship-management",
+    "score": 100,
+    "lines": 68,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "cisco-ios-patterns",
     "score": 100,
     "lines": 165,
@@ -3141,6 +2995,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "competitive-platform-analysis",
+    "score": 100,
+    "lines": 189,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -3212,6 +3073,13 @@
     "name": "customer-billing-ops",
     "score": 100,
     "lines": 142,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "customs-trade-compliance",
+    "score": 100,
+    "lines": 62,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3304,6 +3172,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "energy-procurement",
+    "score": 100,
+    "lines": 71,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "evm-token-decimals",
     "score": 100,
     "lines": 132,
@@ -3321,6 +3196,13 @@
     "name": "finance-billing-ops",
     "score": 100,
     "lines": 129,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "frontend-a11y",
+    "score": 100,
+    "lines": 88,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3476,6 +3358,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "inventory-demand-planning",
+    "score": 100,
+    "lines": 68,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ios-icon-gen",
     "score": 100,
     "lines": 159,
@@ -3549,6 +3438,13 @@
     "name": "llm-trading-agent-security",
     "score": 100,
     "lines": 148,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "logistics-exception-management",
+    "score": 100,
+    "lines": 66,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3751,9 +3647,23 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "production-scheduling",
+    "score": 100,
+    "lines": 69,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "project-flow-ops",
     "score": 100,
     "lines": 113,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "prompt-optimizer",
+    "score": 100,
+    "lines": 65,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3768,6 +3678,13 @@
     "name": "python-testing",
     "score": 100,
     "lines": 129,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "quality-nonconformance",
+    "score": 100,
+    "lines": 64,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3803,6 +3720,13 @@
     "name": "research-ops",
     "score": 100,
     "lines": 114,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "returns-reverse-logistics",
+    "score": 100,
+    "lines": 67,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -4109,6 +4033,13 @@
     "name": "verification-loop",
     "score": 100,
     "lines": 130,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "voice-cloning-local",
+    "score": 100,
+    "lines": 112,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
