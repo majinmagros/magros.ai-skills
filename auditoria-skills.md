@@ -4,14 +4,14 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 90.2/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 91.0/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 23 / 459 (5.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
-- **SKILL.md >200 linhas:** 121 (26.4%) | >500 linhas: 12
-- **Com progressive disclosure (references/scripts):** 120 / 459 (26.1%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:71 | 80-99:205
-- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 26.4% violam regra de ouro <=200 linhas e 5.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
+- **SKILL.md >200 linhas:** 109 (23.7%) | >500 linhas: 0
+- **Com progressive disclosure (references/scripts):** 132 / 459 (28.8%) — 85% sao monolitos
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:59 | 80-99:205
+- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 23.7% violam regra de ouro <=200 linhas e 5.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
 
@@ -19,9 +19,9 @@
 |---|---|---|---|
 | Descriptions sem gatilho | 23 skills (5.0%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |
 | Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
-| Monolitos >200 linhas | 121 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
-| Mega-monolitos >500 linhas | 12 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
-| Sem progressive disclosure | 339 sem references/scripts | Tudo no SKILL.md | Criar references/ |
+| Monolitos >200 linhas | 109 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
+| Mega-monolitos >500 linhas | 0 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
+| Sem progressive disclosure | 327 sem references/scripts | Tudo no SKILL.md | Criar references/ |
 | Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
 | Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
 
@@ -44,21 +44,21 @@
 | 13 | **68** | 244 | `claude-project-template` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
 | 14 | **68** | 203 | `motion-design-skill` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
 | 15 | **68** | 210 | `skill-creator-methodology` | projeto | Reescrever description com Use when + triggers concretos | sem gatilho quando usar; desc curta; >200 linhas |
-| 16 | **70** | 525 | `api-design` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 17 | **70** | 563 | `backend-patterns` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 18 | **70** | 552 | `coding-standards` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 19 | **70** | 565 | `dart-flutter-patterns` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 20 | **70** | 534 | `docker-patterns` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 21 | **70** | 528 | `fastapi-patterns` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 22 | **70** | 821 | `generating-python-installer` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 23 | **70** | 949 | `laravel-security` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 24 | **70** | 597 | `motion-advanced` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 25 | **70** | 577 | `motion-ui` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 26 | **70** | 576 | `react-performance` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | desc longa; >500 linhas; sem disclosure |
-| 27 | **70** | 889 | `windows-desktop-e2e` | projeto | Fatiar em 2-3 skills focadas + mover codigo para references/ | >500 linhas; sem disclosure |
-| 28 | **73** | 400 | `agentic-os` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 29 | **73** | 387 | `ai-regression-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 30 | **73** | 446 | `clickhouse-io` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 16 | **73** | 400 | `agentic-os` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 17 | **73** | 387 | `ai-regression-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 18 | **73** | 446 | `clickhouse-io` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 19 | **73** | 431 | `database-migrations` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 20 | **73** | 429 | `deployment-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 21 | **73** | 459 | `django-celery` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 22 | **73** | 471 | `django-verification` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 23 | **73** | 378 | `error-handling` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 24 | **73** | 498 | `flox-environments` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 25 | **73** | 449 | `flutter-dart-code-review` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 26 | **73** | 383 | `intent-driven-development` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 27 | **73** | 385 | `java-coding-standards` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 28 | **73** | 417 | `laravel-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 29 | **73** | 435 | `motion-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 30 | **73** | 414 | `mysql-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -76,11 +76,11 @@
 | 8 | 100 | 140 | `agnostic-repo-mirror` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 | 9 | 100 | 82 | `ai-governance-monitor` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 | 10 | 100 | 122 | `api-connector-builder` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 11 | 100 | 181 | `architecture-decision-records` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 12 | 100 | 144 | `automation-audit-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 13 | 100 | 44 | `autonomous-loops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 14 | 100 | 68 | `autopilot-content-factory` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 15 | 100 | 96 | `benchmark` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 11 | 100 | 58 | `api-design` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 12 | 100 | 181 | `architecture-decision-records` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 13 | 100 | 144 | `automation-audit-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 14 | 100 | 44 | `autonomous-loops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 15 | 100 | 68 | `autopilot-content-factory` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 
 ## Clusters de Overlap — Analise de Deduplicacao
 
@@ -107,11 +107,11 @@
 > Amostra:
 ... +-15 outras
 
-### Faixa 60-79 (Regular - 71 skills)
+### Faixa 60-79 (Regular - 59 skills)
 Amostra: `fusion-harness`(60), `hyper3d-rodin-api`(60), `metahuman-animation-retarget`(60), `metahuman-unreal-blueprint`(60), `sub-agent-cost-guard`(60), `threejs-shader-effects`(60), `universal-portability`(61), `claude-account-optimizer`(63), `claude-cowork-patterns`(63), `e2e-testing`(66) ...
 
-### Faixa 80-99 & 100 (Boa/Excelente - 388 skills)
-Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agnostic-repo-mirror`, `ai-governance-monitor`, `api-connector-builder`, `architecture-decision-records`, `automation-audit-ops`, `autonomous-loops`, `autopilot-content-factory`, `benchmark` ... (183 com 100pts)
+### Faixa 80-99 & 100 (Boa/Excelente - 400 skills)
+Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agnostic-repo-mirror`, `ai-governance-monitor`, `api-connector-builder`, `api-design`, `architecture-decision-records`, `automation-audit-ops`, `autonomous-loops`, `autopilot-content-factory` ... (195 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

@@ -166,127 +166,6 @@
     "fix": "Reescrever description com Use when + triggers concretos"
   },
   {
-    "name": "api-design",
-    "score": 70,
-    "lines": 525,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "backend-patterns",
-    "score": 70,
-    "lines": 563,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "coding-standards",
-    "score": 70,
-    "lines": 552,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "dart-flutter-patterns",
-    "score": 70,
-    "lines": 565,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "docker-patterns",
-    "score": 70,
-    "lines": 534,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "fastapi-patterns",
-    "score": 70,
-    "lines": 528,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "generating-python-installer",
-    "score": 70,
-    "lines": 821,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "laravel-security",
-    "score": 70,
-    "lines": 949,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "motion-advanced",
-    "score": 70,
-    "lines": 597,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "motion-ui",
-    "score": 70,
-    "lines": 577,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "react-performance",
-    "score": 70,
-    "lines": 576,
-    "reasons": [
-      "desc longa",
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
-    "name": "windows-desktop-e2e",
-    "score": 70,
-    "lines": 889,
-    "reasons": [
-      ">500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Fatiar em 2-3 skills focadas + mover codigo para references/"
-  },
-  {
     "name": "agentic-os",
     "score": 73,
     "lines": 400,
@@ -2824,6 +2703,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "api-design",
+    "score": 100,
+    "lines": 58,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "architecture-decision-records",
     "score": 100,
     "lines": 181,
@@ -2848,6 +2734,13 @@
     "name": "autopilot-content-factory",
     "score": 100,
     "lines": 68,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "backend-patterns",
+    "score": 100,
+    "lines": 45,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2989,6 +2882,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "coding-standards",
+    "score": 100,
+    "lines": 49,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "coletar-oportunidades-youtube",
     "score": 100,
     "lines": 159,
@@ -3084,6 +2984,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "dart-flutter-patterns",
+    "score": 100,
+    "lines": 83,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "data-scraper-agent",
     "score": 100,
     "lines": 110,
@@ -3131,6 +3038,13 @@
     "name": "django-tdd",
     "score": 100,
     "lines": 103,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "docker-patterns",
+    "score": 100,
+    "lines": 43,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3193,6 +3107,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "fastapi-patterns",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "finance-billing-ops",
     "score": 100,
     "lines": 129,
@@ -3224,6 +3145,13 @@
     "name": "gateguard",
     "score": 100,
     "lines": 134,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "generating-python-installer",
+    "score": 100,
+    "lines": 60,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3421,6 +3349,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "laravel-security",
+    "score": 100,
+    "lines": 62,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "laravel-tdd",
     "score": 100,
     "lines": 105,
@@ -3510,6 +3445,20 @@
     "name": "model-reflection-tuning",
     "score": 100,
     "lines": 185,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "motion-advanced",
+    "score": 100,
+    "lines": 110,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "motion-ui",
+    "score": 100,
+    "lines": 77,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3707,6 +3656,15 @@
     "score": 100,
     "lines": 151,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "react-performance",
+    "score": 100,
+    "lines": 77,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -4057,6 +4015,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "windows-desktop-e2e",
+    "score": 100,
+    "lines": 70,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
