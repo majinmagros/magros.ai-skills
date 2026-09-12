@@ -1,25 +1,5 @@
 [
   {
-    "name": "deployment-patterns",
-    "score": 73,
-    "lines": 429,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "django-celery",
-    "score": 73,
-    "lines": 459,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "error-handling",
     "score": 73,
     "lines": 378,
@@ -2741,9 +2721,23 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "deployment-patterns",
+    "score": 100,
+    "lines": 58,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "design-system",
     "score": 100,
     "lines": 84,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "django-celery",
+    "score": 100,
+    "lines": 56,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
