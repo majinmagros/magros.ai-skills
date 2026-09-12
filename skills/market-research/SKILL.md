@@ -63,14 +63,3 @@ Default structure:
 2. key findings
 3. implications
 4. risks and caveats
-5. recommendation
-6. sources
-
-## Quality Gate
-
-Before delivering:
-- all numbers are sourced or labeled as estimates
-- old data is flagged
-- the recommendation follows from the evidence
-- risks and counterarguments are included
-- the output makes a decision easier

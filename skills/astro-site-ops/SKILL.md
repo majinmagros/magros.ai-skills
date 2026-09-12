@@ -63,7 +63,3 @@ deploy with a PageSpeed gate. Fixes the scale pain of pure-HTML sites
   https://docs.astro.build/en/guides/content-collections
 - Deploy an Astro site to Cloudflare Pages (build command, output dir):
   https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/
-- Astro Cloudflare deploy guide (adapter, SSR vs static):
-  https://docs.astro.build/en/guides/deploy/cloudflare
-- Bulk-publish throughput and PageSpeed anecdotes from video `YNsnYbAVrE0`
-  are author measurement, not benchmarks - do not quote as facts.

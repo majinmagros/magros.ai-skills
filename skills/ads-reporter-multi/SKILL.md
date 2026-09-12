@@ -63,6 +63,3 @@ account change stays behind an approval gate.
 ## Sources
 
 - Meta Marketing API (insights, campaigns): https://developers.facebook.com/docs/marketing-api/
-- Google Ads API docs (account and reporting basics): https://developers.google.com/google-ads/api/docs/start
-- Multi-account HTML layout and keyword-DM-as-ManyChat-replacement from
-  the source video are author measurement, not verified benchmarks.

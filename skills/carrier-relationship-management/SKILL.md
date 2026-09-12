@@ -62,6 +62,3 @@ steps = ["FMCSA + insurance + safety", "DAT lane benchmark",
 - **KPIs:** DAT ±8%, guide ≥85%, acceptance ≥90%, OTD ≥95%, claims <0.5%, invoice ≥97%, spot <20%, RFP ≤12wk
 
 ## Additional Resources
-
-- Track scorecards, exception trends, and guide compliance in the same operating review.
-- Capture negotiation positions, accessorial guardrails, and escalation triggers alongside this skill.

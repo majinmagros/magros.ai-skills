@@ -63,12 +63,3 @@ Data throughput result:
 - Runtime: 38.7s
 - Correctness gate: manifest counts and table max timestamps match
 ```
-
-## Guardrails
-
-- Do not delete raw data to make a metric look better.
-- Do not skip failed files silently.
-- Do not mix historical backfill status with live-tail freshness.
-- Do not call a pipeline complete until the target tables and manifest agree.
-- For finance, healthcare, regulated, or customer-impacting data, preserve
-  replay evidence and approval gates.

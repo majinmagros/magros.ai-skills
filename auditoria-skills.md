@@ -4,14 +4,14 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 93.3/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 96.3/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
-- **SKILL.md >200 linhas:** 82 (17.9%) | >500 linhas: 0
-- **Com progressive disclosure (references/scripts):** 145 / 459 (31.6%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:32 | 80-99:196
-- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 17.9% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
+- **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
+- **Com progressive disclosure (references/scripts):** 213 / 459 (46.4%) — 85% sao monolitos
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:189
+- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
 
@@ -19,9 +19,9 @@
 |---|---|---|---|
 | Descriptions sem gatilho | 0 skills (0.0%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |
 | Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
-| Monolitos >200 linhas | 82 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
+| Monolitos >200 linhas | 0 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
 | Mega-monolitos >500 linhas | 0 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
-| Sem progressive disclosure | 314 sem references/scripts | Tudo no SKILL.md | Criar references/ |
+| Sem progressive disclosure | 246 sem references/scripts | Tudo no SKILL.md | Criar references/ |
 | Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
 | Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
 
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **73** | 378 | `error-handling` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 2 | **73** | 449 | `flutter-dart-code-review` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 3 | **73** | 383 | `intent-driven-development` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 4 | **73** | 385 | `java-coding-standards` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 5 | **73** | 417 | `laravel-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 6 | **73** | 435 | `motion-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 7 | **73** | 414 | `mysql-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 8 | **73** | 402 | `prisma-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 9 | **73** | 398 | `pytorch-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 10 | **73** | 425 | `react-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 11 | **73** | 405 | `redis-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 12 | **73** | 451 | `vite-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 13 | **74** | 223 | `configure-ecc` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; >200 linhas; sem disclosure |
-| 14 | **74** | 217 | `financiamento-imobiliario` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; >200 linhas |
-| 15 | **74** | 230 | `ito-basket-compare` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; >200 linhas; sem disclosure |
-| 16 | **76** | 341 | `android-clean-architecture` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 17 | **76** | 304 | `autonomous-agent-harness` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; >200 linhas; sem disclosure |
-| 18 | **76** | 301 | `compose-multiplatform-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 19 | **76** | 326 | `cpp-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 20 | **76** | 323 | `csharp-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 21 | **76** | 323 | `dotnet-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 22 | **76** | 313 | `homelab-vlan-segmentation` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 23 | **76** | 307 | `homelab-wireguard-vpn` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 24 | **76** | 304 | `jira-integration` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 25 | **76** | 343 | `lead-intelligence` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 26 | **76** | 349 | `mle-workflow` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 27 | **76** | 327 | `react-native-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 28 | **76** | 343 | `react-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 29 | **76** | 308 | `santa-method` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 30 | **76** | 316 | `springboot-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 1 | **80** | 22 | `9router-resilient-fallback` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos; pouca estrutura |
+| 2 | **80** | 21 | `codebase-deepening-audit` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos; pouca estrutura |
+| 3 | **80** | 21 | `domain-context-model` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos; pouca estrutura |
+| 4 | **80** | 20 | `meta-muse-spark` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos; pouca estrutura |
+| 5 | **80** | 20 | `setup-interactive-wizard` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos; pouca estrutura |
+| 6 | **80** | 21 | `wayfinder-planning` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos; pouca estrutura |
+| 7 | **86** | 65 | `agent-harness-construction` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 8 | **86** | 65 | `agentic-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 9 | **86** | 53 | `ai-first-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 10 | **86** | 43 | `analise-concorrentes` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 11 | **86** | 52 | `anti-hallucination` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 12 | **86** | 53 | `auditar-skills` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 13 | **86** | 65 | `auditoria-artefatos` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 14 | **86** | 45 | `automacao-deterministica` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 15 | **86** | 65 | `checklist-requisitos` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 16 | **86** | 31 | `clareza` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 17 | **86** | 65 | `clarificar` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 18 | **86** | 65 | `convergencia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 19 | **86** | 31 | `conversa` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 20 | **86** | 34 | `coordenacao` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 21 | **86** | 56 | `copyright-compliance-tracking` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 22 | **86** | 65 | `criar-skill` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 23 | **86** | 40 | `criatividade` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 24 | **86** | 65 | `curriculo-ats-optimizer` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 25 | **86** | 45 | `encontrar-skill` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 26 | **86** | 52 | `enterprise-agent-ops` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 27 | **86** | 56 | `geopolitica-regulacao-ia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 28 | **86** | 40 | `goal` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 29 | **86** | 65 | `graph-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 30 | **86** | 50 | `graphify` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -66,21 +66,21 @@
 
 | # | Score | Linhas | Skill | Por que e boa |
 |---|---|---|---|---|
-| 1 | 100 | 148 | `accessibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 2 | 100 | 139 | `agent-browser` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 3 | 100 | 99 | `agent-cost-optimization-batch` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 4 | 100 | 148 | `agent-eval` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 5 | 100 | 155 | `agent-introspection-debugging` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 6 | 100 | 183 | `agent-self-evaluation` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 7 | 100 | 99 | `agent-swarm-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 8 | 100 | 59 | `agentic-os` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 9 | 100 | 140 | `agnostic-repo-mirror` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 10 | 100 | 82 | `ai-governance-monitor` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 11 | 100 | 61 | `ai-regression-testing` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 12 | 100 | 122 | `api-connector-builder` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 13 | 100 | 58 | `api-design` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 14 | 100 | 181 | `architecture-decision-records` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 15 | 100 | 144 | `automation-audit-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 1 | 100 | 65 | `accessibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 2 | 100 | 50 | `agent-architecture-audit` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 3 | 100 | 65 | `agent-browser` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 4 | 100 | 65 | `agent-eval` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 5 | 100 | 65 | `agent-introspection-debugging` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 6 | 100 | 49 | `agent-payment-x402` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 7 | 100 | 65 | `agent-self-evaluation` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 8 | 100 | 48 | `agent-sort` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 9 | 100 | 65 | `agent-swarm-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 10 | 100 | 59 | `agentic-os` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 11 | 100 | 65 | `agnostic-repo-mirror` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 12 | 100 | 65 | `ai-governance-monitor` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 13 | 100 | 61 | `ai-regression-testing` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 14 | 100 | 65 | `ai-tutor-system` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 15 | 100 | 65 | `android-clean-architecture` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 
 ## Clusters de Overlap — Analise de Deduplicacao
 
@@ -107,11 +107,11 @@
 > Amostra:
 ... +-15 outras
 
-### Faixa 60-79 (Regular - 32 skills)
-Amostra: `error-handling`(73), `flutter-dart-code-review`(73), `intent-driven-development`(73), `java-coding-standards`(73), `laravel-patterns`(73), `motion-patterns`(73), `mysql-patterns`(73), `prisma-patterns`(73), `pytorch-patterns`(73), `react-testing`(73) ...
+### Faixa 60-79 (Regular - 0 skills)
+Amostra:  ...
 
-### Faixa 80-99 & 100 (Boa/Excelente - 427 skills)
-Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agentic-os`, `agnostic-repo-mirror`, `ai-governance-monitor`, `ai-regression-testing`, `api-connector-builder`, `api-design`, `architecture-decision-records`, `automation-audit-ops` ... (231 com 100pts)
+### Faixa 80-99 & 100 (Boa/Excelente - 459 skills)
+Amostra 100pts: `accessibility`, `agent-architecture-audit`, `agent-browser`, `agent-eval`, `agent-introspection-debugging`, `agent-payment-x402`, `agent-self-evaluation`, `agent-sort`, `agent-swarm-ops`, `agentic-os`, `agnostic-repo-mirror`, `ai-governance-monitor`, `ai-regression-testing`, `ai-tutor-system`, `android-clean-architecture` ... (270 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

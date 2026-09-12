@@ -63,23 +63,3 @@ test("add", () => {
   expect(1 + 2).toBe(3);
 });
 ```
-
-### Runtime API
-
-```typescript
-const file = Bun.file("package.json");
-const json = await file.json();
-
-Bun.serve({
-  port: 3000,
-  fetch(req) {
-    return new Response("Hello");
-  },
-});
-```
-
-## Best Practices
-
-- Commit the lockfile (`bun.lock` or `bun.lockb`) for reproducible installs.
-- Prefer `bun run` for scripts. For TypeScript, Bun runs `.ts` natively.
-- Keep dependencies up to date; Bun and the ecosystem evolve quickly.

@@ -63,9 +63,3 @@ S3/S4: pode recomendar registrar e agendar, a decisão é do usuário.
 (comando/saída ou passos manuais), risco residual se houver.
 
 ## Regras
-
-- Nunca aplique patch especulativo ("talvez isso resolva") sem reprodução.
-- Nunca marque S1 como cosmético para "passar logo" — severidade é sobre o
-  usuário, não sobre a dificuldade do fix.
-- Correção impossível dentro do escopo: entregue o relatório da fase 1
-  completo como produto útil e pare.

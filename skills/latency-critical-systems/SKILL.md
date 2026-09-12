@@ -63,13 +63,3 @@ Use live readbacks when a deployed surface exists:
 
 For market-data or execution-adjacent paths, also verify orderbook age, VWAP
 assumptions, provider status, and kill-switch behavior before calling the path
-ready.
-
-## Guardrails
-
-- Do not optimize latency by dropping required validation.
-- Do not hide stale data behind fast cache hits.
-- Do not claim millisecond behavior from client labels without measurement.
-- Do not run live orders, destructive migrations, or customer-impacting deploys
-  without an explicit approval gate.
-- Keep secrets and private payloads out of logs and benchmark artifacts.

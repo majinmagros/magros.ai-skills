@@ -63,9 +63,3 @@ the search space was actually exhaustive.
 ## Promotion Gate
 
 A variant cannot become the new default until:
-
-- correctness tests pass;
-- the performance delta is repeated or explained;
-- rollback is obvious;
-- the change is encoded in source control or a durable runbook;
-- the final summary includes exact commands and measurements.

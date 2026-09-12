@@ -63,4 +63,3 @@ adapters/
 ├── cursor/ (hooks, README)
 ├── codex/ (hooks, README)
 └── ...
-```

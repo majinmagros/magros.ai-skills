@@ -62,9 +62,3 @@ Use **Zod** (or the SDK’s preferred schema format) for input validation.
 - **Idempotency**: Prefer idempotent tools where possible so retries are safe.
 - **Rate and cost**: For tools that call external APIs, consider rate limits and cost; document in the tool description.
 - **Versioning**: Pin SDK version in package.json; check release notes when upgrading.
-
-## Official SDKs and Docs
-
-- **JavaScript/TypeScript**: `@modelcontextprotocol/sdk` (npm). Use Context7 with library name "MCP" for current registration and transport patterns.
-- **Go**: Official Go SDK on GitHub (`modelcontextprotocol/go-sdk`).
-- **C#**: Official C# SDK for .NET.

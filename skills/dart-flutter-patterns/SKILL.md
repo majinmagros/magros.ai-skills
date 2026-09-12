@@ -62,21 +62,3 @@ double cartTotal(Ref ref) {
   });
 }
 ```
-
----
-
-Practical, production-ready patterns for Dart and Flutter applications. Library-agnostic where possible, with explicit coverage of the most common ecosystem packages.
-
----
-
-## References
-
-- `references/foundations.md` — null safety, immutability, async, widgets
-- `references/state-management.md` — BLoC/Cubit, Riverpod
-- `references/navigation-networking.md` — GoRouter, Dio
-- `references/error-testing.md` — error handling, testing
-- [Effective Dart: Design](https://dart.dev/effective-dart/design)
-- [Flutter Performance Best Practices](https://docs.flutter.dev/perf/best-practices)
-- [Riverpod](https://riverpod.dev/) · [BLoC](https://bloclibrary.dev/) · [GoRouter](https://pub.dev/packages/go_router) · [Freezed](https://pub.dev/packages/freezed)
-- Skill: `flutter-dart-code-review` — comprehensive review checklist
-- Rules: `rules/dart/` — coding style, patterns, security, testing, hooks

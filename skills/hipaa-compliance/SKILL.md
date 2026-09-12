@@ -63,17 +63,3 @@ Response pattern:
 User request:
 
 > Can we send support transcripts and patient messages into our analytics stack?
-
-Response pattern:
-
-- Assume those messages may contain PHI
-- Block the design unless the analytics vendor is approved for HIPAA-bound workloads and the data path is minimized
-- Require redaction or a non-PHI event model when possible
-
-## Related Skills
-
-- `healthcare-phi-compliance`
-- `healthcare-reviewer`
-- `healthcare-emr-patterns`
-- `healthcare-eval-harness`
-- `security-review`

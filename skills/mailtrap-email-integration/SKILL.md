@@ -63,15 +63,3 @@ const MAILTRAP_ENDPOINT = process.env.NODE_ENV === "production"
 | Using the production sending endpoint in dev/test | Real test emails reach real inboxes, risking spam complaints and leaked test data | Route non-production environments to the Sandbox endpoint |
 | Hardcoding API tokens in source | Credential leak risk if committed to version control | Load tokens from environment variables / secrets manager |
 | Sending before domain verification completes | Emails silently fail or land in spam | Verify SPF/DKIM/DMARC records before enabling production sending |
-| No retry/error handling on send failures | Silent notification failures (e.g., user never gets password reset email) | Check response status, log failures, surface actionable errors |
-
-## Best Practices
-
-- Keep sandbox and production tokens in separate environment variables, never share one token across environments
-- Verify sending domain DNS records before any production launch involving email
-- Log delivery failures with enough context to debug (recipient, template, timestamp, response code)
-- Treat email sending as a fallible network call: wrap in try/catch, never assume success
-
-## Related Skills
-
-`api-and-interface-design`, `security-and-hardening`, `ci-cd-and-automation`

@@ -63,7 +63,3 @@ pip install pytest-repeat && pytest tests/test_login.py --count=5 -v
 Fixed `sleep` → condition wait · class+index as primary → AutomationId · pixel asserts → content/state asserts · session-scoped app fixture → function-scoped fresh process.
 
 ## Related Skills
-
-- `e2e-testing` — Playwright E2E for web applications
-- `cpp-testing` — C++ unit/integration testing with GoogleTest
-- `cpp-coding-standards` — C++ code style and patterns

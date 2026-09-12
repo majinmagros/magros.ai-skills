@@ -63,12 +63,3 @@ run on routines, log everything.
 - Routines without quiet hours -> 3am pings that train users to mute.
 
 ## Relations
-
-- `messages-ops`: owns reading and replying to DMs; this skill owns channel broadcast and code channels.
-- `agent-guardrails`: owns approval-gate design; this skill applies its gates to channel sends.
-- `routines`: owns scheduling primitives; this skill defines channel-specific routines on top.
-
-## Sources
-
-- Telegram Bot API reference (sendMessage, channels, updates): https://core.telegram.org/bots/api
-- Channel topology and the approval-vs-bypass policy from video evidence #156 (id bNEoJSXDXOA) are author measurement, not benchmarks - validate send limits and approval UX against the Bot API docs before promising behavior.

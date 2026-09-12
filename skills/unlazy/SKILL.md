@@ -63,15 +63,3 @@ git clone --depth 1 https://github.com/Leonxlnx/unlazy ~/.claude/skills/unlazy
 Esta skill ECC é um wrapper adaptado; scripts oficiais ficam em `<skill>/scripts/` quando instalada. Sem eles, use o ledger manualmente.
 
 ## Referências
-
-- `references/gates.md` — formato completo do ledger
-- `references/orchestration.md` — dispatch, waves, leases
-- `references/method.md` — Depth Tree em detalhe
-- Vídeo origem: https://www.youtube.com/watch?v=8fAuXr8fQBo (transcript local `8fAuXr8fQBo.pt.dedup.txt:19-687` em `YT_DIR`)
-
-## Checklist
-
-- [ ] Gates escritos e aprovados antes do código
-- [ ] Checker exit 0, todas EVIDENCE não-pending
-- [ ] Nenhum ABANDON silencioso
-- [ ] Report com ledger + counts

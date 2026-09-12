@@ -63,15 +63,3 @@ config.onChange('camera.fov', (v) => { camera.fov = v; camera.updateProjectionMa
 - [ ] Type inference (Vector2/3, Color, Euler) + validation + history/undo
 
 ## Adapters (Por Plataforma)
-
-```
-adapters/
-├── opencode/ (hooks, commands, README)
-├── cursor/ (hooks, README)
-├── codex/ (hooks, README)
-└── ...
-```
-
-## Referências Oficiais
-
-- [Three.js Object3D](https://threejs.org/docs/#api/en/core/Object3D) · [Camera](https://threejs.org/docs/#api/en/cameras/Camera) · [Material](https://threejs.org/docs/#api/en/materials/Material) · [dat.gui](https://github.com/dataarts/dat.gui) · [Tweakpane](https://tweakpane.github.io/docs/)

@@ -63,9 +63,3 @@ class OrderService:
 
 - `references/project-structure.md` — layout, split settings
 - `references/models.md` — models, QuerySets, managers
-- `references/drf.md` — serializers, ViewSets, actions
-- `references/services-caching.md` — service layer, caching
-- `references/signals-middleware.md` — signals, middleware
-- `references/performance.md` — N+1, indices, bulk ops
-
-Remember: Django provides many shortcuts, but for production applications, structure and organization matter more than concise code. Build for maintainability.

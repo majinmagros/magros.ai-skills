@@ -63,8 +63,3 @@ adapters/
 ├── cursor/ (hooks, README)
 ├── codex/ (hooks, README)
 └── ...
-```
-
-## Referências Oficiais (Validados 2026-08-30)
-
-- [Hyper3D Rodin](https://www.hyper3d.ai/rodin) · [ChatAvatar](https://www.hyper3d.ai/chatavatar) · [Rodin GitHub](https://github.com/hyper3d-ai/rodin)

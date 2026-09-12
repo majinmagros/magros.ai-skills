@@ -63,9 +63,3 @@ promoted to rules. Expect convergence around session 10 (author measurement).
 
 - `continuous-learning-v2`: owns session-level instinct capture; this skill owns the per-skill feedback loop.
 - `rules-distill`: owns extraction of rules from skill content; this skill feeds it promotion candidates.
-- `skill-creator-methodology`: owns first-time skill authoring; this skill owns runs 2 to N.
-
-## Sources
-
-- Skill authoring best practices (structure, iteration, evals): https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
-- Feedback-log shape and "converges around session 10" from video evidence #156 are author measurement, not benchmarks - track your own convergence scores before quoting the number.

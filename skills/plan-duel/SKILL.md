@@ -63,11 +63,3 @@ guard so the duel converges instead of escalating forever.
 ## Relations
 
 - `grills`: owns adversarial questioning of one plan; this skill duels two plans against each other.
-- `santa-method`: owns dual-reviewer pass gates; this skill adds rounds plus a blind verdict.
-- `council`: owns multi-voice deliberation; this skill narrows it to a two-model contest.
-- `agent-eval`: owns costed benchmark suites; this skill is lighter (no harness, judge-scored).
-
-## Sources
-
-- Eval and rubric guidance (judge criteria, A/B comparison): https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
-- Duel format (up to 5 rounds), blind judge, and jealousy-driven guard from video evidence #161 (id RX6tRSGpd_8) are author measurement, not benchmarks - calibrate round count and rubric weights on your own tasks before standardizing.

@@ -41,4 +41,3 @@ Fontes: YouTube, Instagram, TikTok, local.
 
 ## Referências
 
-- `references/modes.md` — 4 modos + custo

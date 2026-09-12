@@ -62,15 +62,3 @@ npm install motion   # motion/react modern; framer-motion legacy — DO NOT MIX 
 Check: mixed imports · missing `"use client"` · missing `key` on AnimatePresence children · hydration mismatch · `layout` on large containers · state-driven animation not triggering.
 
 QA: no CLS · keyboard works · focus trapped · ARIA correct · reduced motion respected · no hydration warnings · clean unmount · explicit `mode` everywhere.
-
-## Anti-Patterns
-
-Layout-property animation · purposeless infinite loops · stagger > 0.1s · ignored reduced motion · `layout` on full-viewport containers · omitted `mode` · decoration-only motion.
-
-## Philosophy
-
-> Motion is interaction design. If motion does not improve UX → remove it.
-
-## Examples
-
-Button, reduced-motion fade, stagger list, AnimatePresence modal, scroll parallax, skeleton, shared layout → `references/examples.md`.

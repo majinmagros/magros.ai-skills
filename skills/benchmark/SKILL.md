@@ -63,33 +63,3 @@ Measures development feedback loop:
 4. TypeScript check time
 5. Lint time
 6. Docker build time
-```
-
-### Mode 4: Before/After Comparison
-
-Run before and after a change to measure impact:
-
-```
-/benchmark baseline    # saves current metrics
-# ... make changes ...
-/benchmark compare     # compares against baseline
-```
-
-Output:
-```
-| Metric | Before | After | Delta | Verdict |
-|--------|--------|-------|-------|---------|
-| LCP | 1.2s | 1.4s | +200ms | WARNING: WARN |
-| Bundle | 180KB | 175KB | -5KB | ✓ BETTER |
-| Build | 12s | 14s | +2s | WARNING: WARN |
-```
-
-## Output
-
-Stores baselines in `.ecc/benchmarks/` as JSON. Git-tracked so the team shares baselines.
-
-## Integration
-
-- CI: run `/benchmark compare` on every PR
-- Pair with `/canary-watch` for post-deploy monitoring
-- Pair with `/browser-qa` for full pre-ship checklist

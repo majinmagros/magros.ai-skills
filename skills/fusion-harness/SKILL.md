@@ -62,18 +62,3 @@ fh stack && fh opinion "como implementar X?" && fh cost
 | **Verification layer** | Architect = verifier; stop hooks determinísticos |
 | **Out-loop > In-loop** | Factory agenda variantes; humano reviewa |
 | **State persistence** | Markdown + append-only locks |
-
-## Validação contra Fonte (IndyDevDan Video 2026-08-25)
-
-- [Vídeo: Intelligence EXPLOSION](https://www.youtube.com/watch?v=rqZHR-hRllI) — transcrição em `C:\projetos\Oportunidades\indyddevdan\rqZHR-hRllI.en.dedup.txt`
-- Conceitos: `/fh opinion`, `/fh debate`, `/fh collaborate`, model aliases, cost table, software factory
-
-## Outcome Esperado
-
-1. **`fh stack`** → registry configurado
-2. **`fh opinion "X?"`** → 3+ opiniões + tabela + síntese
-3. **`fh debate "tese"`** → 3 rounds → consensus/rejection
-4. **`fh collaborate "feature"`** → plano → paralelo → integração
-5. **`fh factory schedule`** → daemon 24/7 (nightly, PR review)
-6. **`fh cost`** → dashboard por modelo/sessão/workflow + CSV
-7. **Hooks** rastreiam sub-agentes em realtime

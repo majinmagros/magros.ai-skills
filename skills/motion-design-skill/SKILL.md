@@ -63,26 +63,3 @@ import Lottie from 'lottie-react';
 | `renderer: 'canvas'` sem necessidade | `renderer: 'svg'` (vetorial, acessível, escalável) |
 | Sem `animation.destroy()` no unmount | Cleanup obrigatório no `useEffect` return / `beforeunload` |
 | `loop: true` em animação de feedback (success/error) | `loop: false` + `autoplay: true` + event `complete` |
-| JSON Lottie > 500KB sem otimizar | `lottie.setQuality('low')` + remover layers no AE |
-| Múltiplas instâncias sem `lottie.freeze()` em tabs ocultas | `lottie.freeze()` ao esconder, `unfreeze()` ao mostrar |
-| Seletor direto no container sem cleanup | `lottie-web` limpa o container no `destroy()` |
-
-## Validação contra docs oficiais (conferido 2026-08-29)
-
-- [Lottie-web Load Animation](https://context7.com/airbnb/lottie-web/llms.txt)
-- [Lottie-web Events](https://context7.com/airbnb/lottie-web/llms.txt)
-- [Lottie-web Cleanup](https://context7.com/airbnb/lottie-web/llms.txt)
-- [Lottie-web Performance](https://context7.com/airbnb/lottie-web/llms.txt)
-- [Lottie React](https://github.com/gamote/lottie-react)
-
-## Referências
-
-- `references/lottie-web-cheatsheet.md` — API completa resumida
-- `references/microinteraction-patterns.json` — presets JSON por componente
-- `references/lottie-react-patterns.tsx` — componentes React prontos
-- `references/performance-checklist.md` — checklist de otimização
-- `references/aftereffects-bodymovin-tips.md` — export otimizado do AE
-
-## Outcome esperado
-
-1. `renderer: 'svg'` por padrão · 2. `destroy()` cleanup sempre · 3. `setQuality('low')`/divisor em complexas · 4. `setSubframe(false)` p/ FPS do AE · 5. `freeze()/unfreeze()` condicional · 6. Microinterações do JSON de presets · 7. `lottie-react` com props tipadas · 8. Listeners de estado (`complete`, `data_ready`, `destroy`)

@@ -63,35 +63,3 @@ func GetUser(id string) *User {
         panic(err) // Don't do this
     }
     return user
-}
-
-// Bad: Passing context in struct
-type Request struct {
-    ctx context.Context // Context should be first param
-    ID  string
-}
-
-// Good: Context as first parameter
-func ProcessRequest(ctx context.Context, id string) error {
-    // ...
-}
-
-// Bad: Mixing value and pointer receivers
-type Counter struct{ n int }
-func (c Counter) Value() int { return c.n }    // Value receiver
-func (c *Counter) Increment() { c.n++ }        // Pointer receiver
-// Pick one style and be consistent
-```
-
-## Referências
-
-- `references/core-principles.md` — simplicidade, zero value, interfaces
-- `references/error-handling.md` — wrapping, tipos custom, Is/As
-- `references/concurrency.md` — worker pool, context, errgroup, leaks
-- `references/interfaces.md` — interfaces pequenas e focadas
-- `references/packages.md` — layout, naming, estado
-- `references/structs.md` — functional options, embedding
-- `references/performance.md` — preallocate, sync.Pool, strings
-- `references/tooling.md` — comandos go, golangci
-
-**Remember**: Go code should be boring in the best way - predictable, consistent, and easy to understand. When in doubt, keep it simple.

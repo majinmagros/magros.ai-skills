@@ -62,10 +62,3 @@ async def create_user(payload: UserCreate, db: DbDep):
 - Sync DB calls (`db.query(...)`) em rotas async → sempre `await db.execute(select(...))` com `AsyncSession`
 
 ## Best Practices
-
-- `response_model` tipado em tudo (anti-PII + OpenAPI limpo)
-- Aliases `DbDep`/`ActiveUserDep` para DI padrão
-- Transações no service; erros estruturais do banco capturados lá
-- JWT defensivo (cast string/int do `sub`)
-- `order_by(id)` em toda paginação offset/limit (sem skips)
-- Auth (401) separada de autorização (403)

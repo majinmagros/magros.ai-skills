@@ -63,12 +63,3 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 | Updates | Keep Django and dependencies updated |
 
 ## Referências
-
-- `references/core-settings.md` — settings de producao
-- `references/authentication.md` — user model, hashing, sessoes
-- `references/authorization.md` — permissoes, RBAC
-- `references/sqli-xss.md` — ORM seguro, escaping
-- `references/csrf-uploads.md` — CSRF, uploads
-- `references/api-ops.md` — throttling, headers, secrets, logs
-
-Remember: Security is a process, not a product. Regularly review and update your security practices.

@@ -63,15 +63,3 @@ Mencione com `@` senão não respondem. Ex `marketing maestros na IA`:
 ```
 @laura analise landing https://... : clareza, promessa, prova, CTA → resumo + pontos fracos + nova copy por sessão (não invente)
 @kengi analise design com copy da Laura → HTML responsivo único com diagnóstico/executivo/antes-depois/prévia + checklist; escolha reviewer entre agentes (ex: Lia) para checar copy/design/responsivo; se falhar, devolva para Laura/Kengi; só entregue HTML após aprovação + 5 mudanças impacto
-```
-Acompanhe em `Inbox` e via navegador Playwright MCP ao vivo.
-
-## Mobile
-
-Settings → Mobile → escanear QR no app celular → todo time + agentes no bolso.
-
-## Referências
-
-- `references/personas.md` — 9 prompts completos
-- `references/delegation-pattern.md` — template chain auditada
-- Vídeo: https://www.youtube.com/watch?v=DpiAtwZODnw

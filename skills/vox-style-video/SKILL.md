@@ -39,4 +39,3 @@ APIs: `FAL_API_KEY` (router, alt Higgsfield), `VOICE_ID` clone.
 
 ## Referências
 
-- `references/vox-style-guide.md` — 3 regras Vox

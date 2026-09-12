@@ -62,21 +62,3 @@ import { DeltaDB } from 'zed-deltadb-versioning';
 await DeltaDB.startThread({ topic: 'migrate to JWT', model: 'sonnet' });
 await DeltaDB.record({ op: 'edit', file: 'src/auth.ts', conversationId });
 ```
-
-## Relação com skills existentes
-
-- `git-workflow` → snapshots + branches; **DeltaDB é por-operação**
-- `terminal-ops` / `agent-harness-construction` → use DeltaDB como layer sob o harness
-- `codebase-onboarding` → mapear repo com histórico DeltaDB mais rico
-
-## Validação
-
-- Docs: https://zed.dev/docs/delta (ou `zed.dev/delta`) — confirmar `DeltaDB`, comando `delta`
-- App: Zed Delta (não confundir com Zed editor)
-- Preço: checar tier Zed (free/paid)
-
-## Erros comuns
-
-- **Tratar Delta como Git** → não use `git rebase` mental model; use `replay`
-- **Não linkar conversa** → sempre crie thread antes de editar, senão perde auditoria
-- **Duplicar .git e DeltaDB sem sync** → escolha um como fonte de verdade por repo

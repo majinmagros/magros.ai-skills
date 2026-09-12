@@ -63,8 +63,3 @@ node scripts/cli.js fast-mode-check                     # guardrails do fast mod
 
 ```
 adapters/
-├── opencode/ (hooks, commands, README)
-├── cursor/ (hooks, README)
-├── codex/ (hooks, README)
-└── ...
-```

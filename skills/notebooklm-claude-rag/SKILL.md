@@ -37,4 +37,3 @@ NotebookLM vira biblioteca agêntica; Claude Code vira executor. Sem indexar/fat
 
 ## Referências
 
-- `references/rag-patterns.md` — NotebookLM como vector store

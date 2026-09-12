@@ -63,6 +63,3 @@ If a unit stalls:
 ## Outputs
 
 - RFC execution log
-- unit scorecards
-- dependency graph snapshot
-- integration risk summary

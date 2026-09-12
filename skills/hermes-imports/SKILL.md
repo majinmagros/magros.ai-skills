@@ -62,28 +62,3 @@ ECC-safe version:
 Use the public release pack under docs/releases/<version>/.
 Return one X thread, one LinkedIn post, one recording checklist, and the missing assets list.
 ```
-
-## Example: Quiet-Hours Operator Job
-
-Local Hermes job:
-
-```text
-Run my private inbox, finance, and content checks overnight.
-```
-
-ECC-safe version:
-
-```text
-Describe the scheduler policy, the quiet-hours window, the escalation rules, and the categories of checks. Do not include private data sources or credentials.
-```
-
-## Output Contract
-
-Return:
-
-- candidate ECC skill name
-- sanitized workflow summary
-- required public inputs
-- private inputs removed
-- remaining risks
-- files that should be created or updated

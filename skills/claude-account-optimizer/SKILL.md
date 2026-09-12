@@ -63,14 +63,3 @@ node scripts/validate-account-setup.py  # valida tudo (hooks, routing, templates
 ## Adapters (Por Plataforma)
 
 ```
-adapters/
-├── opencode/ (hooks, settings, README)
-├── cursor/ (hooks, settings, README)
-├── codex/ (hooks, settings, README)
-├── gemini-cli/ (skills, settings, README)
-└── ...
-```
-
-## Referências Oficiais
-
-- [Memory](https://docs.anthropic.com/en/docs/claude-code/memory) · [Settings](https://docs.anthropic.com/en/docs/claude-code/settings) · [Hooks](https://docs.anthropic.com/en/docs/claude-code/hooks) · [Projects](https://docs.anthropic.com/en/docs/claude-code/projects) · [Skills](https://docs.anthropic.com/en/docs/claude-code/skills) · [Model Routing](https://docs.anthropic.com/en/docs/claude-code/model-routing)

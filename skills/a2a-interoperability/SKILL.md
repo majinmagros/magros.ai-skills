@@ -63,32 +63,3 @@ falar com outro agente. MCP não substitui A2A e vice-versa.
 3. **Implemente o Agent Card** do seu agente (identidade + capacidades +
    endpoint de Task). Ele é o que permite descoberta.
 4. **Exponha o endpoint de Task** (JSON-RPC 2.0 + SSE para streaming).
-5. **Para chamar outro agente**: leia o Agent Card dele → envie a Task →
-   acompanhe o ciclo de vida → leia o Artifact de retorno.
-6. **Trate estados reais**: `input-required` (agente pede dado humano),
-   `failed` com mensagem de erro (para retry/fallback no seu loop).
-
-## Boas práticas
-
-- Agentes A2A são **opacos por design** — não assuma que consegue inspecionar
-  o estado interno do agente remoto; modele a interação só via Task/Artifact.
-- Prefira Tasks pequenas e com artefato claro de retorno (facilita reuso e teste).
-- Para operações longas, use streaming/async em vez de chamada bloqueante.
-- Proteja o endpoint: A2A expõe seu agente para a rede — valide, autentique e
-  aplique as proteções da skill `agent-guardrails` (injeção de prompt via
-  artefatos/instruções recebidas do agente remoto).
-
-## Fontes oficiais (conferir antes de codar)
-
-- Docs: `https://a2a-protocol.org/latest/` (spec + tutorials + SDKs)
-- Repo: `https://github.com/a2aproject/A2A` (governança Linux Foundation; TSC:
-  AWS, Cisco, Google, IBM, Microsoft, Salesforce, SAP, ServiceNow)
-- Anúncio: developers.googleblog.com (2025-04-09); complementar a leitura com
-  `learn.microsoft.com/en-us/agents/architecture/multi-agent-patterns`.
-
-## Skills relacionadas
-
-- `mcp-server-patterns` — agente↔tool (o outro lado da equação).
-- `agent-guardrails` — segurança de agentes expostos (injeção, jailbreak).
-- `sessoes-orquestradas` / `agentic-os` — orquestração de múltiplos agentes.
-- `cost-aware-llm-pipeline` — custo por chamada quando agentes delegam entre si.

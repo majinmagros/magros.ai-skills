@@ -62,26 +62,3 @@ Form login completo (estados, validação, autocomplete) → `references/pattern
 ```
 
 ## Keyboard, Focus, Images, Motion (resumo)
-
-- **Dropdown custom**: `role="combobox"` + `aria-expanded/haspopup/controls` + `tabIndex={0}`; teclas ArrowUp/Down, Enter/Space, Escape; `role="option"` + `aria-selected`. Código em `references/patterns.md`.
-- **Modal**: `role="dialog"` + `aria-modal` + `aria-labelledby`; salva foco ao abrir, restaura ao fechar; Escape fecha; focus trap completo → `focus-trap-react`.
-- **Imagens**: decorativa → `alt=""` + `aria-hidden`; informativa → alt descritivo; icon-button → `aria-label` + ícone `aria-hidden`.
-- **Reduced motion**: hook `useReducedMotion()` (`prefers-reduced-motion`) → `transition: 'none'`. Código em `references/patterns.md`.
-
-## Anti-Patterns (resumo)
-
-`onClick` em div sem teclado · `aria-label` em div sem role · placeholder como label · `tabIndex` positivo · `aria-hidden` em focável · `role="button"` sem `onKeyDown`/`tabIndex`. Versões comentadas em `references/patterns.md`.
-
-## Checklist
-
-- [ ] Todo `<input>/<select>/<textarea>` tem `<label>` via `htmlFor`/`id`
-- [ ] Erros linkados com `aria-describedby` + `role="alert"`
-- [ ] Sem `onClick` em `<div>/<span>` sem `role` + `tabIndex` + `onKeyDown`
-- [ ] Icon-only buttons têm `aria-label`; decorativas têm `alt=""` + `aria-hidden`
-- [ ] Modais restauram foco; conteúdo dinâmico usa `aria-live`; `prefers-reduced-motion` respeitado
-
-## Related Skills
-
-- `frontend-patterns` — general React component and state patterns
-- `design-system` — design token and component consistency
-- `motion-ui` — animation patterns with accessibility considerations

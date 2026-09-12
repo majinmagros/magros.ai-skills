@@ -62,39 +62,3 @@ These are usually low-signal or out of bounty scope unless the program says othe
 ```bash
 semgrep --config=auto --severity=ERROR --severity=WARNING --json
 ```
-
-Then manually filter:
-
-- drop tests, demos, fixtures, vendored code
-- drop local-only or non-reachable paths
-- keep only findings with a clear network or user-controlled route
-
-## Report Structure
-
-```markdown
-## Description
-[What the vulnerability is and why it matters]
-
-## Vulnerable Code
-[File path, line range, and a small snippet]
-
-## Proof of Concept
-[Minimal working request or script]
-
-## Impact
-[What the attacker can achieve]
-
-## Affected Version
-[Version, commit, or deployment target tested]
-```
-
-## Quality Gate
-
-Before submitting:
-
-- The code path is reachable from a real user or network boundary
-- The input is genuinely user-controlled
-- The sink is meaningful and exploitable
-- The PoC works
-- The issue is not already covered by an advisory, CVE, or open ticket
-- The target is actually in scope for the bounty program

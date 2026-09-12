@@ -62,32 +62,3 @@ Migração segura entre famílias: **eval suite primeiro**, sem hyper-optimizati
 | partial | 25% | 48h | pass ≥ 0.97 | pass < 0.93 |
 | majority | 75% | 72h | pass ≥ 0.98 | pass < 0.95 |
 | full | 100% | — | pass ≥ 0.99 | pass < 0.97 |
-
-Critérios de rollback global: erros +10%, latência +20%, custo +50%, eval −5%. `ModelMigrationManager` + `MIGRATION_EVAL_SUITE` (regression/hard/task-type) + `CostAttributionTracker` → `references/implementation.md`.
-
-## Uso Rápido
-
-```python
-mgr = ModelMigrationManager(eval_harness)
-plan = mgr.create_migration_plan("claude-sonnet-4", "claude-opus-4", MIGRATION_EVAL_SUITE)
-ok = mgr.execute_migration(plan)  # canary 5% → partial → majority → full, com auto-rollback
-```
-
----
-
-## Integração com Skills Existentes
-
-| Skill | Relação |
-|---|---|
-| `roteamento-modelos-baratos` | Migração informada por cost/quality |
-| `claude-model-router` | Router com migration awareness |
-| `eval-harness` | Eval suite FIRST principle |
-| `verification-loop` | Verification gates during migration |
-| `cost-aware-llm-pipeline` | Cost attribution granularity |
-
----
-
-## Referências
-
-- `references/implementation.md` — failure modes, migration manager, eval suite, cost tracker
-- Video: `hm8NzEd5io0.en.dedup.txt` — linhas 1002-1051, 1079-1096

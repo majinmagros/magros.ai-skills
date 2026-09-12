@@ -63,8 +63,3 @@ steps = ["15-min load shape", "rate switching + DR enrollment",
 - **Communication:** RFP/renewal/challenge/finance/sustainability/ops patterns with numbers
 - **Escalation:** wholesale 2× 24h, downgrade 48h, rate case 1wk, ratchet 24h, REC shortfall 5d + 4-level chain
 - **KPIs:** ±5% budget, 3% market, demand <25%, peak flat, RE100 on-track, renewal ≥90d, PLC flat, forecast ±7%
-
-## Additional Resources
-
-- Maintain hedge policy, approved counterparty list, and tariff-change calendar alongside this skill.
-- Keep facility load shapes and utility contract metadata near the workflow.

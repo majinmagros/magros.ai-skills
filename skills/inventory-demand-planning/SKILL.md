@@ -62,6 +62,3 @@ steps = ["outlier cleanse", "method per pattern", "lift + cannibalization",
 - **KPIs:** WMAPE <25%, bias ±5%, A in-stock >97%, WOS 4–8, excess <5%, promo WMAPE <35%
 
 ## Additional Resources
-
-- Pair with your SKU segmentation model, service-level policy, and planner override audit log.
-- Store post-mortems for promotion misses, vendor delays, and overrides next to the workflow.

@@ -63,12 +63,3 @@ registry.registerBlockType('grass_block', { color: 0x4a7c2e, tags: ['natural'] }
 
 ```
 adapters/
-├── opencode/ (hooks, commands, README)
-├── cursor/ (hooks, README)
-├── codex/ (hooks, README)
-└── ...
-```
-
-## Referências Oficiais
-
-- [InstancedMesh](https://threejs.org/docs/#api/en/objects/InstancedMesh) · [BoxGeometry](https://threejs.org/docs/#api/en/geometries/BoxGeometry) · [Instancing](https://github.com/mrdoob/three.js/tree/dev/examples/webgl_instancing) · [Voxel](https://github.com/mrdoob/three.js/tree/dev/examples/webgl_voxel)

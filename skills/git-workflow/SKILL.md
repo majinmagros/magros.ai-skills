@@ -62,9 +62,3 @@ git push -u origin feat/user-auth
 | Revert commit | `git revert HEAD` |
 
 ## Referências
-
-- `references/branching-commits.md` — GitHub Flow, trunk-based, GitFlow, commits
-- `references/merge-pr.md` — merge vs rebase, PRs, review
-- `references/conflicts-branches.md` — conflitos, naming, stash
-- `references/release-config.md` — semver, tags, changelog, aliases
-- `references/workflows-hooks.md` — dia a dia, hooks, anti-patterns

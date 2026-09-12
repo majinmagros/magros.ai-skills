@@ -63,35 +63,3 @@ const rows=fs.readFileSync(f,"utf8").split(/\r?\n/).filter(Boolean).map(l=>{try{
 const bySession=new Map();
 for(const r of rows){const k=r.session_id||r.transcript_path||r.timestamp;const p=bySession.get(k);if(!p||String(r.timestamp)>String(p.timestamp))bySession.set(k,r);}
 const latest=[...bySession.values()];
-const cost=r=>Number(r.estimated_cost_usd)||0, day=r=>String(r.timestamp||"").slice(0,10), sum=a=>a.reduce((s,r)=>s+cost(r),0), f4=n=>"$"+n.toFixed(4);
-const today=new Date().toISOString().slice(0,10), yest=new Date(Date.now()-864e5).toISOString().slice(0,10);
-console.log("today: "+f4(sum(latest.filter(r=>day(r)===today)))+" | yesterday: "+f4(sum(latest.filter(r=>day(r)===yest)))+" | total: "+f4(sum(latest))+" ("+latest.length+" sessions)");
-const m=new Map();for(const r of latest){const k=r.model||"(unknown)";m.set(k,(m.get(k)||0)+cost(r));}
-console.log("by model:");[...m.entries()].sort((a,b)=>b[1]-a[1]).forEach(([k,v])=>console.log("  "+f4(v)+"  "+k));
-'
-```
-
-For a session drilldown or CSV export, iterate the same `latest` set (or the raw
-rows for CSV) and print the fields you need.
-
-## Reporting Guidance
-
-When presenting cost data, include today's spend vs yesterday, total across all
-sessions, a by-model breakdown, and session count. Format sub-dollar amounts
-with four decimals, larger amounts with two.
-
-## Anti-Patterns
-
-- Do not sum every row — they are cumulative per session; reduce to the latest
-  row per `session_id` first.
-- Do not estimate costs from raw token counts when `estimated_cost_usd` is present.
-- Do not assume the log exists without checking.
-- Do not hard-code current model pricing in user-facing answers.
-- Do not recommend installing unreviewed hooks or plugins that execute arbitrary code.
-
-## Related
-
-- `/cost-report` - Command-form report over the same metrics log.
-- `cost-aware-llm-pipeline` - Model-routing and budget-design patterns.
-- `token-budget-advisor` - Context and token-budget planning.
-- `strategic-compact` - Context compaction to reduce repeated token spend.

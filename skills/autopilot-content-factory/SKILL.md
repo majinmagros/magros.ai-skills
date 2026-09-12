@@ -38,7 +38,6 @@ Arquitetura: per-skill context isolation, queue file, fragmented skills.
 
 ## Referências
 
-- `references/trigger-split.md` — 3-trigger pattern
 - Depende de `data-scraper-agent`, `content-engine`, `video-editing`, `autonomous-agent-harness`
 
 ## Enriquecimento 2026-09-06 — pattern GrokBot (Gabriel Adamuchi `azJHZfaVeJc`)
@@ -63,5 +62,3 @@ Fonte: Batch 14 re-analise #113/#127 (videos Karine Lago + Gabriel Adamuchi).
 - **Quando reaproveitar**: time minerador -> copywriter -> audiovisual
   -> social media espelha a factory; rotina agenda dispara o chefe.
 - **Preco**: valor citado no video envelheceu. Confira o plano vigente
-  em x.ai/news/grok-bot-more-plans antes de orcar. Nao use preco de
-  video como cotacao.

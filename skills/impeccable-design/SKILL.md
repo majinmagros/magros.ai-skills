@@ -14,10 +14,6 @@ Claude sem design vs com design.
 - Front-end sem graça, precisa de 3 opções visuais
 - Quer `live mode` no browser e pick salva no código
 
-## Comandos (23)
-
-`colorise`, `live`, etc. — ver `references/commands.md`
-
 ## Live Mode
 
 ```
@@ -32,6 +28,3 @@ Claude sem design vs com design.
 - [ ] 3 versões vistas
 - [ ] Escolha salva
 
-## Referências
-
-- `references/commands.md` — 23 comandos

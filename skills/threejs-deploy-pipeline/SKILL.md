@@ -62,15 +62,3 @@ npm run build && ./references/deploy.sh production hostinger
 - [ ] Rollback strategy documentado
 
 ## Adapters (Por Plataforma)
-
-```
-adapters/
-├── opencode/ (hooks, commands, README)
-├── cursor/ (hooks, README)
-├── codex/ (hooks, README)
-└── ...
-```
-
-## Referências Oficiais (Validados 2026-08-30)
-
-- [Vite Build](https://vitejs.dev/guide/build.html) · [Static Deploy](https://vitejs.dev/guide/static-deploy.html) · [Hostinger VPS](https://www.hostinger.com/tutorials/vps-hosting) · [Netlify](https://docs.netlify.com/configure-builds/get-started/) · [Vercel](https://vercel.com/docs/deployments/overview) · [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages)

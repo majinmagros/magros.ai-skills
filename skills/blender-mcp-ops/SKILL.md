@@ -63,27 +63,3 @@ Meshes and animation burn tokens. Never model blind:
 ## Troubleshooting
 
 | Problem | Fix |
-|---|---|
-| `spawn uvx ENOENT` from GUI clients | Use the full `uvx` path (`which`/`where uvx`); relaunch client fully |
-| Connection refused | Addon server not started (step 4); only one MCP instance |
-| Timeouts | Break into smaller steps; simplify the request |
-| Poly Pizza download blocked | CDN bot-protection on datacenter/VPN IPs — retry from a normal connection |
-| Stale addon | Re-run `install-addon`, disable/re-enable in Preferences |
-
-## Relations
-
-- `blender-motion-state-inspection`: read-only rig/pose/motion inspection.
-- `img2threejs`, `threejs-scene-composer`: image → Three.js/WebGL code (web).
-- `hyper3d-rodin-pipeline`: text/image-to-3D model generation (feeds meshes in).
-- `game-npc-ai-integration`: NPC behavior in-engine, not modeling.
-- `mcp-server-patterns`: generic MCP server authoring.
-
-## Sources
-
-- blender-mcp repo + README (validated 2026-09-07):
-  https://github.com/ahujasid/blender-mcp
-- Pattern from Inteligência Mil Grau "NEW GPT-6 Astra With Image Prompts
-  Explained" (2026-09-07, `XQumujhWkmM`): image-convergence loop, short-scene
-  validation, SVG-cheap → Blender-expensive gate, computer-use testing.
-  "GPT-6 Astra" model claims are unverified — the workflow is harness-side and
-  model-independent.

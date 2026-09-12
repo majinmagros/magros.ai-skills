@@ -62,22 +62,3 @@ Loop e grafo **não são excludentes**: um nó do grafo pode ser um loop (ex.: u
 | 1. Delegar à IA | Deixe o modelo criar o dynamic workflow (ex.: "faça 3 pesquisas em paralelo") | Menos especificação | Queima tokens, menos controle |
 | 2. Especificar manualmente | Você define os ramos, agentes e verificadores (este skill) | Controle, reprodutível | Mais trabalho de setup |
 | 3. Ferramenta dedicada | Migre para ferramenta de orquestração visual (ex.: L-graph) quando os fluxos ficarem complexos demais para manter à mão | Escala, inspeção | Dependência de ferramenta |
-
-## Estrutura de apoio (opcional)
-
-- Um comando próprio (ex. `/workflows`) para disparar todo o fluxo com mínimo de input — a lógica vive no harness do agente, não precisa re-ditá-la no prompt.
-- Para visualizar: sessões paralelas aparecem como tarefas simultâneas que você pode abrir e inspecionar (ferramentas/estado/tokens) até receber o check de conclusão e a consolidação.
-
-## Regras
-
-- NUNCA coloque em paralelo tarefas que dependem da saída umas das outras — elas precisam ser sequenciais.
-- NUNCA deixe o próprio executor se auto-avaliar como único verificador; use um agente verificador independente para revisão confiável.
-- NUNCA afirme convergência de um ramo que não foi verificado.
-- NUNCA declare aprovado um candidato abaixo do corte só porque esgotou as iterações — entregue como best-effort e declare a limitação.
-
-## Relação com outras skills
-
-- Iteração até nota com verificador independente genérico: `score-loop`.
-- Orquestração de sessões nomeadas que se falam (Claude Code session-to-session): `sessoes-orquestradas`.
-- Aplicação específica de áudio (DnB, BPM 174, `verify_loop.ps1`): `graph-engineering` (companion do `dnb-production`).
-- Verificação paralela/iteração de candidatos em domínio de música: `dnb-production`.

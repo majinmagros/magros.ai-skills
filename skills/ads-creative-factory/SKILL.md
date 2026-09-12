@@ -63,6 +63,3 @@ with tracking plus a report are.
 
 - Meta Ads Library (angle research): https://www.facebook.com/ads/library/
 - Meta Marketing API (campaign structure): https://developers.facebook.com/docs/marketing-api/
-- Puppeteer docs (carousel rendering): https://pptr.dev/
-- Folder pipeline, Ogilvy workflow, and carousel-via-browser claims from
-  the source video are author measurement, not verified benchmarks.

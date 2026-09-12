@@ -58,12 +58,6 @@ Gere PDF (`l.402-403`) e, se GO, valide no mundo: página de vendas + Google Ads
 ## Referências
 
 - `references/swarm-prompt.md` — prompt do swarm 100 personas
-- `references/app-store-scraper.md` — App Store/Play Store scraping
 - `triagem-ideias` — versão leve 5 fases sem swarm
 
 ## Checklist
-
-- [ ] App Store scrape com reclamações literais
-- [ ] 100 personas com nota + WTP
-- [ ] Veredito GO/KILL/PIVOT com razão
-- [ ] Próximo passo: Ads checkout se GO

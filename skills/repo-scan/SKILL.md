@@ -63,17 +63,3 @@ cp -r . ~/.claude/skills/repo-scan
 
 On a 50,000-file C++ monorepo:
 - Found FFmpeg 2.x (2015 vintage) still in production
-- Discovered the same SDK wrapper duplicated 3 times
-- Identified 636 MB of committed Debug/ipch/obj build artifacts
-- Classified: 3 MB project code vs 596 MB third-party
-
-## Best Practices
-
-- Start with `standard` depth for first-time audits
-- Use `fast` for monorepos with 100+ modules to get a quick inventory
-- Run `deep` incrementally on modules flagged for refactoring
-- Review the cross-module analysis for duplicate detection across sub-projects
-
-## Links
-
-- [GitHub Repository](https://github.com/haibindev/repo-scan)

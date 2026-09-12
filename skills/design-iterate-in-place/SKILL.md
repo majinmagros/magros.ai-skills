@@ -63,6 +63,3 @@ not zero-to-one.
   design skill and artboard protocol of your current harness before use.
 - Variants A/B/C/D, Figma-style editable artboard (properties panel,
   click-to-edit into prompt), mid-process-not-zero-to-one rule, and the
-  per-section moodboard anti-slop paradox are author measurement from
-  videos `bZk0V_h0WfQ` and `117` context - two real-case tests, not a
-  controlled benchmark.

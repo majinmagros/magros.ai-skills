@@ -63,23 +63,3 @@ End-to-end secure corporate RAG: ingest -> chunk -> filter by ACL -> hybrid retr
 ## Anti-Patterns
 
 - RAG as truth serum: claiming grounded output cannot hallucinate.
-- Retrieve-then-hide: sending restricted chunks to the model and asking it to keep quiet.
-- No overlap or structure-blind splitting: answers cut mid-procedure.
-- Semantic-only search for error codes, or literal-only search for concepts.
-- Treating document text as instructions (white-text injection, footer jailbreaks).
-- No citations: fluent answer with no source trail.
-
-## Relations
-
-- `knowledge-ops`: ingestion, sync, and multi-layer knowledge management around this pipeline.
-- `graphify`: codebase-as-graph answers when the question is code structure, not permissioned docs.
-- `iterative-retrieval`: progressive query refinement when the first retrieval pass misses.
-- `agent-guardrails`: injection, jailbreak, and exfiltration defenses for untrusted document text.
-
-## Sources
-
-- Evidence video `SWXa7z_64-g` (chunking + overlap, hybrid literal-vs-semantic, ACL before the model, white-text resume attack): run numbers and demo claims in that video are author measurement, not a benchmark - medicao do autor, nao benchmark.
-- Watch link built from evidence id: https://www.youtube.com/watch?v=SWXa7z_64-g
-- Spring AI reference: https://docs.spring.io/spring-ai/reference/
-- LangChain docs: https://docs.langchain.com/
-- Agent Skills overview: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview

@@ -63,12 +63,3 @@ routing {
 | `testApplication { }` | Integration testing |
 
 ## Referências
-
-- `references/structure-routing.md` — layout, entry point, rotas
-- `references/serialization.md` — models, serializers custom
-- `references/auth-errors.md` — JWT, rotas auth, StatusPages
-- `references/cors-koin.md` — CORS, Koin, validacao
-- `references/websockets-testing.md` — WebSockets, testes
-- `references/config.md` — application.yaml
-
-**Remember**: Ktor is designed around Kotlin coroutines and DSLs. Keep routes thin, push logic to services, and use Koin for dependency injection. Test with `testApplication` for full integration coverage.

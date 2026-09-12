@@ -63,19 +63,3 @@ SOURCES (UN bodies, gov portals EU/US/CN, corp filings, think tanks)
 **Alertas padrão:** existential risk (CRITICAL), supply chain red line (HIGH), EU regulation enacted (HIGH), pressure em major labs (MEDIUM). **Briefing semanal** em Markdown: críticos, por categoria/jurisdição, top entidades, action items. Código em `references/implementation.md`.
 
 ---
-
-## Integração com Skills Existentes
-
-| Skill | Relação |
-|---|---|
-| `geopolitica-regulacao-ia` | Monitoramento contínuo vs análise pontual |
-| `market-research` | Governança como market intelligence |
-| `prediction-market-oracle-research` | Governança como signal para prediction markets |
-
----
-
-## Referências
-
-- `references/implementation.md` — sources, classifier, monitor, alerts, briefing
-- [UN HRC](https://www.ohchr.org/en/hrc) · [UN AI Advisory Body](https://www.un.org/ai-advisory-body)
-- Video: `l4EJUm6KwM0.pt.dedup.txt` — linhas 366-388

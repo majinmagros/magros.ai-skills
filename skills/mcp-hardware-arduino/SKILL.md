@@ -63,6 +63,3 @@ scaffolding is expected, so keep scope to one cart and one room.
   datasheets (ESP32-CAM, PWM driver, servo) against the parts on your
   bench before wiring; do not trust video pinouts blindly.
 - Bring-up order, driver mix, depth-from-mono on CUDA, RatSLAM-style
-  landmark map, and hybrid line-plus-VLM mode are author measurement
-  from videos `ZYNeNfflBZU` and `134` context - one hobby demo, not a
-  benchmark. Re-measure range, speed, and reliability on your own rig.

@@ -63,19 +63,3 @@ Default to paper, dry-run, read-only, preview, or staged mode unless the user
 explicitly approves the live action and the repo/service gate supports it.
 
 Promote only when:
-
-- the candidate beats the prior accepted winner on the chosen metric;
-- correctness and replay checks pass;
-- risk limits are explicit;
-- the evidence is durable;
-- the user has approved the live step when needed.
-
-## Summary Shape
-
-Lead with the decision, not the drama:
-
-```text
-Rollout 15 complete. The prior winner still holds, but edge deteriorated 17%.
-Status: watch, not live. Next gate: 20 replay fills with fresh orderbook age
-below threshold.
-```

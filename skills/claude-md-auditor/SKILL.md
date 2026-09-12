@@ -63,13 +63,3 @@ adapters/
 │   └── README.md
 ├── codex/
 │   ├── hooks/
-│   └── README.md
-└── ...
-```
-
-## Referências
-
-- `references/pipeline-problems.md` — longo demais, process vs judgment, HTML comments, path rules, prompt-next
-- `references/pipeline-analysis.md` — medicao e trims
-- `references/cli-hooks.md` — CLI, hooks, settings.json
-- `references/doctor-integration.md` — /doctor, validacao na fonte

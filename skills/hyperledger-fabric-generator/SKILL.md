@@ -63,31 +63,3 @@ Ferramenta web que gera boilerplate completo Hyperledger Fabric: CA, peers, orde
 | 4. Channels — configtx, artifacts | `references/fabric-channels.md` |
 | 5. Chaincode — package/install/approve/commit | `references/fabric-chaincode.md` |
 | 6. Explorer — dashboard | `references/fabric-explorer.md` |
-| 7. Caliper — benchmark | `references/fabric-caliper.md` |
-| 8. API Node.js — Gateway SDK + REST | `references/fabric-gateway-sdk.md` |
-| Web UI generator (Pavan Adhav style) | `references/fabric-web-generator.md` |
-
----
-
-## Referências
-
-- `references/fabric-ca.md` — Fabric CA config + enrollment
-- `references/fabric-peers.md` — Peer orgs, MSP, anchor peers
-- `references/fabric-orderers.md` — Etcd/Raft consensus config
-- `references/fabric-channels.md` — configtx.yaml, channel creation
-- `references/fabric-chaincode.md` — Chaincode lifecycle (package, install, approve, commit)
-- `references/fabric-explorer.md` — Explorer dashboard + connection profiles
-- `references/fabric-caliper.md` — Caliper benchmark config + workloads
-- `references/fabric-gateway-sdk.md` — Node.js Gateway SDK + REST API
-- `references/fabric-web-generator.md` — Web UI generator (Pavan Adhav style)
-
----
-
-## Scripts
-
-- `scripts/generate-network.js` — Main generator (orgs, peers, orderers, channels)
-- `scripts/generate-chaincode.js` — Chaincode templates (Go/Node.js)
-- `scripts/generate-explorer.js` — Explorer dashboard config
-- `scripts/generate-caliper.js` — Caliper benchmark config
-- `scripts/generate-api.js` — Gateway SDK + REST API
-- `scripts/deploy-network.sh` — Deploy scripts (Docker/K8s)

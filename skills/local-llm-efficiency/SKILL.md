@@ -38,4 +38,3 @@ Cloud pay-to-play vs local 1000x cheaper, lento/experimental mas movimento open-
 
 ## Referências
 
-- `references/quantization-matrix.md` — GGUF vs GPTQ vs AWQ

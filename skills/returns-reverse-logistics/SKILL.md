@@ -63,4 +63,3 @@ steps = ["validate vs policy", "RMA + label", "grade A-D",
 ## Additional Resources
 
 - Pair with your grading rubric, fraud review thresholds, and refund authority matrix.
-- Keep restocking standards, hazmat handling, and liquidation rules near the operating team.

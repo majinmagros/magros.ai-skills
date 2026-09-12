@@ -63,21 +63,3 @@ fn load_config(path: &str) -> Result<Config> {
 | `?` over `unwrap()` | Propagate errors, never panic in library/production code |
 | Parse, don't validate | Convert unstructured data to typed structs at the boundary |
 | Newtype for type safety | Wrap primitives in newtypes to prevent argument swaps |
-| Prefer iterators over loops | Declarative chains are clearer and often faster |
-| Minimal `pub` surface | Use `pub(crate)` for internal APIs |
-
-## Referências
-
-- `references/ownership.md` — ownership, borrowing, `Cow`
-- `references/error-handling.md` — `Result`, `Option`, thiserror/anyhow
-- `references/enums.md` — estados como enums, matching exaustivo
-- `references/traits-generics.md` — generics, trait objects, newtype
-- `references/structs.md` — builder pattern
-- `references/iterators.md` — chains, `collect()`
-- `references/concurrency.md` — threads, channels, Tokio
-- `references/unsafe-code.md` — quando unsafe é aceitável
-- `references/modules.md` — layout por domínio, visibilidade
-- `references/tooling.md` — comandos cargo
-- `references/anti-patterns.md` — o que evitar
-
-**Remember**: If it compiles, it's probably correct — but only if you avoid `unwrap()`, minimize `unsafe`, and let the type system work for you.

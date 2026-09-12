@@ -63,7 +63,3 @@ Spark** (Gemini Apps). Diferenciais: **Gemini Notebook** (ex-NotebookLM) e
 
 ## Checklist
 - [ ] Conhece a diferença Spark (Gemini Apps) vs Gemini CLI (terminal).
-- [ ] Skills seguem o formato oficial (SKILL.md + pastas opcionais).
-- [ ] App externo usa MCP/extensão, não scraping.
-- [ ] Tarefa recorrente no agendador do Spark (não em cron manual).
-- [ ] Modelo escolhido pelo custo da tarefa; preço conferido na página oficial.

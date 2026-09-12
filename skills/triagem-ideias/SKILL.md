@@ -63,18 +63,3 @@ Formato do veredito:
 ## Veredito: GO | KILL | PIVOT
 - Ideia: <frase do intake>
 - Evidência-chave: <mais forte dos bullets>
-- Suposição crítica: <qual é e como o formato a testa>
-- Custo estimado: <bruto>
-- Próximo passo: <ação concreta única>
-```
-
-## Regras
-
-- Uma ideia por execução; fila de ideias → processe uma de cada vez e
-  registre as demais como backlog.
-- Sem evidência alguma na fase 2: o veredito padrão é PIVOT para um
-  experimento de descoberta, não GO às cegas.
-- Decisão é do usuário — a skill recomenda e entrega o veredito fundamentado;
-  não comece a construir sem aprovação.
-- Ideia aprovada segue para o fluxo de especificação (skill `clarificar` /
-  `plan`); a triagem não gera implementação.

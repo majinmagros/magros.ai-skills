@@ -63,20 +63,3 @@ composer.addPass(pixelationPass);
 ## Checklist de Entrega
 
 - [ ] Pixelation, comet trails e mouse distortion funcionais
-- [ ] Pipeline configurável (bloom, film, SMAA)
-- [ ] Shadertoy helper + 4 presets (retro, cyberpunk, cinematic, clean)
-- [ ] GLSL comentado + exemplos de uso
-
-## Adapters (Por Plataforma)
-
-```
-adapters/
-├── opencode/ (hooks, commands, README)
-├── cursor/ (hooks, README)
-├── codex/ (hooks, README)
-└── ...
-```
-
-## Referências Oficiais (Validados 2026-08-30)
-
-- [Post Processing](https://threejs.org/docs/#manual/en/introduction/How-to-use-post-processing) · [ShaderMaterial](https://threejs.org/docs/#api/en/materials/ShaderMaterial) · [EffectComposer](https://threejs.org/docs/#api/en/postprocessing/EffectComposer) · [Shadertoy](https://www.shadertoy.com/)

@@ -63,10 +63,3 @@ check the current vendor plan before acting; no price is recorded here.
 ## Sources
 
 - No vendor docs URL confirmed at write time - verify the current vendor
-  docs and plan before setup; vendor pricing and plan names change and no
-  price is recorded in this skill.
-- Operating patterns (single-job descriptions, templates by link,
-  dual-memory, auto-compact, unified computer, teach-a-task,
-  routines + webhooks-doorbell, C-suite org-chart, group-chat handoffs,
-  approvals, mandatory logging) are author measurement from videos
-  `NyfYxpXiw_0`, `q-1IkmBOqh4`, and `azJHZfaVeJc` - not vendor specs.

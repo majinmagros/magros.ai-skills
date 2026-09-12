@@ -63,9 +63,3 @@ adapters/
 ├── opencode/ (hooks, commands, README)
 ├── cursor/ (hooks, README)
 ├── codex/ (hooks, README)
-└── ...
-```
-
-## Referências Oficiais (Validados 2026-08-30)
-
-- [Joy Dev Studio Video](https://www.youtube.com/watch?v=J2LkNI2MzKM) · [Animation Retargeting](https://docs.unrealengine.com/5.7/en-US/animationRetargeting/) · [IK Rig](https://docs.unrealengine.com/5.7/en-US/ikRig/) · [MetaHuman Animation](https://docs.unrealengine.com/5.7/en-US/metaHumanAnimation/)

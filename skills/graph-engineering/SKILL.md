@@ -62,10 +62,3 @@ Aprovado: nota >= 80. Mín 3 candidatos p/ elemento; máx 3 iterações.
 - Confirme com o verificador (não com opinião) antes de declarar aprovado.
 - Se BPM do MusicGen sair fora de 174, registre no report que o compositor deve
   ajustar com `atempo`.
-
-## Relação com a canônica
-
-- Teoria de grafos/orquestração → `engenharia-de-grafos`.
-- Iteração até nota com verificador independente (genérico) → `score-loop`.
-- Este skill = a configuração concreta (parâmetros de áudio e critérios de nota)
-  aplicada ao harness DnB.

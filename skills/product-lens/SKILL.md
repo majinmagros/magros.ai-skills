@@ -63,31 +63,3 @@ Maps the actual user experience:
 1. Clone/install the product as a new user
 2. Document every friction point (confusing steps, errors, missing docs)
 3. Time each step
-4. Compare to competitor onboarding
-5. Score: time-to-value (how long until the user gets their first win?)
-6. Recommend: top 3 fixes for onboarding
-```
-
-### Mode 4: Feature Prioritization
-
-When you have 10 ideas and need to pick 2:
-
-```
-1. List all candidate features
-2. Score each on: impact (1-5) × confidence (1-5) ÷ effort (1-5)
-3. Rank by ICE score
-4. Apply constraints: runway, team size, dependencies
-5. Output: prioritized roadmap with rationale
-```
-
-## Output
-
-All modes output actionable docs, not essays. Every recommendation has a specific next step.
-
-## Integration
-
-Pair with:
-- `/browser-qa` to verify the user journey audit findings
-- `/design-system audit` for visual polish assessment
-- `/canary-watch` for post-launch monitoring
-- `product-capability` when the product brief needs to become an implementation-ready capability plan

@@ -63,14 +63,3 @@ Next 13.5+ Optimize Package Imports · React Compiler (demotes manual memo to re
 | **CLS** | Rendering (Suspense placement, image dimensions) |
 | **TBT** | Bundle, JavaScript, Defer Third-Party |
 | **FID** (legacy) | Bundle, Hydration |
-
-## Related
-
-- Skills: [react-patterns](../react-patterns/SKILL.md), [react-testing](../react-testing/SKILL.md), [frontend-patterns](../frontend-patterns/SKILL.md), [accessibility](../accessibility/SKILL.md), [nextjs-turbopack](../nextjs-turbopack/SKILL.md)
-- Rules: [rules/react/](../../rules/react/)
-- Agents: `react-reviewer` enforces these rules; `react-build-resolver` handles build failures
-- Commands: `/react-review`, `/react-build`, `/react-test`
-
-## Attribution
-
-Adapted from Vercel Labs `react-best-practices` (MIT, Vercel Engineering, v1.0.0 Jan 2026). [Upstream](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) has the full 70-rule catalog with extended examples.

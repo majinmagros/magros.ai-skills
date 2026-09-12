@@ -63,6 +63,3 @@ steps = ["drum via utilization >85%", "past-due / constraint-feeding / rest",
 - **KPIs:** adherence >90%, OTD >95%, constraint OEE >75%, changeover <110%, WIP <5d, yield >97%, downtime <5%
 
 ## Additional Resources
-
-- Pair with your constraint hierarchy, frozen-window policy, and expedite-approval thresholds.
-- Record adherence failures and root causes beside the workflow so sequencing rules improve.

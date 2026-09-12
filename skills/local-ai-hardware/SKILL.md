@@ -35,4 +35,3 @@ TCO = `hardware + energia*meses` vs `tokens/mês * $/token` (`cost-aware-llm-pip
 
 ## Referências
 
-- `references/tco-calculator.md` — planilha TCO

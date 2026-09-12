@@ -62,10 +62,3 @@ Deterministic steps run as scripts; the model only decides cuts and hooks.
 - `autopilot-content-factory`: scheduled posting after drafts are approved.
 
 ## Sources
-
-- FFmpeg docs (cut, crop, loudness, captions): https://ffmpeg.org/documentation.html
-- Whisper overview (model behavior): https://openai.com/index/whisper/
-- ElevenLabs docs (paid transcription option): https://elevenlabs.io/docs
-- Tool names and prices from the source video (Palme Air MCP, videose,
-  Hyperframes, per-hour transcription cost) are author measurement, not
-  verified benchmarks. Confirm against official docs before production use.

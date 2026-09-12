@@ -62,13 +62,3 @@ Nota >= 80 → aprovado. Abaixo → itera (max `maxIters`), depois entrega best-
 - Evitar mudanças bruscas entre seções.
 
 ## 6. Ratifica-se
-
-- Não usar arquivos de `E:\Samples\Simula Library` nem `E:\Simula\**` como material.
-- Não usar prompts com nomes de artistas/músicas.
-- Deliverables em `public\ai_gerados\*` são originais (gerado por IA).
-
-## 7. Verificação final de qualidade
-
-Antes de entregar, garanta:
-- pico < -1 dB (sem clip), BPM ≈ 174.
-- Não mostrar código sem o push/task; pergunta ao usuário antes de grandes mudanças.
