@@ -1,46 +1,5 @@
 [
   {
-    "name": "e2e-testing",
-    "score": 66,
-    "lines": 353,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "agentic-os",
-    "score": 73,
-    "lines": 400,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "ai-regression-testing",
-    "score": 73,
-    "lines": 387,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
-    "name": "clickhouse-io",
-    "score": 73,
-    "lines": 446,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "database-migrations",
     "score": 73,
     "lines": 431,
@@ -2374,6 +2333,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "agentic-os",
+    "score": 100,
+    "lines": 59,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "agnostic-repo-mirror",
     "score": 100,
     "lines": 140,
@@ -2386,6 +2352,13 @@
     "name": "ai-governance-monitor",
     "score": 100,
     "lines": 82,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ai-regression-testing",
+    "score": 100,
+    "lines": 61,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2609,6 +2582,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "clickhouse-io",
+    "score": 100,
+    "lines": 49,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "closed-loop-verifier-pattern",
     "score": 100,
     "lines": 95,
@@ -2641,7 +2621,7 @@
   {
     "name": "coletar-oportunidades-youtube",
     "score": 100,
-    "lines": 159,
+    "lines": 189,
     "reasons": [
       "desc longa"
     ],
@@ -2818,6 +2798,13 @@
     "name": "dynamic-workflow-mode",
     "score": 100,
     "lines": 125,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "e2e-testing",
+    "score": 100,
+    "lines": 38,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

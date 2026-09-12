@@ -1,6 +1,6 @@
 ---
 name: coletar-oportunidades-youtube
-description: Use when the user wants to check a YouTube channel against local transcripts, collect skill/automation opportunities from videos, download missing transcripts, analyze videos for new skill ideas, or keep a catalog up to date. Triggers on "defasagem do canal", "oportunidades de skill", "analisa os vídeos", "transcrições faltando", "baixar transcrição", "vídeos novos", "coletar oportunidades", "yt-oportunidades". Uses scripts/yt-oportunidades.mjs (catalog/diff/download/dedup/mark/analyzed) with transcripts kept OUTSIDE the public repo.
+description: Use when the user wants to check a YouTube channel against local transcripts, collect skill/automation opportunities from videos, download missing transcripts, analyze videos for new skill ideas, or keep a catalog up to date. Triggers on "defasagem do canal", "oportunidades de skill", "analisa os vídeos", "transcrições faltando", "baixar transcrição", "vídeos novos", "coletar oportunidades", "yt-oportunidades". Uses scripts/yt-oportunidades.mjs (sync-check/catalog/diff/download/dedup/mark/analyzed) with transcripts kept OUTSIDE the public repo.
 metadata:
   origin: ECC
 ---
@@ -29,6 +29,27 @@ existente para não criar redundância.
 - Credenciais de API nunca entram no repo.
 
 ## Pipeline
+
+### 0. Checar sync com o GitHub (OBRIGATÓRIO antes de tudo)
+
+Com 2+ PCs coletando, o outro PC pode já ter capturado o canal. Rode SEMPRE
+antes de `catalog`/`diff`:
+
+```
+node scripts/yt-oportunidades.mjs sync-check
+```
+
+- Exit 0 (`EM DIA`) → pode coletar.
+- Exit 1 (`BLOQUEADO`) → NÃO colete: o repo está atrás (`git pull --rebase`),
+  com worktree suja (commit/stash antes do pull) ou com commits sem push
+  (`git push` — o outro PC não vê esses commits). Re-rode o `sync-check` depois.
+- Exit 2 (`INVERIFICÁVEL`, offline) → re-rode com rede; só use
+  `--allow-stale` assumindo o risco de duplicar coleta.
+- `--json` imprime só o JSON (branch, SHAs, behind/ahead, última coleta
+  publicada, resumo do `state/yt-control.json`).
+
+O `sync-check` mostra também a última coleta publicada e o
+`state/yt-control.json` (fonte da verdade por canal, só ids/datas).
 
 ### 1. Catalogar o canal
 
@@ -145,12 +166,21 @@ node scripts/yt-oportunidades.mjs mark <id> <id> ...
 node scripts/yt-oportunidades.mjs analyzed
 ```
 
+O `mark` atualiza também o `state/yt-control.json` (fonte da verdade
+compartilhada, só ids/datas). Depois do `mark`, faça **commit + push** do
+`state/yt-control.json` e do relatório — sem push, o outro PC roda
+`sync-check` sem ver sua coleta e duplica o trabalho.
+
 E atualize o relatório de oportunidades (`docs/maestros/OPORTUNIDADES.md` no
 repo + `RELATORIO.md` local na pasta de transcrições) com a tabela de
 "coberto vs nova skill" e o que foi materializado.
 
 ## Erros comuns (não repita)
 
+- **Pular o `sync-check` / coletar com repo atrás** → checagem duplicada do que
+  o outro PC já capturou. Step 0 é obrigatório.
+- **Esquecer commit + push do `state/yt-control.json` após o `mark`** → o outro
+  PC não vê sua coleta.
 - **Estimar defasagem no olho** → use `diff --since`.
 - **Criar skill redundante** → cruze SEMPRE com o inventário antes.
 - **Materializar pelo que o vídeo diz** → confira SEMPRE a documentação
