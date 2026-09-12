@@ -1,71 +1,5 @@
 [
   {
-    "name": "9router-resilient-fallback",
-    "score": 80,
-    "lines": 22,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "codebase-deepening-audit",
-    "score": 80,
-    "lines": 21,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "domain-context-model",
-    "score": 80,
-    "lines": 21,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "meta-muse-spark",
-    "score": 80,
-    "lines": 20,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "setup-interactive-wizard",
-    "score": 80,
-    "lines": 20,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "wayfinder-planning",
-    "score": 80,
-    "lines": 21,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "agent-harness-construction",
     "score": 86,
     "lines": 65,
@@ -1826,6 +1760,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "9router-resilient-fallback",
+    "score": 100,
+    "lines": 39,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "accessibility",
     "score": 100,
     "lines": 65,
@@ -2160,6 +2101,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "codebase-deepening-audit",
+    "score": 100,
+    "lines": 35,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "codebase-onboarding",
     "score": 100,
     "lines": 50,
@@ -2393,6 +2341,13 @@
     "name": "docker-patterns",
     "score": 100,
     "lines": 43,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "domain-context-model",
+    "score": 100,
+    "lines": 37,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2937,6 +2892,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "meta-muse-spark",
+    "score": 100,
+    "lines": 34,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "metahuman-animation-retarget",
     "score": 100,
     "lines": 65,
@@ -3391,6 +3353,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "setup-interactive-wizard",
+    "score": 100,
+    "lines": 36,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "skill-comply",
     "score": 100,
     "lines": 60,
@@ -3735,6 +3704,13 @@
     "name": "vue-patterns",
     "score": 100,
     "lines": 59,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "wayfinder-planning",
+    "score": 100,
+    "lines": 37,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

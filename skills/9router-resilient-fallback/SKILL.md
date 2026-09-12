@@ -19,3 +19,20 @@ If 9Router throws `503 All accounts unavailable` or frequent `429` errors:
 1. Access the 9router DB at `$env:APPDATA\9router\db\data.sqlite` (tabela `combos`).
 2. Move a responsive low-cost/free model (e.g., `qd/lite`) to the top of the combo chain.
 3. Resume agent operations without restarting the router.
+
+## Quando Ativar
+
+- Agent loop travado com erro 429 / quota esgotada / provider fora do ar
+- Usuário diz "quedas de ia", "erro 429", "quota esgotada", "fallback automático", "9router fallback"
+- Configurar cadeia de failover automático entre providers via 9Router
+- Prevenir crash de sessão por falha transitória de rede ou provider
+
+## Exemplo
+
+```json
+{
+  "combo": "resilient-default",
+  "chain": ["anthropic/claude", "qd/lite", "deepseek-chat"],
+  "failover_on": [429, 503, "timeout"]
+}
+```

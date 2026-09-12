@@ -18,3 +18,19 @@ Establish a shared vocabulary between humans and AI agents to make communication
 1. Create or update `CONTEXT.md` at the root of the repository.
 2. Define core domain entities, states, and operations.
 3. Reference `CONTEXT.md` in agent instructions (`AGENTS.md` / `CLAUDE.md`).
+
+## Quando Ativar
+
+- Criar ou manter `CONTEXT.md`, glossário ou vocabulário compartilhado do projeto
+- Usuário diz "context.md", "shared language", "domain model", "glossário de domínio", "vocabulário compartilhado"
+- Alinhar terminologia entre agentes e humanos para reduzir verbosidade e tokens
+- Nomes de arquivos/variáveis divergindo do modelo de domínio
+
+## Exemplo
+
+```markdown
+# CONTEXT.md — Domínio: billing
+- Invoice: fatura emitida, estados draft|issued|paid|void
+- Dunning: cobrança recorrente de Invoice overdue
+- Materialization cascade: pipeline que gera arquivos derivados
+```

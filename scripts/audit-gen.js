@@ -1,6 +1,6 @@
 const fs=require('fs');
 const path=require('path');
-const skillsDir='C:/Projetos/magros.ai-skills/skills';
+const skillsDir=path.join(__dirname,'..','skills');
 const dirs=fs.readdirSync(skillsDir).filter(d=>fs.statSync(path.join(skillsDir,d)).isDirectory());
 
 function analyze(dir){
@@ -181,8 +181,8 @@ md+='- **Reproducibilidade:** `node scripts/audit-gen.js` para re-gerar auditori
 md+='---\n';
 md+='*Nota e meio, nao fim: objetivo e 1 correcao acionavel por skill. Comece pela pior — maior ganho por esforco.*\n';
 
-fs.writeFileSync('C:/Projetos/magros.ai-skills/auditoria-skills.md', md, 'utf8');
+fs.writeFileSync(path.join(__dirname,'..','auditoria-skills.md'), md, 'utf8');
 console.log('Arquivo escrito');
 let j=results.map(r=>({name:r.name, score:r.score, lines:r.lines, reasons:r.reasons, fix:r.fix}));
-fs.writeFileSync('C:/Projetos/magros.ai-skills/auditoria-skills.json', JSON.stringify(j,null,2),'utf8');
+fs.writeFileSync(path.join(__dirname,'..','auditoria-skills.json'), JSON.stringify(j,null,2),'utf8');
 console.log('JSON escrito');

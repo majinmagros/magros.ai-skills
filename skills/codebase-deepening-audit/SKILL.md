@@ -18,3 +18,17 @@ Survey a codebase to identify architectural improvement opportunities based on J
 1. Scan the repository structure and module boundaries.
 2. Evaluate interface-to-implementation ratios across components.
 3. Generate a structured report highlighting deepening opportunities and architectural risks.
+
+## Quando Ativar
+
+- Usuário pede auditoria de arquitetura ou "improve codebase architecture"
+- Identificar módulos rasos que devem ser combinados ou aprofundados
+- Usuário diz "deepening modules", "auditoria de arquitetura", "módulos profundos", "arquitetura limpa"
+- Antes de refatoração estrutural grande no repositório
+
+## Exemplo
+
+```bash
+# auditar fronteiras de módulos e gerar relatório HTML
+audit-deepening --scan ./src --report ./reports/deepening.html
+```

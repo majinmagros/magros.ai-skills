@@ -17,3 +17,19 @@ Generate interactive shell scripts/wizards to guide operators through manual set
 1. Identify steps requiring human intervention (credentials, cloud consoles, manual approvals).
 2. Generate an executable script (Node/Bash) with prompts, validation checks, and progress indicators.
 3. Run and verify completion before proceeding with automated agent loops.
+
+## Quando Ativar
+
+- Passo manual que a IA não pode executar (provisionamento, credenciais, dashboard externo, migração one-off)
+- Usuário diz "wizard", "bash wizard", "passo a passo interativo", "guiar humano"
+- Guiar operador por sequência com validação e checagem de erro no terminal
+- Coletar secrets/aprovações antes de retomar loop automatizado
+
+## Exemplo
+
+```bash
+#!/usr/bin/env bash
+read -rp "API key do provider: " API_KEY
+[[ -z "$API_KEY" ]] && { echo "key obrigatória"; exit 1; }
+echo "[1/3] key recebida — abrindo dashboard para confirmar..."
+```

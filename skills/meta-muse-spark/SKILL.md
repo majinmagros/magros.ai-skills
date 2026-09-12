@@ -17,3 +17,17 @@ Guide for integrating Meta's Muse Spark 1.2 models and Muse Code terminal agent 
 ## Usage Patterns
 - Pair Muse Spark with Muse Code for repository-wide generation tasks.
 - Use Muse Glimmer for local, offline agent loops requiring reliable tool calling and low latency.
+
+## Quando Ativar
+
+- Usuário menciona "Muse Spark", "Muse Code", "Muse Glimmer", "Meta open agentic model", "long-horizon coding"
+- Integrar modelos Muse Spark 1.2 ou agente terminal Muse Code ao workflow
+- Tarefa longa de codificação com self-improvement loop ou recuperação de sessão
+- Rodar loop agêntico local/offline com tool calling confiável (Glimmer 30B)
+
+## Exemplo
+
+```bash
+# iniciar agente terminal Muse Code com recuperação de sessão
+muse-code --model "muse-spark-1.2" --resume --task "refactor auth module"
+```
