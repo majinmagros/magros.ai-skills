@@ -1,15 +1,5 @@
 [
   {
-    "name": "database-migrations",
-    "score": 73,
-    "lines": 431,
-    "reasons": [
-      "350-500 linhas",
-      "sem disclosure"
-    ],
-    "fix": "Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas"
-  },
-  {
     "name": "deployment-patterns",
     "score": 73,
     "lines": 429,
@@ -2727,6 +2717,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "database-migrations",
+    "score": 100,
+    "lines": 52,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {

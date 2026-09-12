@@ -4,14 +4,14 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 93.1/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 93.2/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
-- **SKILL.md >200 linhas:** 85 (18.5%) | >500 linhas: 0
-- **Com progressive disclosure (references/scripts):** 142 / 459 (30.9%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:35 | 80-99:196
-- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 18.5% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
+- **SKILL.md >200 linhas:** 84 (18.3%) | >500 linhas: 0
+- **Com progressive disclosure (references/scripts):** 143 / 459 (31.2%) — 85% sao monolitos
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:34 | 80-99:196
+- **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 18.3% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
 
@@ -19,9 +19,9 @@
 |---|---|---|---|
 | Descriptions sem gatilho | 0 skills (0.0%) sem Use when/quando | Skills nunca auto-ativam | Reescrever todas com formula Use when + Triggers on |
 | Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
-| Monolitos >200 linhas | 85 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
+| Monolitos >200 linhas | 84 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
 | Mega-monolitos >500 linhas | 0 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
-| Sem progressive disclosure | 317 sem references/scripts | Tudo no SKILL.md | Criar references/ |
+| Sem progressive disclosure | 316 sem references/scripts | Tudo no SKILL.md | Criar references/ |
 | Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
 | Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
 
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **73** | 431 | `database-migrations` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 2 | **73** | 429 | `deployment-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 3 | **73** | 459 | `django-celery` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 4 | **73** | 378 | `error-handling` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 5 | **73** | 449 | `flutter-dart-code-review` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 6 | **73** | 383 | `intent-driven-development` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
-| 7 | **73** | 385 | `java-coding-standards` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 8 | **73** | 417 | `laravel-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 9 | **73** | 435 | `motion-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 10 | **73** | 414 | `mysql-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 11 | **73** | 402 | `prisma-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 12 | **73** | 398 | `pytorch-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 13 | **73** | 425 | `react-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 14 | **73** | 405 | `redis-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 15 | **73** | 451 | `vite-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
-| 16 | **74** | 223 | `configure-ecc` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; >200 linhas; sem disclosure |
-| 17 | **74** | 217 | `financiamento-imobiliario` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; >200 linhas |
-| 18 | **74** | 230 | `ito-basket-compare` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; >200 linhas; sem disclosure |
-| 19 | **76** | 341 | `android-clean-architecture` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 20 | **76** | 304 | `autonomous-agent-harness` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; >200 linhas; sem disclosure |
-| 21 | **76** | 301 | `compose-multiplatform-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 22 | **76** | 326 | `cpp-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 23 | **76** | 323 | `csharp-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 24 | **76** | 323 | `dotnet-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 25 | **76** | 313 | `homelab-vlan-segmentation` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 26 | **76** | 307 | `homelab-wireguard-vpn` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 27 | **76** | 304 | `jira-integration` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 28 | **76** | 343 | `lead-intelligence` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 29 | **76** | 349 | `mle-workflow` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
-| 30 | **76** | 327 | `react-native-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 1 | **73** | 429 | `deployment-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 2 | **73** | 459 | `django-celery` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 3 | **73** | 378 | `error-handling` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 4 | **73** | 449 | `flutter-dart-code-review` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 5 | **73** | 383 | `intent-driven-development` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; 350-500 linhas; sem disclosure |
+| 6 | **73** | 385 | `java-coding-standards` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 7 | **73** | 417 | `laravel-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 8 | **73** | 435 | `motion-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 9 | **73** | 414 | `mysql-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 10 | **73** | 402 | `prisma-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 11 | **73** | 398 | `pytorch-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 12 | **73** | 425 | `react-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 13 | **73** | 405 | `redis-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 14 | **73** | 451 | `vite-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | 350-500 linhas; sem disclosure |
+| 15 | **74** | 223 | `configure-ecc` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; >200 linhas; sem disclosure |
+| 16 | **74** | 217 | `financiamento-imobiliario` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; >200 linhas |
+| 17 | **74** | 230 | `ito-basket-compare` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; >200 linhas; sem disclosure |
+| 18 | **76** | 341 | `android-clean-architecture` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 19 | **76** | 304 | `autonomous-agent-harness` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | desc longa; >200 linhas; sem disclosure |
+| 20 | **76** | 301 | `compose-multiplatform-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 21 | **76** | 326 | `cpp-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 22 | **76** | 323 | `csharp-testing` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 23 | **76** | 323 | `dotnet-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 24 | **76** | 313 | `homelab-vlan-segmentation` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 25 | **76** | 307 | `homelab-wireguard-vpn` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 26 | **76** | 304 | `jira-integration` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 27 | **76** | 343 | `lead-intelligence` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 28 | **76** | 349 | `mle-workflow` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 29 | **76** | 327 | `react-native-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
+| 30 | **76** | 343 | `react-patterns` | projeto | Extrair exemplos para references/ e scripts/, manter SKILL.md <=200 linhas | >200 linhas; sem disclosure |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -107,11 +107,11 @@
 > Amostra:
 ... +-15 outras
 
-### Faixa 60-79 (Regular - 35 skills)
-Amostra: `database-migrations`(73), `deployment-patterns`(73), `django-celery`(73), `error-handling`(73), `flutter-dart-code-review`(73), `intent-driven-development`(73), `java-coding-standards`(73), `laravel-patterns`(73), `motion-patterns`(73), `mysql-patterns`(73) ...
+### Faixa 60-79 (Regular - 34 skills)
+Amostra: `deployment-patterns`(73), `django-celery`(73), `error-handling`(73), `flutter-dart-code-review`(73), `intent-driven-development`(73), `java-coding-standards`(73), `laravel-patterns`(73), `motion-patterns`(73), `mysql-patterns`(73), `prisma-patterns`(73) ...
 
-### Faixa 80-99 & 100 (Boa/Excelente - 424 skills)
-Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agentic-os`, `agnostic-repo-mirror`, `ai-governance-monitor`, `ai-regression-testing`, `api-connector-builder`, `api-design`, `architecture-decision-records`, `automation-audit-ops` ... (228 com 100pts)
+### Faixa 80-99 & 100 (Boa/Excelente - 425 skills)
+Amostra 100pts: `accessibility`, `agent-browser`, `agent-cost-optimization-batch`, `agent-eval`, `agent-introspection-debugging`, `agent-self-evaluation`, `agent-swarm-ops`, `agentic-os`, `agnostic-repo-mirror`, `ai-governance-monitor`, `ai-regression-testing`, `api-connector-builder`, `api-design`, `architecture-decision-records`, `automation-audit-ops` ... (229 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 
