@@ -1,6 +1,6 @@
 # Auditoria de Skills — Scorecard de Clareza e Saude
 
-> Gerado automaticamente em 2026-09-12 | Projeto: magros.ai-skills | Total: 459 pastas em skills/
+> Gerado automaticamente em 2026-09-13 | Projeto: magros.ai-skills | Total: 459 pastas em skills/
 
 ## Resumo Executivo
 

@@ -38,6 +38,17 @@ Pipeline modular estilo "elemento por elemento" para criar cenas 3D complexas bl
 
 ---
 
+## Quando NÃO usar
+
+- Bloco 3D único a partir de imagem (use `img2threejs` direto, sem o pipeline)
+- Só shaders customizados (use `threejs-shader-effects`)
+- Só responsividade mobile/desktop (use `threejs-responsive-patterns`)
+- Só deploy/build Vite (use `threejs-deploy-pipeline`)
+- Só constants de tuning em runtime (use `threejs-config-constants`)
+- Mundo voxel estilo Minecraft (use `threejs-voxel-block-system`)
+
+---
+
 ## Pipeline (6 etapas)
 
 ```

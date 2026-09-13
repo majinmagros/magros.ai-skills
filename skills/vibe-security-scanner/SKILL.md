@@ -17,6 +17,12 @@ Free automated scans (ZAP, GitLeaks, Bandit, Grype) plus the 5 AI-code flaws. De
 - Payment integration review
 - User handles customer data (LGPD, GDPR, HIPAA context)
 
+## When NOT to Use
+
+- Manual review depth on auth, payments, or crypto (use `security-review`)
+- Stack-specific hardening, e.g. Django or Laravel (use `django-security`, `laravel-security`, etc.)
+- Auditing your Claude Code configuration, not the app (use `security-scan`)
+
 ## Core Principles
 
 1. **Secrets first** — GitLeaks over full history; rotate all hits

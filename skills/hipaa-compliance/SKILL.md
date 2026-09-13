@@ -21,6 +21,12 @@ Use this as the HIPAA-specific entrypoint when a task is clearly about US health
 - Assessing whether logging, analytics, LLM prompts, storage, or support workflows create HIPAA exposure
 - Designing patient-facing or clinician-facing systems where minimum necessary access and auditability matter
 
+## When NOT to Use
+
+- General healthcare privacy without HIPAA framing (use `healthcare-phi-compliance` directly)
+- CDSS engine internals like interactions and scoring (use `healthcare-cdss-patterns`)
+- Deployment safety gates (use `healthcare-eval-harness`)
+
 ## How It Works
 
 Treat HIPAA as an overlay on top of the broader healthcare privacy skill:

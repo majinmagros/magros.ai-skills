@@ -16,6 +16,12 @@ Use this when the goal is practical vulnerability discovery for responsible disc
 - Preparing a Huntr, HackerOne, or similar bounty submission
 - Triage where the question is "does this actually pay?" rather than "is this theoretically unsafe?"
 
+## When NOT to Use
+
+- Broad best-practices checklist without exploitability filter (use `security-review`)
+- Auditing your Claude Code configuration, not app code (use `security-scan`)
+- Automated scanner pass over vibe-coded SaaS (use `vibe-security-scanner`)
+
 ## How It Works
 
 Bias toward remotely reachable, user-controlled attack paths and throw away patterns that platforms routinely reject as informative or out of scope.

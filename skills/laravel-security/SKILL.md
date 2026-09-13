@@ -18,6 +18,13 @@ Comprehensive security guidelines for Laravel applications. Code by area in `ref
 - Deploying Laravel applications to production
 - Writing secure Eloquent queries and migrations
 
+## When NOT to Use
+
+- Other frameworks (use `django-security`, `springboot-security`, `quarkus-security`, etc.)
+- General security checklist, not Laravel-specific (use `security-review`)
+- Laravel architecture and API patterns (use `laravel-patterns`)
+- Laravel testing (use `laravel-tdd`)
+
 ## Areas (código em `references/`)
 
 - **Auth** (`authentication.md`): Sanctum abilities + expiration; Argon2id/bcrypt + `Password::min(12)->uncompromised()`; session regenerate on login, invalidate on logout; suspicious-login notify + login throttling

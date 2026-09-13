@@ -17,6 +17,12 @@ Autonomous trading agents have a harsher threat model than normal LLM apps: an i
 - Designing wallet key management for an agent
 - Giving an LLM access to order placement, swaps, or treasury operations
 
+## When NOT to Use
+
+- General LLM agent hardening without transaction authority (use `agent-guardrails`)
+- Smart-contract code itself, not the agent (use `defi-amm-security`)
+- General application security review (use `security-review`)
+
 ## How It Works
 
 Layer the defenses. No single check is enough. Treat prompt hygiene, spend policy, simulation, execution limits, and wallet isolation as independent controls.

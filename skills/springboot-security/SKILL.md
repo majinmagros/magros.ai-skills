@@ -18,6 +18,13 @@ Deny by default: validate inputs, least privilege, secure-by-configuration. Deta
 - Managing secrets (Vault, environment variables)
 - Adding rate limiting or scanning dependencies for CVEs
 
+## When NOT to Use
+
+- Other stacks (use `quarkus-security`, `django-security`, `laravel-security`, etc.)
+- General security checklist, not Spring-specific (use `security-review`)
+- Spring Boot architecture and API patterns (use `springboot-patterns`)
+- Spring Boot testing (use `springboot-tdd`)
+
 ## Core Principles
 
 1. **Deny by default** — expose only required scopes; guards on every sensitive path

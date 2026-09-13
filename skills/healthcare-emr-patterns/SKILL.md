@@ -20,6 +20,12 @@ Patterns for building Electronic Medical Record (EMR) and Electronic Health Reco
 - Implementing audit trails for clinical data
 - Designing healthcare-accessible UIs for clinical data entry
 
+## When NOT to Use
+
+- CDSS engine internals like interaction checking and scoring (use `healthcare-cdss-patterns`)
+- Deployment verification and safety gates (use `healthcare-eval-harness`)
+- PHI/PII compliance patterns (use `healthcare-phi-compliance`)
+
 ## How It Works
 
 ### Patient Safety First

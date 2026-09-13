@@ -20,6 +20,12 @@ Patterns for protecting patient data, clinician data, and financial data in heal
 - Reviewing code for data exposure vulnerabilities
 - Setting up Row-Level Security (RLS) for multi-tenant healthcare systems
 
+## When NOT to Use
+
+- Task explicitly framed as HIPAA/US compliance (use `hipaa-compliance` as entrypoint)
+- CDSS engine logic like interactions and scoring (use `healthcare-cdss-patterns`)
+- Deployment safety gates (use `healthcare-eval-harness`)
+
 ## How It Works
 
 Healthcare data protection operates on three layers: **classification** (what is sensitive), **access control** (who can see it), and **audit** (who did see it).

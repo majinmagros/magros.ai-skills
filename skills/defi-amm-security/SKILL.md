@@ -17,6 +17,12 @@ Critical vulnerability patterns and hardened implementations for Solidity AMM co
 - Reviewing any contract that uses `token.balanceOf(address(this))` in share or reserve math
 - Adding fee setters, pausers, oracle updates, or other admin functions to a DeFi protocol
 
+## When NOT to Use
+
+- General application security review (use `security-review`)
+- Trading-agent operations like key management and spend limits (use `llm-trading-agent-security`)
+- EVM token decimal handling (use `evm-token-decimals`)
+
 ## How It Works
 
 Use this as a checklist-plus-pattern library. Review every user entrypoint against the categories below and prefer the hardened examples over hand-rolled variants.

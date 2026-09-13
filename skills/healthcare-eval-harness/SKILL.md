@@ -18,6 +18,11 @@ One CRITICAL failure blocks deployment: CDSS/PHI/integrity at 100%, workflows at
 - During CI/CD pipeline configuration for healthcare apps
 - After resolving merge conflicts in clinical modules
 
+## When NOT to Use
+
+- Building clinical features themselves (use `healthcare-emr-patterns`, `healthcare-cdss-patterns`)
+- HIPAA-framed compliance questions without deployment gates (use `hipaa-compliance`)
+
 ## Core Principles
 
 1. **CRITICAL = 100% with --bail** — CDSS, PHI exposure, data integrity

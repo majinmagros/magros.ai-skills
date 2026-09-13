@@ -17,6 +17,12 @@ Audit your Claude Code configuration for security issues using [AgentShield](htt
 - When onboarding to a new repository with existing Claude Code configs
 - Periodic security hygiene checks
 
+## When NOT to Use
+
+- Application code vulnerabilities, not agent config (use `security-review`)
+- Hunting bounty-worthy exploits (use `security-bounty-hunter`)
+- Stack-specific hardening, e.g. Django or Laravel (use `django-security`, `laravel-security`, etc.)
+
 ## What It Scans
 
 | File | Checks |

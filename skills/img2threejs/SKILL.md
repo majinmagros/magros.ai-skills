@@ -29,6 +29,7 @@ Analisa uma **imagem estática** de um objeto/forma e gera **do zero** todo o c�
 - Geração de 3D por IA generativa (Meshy, Tripo, CSM, Rodin, Trellis, Hunyuan3D)
 - Animações Lottie/SVG 2D (use `motion-design-skill` ou `lottie-web`)
 - Vídeo para 3D / NeRF / Gaussian Splatting
+- Site 3D completo por composição modular (use `threejs-scene-composer`)
 
 ## Pipeline (baseado no vídeo + docs Three.js oficiais)
 

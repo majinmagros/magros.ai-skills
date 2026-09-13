@@ -18,6 +18,12 @@ Pure-function safety engine for EMR: interactions, dose validation, NEWS2 scorin
 - Medication order entry with safety checks
 - Interpreting lab results with clinical context
 
+## When NOT to Use
+
+- EMR encounter workflows and UI (use `healthcare-emr-patterns`)
+- Deployment safety gates (use `healthcare-eval-harness`)
+- PHI/PII compliance and access control (use `healthcare-phi-compliance`)
+
 ## Core Principles
 
 1. **Pure functions, zero side effects** — input data, output alerts; fully testable
