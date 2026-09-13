@@ -63,3 +63,11 @@ Use these when `motion-patterns` is not enough. Code in `references/examples.md`
 | One-shot imperative animation | `animate()` from `motion` |
 | Text entering word by word | Stagger on `inline-block` spans |
 | SVG drawing on | `pathLength` 0 → 1 |
+
+## Exemplo
+
+```text
+Sheet arrastável p/ dispensar: drag="y" + offset check no onDragEnd (motion-foundations p/ tokens)
+Sequência de onboarding: useAnimate async/await interrupt-safe; testa no touch
+Regra: valores só de motionTokens/springs; cleanup de listeners no useEffect
+```

@@ -55,3 +55,13 @@ When assisting a user via this playbook, agents should:
 2. **Draft a data contract** in Phase 2 for user approval.
 3. **Write the decoupling interface** (API/Service) in Phase 3 *before* writing the training loop.
 4. **Deliver a reproducible script** in Phase 4 that trains the model and saves the artifact.
+
+## Exemplo
+
+```text
+Pedido: "adiciona recomendação de produtos no monolito"
+Fase 1: heurística (mais vendidos) primeiro? não — precisa personalizar → ML justificado
+Fase 2: data contract (user_id, sku, ts; split cronológico anti-leakage)
+Fase 3: API /recommend + fallback "mais vendidos" + feature flag
+Fase 4: baseline LogisticRegression + eval vs baseline → handoff mle-workflow
+```

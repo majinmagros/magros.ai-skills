@@ -62,3 +62,11 @@ Migração segura entre famílias: **eval suite primeiro**, sem hyper-optimizati
 | partial | 25% | 48h | pass ≥ 0.97 | pass < 0.93 |
 | majority | 75% | 72h | pass ≥ 0.98 | pass < 0.95 |
 | full | 100% | — | pass ≥ 0.99 | pass < 0.97 |
+
+## Exemplo
+
+```text
+Opus → Sonnet em produção: eval suite primeiro (vibes→curated→customer, mesmas rubricas)
+Acha gotcha: prompt hiper-otimizado p/ Opus quebra no Sonnet → prompting robusto
+Canary 5%/24h (pass 0.96) → partial → full; custo por feature atribuído no dashboard
+```

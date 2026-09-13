@@ -63,3 +63,12 @@ isolada, sem contato com as demais.
 **Como implementar o isolamento:**
 
 - Se o harness suporta subagentes (Claude Code Task, OpenCode agent): despache
+
+## Exemplo
+
+```text
+Pergunta: "migro o monolito p/ microserviços?" (complexa → roda o pipeline)
+5 salas: arquiteto, DevOps, PM, cético, financeiro → ideias 0-10, top 3 aprofunda
+Saída: converge (custo e risco altos) vs diverge (time-to-market); decisão go/no-go
+Simples ("qual flag liga X?") → responde direto, sem pipeline
+```

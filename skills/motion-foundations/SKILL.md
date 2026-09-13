@@ -63,3 +63,11 @@ These are non-negotiable. They apply to every component in the system.
 | --------- | -------------------------------------------- |
 | `instant` | Tooltip show/hide, focus ring, badge update |
 | `fast` | Button feedback, icon swap, chip toggle |
+
+## Exemplo
+
+```text
+Setup: motionTokens (duration/easing) + springs (5 presets) + shouldAnimate() gate
+Componente: initial == server (sem hydration warn), "use client", sem window no módulo
+Reduced motion: tudo desliga, só fade ≤0.2s; layout props (width/top) nunca animam
+```

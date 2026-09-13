@@ -63,3 +63,11 @@ The recommended `minimal --with capability:machine-learning` install keeps the c
 | `documentation-lookup` / `search-first` | Verify current library behavior for model serving, feature stores, vector DBs, and eval tooling before coding |
 | `git-workflow` / `github-ops` / `opensource-pipeline` | Package MLE changes for review with crisp scope, generated artifacts excluded, and reproducible test evidence |
 | `strategic-compact` / `dmux-workflows` | Split long ML work into parallel tracks: data contract, eval harness, serving path, monitoring, and docs |
+
+## Exemplo
+
+```text
+Notebook de churn vira sistema: data contract (features + split) → treino reproduzível (seed fixa)
+→ eval offline + slice por plano → canary 5% → dashboard drift → rollback doc
+Sem: notebook solto em prod sem contrato, sem eval e sem rollback
+```
