@@ -13,6 +13,22 @@ idea, basket adjustment, venue comparison, or manual execution plan.
 The skill is intentionally non-executing. It produces indicative, non-executable
 checklists and parameter tables the user can review manually.
 
+## When to Activate
+
+- "Worksheet for this prediction-market idea"
+- "Compare venues for this basket adjustment"
+- "Checklist before manual execution"
+- "What are the order prerequisites here?"
+- "Plan without placing anything"
+
+## Example
+
+```text
+Hypothesis: "basket X tracks tech earnings"
+→ markets, fees, resolution rules, data freshness (indicative only)
+→ user executes manually. No advice, no orders.
+```
+
 ## Guardrails
 
 - Do not say a trade is good, bad, optimal, or recommended.

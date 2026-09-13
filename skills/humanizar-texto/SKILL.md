@@ -8,6 +8,21 @@ description: Use when the user wants text that does not sound AI-generated — e
 Reescreve textos para não serem identificados como gerados por IA. Identifica
 os vícios, elimina, mantém a informação e o tom do contexto.
 
+## Quando usar (gatilhos)
+
+- "Humaniza esse texto"
+- "Tá com cara de IA, reescreve"
+- "Tira o AI slop desse e-mail"
+- "Esse post parece robotizado"
+- "Reescreve pra não parecer IA"
+
+## Exemplo
+
+```text
+Antes: "Em suma, é importante ressaltar nossa solução inovadora e de ponta."
+Depois: "Resumindo: nosso sistema corta 2h do seu dia."
+```
+
 ## 1. Padrões de AI-slop textual a CAÇAR
 
 - **Travessão (—)** abusivo: em português informal não é comum.

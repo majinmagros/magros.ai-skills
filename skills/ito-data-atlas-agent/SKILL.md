@@ -12,6 +12,21 @@ or parameter change, and returns an editable, source-grounded result to a human.
 It may use Itô's documented read-only product-data surfaces. It never runs live
 trading.
 
+## When to Activate
+
+- "Discover data sources for an Itô basket"
+- "Draft a basket from these sources"
+- "Design a background research agent"
+- "Build a Data Atlas workflow with human review"
+- "Compare venues before planning anything"
+
+## Example
+
+```text
+Input: 3 candidate sources → output: editable worksheet
+(basket draft + source links). Human approves before any next step.
+```
+
 ## Discovery
 
 Trigger examples include:

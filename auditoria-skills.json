@@ -1,67 +1,5 @@
 [
   {
-    "name": "grilling",
-    "score": 86,
-    "lines": 40,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "humanizar-texto",
-    "score": 86,
-    "lines": 51,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ito-data-atlas-agent",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ito-trade-planner",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "manga-generator",
-    "score": 86,
-    "lines": 57,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "nanoclaw-repl",
-    "score": 86,
-    "lines": 35,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "pesquisa-social",
     "score": 86,
     "lines": 51,
@@ -2494,6 +2432,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "grilling",
+    "score": 100,
+    "lines": 55,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "grills",
     "score": 100,
     "lines": 53,
@@ -2585,6 +2530,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "humanizar-texto",
+    "score": 100,
+    "lines": 66,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "hyper3d-rodin-api",
     "score": 100,
     "lines": 65,
@@ -2664,6 +2618,20 @@
     "name": "ito-basket-compare",
     "score": 100,
     "lines": 49,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ito-data-atlas-agent",
+    "score": 100,
+    "lines": 80,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ito-trade-planner",
+    "score": 100,
+    "lines": 81,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2815,6 +2783,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "manga-generator",
+    "score": 100,
+    "lines": 72,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "mcp-server-patterns",
     "score": 100,
     "lines": 65,
@@ -2895,6 +2872,13 @@
     "name": "mysql-patterns",
     "score": 100,
     "lines": 53,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "nanoclaw-repl",
+    "score": 100,
+    "lines": 51,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

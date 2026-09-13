@@ -4,13 +4,13 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 97.3/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 97.5/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
 - **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
 - **Com progressive disclosure (references/scripts):** 213 / 459 (46.4%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:159
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:153
 - **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **86** | 40 | `grilling` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 2 | **86** | 51 | `humanizar-texto` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 3 | **86** | 65 | `ito-data-atlas-agent` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 4 | **86** | 65 | `ito-trade-planner` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 5 | **86** | 57 | `manga-generator` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 6 | **86** | 35 | `nanoclaw-repl` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 7 | **86** | 51 | `pesquisa-social` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 8 | **86** | 50 | `plan` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 9 | **86** | 62 | `prediction-market-risk-review` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 10 | **86** | 65 | `prompt-builder` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 11 | **86** | 65 | `ralphinho-rfc-pipeline` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 12 | **86** | 65 | `roteiro-engenheiro-ia-2026` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 13 | **86** | 53 | `routines` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 14 | **86** | 56 | `search-hallucination-detection` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 15 | **86** | 36 | `superpowers` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 16 | **86** | 65 | `triagem-bug` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 17 | **86** | 54 | `workflows` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 18 | **87** | 29 | `9router-gateway` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; pouca estrutura |
-| 19 | **87** | 65 | `ito-compute` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; pouca estrutura |
-| 20 | **87** | 44 | `remotion-video-creation` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos; pouca estrutura |
-| 21 | **93** | 65 | `12-factor-agents` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 22 | **93** | 65 | `a2a-interoperability` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 23 | **93** | 65 | `ads-creative-factory` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 24 | **93** | 65 | `ads-operator` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 25 | **93** | 65 | `ads-reporter-multi` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 26 | **93** | 65 | `aeo-geo-visibility` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 27 | **93** | 65 | `agent-commerce-interface` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 28 | **93** | 65 | `agent-cost-optimization-batch` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 29 | **93** | 65 | `agent-guardrails` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 30 | **93** | 35 | `ai-media-generator` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 1 | **86** | 51 | `pesquisa-social` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 2 | **86** | 50 | `plan` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 3 | **86** | 62 | `prediction-market-risk-review` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 4 | **86** | 65 | `prompt-builder` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 5 | **86** | 65 | `ralphinho-rfc-pipeline` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 6 | **86** | 65 | `roteiro-engenheiro-ia-2026` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 7 | **86** | 53 | `routines` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 8 | **86** | 56 | `search-hallucination-detection` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 9 | **86** | 36 | `superpowers` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 10 | **86** | 65 | `triagem-bug` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 11 | **86** | 54 | `workflows` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 12 | **87** | 29 | `9router-gateway` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; pouca estrutura |
+| 13 | **87** | 65 | `ito-compute` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; pouca estrutura |
+| 14 | **87** | 44 | `remotion-video-creation` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos; pouca estrutura |
+| 15 | **93** | 65 | `12-factor-agents` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 16 | **93** | 65 | `a2a-interoperability` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 17 | **93** | 65 | `ads-creative-factory` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 18 | **93** | 65 | `ads-operator` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 19 | **93** | 65 | `ads-reporter-multi` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 20 | **93** | 65 | `aeo-geo-visibility` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 21 | **93** | 65 | `agent-commerce-interface` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 22 | **93** | 65 | `agent-cost-optimization-batch` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 23 | **93** | 65 | `agent-guardrails` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 24 | **93** | 35 | `ai-media-generator` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 25 | **93** | 65 | `alpaca-broker-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 26 | **93** | 65 | `angular-developer` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 27 | **93** | 65 | `api-connector-builder` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 28 | **93** | 65 | `approval-loop-morning-digest` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 29 | **93** | 65 | `article-writing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 30 | **93** | 65 | `astro-site-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -111,7 +111,7 @@
 Amostra:  ...
 
 ### Faixa 80-99 & 100 (Boa/Excelente - 459 skills)
-Amostra 100pts: `9router-resilient-fallback`, `accessibility`, `agent-architecture-audit`, `agent-browser`, `agent-eval`, `agent-harness-construction`, `agent-introspection-debugging`, `agent-payment-x402`, `agent-self-evaluation`, `agent-sort`, `agent-swarm-ops`, `agentic-engineering`, `agentic-os`, `agnostic-repo-mirror`, `ai-first-engineering` ... (300 com 100pts)
+Amostra 100pts: `9router-resilient-fallback`, `accessibility`, `agent-architecture-audit`, `agent-browser`, `agent-eval`, `agent-harness-construction`, `agent-introspection-debugging`, `agent-payment-x402`, `agent-self-evaluation`, `agent-sort`, `agent-swarm-ops`, `agentic-engineering`, `agentic-os`, `agnostic-repo-mirror`, `ai-first-engineering` ... (306 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

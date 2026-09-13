@@ -7,6 +7,21 @@ description: Gera mangá/quadrinhos a partir de uma história, com personagens c
 
 Pipeline de **consistência de personagem** para quadrinhos, do roteiro à página.
 
+## Quando usar (gatilhos)
+
+- "Fazer um mangá dessa história"
+- "Quadrinhos com personagem consistente"
+- "Storyboard de HQ com mesmo personagem"
+- "Paginação estilo mangá"
+- "Personagem estável em várias cenas"
+
+## Exemplo
+
+```text
+História: "Mei descobre um portal" → âncora: cabelo azul, jaqueta vermelha
+→ 4 painéis com Mei consistente + diálogos (DiffSensei/Comic AI)
+```
+
 > ✅ **VERIFICADO (2026-08-26):** ferramentas confirmadas nesta sessão.
 > Opções reais: **DiffSensei** (research, CVPR 2025 — manga customizado com
 > adaptação de personagem, github.com/jianzongwu/DiffSensei), **Comic AI**

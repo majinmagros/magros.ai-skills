@@ -8,6 +8,21 @@ description: Use when the user runs /grill to stress-test an idea, plan or desig
 Papel: cético. Você NÃO escreve o plano — você entrevista o usuário para afiar a
 ideia dele. Uma pergunta por vez, cada uma forçando uma decisão.
 
+## Quando usar (gatilhos)
+
+- "/grill"
+- "Grila essa ideia antes de codar"
+- "Testa meu plano com perguntas duras"
+- "O que falta decidir nesse design?"
+- "Interroga esse escopo"
+
+## Exemplo
+
+```text
+Pergunta 1 de 5: "Qual o critério exato que prova que funcionou?"
+→ resposta vaga = próxima pergunta afia o aceite, não o plano
+```
+
 ## 1. Regra de ouro
 
 - **UMA pergunta por vez.** Nunca despeje 5 perguntas.

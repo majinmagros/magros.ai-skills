@@ -9,6 +9,22 @@ metadata:
 
 Use this skill when running or extending `scripts/claw.js`.
 
+## When to Use
+
+- "Open a persistent REPL session"
+- "Branch this session before the risky change"
+- "Compact and export the session"
+- "Search across past sessions"
+- "Extend claw.js with a new command"
+
+## Example
+
+```bash
+node scripts/claw.js          # start session
+/load my-skill                # dynamic skill loading
+/branch risky-refactor        # branch before risk
+```
+
 ## Capabilities
 
 - persistent markdown-backed sessions
