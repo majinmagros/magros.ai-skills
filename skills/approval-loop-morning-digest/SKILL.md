@@ -62,3 +62,12 @@ in `routines` and crons; this skill is the loop itself.
   silently and never substitute another option.
 - Rate-limit proposals: max one approval request per job per day
   unless the human asks for more.
+
+## Exemplo
+
+```text
+07h digest: 3 notícias + fila (2 carrosséis prontos, 1 bloqueado) + CPA R$31/ROAS 2,8x
+09h job propõe: "A1 pausar conjunto C3 (freq 6,2) / A2 reduzir budget 30%"
+Humano: "approved A1" → executa só A1 → responde DONE + id da mudança + log
+Sem token = nada executa (silêncio nunca é sim)
+```

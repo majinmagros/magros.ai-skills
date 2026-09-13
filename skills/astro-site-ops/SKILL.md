@@ -57,6 +57,15 @@ deploy with a PageSpeed gate. Fixes the scale pain of pure-HTML sites
 - `frontend-patterns`: component structure and UI conventions for step 3.
 - `aeo-geo-visibility`: use after the site ships, to get cited by answers.
 
+## Exemplo
+
+```text
+Site HTML com header/footer copiados em 20 páginas → migra p/ Astro
+Scaffold: layouts/Base + components + collection posts (schema: title, date, slug)
+Bulk: 15 posts .md → type check + build verde → Cloudflare (dist)
+Gate: Lighthouse home/post/listing acima do limiar → merge + URL prod no run log
+```
+
 ## Sources
 
 - Astro content collections (schema, loaders, querying):

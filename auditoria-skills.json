@@ -1,63 +1,5 @@
 [
   {
-    "name": "api-connector-builder",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "approval-loop-morning-digest",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "article-writing",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "astro-site-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "auditoria-cientifica-ia",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "autobots-auto-improvement",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "automation-audit-ops",
     "score": 93,
     "lines": 65,
@@ -1451,6 +1393,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "api-connector-builder",
+    "score": 100,
+    "lines": 75,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "api-design",
     "score": 100,
     "lines": 58,
@@ -1458,10 +1407,35 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "approval-loop-morning-digest",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "architecture-decision-records",
     "score": 100,
     "lines": 65,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "article-writing",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "astro-site-ops",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -1475,6 +1449,24 @@
     "name": "auditoria-artefatos",
     "score": 100,
     "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "auditoria-cientifica-ia",
+    "score": 100,
+    "lines": 65,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "autobots-auto-improvement",
+    "score": 100,
+    "lines": 65,
     "reasons": [
       "desc longa"
     ],

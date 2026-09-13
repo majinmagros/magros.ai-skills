@@ -63,3 +63,12 @@ Delete and rewrite any of these:
 - start with tension, contradiction, or a specific observation
 - keep one argument thread per section
 - make opinions answer to evidence
+
+## Exemplo
+
+```text
+Antes: "In today's rapidly evolving landscape, this game-changer..."
+Depois: "Na terça, o deploy quebrou 3 lojas. O log dizia timeout no webhook."
+Regra: abre com prova concreta (número, cena, output) → explica depois
+Voz: sem referência? usa operador afiado — concreto, sem adjetivo vazio
+```

@@ -9,7 +9,7 @@ metadata:
 
 > Baseado no vídeo `HwT3Un5qzG8` (AI Revolution em Português) + repo `SI Labs` + metodologia `agent-context-kit` v0.1.0. Auditoria automatizada de papers, datasets, benchmarks — detecta erros em dados de referência (75 anos), baixa reprodutibilidade (1/3 ICML oral), erro crescente (NeurIPS +55% em 4 anos).
 
-## 1. Quando usar
+## Quando usar
 
 - Precisa auditar papers científicos (revisão por pares não pegou erro)
 - Quer verificar datasets de referência (pontos de ebulição, propriedades químicas, benchmarks ML)

@@ -63,3 +63,13 @@ Typical slices:
 - config/schema
 - client/transport
 - mapping layer
+
+## Exemplo
+
+```text
+Tarefa: "Build a Jira connector for this project"
+1) Lê 2 conectores existentes (ex.: Slack, GitHub) → mapeia layout, auth, retry, fixtures
+2) Define superfície mínima: auth OAuth, entidades issue/project, CRUD + paginação
+3) Entrega em camadas do repo + registry wiring + testes no estilo da casa
+Anti-padrão evitado: nada de arquitetura nova quando o repo já tem uma
+```

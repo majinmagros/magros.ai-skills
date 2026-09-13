@@ -4,13 +4,13 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 98.1/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 98.2/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
 - **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
 - **Com progressive disclosure (references/scripts):** 213 / 459 (46.4%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:127
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:121
 - **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **93** | 65 | `api-connector-builder` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 2 | **93** | 65 | `approval-loop-morning-digest` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 3 | **93** | 65 | `article-writing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 4 | **93** | 65 | `astro-site-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 5 | **93** | 65 | `auditoria-cientifica-ia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 6 | **93** | 65 | `autobots-auto-improvement` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 7 | **93** | 65 | `automation-audit-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 8 | **93** | 65 | `avaliar-ferramenta-ia` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 9 | **93** | 65 | `baixar-musica` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 10 | **93** | 65 | `benchmark-methodology` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 11 | **93** | 65 | `benchmark-optimization-loop` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 12 | **93** | 65 | `biomedical-ai-pipeline` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 13 | **93** | 65 | `blender-mcp-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 14 | **93** | 65 | `blender-motion-state-inspection` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 15 | **93** | 65 | `brand-discovery` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 16 | **93** | 65 | `brand-voice` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 17 | **93** | 65 | `ck-cli` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 18 | **93** | 65 | `claude-connector-strategy` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 19 | **93** | 30 | `claude-voice-workflow` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 20 | **93** | 40 | `cloud-code-internal-tools` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 21 | **93** | 27 | `cloud-code-vps-deploy` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 22 | **93** | 65 | `competitive-platform-analysis` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 23 | **93** | 65 | `competitive-report-structure` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 24 | **93** | 65 | `connections-optimizer` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 25 | **93** | 65 | `constituicao-projeto` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 26 | **93** | 65 | `content-engine` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 27 | **93** | 65 | `context-budget` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 28 | **93** | 65 | `context-ledger` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 29 | **93** | 47 | `continuous-agent-loop` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 30 | **93** | 52 | `criar-campanha-visual` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 1 | **93** | 65 | `automation-audit-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 2 | **93** | 65 | `avaliar-ferramenta-ia` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 3 | **93** | 65 | `baixar-musica` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 4 | **93** | 65 | `benchmark-methodology` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 5 | **93** | 65 | `benchmark-optimization-loop` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 6 | **93** | 65 | `biomedical-ai-pipeline` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 7 | **93** | 65 | `blender-mcp-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 8 | **93** | 65 | `blender-motion-state-inspection` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 9 | **93** | 65 | `brand-discovery` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 10 | **93** | 65 | `brand-voice` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 11 | **93** | 65 | `ck-cli` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 12 | **93** | 65 | `claude-connector-strategy` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 13 | **93** | 30 | `claude-voice-workflow` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 14 | **93** | 40 | `cloud-code-internal-tools` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 15 | **93** | 27 | `cloud-code-vps-deploy` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 16 | **93** | 65 | `competitive-platform-analysis` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 17 | **93** | 65 | `competitive-report-structure` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 18 | **93** | 65 | `connections-optimizer` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 19 | **93** | 65 | `constituicao-projeto` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 20 | **93** | 65 | `content-engine` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 21 | **93** | 65 | `context-budget` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 22 | **93** | 65 | `context-ledger` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 23 | **93** | 47 | `continuous-agent-loop` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 24 | **93** | 52 | `criar-campanha-visual` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 25 | **93** | 65 | `crosspost` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 26 | **93** | 65 | `customer-billing-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 27 | **93** | 65 | `dashboard-builder` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 28 | **93** | 65 | `data-throughput-accelerator` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 29 | **93** | 65 | `delivery-gate` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 30 | **93** | 65 | `design-iterate-in-place` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -111,7 +111,7 @@
 Amostra:  ...
 
 ### Faixa 80-99 & 100 (Boa/Excelente - 459 skills)
-Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (332 com 100pts)
+Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (338 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

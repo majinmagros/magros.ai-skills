@@ -9,7 +9,7 @@ metadata:
 
 > Baseado no vídeo `yRkvxxRpkiw` (AI Revolution em Português) — Abacos: 4 autobots rodando em produção (vendas Notion→Slack, código GitHub, YouTube, broker). Agente executa trabalho, avaliador independente avalia, auto-retrain baseado em conversão. "IA esquece, agente aprende."
 
-## 1. Quando usar
+## Quando usar
 
 - Precisa de agente que melhora sozinho sem intervenção humana
 - Quer separar **execução** de **avaliação** (evita autoconfiança/viés)
