@@ -791,3 +791,16 @@ Enriches aplicados: `criar-skill` (skills-as-apps), `roteamento-modelos-gratuito
 | 109 | **GPT 5.6 + Grok 4.5 + MiniMax 2.7T** (`CT4JV79pidM`) | Família 5.6, Grok 4.5, MiniMax 2.7T, chip DeepSeek, Orca world model, backdoor claim vs Code | ✅ **NOVO** | Watchlist (lote) |
 
 Enriches aplicados: `llm-leaderboard-tracker` (watchlist Batch 17h), `eval-harness` (precedentes eval-escape). Nenhuma skill nova.
+
+---
+
+## Batch 17i — 2026-09-13 (@colemedin: 4 analisados, retry pós bot-check OK)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 110 | **Security for AI Coding** (`SGodxQHnVxc` - @ColeMedin) | Deterministic gates (SonarQube, não agente-revisa-agente) + harness Arkon OSS (single-file, paralelo) no daily workflow | ✅ **NOVO** | Enrich `agent-guardrails` (gates determinísticos) |
+| 111 | **Creator of Claude Code Said WHAT** (`VnyGs43eiAA` - @ColeMedin) | Nuance do "delete tudo a cada 6 meses" (Cherny): não é obsolescência, é re-validação | ✅ **NOVO** | Corrobora `doctor` + unhobbling 17f — sem edit |
+| 112 | **Run Your Coding Agent Safely** (`zb2LyMro77M` - @ColeMedin) | Yolo mode + Docker sandbox: não evite o yolo (mata autonomia), isole o blast radius; horror stories reais | ✅ **NOVO** | Enrich `agent-guardrails` (yolo-no-sandbox) |
+| 113 | **Vercel Eve Framework** (`m8VC2SV2igM` - @ColeMedin) | Framework filesystem-first (Vercel, OSS): pasta = agente (instruções, modelo, skills, tools, sandbox, channels, MCP, sub-agentes, schedules) | ✅ **NOVO** | **Gap G28** `vercel-eve-filesystem` (framework novo, materialização pendente de validação oficial — mesmo critério de G27) |
+
+Enrich aplicado: `agent-guardrails` (gates + yolo-sandbox). Gap novo G28 registrado (pendente). Nenhuma skill nova.

@@ -80,6 +80,15 @@ Para o seu agente, a licao e dupla: monitore padroes de uso anormais nos
 seus endpoints e assuma que output servido pode virar treino alheio —
 rate limit + deteccao de scraping fazem parte das guardrails.
 
+## Gates deterministicos + yolo-no-sandbox (Batch 17i, #110 #112)
+
+Seguranca de codigo gerado nao se resolve com "outro agente revisa":
+use gates deterministicos (SonarQube e similares — vulnerability
+detection de verdade, nao opiniao de LLM) dentro do workflow. E nao
+fuja do yolo mode (aprovar centenas de acoes mata a autonomia) —
+rode yolo DENTRO de sandbox (Docker, gratis): autonomia total, blast
+radius zero. Fonte: ColeMedin #110 #112 (harness Arkon OSS).
+
 ## Exemplo
 
 ```text
