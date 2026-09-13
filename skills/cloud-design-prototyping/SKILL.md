@@ -26,6 +26,15 @@ Prototype UIs with AI via Cloud Design (`/design`) or local-first Open Design. D
 4. **Artifact** — real HTML/CSS preview with dual edit + dual preview
 5. **Handoff** — export and continue as real code in Cursor/Codex/Code
 
+## Design-system-first (Batch 17c, #61)
+
+One-shot prompts produce generic output (padaria site = pizzaria site).
+Teach the pattern BEFORE generating: a design system (button, type,
+spacing, radius as tokens) is what separates generic from distinctive.
+Cloud Design 2.0 also fixed the brutal token burn of v1 — but direction
+lock (step 2) is still what saves cost: no system, no identity, more
+iterations burned.
+
 ## Example
 
 ```bash

@@ -681,3 +681,19 @@ Enriches aplicados: `roteamento-modelos-baratos` (3 tiers + pay-twice), `llm-lea
 | — | `x26cPhhLe-0` (@celinexu6598) | Dead-end: bot-check ("Sign in to confirm you're not a bot") — IP sob rate-limit | ⛔ Dead-end | Re-tentar em próxima janela com intervalo maior |
 
 Enriches aplicados: `img2threejs` (foto-virando-objeto), `prompt-builder` + `prompt-optimizer` (regras Fable/Opus 5), `model-migration-strategy` (auditoria pré-Fable). Nenhuma skill nova.
+
+---
+
+## Batch 17c — 2026-09-13 (backlog recente, parte 2: anwar 2 analisados + 8 dead-ends bot-check/members)
+
+> Anwar 2/2 baixados com sucesso apesar do bot-check intermitente. ColeMedin 4/4 e KarineLago 2/2 falharam com bot-check ("Sign in to confirm you're not a bot" — IP sob bloqueio); Inteligência Mil Grau 2/2 são de membros ("Aprendiz de IA"). Dead-ends documentados, re-tentativa em janela com cooldown.
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 60 | **Nobel Prize / Hassabis frontier-AI framework (read-through)** (`FmDVgJVOk60` - @anwarhermuche) | Leitura comentada do framework frontier-AI de Hassabis: impacto 10x revolução industrial e 10x mais rápido, regulação, LLMs pré/pós-GPT | ⚠️ **Comentário** | Sem ação direta (tangencia `ai-governance-monitor`, fino demais) |
+| 61 | **CLAUDE DESIGN 2.0 (practical)** (`4HqJysCzqo8` - @anwarhermuche) | Saída genérica (1 prompt = padaria=pizzaria) se resolve com design-system-first (tokens de padrão antes de gerar); v2 corrigiu queima brutal de tokens da v1 | ✅ **NOVO** | Enrich `cloud-design-prototyping` (design-system-first + custo) |
+| — | 4 ColeMedin (`SGodxQHnVxc`, `VnyGs43eiAA`, `zb2LyMro77M`, `m8VC2SV2igM`) | Dead-end: bot-check em todas as tentativas×3 | ⛔ Dead-end | Re-tentar com cooldown |
+| — | 2 Mil Grau (`XaMN61G9cNo`, `LqWqm0Kl4Ko`) | Dead-end: membros "Aprendiz de IA", sem legenda pública | ⛔ Dead-end | Não re-tentar sem membership |
+| — | 2 KarineLago (`Rg7DlYJoRl0`, `XeOVQrJAvys`) | Dead-end: bot-check (timeout esgotado no meio) | ⛔ Dead-end | Re-tentar com cooldown |
+
+Enrich aplicado: `cloud-design-prototyping` (design-system-first). Nenhuma skill nova.
