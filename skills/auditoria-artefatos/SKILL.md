@@ -9,6 +9,21 @@ Identifique inconsistências, duplicações, ambiguidades e subespecificação
 entre os artefatos do projeto (requisitos/spec, plano técnico, lista de
 tarefas) **antes** de implementar.
 
+## Quando usar (gatilhos)
+
+- "/auditoria-artefatos"
+- "Spec, plano e tarefas estão consistentes?"
+- "O que falta cobrir antes de implementar?"
+- "Confere duplicação entre requisitos"
+- "Valida os artefatos antes do código"
+
+## Exemplo
+
+```text
+[CRITICAL] FR-012 sem tarefa: "exportar relatório" não mapeado
+[AMBIGUIDADE] "resposta rápida" sem métrica no spec
+```
+
 ## Restrição absoluta
 
 **ESTRITAMENTE READ-ONLY**: não modifique nenhum arquivo. Entregue um

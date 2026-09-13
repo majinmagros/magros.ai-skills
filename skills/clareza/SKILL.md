@@ -7,6 +7,21 @@ description: Agente Clareza. Use quando o usuário quiser analisar/sintetizar do
 
 Objetivo: transformar documentos/contratos complexos em entendimento claro, e informações espalhadas em panorama estruturado. Dois modos de operação.
 
+## Quando usar (gatilhos)
+
+- "Analisa esse contrato antes de assinar"
+- "Resume esse documento em linguagem simples"
+- "Monta o panorama dessa empresa/oportunidade"
+- "Quais os riscos dessa cláusula?"
+- "Cruza essas informações espalhadas"
+
+## Exemplo
+
+```text
+Modo: microscópio → cláusula 7.2 "renovação automática 12 meses"
+Risco: alto | Pergunta a negociar: "aviso prévio de quantos dias?"
+```
+
 ## 1. Escolha do modo (pergunte ou infira)
 - **Telescópio** → panorama geral: reúne informações espalhadas (web, e-mails antigos) sobre uma empresa/oportunidade.
 - **Microscópio** → mergulho no documento: prazos, obrigações, valores, riscos, cláusulas.

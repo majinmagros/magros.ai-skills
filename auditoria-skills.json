@@ -1,69 +1,5 @@
 [
   {
-    "name": "auditoria-artefatos",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "automacao-deterministica",
-    "score": 86,
-    "lines": 45,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "checklist-requisitos",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "clareza",
-    "score": 86,
-    "lines": 31,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "clarificar",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "convergencia",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "conversa",
     "score": 86,
     "lines": 31,
@@ -1876,6 +1812,22 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "auditoria-artefatos",
+    "score": 100,
+    "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "automacao-deterministica",
+    "score": 100,
+    "lines": 60,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "autonomous-agent-harness",
     "score": 100,
     "lines": 65,
@@ -1969,10 +1921,35 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "checklist-requisitos",
+    "score": 100,
+    "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "cisco-ios-patterns",
     "score": 100,
     "lines": 65,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "clareza",
+    "score": 100,
+    "lines": 46,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "clarificar",
+    "score": 100,
+    "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -2175,6 +2152,15 @@
     "score": 100,
     "lines": 58,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "convergencia",
+    "score": 100,
+    "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {

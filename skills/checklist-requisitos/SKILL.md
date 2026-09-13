@@ -5,6 +5,21 @@ description: Use when reviewing or hardening requirements/specs before implement
 
 # Skill: /checklist-requisitos — "Unit tests" para requisitos
 
+## Quando usar (gatilhos)
+
+- "/checklist-requisitos"
+- "Os requisitos estão bem escritos?"
+- "Valida a qualidade do spec antes de implementar"
+- "Gera checklist de completude/clareza/consistência"
+- "O que falta especificar nesse documento?"
+
+## Exemplo
+
+```markdown
+- [ ] "Login com Google" define conta nova vs existente? [Completude]
+- [ ] "Carregamento rápido" tem métrica em ms? [Clareza]
+```
+
 ## Conceito central: "Unit Tests for English"
 
 Checklist é **teste da qualidade da escrita dos requisitos**, não teste do

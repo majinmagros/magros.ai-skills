@@ -9,6 +9,21 @@ Feche a distância entre o que spec/plano/tarefas pedem e o que o código
 implementa hoje. Os artefatos são a **única fonte de intenção** (com a
 constituição como restrição de governança).
 
+## Quando usar (gatilhos)
+
+- "/convergencia"
+- "O código bate com o spec?"
+- "O que falta implementar?"
+- "Converge a implementação com o plano"
+- "Lista os gaps entre tarefas e código"
+
+## Exemplo
+
+```text
+[parcial] US1/AC2: exportação existe mas sem filtro por data
+[faltando] FR-020: nenhuma tarefa cobre "notificar por e-mail"
+```
+
 Isto **não** é ferramenta de diff: não usa git, não compara branches, não
 rastreia histórico. Avalia o estado presente do código contra os artefatos.
 

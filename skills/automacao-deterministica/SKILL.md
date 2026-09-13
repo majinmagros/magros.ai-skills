@@ -9,6 +9,21 @@ Tarefa A+B=C (entrada previsível → saída previsível) vira SCRIPT determiní
 Script roda idêntico toda vez e não gasta tokens. IA fica para o que exige
 raciocínio, criatividade e variação.
 
+## Quando usar (gatilhos)
+
+- "Automatiza essa tarefa repetitiva"
+- "Faço isso todo dia, tem como virar script?"
+- "A+B=C: entrada igual, saída igual"
+- "Postar/transcrever/converter no automático"
+- "Isso precisa de IA ou dá pra scriptar?"
+
+## Exemplo
+
+```python
+# A+B=C: transcrever vídeo todo dia → script, não agente
+baixar(url) → converter_mp3() → transcrever() → salvar_txt()
+```
+
 ## 1. Decida: automatizar ou não?
 
 | Automatize (script) | Mantenha na IA |

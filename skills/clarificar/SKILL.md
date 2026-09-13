@@ -9,6 +9,21 @@ Detecte e reduza ambiguidade na especificação/requisitos do projeto atual,
 **antes** de planejar ou implementar. As respostas voltam para o documento —
 não ficam só na conversa.
 
+## Quando usar (gatilhos)
+
+- "/clarificar"
+- "Esse spec está vago, o que falta decidir?"
+- "Requisitos incompletos antes do plano"
+- "Lista as ambiguidades do documento"
+- "Que perguntas Spectécnico faria aqui?"
+
+## Exemplo
+
+```text
+**Pergunta:** O "relatório mensal" inclui exportação em PDF? (RQ-012)
+**Por que importa:** sem isso, o escopo de entrega dobra.
+```
+
 ## 1. Localize os artefatos
 
 - Procure o documento de requisitos do projeto (spec.md, REQUIREMENTS.md,
