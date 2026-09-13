@@ -65,6 +65,10 @@ de autor — só entram no ranking com fonte oficial.
 (tier B, melhor custo), Qwen local (tier leve). Rumor/medicao de autor —
 so entra no ranking com fonte oficial.
 
+### Watchlist Batch 17g (#74 #82): DeepSeek V4 Flash 0731 (72.5% King
+Bench), stealth OX Alpha ($0/$0 OpenRouter). Medicao de autor — fonte
+oficial antes do ranking.
+
 ## Exemplo real validado (2026-08-26)
 - Fonte: `arena.ai/leaderboard` (LMArena oficial).
 - Snapshot topo: `claude-fable-5` (#1), `claude-opus-4-6-high` (#2),

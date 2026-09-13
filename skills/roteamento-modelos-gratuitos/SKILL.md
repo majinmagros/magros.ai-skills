@@ -69,6 +69,13 @@ de colocar no topo do combo.
 
 1. **Instale e rode** o 9router (npm global, `%APPDATA%\npm\node_modules\9router\` no Windows / `~/.npm-global/lib/node_modules/9router/` no Linux/Mac); endpoint em `http://127.0.0.1:20128/v1`.
 
+## OX Alpha free via OpenRouter (Batch 17g, #82)
+
+Modelo stealth $0/$0 roteavel no Claude Code CLI via OpenRouter
+(ANTHROPIC_BASE_URL + token; o desktop app forca first-party e nao
+serve). Free = rate limits diarios; valide qualidade no seu loop antes
+de operar — gratis que nao entrega e caro.
+
 ## CLI Proxy API (Batch 17f, #78)
 
 Agregador local open source: expoe contas (Anti-Gravity/Gemini/Claude

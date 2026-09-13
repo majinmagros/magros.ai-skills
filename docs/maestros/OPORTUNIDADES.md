@@ -741,3 +741,24 @@ Enriches aplicados: `hyperframes-codex-video` (motion library), `skill-creator-m
 | 79 | **Hallmark design skill** (`dVGJ3DE1MzA` - @aicodeking) | Anti-slop (Nutlope): 21 macro-estruturas nomeadas (bento, long-doc, manifesto) + 22 temas/4 gêneros; força sair do on-distribution | ✅ **NOVO** | Enrich `frontend-design-direction` (macro-structure first) |
 
 Enriches aplicados: `graphify` (GRAFT), `plain-language-response` (action-first), `roteamento-modelos-baratos` (Flash 0731), `model-migration-strategy` + `claude-md-auditor` (unhobbling), `roteamento-modelos-gratuitos` (CLI Proxy), `frontend-design-direction` (macro-structures), watchlist `llm-leaderboard-tracker`. Nenhuma skill nova.
+
+---
+
+## Batch 17g — 2026-09-13 (@nateherk: 12 analisados)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 80 | **What to Build Instead of AI Agents** (`HIRDzMtuWFk` - @nateherk) | Time de skills da Anthropic: pare de reconstruir agente por job (generalista + skills-as-apps, analogia phone/OS); scripts > re-resolver o mesmo problema | ✅ **NOVO** | Enrich `criar-skill` (skills-as-apps + script-once) |
+| 81 | **How to Actually Choose the Right AI Agent** (`6LNlCpQPYFc` - @nateherk) | Harness > modelo; lealdade ao harness/assets, nunca ao provider; skills decaem (delete tudo a cada 6 meses) | ✅ **NOVO** | **Confirma** `doctor` (revalidação radical) — sem edit |
+| 82 | **Stealth Model Makes Claude Code Free** (`_kK_4cOYF4o` - @nateherk) | OX Alpha $0/$0 via OpenRouter no CLI (desktop força first-party); harness próprio + contexto | ✅ **NOVO** | Enrich `roteamento-modelos-gratuitos` (OX Alpha) + watchlist `llm-leaderboard-tracker` |
+| 83 | **One Person Marketing Team** (`yCACmFTiCto` - @nateherk) | Marketing-in-a-box (logos, produto, GPT Image 2, Higgsfield) p/ negócio próprio | ✅ **NOVO** | **Coberto** por `marketing-campaign` + `fal-ai-media` |
+| 84 | **5 Most In Demand AI Automations** (`tgjYMym_0-c` - @nateherk) | Ranking por evidência de comprador (lead scoring c/ 50 regras Siemens); 1 projeto relevante > 30 demos | ⚠️ **Negócio** | Sem ação direta (método de ranking anotado, fino p/ skill) |
+| 85 | **AI person (vs agency)** (`zpS6JGJNaGg` - @nateherk) | Seja o "AI person" in-house (PwC: +62% premium; forward-deployed 640→5k vagas) | ⚠️ **Carreira** | **Coberto** por `roteiro-engenheiro-ia-2026` |
+| 86 | **Codex vs Claude Same App** (`WCrnS09vpfo` - @nateherk) | Duelo mesmo prompt (/goal, research→build→verify + "never stop at prototype"); faltou fase de plan | ✅ **NOVO** | Enrich `agent-eval` (duel setup + plan phase) |
+| 87 | **Codex Browser Agent** (`CB5bG4mvnS0` - @nateherk) | Browser-use: annotate cirúrgico, 85 auto-checks clicando de verdade, acha bugs e corrige | ✅ **NOVO** | Enrich `browser-qa` (Phase 5 agent-driven) |
+| 88 | **I Deleted All My Claude Skills** (`XNQBCRcwXV4` - @nateherk) | 3 regras pós-unhobbling (entrevista criador do Claude Code); skills/system a mais quebram o sistema | ✅ **NOVO** | Corrobora enriches 17f (unhobbling) + `doctor` — sem edit novo |
+| 89 | **One Person AI Business** (`LVAHYV4Xrto` - @nateherk) | AI partner (não builder): vende outcome, não feature; sem agência | ⚠️ **Negócio** | Sem ação (posicionamento, não ferramenta) |
+| 90 | **Pricing AI Automations** (`Lg5TYWPSg6M` - @nateherk) | Preço dos números do cliente ($41,6k/ano p/ 20 leads/sem); discovery antes de preço; pago em etapas (≤30 dias exposto) | ⚠️ **Negócio** | Sem ação direta (metodologia de precificação, sem skill-alvo) |
+| 91 | **Make Money with Claude (in-house)** (`vY0EzTP-7EA` - @nateherk) | Vira in-house (95% pilotos sem impacto, MIT); janela de agência fechando | ⚠️ **Negócio** | Sem ação (tendência, não ferramenta) |
+
+Enriches aplicados: `criar-skill` (skills-as-apps), `roteamento-modelos-gratuitos` (OX Alpha), `llm-leaderboard-tracker` (watchlist), `agent-eval` (duel setup), `browser-qa` (Phase 5). Confirmações: `doctor`, unhobbling 17f. Nenhuma skill nova.

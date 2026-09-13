@@ -63,3 +63,10 @@ credentials/tokens/PII before saving any screenshot.
 2. Flag WCAG 2.2 AA violations (contrast, labels, focus order)
 3. Verify keyboard navigation works end-to-end
 4. Check screen reader landmarks
+
+### Phase 5: Agent-Driven Exploration (Batch 17g, #87)
+
+Solte um agente com browser na pagina com a missao "quebre o app":
+dezenas de checks focados clicando/digitando de verdade, annotate em
+elementos especificos para mudancas cirurgicas. So em staging; em prod,
+somente leitura e sem credenciais reais.

@@ -61,4 +61,11 @@ Each agent run gets its own git worktree — no Docker required. This provides r
 
 ## Workflow
 
+### 0. Duel Setup (Batch 17g, #86)
+
+Same prompt, two harnesses: fases explicitas research → plan → build →
+verify + "do not stop at prototype, keep breaking/fixing/retesting
+until genuinely complete". Fase de plan separada evita vitoria de
+prototipo bonito inacabado. Meca custo + tempo por fase, nao so total.
+
 ### 1. Define Tasks

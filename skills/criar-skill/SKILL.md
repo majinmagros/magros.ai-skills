@@ -37,6 +37,12 @@ ou muda a cada uso, ela provavelmente não é uma skill — é conversa.
 (Teste de 3 perguntas para decidir criar uma skill: é repetitivo? é
 previsível? você faz isso todo dia? Se sim pra todas, crie.)
 
+Regra skills-as-apps (Batch 17g, #80): nao reconstrua um agente por job —
+o agente generalista ja le/escreve/chama tools; a skill e o app
+(processo + contexto + scripts + exemplos). E nunca deixe o modelo
+resolver 2x o mesmo problema tecnico — vire script dentro da skill
+(scripts/ e para o que LLM faz mal).
+
 ## 1. Processo de criação (4 etapas — evita skill "teórica")
 
 1. **Mapear o pipeline**: identifique EXATAMENTE o que a skill deve fazer, do
