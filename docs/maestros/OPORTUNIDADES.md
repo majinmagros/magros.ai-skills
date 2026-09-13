@@ -697,3 +697,21 @@ Enriches aplicados: `img2threejs` (foto-virando-objeto), `prompt-builder` + `pro
 | — | 2 KarineLago (`Rg7DlYJoRl0`, `XeOVQrJAvys`) | Dead-end: bot-check (timeout esgotado no meio) | ⛔ Dead-end | Re-tentar com cooldown |
 
 Enrich aplicado: `cloud-design-prototyping` (design-system-first). Nenhuma skill nova.
+
+---
+
+## Batch 17d — 2026-09-13 (backlog recente, parte 3: maestrosdaia 4 + fullcycle 5)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 62 | **Framework agente→skill→rotina** (`lXG3xzlHy6E` - @maestrosdaia) | Escolhe agente (funcionário IA + CLAUDE.md esqueleto) → executa fluxo simples → gera skill do fluxo → otimiza até confiança → agenda rotina 24h | ✅ **NOVO** | **Coberto** por `self-improving-skill` + `skill-creator-methodology` + `routines` — confirma o pipeline |
+| 63 | **Cloud Design quota + marca Alonda** (`wWdfyQcIPaM` - @maestrosdaia) | Cota compartilhada chat+code (fim do limite separado); 5 features construindo marca fictícia; design system (cores/logo/voz) antes de tudo | ✅ **NOVO** | Corrobora enrich 17c (design-system-first); quota compartilhada anotada p/ `subscription-tier-routing` (sem edit — decai rápido) |
+| 64 | **Agentes que se auto-otimizam** (`p8iB3CU5J1E` - @maestrosdaia) | Níveis chat→tarefa→construir agentes; agentes precisam monitoramento e correção humana contínua (ex: API da Meta cai, e aí?) | ✅ **NOVO** | **Coberto** por `self-improving-skill` + `continuous-learning-v2` |
+| 65 | **Edição de vídeo 100% IA (Fable 5)** (`iuo1p-RRPyc` - @maestrosdaia) | Fluxo raw BRAW→cor→roteiro→motion; biblioteca de motion anti-slop + imagem custom por motion; sistema construído pelo Fable 5 | ✅ **NOVO** | Enrich `hyperframes-codex-video` (motion library anti-slop) |
+| 66 | **Google ADK + Gemini free** (`V3Mtur9JuKY` - @FullCycle) | Agent Development Kit multi-linguagem (Python/TS/Go/Java), CLI+web UI, `adk run`, LiteLLM multi-provider, system prompt/persona, tools; modelos Flash grátis via AI Studio | ✅ **NOVO** | **Gap G27** `google-adk-patterns` (framework maior, 1 vídeo introdutório — materialização pendente de validação nos docs oficiais adk.dev; skill teórica sem hands-on viola `criar-skill`) |
+| 67 | **Agent skills: teste dos 3 Ss** (`HGvUc9nDJC0` - @FullCycle) | Skill = conhecimento procedural reutilizável sob demanda; teste: reutilizável? não-óbvio (modelo erra)? estável (dias/semanas)? | ✅ **NOVO** | Enrich `skill-creator-methodology` (teste 3 Ss na Fase 1) |
+| 68 | **Context window: slide vs compact** (`FCwIlzanP4Q` - @FullCycle) | Limite: slide-overwrite perde início / compact perde conteúdo; compactação intencional com prompt de relevância > auto-compact; harness vs modelo | ✅ **NOVO** | Enrich `strategic-compact` (compactação intencional) |
+| 69 | **Agentes 101** (`9_atL4yQEa0` - @FullCycle) | Agente = software com core LLM não-determinístico; papel específico; conhece ambiente (tools/MCP); adapta e improvisa vs if/else determinístico | ✅ **NOVO** | **Coberto** por `agentic-os` + `autonomous-agent-harness` (fundamentos) |
+| 70 | **RAG 101** (`aYEa5svlzC0` - @FullCycle) | Retrieval→augmented→generation; pipeline pergunta→busca→contexto+pergunta→modelo ("prova com gabarito"); evita treinar modelo próprio | ✅ **NOVO** | **Coberto** por `rag-corporativo-seguro` + `graphify` + `unified-memory` |
+
+Enriches aplicados: `hyperframes-codex-video` (motion library), `skill-creator-methodology` (3 Ss), `strategic-compact` (compactação intencional). Gap novo G27 registrado (materialização pendente). Nenhuma skill nova.
