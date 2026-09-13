@@ -5,10 +5,10 @@
   },
   "canais": {
     "@maestrosdaia": {
-      "ultimaColeta": "2026-09-08",
-      "analisados": 74,
-      "ultimoVideoId": "PPIceybiwEg",
-      "atualizadoEm": "2026-09-13T18:42:49.386Z"
+      "ultimaColeta": "2026-09-10",
+      "analisados": 75,
+      "ultimoVideoId": "NQyS0XRjTpo",
+      "atualizadoEm": "2026-09-13T20:43:07.780Z"
     },
     "@FullCycle": {
       "ultimaColeta": "2026-09-08",
@@ -33,6 +33,18 @@
       "analisados": 5,
       "ultimoVideoId": "5tSGf1DYKe0",
       "atualizadoEm": "2026-09-13T18:42:49.782Z"
+    },
+    "@IndyDevDan": {
+      "ultimaColeta": "2026-09-08",
+      "analisados": 15,
+      "ultimoVideoId": "D1BHGv4gB6c",
+      "atualizadoEm": "2026-09-13T20:43:07.578Z"
+    },
+    "@pavanadhav": {
+      "ultimaColeta": "2025-09-14",
+      "analisados": 4,
+      "ultimoVideoId": "-Pz6rEVuw9Q",
+      "atualizadoEm": "2026-09-13T20:43:07.925Z"
     }
   }
 }

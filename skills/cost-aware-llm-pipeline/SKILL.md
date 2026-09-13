@@ -74,3 +74,11 @@ fallback/retry/timeout policies. Developers stop tracking which model is
 them. Decide each routing change with the latency x quality x cost
 tradeoff written down (e.g. +5pp accuracy for +50% cost per 1M tokens is
 worth it only when errors strangle the business).
+
+## Preco por hora de agente (Batch 17a, #52)
+
+Preco/token engana entre tiers: Fable gastou $200 vs Opus $91 vs Sonnet
+$55 no mesmo bench e "perdeu" no token — mas a metrica que importa e
+preco por hora de agente inteligente. Modelos Mythos-class so se pagam
+em specs grandes e complexas; em task pequena o caro e desperdicio.
+Meca sempre na sua carga antes de orcar.

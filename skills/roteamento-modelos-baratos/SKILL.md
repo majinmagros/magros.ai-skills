@@ -50,6 +50,17 @@ volume é barato, quem decide/valida é forte. A métrica que importa é
 - Regra prática: se o custo atual do job em modelo forte é alto, divida entre
   geração barata + amostragem de verificação forte (20-30% do volume).
 
+### 5. Stack em 3 tiers + pay-twice (Batch 17a, #50 #51)
+
+- Organize modelos em 3 tiers (SOTA / workhorse / leve) num stack unico,
+  nao um modelo unico. Compare sempre com controles max (fronteira) e min
+  (local): modelo isolado sem controles nao diz nada.
+- "Modelo melhor vs melhor negocio": GLM-5.2 ganha em capacidade,
+  MiniMax-M3 ganha em preco — a pergunta e capacidade maxima ou custo.
+- Pay-twice: voce paga em dinheiro E no IP revelado nos prompts. Para
+  trabalho sensivel, o tier leve local zera a segunda conta — soberania
+  de dados entra no tradeoff junto com latencia, qualidade e custo.
+
 ## Checklist
 - [ ] Métrica definida é custo-por-tarefa, não preço/token.
 - [ ] Verificador independente do gerador.

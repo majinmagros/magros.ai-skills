@@ -61,6 +61,10 @@ Nomes citados nos vídeos, a confirmar nos snapshots: "Astra" (OpenAI),
 "Images 2.5 Flair" / "Sunburst" (imagem). Todos ainda rumor ou medição
 de autor — só entram no ranking com fonte oficial.
 
+### Watchlist Batch 17a (#51): GLM-5.2 (open weights, tier A), MiniMax-M3
+(tier B, melhor custo), Qwen local (tier leve). Rumor/medicao de autor —
+so entra no ranking com fonte oficial.
+
 ## Exemplo real validado (2026-08-26)
 - Fonte: `arena.ai/leaderboard` (LMArena oficial).
 - Snapshot topo: `claude-fable-5` (#1), `claude-opus-4-6-high` (#2),

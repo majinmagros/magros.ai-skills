@@ -36,6 +36,14 @@ Cloud pay-to-play vs local 1000x cheaper, lento/experimental mas movimento open-
 - [ ] Benchmark local vs cloud
 - [ ] Fonte primária Colibri verificada (anti-hallucination)
 
+## Tese independencia (Batch 17a, #50 #53)
+
+Nuvem = aluguel do modelo + entrega do seu IP (pay-twice); governo ou
+vendor pode cortar seu acesso (caso Fable/export-ban). Local open source
+= privacidade total, custo de eletricidade, controle e offline. Direcao:
+velocidade, custo e memoria — quando o local ficar bom o bastante, a
+vantagem da nuvem vira so conveniencia.
+
 ## Referências
 
 ## Exemplo
