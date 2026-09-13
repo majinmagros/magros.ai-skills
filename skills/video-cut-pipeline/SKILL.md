@@ -38,6 +38,13 @@ Deterministic steps run as scripts; the model only decides cuts and hooks.
 8. Review gate: human picks keep, fix, or drop per draft. Only approved
    drafts go to the final polish step.
 
+## Beat Planning (Batch 16, #48)
+
+After cutting and before any motion work, plan beats: one beat = one
+scene. Read the transcript, infer intent per section, and list each beat
+with its layout, music, and SFX. Beats drive generation; generating
+before beats exist produces unsynced graphics.
+
 ## Cost Rule
 
 - Default to local transcription (free on your own machine).

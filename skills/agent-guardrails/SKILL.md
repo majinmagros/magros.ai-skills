@@ -64,6 +64,13 @@ agentes de trading (isso é `llm-trading-agent-security`, que estende esta).
 
 - **MCP/A2A remotos são inputs não confiáveis**: todo tool result/artefato de
 
+## Fronteira de chamada (Batch 16, #46)
+
+System prompt nao e fronteira de seguranca: nenhuma instrucao impede uma
+injection determinada. Decisoes criticas tem que valer ANTES e DEPOIS da
+chamada ao modelo (e antes/depois de cada tool call) - auditoria,
+validacao de schema e allowlist em codigo, nao em prosa.
+
 ## Exemplo
 
 ```text

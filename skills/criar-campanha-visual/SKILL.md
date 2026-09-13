@@ -56,3 +56,7 @@ SKILL.md              # instruções de funcionamento
 ## Enriquecimento 2026-08-24 — instruction file de estilo visual aprovado
 
 Fonte `hC00Qdhfjww` (AI Foundations). Quando uma imagem/capa gerada for aprovada: extraia o estilo dela ("extraia este estilo") e persista em `image-styles/<nome>.md` reutilizável — próximas gerações partem do estilo congelado em vez de re-descrever do zero. Mesmo princípio do warm start do `score-loop`, aplicado a identidade visual.
+
+## Enriquecimento 2026-09-13 (Batch 16, #47) — preservação de referência
+
+Fonte `kKLX-8hZI7g` (Inteligência Mil Grau, GPT Images 2.5). Regra: **editar-com-referência vence gerar-do-zero** — parta de foto real da pasta `referencias/`, mude só o pedido, preserve o resto. Valide consistência multi-turno (re-edite 2-3x; o que não foi pedido não pode derivar) e use rascunho (sketch) como guia de composição em vez de descrever layout em palavras. Detalhes finos ainda falham (cordas, teclas, textos pequenos) — zoom antes de entregar.

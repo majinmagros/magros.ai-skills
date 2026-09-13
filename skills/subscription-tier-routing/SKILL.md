@@ -46,6 +46,7 @@ Roteamento que considera **weekly allowances por tier**, **cache hit rates**, **
 | GLM $18: browser automation, C coding, trial quota | ✅ | Z.ai pricing |
 | Banked resets: promocional, refresh 5h+weekly | ✅ | OpenAI usage settings |
 | Fast mode: ~2x créditos, respostas mais rápidas | ✅ | OpenAI/Anthropic docs |
+| Fable 5.1 esforço máximo = multi-agente caro; claim 2x rápido/metade tokens | Medicao do autor (validar) | Campelo `5tSGf1DYKe0` (Batch 16, #49) |
 
 ---
 

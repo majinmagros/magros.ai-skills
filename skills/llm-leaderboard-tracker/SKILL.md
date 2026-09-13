@@ -54,6 +54,13 @@ state/leaderboard-lmarena.json  -> [{model, score, rank, ts}]
 state/leaderboard-hf.json       -> [{model, score, rank, ts}]
 ```
 
+## Watchlist Batch 16 (2026-09-13, #45 #47 #49)
+
+Nomes citados nos vídeos, a confirmar nos snapshots: "Astra" (OpenAI),
+"Fable 5.1" / "Mythos 5.1" (Anthropic), "GPT 5.6 Sol" / "Terra",
+"Images 2.5 Flair" / "Sunburst" (imagem). Todos ainda rumor ou medição
+de autor — só entram no ranking com fonte oficial.
+
 ## Exemplo real validado (2026-08-26)
 - Fonte: `arena.ai/leaderboard` (LMArena oficial).
 - Snapshot topo: `claude-fable-5` (#1), `claude-opus-4-6-high` (#2),

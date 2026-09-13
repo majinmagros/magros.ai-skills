@@ -74,3 +74,10 @@ Pipeline modular estilo "elemento por elemento" para criar cenas 3D complexas bl
     { "id": "portal", "type": "ring", "material": "ShaderMaterial", "uniforms": {...}, "position": [0,2,0] }
   ],
   "camera": { "position": [10,10,10], "target": [0,0,0], "fov": 60 },
+```
+
+## Fraqueza conhecida (Batch 16, #49)
+
+Mesmo em outputs premium, o "simples" falha: carrossel infinito glitcha
+(gap vazio no loop). Sempre renderize e confira carrosséis, loops e
+empty states — cena 3D impressionante não garante que o básico funcione.

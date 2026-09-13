@@ -48,6 +48,16 @@ metadata:
 - **Rate limits (14/set)**: boost temporário de 50% expira 13/set; aumento permanente de 25% sobre o baseline = **-17% vs o que você tem hoje** (admitido pela Anthropic). Limites 5h dobrados (maio) permanecem. Auto-mode classifier calls não contam mais no uso; auto-continue no reset reduz babysitting.
 - Regra de roteamento: Opus 5 1M não dispensa curadoria — 1M cheio de ruído perde para 200K limpo (retrieval MRCR v2 cai com volume).
 
+## Enriquecimento 2026-09-13 (Batch 16, #49) — Fable 5.1 na prática
+
+- Teste prático (Campelo `5tSGf1DYKe0`): 1 prompt gera landing Awwwards
+  (Three.js + partículas + scroll morph). Esforço máximo = multi-agente
+  e "gasta fácil" muitos tokens — não é default para toda task.
+- Claim do vídeo (2x mais rápido com metade dos tokens no esforço máximo)
+  é medição do autor: valide na sua task antes de orçar por ele.
+- Regra: esforço máximo só quando a task exige; no resto, o esforço
+  padrão entrega igual por menos tokens.
+
 ## Referências Oficiais
 
 - [Luciana Papini Video](https://www.youtube.com/watch?v=Bezlzmti6_U)

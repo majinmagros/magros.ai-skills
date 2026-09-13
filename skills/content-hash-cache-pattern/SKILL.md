@@ -63,3 +63,12 @@ Each cache entry is stored as `{hash}.json` — O(1) lookup by hash, no index fi
 ```python
 import json
 from typing import Any
+```
+
+## Fingerprint Invalidation for LLM Caches (Batch 16, #46)
+
+For LLM output caches the key is a fingerprint of prompt + rules + model
++ context + result, not the user question alone. If ANY component
+changes, the fingerprint misses and the entry regenerates. Serving a
+stale hit is the worst failure: the model answers wrong with total
+confidence. Never cache the question text by itself.

@@ -34,3 +34,11 @@ export NINEROUTER_KEY="sk-..."
 ## Error Handling
 - **401**: Check/refresh `NINEROUTER_KEY`.
 - **503 All accounts unavailable**: Quota exhausted across provider chain; rotate combo or update primary provider model.
+
+## Intent-Based Routing (Batch 16, #46)
+
+Expose capability names ("text-summarizer") instead of model names. The
+gateway maps capability -> contracted model + fallback/retry/timeout, so
+app code never names a model and routing changes need no redeploy.
+Decide each change with the latency x quality x cost tradeoff written
+down; models are commodities, the capability contract is the API.

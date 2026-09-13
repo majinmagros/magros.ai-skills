@@ -63,3 +63,14 @@ class CostTracker:
 
     def add(self, record: CostRecord) -> "CostTracker":
         """Return new tracker with added record (never mutates self)."""
+```
+
+## Intent-Based Routing (Batch 16, #46)
+
+Route by capability name, not model name. The app asks for
+"text-summarizer"; the gateway maps it to the contracted model with
+fallback/retry/timeout policies. Developers stop tracking which model is
+"best this week" - models are commodities and the contract owner swaps
+them. Decide each routing change with the latency x quality x cost
+tradeoff written down (e.g. +5pp accuracy for +50% cost per 1M tokens is
+worth it only when errors strangle the business).

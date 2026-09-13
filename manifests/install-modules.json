@@ -782,7 +782,8 @@
         "skills/dnb-production",
         "skills/voice-cloning-local",
         "skills/blender-mcp-ops",
-        "skills/video-cut-pipeline"
+        "skills/video-cut-pipeline",
+        "skills/hyperframes-codex-video"
       ],
       "targets": [
         "claude",

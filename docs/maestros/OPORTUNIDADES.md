@@ -1,6 +1,6 @@
 ﻿# Oportunidades do YouTube — Relatório de Análise
 
-Data: 2026-09-03 (atualizado 2026-09-09 — Batch 15: +3 transcrições novas analisadas: AI Revolution PT, Claude Oficial, AI Code King)  
+Data: 2026-09-03 (atualizado 2026-09-13 — Batch 16: +5 transcrições novas analisadas: Maestros da IA, Full Cycle, Inteligência Mil Grau, Nate Herk, Gustavo Campelo)  
 Canais analisados: IndyDevDan, ColeMedin, SimonScrapes, AI Foundations, AI Jason, Maestros da IA, Attekita Dev, Sujeito Programador, AI Revolution PT, Inteligência Mil Grau, AI Code King, Claude Oficial, Nate Herk, Anwar Hermuche, **Gustavo Campelo (@gucampelo)**, **Joy Dev Studio (@joydevstudio)**, **Luciana Papini (@LucianaPapini)**, **Karine Lago (@KarineLago)**, **Pavan Adhav (@pavanadhav)**, **Ratos de IA (@ratosdeia)**  
 Transcrições baixadas e analisadas: **201 vídeos** (marcados em `ANALISADOS.json` de cada canal + state centralizado `state/yt-control.json`)
 
@@ -598,3 +598,52 @@ Enriches laterais aplicados: `prompt-builder` + `prompt-optimizer` (bench SoT/To
 | `grokbot-team-ops` | Batch 9 #97 | agentic-patterns | ✅ Criada |
 | `ads-creative-factory` | #158 | business-content | ✅ Criada |
 | `ads-reporter-multi` | #158 | business-content | ✅ Criada |
+
+---
+
+## Batch 16 — 2026-09-13 (5 vídeos via `diff-all --since-last`, todos baixados com retry+fallback apesar de 429 no endpoint pt-PT)
+
+> **Nota coleta 2026-09-13**: `sync-check` EM DIA (master == origin/master, worktree limpa). `diff-all --since-last` → 5 `sem_transcricao`, 0 `transcritos_nao_analisados`. Download por canal com `--canal "HANDLE"` (aspas obrigatórias no PowerShell — sem aspas o `@handle` é engolido e o id vira "canal"). 429 forte no endpoint pt-PT contornado via fallback en/pt. Arquivos: `PPIceybiwEg.{en,pt}`, `amvOfi86IC8.{en,pt}`, `kKLX-8hZI7g.{en,pt,pt-PT}`, `o3IEkKXXXvo.{en}` (só en — pt indisponível), `5tSGf1DYKe0.{en,pt,pt-PT}`.
+
+### Novos Vídeos Analisados
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 45 | **OpenAI leaving Cursor: understand the war with Elon Musk** (`PPIceybiwEg` - @maestrosdaia) | Linha do tempo OpenAI×Musk: fundação sem fins lucrativos, ruptura 2017 (CEO/controle/Tesla recusados), saída + corte de funding (~$40M), braço for-profit + Microsoft, processo 2024 (quebra de contrato, retirado + refeito no federal), oferta ~$100B recusada, xAI/Grok concorrente, SpaceX compra xAI e depois Anysphere (Cursor), OpenAI remove modelos do Cursor + anuncia "Astra" (proposta: superar Fable) | ⚠️ **Notícia/Análise** | Não actionable como skill; corrobora watchlist `llm-leaderboard-tracker` (modelos "Astra" OpenAI e "Fable 5.1" Anthropic citados como rivais diretos) |
+| 46 | **Software Architecture Has Changed with AI: Are You Ready?** (`amvOfi86IC8` - @FullCycle) | Arquitetura na era IA: SDK é só chamada — o que importa é o entorno. Agentes além do "markdown com prompt"; MCP stateless + A2A; design patterns p/ IA; design docs (RFC/ADR/produto/postmortem) como contexto (doc errado → decisão errada da IA); **AI Gateway** (roteamento por intenção/capacidade, fallback/retry/timeout, custo+latência, auth, budget, rate limit, cache); segurança nova (prompt injection, jailbreak, OWASP Top 10 LLM+agentic; **system prompt não é fronteira de segurança** — auditorias antes/depois da chamada); **evals** (probabilístico vs determinístico exact/in-order de tool-calls); tradeoff latência×qualidade×custo com conta explícita; mensageria com latência de segundos; **cache com fingerprint** (prompt+regras+modelo+contexto→hash; qualquer mudança invalida); observabilidade (PII em logs, traces de tool-calls); clouds e vector DBs reaprendidos | ✅ **NOVO** | **Coberto com enriquecimento**: `9router-gateway` + `cost-aware-llm-pipeline` (roteamento por intenção + fingerprint), `eval-harness` (evals exact/in-order determinísticos), `agent-guardrails` (auditoria antes/depois, system-prompt-não-é-boundary), `content-hash-cache-pattern` (invalidação por fingerprint), `a2a-interoperability` + `mcp-server-patterns` + `architecture-decision-records` (já cobrem protocolos e docs) |
+| 47 | **NEW ChatGPT Images 2.5 Released** (`kKLX-8hZI7g` - @inteligenciamilgrau) | GPT Images 2.5 (variantes Flair/Sunburst na API): preservação de referência (não mexe no que não foi pedido), consistência multi-turno, ~50% mais rápido, aderência ao prompt, sketch-to-image + templates/trending, níveis de esforço (light→ultra só refinam a descrição, não difusão/resolução); testes práticos (restauração de foto, troca de roupa, upscale, junta 3 fotos numa festa, arruma cama bagunçada); limites persistem (teclas sanfona, cordas viola = violão) | ✅ **NOVO** | **Enriquecimento leve**: `ai-media-generator` + `criar-campanha-visual` (referência-preservada + consistência multi-turno + sketch-first como técnica padrão); cross-ref `pipeline-video-agente` (consistência via referência); modelo novo → watchlist `llm-leaderboard-tracker`. Sem skill nova (notícia de modelo, decai rápido) |
+| 48 | **GPT-6 Astra Finally Solves AI Video Editing (full guide)** (`o3IEkKXXXvo` - @nateherk) | Edição de vídeo com Codex + **Hyperframes** (repo OSS: HTML animado → vídeo): loop **transcrever (Whisper/11Labs) → cortar (erros/silêncios) → planejar beats → gerar HTML/motion → verificar (screenshots, sync, bounds) em loop**; AGENTS.md como regra viva (ex: "sempre transcreva via 11Labs"); prompt gigante 1ª vez → "turn that into a skill" → itera a skill (self-improving); `/goal` loop; Hyperframes Studio (localhost, tweak manual sem re-prompt); skills distribuídas em student-kit grátis; shorts com método Karpathy (spec → verifier → environment) e Nvidia API grátis (80+ modelos OpenAI-compat) | ✅ **NOVO** | **Gap real G26**: `hyperframes-codex-video` (paralelo a `remotion-video-creation`, outro motor). Enriches: `video-cut-pipeline` (planejamento de beats pós-corte), `roteamento-modelos-gratuitos` (Nvidia free tier OpenAI-compat), `self-improving-skill` + `skill-creator-methodology` (confirma tese prompt→skill→itera), `intent-driven-development` + `outcome-rubric-verification` (confirma spec→verifier→environment do Karpathy) |
+| 49 | **I Tested the New Fable 5.1 in Practice** (`5tSGf1DYKe0` - @gucampelo) | Teste prático Fable 5.1 (1 prompt → landing Awwwards: Three.js partículas com órbita no mouse, botões magnéticos, colagem horizontal, morph 3D no scroll, gráficos; esforço máximo = multi-agente, "gasta fácil" muitos tokens) + deploy Hostinger via file-manager (HTML estático → public_html, domínio temporário, <1min) + check responsivo (scroll horizontal vira vertical no mobile); bug conhecido: carrossel infinito glitchado | ✅ **NOVO** | **Coberto**: `threejs-scene-composer` + `threejs-deploy-pipeline` + `threejs-responsive-patterns` (reforça os 3). Enriches: `claude-model-router` + `subscription-tier-routing` (Fable 5.1: esforço máximo = custo alto, validar claim 2x rápido/metade dos tokens), `threejs-scene-composer` (nota de fraqueza: carrossel infinito simples ainda glitcha — testar sempre) |
+
+### 🔴 NOVOS Gaps de Alta Prioridade (Não Cobertos)
+
+| Oportunidade | Descrição | Skill(s) Relacionada(s) | Ação Sugerida |
+|---|---|---|---|
+| **hyperframes-codex-video (G26)** | Edição de vídeo via Codex + Hyperframes: setup repo + deps, transcription provider (11Labs key em .env + regra no AGENTS.md), loop transcribe→cut→beats→HTML→verify-screenshots, Hyperframes Studio p/ tweak manual, prompt-gigante→skill→itera, skills de motion reutilizáveis (YouTube 16:9, reels 9:16, ads) | `remotion-video-creation` (motor paralelo), `video-cut-pipeline`, `vox-style-video`, `goal`, `self-improving-skill` | Criar skill `hyperframes-codex-video` (validar repo oficial + licença antes, conforme passo 4 da skill) |
+
+### 🟡 Enriquecimentos laterais do Batch 16 (sem skill nova)
+
+| Alvo | Origem | Conteúdo |
+|---|---|---|
+| `9router-gateway` + `cost-aware-llm-pipeline` | #46 | Roteamento por intenção/capacidade (nome customizado, não nome de modelo) + invalidação de cache por fingerprint |
+| `eval-harness` | #46 | Evals determinísticos exact/in-order de sequência de tool-calls p/ agentes |
+| `agent-guardrails` | #46 | System prompt não é fronteira de segurança; auditorias antes/depois da chamada e da tool-call |
+| `content-hash-cache-pattern` | #46 | Fingerprint prompt+regras+modelo+contexto→hash; resposta errada-com-certeza como failure mode |
+| `ai-media-generator` + `criar-campanha-visual` | #47 | Referência-preservada + consistência multi-turno + sketch-first; limites finos persistem (contar detalhes) |
+| `video-cut-pipeline` | #48 | Planejamento de beats pós-corte (cena = beat, música/SFX sincronizados no plano) |
+| `roteamento-modelos-gratuitos` | #48 | Nvidia free tier: 80+ modelos, API OpenAI-compat, sem custo p/ experimentos |
+| `claude-model-router` + `subscription-tier-routing` | #49 | Fable 5.1: esforço máximo = multi-agente caro; claim 2x rápido/metade dos tokens a validar na prática |
+| `threejs-scene-composer` | #49 | Fraqueza conhecida: carrossel infinito simples glitcha mesmo em output premium — sempre testar |
+| `llm-leaderboard-tracker` (watchlist) | #45 #47 #49 | "Astra" (OpenAI), "Fable 5.1"/"Mythos 5.1" (Anthropic), "GPT 5.6 Sol/Terra", "Images 2.5 Flair/Sunburst" |
+
+---
+
+## Materialização Batch 16 (2026-09-13) — gap G26 materializado + 13 enriches
+
+> Execução do passo 5 da skill sobre o Batch 16: 1 skill nova (frontmatter validado, corpo ≤200 linhas, ASCII, sem paths pessoais, 0 hits no check-unicode-safety), 13 skills existentes enriquecidas, `manifests/install-modules.json` atualizado (módulo `media-generation`), `docs/data/skills.json` regenerado via `scripts/build-catalog.js` (459 → **460 skills**). Validadores: `validate-skills` OK (460 dirs); `validate-no-personal-paths` OK; `validate-install-manifests` e `check-unicode-safety` mantêm SOMENTE as falhas pré-existentes documentadas no Batch 14 (`skills/ck` ausente + ~28 skills sem módulo; emojis repo-wide) — nenhuma falha nova introduzida. Repos validados via busca (não adivinhados): framework https://github.com/hyperframes/hyperframes (org @hyperframes, site declara Apache 2.0 — confirmar LICENSE antes de redistribuir) + kit https://github.com/nateherkai/hyperframes-student-kit (14 skills, licença própria — checar antes de reusar).
+
+| Skill nova | Gap | Módulo | Status |
+|---|---|---|---|
+| `hyperframes-codex-video` | G26 (#48) | media-generation | Criada (setup doctor+AGENTS.md, loop transcribe→cut→beats→HTML→verify, Studio tweak, skill-ify) |
+
+Enriches aplicados: `9router-gateway` + `cost-aware-llm-pipeline` (roteamento por intenção), `eval-harness` (trace grader exact/in-order), `agent-guardrails` (fronteira de chamada), `content-hash-cache-pattern` (fingerprint), `ai-media-generator` + `criar-campanha-visual` (preservação de referência), `video-cut-pipeline` (beat planning), `roteamento-modelos-gratuitos` (Nvidia free tier), `claude-model-router` + `subscription-tier-routing` (Fable 5.1 esforço/custo), `threejs-scene-composer` (fraqueza carrossel), `llm-leaderboard-tracker` (watchlist Astra/Fable/Images 2.5).

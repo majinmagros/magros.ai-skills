@@ -60,6 +60,11 @@ automatizar tarefa determinística (isso é `automacao-deterministica`).
 | `qd/lite` | 403 embutido (limite de agente) | ~2026-08-27 | erro invisível, manter por último |
 | OpenCode free / outras contas | variável | variável | rotacione contas para estender a quota diária |
 
+Nota Batch 16 (#48): Nvidia oferece API gratuita com 80+ modelos via
+endpoint OpenAI-compatível — boa para experimentos sem custo de tokens.
+Como todo free tier, confirme quota e modelos atuais no presente antes
+de colocar no topo do combo.
+
 ## Passo a passo (setup + manutenção)
 
 1. **Instale e rode** o 9router (npm global, `%APPDATA%\npm\node_modules\9router\` no Windows / `~/.npm-global/lib/node_modules/9router/` no Linux/Mac); endpoint em `http://127.0.0.1:20128/v1`.

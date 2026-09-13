@@ -62,3 +62,11 @@ grep -q "export function handleAuth" src/auth.ts && echo "PASS" || echo "FAIL"
 
 # Check if tests pass
 npm test -- --testPathPattern="auth" && echo "PASS" || echo "FAIL"
+```
+
+### 2. Agent Trace Grader (Batch 16, #46)
+For agents, grade the tool-call trace deterministically, not just output:
+- exact: the agent must call tools A, B, C (any order).
+- in-order: the agent must call A then B then C.
+Log the trace on every prompt change and re-run: a "be nicer" tweak that
+breaks scheduling is a regression, not an improvement.
