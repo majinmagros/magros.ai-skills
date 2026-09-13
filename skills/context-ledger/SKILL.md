@@ -9,7 +9,7 @@ metadata:
 
 > Baseado no `okjpg/agent-context-kit` v0.1.0 (MIT) — camada privada local-first Hermes-first que o vídeo `kbR8goTbJS0` apresenta como as 3 camadas. Implementação validada no repo oficial — não reinvente, use o kit.
 
-## 1. Quando usar
+## Quando usar
 
 - Você está no centro cercado de 500 WhatsApps/dia + 30 e-mails + 10 compromissos + Drive + contratos + GitHub + transcrições e precisa parar de juntar peças na mão para cada prompt.
 - Quer empresa agêntica: humanos e agentes compartilham o **mesmo segundo cérebro** (ninguém leva conhecimento ao sair).

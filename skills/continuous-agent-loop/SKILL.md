@@ -9,6 +9,13 @@ metadata:
 
 This is the v1.8+ canonical loop skill name. It supersedes `autonomous-loops` while keeping compatibility for one release.
 
+## Quando usar
+
+- "roda esse pipeline em loop", "loop contínuo com quality gate"
+- Pipeline sequencial/RFC/paralelo que precisa de gates, evals e recovery
+- Loop com churn sem progresso ou custo derrapando (ver Failure Modes)
+- Não use para: execução única (sem loop); DAG multi-agente com RFC (isso é ralphinho-rfc-pipeline)
+
 ## Loop Selection Flow
 
 ```text

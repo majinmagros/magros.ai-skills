@@ -9,6 +9,13 @@ Gera campanha visual (imagens/site/vídeo) seguindo a identidade da marca,
 escolhendo o fornecedor mais barato e registrando o histórico. Substitui
 assinaturas de plataforma por pagamento por uso, com POSSE dos arquivos.
 
+## Quando usar
+
+- "gera campanha pra marca", "anúncios com orçamento de $X"
+- Imagens/vídeo com identidade da marca (pasta referencias/) e modelo mais barato
+- Registrar histórico p/ regenerar depois sem depender da plataforma
+- Não use para: só texto/copy sem geração visual (isso é marketing-campaign)
+
 ## 1. Estrutura da skill/do repositório
 
 ```

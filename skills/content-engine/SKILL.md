@@ -63,3 +63,11 @@ Delete and rewrite any of these:
 - fake engagement padding that was not present in the source material
 
 ## Platform Adaptation Rules
+
+## Exemplo
+
+```text
+Fonte: 1 artigo + demo gravada → X thread (1 claim/post) + LinkedIn (mesma tese, tom próprio) + roteiro short
+Voz via brand-voice (VOICE PROFILE reutilizado, sem re-derivar)
+Corte: "game-changer" e pergunta-caça-engajamento no final — banidos
+```

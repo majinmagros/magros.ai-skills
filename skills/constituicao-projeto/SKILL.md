@@ -11,6 +11,13 @@ implementar) leem e respeitam. Arquivo padrão: `.specify/memory/constitution.md
 ou `docs/constituicao.md` (use o que já existir no projeto; sem preferência,
 crie `docs/constituicao.md`).
 
+## Quando usar
+
+- "/constituicao-projeto", "cria a constituição", "princípios inegociáveis"
+- Projeto sem regras de governança escritas; trabalho futuro precisa de guardrails
+- Emendar constituição existente (versionamento semântico + Sync Impact Report)
+- Não use para: implementar features (só escreve a constituição + Próximas Ações)
+
 ## Scope Guard
 
 O trabalho desta skill limita-se à própria constituição. Templates e fases

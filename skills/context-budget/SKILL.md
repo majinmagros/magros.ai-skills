@@ -63,3 +63,11 @@ Identify the following problem patterns:
 
 - **Bloated agent descriptions** — description >30 words in frontmatter loads into every Task tool invocation
 - **Heavy agents** — files >200 lines inflate Task tool context on every spawn
+
+## Exemplo
+
+```text
+Sintoma: sessão lenta após instalar 12 skills + 3 MCPs
+Inventário: skills 45k tokens, MCPs 18k (1 server com 30 tools), CLAUDE.md 9k
+Ação: 4 skills p/ on-demand, remove server que embrulha `gh` (CLI basta) → -30k
+```
