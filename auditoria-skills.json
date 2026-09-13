@@ -1,65 +1,5 @@
 [
   {
-    "name": "agent-harness-construction",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "agentic-engineering",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ai-first-engineering",
-    "score": 86,
-    "lines": 53,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "analise-concorrentes",
-    "score": 86,
-    "lines": 43,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "anti-hallucination",
-    "score": 86,
-    "lines": 52,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "auditar-skills",
-    "score": 86,
-    "lines": 53,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "auditoria-artefatos",
     "score": 86,
     "lines": 65,
@@ -1061,7 +1001,7 @@
   {
     "name": "hipaa-compliance",
     "score": 93,
-    "lines": 65,
+    "lines": 71,
     "reasons": [
       "sem exemplos"
     ],
@@ -1797,6 +1737,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "agent-harness-construction",
+    "score": 100,
+    "lines": 86,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "agent-introspection-debugging",
     "score": 100,
     "lines": 65,
@@ -1834,6 +1781,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "agentic-engineering",
+    "score": 100,
+    "lines": 84,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "agentic-os",
     "score": 100,
     "lines": 59,
@@ -1847,6 +1801,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ai-first-engineering",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -1873,9 +1834,23 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "analise-concorrentes",
+    "score": 100,
+    "lines": 59,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "android-clean-architecture",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "anti-hallucination",
+    "score": 100,
+    "lines": 67,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1890,6 +1865,13 @@
     "name": "architecture-decision-records",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "auditar-skills",
+    "score": 100,
+    "lines": 67,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2277,7 +2259,7 @@
   {
     "name": "defi-amm-security",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2580,28 +2562,28 @@
   {
     "name": "healthcare-cdss-patterns",
     "score": 100,
-    "lines": 50,
+    "lines": 56,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "healthcare-emr-patterns",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "healthcare-eval-harness",
     "score": 100,
-    "lines": 50,
+    "lines": 55,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "healthcare-phi-compliance",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2673,7 +2655,7 @@
   {
     "name": "img2threejs",
     "score": 100,
-    "lines": 65,
+    "lines": 66,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2810,7 +2792,7 @@
   {
     "name": "laravel-security",
     "score": 100,
-    "lines": 62,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2845,7 +2827,7 @@
   {
     "name": "llm-trading-agent-security",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3334,7 +3316,7 @@
   {
     "name": "security-bounty-hunter",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3348,7 +3330,7 @@
   {
     "name": "security-scan",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3427,7 +3409,7 @@
   {
     "name": "springboot-security",
     "score": 100,
-    "lines": 57,
+    "lines": 64,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3564,7 +3546,7 @@
   {
     "name": "threejs-scene-composer",
     "score": 100,
-    "lines": 65,
+    "lines": 76,
     "reasons": [
       "desc longa"
     ],
@@ -3652,7 +3634,7 @@
   {
     "name": "vibe-security-scanner",
     "score": 100,
-    "lines": 48,
+    "lines": 54,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

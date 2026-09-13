@@ -8,6 +8,20 @@ description: Use when auditing or cleaning up the skill collection — scoring c
 Dá nota 0–100 por clareza/qualidade para cada skill instalada e aponta o que
 corrigir primeiro. Baseado na auditoria de skills via workflow paralelo.
 
+## Quando usar (gatilhos)
+
+- "Audita as skills do repo"
+- "Dá nota pras skills instaladas"
+- "Quais skills estão fracas/duplicadas?"
+- "Gera o scorecard de clareza"
+- "O que corrigir primeiro nas skills?"
+
+## Exemplo
+
+```bash
+node scripts/audit-gen.js  # re-gera auditoria-skills.md + .json
+```
+
 ## 1. Locais a varrer
 
 - **Global do usuário**: `~/.config/opencode/skills/` (Windows: `%USERPROFILE%\.config\opencode\skills\`).

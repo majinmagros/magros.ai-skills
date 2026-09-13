@@ -9,6 +9,22 @@ Levanta o que os concorrentes do nicho estão rodando AGORA (anúncios, ofertas,
 funis, hooks, credibilidade) e vira relatório acionável. Não é opinião:
 é leitura de dados públicos.
 
+## Quando usar (gatilhos)
+
+- "Analisa o que os concorrentes estão rodando"
+- "O que o nicho X está anunciando agora?"
+- "Quero benchmark de ofertas do mercado"
+- "Extrai os hooks dos anúncios do concorrente Y"
+- "Relatório da Ads Library + landing pages"
+
+## Exemplo
+
+Uma linha por achado, sempre com fonte:
+
+```
+Concorrente: X | Formato: UGC 9:16 | Hook: "pare de..." | Oferta: tripwire R$27 | Fonte: <link Ads Library>
+```
+
 ## 1. Fontes primárias
 
 - **Meta Ads Library** (facebook.com/ads/library) — anúncios ativos por

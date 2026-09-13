@@ -9,6 +9,25 @@ metadata:
 
 Use this skill when designing process, reviews, and architecture for teams shipping with AI-assisted code generation.
 
+## When to Use
+
+- "Our team now ships mostly AI-generated code"
+- "Reviews are drowning in style nits"
+- "Define acceptance criteria for agent-built features"
+- "Make this codebase more agent-friendly"
+- "Hiring rubric for AI-first engineers"
+
+## Example
+
+Acceptance criteria before any agent implementation:
+
+```markdown
+Done when:
+- [ ] regression suite green on touched domains
+- [ ] edge cases asserted explicitly
+- [ ] rollout plan reviewed
+```
+
 ## Process Shifts
 
 1. Planning quality matters more than typing speed.

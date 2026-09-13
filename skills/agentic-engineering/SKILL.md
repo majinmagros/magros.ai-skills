@@ -9,6 +9,25 @@ metadata:
 
 Use this skill for engineering workflows where AI agents perform most implementation work and humans enforce quality and risk controls.
 
+## When to Use
+
+- "Run this feature with agents, I review at gates"
+- "Break this epic into agent-sized units"
+- "Which model tier should handle this task?"
+- "Set up eval-first loop for this migration"
+- "AI-generated PRs keep missing edge cases"
+
+## Example
+
+Every unit is a verifiable contract before execution:
+
+```yaml
+unit: add-rate-limit-middleware
+done_when: 429 + Retry-After on abuse test
+risk: blocks legit burst traffic
+model: sonnet
+```
+
 ## Operating Principles
 
 1. Define completion criteria before execution.

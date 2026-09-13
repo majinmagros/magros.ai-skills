@@ -4,13 +4,13 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 96.5/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 96.7/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
 - **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
-- **Com progressive disclosure (references/scripts):** 196 / 459 (42.7%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:183
+- **Com progressive disclosure (references/scripts):** 213 / 459 (46.4%) — 85% sao monolitos
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:177
 - **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
@@ -21,7 +21,7 @@
 | Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
 | Monolitos >200 linhas | 0 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
 | Mega-monolitos >500 linhas | 0 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
-| Sem progressive disclosure | 263 sem references/scripts | Tudo no SKILL.md | Criar references/ |
+| Sem progressive disclosure | 246 sem references/scripts | Tudo no SKILL.md | Criar references/ |
 | Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
 | Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
 
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **86** | 65 | `agent-harness-construction` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 2 | **86** | 65 | `agentic-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 3 | **86** | 53 | `ai-first-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 4 | **86** | 43 | `analise-concorrentes` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 5 | **86** | 52 | `anti-hallucination` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 6 | **86** | 53 | `auditar-skills` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 7 | **86** | 65 | `auditoria-artefatos` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 8 | **86** | 45 | `automacao-deterministica` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 9 | **86** | 65 | `checklist-requisitos` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 10 | **86** | 31 | `clareza` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 11 | **86** | 65 | `clarificar` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 12 | **86** | 65 | `convergencia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 13 | **86** | 31 | `conversa` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 14 | **86** | 34 | `coordenacao` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 15 | **86** | 56 | `copyright-compliance-tracking` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 16 | **86** | 65 | `criar-skill` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 17 | **86** | 40 | `criatividade` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 18 | **86** | 65 | `curriculo-ats-optimizer` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 19 | **86** | 45 | `encontrar-skill` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 20 | **86** | 52 | `enterprise-agent-ops` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 21 | **86** | 56 | `geopolitica-regulacao-ia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 22 | **86** | 40 | `goal` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 23 | **86** | 65 | `graph-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 24 | **86** | 50 | `graphify` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 25 | **86** | 40 | `grilling` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 26 | **86** | 51 | `humanizar-texto` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 27 | **86** | 65 | `ito-data-atlas-agent` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 28 | **86** | 65 | `ito-trade-planner` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
-| 29 | **86** | 57 | `manga-generator` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
-| 30 | **86** | 35 | `nanoclaw-repl` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 1 | **86** | 65 | `auditoria-artefatos` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 2 | **86** | 45 | `automacao-deterministica` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 3 | **86** | 65 | `checklist-requisitos` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 4 | **86** | 31 | `clareza` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 5 | **86** | 65 | `clarificar` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 6 | **86** | 65 | `convergencia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 7 | **86** | 31 | `conversa` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 8 | **86** | 34 | `coordenacao` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 9 | **86** | 56 | `copyright-compliance-tracking` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 10 | **86** | 65 | `criar-skill` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 11 | **86** | 40 | `criatividade` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 12 | **86** | 65 | `curriculo-ats-optimizer` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 13 | **86** | 45 | `encontrar-skill` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 14 | **86** | 52 | `enterprise-agent-ops` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 15 | **86** | 56 | `geopolitica-regulacao-ia` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 16 | **86** | 40 | `goal` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 17 | **86** | 65 | `graph-engineering` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 18 | **86** | 50 | `graphify` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 19 | **86** | 40 | `grilling` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 20 | **86** | 51 | `humanizar-texto` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 21 | **86** | 65 | `ito-data-atlas-agent` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 22 | **86** | 65 | `ito-trade-planner` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 23 | **86** | 57 | `manga-generator` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 24 | **86** | 35 | `nanoclaw-repl` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 25 | **86** | 51 | `pesquisa-social` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 26 | **86** | 50 | `plan` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar; sem exemplos |
+| 27 | **86** | 62 | `prediction-market-risk-review` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 28 | **86** | 65 | `prompt-builder` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 29 | **86** | 65 | `ralphinho-rfc-pipeline` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
+| 30 | **86** | 65 | `roteiro-engenheiro-ia-2026` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar; sem exemplos |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -71,16 +71,16 @@
 | 3 | 100 | 50 | `agent-architecture-audit` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 | 4 | 100 | 65 | `agent-browser` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 | 5 | 100 | 65 | `agent-eval` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 6 | 100 | 65 | `agent-introspection-debugging` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 7 | 100 | 49 | `agent-payment-x402` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 8 | 100 | 65 | `agent-self-evaluation` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 9 | 100 | 48 | `agent-sort` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 10 | 100 | 65 | `agent-swarm-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 11 | 100 | 59 | `agentic-os` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 12 | 100 | 65 | `agnostic-repo-mirror` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 13 | 100 | 65 | `ai-governance-monitor` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 14 | 100 | 61 | `ai-regression-testing` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 15 | 100 | 65 | `ai-tutor-system` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 6 | 100 | 86 | `agent-harness-construction` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 7 | 100 | 65 | `agent-introspection-debugging` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 8 | 100 | 49 | `agent-payment-x402` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 9 | 100 | 65 | `agent-self-evaluation` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 10 | 100 | 48 | `agent-sort` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 11 | 100 | 65 | `agent-swarm-ops` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 12 | 100 | 84 | `agentic-engineering` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 13 | 100 | 59 | `agentic-os` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 14 | 100 | 65 | `agnostic-repo-mirror` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 15 | 100 | 72 | `ai-first-engineering` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 
 ## Clusters de Overlap — Analise de Deduplicacao
 
@@ -111,7 +111,7 @@
 Amostra:  ...
 
 ### Faixa 80-99 & 100 (Boa/Excelente - 459 skills)
-Amostra 100pts: `9router-resilient-fallback`, `accessibility`, `agent-architecture-audit`, `agent-browser`, `agent-eval`, `agent-introspection-debugging`, `agent-payment-x402`, `agent-self-evaluation`, `agent-sort`, `agent-swarm-ops`, `agentic-os`, `agnostic-repo-mirror`, `ai-governance-monitor`, `ai-regression-testing`, `ai-tutor-system` ... (276 com 100pts)
+Amostra 100pts: `9router-resilient-fallback`, `accessibility`, `agent-architecture-audit`, `agent-browser`, `agent-eval`, `agent-harness-construction`, `agent-introspection-debugging`, `agent-payment-x402`, `agent-self-evaluation`, `agent-sort`, `agent-swarm-ops`, `agentic-engineering`, `agentic-os`, `agnostic-repo-mirror`, `ai-first-engineering` ... (282 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

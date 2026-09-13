@@ -9,6 +9,27 @@ metadata:
 
 Use this skill when you are improving how an agent plans, calls tools, recovers from errors, and converges on completion.
 
+## When to Use
+
+- "Redesign our agent's tool definitions"
+- "Completion rate dropped after adding new tools"
+- "Agent responses are bloated and hard to parse"
+- "Add retry/stop rules to the agent loop"
+- "Split one catch-all tool into safer micro-tools"
+
+## Example
+
+Every tool response follows the observation envelope:
+
+```json
+{
+  "status": "success",
+  "summary": "Migrated 3 tables",
+  "next_actions": ["run backfill", "verify row counts"],
+  "artifacts": ["db/migrations/004.sql"]
+}
+```
+
 ## Core Model
 
 Agent output quality is constrained by:

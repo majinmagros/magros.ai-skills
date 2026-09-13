@@ -7,6 +7,21 @@ description: Use when working with facts, paths, commands, or citations in this 
 
 Regra: **não afirmar nem agir sobre um fato não verificado.**
 
+## Quando usar (gatilhos)
+
+- "Verifica se esse arquivo existe antes de editar"
+- "Confere se o comando roda nessa máquina"
+- "Valida essa fonte antes de citar"
+- "Tenho certeza que X está instalado?"
+- "Não inventa — mede primeiro"
+
+## Exemplo
+
+```powershell
+Test-Path -LiteralPath "skills/nova-skill/SKILL.md"
+ffmpeg -version  # confirma antes de usar no pipeline
+```
+
 ## 1. Verifique antes de afirmar
 
 - **Caminhos/arquivos**: nunca assuma que um arquivo/pasta existe. Use
