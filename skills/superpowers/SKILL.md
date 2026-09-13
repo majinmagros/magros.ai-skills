@@ -7,6 +7,21 @@ description: Use when executing multi-step work in this project. Triggers on "td
 
 Aplicar a TODA tarefa de mais de 1 passo neste projeto (música ou código).
 
+## Quando usar (gatilhos)
+
+- "Quebra em tarefas pequenas"
+- "TDD: verificador primeiro"
+- "Me aprova cada passo"
+- "Nada de tarefa gigante sem check"
+- "Superpowers nesse fix"
+
+## Exemplo
+
+```text
+Tarefa: "adiciona login" → 1) teste de aceite 2) implementa 3) roda teste
+Aprovação pedida antes do passo 2 (muda estrutura)
+```
+
 ## 1. Quebre em tarefas pequenas
 
 - Antes de agir, liste as tarefas com `todowrite`: cada item deve ser **pequeno,

@@ -9,6 +9,21 @@ Audita respostas de busca geradas por IA para separar o que é respaldado por fo
 primária do que é confabulação. O pipeline é **determinístico** (não depende de
 memória do modelo sobre o assunto).
 
+## Quando usar (gatilhos)
+
+- "Confere se esse AI Overview está certo"
+- "Valida essa resposta com busca antes de publicar"
+- "Audita os claims desse resumo automático"
+- "Essa citação existe mesmo?"
+- "Checa os fatos dessa resposta de IA"
+
+## Exemplo
+
+```text
+Claim: "artigo X prova Y (2024)" → fonte primária: DOI inexistente
+Veredito: CONFABULADO (confiança alta) → não republicar sem correção
+```
+
 > ✅ **VERIFICADO (2026-08-26):** exemplos de fonte primária confirmados.
 > Por domínio: técnico/CLI/flag → documentação oficial do fabricante; legal →
 > diário oficial (ex.: `eur-lex.europa.eu`, `federalregister.gov`); científico →

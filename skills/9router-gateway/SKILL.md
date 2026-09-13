@@ -9,6 +9,14 @@ metadata:
 
 Local/remote AI gateway exposing OpenAI-compatible REST endpoints with automatic failover and provider aggregation.
 
+## When to Use
+
+- "Route this call through 9Router"
+- "Set up NINEROUTER_URL fallback chain"
+- "Quota exhausted, rotate the combo"
+- "List models on the local gateway"
+- "Auto-fallback for chat/image/TTS"
+
 ## Setup & Endpoints
 
 ```bash

@@ -8,6 +8,21 @@ description: Use when orchestrating large parallel work or deciding between chat
 Decide QUANDO usar cada degrau da "escada de recursos" e roda workflows sem
 surpresa na conta de tokens.
 
+## Quando usar (gatilhos literais)
+
+- "Roda isso em paralelo com vários agentes"
+- "Chat, skill, subagente ou workflow?"
+- "Força-tarefa em dezenas de arquivos"
+- "/workflows: quanto tá gastando?"
+- "Workflow ou agent team?"
+
+## Exemplo
+
+```text
+Tarefa: "otimizar imagens das 12 páginas" → 12 workers Haiku + síntese Opus
+Escopo fechado antes de disparar; monitora em /workflows
+```
+
 ## 1. A escada (suba só até onde o problema existe)
 
 | Degrau | O que é | Quando usar |

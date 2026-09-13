@@ -9,6 +9,18 @@ metadata:
 
 Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.
 
+## Example
+
+```tsx
+import {AbsoluteFill, useCurrentFrame, interpolate} from 'remotion';
+
+export const Title: React.FC = () => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 30], [0, 1]);
+  return <AbsoluteFill style={{opacity}}><h1>Hello</h1></AbsoluteFill>;
+};
+```
+
 ## How to use
 
 Read individual rule files for detailed explanations and code examples:

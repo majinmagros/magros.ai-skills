@@ -8,6 +8,21 @@ description: Use when scheduling autonomous Claude Code sessions in the cloud �
 Agenda sessões completas do Claude Code na nuvem, sem deixar o computador
 ligado e sem VPS/Mac mini. Uma rotina = skill + prompt de ativação.
 
+## Quando usar (gatilhos literais)
+
+- "Agendar tarefa todo dia"
+- "Roda esse fluxo mesmo com PC desligado"
+- "Funcionário 24/7 na nuvem"
+- "Webhook que dispara agente"
+- "Rotina recorrente sem VPS"
+
+## Exemplo
+
+```text
+Rotina: "todo dia 8h → resume notícias → envia no e-mail"
+Gatilho: agendamento | Skill: pesquisa + envio
+```
+
 ## 1. Quando usar (vs alternativas)
 
 | Opção | Bom para | Custo/limite |

@@ -9,6 +9,14 @@ Use the canonical Itô compute CLI or MCP server. ECC does not implement a
 parallel client, local simulation, reservation, workload runner, or inference
 server. ECC itself does no browser automation.
 
+## When to Activate
+
+- "Find H100/H200 capacity"
+- "Submit a fixed-rate compute RFQ"
+- "Check Itô RFQ status"
+- "Revoke the compute device credential"
+- "Qualify a GPU node before booking"
+
 ## Install the canonical local package
 
 `ito-compute-cli` is currently unpublished. Build it from its canonical

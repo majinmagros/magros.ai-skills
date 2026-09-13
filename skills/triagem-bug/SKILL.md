@@ -8,6 +8,21 @@ description: Use when a bug is reported and needs triage before any fix. Trigger
 Bug reportado entra, **correção provada** sai. O erro clássico que esta skill
 impede: consertar o sintoma sem reproduzir, sem causa-raiz, sem prova.
 
+## Quando usar (gatilhos)
+
+- "/triagem-bug"
+- "Esse bug é grave?"
+- "Prioriza esse defeito"
+- "Reproduz antes de corrigir"
+- "Avalia esse erro"
+
+## Exemplo
+
+```text
+Bug: "salvar apaga rascunho" → reprodução: 3 cliques (passos exatos)
+Severidade: S2 (fluxo principal, contorno penoso) → só então corrigir
+```
+
 ## Separação de papéis (o coração da skill)
 
 As três fases são de "funções" diferentes e não se misturam:

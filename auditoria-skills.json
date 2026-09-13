@@ -1,88 +1,5 @@
 [
   {
-    "name": "routines",
-    "score": 86,
-    "lines": 53,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "search-hallucination-detection",
-    "score": 86,
-    "lines": 56,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "superpowers",
-    "score": 86,
-    "lines": 36,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "triagem-bug",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "workflows",
-    "score": 86,
-    "lines": 54,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "9router-gateway",
-    "score": 87,
-    "lines": 29,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ito-compute",
-    "score": 87,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "pouca estrutura"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "remotion-video-creation",
-    "score": 87,
-    "lines": 44,
-    "reasons": [
-      "sem exemplos",
-      "pouca estrutura"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "12-factor-agents",
     "score": 93,
     "lines": 65,
@@ -1387,6 +1304,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "9router-gateway",
+    "score": 100,
+    "lines": 37,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "9router-resilient-fallback",
     "score": 100,
     "lines": 39,
@@ -2560,6 +2484,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "ito-compute",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ito-data-atlas-agent",
     "score": 100,
     "lines": 80,
@@ -3142,6 +3075,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "remotion-video-creation",
+    "score": 100,
+    "lines": 56,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "repo-scan",
     "score": 100,
     "lines": 65,
@@ -3168,6 +3108,13 @@
     "name": "roteiro-engenheiro-ia-2026",
     "score": 100,
     "lines": 80,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "routines",
+    "score": 100,
+    "lines": 68,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3231,6 +3178,15 @@
     "name": "score-loop",
     "score": 100,
     "lines": 65,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "search-hallucination-detection",
+    "score": 100,
+    "lines": 71,
     "reasons": [
       "desc longa"
     ],
@@ -3383,6 +3339,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "superpowers",
+    "score": 100,
+    "lines": 51,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "swift-actor-persistence",
     "score": 100,
     "lines": 65,
@@ -3506,6 +3469,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "triagem-bug",
+    "score": 100,
+    "lines": 80,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ui-demo",
     "score": 100,
     "lines": 43,
@@ -3623,6 +3595,13 @@
     "name": "windows-desktop-e2e",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "workflows",
+    "score": 100,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
