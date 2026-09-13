@@ -63,3 +63,11 @@ If the requested work is visual or layout-sensitive, iterate with inspection and
 When the file is part of a larger workflow, also surface:
 
 - duplicate trackers
+
+## Exemplo
+
+```text
+"Consolida os trackers do Q3": Drive search acha 3 planilhas + 1 deck duplicado
+Inspeciona: abas, donos, modificados → confirma com usuário antes de mexer
+Edita por range/tab explícito; resumo p/ decisão no Doc mestre (sem adivinhar por nome)
+```

@@ -63,3 +63,11 @@ Start with intent rather than vendor syntax.
 | Zone | Typical contents | Default policy |
 | --- | --- | --- |
 | Trusted | Laptops, phones, admin workstations | Can reach shared services and management only when needed |
+
+## Exemplo
+
+```text
+Plano: flat → VLANs (trusted/IoT/guest) + Pi-hole + WireGuard
+Primeira resposta: inventário + riscos + plano faseado + rollback (read-only, sem comandos)
+Trava: sem plataforma confirmada e sem acesso console local, nada de config colada
+```

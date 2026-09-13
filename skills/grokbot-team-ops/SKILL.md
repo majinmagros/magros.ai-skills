@@ -63,3 +63,11 @@ check the current vendor plan before acting; no price is recorded here.
 ## Sources
 
 - No vendor docs URL confirmed at write time - verify the current vendor
+
+## Exemplo
+
+```text
+Time: miner (coleta) + writer (redação) + boss (sequência e aceite)
+Memória: global (voz, políticas) vs por-bot (estado do job) — promote explícito
+Rotina 9h05: digest no canal + handoff visível; dinheiro/publicar só com approval
+```

@@ -63,3 +63,11 @@ Padrões para **GLM (Z.ai)** como coding orçamentário: **browser automation**,
 | **Languages** | ~10 | vs 50+ frontier |
 | **Image generation** | None | Use Codex desktop |
 | **Cost** | **$18/mo** | Best value for volume |
+
+## Exemplo
+
+```text
+Allowances Codex/Claude esgotadas no meio do sprint → fallback GLM ($18/mo)
+Task: CRUD em C + checagem no browser (pontos fortes) → workers baratos, verifier Sonnet
+Trial quota primeiro; frontier reasoning continua no Opus (GLM é moderado)
+```

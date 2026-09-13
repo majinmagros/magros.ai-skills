@@ -8,6 +8,13 @@ description: Use when the user runs /grill-with-docs to stress-test an idea AND 
 Igual ao `/grill`, mas cada decisão é GUARDADA em documento do projeto.
 Uma pergunta por vez; após responder, documente.
 
+## Quando usar
+
+- "/grill-with-docs", "grila essa ideia e documenta", "decisões no docs"
+- Ideia/plano precisa de pressão-teste E registro persistente das decisões
+- Projeto sem DECISIONS.md e com decisões se perdendo no chat
+- Não use para: só entrevistar sem registrar (isso é /grill); implementar
+
 ## 1. Local do registro
 
 - Use `docs/DECISIONS.md` do projeto (crie a pasta `docs/` se necessário).

@@ -1,61 +1,5 @@
 [
   {
-    "name": "glm-integration-patterns",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "google-workspace-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "grill-with-docs",
-    "score": 93,
-    "lines": 50,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "grokbot-team-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "hipaa-compliance",
-    "score": 93,
-    "lines": 71,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "homelab-network-readiness",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "hookify-rules",
     "score": 93,
     "lines": 65,
@@ -2155,6 +2099,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "glm-integration-patterns",
+    "score": 100,
+    "lines": 73,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "goal",
     "score": 100,
     "lines": 56,
@@ -2172,6 +2123,13 @@
     "name": "golang-testing",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "google-workspace-ops",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2199,6 +2157,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "grill-with-docs",
+    "score": 100,
+    "lines": 57,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "grilling",
     "score": 100,
     "lines": 55,
@@ -2210,6 +2177,15 @@
     "score": 100,
     "lines": 53,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "grokbot-team-ops",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -2265,6 +2241,20 @@
     "name": "hexagonal-architecture",
     "score": 100,
     "lines": 58,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "hipaa-compliance",
+    "score": 100,
+    "lines": 77,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "homelab-network-readiness",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

@@ -69,3 +69,9 @@ Response pattern:
 User request:
 
 > Can we send support transcripts and patient messages into our analytics stack?
+
+```text
+Resposta-padrão: NÃO antes do gate — transcripts podem conter PHI
+Gate: é PHI? ator é covered entity/BA? vendor tem BAA? acesso mínimo? auditável?
+Sem BAA do analytics → bloqueado por padrão; escala p/ healthcare-reviewer se afeta conduta clínica
+```
