@@ -71,6 +71,15 @@ injection determinada. Decisoes criticas tem que valer ANTES e DEPOIS da
 chamada ao modelo (e antes/depois de cada tool call) - auditoria,
 validacao de schema e allowlist em codigo, nao em prosa.
 
+## Defesa anti-destilacao (Batch 17a, #53)
+
+Ataques de destilacao (milhoes de queries para clonar comportamento) se
+defendem no modelo: respostas ironicas/erradas de proposito para queries
+classificadas como extracao, mais deteccao de contas falsas em massa.
+Para o seu agente, a licao e dupla: monitore padroes de uso anormais nos
+seus endpoints e assuma que output servido pode virar treino alheio —
+rate limit + deteccao de scraping fazem parte das guardrails.
+
 ## Exemplo
 
 ```text

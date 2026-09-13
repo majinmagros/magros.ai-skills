@@ -68,3 +68,6 @@ Por item, verifique:
 - Ativo: `MIT` genérico → `MIT` (SPDX). Risco: BAIXO.
 - Ativo: mídia gerada por modelo sem licença declarada → risco ALTO até comprovar.
 - output: tabela ativo|licença|obrigação|risco.
+- Caso 2025 (Batch 17a, #53): milhares de autores processaram a Anthropic
+  por treinar com obras pirateadas sem consentimento — DADOS-TREINO vira
+  risco ALTO quando o corpus inclui obra proprietaria sem licenca.
