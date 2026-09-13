@@ -61,6 +61,14 @@ volume é barato, quem decide/valida é forte. A métrica que importa é
   trabalho sensivel, o tier leve local zera a segunda conta — soberania
   de dados entra no tradeoff junto com latencia, qualidade e custo.
 
+### 6. DeepSeek V4 Flash 0731 (Batch 17f, #74)
+
+Repost-train sem mudar o nome: bench 72.5% (King Bench), recorde em
+questao 3D, agentic coding real; ~GLM 5.2 em capacidade, decide
+preco/harness (no Command Code roda a $1 com tool-calls + cache
+repairs). Regra: re-treinos mudam tudo sem mudar o nome — valide o
+snapshot atual antes de fixar executor barato.
+
 ## Checklist
 - [ ] Métrica definida é custo-por-tarefa, não preço/token.
 - [ ] Verificador independente do gerador.

@@ -69,6 +69,15 @@ de colocar no topo do combo.
 
 1. **Instale e rode** o 9router (npm global, `%APPDATA%\npm\node_modules\9router\` no Windows / `~/.npm-global/lib/node_modules/9router/` no Linux/Mac); endpoint em `http://127.0.0.1:20128/v1`.
 
+## CLI Proxy API (Batch 17f, #78)
+
+Agregador local open source: expoe contas (Anti-Gravity/Gemini/Claude
+free, Codex, Grok, Kimi, Gemini CLI) como endpoint unico OpenAI/Gemini/
+Claude-compativel, com multi-account load balancing. Caso de uso: tirar
+modelos presos em IDEs (ex: Opus 4.6 e Gemini 3.1 Pro do Anti-Gravity)
+e usar no Claude Code/OpenCode/Cline via baseURL. Valide os termos de
+cada provedor antes de por no combo.
+
 ## Exemplo
 
 ```text

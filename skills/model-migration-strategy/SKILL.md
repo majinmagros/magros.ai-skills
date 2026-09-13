@@ -71,6 +71,15 @@ Acha gotcha: prompt hiper-otimizado p/ Opus quebra no Sonnet → prompting robus
 Canary 5%/24h (pass 0.96) → partial → full; custo por feature atribuído no dashboard
 ```
 
+## Unhobbling no Claude 5 (Batch 17f, #77)
+
+Anthropic removeu ~80% do system prompt do Claude Code nos modelos 5
+sem perda mensuravel: modelos novos interpretam intent, e instrucoes
+defensivas antigas viram atrito (ate orientacoes conflitantes entre
+si). Na migracao para Claude 5, audite CLAUDE.md/skills/system prompts
+e remova o defensivo obsoleto em vez de empilhar mais regra. Fonte:
+Tharik (Anthropic), "new rules of context engineering".
+
 ## Auditoria pre-Fable (Batch 17b, #59)
 
 Skills e prompts escritos antes do Fable 5 costumam ser prescritivos

@@ -25,6 +25,9 @@ Use this skill when the answer itself must be easy to read.
 - Use bullets only when they reduce effort.
 - Do not add jargon just to sound precise.
 - Do not pad with filler, caveats, or meta commentary.
+- Action-first (Batch 17f, #73): numbered steps before explanation, zero
+  filler — the "I-Have-ADHD" pattern (16k stars, MIT): tired or distracted
+  readers need visible progress, not preamble + lecture + "hope this helps".
 
 ## Output Shape
 

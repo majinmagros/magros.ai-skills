@@ -724,3 +724,20 @@ Enriches aplicados: `hyperframes-codex-video` (motion library), `skill-creator-m
 |---|---|---|---|---|
 | 71 | **Plan smarter with Claude for Teachers** (`V-OOEC5RNaQ` - @claude) | Ad de produto: brief por voz → transcript TeachFX → coaching + plano alinhado a standards (ELD) via knowledge graph → rotina agendada 4pm diária | ⚠️ **Produto** | **Coberto** por `routines` + `claude-cowork-patterns` + `claude-voice-workflow` — sem ação |
 | — | 7 shorts Fable 5.1 (`G3vwVsh9RtU`, `S9IJ1GgAAxE`, `KcRcbHxeoKk`, `3TJ9vWl0Ewo`, `Rfhb8EzILmM`, `PK_twqwWqp4`, `C-5wF6tkQ2Q`) | Demos oficiais sem legenda em nenhum idioma (exit 0 sem vtt) | ⛔ Dead-end | Mesmo padrão dos shorts do Batch 14 |
+
+---
+
+## Batch 17f — 2026-09-13 (@aicodeking: 8 analisados)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 72 | **/GRAFT Skill + Astra** (`VW58Q8c5F0I` - @aicodeking) | Code graph OSS (MIT) via tree-sitter (sem AI key/DB, `.graft/` gitignored) + deep build opcional com IA; agente consulta funções/imports/chamadas (demo Verdant, bug de permissão) | ✅ **NOVO** | Enrich `graphify` (alternativa GRAFT p/ estrutura de código) |
+| 73 | **I-HAVE-ADHD Skill** (`EpU0Cj4jlVg` - @aicodeking) | Skill/plugin (16k stars, MIT, Iggy): 10 regras action-first, numerado, zero filler — resposta para leitor cansado/distraído | ✅ **NOVO** | Enrich `plain-language-response` (action-first) |
+| 74 | **Deepseek V4 Flash $1 CODER** (`h5HLLIds53g` - @aicodeking) | Flash 0731 repost-train (bench 72.5%, recorde 3D) ~GLM 5.2; no Command Code a $1 com tool-calls + cache repairs | ✅ **NOVO** | Enrich `roteamento-modelos-baratos` (Flash 0731) + watchlist `llm-leaderboard-tracker` |
+| 75 | **Impeccable + Claude,Codex,Kimi** (`5MKq5qahKQ8` - @aicodeking) | Design skill OSS (Apache 2.0, 48k stars): 23 commands, live browser mode, 41 detector rules anti-slop | ✅ **NOVO** | **Coberto** por `impeccable-design` — sem ação |
+| 76 | **T3 Code V2 sidebar** (`vBfK20JqCSE` - @aicodeking) | IDE UX: threads em lista flat + seção settled (auto-settle), fim do agrupar-por-projeto | ⚠️ **Produto** | Sem ação (UX de IDE, não padrão transferível) |
+| 77 | **Claude Code 2.0 / unhobbling** (`eR1Ec5-leiM` - @aicodeking) | Anthropic removeu ~80% do system prompt sem perda; modelos novos travam com instrução defensiva antiga e conflitante; artigo Tharik (context engineering) | ✅ **NOVO** | Enriches `model-migration-strategy` (unhobbling) + `claude-md-auditor` (caça-conflitos) |
+| 78 | **FREE Opus, Gemini API (CLI Proxy)** (`sYtNcR9zXvk` - @aicodeking) | CLI Proxy API (OSS): envolve Anti-Gravity/Codex/Grok/Kimi como endpoint local OpenAI/Gemini/Claude-compatível + multi-account LB; free lunch = Opus 4.6 + Gemini 3.1 Pro | ✅ **NOVO** | Enrich `roteamento-modelos-gratuitos` (CLI Proxy API) |
+| 79 | **Hallmark design skill** (`dVGJ3DE1MzA` - @aicodeking) | Anti-slop (Nutlope): 21 macro-estruturas nomeadas (bento, long-doc, manifesto) + 22 temas/4 gêneros; força sair do on-distribution | ✅ **NOVO** | Enrich `frontend-design-direction` (macro-structure first) |
+
+Enriches aplicados: `graphify` (GRAFT), `plain-language-response` (action-first), `roteamento-modelos-baratos` (Flash 0731), `model-migration-strategy` + `claude-md-auditor` (unhobbling), `roteamento-modelos-gratuitos` (CLI Proxy), `frontend-design-direction` (macro-structures), watchlist `llm-leaderboard-tracker`. Nenhuma skill nova.

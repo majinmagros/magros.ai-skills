@@ -63,6 +63,10 @@ needs repeated daily use.
   clarify state over decorative animation.
 - Verify text fit on mobile and desktop. Long labels must wrap or resize
   cleanly rather than overflowing.
+- Pick a macro-structure first (Batch 17f, #79): bento, long-doc,
+  manifesto-poster — 21 named whole-page shapes, never the same
+  hero-3-features-CTA-footer rhythm twice. Genre theme (editorial,
+  minimal...) comes after shape, not before.
 
 ## Exemplo
 

@@ -50,6 +50,14 @@ grafo de conhecimento consultável. Em vez de varrer arquivo por arquivo
 - 3 camadas de indexação: estrutura de código (determinística, sem LLM) →
   áudio/vídeo (whisper) → docs/imagens (semântica com LLM).
 
+## 3b. Alternativa GRAFT (Batch 17f, #72)
+
+GRAFT (open source, MIT): code graph via tree-sitter (structural layer,
+sem AI key, sem DB server, `.graft/` gitignored) + optional AI deep
+build (summaries + concept nodes, custa tokens). Mesmo trabalho do
+graphify para perguntas de estrutura; escolha um grafo por repo.
+Fonte: video `VW58Q8c5F0I` (demo via Verdant).
+
 ## 4. Processo
 
 1. Confirme que o repo está indexado (ou rode `/graphify`).

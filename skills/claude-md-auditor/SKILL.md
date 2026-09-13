@@ -39,6 +39,13 @@ Auditoria automatizada do **CLAUDE.md/AGENTS.md** - mede linhas/palavras, sugere
 | CLI, hooks, settings patch | `references/cli-hooks.md` |
 | Integracao /doctor, validacao | `references/doctor-integration.md` |
 
+## Regra unhobbling (Batch 17f, #77)
+
+80% do system prompt removido sem perda: procure pares conflitantes
+("documente conforme apropriado" vs "nao adicione comentarios") e
+regras que so faziam sentido para modelos que precisavam de guardrails
+para nao errar. Remover atrito > adicionar regra.
+
 ## Checklist de Entrega
 
 - [ ] `claude-md-auditor.js` — Core auditor class
