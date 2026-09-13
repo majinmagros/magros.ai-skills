@@ -62,3 +62,12 @@ If the user does not specify a mode, use `default`.
 - emit a ranked action plan and drafts before any apply step
 
 ## Platform Rules
+
+## Exemplo
+
+```text
+Pedido: "limpa meu X, quero mais sinal de IA aplicada"
+Modo default: fila review-first — 40 unfollows propostos, 15 follows novos, 5 reconexões
+Drafts na voz do usuário via brand-voice; nada enviado sem aprovar
+Regra: poda só quem segue; LinkedIn 1º grau sempre revisão manual
+```

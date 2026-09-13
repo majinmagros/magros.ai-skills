@@ -63,3 +63,11 @@ For each candidate, capture these axes — they decide both inclusion and tier:
 ## Player taxonomy — axes to populate across
 
 Don't sort competitors into niche-specific buckets; sort them along a few
+
+## Exemplo
+
+```text
+Brief: studio boutique, moat = voz própria; tensão = memorabilidade × contratabilidade
+Set: 6 nomes → tiers: 2 diretos (mesma faixa + estética), 2 adjacentes, 2 aspiracionais
+Corte: exclui enterprise genérica (fora da faixa) → set defensável p/ benchmark-methodology
+```

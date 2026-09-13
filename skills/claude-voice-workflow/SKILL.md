@@ -27,3 +27,11 @@ Transforma áudio em prompt estruturado sem fricção.
 - [ ] Áudio 3-60s com contexto
 - [ ] Transcript limpo
 - [ ] Prompt validado antes de executar
+
+## Exemplo
+
+```text
+Áudio 40s caminhando: ideia de SaaS de agendamento com lembrete WhatsApp
+Limpeza: tira "ahn, tipo, né" → preserva: público, dor, restrição de preço
+Saída: prompt 4 pilares via prompt-builder → usuário valida → envia p/ Claude
+```

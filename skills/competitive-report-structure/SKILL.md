@@ -63,3 +63,12 @@ empty) it is.
 Organize the set into **Direct / Adjacent / Aspirational** (from
 `competitive-platform-analysis`). One short paragraph per tier explaining who's
 in it and why it matters to the client. This sets reader expectations before
+
+## Exemplo
+
+```text
+Entrada: 6 profile cards pontuados (benchmark-methodology)
+Saída: sumário executivo (3 takeaways) + mapa 2×2 da tensão + tiers + white-space
+Recomendação-tipo: "mover X desloca o balanço 60/25/15 → confirmar intenção"
+Perguntas respondidas: com quem competimos, como, onde está o fosso defensável
+```

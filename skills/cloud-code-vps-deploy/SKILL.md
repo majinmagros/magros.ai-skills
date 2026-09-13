@@ -24,3 +24,11 @@ description: Use when deploying Claude Code to a VPS (Hostinger KVM1, DigitalOce
 - [ ] VPS KVM1+ com Docker
 - [ ] WSS salvo
 - [ ] Agente 24/7 validado
+
+## Exemplo
+
+```text
+Hostinger KVM1 → Docker → catálogo code-cloud → implantar
+Salva WSS + URL do console → conecta harness via CLI
+Valida: code-cloud status verde + web console acessível → agente 24/7 no ar
+```

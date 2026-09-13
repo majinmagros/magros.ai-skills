@@ -37,3 +37,11 @@ Caso real: planilha Excel → dashboard web com Cloud Code em <15min (vs 1 dia�
 - **Versionamento**: conector GitHub → repo privado; cada iteração commitada permite rollback.
 - **Limites de governança**: IA tem limite de linhas lidas (arquivo de 1GB não passa); empresas listadas/alta governança exigem estrutura completa de análise + auditoria — este fluxo é p/ projetos que precisam de flexibilidade e iteração rápida. Dados sensíveis → versões enterprise (sem treino com seus dados).
 - **Stack gerada**: PHP + migrations + README; deploy via conector de hospedagem (ex: Hostinger) + domínio.
+
+## Exemplo
+
+```text
+Planilha de estoque virou gargalo → schema (SKU, qtd, custo) + regras de baixa
+Gera app via orch-build-mvp: CRUD + login + import CSV → dona valida
+Números conferidos na tabela dinâmica antes de aceitar; deploy restrito + audit log
+```
