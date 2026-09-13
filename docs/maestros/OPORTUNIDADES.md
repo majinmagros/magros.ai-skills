@@ -715,3 +715,12 @@ Enrich aplicado: `cloud-design-prototyping` (design-system-first). Nenhuma skill
 | 70 | **RAG 101** (`aYEa5svlzC0` - @FullCycle) | Retrieval→augmented→generation; pipeline pergunta→busca→contexto+pergunta→modelo ("prova com gabarito"); evita treinar modelo próprio | ✅ **NOVO** | **Coberto** por `rag-corporativo-seguro` + `graphify` + `unified-memory` |
 
 Enriches aplicados: `hyperframes-codex-video` (motion library), `skill-creator-methodology` (3 Ss), `strategic-compact` (compactação intencional). Gap novo G27 registrado (materialização pendente). Nenhuma skill nova.
+
+---
+
+## Batch 17e — 2026-09-13 (@claude: 1 analisado + 7 sem legenda)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 71 | **Plan smarter with Claude for Teachers** (`V-OOEC5RNaQ` - @claude) | Ad de produto: brief por voz → transcript TeachFX → coaching + plano alinhado a standards (ELD) via knowledge graph → rotina agendada 4pm diária | ⚠️ **Produto** | **Coberto** por `routines` + `claude-cowork-patterns` + `claude-voice-workflow` — sem ação |
+| — | 7 shorts Fable 5.1 (`G3vwVsh9RtU`, `S9IJ1GgAAxE`, `KcRcbHxeoKk`, `3TJ9vWl0Ewo`, `Rfhb8EzILmM`, `PK_twqwWqp4`, `C-5wF6tkQ2Q`) | Demos oficiais sem legenda em nenhum idioma (exit 0 sem vtt) | ⛔ Dead-end | Mesmo padrão dos shorts do Batch 14 |
