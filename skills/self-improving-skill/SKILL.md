@@ -63,3 +63,11 @@ promoted to rules. Expect convergence around session 10 (author measurement).
 
 - `continuous-learning-v2`: owns session-level instinct capture; this skill owns the per-skill feedback loop.
 - `rules-distill`: owns extraction of rules from skill content; this skill feeds it promotion candidates.
+
+## Exemplo
+
+```text
+Skill X erra o mesmo formato 3 sessões → feedback-log registra + wrap-up propõe 1 tweak
+Aplica, mede (qualidade/tokens/fixes 1-5); 3 runs limpas = convergiu (~sessão 10)
+Aprendizado visto 3x+ → candidato a rule via rules-distill; log enxuga
+```

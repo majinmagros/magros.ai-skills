@@ -62,3 +62,11 @@ Use this skill when:
 - Q&A sections: `FAQPage` only when the content truly matches
 
 ### On-page rules
+
+## Exemplo
+
+```text
+Auditoria: /precos com canonical loop + LCP 4,1s + sem Article schema
+Ordem: técnico primeiro (canonical, preload hero, CLS) → depois conteúdo
+1 página = 1 intent; keywords mapeadas p/ URLs; sitemap reflete a superfície real
+```

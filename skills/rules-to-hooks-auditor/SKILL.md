@@ -62,3 +62,11 @@ Para cada regra extraída, classifica:
 
 ### 3. Geração de Hook (Output)
 Para cada **Process/Event** identificado, gera:
+
+## Exemplo
+
+```text
+CLAUDE.md: "after implementing run the tests" (processo) → Stop hook (exit 2 se falha)
+"money is integer cents" (judgment) → mantém como rule; "write clean code" → deleta
+"never read .env" → PreToolUse block; "log every command" → PostToolUse
+```

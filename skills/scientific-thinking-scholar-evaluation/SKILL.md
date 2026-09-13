@@ -62,3 +62,11 @@ Use `N/A` for dimensions that do not apply.
 - Are recent and foundational sources balanced?
 
 ### 3. Methodology
+
+## Exemplo
+
+```text
+Paper X (scope targeted: método + citações): método 2/5 (n sem poder, sem controle)
+citações 3/5 (3 claims sem fonte) → feedback estruturado p/ revisão
+Comparativo: mesmo rubric em 2 papers → rank defensável, não gut-feel
+```

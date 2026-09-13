@@ -62,3 +62,11 @@ Create a search protocol before collecting sources:
 - inclusion criteria
 - exclusion criteria
 - exact search strings
+
+## Exemplo
+
+```text
+Pergunta PICO: "intervenção X reduz Y em idosos?" → protocolo (bases, datas, strings)
+Triagem: 200 → 40 (título/resumo) → 12 (texto) → síntese + gaps + tabela de evidência
+Tudo com citação e log; scoping p/ explorar, systematic p/ publicar
+```

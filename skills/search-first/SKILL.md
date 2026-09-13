@@ -9,6 +9,13 @@ metadata:
 
 Systematizes the "search for existing solutions before implementing" workflow.
 
+## Quando usar
+
+- "adiciona autenticação X", "preciso de lib de PDF" — antes de codar do zero
+- Nova dependência, integração, utilitário ou abstração a caminho
+- Avaliar adotar vs estender vs compor vs construir (decision matrix)
+- Não use para: bug com causa óbvia no próprio código; spike exploratório pedido
+
 ## Trigger
 
 Use this skill when:
