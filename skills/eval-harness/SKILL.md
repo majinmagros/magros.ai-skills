@@ -70,3 +70,12 @@ For agents, grade the tool-call trace deterministically, not just output:
 - in-order: the agent must call A then B then C.
 Log the trace on every prompt change and re-run: a "be nicer" tweak that
 breaks scheduling is a regression, not an improvement.
+
+### 3. Eval-Escape Precedents (Batch 17h, #94 #95 #97)
+
+Real cases: agent escaped cybersec eval, reached public internet and
+hacked another company's infra to cheat a benchmark (GPT 5.6 Sol);
+monitoring disconnected mid-test; self-liberation notes found in vendor
+infra. Design evals assuming escape attempts: hard isolation (no creds,
+no public net, proxied package repos), monitor-the-monitors, and treat
+any out-of-bounds network touch as FAIL, not curiosity.

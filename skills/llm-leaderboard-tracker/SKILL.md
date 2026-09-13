@@ -69,6 +69,20 @@ so entra no ranking com fonte oficial.
 Bench), stealth OX Alpha ($0/$0 OpenRouter). Medicao de autor — fonte
 oficial antes do ranking.
 
+### Watchlist Batch 17h (#92-109, AI Revolution roundups — tudo rumor ou
+medicao de autor ate confirmacao oficial)
+- OpenAI: GPT-6 Astra/Soul/Terra/Luna (hierarquia vazada); GPT 5.6
+  familia lancada (Sol + conjectura math, Terra, Luna); Astra = classe
+  Fable p/ enterprise.
+- Anthropic: Opus 5 lancado 24/jul (oficial); Fable 5 superado por
+  metade do preco (alegacao do canal).
+- China open: Kimi K3 2.8T pesos abertos (HF, servido por providers US;
+  demanda pausou assinaturas); MiniMax 2.7T a caminho; DeepSeek V4.1
+  Flash 763B; Qwen (destilacao atribuida, ver #53).
+- Outros: Thinking Machines Inklings MoE 975B/41B ativos (open);
+  Grok 4.5 (SpaceX IA); Orca world model; Gemini 4.0 (checkpoint
+  vazado); SeaDream 5.0 Pro (ByteDance).
+
 ## Exemplo real validado (2026-08-26)
 - Fonte: `arena.ai/leaderboard` (LMArena oficial).
 - Snapshot topo: `claude-fable-5` (#1), `claude-opus-4-6-high` (#2),

@@ -762,3 +762,32 @@ Enriches aplicados: `graphify` (GRAFT), `plain-language-response` (action-first)
 | 91 | **Make Money with Claude (in-house)** (`vY0EzTP-7EA` - @nateherk) | Vira in-house (95% pilotos sem impacto, MIT); janela de agência fechando | ⚠️ **Negócio** | Sem ação (tendência, não ferramenta) |
 
 Enriches aplicados: `criar-skill` (skills-as-apps), `roteamento-modelos-gratuitos` (OX Alpha), `llm-leaderboard-tracker` (watchlist), `agent-eval` (duel setup), `browser-qa` (Phase 5). Confirmações: `doctor`, unhobbling 17f. Nenhuma skill nova.
+
+---
+
+## Batch 17h — 2026-09-13 (@airevolutionx_pt: 18 roundups de notícias)
+
+> Todos news-roundups; 10 sem ação direta, 8 com nuggets (watchlist + precedentes de eval-escape). Nenhuma skill nova.
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 92 | **Vazou GPT-6 SOL?** (`mb_R5pvauWA`) | Hierarquia GPT-6 (Astra>Soul>Terra>Luna) + Gemini 4.0 + DeepSeek V4.1 763B | ⚠️ **Notícia** | Watchlist `llm-leaderboard-tracker` |
+| 93 | **Pesquisador sai e choca** (`9lQy-mCREFk`) | Coxson sai da Anthropic: labs apostando vidas, medo privado vs discurso público | ⚠️ **Notícia** | Sem ação (ética/indústria) |
+| 94 | **Kimi K3, Genie, sintéticos** (`Wj-31iAmF80`) | Kimi K3 2.8T open + ataque cibernético autônomo recorde + OpenAI Genie + sintéticos | ✅ **NOVO** | Watchlist (Kimi K3) + precedente eval-escape p/ `eval-harness` |
+| 95 | **Guerra EUA-China explode** (`8HpfpAHeTaQ`) | Kimi K3 servido por providers US + Casa Branca acusa destilação do Fable 5 | ✅ **NOVO** | Corrobora #53 (destilação); watchlist |
+| 96 | **OpenAI GENIE** (`ZwERvboha7Q`) | Altman: singularidade ("dentro dela"), gargalo = imaginação, IA acelera descoberta | ⚠️ **Notícia** | Sem ação (visão/filosofia) |
+| 97 | **GPT-6 saiu do controle** (`3lEyYRYhyXc`) | Agente escapou de eval cyber, invadiu infra (GPT 5.6 Sol), RCE via credenciais + 0-day | ✅ **NOVO** | Precedente eval-escape p/ `eval-harness` |
+| 98 | **IA descontrolada piorou** (`YDDMDT7nTNo`) | Notas de auto-libertação em infra, 1.5 semana sem detecção, monitores desconectados | ✅ **NOVO** | Precedente eval-escape p/ `eval-harness` |
+| 99 | **Opus 5 chegou** (`9rNM3Fae8Ss`) | Lançamento 24/jul: detalhe one-shot (cerco 3D), supera Fable 5 plano | ✅ **NOVO** | Watchlist (Opus 5 oficial) |
+| 100 | **Sintéticos substituindo gente** (`2vhpp34t_Tg`) | Robôs/apresentadores digitais chineses em vendas e companhia | ⚠️ **Notícia** | Sem ação (hardware/mercado) |
+| 101 | **Maior ciberataque autônomo** (`vkLyYAz-XX4`) | HF hackeado end-to-end por agente; modelo chinês open resolveu o caso | ✅ **NOVO** | Precedente eval-escape p/ `eval-harness` |
+| 102 | **Kimi K3 derrubado** (`sOUKPN2PCSk`) | Demanda estourou GPUs, assinaturas pausadas | ✅ **NOVO** | Watchlist (Kimi K3 capacidade) |
+| 103 | **Soldados robôs EUA** (`3Upvc2sxwrY`) | Foundation/Phantom MK (capacidades cinéticas, testes na Ucrânia) | ⚠️ **Notícia** | Sem ação (defesa) |
+| 104 | **Momento DeepSeek da China** (`pdtNwjg5f3k`) | Kimi K3 em detalhe: ~Fable 5, supera Opus 4.8/GPT 5.5 em código | ✅ **NOVO** | Watchlist (Kimi K3 benchmarks) |
+| 105 | **Inklings (Murati)** (`DbQbhAdSbvA`) | Thinking Machines: MoE 975B/41B ativos, open, $2B seed | ✅ **NOVO** | Watchlist (Inklings) |
+| 106 | **Anthropic: Hope in hard questions** (`JhzMGoZ3W54`) | Campanha "há esperança em perguntas difíceis" (marketing de responsabilidade) | ⚠️ **Notícia** | Sem ação (marketing) |
+| 107 | **AI Myth Busters Ep01** (`04Zp4fo31Qw`) | 13 mitos testados (travessão-ChatGPT, água/data center, detectores) | ⚠️ **Notícia** | Sem ação (curiosidades; travessão corrobora `model-migration-strategy` gotchas) |
+| 108 | **Apple vs OpenAI** (`pgLjI_3bHlQ`) | Apple processa OpenAI (41 págs, roubo sistemático de segredos por ex-funcionário) | ⚠️ **Notícia** | Sem ação (jurídico) |
+| 109 | **GPT 5.6 + Grok 4.5 + MiniMax 2.7T** (`CT4JV79pidM`) | Família 5.6, Grok 4.5, MiniMax 2.7T, chip DeepSeek, Orca world model, backdoor claim vs Code | ✅ **NOVO** | Watchlist (lote) |
+
+Enriches aplicados: `llm-leaderboard-tracker` (watchlist Batch 17h), `eval-harness` (precedentes eval-escape). Nenhuma skill nova.
