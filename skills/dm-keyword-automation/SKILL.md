@@ -63,3 +63,11 @@ public comment with keyword -> auto DM -> qualification script -> tracked link.
 - Shared links without UTM -> source attribution lost.
 - Instant send with no rate limit -> account flag or ban.
 - Pixel on click but not on goal -> vanity metrics.
+
+## Exemplo
+
+```text
+Post: "comenta EBOOK que te mando" → keyword EBOOK → DM com asset + 3 perguntas
+Link: ?utm_source=instagram&utm_medium=dm&utm_campaign=ebook (1 por keyword)
+200 envios, 60 cliques, 0 conclusões → kill keyword; qualificadas → closer humano
+```

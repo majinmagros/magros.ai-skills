@@ -63,3 +63,12 @@ Aplique somente o que foi aprovado. As modificações dependem do contexto e do 
 Opcionalmente salve a nova versão no histórico. Voltar à anterior é sempre possível — rodar o comando de desfazer na própria sessão que gerou as mudanças, ou restaurar do git.
 
 ## Mensuração (use números, não impressões)
+
+## Exemplo
+
+```text
+Sintoma: sessão engole 40k tokens antes da primeira resposta útil
+Leitura: CLAUDE.md 900 linhas + 8 skills sempre carregadas (2 nunca usadas em 3 meses)
+Proposta: extrai 600 linhas p/ skills on-demand, desliga 2 mortas → -28k/requisição
+Aprova 1 por 1; rollback via git se algo quebrar
+```

@@ -62,3 +62,12 @@ Pull these ECC-native skills into the workflow when relevant:
 - confirm whether push, pull_request, synchronize, comment, or manual re-run events can converge on the same expensive path
 
 ### 3. Trace the worker and side effects
+
+## Exemplo
+
+```text
+Sintoma: 40 PRs do app em 1h num repo pequeno (recursão?)
+Ingress: comment-event + synchronize convergem p/ mesma fila cara
+Causa: branch do próprio app re-dispara análise premium (sem gate)
+Separa: causa raiz (recursão) / impacto billing / gap de entitlement → backlog
+```

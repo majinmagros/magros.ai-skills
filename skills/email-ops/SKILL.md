@@ -62,3 +62,12 @@ If creating a new outbound:
 - pull `brand-voice` before drafting
 
 ### 3. Draft, then verify
+
+## Exemplo
+
+```text
+Pedido: "tria minha caixa + responde o investidor X"
+Triage: arquiva promocional; investidor X = thread ativa, deadline sexta
+Draft na brand-voice → usuário aprova → send → prova: entry em Sent (id + hora)
+Nunca: "enviado" sem confirmação real da pasta Sent
+```

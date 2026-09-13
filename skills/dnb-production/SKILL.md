@@ -8,6 +8,13 @@ description: Use when creating or refining Drum'n Bass tracks in this project. T
 Procedimento padronizado para criar ou refinar músicas Drum'n Bass originais em
 `E:\Projeto DnB`, inspiradas em artistas, sem usar material protegido.
 
+## Quando usar
+
+- "gera loop de DnB", "produz a track", "refina o break"
+- Criar/refinar elementos (break, sub, pad) via orquestrador com nota mínima
+- Iterar candidatos até nota >= 80 com verificador independente
+- Não use para: ouvir/recomendar músicas; teoria musical genérica
+
 ## 1. Leia o contexto antes de agir
 
 - Sempre leia `contexto\00-contexto-sessao.md` antes de iniciar uma tarefa de criação.

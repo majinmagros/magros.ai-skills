@@ -62,3 +62,11 @@ Limit: do not call query-docs (or resolve-library-id) more than 3 times per ques
 - Cite the library or version when it matters (e.g. "In Next.js 15...").
 
 ## Examples
+
+```text
+Pergunta: "How do I configure Next.js middleware?"
+1) resolve-library-id(name="Next.js", query=pergunta) → /vercel/next.js
+2) query-docs(libraryId=/vercel/next.js, query="middleware config") → snippets atuais
+3) Responde com código da doc vigente (não da memória) + cita versão
+Limite: 3 chamadas por pergunta; se incerto, declara em vez de chutar
+```
