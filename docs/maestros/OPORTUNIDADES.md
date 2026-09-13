@@ -666,3 +666,18 @@ Enriches aplicados: `9router-gateway` + `cost-aware-llm-pipeline` (roteamento po
 | 57 | **Payment Gateway Integration Stripe - React-Node** (`-Pz6rEVuw9Q` - @pavanadhav) | Integração Stripe: payment_intent + client_secret, checkout custom, webhook + `stripe-signature`, ngrok, test cards, eventos (created/succeeded/updated) | ✅ **NOVO** | **Coberto** por `stripe-webhook-handler` — sem ação |
 
 Enriches aplicados: `roteamento-modelos-baratos` (3 tiers + pay-twice), `llm-leaderboard-tracker` (watchlist GLM/MiniMax/Qwen), `cost-aware-llm-pipeline` (preço/hora-agente), `agent-guardrails` (anti-destilação), `local-llm-efficiency` (tese independência), `copyright-compliance-tracking` (caso autores 2025), `stripe-webhook-handler` (variante Razorpay). Nenhuma skill nova (0 redundância).
+
+---
+
+## Batch 17b — 2026-09-13 (backlog recente com filtro 202608+, parte 1: 4 canais)
+
+> 2 vídeos analisados + 2 dead-ends legítimos (documentados p/ não re-tentar à toa). Dead-ends: `Fk853sbgqZQ` (membros-pagos, sem legenda pública) e `x26cPhhLe-0` (bot-check do YouTube no IP — sinal de rate-limit agressivo; espaçar coletas).
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 58 | **Turn Photos into Interactive 3D Objects on Your Website!** (`rvJz-dmQO9Q` - @gucampelo) | Foto 2D → repo gerador → objeto 3D procedural interativo (cubo mágico, teclado 3D com input real, mouse+touch, undo/contador/sons); agnóstico a agente | ✅ **NOVO** | Enrich `img2threejs` (fluxo foto-virando-objeto + teste mobile) |
+| 59 | **Fable 5 / Opus 5 Prompting Rules** (`dfi3BsEPxic` - @SimonScrapes) | Guias oficiais Anthropic invertem o ensino: objetivo+métrica+WHY sobre steps; done com trava de escopo (Opus 5 expande sozinho); interview-me p/ builds grandes; effort low/medium; auditar skills pré-Fable (prescritivas degradam) | ✅ **NOVO** | Enriches `prompt-builder` + `prompt-optimizer` (regras Fable/Opus 5) + `model-migration-strategy` (auditoria pré-Fable) |
+| — | `Fk853sbgqZQ` (@matthew_berman) | Dead-end: vídeo de membros, sem legenda pública | ⛔ Dead-end | Não re-tentar sem membership |
+| — | `x26cPhhLe-0` (@celinexu6598) | Dead-end: bot-check ("Sign in to confirm you're not a bot") — IP sob rate-limit | ⛔ Dead-end | Re-tentar em próxima janela com intervalo maior |
+
+Enriches aplicados: `img2threejs` (foto-virando-objeto), `prompt-builder` + `prompt-optimizer` (regras Fable/Opus 5), `model-migration-strategy` (auditoria pré-Fable). Nenhuma skill nova.

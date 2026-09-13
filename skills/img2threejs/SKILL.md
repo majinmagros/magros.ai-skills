@@ -64,3 +64,13 @@ const ambient = new THREE.AmbientLight(0xffffff, 0.5);
 const keyLight = new THREE.DirectionalLight(0xffffff, 1);
 keyLight.position.set(5, 10, 7);
 scene.add(ambient, keyLight);
+```
+
+## Foto-virando-objeto (Batch 17b, #58)
+
+Fluxo validado em video (Campelo `rvJz-dmQO9Q`): foto 2D (celular ou
+busca) -> repo gerador -> objeto 3D procedural -> pagina interativa
+(mouse + touch, undo de movimento, contador, sons). Nao exige agente
+especifico — qualquer modelo que entenda o repo reproduz. Use para
+vitrines interativas (cubo magico, teclado 3D com input real). Feche o
+teste no mobile: scroll horizontal do desktop vira vertical no celular.
