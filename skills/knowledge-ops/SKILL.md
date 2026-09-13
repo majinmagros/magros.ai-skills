@@ -63,3 +63,11 @@ When new knowledge needs to be captured:
 ### 1. Classify
 What type of knowledge is it?
 - Business decision -> memory file (project type) + MCP memory
+
+## Exemplo
+
+```text
+"Salva isso na KB": decisão de pricing + thread do Linear + PDF de pesquisa
+Roteia: decisão → memory + grafo MCP; thread → contexto ativo (GitHub/Linear); PDF → doc store
+Dedupe: "pricing Q3" já existe → merge, não duplicata; "what do I know about X" busca nas 6 camadas
+```

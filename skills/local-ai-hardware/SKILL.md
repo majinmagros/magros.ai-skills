@@ -35,3 +35,12 @@ TCO = `hardware + energia*meses` vs `tokens/mês * $/token` (`cost-aware-llm-pip
 
 ## Referências
 
+## Exemplo
+
+```text
+Cloud $600/mês em tokens → TCO 12m: $7,2k cloud vs $3k DGX + energia
+Buy: DGX Spark → vLLM local → benchmark (tokens/s, qualidade vs cloud)
+Rent: segue no ito-compute (upgrade instant, zero capex)
+Decide pelo número, não pelo hype do "100% offline"
+```
+

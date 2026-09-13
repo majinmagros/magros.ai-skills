@@ -7,6 +7,13 @@ description: Acompanha a posição e a qualidade de modelos de LLM ao longo do t
 
 Monitora rankings de LLM de forma **reprodutível e histórica** (não opinião de momento).
 
+## Quando usar
+
+- "qual o melhor LLM agora?", "o que mudou no ranking?", "tem modelo novo no topo?"
+- Monitorar qualidade/custo dos modelos de forma recorrente (snapshot + diff)
+- Alertar quando modelo cruza limiar (top-N, score X)
+- Não use para: rodar modelo local; escolha pontual sem histórico (isso é roteamento-modelos-baratos)
+
 > ✅ **VERIFICADO (2026-08-26):** fontes oficiais confirmadas nesta sessão.
 
 ## Pipeline

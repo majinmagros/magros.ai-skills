@@ -14,6 +14,13 @@ freshness, or execution speed. This includes HFT-like infrastructure, but the
 skill is engineering-focused. It does not authorize live trading or financial
 advice.
 
+## Quando usar
+
+- "o dashboard tá stale", "p95 estourou", "fila crescendo sem parar"
+- Hot path com p50/p95/p99, freshness, queue depth e cache hit rate
+- Streaming, gateway de execução, cache/edge com verificação live
+- Não use para: otimizar sem baseline; aconselhar trade (nunca)
+
 ## Split The Metrics
 
 Do not collapse everything into "fast." Track:

@@ -63,3 +63,11 @@ The whole loop rides on the comparator's "is it done yet?" **The comparator can 
 |---|---|---|
 | Has a clear "done" test (write to done / a batch of images processed) | **servo** (`/goal`-style closed-loop) | stops on reaching the goal |
 | No endpoint, must keep maintaining a state (inventory alert / scheduled health check) | **regulator** (`/loop`-style thermostat) | never stops; acts only on change (dead-band suppresses noise) |
+
+## Exemplo
+
+```text
+WRITE: "test→fix até verde" — meta decidível: "96 tests green AND change-list"
+Gate passo 0: repete semanal? verificação automática? budget ok? tools executam? → 4 sim
+REVIEW: sem boundary ("não tocar em business logic") = licença p/ Goodhart → adiciona + retry cap 3 + humano decide o alvo
+```

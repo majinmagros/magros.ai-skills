@@ -1,61 +1,5 @@
 [
   {
-    "name": "knowledge-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "latency-critical-systems",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "llm-leaderboard-tracker",
-    "score": 93,
-    "lines": 57,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "local-ai-hardware",
-    "score": 93,
-    "lines": 38,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "local-llm-efficiency",
-    "score": 93,
-    "lines": 41,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "loop-design-check",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "manim-video",
     "score": 93,
     "lines": 65,
@@ -2411,6 +2355,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "knowledge-ops",
+    "score": 100,
+    "lines": 73,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "kotlin-coroutines-flows",
     "score": 100,
     "lines": 52,
@@ -2488,6 +2439,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "latency-critical-systems",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "lead-intelligence",
     "score": 100,
     "lines": 65,
@@ -2502,9 +2460,32 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "llm-leaderboard-tracker",
+    "score": 100,
+    "lines": 64,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "llm-trading-agent-security",
     "score": 100,
     "lines": 71,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "local-ai-hardware",
+    "score": 100,
+    "lines": 47,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "local-llm-efficiency",
+    "score": 100,
+    "lines": 49,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2513,6 +2494,15 @@
     "score": 100,
     "lines": 65,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "loop-design-check",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {

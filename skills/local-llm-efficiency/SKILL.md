@@ -38,3 +38,11 @@ Cloud pay-to-play vs local 1000x cheaper, lento/experimental mas movimento open-
 
 ## Referências
 
+## Exemplo
+
+```text
+Claim "740B em 25GB" → valida: Q4_K_M via Ollama/llama.cpp no hardware real
+Benchmark: tokens/s + RAM + qualidade vs cloud (agent-eval); fonte Colibri checada
+Resultado: lento mas 1000x mais barato → vale p/ lote offline, não p/ interativo
+```
+
