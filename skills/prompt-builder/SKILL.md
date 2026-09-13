@@ -78,3 +78,21 @@ Flags oficiais Claude Code: `--append-system-prompt` (preserva o default — usa
 na maioria dos casos), `--system-prompt` (substitui tudo — cuidado), `-file`
 variações (as file são Print-only). Efeito colateral desejado: menos output
 tokens = menos custo e resposta mais rápida.
+
+## 7. Regras Fable/Opus 5 (Batch 17b, #59)
+
+Fonte: SimonScrapes `dfi3BsEPxic` (guias oficiais Anthropic). Modelos
+novos invertem o ensino antigo:
+- Meta sobre passos: entregue objetivo + metrica de sucesso, nao lista
+  de passos — steps prescritivos estreitam o modelo e PIORAM o output.
+- WHY obrigatorio: "I'm working on [task maior] para [quem], para que
+  [o que o output viabiliza]" — o modelo decide ~50 micro-decisoes
+  (queda de 4% e ruido ou alerta? lider com spend ou CPL?).
+- Done com trava de escopo: "email <300 palavras liderando com X + top
+  3 motivos em tabela" — Opus 5 expande escopo sozinho (dashboards e
+  charts nao pedidos).
+- Build grande sem done claro: mande o Claude te entrevistar
+  (ask-user-questions: goal, publico, done, edge cases, tradeoffs) e
+  escrever o brief — nao tente adivinhar o prompt perfeito.
+- Effort baixo/medio em task curta: Fable 5.1 no low compete com Opus
+  antigo por menos tokens.

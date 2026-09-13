@@ -70,3 +70,11 @@ Opus → Sonnet em produção: eval suite primeiro (vibes→curated→customer, 
 Acha gotcha: prompt hiper-otimizado p/ Opus quebra no Sonnet → prompting robusto
 Canary 5%/24h (pass 0.96) → partial → full; custo por feature atribuído no dashboard
 ```
+
+## Auditoria pre-Fable (Batch 17b, #59)
+
+Skills e prompts escritos antes do Fable 5 costumam ser prescritivos
+demais e DEGREDAM a qualidade no novo modelo (guia oficial Anthropic).
+Na migracao para Claude 5, revise o inventario e remova instrucoes
+antigas (steps fechados, double-checks manuais, continuacoes forcadas)
+antes de culpar o modelo. Vale tambem para Astra 6 (OpenAI).

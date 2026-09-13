@@ -62,3 +62,10 @@ Output em 5 seções (idioma do input): 1 Diagnosis (strengths/issues/clarificat
 | `blueprint` | EPIC-scope prompts (invoke as skill, not command) |
 | `strategic-compact` | Long session context management |
 | `cost-aware-llm-pipeline` | Token optimization recommendations |
+
+## Regras Fable/Opus 5 (Batch 17b, #59)
+
+Ao otimizar para Claude 5: troque steps por objetivo + metrica + WHY,
+adicione definition-of-done com trava de escopo, sugira effort
+baixo/medio em tasks curtas. Fonte e detalhe em `prompt-builder`
+(mesma origem: `dfi3BsEPxic`).
