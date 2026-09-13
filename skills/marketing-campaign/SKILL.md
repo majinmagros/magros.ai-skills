@@ -63,3 +63,11 @@ Produce in this order — each layer informs the next:
 Gate every deliverable:
 - 5-second test on all hero / above-fold copy (clear who it's for, what it does, why act now)
 - CTA audit (one per piece, specific, earned — not demanded)
+
+## Exemplo
+
+```text
+Brief: feature X → research (market-research: público + 3 concorrentes) → ângulo aprovado
+Ordem: landing → e-mails (1 propósito cada) → social via content-engine → vídeos → ads → calendário
+Gate: hero passa no teste 5s; CTA único e merecido por peça; mesma voz em tudo
+```

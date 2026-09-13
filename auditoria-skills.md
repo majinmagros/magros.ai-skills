@@ -4,13 +4,13 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 99.1/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 99.2/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
 - **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
 - **Com progressive disclosure (references/scripts):** 213 / 459 (46.4%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:61
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:55
 - **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **93** | 65 | `manim-video` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 2 | **93** | 65 | `market-research` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 3 | **93** | 65 | `marketing-campaign` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 4 | **93** | 65 | `mcp-hardware-arduino` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 5 | **93** | 65 | `meeting-task-listener` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 6 | **93** | 65 | `messages-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 7 | **93** | 58 | `ml-adoption-playbook` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 8 | **93** | 65 | `mle-workflow` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 9 | **93** | 65 | `model-migration-strategy` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 10 | **93** | 65 | `motion-advanced` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 11 | **93** | 65 | `motion-foundations` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 12 | **93** | 65 | `multi-perspective-convergence` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 13 | **93** | 59 | `n8n-agentic-flows` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 14 | **93** | 40 | `notebooklm-claude-rag` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 15 | **93** | 65 | `nutrient-document-processing` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 16 | **93** | 65 | `openclaw-persona-forge` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 17 | **93** | 65 | `orch-pipeline` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 18 | **93** | 65 | `parallel-execution-optimizer` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 19 | **93** | 65 | `perl-security` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 20 | **93** | 55 | `pipeline-video-agente` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 21 | **93** | 40 | `plain-language-response` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 22 | **93** | 65 | `plan-duel` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 23 | **93** | 65 | `prediction-market-oracle-research` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 24 | **93** | 65 | `product-capability` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 25 | **93** | 65 | `project-flow-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 26 | **93** | 65 | `prospeccao-maps-freelance` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 27 | **93** | 65 | `python-testing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 28 | **93** | 65 | `rag-corporativo-seguro` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 29 | **93** | 65 | `ramp-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 30 | **93** | 65 | `recsys-pipeline-architect` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 1 | **93** | 58 | `ml-adoption-playbook` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 2 | **93** | 65 | `mle-workflow` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 3 | **93** | 65 | `model-migration-strategy` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 4 | **93** | 65 | `motion-advanced` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 5 | **93** | 65 | `motion-foundations` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 6 | **93** | 65 | `multi-perspective-convergence` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 7 | **93** | 59 | `n8n-agentic-flows` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 8 | **93** | 40 | `notebooklm-claude-rag` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 9 | **93** | 65 | `nutrient-document-processing` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 10 | **93** | 65 | `openclaw-persona-forge` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 11 | **93** | 65 | `orch-pipeline` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 12 | **93** | 65 | `parallel-execution-optimizer` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 13 | **93** | 65 | `perl-security` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 14 | **93** | 55 | `pipeline-video-agente` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 15 | **93** | 40 | `plain-language-response` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 16 | **93** | 65 | `plan-duel` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 17 | **93** | 65 | `prediction-market-oracle-research` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 18 | **93** | 65 | `product-capability` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 19 | **93** | 65 | `project-flow-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 20 | **93** | 65 | `prospeccao-maps-freelance` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 21 | **93** | 65 | `python-testing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 22 | **93** | 65 | `rag-corporativo-seguro` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 23 | **93** | 65 | `ramp-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 24 | **93** | 65 | `recsys-pipeline-architect` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 25 | **93** | 65 | `recursive-decision-ledger` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 26 | **93** | 65 | `research-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 27 | **93** | 44 | `retomar-sessao` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 28 | **93** | 65 | `roteamento-modelos-baratos` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 29 | **93** | 65 | `roteamento-modelos-gratuitos` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 30 | **93** | 65 | `rule-drift-auditor` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -111,7 +111,7 @@
 Amostra:  ...
 
 ### Faixa 80-99 & 100 (Boa/Excelente - 459 skills)
-Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (398 com 100pts)
+Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (404 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

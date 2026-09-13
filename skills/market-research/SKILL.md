@@ -63,3 +63,12 @@ Default structure:
 2. key findings
 3. implications
 4. risks and caveats
+
+## Exemplo
+
+```text
+Tese: "vale entrar em SaaS de agendamento p/ clínicas?"
+TAM top-down + bottom-up (300 clínicas × ticket) + 3 concorrentes (preço, tração)
+Veredito: entrar SE wedge = lembrete WhatsApp (gap); risco: incumbente com lock-in
+Tudo com fonte e data; fato ≠ inferência ≠ recomendação
+```

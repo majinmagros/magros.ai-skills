@@ -63,3 +63,11 @@ the closed loops do not.
 - Cluster threads into pains with: pain statement, who feels it,
   frequency count, strongest verbatim quotes, current workarounds,
   and willingness-to-pay signals if present.
+
+## Exemplo
+
+```text
+Pipeline A: call gravada → 5 compromissos extraídos → donos confirmados → Jira (ids de volta na thread)
+Pipeline B: 40 threads "planilha virou caos" → dor + quotes + workaround → MVP + landing draft
+Nada vira "resumo que ninguém abre": tudo termina em CREATED/MERGED/DECLINED
+```

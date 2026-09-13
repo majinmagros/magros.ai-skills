@@ -63,3 +63,11 @@ scaffolding is expected, so keep scope to one cart and one room.
   datasheets (ESP32-CAM, PWM driver, servo) against the parts on your
   bench before wiring; do not trust video pinouts blindly.
 - Bring-up order, driver mix, depth-from-mono on CUDA, RatSLAM-style
+
+## Exemplo
+
+```text
+Carrinho 1 sala: echo OK (firmware+pinos logados) → motores → ESP32-CAM + tilt → web jog
+Depth-from-mono na bancada CUDA → mapa topológico versionado (nunca sobrescreve o bom)
+Autonomia híbrida: linha onde há + VLM intents curtos onde não há; kill switch ativo
+```

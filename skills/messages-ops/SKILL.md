@@ -62,3 +62,11 @@ For one-time codes:
 - search the recent local message window first
 - narrow by service or sender when possible
 - stop once the code is found or the focused search is exhausted
+
+## Exemplo
+
+```text
+"Cadê o código do banco?": janela local recente → filtra remetente → código achado
+Resposta cita fonte exata (surface + thread + hora); sem fonte = não foi checado
+MFA bloqueou? reporta o blocker exato em vez de improvisar acesso ao banco
+```

@@ -62,3 +62,11 @@ For social-graph and network-optimization explainers:
 - start with a low-quality smoke test render
 - only push to higher quality after composition and timing are stable
 - export one clean thumbnail frame that reads at social size
+
+## Exemplo
+
+```text
+Conceito: "como o ranking por nota converge" → tese em 1 frase
+4 cenas: baseline → candidatos → verificação paralela → vencedor
+Smoke render baixa qualidade → ajusta ritmo → MP4 16:9 + thumbnail + storyboard
+```
