@@ -12,7 +12,7 @@ executor + verificador, e só libera o que deixa o verificador IMPRESSIONADO.
 Custo alto: horas + centenas de milhares de tokens. Usar só quando o resultado
 precisa ser excepcional.
 
-## 1. Quando usar
+## Quando usar
 
 - Projetos criativos grandes: jogo, app, site, cena 3D, simulador.
 - Resultado precisa ser "impressionante", não apenas "funciona".

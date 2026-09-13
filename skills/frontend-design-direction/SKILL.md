@@ -63,3 +63,12 @@ needs repeated daily use.
   clarify state over decorative animation.
 - Verify text fit on mobile and desktop. Long labels must wrap or resize
   cleanly rather than overflowing.
+
+## Exemplo
+
+```text
+Task: dashboard operacional denso achatado e genérico
+Direção: utilitário denso + escaneável; detalhe memorável = coluna de status com ritmo próprio
+Restrições: tokens existentes, a11y, responsivo sem shift de toolbar
+Anti-padrão evitado: hero gigante de landing page num tool de uso diário
+```

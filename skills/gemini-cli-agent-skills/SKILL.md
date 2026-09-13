@@ -63,3 +63,11 @@ Spark** (Gemini Apps). Diferenciais: **Gemini Notebook** (ex-NotebookLM) e
 
 ## Checklist
 - [ ] Conhece a diferença Spark (Gemini Apps) vs Gemini CLI (terminal).
+
+## Exemplo
+
+```text
+"Publica essa demo sem custo" → AI Studio: importa do GitHub → *.ai.studio (Starter, 2 apps)
+"Skill reutilizável no Gemini" → pasta SKILL.md + references/ → gemini skills install
+Rotina diária → agendador do Spark (conta pessoal 18+, AI Pro/Ultra); volume → Flash
+```

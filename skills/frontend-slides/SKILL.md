@@ -63,3 +63,11 @@ Use the preset guide in `STYLE_PRESETS.md` when mapping mood to style.
 ### 4. Build the Presentation
 
 Output either:
+
+## Exemplo
+
+```text
+Pitch deck 10 slides: rough notes → 3 previews 1-slide (impressed vs focused)
+Escolhido "focused" → 1 HTML autocontido, 1 slide = 1 viewport, zero scroll interno
+Sem: gradiente roxo genérico + Inter-no-branco com cara de template
+```

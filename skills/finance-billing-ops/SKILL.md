@@ -63,3 +63,12 @@ If the question is customer-specific, classify first:
 - broken self-serve controls
 - unmet product value
 - failed payment or incomplete setup
+
+## Exemplo
+
+```text
+Pergunta: "o per-seat é real ou só copy do site?"
+Evidência: Stripe (MRR, reembolsos) + código (entitlement trava 2ª sessão?)
+Verdade: plano diz "ilimitado" mas código limita seats → gap p/ backlog
+Separado: fato receita / impacto cliente / verdade no código / recomendação
+```

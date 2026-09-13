@@ -62,3 +62,12 @@ Loop e grafo **não são excludentes**: um nó do grafo pode ser um loop (ex.: u
 | 1. Delegar à IA | Deixe o modelo criar o dynamic workflow (ex.: "faça 3 pesquisas em paralelo") | Menos especificação | Queima tokens, menos controle |
 | 2. Especificar manualmente | Você define os ramos, agentes e verificadores (este skill) | Controle, reprodutível | Mais trabalho de setup |
 | 3. Ferramenta dedicada | Migre para ferramenta de orquestração visual (ex.: L-graph) quando os fluxos ficarem complexos demais para manter à mão | Escala, inspeção | Dependência de ferramenta |
+
+## Exemplo
+
+```text
+Objetivo: relatório comparando 5 canais do YouTube (1 entregável)
+Grafo: 5 ramos isolados (coleta+verificador próprio) → convergem p/ síntese
+Loop-no-nó: thumbnails geradas em volume, rankeadas até nota >= 80
+Não-grafo: resumir 1 vídeo curto (sequencial simples resolve)
+```
