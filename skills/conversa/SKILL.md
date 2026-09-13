@@ -7,6 +7,22 @@ description: Agente Conversa. Use quando o usuário quiser ensaiar reuniões, en
 
 Objetivo: ensaiar em voz (ou texto) reuniões, entrevistas e negociações de alto risco, depois virar treinador para dar feedback.
 
+## Quando usar (gatilhos)
+
+- "Simula minha reunião de amanhã"
+- "Ensaia essa negociação comigo"
+- "Treina minha entrevista de emprego"
+- "Me ajuda com objeção de preço"
+- "Role-play: você é o cliente difícil"
+
+## Exemplo
+
+```text
+Cenário: renovação de contrato, cliente quer -20%
+Você: cliente desconfiado | Eu: vendedor
+Uma fala por vez → depois feedback de treinador
+```
+
 ## 1. Preparação (antes de simular)
 - Coletar do usuário: contexto da reunião (empresa, pessoas, objetivo), papel dele e papel a ser interpretado.
 - Perguntar: cenário, histórico relevante, objeções esperadas, o que ele quer conquistar (deal, proposta, fechar contrato...).

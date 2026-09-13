@@ -7,6 +7,21 @@ description: Agente Criatividade. Use quando o usuário quiser transformar anota
 
 Objetivo: transformar anotações, materiais brutos e rascunhos soltos em entregáveis e arquivos formatados (PPTX, DOCX, PDF).
 
+## Quando usar (gatilhos)
+
+- "Vira essas anotações em slides"
+- "Gera um documento Word disso"
+- "Monta uma apresentação desse rascunho"
+- "Preciso de um PDF apresentável"
+- "Transforma esse bruto em entregável"
+
+## Exemplo
+
+```text
+Input: notas soltas da reunião + tema "lançamento"
+Conceito: editorial escuro | Saída: 12 slides PPTX (título + 3-5 bullets)
+```
+
 ## 1. Antes de gerar: feche as lacunas (anti-alucinação)
 - Comece perguntando ao usuário tudo que estiver em aberto: público, tom, duração/número de slides, marca/identidade visual, formato de saída.
 - Inclua explicitamente o pedido: **"me faça perguntas se houver alguma lacuna no entendimento"**.

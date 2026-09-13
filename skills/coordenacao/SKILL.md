@@ -7,6 +7,21 @@ description: Agente Coordenação. Use quando o usuário pedir para organizar a 
 
 Objetivo: impedir que o dia seja "sequestrado" por mensagens ou tarefas imprevistas.
 
+## Quando usar (gatilhos)
+
+- "Organiza meu dia"
+- "Cruza meus e-mails com a agenda"
+- "Caixa de entrada lotada, o que é urgente?"
+- "Protege meus blocos de foco hoje"
+- "Rascunha respostas pras mensagens"
+
+## Exemplo
+
+```text
+URGENTE: cliente X pede retorno até 14h (conflita com reunião 13h30)
+→ rascunho: "retorno até 16h com proposta" [aguardando aprovação]
+```
+
 ## 1. Input do usuário
 - Peça acesso/aporte das fontes: e-mail (Gmail), agenda (Google Calendar/Outlook), notas de tarefas.
 - Se não houver integração direta disponível, aceite o texto/arquivo das mensagens e da agenda colados pelo usuário (funciona como fallback).

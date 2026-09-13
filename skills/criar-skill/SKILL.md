@@ -8,6 +8,21 @@ description: Use when creating, authoring, or refining Claude Code skills. Trigg
 Ensina a criar skills boas, seguindo o processo dos engenheiros da Anthropic
 e os fluxos oficiais (Skill Creator / Record a Skill).
 
+## Quando usar (gatilhos)
+
+- "Cria uma skill pra essa tarefa repetitiva"
+- "Grava como eu faço isso numa skill"
+- "Essa rotina vira skill?"
+- "Melhora essa skill existente"
+- "Como estruturar uma skill nova?"
+
+## Exemplo
+
+```text
+Tarefa: transcrever briefing de voz todo dia (repetitiva? sim; previsível? sim)
+→ passa no filtro EADA (Automate) → mapear pipeline A→B→C→D
+```
+
 ## 0. Antes de criar: o filtro EADA
 
 Nem tudo vira skill. Antes de mapear pipeline, filtre a tarefa na ordem:

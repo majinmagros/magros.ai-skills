@@ -8,6 +8,21 @@ description: Rastreia conformidade de direitos autorais e licenças de ativos de
 Audita o "pedigree" de licença de tudo que entra num projeto de IA, de forma
 **rastreável e por item**.
 
+## Quando usar (gatilhos)
+
+- "Posso usar esse dataset comercialmente?"
+- "Audita as licenças do projeto"
+- "Esse modelo permite uso em produção?"
+- "Mídia gerada por IA: quem é o dono?"
+- "Risco de licença nesse repo?"
+
+## Exemplo
+
+```text
+Ativo: dataset X | Licença: CC-BY-NC-4.0 | Comercial: NÃO | Risco: ALTO
+→ substituir por alternativa CC-BY-4.0 ou solicitar licença
+```
+
 > ✅ **VERIFICADO (2026-08-26):** identificadores e fontes confirmados nesta sessão.
 
 ## Pipeline

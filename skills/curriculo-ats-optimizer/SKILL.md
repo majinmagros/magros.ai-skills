@@ -9,6 +9,21 @@ metadata:
 
 Currículo que passa no robô **e** convence o humano em 6–7s. Foco: estrutura que o parser extrai + 70–80% das keywords da vaga distribuídas naturalmente.
 
+## Quando usar (gatilhos)
+
+- "Otimiza meu currículo pro ATS"
+- "Currículo pra vaga Gupy"
+- "Extrai as keywords dessa vaga"
+- "Meu currículo não passa no filtro"
+- "Reescreve meus bullets com métricas"
+
+## Exemplo
+
+```text
+Vaga pede: "Node.js, PostgreSQL, AWS" → resumo inclui literal:
+"Desenvolvedor Full Stack | Node.js, PostgreSQL, AWS"
+```
+
 ## 1. Como o ATS filtra (entenda antes de escrever)
 
 1. **Parsing** — extrai nome, contato, experiência, formação, habilidades. Se falhar, vira lixo digital.
