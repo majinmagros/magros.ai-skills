@@ -9,6 +9,21 @@ Transforma um repositório inteiro (código, docs, PDFs, áudio, vídeo) num
 grafo de conhecimento consultável. Em vez de varrer arquivo por arquivo
 (grep/ctrl+F cegos queimando tokens e errando), o agente consulta o mapa.
 
+## Quando Ativar (gatilhos literais)
+
+- "Graphify esse repo"
+- "Como X conecta com Y no código?"
+- "Mapa do repositório antes de mexer"
+- "Onboarding nesse projeto herdado"
+- "Resposta queimando token demais"
+
+## Exemplo
+
+```text
+/graphify explain "como o login chega na tabela users?"
+→ form → POST /login → authService → users(id)
+```
+
 ## 1. Quando usar
 
 - Perguntas sobre projeto grande: "como o login conecta com a tabela de

@@ -9,6 +9,24 @@ metadata:
 
 Use this skill for cloud-hosted or continuously running agent systems that need operational controls beyond single CLI sessions.
 
+## When to Use
+
+- "Run this agent 24/7 in production"
+- "Agent fleet needs observability and kill switches"
+- "Rollout/rollback plan for agent version"
+- "Track cost per successful agent task"
+- "Failure spike in the agent service"
+
+## Example
+
+```yaml
+agent_service:
+  timeout_s: 300
+  max_retries: 2
+  kill_switch: env.KILL_AGENT_V2
+  audit: high-risk-actions-only
+```
+
 ## Operational Domains
 
 1. runtime lifecycle (start, pause, stop, restart)

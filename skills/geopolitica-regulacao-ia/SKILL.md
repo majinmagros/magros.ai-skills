@@ -8,6 +8,21 @@ description: Monitora desenvolvimentos de regulação de IA (leis, decretos, ato
 Acompanha o cenário regulatório oficial de IA como **monitoramento de fontes
 primárias**, não como commentary.
 
+## Quando usar (gatilhos)
+
+- "Tem lei nova de IA?"
+- "Como o AI Act afeta meu produto?"
+- "O que mudou na regulação essa semana?"
+- "Meu caso de uso é alto risco?"
+- "Monitora a regulação pra mim"
+
+## Exemplo
+
+```text
+Delta: AI Act Art. 49 — registro de alto risco em vigor
+Impacto: ALTO RISCO | Afeta: chatbot de triagem (humano-no-loop obrigatório)
+```
+
 > ✅ **VERIFICADO (2026-08-26):** fontes oficiais confirmadas nesta sessão.
 
 ## Pipeline

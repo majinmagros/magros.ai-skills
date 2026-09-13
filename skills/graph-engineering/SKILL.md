@@ -13,6 +13,21 @@ PARALELO (graph) e iterar até a nota mínima (loop). É companheira da
 paralelos, verificador independente, convergência) vive em `engenharia-de-grafos`;
 este skill mantém apenas o específico de áudio do harness.
 
+## Quando usar (gatilhos)
+
+- "Gera loops até nota 80"
+- "Verifica os candidatos em paralelo"
+- "Rankeia os samples gerados"
+- "Pipeline de geração de DnB"
+- "Refina prompts dos perdedores"
+
+## Exemplo
+
+```powershell
+.\scripts\verify_loop.ps1 -Elemento "bass" -Amostras 5
+# melhor: 87 (>= notaMin 80) → export\ai_gerados\bass.wav
+```
+
 ## 1. Contexto primeiro
 
 - Leia `contexto\00-contexto-sessao.md` e `harness\RULES.md` antes de agir.

@@ -8,6 +8,22 @@ description: Use when the user runs /goal to set a durable objective with an acc
 Fixa um objetivo + critério de aceite para guiar a sessão inteira. Só encerra
 após PROVAR o aceite com checros reais.
 
+## Quando usar (gatilhos)
+
+- "/goal"
+- "Define a meta dessa sessão"
+- "Só termina quando o teste passar"
+- "Fixa o objetivo e o critério de aceite"
+- "Não declara done sem prova"
+
+## Exemplo
+
+```markdown
+## Goal: checkout sem erro 500
+Proof: `npm test checkout` verde + pedido cair no banco
+Stop: se precisar mudar schema, me pergunta antes
+```
+
 ## 1. Capture o goal (objectivo específico)
 
 Antes de começar, registre em disco (`.opencode/goals.md`, ou use o task list):

@@ -9,6 +9,21 @@ Muitas vezes existe solução pronta para o problema, mas a pessoa não sabe
 procurar (nem sempre os termos de busca são bons). Esta skill é a "loja de
 armaduras": entende o problema, busca, confere qualidade e instala.
 
+## Quando usar (gatilhos)
+
+- "Encontra uma skill pra esse problema"
+- "Qual skill resolve X?"
+- "Tem skill pronta pra isso?"
+- "Melhores skills de PDF/planilha"
+- "Isso já existe ou crio do zero?"
+
+## Exemplo
+
+```text
+Problema: "converter PPTX em vídeo" → candidatas: 3 (★, instalações, licença)
+Recomendada: 1 + motivo ("cobre PPTX→MP4, MIT, atualizada há 2 semanas")
+```
+
 ## 1. Processo
 
 1. **Entender o problema**: "preciso de uma skill que faça A, B, C" ou
