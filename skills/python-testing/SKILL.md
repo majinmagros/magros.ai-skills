@@ -62,3 +62,14 @@ Comprehensive testing strategies for Python applications using pytest, TDD metho
 - **Don't write tests that are too brittle**: Avoid over-specific mocks
 
 ## Running Tests
+
+## Exemplo
+
+```python
+# RED primeiro: falha antes do código existir
+def test_soma_desconto_vip():
+    assert total(100, vip=True) == 90
+
+# GREEN: implementa mínimo; REFACTOR com coverage 80%+ nos paths críticos
+# Roda: pytest -m "not slow" (rápidos); lentos separados por mark
+```

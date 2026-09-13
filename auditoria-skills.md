@@ -4,13 +4,13 @@
 
 ## Resumo Executivo
 
-- **Media geral:** 99.4/100 (boa — acima do 80 desejavel para corpus premium)
+- **Media geral:** 99.5/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
 - **Description sem gatilho quando usar:** 0 / 459 (0.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
 - **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
 - **Com progressive disclosure (references/scripts):** 213 / 459 (46.4%) — 85% sao monolitos
-- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:37
+- **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:0 | 80-99:31
 - **Conclusao:** Corpus sofre de **inflacao quantitativa** (459 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 0.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
@@ -29,36 +29,36 @@
 
 | # | Score | Linhas | Skill | Origem | Maior Correcao | Motivos |
 |---|---|---|---|---|---|---|
-| 1 | **93** | 65 | `project-flow-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 2 | **93** | 65 | `prospeccao-maps-freelance` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 3 | **93** | 65 | `python-testing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 4 | **93** | 65 | `rag-corporativo-seguro` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 5 | **93** | 65 | `ramp-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 6 | **93** | 65 | `recsys-pipeline-architect` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 7 | **93** | 65 | `recursive-decision-ledger` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 8 | **93** | 65 | `research-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 9 | **93** | 44 | `retomar-sessao` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 10 | **93** | 65 | `roteamento-modelos-baratos` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 11 | **93** | 65 | `roteamento-modelos-gratuitos` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 12 | **93** | 65 | `rule-drift-auditor` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 13 | **93** | 65 | `rules-to-hooks-auditor` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 14 | **93** | 65 | `scientific-thinking-literature-review` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 15 | **93** | 65 | `scientific-thinking-scholar-evaluation` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 16 | **93** | 65 | `search-first` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 17 | **93** | 65 | `self-improving-skill` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 18 | **93** | 65 | `seo` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 19 | **93** | 65 | `sessoes-orquestradas` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 20 | **93** | 65 | `site-clone-migration` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 21 | **93** | 65 | `skill-eval-runner` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 22 | **93** | 43 | `skill-map` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 23 | **93** | 65 | `skill-stocktake` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
-| 24 | **93** | 65 | `slack-tag-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 25 | **93** | 65 | `subscription-tier-routing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 26 | **93** | 65 | `telegram-channel-operator` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
-| 27 | **93** | 56 | `terminal-opener` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 28 | **93** | 65 | `terminal-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
-| 29 | **93** | 65 | `triagem-ideias` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
-| 30 | **93** | 65 | `unified-notifications-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 1 | **93** | 65 | `recursive-decision-ledger` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 2 | **93** | 65 | `research-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 3 | **93** | 44 | `retomar-sessao` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 4 | **93** | 65 | `roteamento-modelos-baratos` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 5 | **93** | 65 | `roteamento-modelos-gratuitos` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 6 | **93** | 65 | `rule-drift-auditor` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 7 | **93** | 65 | `rules-to-hooks-auditor` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 8 | **93** | 65 | `scientific-thinking-literature-review` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 9 | **93** | 65 | `scientific-thinking-scholar-evaluation` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 10 | **93** | 65 | `search-first` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 11 | **93** | 65 | `self-improving-skill` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 12 | **93** | 65 | `seo` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 13 | **93** | 65 | `sessoes-orquestradas` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 14 | **93** | 65 | `site-clone-migration` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 15 | **93** | 65 | `skill-eval-runner` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 16 | **93** | 43 | `skill-map` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 17 | **93** | 65 | `skill-stocktake` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 18 | **93** | 65 | `slack-tag-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 19 | **93** | 65 | `subscription-tier-routing` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 20 | **93** | 65 | `telegram-channel-operator` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 21 | **93** | 56 | `terminal-opener` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 22 | **93** | 65 | `terminal-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 23 | **93** | 65 | `triagem-ideias` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 24 | **93** | 65 | `unified-notifications-ops` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 25 | **93** | 64 | `validacao-ideia-24h` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | sem exemplos |
+| 26 | **93** | 65 | `video-cut-pipeline` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 27 | **93** | 65 | `visa-doc-translate` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | sem secao Quando Ativar |
+| 28 | **93** | 65 | `visual-qa-designer` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
+| 29 | **93** | 65 | `whatsapp-evolution-go` | projeto | Adicionar secao ## Quando Ativar com 4-5 gatilhos literais | desc longa; sem secao Quando Ativar |
+| 30 | **93** | 65 | `word-revision-workflow` | projeto | Revisar descricao e adicionar 1 exemplo copiavel | desc longa; sem exemplos |
 
 > Correcao de maior valor = a unica mudanca que mais aumenta score/impacto.
 
@@ -111,7 +111,7 @@
 Amostra:  ...
 
 ### Faixa 80-99 & 100 (Boa/Excelente - 459 skills)
-Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (422 com 100pts)
+Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (428 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

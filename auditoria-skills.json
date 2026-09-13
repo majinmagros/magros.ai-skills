@@ -1,62 +1,5 @@
 [
   {
-    "name": "project-flow-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "prospeccao-maps-freelance",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "python-testing",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "rag-corporativo-seguro",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ramp-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "recsys-pipeline-architect",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "recursive-decision-ledger",
     "score": 93,
     "lines": 65,
@@ -2790,6 +2733,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "project-flow-ops",
+    "score": 100,
+    "lines": 73,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "prompt-builder",
     "score": 100,
     "lines": 81,
@@ -2804,9 +2754,25 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "prospeccao-maps-freelance",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "python-patterns",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "python-testing",
+    "score": 100,
+    "lines": 76,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2853,10 +2819,28 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "rag-corporativo-seguro",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ralphinho-rfc-pipeline",
     "score": 100,
     "lines": 82,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ramp-ops",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -2886,6 +2870,13 @@
     "name": "react-testing",
     "score": 100,
     "lines": 58,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "recsys-pipeline-architect",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

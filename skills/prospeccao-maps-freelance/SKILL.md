@@ -62,3 +62,11 @@ beginners selling simple sites, not agencies.
 - Selling a stack you cannot debug when it breaks.
 - No contract, no 50 percent upfront, no renewal dates.
 - Scraping at abusive speed or ignoring Maps API terms.
+
+## Exemplo
+
+```text
+Nicho: dentistas no bairro X → 25 listings, 9 sem site ou mobile quebrado
+Auditoria: print + 3 achados cada (SEO, peso, contato) → rank impacto×facilidade
+Pitch 1 tela: achados + proposta + preço fixo + prazo; fecha 2 → portfólio do nicho
+```

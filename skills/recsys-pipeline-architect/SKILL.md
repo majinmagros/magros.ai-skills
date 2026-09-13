@@ -62,3 +62,11 @@ Walk the user through these eight steps:
 ## Key trade-offs to surface (don't default silently)
 
 ### 1. Single score vs multi-action prediction
+
+## Exemplo
+
+```text
+Feed "para você": Source (seguidos + trending) → Hydrator (meta) → Filter (dup/bloq)
+→ Scorer (ML + diversidade + regra negócio) → Selector top 20 → SideEffect async (log, cache)
+Trade-off explícito: single score (simples) vs multi-action (afinado, mais custo)
+```

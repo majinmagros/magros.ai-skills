@@ -62,3 +62,11 @@ Operate agents the Ramp way: cheap **loops** for repetitive toil, **dynamic work
 - Broad credentials for a narrow loop: one token that can do everything.
 - No cost owner: top-spender loops with no name attached.
 - Alert without trace: paging a human with a verdict but no evidence.
+
+## Exemplo
+
+```text
+Toil: babysit de PRs + rebase train → loops (rodou igual 3x = converte)
+Incidente novo → dynamic workflow (forma desconhecida, não força script)
+Debug: lê trace real (inputs+calls+timing), não benchmark; custo/semana por loop com dono
+```

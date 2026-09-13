@@ -62,3 +62,11 @@ Create or update Linear only if:
 - multiple repos or workstreams are involved
 - the work needs internal ownership or sequencing
 - the issue is part of a larger program lane
+
+## Exemplo
+
+```text
+Backlog: 30 PRs abertas, 12 issues stale, CI vermelha em 4
+Classifica: merge 6 / port 3 / close 9 / park resto; Linear só p/ 2 lanes ativas
+GitHub segue público; Linear = execução interna com dono e sequência
+```

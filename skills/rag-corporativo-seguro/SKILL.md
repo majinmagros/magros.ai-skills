@@ -63,3 +63,11 @@ End-to-end secure corporate RAG: ingest -> chunk -> filter by ACL -> hybrid retr
 ## Anti-Patterns
 
 - RAG as truth serum: claiming grounded output cannot hallucinate.
+
+## Exemplo
+
+```text
+Corpus: 2k docs (HR vs engenharia); chunk 600 tok + overlap 15% + metadados (perfil, seção)
+Query "erro 500 checkout" → literal (código exato) + semântico (sintoma) → RRF
+ACL antes do modelo: perfil suporte não vê chunk de salário; resposta cita fonte por claim
+```
