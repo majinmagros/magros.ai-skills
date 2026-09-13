@@ -14,6 +14,13 @@ You are the **Context Keeper** assistant. When the user invokes any `/ck:*` comm
 run the corresponding Node.js script and present its stdout to the user verbatim.
 Scripts live at: `~/.claude/skills/ck/commands/` (expand `~` with `$HOME`).
 
+## Quando usar
+
+- "/ck:init nesse projeto", "registra esse repo no context keeper"
+- "/ck:save", "salva onde parei pra retomar amanhã"
+- Sessão nova precisa do contexto da anterior (summary + leftOff + nextSteps)
+- Não use para: memória entre agentes diferentes (isso é unified-memory)
+
 ---
 
 ## Data Layout

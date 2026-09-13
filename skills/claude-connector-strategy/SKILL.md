@@ -63,3 +63,11 @@ Guia de conectores: **priorização (Gmail/Calendar/Drive/Notion), MCP vs nativo
 | Quando usar | Custom tools, APIs privadas | Conectores oficiais suportados |
 
 **Regra:** Use nativo para conectores oficiais (Gmail, Calendar, Drive, Notion, GitHub, Slack, Linear, Notion). Use MCP para APIs privadas, ferramentas customizadas, legacy systems.
+
+## Exemplo
+
+```text
+"Quais conectores primeiro?" → P1: Gmail + Calendar (nativos, 1-click, triage+agenda)
+Drive/Notion P2 nativos; API interna de billing → MCP custom (sem conector oficial)
+OAuth com escopo mínimo; revoga o que não usa em 30 dias
+```

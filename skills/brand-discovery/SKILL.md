@@ -63,3 +63,12 @@ Apply these rules throughout every module:
 8. **End of module:** write a structured module file with two sections:
    - `## Raw` — verbatim quotes and examples.
    - `## Synthesis` — your interpretation, three candidate formulations,
+
+## Exemplo
+
+```text
+Sessão 1 (fundadora): "somos o hospital do bairro, não clínica fria" → Raw + laddering "por quê?"
+→ valor-raiz: pertencimento. state.json: módulo 1/8 done, próximo = audiência
+Sessão 2 retoma do checkpoint: "módulo 2, faltam 6 — continuar aqui?"
+Entrega final: 90_SYNTHESIS.md briefing designers + redatores
+```

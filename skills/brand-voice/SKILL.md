@@ -63,3 +63,11 @@ If the user wants Affaan / ECC voice and live sources are thin, start here unles
 
 - direct, compressed, concrete
 - specifics, mechanisms, receipts, and numbers beat adjectives
+
+## Exemplo
+
+```text
+Fontes: 12 posts X recentes + 2 launch notes → VOICE PROFILE (ritmo curto, zero adjetivo vazio)
+Uso: thread de lançamento escrita no perfil → mesma voz no e-mail (sem re-derivar)
+Anti-padrão evitado: "revolutionary game-changer" genérico em vez da voz real
+```

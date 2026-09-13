@@ -62,3 +62,11 @@ First extract structured Blender state, then use viewport screenshots or renders
    - Leg crossover: compare left/right thigh, knee, ankle, and foot side ordering.
    - Twist damage: compare bone swing direction separately from roll/twist around the limb axis.
    - Scale drift: compare animated mesh bounds against the clean baseline bounds.
+
+## Exemplo
+
+```text
+Sintoma: avatar arrasta o pé no ciclo de andar (screenshot mostra, mas não explica)
+Fatos: pé esq. y=0.02 no frame 12 vs chão y=0.0; root heading -Y vs esperado +Y (import glTF)
+Veredito: foot-sliding + import espelhado — corrige eixo, não a animação
+```

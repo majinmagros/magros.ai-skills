@@ -63,3 +63,13 @@ Meshes and animation burn tokens. Never model blind:
 ## Troubleshooting
 
 | Problem | Fix |
+
+## Exemplo
+
+```text
+Pedido: "modela uma cadeira low-poly a partir deste SVG"
+1) Valida barato: render de teste do SVG como plano + screenshot OK do usuário
+2) Mesh: SVG → mesh, um passe de materiais, screenshot após cada passe
+3) Seguro: .blend salvo antes de cada execute_blender_code; SAFE_MODE=1 ativo
+Nunca: modelar 2h de mesh antes de validar o look no barato
+```

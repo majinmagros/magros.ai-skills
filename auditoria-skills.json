@@ -1,60 +1,5 @@
 [
   {
-    "name": "blender-mcp-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "blender-motion-state-inspection",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "brand-discovery",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "brand-voice",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ck-cli",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "claude-connector-strategy",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "claude-voice-workflow",
     "score": 93,
     "lines": 30,
@@ -1507,6 +1452,22 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "blender-mcp-ops",
+    "score": 100,
+    "lines": 75,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "blender-motion-state-inspection",
+    "score": 100,
+    "lines": 73,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "blueprint",
     "score": 100,
     "lines": 65,
@@ -1517,6 +1478,20 @@
     "name": "book-to-skill",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "brand-discovery",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "brand-voice",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1579,6 +1554,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "ck-cli",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "clareza",
     "score": 100,
     "lines": 46,
@@ -1605,6 +1587,13 @@
     "name": "claude-chrome-automation",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-connector-strategy",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
