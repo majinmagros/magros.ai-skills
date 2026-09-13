@@ -62,3 +62,12 @@ Before changing anything:
 ### 3. Keep the fix narrow
 
 Solve one dominant failure at a time:
+
+## Exemplo
+
+```text
+"CI quebrou, checa": inspeciona erro + arquivo + git status (read-only primeiro)
+Fix estreito: 1 falha dominante → rerun do proving command → verde
+Report: o que mudou / o que foi verificado / commit X / push (só se o branch moveu)
+Nunca: "pushed" sem upstream mover; "fixed" sem rerun
+```

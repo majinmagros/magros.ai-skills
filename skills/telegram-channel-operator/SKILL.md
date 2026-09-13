@@ -63,3 +63,12 @@ run on routines, log everything.
 - Routines without quiet hours -> 3am pings that train users to mute.
 
 ## Relations
+
+## Exemplo
+
+```text
+Canal de builds: BotFather → topologia (canal | builds | time | bot | admin)
+Política: terminal aprova tudo; bypass só p/ digest 9h no template fixo
+Rotina: build → draft → approval/bypass → send idempotente; log append-only diário
+Token fora do repo; DM avulsa é messages-ops, não aqui
+```

@@ -1,62 +1,5 @@
 [
   {
-    "name": "subscription-tier-routing",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "telegram-channel-operator",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "terminal-opener",
-    "score": 93,
-    "lines": 56,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "terminal-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "triagem-ideias",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "unified-notifications-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "validacao-ideia-24h",
     "score": 93,
     "lines": 64,
@@ -3133,6 +3076,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "subscription-tier-routing",
+    "score": 100,
+    "lines": 73,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "superpowers",
     "score": 100,
     "lines": 51,
@@ -3192,6 +3142,31 @@
     "name": "team-builder",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "telegram-channel-operator",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "terminal-opener",
+    "score": 100,
+    "lines": 63,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "terminal-ops",
+    "score": 100,
+    "lines": 74,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3272,6 +3247,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "triagem-ideias",
+    "score": 100,
+    "lines": 72,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ui-demo",
     "score": 100,
     "lines": 43,
@@ -3296,6 +3280,13 @@
     "name": "unified-memory",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "unified-notifications-ops",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

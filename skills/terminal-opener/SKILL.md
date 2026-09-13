@@ -14,6 +14,13 @@ including secret-bearing variables. The launcher does not filter the
 environment. Run it from a shell whose environment is safe to expose to the
 target command.
 
+## Quando usar
+
+- "abre esse CLI numa janela", "SSH interativo", "roda o dev server visível"
+- Codex precisa de terminal visível (WezTerm) p/ processo interativo ou sandbox
+- Diagnosticar terminal suportado (--detect) antes de lançar
+- Não use para: comando não-interativo (roda inline); --launch sem argv revisado
+
 ## Launch a command
 
 Pass launcher options before `--`, then pass exactly one executable followed by

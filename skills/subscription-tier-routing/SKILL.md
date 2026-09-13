@@ -63,3 +63,11 @@ Roteamento que considera **weekly allowances por tier**, **cache hit rates**, **
 | GLM/Z.ai | Higher | $80/$168 | More | N/A | N/A | Scale |
 
 ---
+
+## Exemplo
+
+```text
+Assinaturas: Claude Max 5X + Codex Pro 5X → roteia por allowance restante, não só $/token
+Volume repetitivo: GLM $18 (cache alto estende a semana); fast mode só se urgência (~2x créditos)
+Banked reset promocional: usa antes do refresh; alerta se feature passa de 50% do budget
+```

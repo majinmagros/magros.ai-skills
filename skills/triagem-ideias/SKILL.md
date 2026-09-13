@@ -9,6 +9,13 @@ Ideia crua entra, **decisão fundamentada** sai. O objetivo não é construir �
 é decidir com o mínimo de esforço se vale investir. Rode ANTES de especificar
 ou planejar qualquer coisa.
 
+## Quando usar
+
+- "vale a pena essa ideia?", "devo investir nisso?", "go ou kill?"
+- Ideia crua precisa de veredito (avançar/arquivar/pivotar) com esforço mínimo
+- Evitar especificar/codar antes de validar dor e custo
+- Não use para: detalhar requisito já aprovado (isso é clarificar); codar
+
 ## Pipeline (5 fases, cada uma com saída explícita)
 
 ### 1. Intake — capture a ideia como dita

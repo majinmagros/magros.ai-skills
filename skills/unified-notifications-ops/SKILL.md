@@ -63,3 +63,11 @@ The goal is fewer, better notifications.
 | Class | Examples | Default handling |
 | --- | --- | --- |
 | Critical | broken default-branch CI, security issue, blocked release, failed deploy | interrupt now |
+
+## Exemplo
+
+```text
+Caos: CI + reviews + Linear + e-mail pingando tudo em todo canal
+Lane única: captura → classifica (severidade+dono) → roteia → colapsa dup → ação
+CI quebrada na main = interrupt; resto digest; sem fan-out cego p/ todo canal
+```
