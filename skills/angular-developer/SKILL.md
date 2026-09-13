@@ -63,3 +63,11 @@ When working with Angular components, consult the following references based on 
 If you require deeper documentation not found in the references above, read the documentation at `https://angular.dev/guide/components`.
 
 ## Reactivity and Data Management
+
+## Exemplo
+
+```text
+Tarefa: "componente lista de usuários com busca"
+ng generate component users-list → signals (search=input.signal) + resource p/ fetch
+Regra: scaffold via CLI, segue references/components.md, fecha com ng build verde
+```

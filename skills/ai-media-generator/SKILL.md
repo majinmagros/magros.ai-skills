@@ -32,3 +32,12 @@ Generates high-quality AI media prompts and automates browser execution.
 - [ ] Platform selected with trigger
 - [ ] Prompt scored ≥8
 - [ ] No generic slop tokens
+
+## Exemplo
+
+```text
+Pedido: "thumbnail YouTube, neon cyberpunk, texto curto"
+Plataforma: image → references/selector.md aponta Midjourney (estilo) ou fal.ai (custo)
+Prompt: "neon cyberpunk portrait, rain, high contrast --ar 16:9" (6 tokens de sinal)
+Gate: 9/10 → submit; se <8, refina antes de gastar crédito
+```

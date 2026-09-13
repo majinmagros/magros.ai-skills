@@ -62,3 +62,12 @@ path is a first-class interface, not a screen scrape.
 - Undocumented errors the agent cannot recover from.
 - One shared admin key for all agents.
 - Treating the DoorDash anecdote as a confirmed spec.
+
+## Exemplo
+
+```text
+Agente pede: search("pizza") → item id=pie-42, R$59,90
+order create(key=uuid-1, pie-42 x1) → order ord-9, status=pending_approval
+Humano aprova (acima do teto R$50) → status=confirmed
+Retry com mesma key=uuid-1 → retorna ord-9 (sem duplicata)
+```

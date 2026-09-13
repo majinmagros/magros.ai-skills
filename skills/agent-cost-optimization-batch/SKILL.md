@@ -63,3 +63,12 @@ Exemplo 500 accounts (50k coord + 10k/worker + 5k/verifier): **~70-80% savings v
 - **Watchtower nightly** (`0 2 * * *`): avalia 500 accounts → prioridades do dia; paralelismo 200, timeout 3h
 - **Funnel analysis nightly** (`0 3 * * *`): detecta drops de conversão (lookback 4 semanas) → sugere fixes
 - **SandboxPool**: `prewarm(repo, count=10)` antes de jobs críticos; get/return no loop; fallback cold start
+
+## Exemplo
+
+```text
+Job: watchtower nightly avalia 500 accounts (pode rodar 24h antes)
+On-demand all-Opus: $X/run → batch + fan-out barato: $0.25X/run
+Config: coordinator=opus (planning) + 500 workers=flash (extração) + verifier=sonnet
+Savings medidas: ~70% na fatura do mês
+```

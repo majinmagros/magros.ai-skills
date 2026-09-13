@@ -61,4 +61,13 @@ afternoon manage, close-out, confirm+log) work because each wakeup is
   reasoning effort the strategy was validated on.
 - Notifications (e.g. chat/DM digests at fixed times) follow the
   `approval-loop + morning-digest` pattern (G13): propose → human approves →
-  execute. The loop never places live orders from a notification alone.
+   execute. The loop never places live orders from a notification alone.
+
+## Exemplo
+
+```text
+Setup: APCA_API_BASE_URL=https://paper-api.alpaca.markets (keys de paper no .env)
+Wakeup open: lê strategy.md + progress.md → sinal: compra 10x AAPL a mercado
+Ordem paper: client_order_id=day1-aapl-01 → fill simulado → journal/2026-09-13-aapl.md
+Live: bloqueado — só com "aprovado live" humano + daily loss limit ativo
+```

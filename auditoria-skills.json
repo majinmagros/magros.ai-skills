@@ -1,62 +1,5 @@
 [
   {
-    "name": "agent-commerce-interface",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "agent-cost-optimization-batch",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "agent-guardrails",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ai-media-generator",
-    "score": 93,
-    "lines": 35,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "alpaca-broker-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "angular-developer",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "api-connector-builder",
     "score": 93,
     "lines": 65,
@@ -1335,10 +1278,35 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "agent-commerce-interface",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "agent-cost-optimization-batch",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "agent-eval",
     "score": 100,
     "lines": 65,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "agent-guardrails",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -1423,6 +1391,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "ai-media-generator",
+    "score": 100,
+    "lines": 44,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ai-regression-testing",
     "score": 100,
     "lines": 61,
@@ -1439,6 +1414,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "alpaca-broker-ops",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "analise-concorrentes",
     "score": 100,
     "lines": 59,
@@ -1449,6 +1433,13 @@
     "name": "android-clean-architecture",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "angular-developer",
+    "score": 100,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
