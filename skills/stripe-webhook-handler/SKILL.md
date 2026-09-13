@@ -54,3 +54,10 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
 - [ ] Responds 2xx < 3s; heavy work async
 - [ ] Live endpoint on canonical HTTPS domain, `tolerance` untouched
 - [ ] 4xx monitored (wrong secret or body parsed before verify)
+
+## Variante Razorpay (Batch 17a, #56)
+
+Mesmo padrao, outro provider: payment intent -> checkout -> webhook com
+verificacao de assinatura (segredo do webhook no backend, nunca no
+front). Local sem IP publico: ngrok/Cloudflare Tunnel. Confirme eventos
+subscritos (authorized/captured/failed) e responda 2xx rapido.
