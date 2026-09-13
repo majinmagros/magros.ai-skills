@@ -63,3 +63,12 @@ falar com outro agente. MCP não substitui A2A e vice-versa.
 3. **Implemente o Agent Card** do seu agente (identidade + capacidades +
    endpoint de Task). Ele é o que permite descoberta.
 4. **Exponha o endpoint de Task** (JSON-RPC 2.0 + SSE para streaming).
+
+## Exemplo
+
+```text
+Agente A (CRM) delega ao Agente B (faturamento, outro vendor):
+A → B: Task(submit, "emitir NF-e pedido #1234") → working (SSE) → completed
+B → A: Artifact(NF-e PDF + chave de acesso)
+Decisão: agente↔agente = A2A; se A precisasse só de uma API de NF-e = MCP
+```

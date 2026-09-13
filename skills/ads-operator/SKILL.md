@@ -63,3 +63,11 @@ CPA cai ~Z% em 7 dias").
 - Google: mutations via Google Ads API (client library); Meta: Marketing API
   (Graph). MCPs oficiais servem p/ leitura/descoberta — escrita repetida via
   API é mais barata em tokens e mais controlável.
+
+## Exemplo
+
+```text
+Auditoria: campanha C1, CPA R$48 (alvo R$30), termo Y gastou R$600 sem conversão
+Proposta A1: pausar termo Y → hipótese: CPA cai ~15% em 7 dias (risco: -10% volume)
+Gate: humano responde "aprovado A1" → executa via API → loga hipótese em cliente-x/log.md
+```

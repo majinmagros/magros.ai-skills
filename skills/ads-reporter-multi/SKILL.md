@@ -60,6 +60,14 @@ account change stays behind an approval gate.
 - `data-throughput-accelerator`: fast multi-account pulls done right.
 - `ads-creative-factory`: creative batches that feed this report.
 
+## Exemplo
+
+```text
+3 contas (BRL + USD), janela 7d: spend total R$12,4k, CPA R$31, ROAS 2,8x
+Mover: conta B CPA +40% vs janela anterior → hipótese: frequência 6,2 queimou audiência
+Gate: nenhuma mudança executada pelo report — proposta vai p/ aprovação em ads-operator
+```
+
 ## Sources
 
 - Meta Marketing API (insights, campaigns): https://developers.facebook.com/docs/marketing-api/

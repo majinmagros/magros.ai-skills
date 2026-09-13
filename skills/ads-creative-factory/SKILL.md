@@ -59,6 +59,15 @@ with tracking plus a report are.
 - `autopilot-content-factory`: autopilot posting after approval.
 - `ads-operator`: account ops and hypothesis log for live campaigns.
 
+## Exemplo
+
+```text
+Lote: 3 ângulos x 2 variantes = 6 criativos
+research/oferta-x/angles.md → copy/ (headline+texto+CTA) → creative/ (1080x1080 + carrossel)
+Review: keep 4, fix 1, drop 1 → publish com utm_source=meta&utm_campaign=oferta-x
+Report: report-2026-09-13.html com gasto, thumbnails e status por ad
+```
+
 ## Sources
 
 - Meta Ads Library (angle research): https://www.facebook.com/ads/library/

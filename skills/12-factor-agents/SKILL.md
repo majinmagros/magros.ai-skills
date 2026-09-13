@@ -58,6 +58,15 @@ volta de recuperação a cada passo.
 4. **Antes do autônomo**: confira 6 (pause/resume), 7 (humano no loop) e 12
    (reducer) antes de deixar o agente rodar sozinho.
 
+## Exemplo
+
+```text
+Revisão: agente de suporte com loop ReAct + 40 tools soltas
+Fator 3 (contexto): FAIL — joga histórico bruto na janela, estoura em 20 turnos
+Fator 8 (fluxo): FAIL — framework decide retries, sem DAG próprio
+Ação: fator 12 primeiro — reducer stateless + estado em DB; depois fator 3 — compacta erros resolvidos
+```
+
 ## Fontes oficiais
 
 - Metodologia: `github.com/humanlayer/12-factor-agents` (CC BY-SA 4.0; código Apache 2.0).

@@ -1,65 +1,5 @@
 [
   {
-    "name": "12-factor-agents",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "a2a-interoperability",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ads-creative-factory",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ads-operator",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ads-reporter-multi",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "aeo-geo-visibility",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "agent-commerce-interface",
     "score": 93,
     "lines": 65,
@@ -1304,6 +1244,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "12-factor-agents",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "9router-gateway",
     "score": 100,
     "lines": 37,
@@ -1318,10 +1267,55 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "a2a-interoperability",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "accessibility",
     "score": 100,
     "lines": 65,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ads-creative-factory",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ads-operator",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ads-reporter-multi",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "aeo-geo-visibility",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {

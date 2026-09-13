@@ -63,3 +63,12 @@ considered consistently across buyer prompts, not to hold one position.
 ## Sources
 
 - Google Search Quality Rater Guidelines (reputation of site and creators,
+
+## Exemplo
+
+```text
+Prompt set: 5 prompts de comparação ("melhor CRM para clínica")
+Rodada 1: citado em 1/5 (20%) — só no próprio site
+Ação: publica comparativo com dados próprios + pitch p/ 2 listicles do setor
+Rodada 2 (30d): citado em 3/5 (60%) — 2 via terceiros
+```
