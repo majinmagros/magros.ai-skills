@@ -37,3 +37,11 @@ NotebookLM vira biblioteca agêntica; Claude Code vira executor. Sem indexar/fat
 
 ## Referências
 
+## Exemplo
+
+```text
+50 PDFs na pasta → batch ingest no NotebookLM → chat "o que falta?" (gap-agent)
+Gap: sem benchmark 2026 → busca web → relatório → "importar?" (aprovado entra)
+Claude Code executa: query → XLSX estratégico editável (10% chat, 90% infra)
+```
+

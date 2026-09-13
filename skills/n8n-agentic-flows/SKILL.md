@@ -56,3 +56,11 @@ Ação final: POST em API, salvar em DB, enviar mensagem.
 - **Passar o mundo inteiro:** Enviar o payload gigantesco de um nó para o outro sem filtrar (estoura limite de token).
 - **Sem validação:** Confiar cegamente no output do LLM sem nós de guardrail.
 - **Ignorar MCP:** Tentar implementar lógica customizada de API em vez de usar servidores MCP (que já gerenciam autorização e contexto).
+
+## Exemplo
+
+```text
+Webhook recebe lead → nó prepara payload mínimo → agente MCP consulta DB (qualificada?)
+→ guardrail valida JSON → Gmail node envia qualificação
+Nunca: god node com tudo dentro; payload gigante entre nós; LLM sem validação
+```

@@ -13,6 +13,13 @@ Use this skill when speed comes from doing independent work at the same time:
 repo inspection, file reads, API checks, browser checks, build/test lanes,
 deploy readbacks, or multi-worktree implementation passes.
 
+## Quando usar
+
+- "faz isso bem mais rápido", "roda em paralelo", "acelera sem quebrar"
+- Lanes independentes (scan, testes, builds) com write surfaces isoladas
+- Muitos agentes concorrentes com tabela de verificação no fim
+- Não use para: writes colidindo (mesma tabela/arquivo); deploy destrutivo sem gate
+
 ## Core Pattern
 
 Turn urgency into a dependency graph before acting.

@@ -63,3 +63,11 @@ Each phase delegates — it does not do the work inline.
   `gh search code`, then Context7 / vendor docs, then package registries, then
   Exa. Prefer adopting a proven implementation over net-new code.
 - **2. Plan** — delegate to the `planner` agent (or `architect` /
+
+## Exemplo
+
+```text
+"Adiciona login": orch-add-feature → size small → research leve → plan → TDD → review → commit
+Gate 1 (humano aprova plano) antes do TDD; gate 2 antes do commit
+Security trigger (auth) → no mínimo standard, mesmo com 2 arquivos
+```

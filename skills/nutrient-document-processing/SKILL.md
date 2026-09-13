@@ -11,6 +11,13 @@ metadata:
 
 Process documents with the [Nutrient DWS Processor API](https://www.nutrient.io/api/). Convert formats, extract text and tables, OCR scanned documents, redact PII, add watermarks, digitally sign, and fill PDF forms.
 
+## Quando usar
+
+- "converte esse DOCX em PDF", "OCR nesse scan", "redige o CPF desse PDF"
+- Extrair texto/tabela, watermark, assinatura digital, preencher form PDF
+- Pipeline de documentos via API (NUTRIENT_API_KEY no env, nunca no chat)
+- Não use para: edição colaborativa (isso é google-workspace-ops)
+
 ## Setup
 
 Get a free API key at **[nutrient.io](https://dashboard.nutrient.io/sign_up/?product=processor)**
