@@ -9,6 +9,13 @@ metadata:
 
 Slash command (`/skill-stocktake`) that audits all Claude skills and commands using a quality checklist + AI holistic judgment. Supports two modes: Quick Scan for recently changed skills, and Full Stocktake for a complete review.
 
+## Quando usar
+
+- "/skill-stocktake", "audita minhas skills", "quais skills mudaram?"
+- Quick Scan (5-10min, só alteradas) vs Full Stocktake (20-30min, tudo)
+- Resultado em results.json com diff; re-avalia só o que mudou
+- Não use para: navegação/roteamento (isso é skill-map); limpeza de config (isso é config-gc)
+
 ## Scope
 
 The command targets the following paths **relative to the directory where it is invoked**:

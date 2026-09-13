@@ -63,3 +63,11 @@ Run a native Slack agent via Tag: the chat UI is decoupled from the transcript t
 - Chat-only harness: orchestration that lives only in the transcript and cannot rerun.
 - No adversarial pass: every reviewer approves, nothing is stress-tested.
 - Permanent harness with no review date: rots silently as repos and APIs drift.
+
+## Exemplo
+
+```text
+"Revisa esses 30 PRs": mock (forma da mensagem + rubrica) → harness MapReduce no repo
+Fan-out: N reviewers por lente + 1 adversarial que reprova aprovação fraca com prova
+Artefato HTML (veredito+evidência+owner) no Slack; loop diário com data de revisão
+```

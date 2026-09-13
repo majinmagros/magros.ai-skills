@@ -62,3 +62,11 @@ Fonte `wCSPgHpcxdc` (AIJasonZ) + Devin Fusion validado (cognition.com/blog/devin
 - **Sidekick persistente**: sub-agent mantém sessão resumível; o lead manda follow-up pelo mesmo canal e herda todo o contexto — tokens de histórico saem a preço de **cache (~10% do input novo)**.
 - **Advisor perde para orchestrator**: chamar um modelo forte como "conselheiro" exige reenviar o histórico inteiro full-price a cada consulta; orchestrator+executor com contextos próprios cacheados é mais barato e melhor (Devin Fusion: -35% custo no FrontierCode; Fable+sidekick -54% vs Fable puro).
 - No Claude Code isso é o padrão **agent teams** (SendMessage a sessão existente até shutdown explícito). Em tmux puro: `send-keys` + `wait-for -s <sinal>` como sinal de fim (ver `dmux-workflows`).
+
+## Exemplo
+
+```text
+pesquisa-layout coleta refs → build-site retoma por nome (herda contexto, sem re-explicar)
+Paralelo real: 1 worktree por sessão; supervisor Opus nota 0-100, corte 90, Haiku executa
+Sidekick persistente (cache ~10%) em vez de re-spawn full-price por consulta
+```

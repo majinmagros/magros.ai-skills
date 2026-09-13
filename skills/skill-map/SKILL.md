@@ -40,3 +40,11 @@ Use this skill to route a request to the right existing skill fast.
 - Not `skill-stocktake`: that skill audits quality of installed skills.
 - Not `config-gc`: that skill cleans dead config and stale entries.
 - Not `strategic-compact`: that skill suggests when to compact context.
+
+## Exemplo
+
+```text
+"Qual skill revisa meus hooks?": intent em 1 linha → busca (hookify-rules vs rules-to-hooks-auditor)
+Compara escopo/trigger/output → use existing (hookify-rules) — gap: nenhum
+Evita criar a 460ª skill duplicada antes de checar o índice
+```

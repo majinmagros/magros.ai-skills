@@ -63,3 +63,11 @@ a Next/React + Tailwind + TS repo. Includes a WordPress -> repo exit path.
 - Copying third-party text, images, or fonts without rights.
 - One giant agent rebuilding the whole page at once -> slow and blurry.
 - Skipping the token freeze -> every section drifts to its own palette.
+
+## Exemplo
+
+```text
+URL + stack Next/Tailwind/TS → captura (screenshots desktop+mobile, HTML, fontes, tokens)
+6 seções, 1 agente cada (tokens congelados) → visual diff por seção → mobile pass
+Gate: diff zerado + links 200 + build verde; WordPress: posts→arquivos + redirects
+```

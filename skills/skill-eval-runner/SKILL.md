@@ -63,3 +63,11 @@ instead (see Relations).
 - Write one observable check per criterion ("output includes X",
   "output avoids Y"). No vibe criteria ("feels clean").
 - Freeze the rubric before running. Changing it after seeing
+
+## Exemplo
+
+```text
+Skill X editada: 5 prompts dos triggers + 3 near-miss (não devem disparar)
+Braços pareados (com/sem skill, mesmo modelo) → juiz cego 0-2 por critério
+Veredito: +qualidade com +tokens? keep/drop por modelo + HTML com custo/tempo
+```
