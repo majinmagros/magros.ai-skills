@@ -9,6 +9,21 @@ metadata:
 
 Roadmap curado e estruturado para sair do zero absoluto até a atuação profissional como Engenheiro de IA, cobrindo fundamentos, APIs, RAG, agentes, avaliação e produção.
 
+## Quando usar (gatilhos)
+
+- "Como viro engenheiro de IA?"
+- "Roadmap de estudos de IA 2026"
+- "Por onde começo: RAG ou agentes?"
+- "O que estudar pra vaga de AI engineer?"
+- "Plano de estudos de IA por fases"
+
+## Exemplo
+
+```text
+Nível: sabe Python, nunca usou LLM API
+→ começa na Fase 2 (APIs + prompts) + projeto: chatbot com RAG simples
+```
+
 ## 0. O Papel do Engenheiro de IA
 Em 2026, a engenharia de IA substituiu o treino de modelos do zero (Machine Learning clássico) pela orquestração de **modelos fundacionais (LLMs, VLMs, SLMs)**, integrando-os a sistemas de software determinísticos (APIs, RAG, Agentes, MCP e MLOps/LLMOps).
 

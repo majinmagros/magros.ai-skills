@@ -8,6 +8,22 @@ description: Use when the user wants a lazy/vague prompt improved or adapted —
 Resolve a "preguiça humana": a IA só responde tão bem quanto a instrução
 (garbage in, garbage out). Esta skill estrutura o prompt antes de usar.
 
+## Quando usar (gatilhos)
+
+- "Melhora esse prompt"
+- "Meu prompt dá resposta ruim"
+- "Estrutura essa instrução"
+- "Prompt pra imagem/vídeo/código"
+- "Adapta esse prompt pro Claude/GPT"
+
+## Exemplo
+
+```text
+Lazy: "fala de vendas"
+Bom: "Roteiro de 60s p/ curso de inglês, tom urgente, CTA 'chama no zap'. Sem emoji."
+(pilar fraco era Restrições → corrigido)
+```
+
 ## 1. Os 4 pilares de um bom prompt
 
 | Pilar | Pergunta a responder |

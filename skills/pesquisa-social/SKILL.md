@@ -9,6 +9,21 @@ Busca a experiência REAL de quem usa, em vez de manchetes/artigos rankeados.
 Preenche o meio-termo entre busca web (rápida/rasa) e deep research
 (completa/cara/lenta).
 
+## Quando usar (gatilhos)
+
+- "O que estão falando desse produto?"
+- "Sentimento dos usuários sobre X"
+- "Reclamações sobre o modelo novo"
+- "Opinião de quem usou (last 30 days)"
+- "Isso é hype ou o povo gostou?"
+
+## Exemplo
+
+```text
+Tema: "Cursor vs Windsurf" → Reddit + HN + YouTube
+Convergência: "autocomplete bom, preço confuso" (12 menções, 3 fontes)
+```
+
 ## 1. Decida o nível (três degraus)
 
 | Degrau | Quando usar | Custo |

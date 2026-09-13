@@ -11,6 +11,22 @@ Use this skill before a prediction-market workflow touches user financial
 context, venue authentication, portfolio data, automation, or execution-capable
 tools.
 
+## When to Activate
+
+- Before a workflow touches venue auth or API keys
+- Before handling user portfolio data
+- Before adding automation near execution
+- When scoping a trade-planning worksheet
+- When unsure a step crosses into advice or execution
+
+## Example
+
+```text
+Scope: venue comparison worksheet
+Verdict: WARN — resolution rules differ per venue (mitigation: label sources)
+Blocked: order placement (needs separate plan + approval)
+```
+
 ## Review Gates
 
 ### Advice Boundary

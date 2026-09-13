@@ -8,6 +8,21 @@ description: Use when the user invokes /plan or explicitly asks for a plan/appro
 Gere um plano **decision-complete** e **ancorado nos arquivos reais** do projeto.
 NÃO escreva código. Pare e peça aprovação antes de qualquer execução.
 
+## Quando usar (gatilhos)
+
+- "/plan"
+- "Planeja antes de codar"
+- "Faz um plano e eu aprovo"
+- "Preciso de plano antes de mexer"
+- "Desenha a solução, não implementa"
+
+## Exemplo
+
+```text
+Objetivo: rate limit no /login
+Plano: 3 passos + validação (teste de abuso) → "Aprova, muda ou cancela?"
+```
+
 ## 1. Explore antes de planejar
 
 - Leia os arquivos relevantes (caminhos reais, não suposições).

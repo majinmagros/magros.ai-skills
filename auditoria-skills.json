@@ -1,67 +1,5 @@
 [
   {
-    "name": "pesquisa-social",
-    "score": 86,
-    "lines": 51,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "plan",
-    "score": 86,
-    "lines": 50,
-    "reasons": [
-      "desc longa",
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "prediction-market-risk-review",
-    "score": 86,
-    "lines": 62,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "prompt-builder",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ralphinho-rfc-pipeline",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "roteiro-engenheiro-ia-2026",
-    "score": 86,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar",
-      "sem exemplos"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "routines",
     "score": 86,
     "lines": 53,
@@ -3009,6 +2947,24 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "pesquisa-social",
+    "score": 100,
+    "lines": 66,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "plan",
+    "score": 100,
+    "lines": 65,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "plan-canvas",
     "score": 100,
     "lines": 65,
@@ -3037,6 +2993,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "prediction-market-risk-review",
+    "score": 100,
+    "lines": 78,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "prisma-patterns",
     "score": 100,
     "lines": 65,
@@ -3061,6 +3024,13 @@
     "name": "production-scheduling",
     "score": 100,
     "lines": 65,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "prompt-builder",
+    "score": 100,
+    "lines": 81,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3117,6 +3087,13 @@
     "name": "quarkus-verification",
     "score": 100,
     "lines": 51,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ralphinho-rfc-pipeline",
+    "score": 100,
+    "lines": 82,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3185,6 +3162,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "roteiro-engenheiro-ia-2026",
+    "score": 100,
+    "lines": 80,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {

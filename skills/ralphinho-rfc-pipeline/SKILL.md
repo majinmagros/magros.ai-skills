@@ -11,6 +11,23 @@ Inspired by [humanplane](https://github.com/humanplane) style RFC decomposition 
 
 Use this skill when a feature is too large for a single agent pass and must be split into independently verifiable work units.
 
+## When to Use
+
+- "This feature is too big for one pass"
+- "Split this epic into verifiable units"
+- "Run RFC-driven multi-agent execution"
+- "Units with merge queue and quality gates"
+- "Recover a stalled work unit"
+
+## Example
+
+```yaml
+unit: U-03-auth-middleware
+depends_on: [U-01, U-02]
+acceptance_tests: [abuse-429, valid-200]
+risk_level: tier-2
+```
+
 ## Pipeline Stages
 
 1. RFC intake
