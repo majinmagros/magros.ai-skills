@@ -63,3 +63,13 @@ Always encode output for its context: `HTML::Entities::encode_entities()` for HT
 | HTML output | `encode_entities()`, template auto-escape |
 | CSRF tokens | Generated, verified on state-changing requests |
 | Session config | Secure, HttpOnly, SameSite cookies |
+
+## Exemplo
+
+```perl
+#!/usr/bin/perl -T
+my ($id) = $cgi->param('id') =~ /^([0-9]+)$/ or die "bad id";
+open(my $fh, '<', $file) or die;  # three-arg, sem shell
+$dbh->do("SELECT * FROM u WHERE id=?", undef, $id);  # placeholder, nunca interpola
+print encode_entities($name);  # output encoding por contexto
+```

@@ -10,6 +10,13 @@ metadata:
 Use this skill when prediction markets are being considered as a data source,
 forecasting input, oracle-like signal, or decision-intelligence layer.
 
+## Quando usar
+
+- "esse mercado prevê bem X?", "usa Polymarket como sinal no dashboard?"
+- Probabilidade implícita com timestamp + fonte p/ decisão corporativa
+- Avaliar qualidade do sinal (liquidez, spread, resolução) antes de integrar
+- Não use para: dica de aposta/trade (nunca); tratar preço como verdade
+
 ## Guardrails
 
 - Do not treat market prices as objective truth.

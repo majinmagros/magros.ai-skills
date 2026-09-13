@@ -37,3 +37,11 @@ Use this skill when the answer itself must be easy to read.
 - Not `humanizar-texto`: that skill rewrites for tone and AI-slop removal.
 - Not `clareza`: that skill analyzes documents and organizes information.
 - Not `prompt-builder`: that skill improves prompts, not final answers.
+
+## Exemplo
+
+```text
+Antes: "A implementação da funcionalidade de autenticação multifatorial foi concluída com êxito."
+Depois: "Login em 2 etapas pronto. Você entra com senha e confirma no celular."
+Regra: resposta primeiro, termo difícil explicado na hora, próximo passo no fim
+```

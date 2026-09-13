@@ -63,3 +63,12 @@ guard so the duel converges instead of escalating forever.
 ## Relations
 
 - `grills`: owns adversarial questioning of one plan; this skill duels two plans against each other.
+
+## Exemplo
+
+```text
+Claude: monolito modular; Codex: microserviços → mesmo brief, 5 rounds máx
+Rounds 1-2 independentes (sem contaminação) → juiz cego pontua por rubrica
+Codex lidera 2x seguidas → fim antecipado; perdedor arquivado com motivo
+Anti-loop: scope p/ impressionar = stop; sem rematch no mesmo dia
+```

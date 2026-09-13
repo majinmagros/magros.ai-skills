@@ -53,3 +53,11 @@ Organize o projeto em: `custos`, `elementos` (referências/personagens),
 - [ ] Custo por vídeo registrado no ledger.
 - [ ] `env/` com segredos fora do git.
 - [ ] Estilo visual decidido e coerente (imperfeições = acabamento).
+
+## Exemplo
+
+```text
+Curta claymation 30s: narração escrita primeiro (cortes decididos pelo áudio)
+Cena 1: imagem com referência do personagem → anima (Kling) → ledger $8,40
+3 curtas encadeados = episódio; env/ fora do git; estilo congelado reutilizável
+```

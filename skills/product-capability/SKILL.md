@@ -63,3 +63,12 @@ Compress the ask into one precise statement:
 If this statement is weak, the implementation will drift.
 
 ### 2. Resolve capability constraints
+
+## Exemplo
+
+```text
+PRD: "checkout multi-moeda" → capability: "usuário paga em 3 moedas sem quebrar ledger"
+Fixo: PCI via provedor atual / Aberto: reembolso parcial cross-moeda (marca explícito)
+Artefato: docs/product/checkout-capability.md (reutilizável entre sessões)
+Sem: começar código com invariantes escondidas que o review descobre tarde
+```
