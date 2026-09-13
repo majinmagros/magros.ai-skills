@@ -63,3 +63,12 @@ composite — see Bias controls). Sum = 100%.
    report separately**) — Read the tension name and axis descriptions from the
    client's positioning brief. Plot both; the gap is the insight. The client's
    target quadrant is the single most important finding: who else is already
+
+## Exemplo
+
+```text
+Entrada: 6 concorrentes em tiers (2 diretos, 2 adjacentes, 2 aspiracionais)
+Brief: tensão = memorabilidade × contratabilidade; moat = voz própria
+Saída: 6 profile cards 1-5 nas 9 dimensões (polos da tensão separados, nunca médios)
+Gap: ninguém ocupa o quadrante-alvo → insight p/ competitive-report-structure
+```

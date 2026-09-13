@@ -25,6 +25,13 @@ Do not optimize until these exist:
 If the user asks for an unrealistic target, keep the ambition but make the loop
 bounded and measurable.
 
+## Quando usar
+
+- "deixa isso 20x mais rápido", "otimiza esse job", "qual implementação é melhor?"
+- Testar variantes (batch, workers, cache) com medição repetida e gate de corretude
+- Busca recursiva de hiperparâmetros com ledger e critério de parada
+- Não use para: palpite sem baseline; micro-otimização prematura sem métrica
+
 ## Loop
 
 1. Measure the baseline.

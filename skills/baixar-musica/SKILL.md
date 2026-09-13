@@ -11,6 +11,13 @@ description: Use when the user wants to download a song/audio from YouTube. Trig
 
 Procedimento para baixar o áudio de uma música do YouTube, dado nome + artista.
 
+## Quando usar
+
+- "baixa essa música pra mim", "quero o áudio de <música> do <artista>"
+- "baixa do YouTube", "preciso dessa faixa em mp3"
+- Lote de faixas ou playlist inteira para uso pessoal/permitido
+- Não use para: streaming online (só ouvir); conteúdo sem permissão de download
+
 ## Pré-requisitos (verificados)
 
 - `baixar_audio.ps1` em `~\baixar_audio.ps1` (e o `.bat` de duplo clique ao lado).

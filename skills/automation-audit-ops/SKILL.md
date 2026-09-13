@@ -63,3 +63,13 @@ Group them by surface:
 - research / monitoring
 
 ### 2. Classify each item by live state
+
+## Exemplo
+
+```text
+Pergunta: "o que está vivo aqui?"
+Inventário: 3 crons (2 verdes, 1 falhando há 9d) + 2 MCPs (1 sem auth) + hook duplicado
+Tabela: configurado / autenticado / verificado / quebrado / faltando
+Recomendação: keep 4, merge hooks duplicados, cut MCP sem auth, fix-next cron quebrado
+Nada é reescrito antes da tabela de evidências existir
+```

@@ -62,3 +62,12 @@ melhor investimento quase nunca é a ferramenta nova: é dominar a que você já
 - Regra: se a migração é cara ou impossível, o lock-in é o maior custo do produto.
 
 ### 6. Comparar com o stack atual — o que já assino entrega isso?
+
+## Exemplo
+
+```text
+Ferramenta: "novo agente X que substitui tudo", R$200/mês, hype dia 3
+Escopo real: 80% do que promete meu stack atual já faz (verificado nos docs)
+Recurso definidor: só 1 (integração nativa Y) → custa o plano Pro, não o teaser
+Lock-in: histórico e rotinas não exportam → decisão: IGNORAR (revisitar em 90d)
+```

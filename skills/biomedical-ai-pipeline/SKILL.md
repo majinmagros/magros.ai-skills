@@ -63,3 +63,12 @@ Pipeline end-to-end: **target ID** → **molecule generation** → **clinical tr
 - **Consenso:** os 6 relógios (features e treinos distintos) apontaram rejuvenescimento — 6 juízes independentes, mesmo veredito
 - **Dose dissociation:** pulmão responde a 60mg 1x/dia; idade biológica a 30mg 2x/dia → mecanismos parcialmente independentes
 - **UK Biobank:** proteínas que o envelhecimento empurra numa direção se moveram na oposta — não foi ruído aleatório
+
+## Exemplo
+
+```text
+Caso: fibrose pulmonar → mining aponta TNIK (target) → generativo propõe rentocertibe
+Trial: fase 2, 42 pacientes, sangue seriado → 6 relógios em consenso: -3 a -6 anos bio
+Validação: UK Biobank 55k confirma reversão proteica direcional (não ruído)
+Regra: sem consenso dos 6 + dose-response, candidato não avança
+```
