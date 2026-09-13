@@ -14,6 +14,13 @@ repeated rollouts or "Prime Gauss" style recursive prompting. Preserve the usefu
 part: repeated trials, prior memory, fresh information, and explicit marks.
 Remove the unsafe part: pretending the loop proves certainty.
 
+## Quando usar
+
+- "roda N vezes e decide", "busca recursiva com trilha de evidência"
+- Otimização estocástica, ensemble, exploração de ótimos locais
+- Decisão repetida que precisa de ledger (accept/watch/reject) + promotion gate
+- Não use para: loop simples sem decisão (isso é continuous-agent-loop); rodada única
+
 ## Ledger Contract
 
 Every rollout should record:

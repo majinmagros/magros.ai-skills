@@ -63,3 +63,11 @@ trim suggestions, use a size audit instead (see Relations).
 ### 3. Score drift and cut or fix
 
 - Drift rate = STALE + CONTRADICTED + ORPHAN over total rules.
+
+## Exemplo
+
+```text
+Pós-refactor: 20 regras (CLAUDE.md+AGENTS.md) → grep por comportamento real
+Veredito por regra: HOLDS (evidência arq:linha) / STALE / CONTRADICTED / ORPHAN
+Saída: drift report + handoff doc + plano delegator (restart fresh, sem trocar modelo no meio)
+```

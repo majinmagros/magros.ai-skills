@@ -62,4 +62,12 @@ volume é barato, quem decide/valida é forte. A métrica que importa é
 O **Cursor** tem roteamento de modelos embutido (sem OpenRouter) no plano Pro/Max:
 
 | Modo/Modelo | Característica | Quando usar |
+
+## Exemplo
+
+```text
+Job: 100 resumos/dia no Opus = R$X/mês → executor DeepSeek Flash + verifier Sonnet 25%
+Valida nota do barato antes de escalar; métrica = custo-por-tarefa, não $/token
+Caveat: testa o loop no OpenRouter antes (tool-use pode quebrar fora da Anthropic)
+```
 |---|---|---|

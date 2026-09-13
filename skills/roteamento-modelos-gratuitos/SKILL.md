@@ -63,3 +63,11 @@ automatizar tarefa determinística (isso é `automacao-deterministica`).
 ## Passo a passo (setup + manutenção)
 
 1. **Instale e rode** o 9router (npm global, `%APPDATA%\npm\node_modules\9router\` no Windows / `~/.npm-global/lib/node_modules/9router/` no Linux/Mac); endpoint em `http://127.0.0.1:20128/v1`.
+
+## Exemplo
+
+```text
+429 em 9router/meu-modelo → não é travamento: quota esgotada na cadeia
+Fix: põe modelo com 200 no topo do combo (my-combo, sem prefixo 9router/)
+Agente 24/7 no VPS: endpoint único + contas free rotacionando; custo = VPS
+```

@@ -63,3 +63,12 @@ Choose the right lane before searching:
 
 - use `exa-search` for fast discovery
 - escalate to `deep-research` when synthesis or multiple sources matter
+
+## Exemplo
+
+```text
+"Compara ferramenta A vs B hoje": exa-search (descoberta) → deep-research (síntese citada)
+→ market-research se vira recomendação ranqueada → knowledge-ops p/ guardar
+Separa: fato com fonte / evidência do usuário / inferência / recomendação
+Nunca: responder do cache quando busca fresca é barata
+```

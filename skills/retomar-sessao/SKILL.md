@@ -9,6 +9,13 @@ O historico de TODAS as sessoes do opencode fica em SQLite em
 `%USERPROFILE%\.local\share\opencode\opencode.db`. Quando uma janela trava
 e o usuario perde o contexto, a conversa continua la e pode ser exportada.
 
+## Quando usar
+
+- "perdi a sessao", "janela travou", "meu contexto sumiu", "opencode.db"
+- Retomar tarefa de sessão travada/perdida exportando o histórico p/ markdown
+- Listar sessões recentes e achar a certa por data/título
+- Não use para: salvar contexto de sessão viva (isso é ck-cli)
+
 ## Fluxo
 
 1. **Listar sessoes recentes** (achar a sessao travada pela data/titulo):
