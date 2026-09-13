@@ -60,6 +60,13 @@ deterministic MP4 (same input = identical output). Source: Nate Herk
    for small manual fixes (text size, position) instead of re-prompting
    a full render on long videos.
 
+## Motion Library (Batch 17d, #65)
+
+AI-slop has a look: same motions, same covers, zero identity. Keep a
+library of signature motions (complex, on-brand, word-synced) and
+generate one custom image per motion for what is being said. Reuse the
+library across videos; never ship the default pattern.
+
 ## Skill-ify (the compounding step)
 
 - The first edit uses one big explicit prompt (style, timing, layouts).

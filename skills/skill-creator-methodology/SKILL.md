@@ -28,7 +28,7 @@ Metodologia: **detectar repetição → documentar → criar → testar → vers
 
 ## Metodologia (4 Fases — resumo)
 
-**Fase 1 — Detectar repetição:** mesma tarefa ou explicação **3+ vezes** + ROI > tempo de criação → vira skill. (Checklist em `references/templates.md`.)
+**Fase 1 — Detectar repetição:** mesma tarefa ou explicação **3+ vezes** + ROI > tempo de criação → vira skill. Teste dos 3 Ss (FullCycle #67): reutilizavel? procedural nao-obvio (o modelo erra sem ajuda)? estavel por dias/semanas? 3×sim = vira skill e vale versionar no projeto. (Checklist em `references/templates.md`.)
 
 **Fase 2 — Documentar:** especificação com contexto (problema/gatilho/não-gatilho), inputs, steps, outputs, referências. (Template em `references/templates.md`.)
 

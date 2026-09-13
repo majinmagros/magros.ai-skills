@@ -38,6 +38,14 @@ The `suggest-compact.js` script runs on PreToolUse (Edit/Write) and combines two
 
 Tool count alone is a weak proxy for window pressure: a few large file reads or MCP responses can fill the window in very few calls, while many tiny calls can cross 50 with a near-empty window. The context-size signal fires when it actually matters.
 
+## Compactacao intencional (Batch 17d, #68)
+
+Toda compactacao perde conteudo — a automatica perde no ponto
+arbitrario (meio da task, some instrucao forte do inicio). Prefira
+compactar voce no limite logico com um prompt dizendo o que e
+relevante manter; nunca deixe o harness resumir sozinho o que ele
+acha importante.
+
 ## Hook Setup
 
 **Installed as a plugin?** No setup is needed. The plugin's `hooks/hooks.json` already registers `suggest-compact.js` (hook id `pre:edit-write:suggest-compact`, active in the `standard` and `strict` hook profiles). Do not copy the block below into `~/.claude/settings.json` — `~/.claude/scripts/` does not exist on plugin installs, and duplicating a plugin hook causes double execution.
