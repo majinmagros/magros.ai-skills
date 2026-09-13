@@ -12,6 +12,13 @@ Use public sources by default. Any Itô-backed data call requires the user to
 explicitly request Itô data and requires a scoped `ITO_API_KEY`. Never print,
 persist, or ask the user to paste a key into chat.
 
+## Quando usar
+
+- "contexto de prediction market p/ cesta Itô", "compara Polymarket vs Kalshi"
+- Brief read-only de eventos/venues/liquidez com fonte e timestamp
+- Exploração Itô via API só com pedido explícito + ITO_API_KEY com escopo read
+- Não use para: recomendação de aposta/trade (nunca); executar ordens
+
 ## Guardrails
 
 - Do not provide investment, legal, tax, or trading advice.

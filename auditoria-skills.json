@@ -1,59 +1,5 @@
 [
   {
-    "name": "hookify-rules",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "investor-materials",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "investor-outreach",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "ito-inference",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ito-market-intelligence",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "ito-training",
-    "score": 93,
-    "lines": 61,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
     "name": "knowledge-ops",
     "score": 93,
     "lines": 65,
@@ -2287,6 +2233,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "hookify-rules",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "humanizar-texto",
     "score": 100,
     "lines": 66,
@@ -2358,6 +2311,20 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "investor-materials",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "investor-outreach",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ios-icon-gen",
     "score": 100,
     "lines": 65,
@@ -2395,9 +2362,30 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "ito-inference",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ito-market-intelligence",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ito-trade-planner",
     "score": 100,
     "lines": 81,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "ito-training",
+    "score": 100,
+    "lines": 68,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },

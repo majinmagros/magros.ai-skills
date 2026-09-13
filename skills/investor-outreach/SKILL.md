@@ -63,3 +63,12 @@ If that context is missing, state that the draft still needs personalization ins
 Default:
 - day 0: initial outbound
 - day 4 or 5: short follow-up with one new data point
+
+## Exemplo
+
+```text
+Alvo: sócia da Fundo X (tese: SaaS vertical; portfólio tem ClinicaY)
+Cold: assunto específico + tie-in real (ClinicaY) + pitch 3 linhas + ask: call 20min
+Sem contexto de fit → declara "falta personalização" em vez de fingir pronto
+Follow-up dia 5 com 1 dado novo (MRR +12%), sem implorar
+```

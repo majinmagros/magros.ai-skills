@@ -9,6 +9,13 @@ description: "Use when this skill should be used when the user asks to create a 
 
 Hookify rules are markdown files with YAML frontmatter that define patterns to watch for and messages to show when those patterns match. Rules are stored in `.claude/hookify.{rule-name}.local.md` files.
 
+## Quando usar
+
+- "cria uma regra hookify", "bloqueia rm -rf", "avisa quando editar .env"
+- Precisa de warn/block automático em evento bash/file/stop/prompt
+- Dúvida de sintaxe: frontmatter fields, operators, conditions por evento
+- Não use para: hooks de sessão do opencode (isso é config do harness)
+
 ## Rule File Format
 
 ### Basic Structure

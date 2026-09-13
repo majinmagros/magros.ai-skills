@@ -63,3 +63,12 @@ If the user wants a web-native deck, pair this skill with `frontend-slides`.
 - show why now
 - include traction and proof points early
 - make the ask precise
+
+## Exemplo
+
+```text
+Fonte da verdade: MRR R$80k, raise R$2M (SAFE), 18 meses runway, 3 hires
+Deck: wedge → problema → demo → traction (números da fonte, sem conflito)
+One-pager: 1 frase + why now + ask R$2M; tudo bate com o memo
+Regra: número divergente trava o draft até resolver
+```

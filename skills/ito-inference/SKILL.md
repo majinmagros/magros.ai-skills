@@ -14,6 +14,13 @@ compute. Requests naming `ito-serve` route here; do not create or install a
 second `ito-serve` skill. ECC never SSHes to nodes, downloads weights, launches
 an engine, or exposes an endpoint; it never books, reserves, or spends.
 
+## Quando usar
+
+- Booking Itô concluído + "quero servir o modelo" (OpenAI-compatible endpoint)
+- Checar disponibilidade de serving gerenciado antes de prometer endpoint
+- Handoff de manifest revisado quando o backend canônico existir
+- Não use para: subir runner local/SSH (nunca substitui); sem booking válido (fail closed)
+
 ## Current production boundary
 
 Managed serving is unavailable today. The ECC bridge exposes only `login`,

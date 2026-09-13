@@ -12,6 +12,13 @@ backend (Layer 0.3). ECC does not implement a parallel training stack, trainer,
 or scheduler, and does no browser automation. This skill chains off a
 **completed booking** from `ito-compute`; it never books, reserves, or spends.
 
+## Quando usar
+
+- Booking Itô concluído + "fine-tune nesse metal" (SFT/DPO/RLVR)
+- Pré-treino ou RL com gates de eval por estágio via backend canônico
+- Checar o que o backend faz (data prep → paralelismo → checkpoint → gates)
+- Não use para: treinar local (nunca substitui); sem booking (stop)
+
 ## Prerequisite
 
 A completed booking from the `ito-compute` skill (booking id, node IPs, SSH,
