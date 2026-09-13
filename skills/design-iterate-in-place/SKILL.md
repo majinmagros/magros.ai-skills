@@ -63,3 +63,12 @@ not zero-to-one.
   design skill and artboard protocol of your current harness before use.
 - Variants A/B/C/D, Figma-style editable artboard (properties panel,
   click-to-edit into prompt), mid-process-not-zero-to-one rule, and the
+
+## Exemplo
+
+```text
+Landing com hero poluído (3 faixas tracejadas + glow neon + logo repetido)
+Diagnóstico: 3 elementos brigando → moodboard por seção (não global)
+Variantes A/B/C/D no mesmo brief → vencedora no artboard (click-to-edit)
+Fecha: A/B lado a lado vs original + delta list p/ implementação
+```

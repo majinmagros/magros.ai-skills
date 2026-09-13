@@ -1,60 +1,5 @@
 [
   {
-    "name": "crosspost",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "customer-billing-ops",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "dashboard-builder",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "data-throughput-accelerator",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "delivery-gate",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "sem secao Quando Ativar"
-    ],
-    "fix": "Adicionar secao ## Quando Ativar com 4-5 gatilhos literais"
-  },
-  {
-    "name": "design-iterate-in-place",
-    "score": 93,
-    "lines": 65,
-    "reasons": [
-      "desc longa",
-      "sem exemplos"
-    ],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "dm-keyword-automation",
     "score": 93,
     "lines": 65,
@@ -1847,6 +1792,13 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "crosspost",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "csharp-testing",
     "score": 100,
     "lines": 65,
@@ -1860,6 +1812,13 @@
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "customer-billing-ops",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -1877,12 +1836,26 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "dashboard-builder",
+    "score": 100,
+    "lines": 74,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "data-scraper-agent",
     "score": 100,
     "lines": 65,
     "reasons": [
       "desc longa"
     ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "data-throughput-accelerator",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -1907,10 +1880,26 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "delivery-gate",
+    "score": 100,
+    "lines": 72,
+    "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "deployment-patterns",
     "score": 100,
     "lines": 58,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "design-iterate-in-place",
+    "score": 100,
+    "lines": 74,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {

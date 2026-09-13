@@ -63,3 +63,12 @@ Put the case into one bucket before acting:
 
 | Case | Typical action |
 |------|----------------|
+
+## Exemplo
+
+```text
+Caso: cliente "cobrança duplicada" → IDs: cus_9x + 2 subs ativas mesmo plano
+Classe: compra duplicada acidental (não multi-seat) → reembolsa 1, mantém 1
+Portal: valida fluxo self-cancel p/ evitar reincidência; follow-up com recibo
+Regra: nunca reembolsa antes de classificar; sem expor card/PII
+```

@@ -16,6 +16,13 @@ This is distinct from reasoning gates (like `self-audit`): delivery-gate checks 
 
 This is the same pattern as CI pipeline gates — automated, deterministic checks that verify machine-readable facts rather than trusting self-reported status.
 
+## Quando usar
+
+- "instala o quality gate", "bloqueia finish sem checks", "stop hook"
+- Sessão complexa (3+ edits) terminando sem tocar learning libs
+- Disco acabando silenciosamente; racionalizações ("skip tests for now") no tail
+- Não use para: revisar qualidade do conteúdo (isso é self-audit)
+
 ## What It Checks
 
 | Check | Mechanism | On Hit |

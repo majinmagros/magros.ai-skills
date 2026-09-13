@@ -63,3 +63,12 @@ Recommended structure:
 4. service-specific section
 
 ### 4. Cut vanity panels
+
+## Exemplo
+
+```text
+Pedido: "dashboard Kafka no Grafana"
+Perguntas: lag por partição? (saúde) onde trava? (bottleneck) o que mudou no deploy?
+Board: overview → throughput → lag/recursos → 1 seção Kafka (consumer lag, ISR)
+Corte: 12 painéis vaidade sem threshold; todo painel com título, unidade e limite
+```

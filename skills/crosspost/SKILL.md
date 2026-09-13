@@ -63,3 +63,12 @@ Do not build a second ad hoc voice checklist here unless the user explicitly wan
 
 - keep it readable and direct
 - do not write fake hyper-casual creator copy
+
+## Exemplo
+
+```text
+Fonte: launch note (voz capturada no VOICE PROFILE)
+X: claim afiado + artefato, sem hashtag / LinkedIn: mesma tese + contexto p/ fora do nicho
+Threads: direto, semCreator-copy falso / Bluesky: espelho do X
+Regra: 1 ideia, 4 roupas — nunca o mesmo texto colado
+```

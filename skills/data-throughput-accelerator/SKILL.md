@@ -13,6 +13,13 @@ Use this skill when the bottleneck is moving, transforming, or saving lots of
 data. The goal is not just speed. The goal is faster correct data landing in the
 right place with proof.
 
+## Quando usar
+
+- "esse backfill tá lento", "acelera a ingestão", "sincroniza essas tabelas"
+- Backfill, ETL, carga de warehouse, catch-up de manifest crescendo sem parar
+- Comparar variantes (batch, workers, SQL) com gate de corretude (contagens + timestamps)
+- Não use para: otimizar query isolada sem volume (isso é postgres-patterns)
+
 ## First Distinction
 
 Separate these before optimizing:
