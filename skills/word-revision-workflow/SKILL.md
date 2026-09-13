@@ -58,6 +58,14 @@ This skill covers the Office gap: `google-workspace-ops` is Google-only and
   contradicts it), or UNVERIFIED (no source found).
 - MISMATCH and UNVERIFIED block acceptance of that edit until resolved.
 
+## Exemplo
+
+```text
+.docx com 12 comentários: tria ([x] acionável / [ ] pergunta / fora) por ordem do doc
+Track Changes ligado; 1 edit por comentário; claim "cresceu 40%" → fonte citada OK
+MISMATCH trava o aceite; log registra aceito/rejeitado/pendente por item
+```
+
 ### 5. Apply restricted edits
 
 - Allowed: grammar, spelling, punctuation, consistent terminology,

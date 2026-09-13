@@ -63,3 +63,11 @@ out, re-check until the checklist passes.
 - "Looks good to me" with no checklist -> unrepeatable QA.
 - Flagging taste as defect -> taste goes to discussion, not blockers.
 - Skipping re-check -> fixes that break another pass.
+
+## Exemplo
+
+```text
+Build novo "parece estranho": captura fixa (viewport+rota+seed) → 4 passes
+Achado: home|hero|contraste|alta|corrigir; typo: 3 famílias → 2; CTA secundário gritando
+Fixa → recaptura → checklist verde; 3ª recorrência vira regra do design-system
+```

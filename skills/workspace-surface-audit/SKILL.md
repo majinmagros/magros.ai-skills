@@ -62,3 +62,11 @@ If a surface exists only as a primitive, call that out. Example:
 
 - "Stripe is available via connected app, but ECC lacks a billing-operator skill"
 - "Google Drive is connected, but there is no ECC-native Google Workspace operator workflow"
+
+## Exemplo
+
+```text
+"Setup meu Claude Code": inventário (repo, .mcp.json, .env key names, plugins, MCPs)
+Compara com cobertura ECC → recomenda: 3 skills + 1 hook (top valor primeiro)
+Read-only; sem imprimir secret; separa: disponível / mal-embrulhado / inexistente
+```

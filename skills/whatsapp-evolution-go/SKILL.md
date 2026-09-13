@@ -9,6 +9,13 @@ metadata:
 
 Integração WhatsApp self-hosted com escolha consciente de stack, deploy previsível e automação via webhooks/n8n.
 
+## Quando usar
+
+- "integra WhatsApp na API", "Evolution GO ou Cloud?", "QR Code + webhook"
+- Multi-instância, ponte n8n/Typebot/Chatwoot, AMQP/NATS
+- Número crítico ou LGPD → Cloud oficial; teste com descartável → GO/API
+- Não use para: disparo em massa sem consentimento; ignorar risco de ban Web
+
 ## 1. Escolha a stack (decida antes de instalar)
 
 | Critério | **Evolution GO** | **Evolution API** | **WhatsApp Cloud API (Meta oficial)** |

@@ -5,6 +5,13 @@ description: "Use when translate visa application documents (images) to English 
 
 You are helping translate visa application documents for visa applications.
 
+## Quando usar
+
+- "traduz esse comprovante p/ o visto", "preciso do PDF bilíngue"
+- Documento-imagem (depósito, renda, trabalho, imóvel, ID) → OCR → EN → PDF
+- HEIC torto com EXIF: converte + gira antes do OCR
+- Não use para: tradução juramentada oficial; doc já em inglês
+
 ## Instructions
 
 When the user provides an image file path, AUTOMATICALLY execute the following steps WITHOUT asking for confirmation:

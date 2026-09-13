@@ -61,3 +61,11 @@ Gere PDF (`l.402-403`) e, se GO, valide no mundo: página de vendas + Google Ads
 - `triagem-ideias` — versão leve 5 fases sem swarm
 
 ## Checklist
+
+## Exemplo
+
+```text
+Ideia: app de agendamento p/ barbearias → scrape: 3 apps >1M installs, 38% 1-2 estrelas ("não confirma horário")
+Swarm 100: 31% comprariam a R$29/mês → PIVOT (dor real, oferta errada: garantia de confirmação)
+Validação real: landing + Ads + checkout; só compra conta
+```

@@ -62,3 +62,11 @@ Deterministic steps run as scripts; the model only decides cuts and hooks.
 - `autopilot-content-factory`: scheduled posting after drafts are approved.
 
 ## Sources
+
+## Exemplo
+
+```text
+Bruto 40min → Whisper local (timestamps por palavra) → corta gaps >0,6s (respira ok)
+3 hooks (claim/pergunta/payoff) → 3 drafts 9:16 + legendas na safe area
+Humano: keep 2, fix 1 → só aprovados vão ao polish (nada auto-publica)
+```
