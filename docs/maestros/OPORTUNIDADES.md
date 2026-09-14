@@ -821,6 +821,18 @@ Enrich aplicado: `ai-first-engineering` (3 disciplines). Gaps novos G28/G29 regi
 
 ---
 
+## Errata de redundância — auditoria 2026-09-13 (resposta a "há duplicidade?")
+
+Verificação por evidência (grep + diff de ids no relatório + unicidade do catálogo):
+
+1. **Re-análise real (4 vídeos, Batch 17a #54–57)**: os 4 do @pavanadhav já tinham sido analisados antes (#35–38, outra máquina) — inclusive GERARAM os gaps que viraram `hyperledger-fabric-generator` e `stripe-webhook-handler`. O `diff` os listou como `transcritos_nao_analisados` porque o `ANALISADOS.json` local desta estação não tinha as marcas (mesma causa-raiz dos 10 do Batch 14). Vereditos desta re-análise **bateram com os antigos** (coberto, sem ação); único delta: nota variante Razorpay no `stripe-webhook-handler`. Custo: retrabalho de leitura; dano: zero (nenhuma skill duplicada). Marcados agora — não reaparecem.
+2. **Dead-ends re-listados (não é redundância)**: `SGodxQHnVxc`/`Rg7DlYJoRl0` (dead-end bot-check → retry OK, mudança de estado documentada) e os 6 shorts @claude sem legenda (citados nos Batches 12/14/17e porque o `diff` os relista eternamente como `sem_transcricao` — nunca terão transcript; veredito estável).
+3. **Skill nova**: `hyperframes-codex-video` é única no repo (grep: 0 ocorrências fora do próprio arquivo; Non-triggers separam de `remotion-video-creation` e `video-cut-pipeline`).
+4. **Gaps G27/G28/G29**: não materializados em nenhum arquivo (grep: 0 hits) — seguem pendentes, sem duplicata.
+5. **Catálogo**: `docs/data/skills.json` com 460 ids únicos, 0 duplicados.
+
+---
+
 ## Batch 17i — 2026-09-13 (@colemedin: 4 analisados, retry pós bot-check OK)
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
