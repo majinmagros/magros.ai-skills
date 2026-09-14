@@ -794,6 +794,33 @@ Enriches aplicados: `llm-leaderboard-tracker` (watchlist Batch 17h), `eval-harne
 
 ---
 
+## Batch 17j — 2026-09-13 (uploads frescos do dia: 18 vídeos, 12 canais)
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 114 | **GPT-6 Astra Software Factory** (`joKb_QMmglM` - @ColeMedin) | Factory OSS (PRD/issue-in → código validado, 24/7, Hostinger KVM2 + MCP deploy) cada vez mais viável com Astra | ✅ **NOVO** | **Gap G29** `software-factory-orchestrator` (confirma sugestão do Batch 14; materialização pendente) |
+| 115 | **Deepseek did it again** (`U-rsvXds9ck` - @matthew_berman) | DeepSeek V4.1 Flash 552B MoE (bench ~Opus 5/GPT 5.6 Soul; autor achou abaixo no prático) | ✅ **NOVO** | Watchlist `llm-leaderboard-tracker` (V4.1 + ressalva autor) |
+| 116 | **We need to talk about this** (`jQIeVznGG3k` - @matthew_berman) | Ansiedade/doomerismo transparente (pesquisadores saindo, aceleração) | ⚠️ **Opinião** | Sem ação |
+| 117 | **Navier-Stokes solved** (`e7t9HU2Z6t8` - @matthew_berman) | OpenAI anuncia solução Millennium (didático) | ⚠️ **Notícia** | Sem ação (ciência) |
+| 118 | **The Real Risk of AI Agents** (`x26cPhhLe-0` - @celinexu6598) | 3 riscos de time: surrender (aceitar sem pensar), debt (sistema que ninguém entende), tax (N agentes, 1 cérebro) + disciplinas | ✅ **NOVO** | Enrich `ai-first-engineering` (3 disciplines) |
+| 119 | **15 GitHub Repos** (`McKnT5TwAAo` - @maestrosdaia) | Roundup: DeepSeek Harness 215k stars (tudo-é-plugin), agent OS, phone agent, Nvidia scanner, solo CRM | ✅ **NOVO** | Exercício `avaliar-ferramenta-ia` (DeepSeek Harness primeiro) |
+| 120 | **ChatGPT Image 2.5 Review** (`z-a8ac7vzbM` - @maestrosdaia) | Hands-on: 5 ferramentas, sketch, templates, planos/limites | ✅ **NOVO** | Corrobora enrich #47 — sem edit |
+| 121 | **Amateurs write prompts** (`JPkc_NM9dEk` - @maestrosdaia) | Prompt = nível 1 (alfabetização); pros constroem sistemas (loops, graphs) | ✅ **NOVO** | Corrobora `prompt-builder` + grafos — sem edit |
+| 122 | **Dev Market Split in Two** (`4Z62lfGyzqo` - @attekitadev) | 200k layoffs vs vagas abertas (dados, sem sensacionalismo) | ⚠️ **Carreira** | Tangencia `roteiro-engenheiro-ia-2026`, fino — sem edit |
+| 123 | **Programmers Quitting** (`4RoAU3tqsw8` - @Sujeitoprogramador) | "Pedreiro é o futuro", junior squeeze (1 dev = 3-4 juniors) | ⚠️ **Opinião** | Sem ação |
+| 124 | **Navier-Stokes (Bob)** (`mFW91nkNokU` - @inteligenciamilgrau) | Mesmo anúncio, treta Anthropic (quem roubou quem) | ⚠️ **Notícia** | Sem ação (ciência) |
+| 125 | **FREE Deepseek V4.1 (Work Buddy)** (`MqIoN6D_vu0` - @aicodeking) | V4.1 grátis 2 semanas no Work Buddy + demo com Impeccable | ✅ **NOVO** | Watchlist já tem V4.1 (promo datada, sem edit) |
+| 126 | **6 AI Professions** (`nZuB7vop-Mw` - @anwarhermuche) | Profissões reais de IA (LinkedIn: a que mais cresce) | ⚠️ **Carreira** | **Coberto** por `roteiro-engenheiro-ia-2026` |
+| 127 | **GPT ASTRA test** (`9cqGLxvaxdI` - @gucampelo) | Hands-on Astra (caro, consumo alto), LLM vs harness explicado | ✅ **NOVO** | Corrobora custo Astra — sem edit |
+| 128 | **Decathlon site react** (`VpzAaqoOZsk` - @gucampelo) | Crítica de design (vintage/cartoon, hover, sutileza) | ⚠️ **Reagindo** | Sem ação (fino p/ skill) |
+| 129 | **AI took junior jobs?** (`Rg7DlYJoRl0` - @KarineLago) | Dados Stanford/ADP (UK -45%, expostos -11%), paradoxo BR, 5 movimentos | ✅ **NOVO** | **Coberto** por `roteiro-engenheiro-ia-2026` |
+| 130 | **Ratos #33 semanal** (`2x3gE2ccMZY` - @ratosdeia) | DeepSeek V4.1 + cautela bench-gaming ("teste na prática") | ✅ **NOVO** | Corrobora `agent-eval` (validar antes) — sem edit |
+| 131 | **Meeting → Proposal/CRM em 10min** (`DSxXLhYX8Rk` - @ratosdeia) | Grava tudo → alimenta AI OS (memória, proposta, CRM, tasks) | ✅ **NOVO** | **Coberto** por `meeting-task-listener` + `context-ledger` |
+
+Enrich aplicado: `ai-first-engineering` (3 disciplines). Gaps novos G28/G29 registrados (pendentes). Nenhuma skill nova.
+
+---
+
 ## Batch 17i — 2026-09-13 (@colemedin: 4 analisados, retry pós bot-check OK)
 
 | # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |

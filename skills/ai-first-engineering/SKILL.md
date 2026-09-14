@@ -69,3 +69,15 @@ Raise testing bar for generated code:
 - required regression coverage for touched domains
 - explicit edge-case assertions
 - integration checks for interface boundaries
+
+## Three Disciplines (Batch 17j, #118)
+
+AI-assisted teams rot invisibly: (1) cognitive surrender — engineer
+accepts confident output without thinking (fix: write your own guess
+FIRST, then compare; ask what the AI assumes and what would prove it
+wrong); (2) cognitive debt — system nobody understands (fix: require
+real explanations, rotate ownership, review architecture not diffs,
+decisions written in human words); (3) orchestration tax — N agents,
+one brain (fix: attention architecture — standardize evidence format,
+exceptions over routines, batch similar decisions, automate boring
+checks, clear escalation).
