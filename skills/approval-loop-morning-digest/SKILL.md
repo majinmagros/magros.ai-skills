@@ -71,3 +71,7 @@ in `routines` and crons; this skill is the loop itself.
 Humano: "approved A1" → executa só A1 → responde DONE + id da mudança + log
 Sem token = nada executa (silêncio nunca é sim)
 ```
+
+## Playbook paid-traffic (leva YouTube rodada 8)
+
+Para o slot de tráfego pago do digest: coleta multi-API com refresh de token, comparativos 7/14 dias e YoY, funil por canal. Use template pronto + variáveis (não gere HTML do zero todo dia): gere 5 opções, escolha 1, refine. Valide a análise antes de investir no visual. Ver unil-cro-watch para vigilância contínua entre digests.

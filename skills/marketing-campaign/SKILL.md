@@ -71,3 +71,7 @@ Brief: feature X → research (market-research: público + 3 concorrentes) → �
 Ordem: landing → e-mails (1 propósito cada) → social via content-engine → vídeos → ads → calendário
 Gate: hero passa no teste 5s; CTA único e merecido por peça; mesma voz em tudo
 ```
+
+## Rubrica de julgamento (leva YouTube rodada 8)
+
+Execução coberta acima; antes de produzir, julgue: copy (1 promessa por peça? objeção quebrada? CTA único?), oferta (preço/risco/garantia claros?), assunto de email (curiosidade + relevância em <50 chars?), pricing (âncora + decoy + garantia?). Peça reprovada na rubrica volta para revisão, não para veiculação.

@@ -56,3 +56,7 @@ project-root/
 - [ ] Secrets in env/`.env`, never in agent files or `CLAUDE.md`
 - [ ] Cost tracking per session in `data/logs/<date>-costs.json`
 - [ ] One project = one Agentic OS
+
+## Método CHIA — loop de melhoria contínua (leva YouTube rodada 8)
+
+Contexto-pasta + Habilidades + Integrações + Automações em loop: a cada ciclo (episódio, semana, sprint), adicione 1 skill OU 1 integração nova ao kernel. Nunca considere o OS pronto. Registre o delta por ciclo (o que entrou, o que melhorou, o que removeu). Ver outines para agendamento e graphify para mapa do contexto.

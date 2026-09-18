@@ -71,3 +71,7 @@ Post: "comenta EBOOK que te mando" → keyword EBOOK → DM com asset + 3 pergun
 Link: ?utm_source=instagram&utm_medium=dm&utm_campaign=ebook (1 por keyword)
 200 envios, 60 cliques, 0 conclusões → kill keyword; qualificadas → closer humano
 ```
+
+## Playbook Instagram (leva YouTube rodada 8)
+
+Para DM de Instagram (estilo ManyChat): 1 keyword por post/carrossel + CTA no criativo + mini-chat de entrega na DM. Teste com conta fria antes de escalar. Para o funil completo long→shorts→DM, orquestre com epurpose-shorts-dm-funnel.

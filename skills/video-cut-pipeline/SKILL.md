@@ -77,3 +77,7 @@ Bruto 40min → Whisper local (timestamps por palavra) → corta gaps >0,6s (res
 3 hooks (claim/pergunta/payoff) → 3 drafts 9:16 + legendas na safe area
 Humano: keep 2, fix 1 → só aprovados vão ao polish (nada auto-publica)
 ```
+
+## Convenção keyword-marcador (leva YouTube rodada 8)
+
+Marque cortes com palavra-chave FALADA no vídeo (ex.: diga a keyword em voz alta no ponto de corte). A keyword vira EDL: transcrição → timestamp da keyword → corte automático. 1 keyword por corte, sem exceção. Para funil completo (CTA + DM + multi-conta), orquestre com epurpose-shorts-dm-funnel; para embalagem, youtube-packaging.

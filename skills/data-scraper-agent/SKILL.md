@@ -63,3 +63,7 @@ Before marking the agent complete:
 "Track new GitHub repos tagged with 'llm' or 'agents' — summarise each one"
 "Collect Chief of Staff job listings from LinkedIn and Cutshort into Notion"
 "Monitor a subreddit for posts mentioning my company — classify sentiment"
+
+## Camada anti-bot + fallback (leva YouTube rodada 8)
+
+Para alvos anti-bot (X/Reddit/YouTube 403, layout que muda): mantenha 2 rotas por fonte (primária + fallback) e detecte quebra por seletor ausente, não por erro genérico. Quando a plataforma muda o layout, só a rota afetada é reescrita — o pipeline continua. Para gating de tasks pagas/bloqueadas, use pause-gate (pausa antes de submit) e para tutoria, modo explica-passo + gera-similar + corrige. Ver rowser-qa para verificação visual.

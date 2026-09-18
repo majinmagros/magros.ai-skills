@@ -62,3 +62,7 @@ Fonte: Batch 14 re-analise #113/#127 (videos Karine Lago + Gabriel Adamuchi).
 - **Quando reaproveitar**: time minerador -> copywriter -> audiovisual
   -> social media espelha a factory; rotina agenda dispara o chefe.
 - **Preco**: valor citado no video envelheceu. Confira o plano vigente
+
+## Composição repurpose transcrição→semana (leva YouTube rodada 8)
+
+Orquestração documentada: 1 transcrição → reels verticais (<3min/notícia via ideo-cut-pipeline) + carrossel por notícia (via ds-creative-factory) + story com CTA → calendário semanal → agendamento (social-publisher) → DM por keyword (dm-keyword-automation). Esta skill é o maestro; a execução mora nas skills citadas.

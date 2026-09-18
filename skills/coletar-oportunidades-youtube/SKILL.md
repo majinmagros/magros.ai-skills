@@ -63,3 +63,7 @@ Config por env:
 - `YT_CHANNEL` (padrão `https://www.youtube.com/@maestrosdaia/videos`)
 - `YT_DIR` — pastas de transcrições locais, separadas por `;`. **Sempre setar
   explicitamente** — o default (`~/projetos/...`) expande para a pasta do
+
+## Radar 4 fontes + curadoria (leva YouTube rodada 8)
+
+Além do YouTube: WhatsApp (links do grupo → links.md com resuminho), Gmail (newsletters), creators favoritos e news web dos últimos dias. Humano marca o que fica; ordene o roteiro por arco emocional (impacto → meio → picos). Ver pesquisa-social para sentimento e data-scraper-agent para coleta.
