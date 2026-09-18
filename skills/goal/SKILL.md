@@ -54,3 +54,22 @@ Antes de começar, registre em disco (`.opencode/goals.md`, ou use o task list):
 
 - Um objective mal escrito (sem oráculo) permite "positivamente inexistente".
   Se o goal vier vago, refine com /grilling ou pergunte até ficar mensurável.
+
+## 5. Template provable + verifier loop (leva YouTube rodada 5)
+
+Template canônico do goal:
+
+```markdown
+## Goal: <one measurable end state>
+Prove it by: <oráculo exato>
+Constraints: <o que NÃO pode mudar>
+Stop after: <N turns sem progresso → parar e reportar>
+```
+
+- **Verifier separado** — um modelo barato (ex.: Haiku) dá veredito a cada
+  turno/bloco: goal avançou, estagnou ou derivou. Veredito `stalled 2x` = parar,
+  não insistir.
+- **Auto-mode explícito** — declare se o goal roda autônomo (sem aprovação por
+  passo) ou com gates. Autônomo sem stop rule é loop infinito pago.
+- **Fan-out com prova por branch** — goal paralelo (N agentes) exige proof
+  independente por branch antes do merge; branch sem proof não integra.

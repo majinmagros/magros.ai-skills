@@ -57,3 +57,17 @@ Teste mental: a saída depende de decisão/criatividade? Sim → IA. Não → sc
 
 - Automação não substitui agente — elimina o trabalho burro do agente para ele
   sobrar para o que importa.
+
+## 5. Verify + cost-gate + idempotency (leva YouTube rodada 5)
+
+Antes de ligar qualquer schedule/webhook externo:
+
+- **Validate local primeiro** — TDD local + DM/teste de ponta a ponta com custo
+  medido antes de migrar. `hosted proof test` (run de prova no scheduler com
+  schedule desligado) antes do `enable`.
+- **Teto custo/run** — defina ex.: $0.25/run; meça o real (ex.: $0.0133) e
+  alerte se 3 runs seguidas estourarem 2x o teto.
+- **Idempotency key** — flag `delivered` (ou hash do payload): mesmo conteúdo
+  12:01 vs 12:33 = skip duplicata. Teste a duplicata de propósito antes do go-live.
+- **`.env` nunca no repo** — segredos vão para as env vars do scheduler, copiados
+  à mão. Repo privado + `.env` no `.gitignore` + prova de que nada vazou no log.

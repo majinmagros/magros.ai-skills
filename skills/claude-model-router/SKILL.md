@@ -58,6 +58,20 @@ metadata:
 - Regra: esforço máximo só quando a task exige; no resto, o esforço
   padrão entrega igual por menos tokens.
 
+## Enriquecimento rodada 5 — matriz effort + cache (Claude oficial)
+
+- **Comece em medium, suba se preciso** — esforço default medium; só escale
+  para high/max quando a task prova que precisa (qualidade insuficiente ou
+  horizonte longo). Esforço máximo de saída não é default.
+- **Regra do cache** — em threads agênticas longas, leituras repetidas do
+  contexto podem custar ~10% via cache. Prompts estáveis + fluxo repetitivo
+  = exija cache; sem cache, troque o fluxo antes de trocar o modelo.
+- **Modelo mais inteligente pode custar menos por tarefa** — Fable/Opus que
+  resolve em 1 passada sai mais barato que Sonnet em 5 tentativas. Compare
+  custo-por-tarefa-concluída, nunca preço-por-token.
+- **Subagents sempre baratos** — workers delegados rodam no modelo barato
+  por padrão; só o architect/orchestrador principal usa o modelo forte.
+
 ## Referências Oficiais
 
 - [Luciana Papini Video](https://www.youtube.com/watch?v=Bezlzmti6_U)

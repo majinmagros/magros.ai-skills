@@ -60,6 +60,22 @@ End-to-end secure corporate RAG: ingest -> chunk -> filter by ACL -> hybrid retr
 - LangChain: splitter -> embeddings -> hybrid retriever -> contextual compression; keep the ACL filter before compression.
 - Both stacks share the same contract: profile in, filtered chunks out, citations attached.
 
+### 7. Team-brain: single-table + RLS + MCP contract (leva YouTube rodada 5)
+
+Não compartilhe um agente — compartilhe a base. Um agente pessoal por pessoa
+(personalidade + memória individual) + knowledge base central via MCP read-only.
+
+- **Tabela `documents` canônica** — `title, text, url, author, domains, metadata,
+  source`. Conectores moldam origem→documento (ex.: Slack thread → author/domains).
+- **Labels na ingestão** — coluna `domains` (multi-label p/ cross-grupo). Tabela
+  `mcp_tokens` (token→escopo) + tabela `principals` (user→grupos, `leadership=all`).
+- **RLS enforced no DB, nunca no agente** — gate no banco (row-level security);
+  agente que filtra na hora é burlável por prompt injection. Default invisível:
+  `no match = no access` (não confundir com conhecido-mas-bloqueado).
+- **Contrato MCP (5 tools)** — `identify/auth`, `search documents`, `search code`
+  (separado), `fetch` (doc inteiro com check), `who-knows` (expert finder via
+  author → pessoa p/ follow-up). Remote MCP: URL + Authorization token.
+
 ## Anti-Patterns
 
 - RAG as truth serum: claiming grounded output cannot hallucinate.

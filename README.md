@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **491 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **492 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
 - **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **80 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **81 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -104,6 +104,14 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `self-improvement-ladder` | Governança da escada B0–L5: banco de experiências, repair-procedures, gate estrutural≠efetivo, anti-benchmark-gaming. | agentic-patterns |
 
 Enrichments cirúrgicos da rodada: `agent-misbehavior-controls` (+legibilidade emergente, +bateria RL-stress, +janela CoT), `eval-harness` (+Petri/paridade prod↔teste), `fusion-harness` (+coordenador evoluído).
+
+### Autorais — leva YouTube rodada 5 (2026-09-18, +3 vídeos + 5 enriches)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `codex-subscription-offload` | Exporta automação da subscription para código + scheduler externo: TDD local, idempotência, `.env` à mão, hosted proof test, 3 triggers. | agentic-patterns |
+
+Enrichments da rodada: `automacao-deterministica` (+verify/cost-gate/idempotency), `rag-corporativo-seguro` (+team-brain: single-table, RLS no DB, contrato MCP), `goal` (+template provable, verifier loop, fan-out), `claude-model-router` (+matriz effort, regra de cache).
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 
