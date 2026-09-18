@@ -60,9 +60,9 @@
     },
     "@claude": {
       "ultimaColeta": "2026-09-18",
-      "analisados": 3,
-      "ultimoVideoId": "71-8fJIGi34",
-      "atualizadoEm": "2026-09-18T17:41:43.643Z"
+      "analisados": 6,
+      "ultimoVideoId": "PQGxYvkMobQ",
+      "atualizadoEm": "2026-09-18T17:57:06.460Z"
     },
     "@aicodeking": {
       "ultimaColeta": "2026-09-18",
@@ -107,16 +107,22 @@
       "atualizadoEm": "2026-09-14T00:10:16.805Z"
     },
     "@KarineLago": {
-      "ultimaColeta": "2026-09-11",
-      "analisados": 7,
+      "ultimaColeta": "2026-09-17",
+      "analisados": 2,
       "ultimoVideoId": "Rg7DlYJoRl0",
-      "atualizadoEm": "2026-09-14T00:10:26.106Z"
+      "atualizadoEm": "2026-09-18T17:57:06.128Z"
     },
     "@ratosdeia": {
       "ultimaColeta": "2026-09-18",
       "analisados": 1,
       "ultimoVideoId": "WnZsMYeR7aA",
       "atualizadoEm": "2026-09-18T17:17:41.067Z"
+    },
+    "@AIJasonZ": {
+      "ultimaColeta": "2026-09-16",
+      "analisados": 1,
+      "ultimoVideoId": "GkGufbIVVC8",
+      "atualizadoEm": "2026-09-18T17:57:05.749Z"
     }
   }
 }

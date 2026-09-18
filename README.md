@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **483 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **490 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
 - **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **72 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **79 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -84,6 +84,18 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `claude-admin-model-governance` | Playbook de governança: defaults por role, entitlements, effort caps, custo-por-tarefa. | agentic-patterns |
 | `support-agent-report-card` | QA de suporte: golden set 16+ (mystery+adversarial), policy versionada, rerun, relatório client-ready. | optimization-workflows |
 | `system-one-judgment-triage` | Triagem barata (~100-200ms): bundle Choice/Score/Prob, negação explícita, other/unknown + human review. | workflow-quality |
+
+### Autorais — leva YouTube rodada 3 (2026-09-18, +6 vídeos)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `ugc-seedance-talking-head` | UGC talking-head fim-a-fim: trends → vibe-clone JSON → Seedance → demo sem rosto → 1 demo × N hooks → ledger $/s. | media-generation |
+| `health-coach-wearables` | Coach de bem-estar via wearables (MCP + fallback manual): coleta semanal, análise simples, 1 mudança por vez, sem diagnóstico. | operator-workflows |
+| `cartao-pontos-optimizer` | Otimizador PF de cartões: 2-6 faturas → gasto por categoria → 1 cartão por benefício → cancela/downgrade + plano 90d. | business-content |
+| `linkedin-inbox-triage` | Triagem de inbox LinkedIn em 4 buckets, draft-first, segredo nunca vai ao bot, resposta com 1 comando. | social-distribution |
+| `junior-seniorizado-playbook` | Hiring-readiness verificável: 5 movimentos, rubrica "sabe dizer se a IA fez tá certo?", projeto dono-real, filtro de empresas. | business-content |
+| `claude-safety-monitoring-window` | Política da janela rolante de monitoramento (~30d): o que retém, por quê, checklist de aceite e revisão. | security |
+| `claude-zero-retention-frontier` | ZDR + Frontier Safeguards: matriz de decisão, custódia BYOK no cloud do cliente, transição faseada. | security |
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 

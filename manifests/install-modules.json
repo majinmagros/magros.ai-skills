@@ -515,7 +515,9 @@
         "skills/safety-guard",
         "skills/vibe-security-scanner",
         "skills/sast-gate-pr",
-        "skills/agent-misbehavior-controls"
+        "skills/agent-misbehavior-controls",
+        "skills/claude-safety-monitoring-window",
+        "skills/claude-zero-retention-frontier"
       ],
       "targets": [
         "claude",
@@ -607,7 +609,9 @@
         "skills/ads-reporter-multi",
         "skills/aeo-geo-visibility",
         "skills/funil-cro-watch",
-        "skills/proposta-comercial-auto"
+        "skills/proposta-comercial-auto",
+        "skills/cartao-pontos-optimizer",
+        "skills/junior-seniorizado-playbook"
       ],
       "targets": [
         "claude",
@@ -665,7 +669,8 @@
         "skills/approval-loop-morning-digest",
         "skills/meeting-task-listener",
         "skills/telegram-channel-operator",
-        "skills/meeting-brief-pre-read"
+        "skills/meeting-brief-pre-read",
+        "skills/health-coach-wearables"
       ],
       "targets": [
         "claude",
@@ -759,7 +764,8 @@
         "skills/crosspost",
         "skills/x-api",
         "skills/social-publisher",
-        "skills/dm-keyword-automation"
+        "skills/dm-keyword-automation",
+        "skills/linkedin-inbox-triage"
       ],
       "targets": [
         "claude",
@@ -801,7 +807,8 @@
         "skills/video-cut-pipeline",
         "skills/hyperframes-codex-video",
         "skills/youtube-packaging",
-        "skills/repurpose-shorts-dm-funnel"
+        "skills/repurpose-shorts-dm-funnel",
+        "skills/ugc-seedance-talking-head"
       ],
       "targets": [
         "claude",
