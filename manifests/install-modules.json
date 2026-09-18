@@ -1013,7 +1013,8 @@
         "skills/homelab-wireguard-vpn",
         "skills/kubernetes-patterns",
         "skills/uncloud",
-        "skills/vps-guided-install"
+        "skills/vps-guided-install",
+        "skills/saas-to-vps-coolify"
       ],
       "targets": [
         "claude",

@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **492 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **493 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
 - **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **81 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **82 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -112,6 +112,14 @@ Enrichments cirúrgicos da rodada: `agent-misbehavior-controls` (+legibilidade e
 | `codex-subscription-offload` | Exporta automação da subscription para código + scheduler externo: TDD local, idempotência, `.env` à mão, hosted proof test, 3 triggers. | agentic-patterns |
 
 Enrichments da rodada: `automacao-deterministica` (+verify/cost-gate/idempotency), `rag-corporativo-seguro` (+team-brain: single-table, RLS no DB, contrato MCP), `goal` (+template provable, verifier loop, fan-out), `claude-model-router` (+matriz effort, regra de cache).
+
+### Autorais — auditoria semanal 13–18/09 (falsos-negativos do filtro)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `saas-to-vps-coolify` | Migra SaaS para VPS Coolify com conta feita: matriz de custo, catálogo app+DB+fila, sizing KVM validado, backup, quando NÃO migrar. | devops-infra |
+
+Enrichments da auditoria: `agent-harness-construction` (+guides-vs-sensors, diagnóstico 3 camadas, AGENTS.md-índice), `claude-md-auditor` (+ponte índice/lookup), `grokbot-team-ops` (+receita AgentMail inbox-do-bot), `routines` (+cross-link AgentMail).
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 

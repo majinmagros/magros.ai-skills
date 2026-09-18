@@ -71,3 +71,7 @@ Time: miner (coleta) + writer (redação) + boss (sequência e aceite)
 Memória: global (voz, políticas) vs por-bot (estado do job) — promote explícito
 Rotina 9h05: digest no canal + handoff visível; dinheiro/publicar só com approval
 ```
+
+## Receita AgentMail: inbox proprio do bot via webhook (auditoria semanal 13-18/09)
+
+Para dar ao bot email proprio: crie inbox em agentmail.to, conecte no marketplace, crie o bot, configure rotina webhook, copie URL + Authorization Bearer para os endpoints (custom headers) e filtre por inbox_id via edit-transformation JS (a UI nao tem dropdown). AVISO: URL+key equivalem a senha — trate como segredo. Protocolo de teste: envie email-teste, confira spinning apenas no bot certo e reply-in-thread antes de ligar a rotina. Ver routines para gatilhos schedule/webhook.

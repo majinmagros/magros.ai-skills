@@ -88,3 +88,11 @@ Track:
 ## Reverse-engineer via JSONL (leva YouTube rodada 9)
 
 Para clonar comportamento de harness bom: leia o JSONL de tool calls (ordem, verificacao, retries), replique o padrao monkey-see-monkey-do no seu harness, e arrende o cerebro (70-80 por cento local quando possivel). Copie o protocolo observado, nao o marketing do vendor.
+
+## Guides-vs-sensors + diagnostico 3 camadas (auditoria semanal 13-18/09)
+
+Taxonomia (Fowler): GUIDES sao pre-acao (spec, AGENTS.md, doc de arquitetura) e SENSORS sao pos-acao (testes, compiler, linter, typecheck, security). Regra: toda guide sem sensor correspondente e wishful thinking; todo sensor sem guide e tentativa-e-erro cara.
+
+Diagnostico quando o agente erra, em 3 camadas: (a) clareza da instrucao, (b) contexto/estrutura + frescor do AGENTS.md, (c) tools/sensors + completion criteria. Corrija na camada certa: reescrever prompt nao conserta sensor faltante.
+
+Padrao AGENTS.md-indice: AGENTS.md vira indice + artefatos distribuidos com lookup condicional ("so consulte memoria/ quando estiver resolvendo bug"). Contexto e recurso finito e competitivo: cada linha do AGENTS.md disputa espaco com o trabalho. Ver claude-md-auditor para a auditoria de tamanho.

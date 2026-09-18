@@ -74,3 +74,7 @@ adapters/
 ## Ponte: regras Claude 5 (leva YouTube rodada 7)
 
 Este auditor mede TAMANHO e estrutura — não semântica de constraints. Para a reescrita das regras (goal+why+done, sem over-triggers/rituais, boundaries answer-vs-action), rode em seguida claude5-prompt-rewrite (7 regras Fable/Opus 5 + scanner regex de anti-padrões + diff para aprovação). Ordem: audite tamanho aqui → reescreva semântica lá.
+
+## Ponte: AGENTS.md-indice + lookup condicional (auditoria semanal 13-18/09)
+
+Quando o AGENTS.md trava o agente (grande demais): vire indice — 1 linha por area apontando para o artefato, com condicao de lookup ("consulte memoria/ apenas ao resolver bug"). Audite aqui o tamanho; o padrao de distribuicao vive em agent-harness-construction (guides-vs-sensors).

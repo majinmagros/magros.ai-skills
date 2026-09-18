@@ -65,3 +65,7 @@ rígido demais) mas não vale o setup de VPS.
 - **Loop engineering `UfN4l2yCT54`**: loop = repeat until `done` (ex.: `every receipt matched or flagged`). **Done criteria** claro = setup rápido. Triggers: turn-based (mensagem), time-based (schedule Fri/1st), event-based (email/meeting) — event pode ser polled hourly via `check inbox`.
 - **5 tasks exemplo time-based**: use esta taxonomia para desenhar qualquer workflow custom.
 - **V2 Hands-Off `b3OiEUp1GIU`**: evolução v1 local (precisa laptop aberto `stay open`), v2 API `managed agents`, v3 VPS+tmux+Telegram (painful), v4 cloud zero setup (`describe task + pick schedule`, laptop shut, phone view). Matriz 4 opções guia migração VPS→cloud.
+
+## Cross-link: inbox de bot via AgentMail (auditoria semanal 13-18/09)
+
+Rotina webhook para inbox proprio de bot (AgentMail): receita completa em grokbot-team-ops (receita AgentMail). Use este padrao quando o bot precisar receber email sem conta humana.
