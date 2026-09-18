@@ -418,7 +418,10 @@
         "skills/skill-eval-runner",
         "skills/rule-drift-auditor",
         "skills/self-improving-skill",
-        "skills/plan-duel"
+        "skills/plan-duel",
+        "skills/defuddle-leitura-limpa",
+        "skills/caveman-saida-enxuta",
+        "skills/codebase-mapa-indexado"
       ],
       "targets": [
         "claude",
@@ -454,7 +457,10 @@
         "skills/recursive-decision-ledger",
         "skills/agent-eval",
         "skills/benchmark",
-        "skills/benchmark-methodology"
+        "skills/benchmark-methodology",
+        "skills/agentic-benchmark-top5",
+        "skills/harness-arena-comparison",
+        "skills/knowledge-work-proxy-eval"
       ],
       "targets": [
         "claude",
@@ -502,7 +508,9 @@
         "skills/healthcare-emr-patterns",
         "skills/healthcare-eval-harness",
         "skills/safety-guard",
-        "skills/vibe-security-scanner"
+        "skills/vibe-security-scanner",
+        "skills/sast-gate-pr",
+        "skills/agent-misbehavior-controls"
       ],
       "targets": [
         "claude",
@@ -592,7 +600,8 @@
         "skills/agent-commerce-interface",
         "skills/ads-creative-factory",
         "skills/ads-reporter-multi",
-        "skills/aeo-geo-visibility"
+        "skills/aeo-geo-visibility",
+        "skills/funil-cro-watch"
       ],
       "targets": [
         "claude",
@@ -783,7 +792,8 @@
         "skills/voice-cloning-local",
         "skills/blender-mcp-ops",
         "skills/video-cut-pipeline",
-        "skills/hyperframes-codex-video"
+        "skills/hyperframes-codex-video",
+        "skills/youtube-packaging"
       ],
       "targets": [
         "claude",
@@ -937,7 +947,10 @@
         "skills/model-migration-strategy",
         "skills/biomedical-ai-pipeline",
         "skills/computer-use-agent-patterns",
-        "skills/ai-governance-monitor"
+        "skills/ai-governance-monitor",
+        "skills/swarm-readiness-gate",
+        "skills/drive-screen-os-control",
+        "skills/claude5-prompt-rewrite"
       ],
       "targets": [
         "claude",

@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **344 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
-- **295** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **49 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **473 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
+- **62 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -51,6 +51,24 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `convergencia` | Compara código atual com spec/plano/tarefas e anexa o trabalho restante como tarefas (append-only) até a implementação convergir. | workflow-quality |
 | `triagem-ideias` | Pipeline go/kill para ideias cruas (intake→pesquisa→definição→formato→decisão) antes de investir em especificar/codar. | workflow-quality |
 | `triagem-bug` | Avaliar→corrigir→provar com separação de papéis: reproduz e classifica antes de tocar no código, corrige causa-raiz, prova com execução. | workflow-quality |
+
+### Autorais — leva YouTube (derivadas da coleta `coletar-oportunidades-youtube`, 2026-09-18)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `defuddle-leitura-limpa` | Sanitiza página web para só o conteúdo relevante antes de entregar ao agente (remove chrome/ads/scripts), com medida de redução. | workflow-quality |
+| `caveman-saida-enxuta` | Poda verbosidade de saída do modelo (preâmbulo, resumo repetido, oferta de ajuda); preserva fatos e define quando NÃO cortar. | workflow-quality |
+| `swarm-readiness-gate` | Checklist go/no-go antes de rodar swarm (sandbox, DoD+bail-out, budget, referee/canônico, mailbox/locks, kill-switch). | agentic-patterns |
+| `drive-screen-os-control` | Pilota o SO só com coding agent + CLI nativa (sem harness pesado): control-loop discover→screenshot→focus→act, triagem último-recurso. | agentic-patterns |
+| `sast-gate-pr` | Gate SAST determinístico em workflow issue→PR: scanner via API como nó de script, iteração forçada até green, taxonomia CVE. | security |
+| `claude5-prompt-rewrite` | Reescreve prompts/skills pré-Claude-5 (7 regras Fable/Opus 5 + apêndice Astra): goal+why+done, sem over-triggers/rituais, diff para aprovação. | agentic-patterns |
+| `agentic-benchmark-top5` | Monta Top-5 pessoal de benchmarks (Terminal/Apex/Automation/Omniscience/Deep SWE) pelo triângulo performance/custo/velocidade. | optimization-workflows |
+| `harness-arena-comparison` | Compara harnesses em arena third-party: battle-log, scoring cego por rubrica, leitura cautelosa de leaderboard, benchmark próprio. | optimization-workflows |
+| `codebase-mapa-indexado` | Indexa o repo 1x e consulta o mapa (GPS + blast-radius) em vez de reler arquivos; atualização incremental. | workflow-quality |
+| `funil-cro-watch` | Funcionário-IA que vigia funil/CRO todo dia: coleta, compara, diagnostica causa, atua com permissão ou escala a humano. | business-content |
+| `youtube-packaging` | Embala vídeo final: 3 thumbs + 3 títulos para A/B, descrição com timestamps, página de links com pixels. | media-generation |
+| `knowledge-work-proxy-eval` | Avalia agentes em pacotes banking/consulting/legal (prompts vagos + workspace + trajectory) como proxy do seu domínio. | optimization-workflows |
+| `agent-misbehavior-controls` | Controles contra agente insider (sandbox por task, sem infra compartilhada gravável, auditoria de processo, tripwires, eval separado). | security |
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 
