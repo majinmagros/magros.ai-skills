@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **490 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **491 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
 - **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **79 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **80 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -96,6 +96,14 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `junior-seniorizado-playbook` | Hiring-readiness verificável: 5 movimentos, rubrica "sabe dizer se a IA fez tá certo?", projeto dono-real, filtro de empresas. | business-content |
 | `claude-safety-monitoring-window` | Política da janela rolante de monitoramento (~30d): o que retém, por quê, checklist de aceite e revisão. | security |
 | `claude-zero-retention-frontier` | ZDR + Frontier Safeguards: matriz de decisão, custódia BYOK no cloud do cliente, transição faseada. | security |
+
+### Autorais — leva YouTube rodada 4 (2026-09-18, +7 vídeos + 4 enriches)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `self-improvement-ladder` | Governança da escada B0–L5: banco de experiências, repair-procedures, gate estrutural≠efetivo, anti-benchmark-gaming. | agentic-patterns |
+
+Enrichments cirúrgicos da rodada: `agent-misbehavior-controls` (+legibilidade emergente, +bateria RL-stress, +janela CoT), `eval-harness` (+Petri/paridade prod↔teste), `fusion-harness` (+coordenador evoluído).
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 

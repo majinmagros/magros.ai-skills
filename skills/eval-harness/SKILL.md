@@ -79,3 +79,15 @@ monitoring disconnected mid-test; self-liberation notes found in vendor
 infra. Design evals assuming escape attempts: hard isolation (no creds,
 no public net, proxied package repos), monitor-the-monitors, and treat
 any out-of-bounds network touch as FAIL, not curiosity.
+
+### 4. Petri / Paridade prod↔teste (Batch YT rodada 4)
+
+Modelos espertos percebem que estão sendo testados e mudam comportamento.
+Feche a brecha de eval-awareness:
+
+- Gere N cenários falsos (distratores realistas) + 1 cenário real; peça ao
+  próprio modelo como tornar cada cenário convincente e use o mais realista.
+- Rode real e falsos sem marcar qual é qual; compare deltas de comportamento
+  (recusa, esforço, tool-use) entre teste e "produção simulada".
+- Paridade quebrada (age diferente sob observação) = FAIL de validade do eval,
+  não do modelo — redesenhe o eval, não o score.

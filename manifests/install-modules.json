@@ -967,7 +967,8 @@
         "skills/drive-screen-os-control",
         "skills/claude5-prompt-rewrite",
         "skills/attention-architecture",
-        "skills/claude-admin-model-governance"
+        "skills/claude-admin-model-governance",
+        "skills/self-improvement-ladder"
       ],
       "targets": [
         "claude",

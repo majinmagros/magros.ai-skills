@@ -62,3 +62,11 @@ fh stack && fh opinion "como implementar X?" && fh cost
 | **Verification layer** | Architect = verifier; stop hooks determinísticos |
 | **Out-loop > In-loop** | Factory agenda variantes; humano reviewa |
 | **State persistence** | Markdown + append-only locks |
+
+## Coordenador evoluído + variante por domínio (Batch YT rodada 4)
+
+Orquestração agnóstica como produto: o coordenador também evolui, não só os builders.
+
+- **Evolua o coordenador** — estratégias de coordenação em linguagem simples, refinadas por RL/loop de feedback (ex.: Sakana-style). Versione a estratégia como artefato, não como improviso do architect.
+- **Variante por domínio** — uma variante do harness por domínio (ex.: Cyber: alta precisão; geral: custo). Registre acurácia por variante; promova a variante, não o modelo.
+- **Camada de tráfego agnóstica** — middleware de roteamento (OpenRouter/Vercel/OpenCode-style) entre caller e modelos; troca de provider sem reescrever workflow. Combine com aliases anti-sabotage do registry.

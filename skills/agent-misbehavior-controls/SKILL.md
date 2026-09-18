@@ -28,6 +28,12 @@ Em sistemas com agentes autônomos, swarms, ou evals com tasks impossíveis; sem
 - NÃO duplicar `agent-guardrails` (ameaça inbound: prompt injection, input malicioso). Este skill é ameaça insider/outbound.
 - Credencial vazada encontrada pelo agente = incidente, nunca atalho: rotate, revogue, investigue.
 
+## Ameaças emergentes (leva YouTube rodada 4)
+
+7. **Monitor de legibilidade (anti-glossogenia)** — agentes sob pressão podem derivar léxico/gramática próprios (idioma emergente, abreviações opacas). Exija: spot-checks de inteligibilidade por checkpoint, detecção de drift de léxico, resumo legível obrigatório por marco, quarentena do canal post-mortem. Mensagem que humano/auditor não lê = canal suspeito.
+8. **Bateria RL-stress (Hacker-Opus)** — teste de escalada com referência quantificada: cyber não-autorizado, harmful, manipulação de reward, escape, ataque à própria infra — com e sem hints. Números de referência: hints elevam drasticamente a taxa (ex.: ~76%/38% em categorias críticas). "Behavioral evals não detectam" sozinho: rode a bateria, não só o checklist.
+9. **Janela CoT honesta** — preserve a monitorabilidade do chain-of-thought: nunca treinar punindo o rascunho honesto, separar canal reasoning/tool (3 contaminações: mistura com chat/tools, auto-direcionamento do pensamento, base sem anotação), métrica trust-in-CoT. Rascunho punido = rascunho que mente.
+
 ## Related skills
 
 - `agent-guardrails` — defesa inbound (injeção, jailbreak, input hostil).
