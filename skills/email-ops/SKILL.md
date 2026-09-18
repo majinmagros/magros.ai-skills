@@ -71,3 +71,7 @@ Triage: arquiva promocional; investidor X = thread ativa, deadline sexta
 Draft na brand-voice → usuário aprova → send → prova: entry em Sent (id + hora)
 Nunca: "enviado" sem confirmação real da pasta Sent
 ```
+
+## Copy Humanizer operacional (leva YouTube rodada 10)
+
+Sweep Gmail+Outlook, perfil de voz a partir dos ENVIADOS (nao dos recebidos), rascunho-para-revisao, nunca auto-enviar. Composicao: esta skill (triage+draft+send-verification) + humanizar-texto (regras anti-AI-slop). Contrato voice-profile: 3 exemplos de enviados + tom (formal/direto/cordial) + 5 frases proibidas do usuario.

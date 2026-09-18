@@ -72,3 +72,7 @@ Diagnóstico: 3 elementos brigando → moodboard por seção (não global)
 Variantes A/B/C/D no mesmo brief → vencedora no artboard (click-to-edit)
 Fecha: A/B lado a lado vs original + delta list p/ implementação
 ```
+
+## Swarm de variantes lado-a-lado vs dividido (leva YouTube rodada 10)
+
+Dois modos: DIVIDIR (coordenador + 2 workers, cada um numa direcao) vs LADO-A-LADO (mesma tarefa, 2-6 variantes com layout diferente ou estilo diferente). Cap de frames para economizar tokens. Passe o pre-check em swarm-readiness-gate antes de subir o enxame.

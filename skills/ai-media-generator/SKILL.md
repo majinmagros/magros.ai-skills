@@ -49,3 +49,7 @@ Plataforma: image → references/selector.md aponta Midjourney (estilo) ou fal.a
 Prompt: "neon cyberpunk portrait, rain, high contrast --ar 16:9" (6 tokens de sinal)
 Gate: 9/10 → submit; se <8, refina antes de gastar crédito
 ```
+
+## Prompt JSON retrato-vibe (leva YouTube rodada 10)
+
+Constraint anti-AI-slop para personagens: sem "4K/HDR/ultra-detail"; defina cada traco (idade, pele com textura, assimetria leve, luz imperfeita); anti doll-face (sem olhos gigantes/labios inflados/simetria total). Trave em JSON versionado, nao em prompt solto.

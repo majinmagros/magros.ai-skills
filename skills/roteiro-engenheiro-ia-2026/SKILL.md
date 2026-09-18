@@ -78,3 +78,7 @@ Em 2026, a engenharia de IA substituiu o treino de modelos do zero (Machine Lear
 - **Docker & Contêineres**: Empacotamento de dependências, workers e APIs para ambiente isolado.
 - **Cloud & Infraestrutura**: Deploy em nuvem (AWS, GCP, Azure ou VPS dedicada via Uncloud/Hostinger).
 - **Engenharia de Produção**: Rate limits, autenticação, logs e resiliência (fallback automático via gateway).
+
+## Nota: estagio virou junior, junior virou pleno (leva YouTube rodada 10)
+
+A barra subiu: vaga junior pede skill senior de verificacao ("sabe dizer se a IA fez ta certo?"). Para hiring-readiness verificavel (checklist de entrevista + 1 projeto real), ver junior-seniorizado-playbook. Este roadmap continua sendo a trilha de estudos; o playbook e a prova.

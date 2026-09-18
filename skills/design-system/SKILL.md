@@ -63,3 +63,7 @@ Identifies generic AI-generated design patterns:
 - Excessive animations on scroll
 - Generic hero with centered text over stock gradient
 - Sans-serif font stack with no personality
+
+## Contrato design-system.md + AGENTS.md (leva YouTube rodada 10)
+
+Template: design/designsystem.md com pilares (layout/cores/fontes) + AGENTS.md apontando para ele + gate "leia o MD antes de qualquer UI" (leitura via file-read por performance, nao so MCP) + tabela de traducao design-para-codigo por projeto.

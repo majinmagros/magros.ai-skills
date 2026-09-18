@@ -49,3 +49,7 @@ description: Playbook de governanca de modelos Claude por role, entitlements e e
 - `claude-model-router` — roteamento por tarefa em runtime.
 - `cost-tracking` — observabilidade de gasto.
 - `roteamento-modelos-baratos` — guia de economia por tarefa.
+
+## Clausulas de uso de dados (leva YouTube rodada 10)
+
+Sem treino em dados enterprise sem permissao expressa. Acesso humano a retidos: raro, aprovado, log tamper-proof. Checklist de due diligence por workspace: modelos Covered? canal com regra propria? aceite documentado + plano de saida para ZDR? Ver claude-safety-monitoring-window e claude-zero-retention-frontier.

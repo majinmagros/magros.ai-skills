@@ -72,3 +72,7 @@ Rounds 1-2 independentes (sem contaminação) → juiz cego pontua por rubrica
 Codex lidera 2x seguidas → fim antecipado; perdedor arquivado com motivo
 Anti-loop: scope p/ impressionar = stop; sem rematch no mesmo dia
 ```
+
+## Pausa doubt-driven pre-implementacao (leva YouTube rodada 10)
+
+Antes do duelo: pare, liste as suposicoes de cada plano e questione cada uma (o que assumem? o que as quebraria?). Duelo julga planos ja questionados, nao rascunhos confiantes. Ver santa-method para revisao adversarial pos-fato.
