@@ -13,9 +13,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **473 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **483 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
 - **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **62 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **72 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -69,6 +69,21 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 | `youtube-packaging` | Embala vídeo final: 3 thumbs + 3 títulos para A/B, descrição com timestamps, página de links com pixels. | media-generation |
 | `knowledge-work-proxy-eval` | Avalia agentes em pacotes banking/consulting/legal (prompts vagos + workspace + trajectory) como proxy do seu domínio. | optimization-workflows |
 | `agent-misbehavior-controls` | Controles contra agente insider (sandbox por task, sem infra compartilhada gravável, auditoria de processo, tripwires, eval separado). | security |
+
+### Autorais — leva YouTube rodada 2 (2026-09-18, +14 vídeos)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `attention-architecture` | Supervisão N→1 durante-run: envelope de evidência, inbox de exceções, batching, escalation path, métrica N:1. | agentic-patterns |
+| `mcp-local-bridge` | Ponte MCP local via STDIO: checklist de conexão, matriz de paths Win/WSL/Mac, extensão sem selo, read-skill-first. | framework-language |
+| `design-in-repo` | Design versionado no repo (`.pen` JSON em `design/`, gitattributes binário, split lib/pages, nunca editar na mão). | framework-language |
+| `design-code-drift-ci` | CI de drift design↔código por PR: motor headless, relatório com evidência, AI review, gate vs warn. | framework-language |
+| `meeting-brief-pre-read` | Brief before/during/after escaneável em 60s (who→why→action), choose-not-to-show, rubrica UX. | operator-workflows |
+| `proposta-comercial-auto` | Transcrição→proposta via tabela de preços (conformidade, gate humano obrigatório) + follow-up D+3/D+7/D+14. | business-content |
+| `repurpose-shorts-dm-funnel` | Long→shorts com funil keyword-DM: 1 keyword/corte, CTA em voz, gate de revisor, multi-conta. | media-generation |
+| `claude-admin-model-governance` | Playbook de governança: defaults por role, entitlements, effort caps, custo-por-tarefa. | agentic-patterns |
+| `support-agent-report-card` | QA de suporte: golden set 16+ (mystery+adversarial), policy versionada, rerun, relatório client-ready. | optimization-workflows |
+| `system-one-judgment-triage` | Triagem barata (~100-200ms): bundle Choice/Score/Prob, negação explícita, other/unknown + human review. | workflow-quality |
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 

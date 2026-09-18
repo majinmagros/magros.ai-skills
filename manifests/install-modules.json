@@ -256,7 +256,10 @@
         "skills/visual-qa-designer",
         "skills/astro-site-ops",
         "skills/mcp-hardware-arduino",
-        "skills/design-iterate-in-place"
+        "skills/design-iterate-in-place",
+        "skills/mcp-local-bridge",
+        "skills/design-in-repo",
+        "skills/design-code-drift-ci"
       ],
       "targets": [
         "claude",
@@ -421,7 +424,8 @@
         "skills/plan-duel",
         "skills/defuddle-leitura-limpa",
         "skills/caveman-saida-enxuta",
-        "skills/codebase-mapa-indexado"
+        "skills/codebase-mapa-indexado",
+        "skills/system-one-judgment-triage"
       ],
       "targets": [
         "claude",
@@ -460,7 +464,8 @@
         "skills/benchmark-methodology",
         "skills/agentic-benchmark-top5",
         "skills/harness-arena-comparison",
-        "skills/knowledge-work-proxy-eval"
+        "skills/knowledge-work-proxy-eval",
+        "skills/support-agent-report-card"
       ],
       "targets": [
         "claude",
@@ -601,7 +606,8 @@
         "skills/ads-creative-factory",
         "skills/ads-reporter-multi",
         "skills/aeo-geo-visibility",
-        "skills/funil-cro-watch"
+        "skills/funil-cro-watch",
+        "skills/proposta-comercial-auto"
       ],
       "targets": [
         "claude",
@@ -658,7 +664,8 @@
         "skills/slack-tag-ops",
         "skills/approval-loop-morning-digest",
         "skills/meeting-task-listener",
-        "skills/telegram-channel-operator"
+        "skills/telegram-channel-operator",
+        "skills/meeting-brief-pre-read"
       ],
       "targets": [
         "claude",
@@ -793,7 +800,8 @@
         "skills/blender-mcp-ops",
         "skills/video-cut-pipeline",
         "skills/hyperframes-codex-video",
-        "skills/youtube-packaging"
+        "skills/youtube-packaging",
+        "skills/repurpose-shorts-dm-funnel"
       ],
       "targets": [
         "claude",
@@ -950,7 +958,9 @@
         "skills/ai-governance-monitor",
         "skills/swarm-readiness-gate",
         "skills/drive-screen-os-control",
-        "skills/claude5-prompt-rewrite"
+        "skills/claude5-prompt-rewrite",
+        "skills/attention-architecture",
+        "skills/claude-admin-model-governance"
       ],
       "targets": [
         "claude",
