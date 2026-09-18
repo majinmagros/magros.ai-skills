@@ -1,6 +1,6 @@
 ---
 name: ai-tutor-system
-description: Use when building AI tutor systems for personalized learning — adaptive curriculum, multimodal lessons (text/image/audio/video), Feynman technique exercises, spaced repetition flashcards (SM-2/FSRS), progress tracking, multi-tutor domains. Triggers on "tutor ia", "aprender com ia", "currículo adaptativo", "repetição espaçada", "flashcards ia", "técnica feynman", "notebooklm tutor", "estudar com ia", "universidade ia", "ai tutor", "spaced repetition", "anki automation".
+description: Use when building AI tutor systems for personalized learning — adaptive curriculum, multimodal lessons (text/image/audio/video), visual 2D/3D flows (mindmap, quiz, concept city), Feynman technique exercises, spaced repetition flashcards (SM-2/FSRS), progress tracking, multi-tutor domains. Triggers on "tutor ia", "aprender com ia", "aprender qualquer assunto", "fluxo 2d", "fluxo 3d", "cidade de conceitos", "mindmap tutor", "concept city", "currículo adaptativo", "repetição espaçada", "flashcards ia", "técnica feynman", "notebooklm tutor", "estudar com ia", "universidade ia", "ai tutor", "spaced repetition", "anki automation".
 metadata:
   origin: ECC
   module: agentic-patterns
@@ -14,6 +14,7 @@ metadata:
 Pipeline completo para criar sistemas de tutoria IA que combinam:
 - **Nivelamento inicial** → currículo adaptativo por objetivo/tempo
 - **Aulas multimodais** → texto + imagens didáticas + podcasts + vídeos (via NotebookLM)
+- **Fluxos visuais 2D/3D** → mindmap + quiz (NotebookLM) + diagrama Mermaid + cidade de conceitos 3D opcional (via threejs-scene-composer)
 - **Prática ativa** → exercícios Feynman (explicar de volta) + validação do agente
 - **Memória de longo prazo** → flashcards (Anki Connect) + repetição espaçada (FSRS/SM-2)
 - **Progress tracking** → dashboard de tópicos dominados/fracos + revisão agendada
@@ -27,6 +28,8 @@ Pipeline completo para criar sistemas de tutoria IA que combinam:
 | Claim | Status | Fonte |
 |---|---|---|
 | NotebookLM API: podcast generation (audio artifacts) | ✅ Confirmado | `notebooklm-py` (`/teng-lin/notebooklm-py`), `client.artifacts.generate_audio` |
+| NotebookLM API: mindmap generation (fluxo 2D) | ✅ Confirmado | `notebooklm-py` (`/teng-lin/notebooklm-py`), `client.artifacts.generate_mind_map` + `download_mind_map` |
+| NotebookLM API: quiz generation (fluxo 2D) | ✅ Confirmado | `notebooklm-py` (`/teng-lin/notebooklm-py`), `client.artifacts.generate_quiz` + `download_quiz` |
 | Anki Connect API: addNotes programmatic | ✅ Confirmado | `Anki-Connect` (`/websites/git_sr_ht_foosoft_anki-connect`), `addNotes` endpoint |
 | FSRS Algorithm: TypeScript scheduler | ✅ Confirmado | `ts-fsrs` (`/open-spaced-repetition/ts-fsrs`), `fsrs()`, `createEmptyCard`, `Rating.Good` |
 | Qwen3-TTS: voice clone 3s reference audio | ✅ Confirmado | `Qwen3-TTS` (`/qwenlm/qwen3-tts`), `generate_voice_clone(ref_audio, ref_text)` |
@@ -39,6 +42,8 @@ Pipeline completo para criar sistemas de tutoria IA que combinam:
 - "Quero um tutor IA para aprender X"
 - "Crie um sistema de repetição espaçada com flashcards"
 - "Transforme PDFs em aulas com podcasts e exercícios"
+- "Aprender qualquer assunto com agente + fluxo visual 2D e 3D"
+- "Gerar mindmap/quiz de uma aula e visualizar como cidade de conceitos 3D"
 - "Aplicar técnica Feynman com validação de IA"
 - "Dashboard de progresso de aprendizado com revisão agendada"
 - "Múltiplos tutores por domínio (cybersec, alemão, python)"
@@ -58,6 +63,8 @@ Pipeline completo para criar sistemas de tutoria IA que combinam:
 │ TUTOR       │    │ TRACKING    │    │ (FSRS/SM-2) │    │ CONNECT     │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
 ```
+
+Detalhe 2D/3D: ver `references/pipeline.md` Etapas 3b-3c (mindmap/quiz via NotebookLM, cidade 3D via `threejs-scene-composer`).
 
 ---
 

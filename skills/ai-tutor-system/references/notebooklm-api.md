@@ -99,6 +99,29 @@ async function generateLessonPodcast(lesson: Lesson, notebookId: string): Promis
 }
 ```
 
+### Quiz + Mindmap (fluxo 2D — Etapa 3b do pipeline)
+
+```bash
+# CLI (notebooklm-py) — mesmo notebook da aula, sem recriar
+notebooklm generate mind-map
+notebooklm download mind-map ./mindmap.json
+notebooklm generate quiz --difficulty hard
+notebooklm download quiz --format markdown ./quiz.md
+```
+
+```python
+# Python API — generate_* + wait + download_* (mesmo padrao do audio)
+status = await client.artifacts.generate_mind_map(nb.id)
+await client.artifacts.wait_for_completion(nb.id, status.task_id)
+await client.artifacts.download_mind_map(nb.id, "mindmap.json")
+
+status = await client.artifacts.generate_quiz(nb.id)
+await client.artifacts.wait_for_completion(nb.id, status.task_id)
+await client.artifacts.download_quiz(nb.id, "quiz.json", output_format="json")
+```
+
+Validado em: `notebooklm-py` PyPI (`generate mind-map`, `generate quiz`, `generate_mind_map`, `download_mind_map`, `generate_quiz`, `download_quiz`) — ver https://github.com/teng-lin/notebooklm-py e https://pypi.org/project/notebooklm-py/. Biblioteca nao-oficial (undocumented Google APIs, pode quebrar sem aviso); max 1 geracao concorrente por notebook; backoff em 429.
+
 ---
 
 ## Referências Oficiais

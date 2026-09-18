@@ -20,6 +20,9 @@ API depth: `references/notebooklm-api.md`, `references/anki-connect.md`,
 | Claim | Status | Fonte |
 |---|---|---|
 | NotebookLM API: podcast generation (audio artifacts) | ✅ Confirmado | `notebooklm-py` (`/teng-lin/notebooklm-py`), `client.artifacts.generate_audio` |
+| NotebookLM API: mindmap generation (fluxo 2D, Etapa 3b) | ✅ Confirmado | `notebooklm-py` (`/teng-lin/notebooklm-py`), `generate_mind_map` + `download_mind_map` |
+| NotebookLM API: quiz generation (fluxo 2D, Etapa 3b) | ✅ Confirmado | `notebooklm-py` (`/teng-lin/notebooklm-py`), `generate_quiz` + `download_quiz` |
+| Three.js cidade de conceitos (fluxo 3D, Etapa 3c) | ✅ Confirmado (cross-ref) | `threejs-scene-composer` (Context7 `/mrdoob/three.js`), sem duplicar codigo |
 | Anki Connect API: addNotes programmatic | ✅ Confirmado | `Anki-Connect` (`/websites/git_sr_ht_foosoft_anki-connect`), `addNotes` endpoint |
 | FSRS Algorithm: TypeScript scheduler | ✅ Confirmado | `ts-fsrs` (`/open-spaced-repetition/ts-fsrs`), `fsrs()`, `createEmptyCard`, `Rating.Good` |
 | Qwen3-TTS: voice clone 3s reference audio | ✅ Confirmado | `Qwen3-TTS` (`/qwenlm/qwen3-tts`), `generate_voice_clone(ref_audio, ref_text)` |
@@ -77,6 +80,39 @@ task = studio_generate(notebook="Cybersec Aula 1", artifact_type="audio")
 studio_status(notebook="Cybersec Aula 1", task_id=task)
 studio_download(notebook="Cybersec Aula 1", artifact_type="audio", path="aula1_podcast.m4a")
 ```
+
+## Etapa 3b: FLUXO 2D — Mindmap + Quiz (NotebookLM)
+
+Fluxo visual 2D para aprender qualquer assunto: mapa mental hierarquico + quiz de validacao, gerados do mesmo notebook da Etapa 3.
+
+| Artefato | Comando CLI | Python API | Download |
+|---|---|---|---|
+| Mindmap | `notebooklm generate mind-map` | `client.artifacts.generate_mind_map(nb.id)` | `download_mind_map(nb.id, "mindmap.json")` |
+| Quiz | `notebooklm generate quiz --difficulty hard` | `client.artifacts.generate_quiz(nb.id)` | `download_quiz(nb.id, "quiz.json", output_format="json")` |
+
+Passos:
+1. Reusar o notebook da Etapa 3 (mesmas fontes) — nao criar notebook novo por aula.
+2. Gerar mindmap primeiro (visao 2D do territorio), depois quiz (validacao ativa).
+3. Salvar em `lessons/<id>/mindmap.json + quiz.md`. Fallback sem API: diagrama Mermaid manual a partir do `curriculum.json`.
+4. Quiz aprovado (>80%) libera Feynman (Etapa 4); senao, retorna a Etapa 3.
+
+Limites: max 1 geracao concorrente por notebook; retry com backoff em 429 (ver `references/notebooklm-api.md`).
+
+## Etapa 3c: FLUXO 3D — Cidade de Conceitos (opcional)
+
+Camada 3D navegavel opcional para o mesmo mapa da Etapa 3b. Nao reimplementa Three.js aqui — delega para `threejs-scene-composer`.
+
+Mapeamento conceito → bloco:
+- modulo = distrito, conceito = predio, submodulos = quarteiroes
+- altura do predio = profundidade (n. aulas), cor = status (novo/aprendendo/dominado via progress.json da Etapa 7)
+- clique no predio → abre `lessons/<id>/` correspondente
+
+Passos:
+1. Converter `mindmap.json` em spec de blocos (`{id, type, position, color}`) — script ou LLM com schema fixo.
+2. Seguir `threejs-scene-composer` Etapas 2-3 (img2threejs → compose). Fraqueza conhecida: carrossel infinito simples glitcha — testar sempre (Batch 16 #49).
+3. Salvar em `lessons/<id>/cidade-3d/`. Cost-gate: so gerar 3D apos quiz OK — 3D e caro, 2D e barato.
+
+Quando NAO usar 3D: assunto textual puro, mobile-first, ou orcamento curto — 2D + flashcards bastam.
 
 ## Etapa 4: FEYNMAN — Prática Ativa
 
