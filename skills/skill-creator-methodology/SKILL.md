@@ -43,6 +43,26 @@ node scripts/build-catalog.js
 
 SKILL template pronto + checklist final de PR em `references/templates.md`.
 
+## 4 práticas Anthropic (leva YouTube rodada 7)
+
+Peças que faltavam no lifecycle acima (fonte: engenheiro Anthropic, vídeo HIRDzMtuWFk):
+
+1. **DRY em skills** — script provado salvo em `scripts/` da skill; runs futuras
+   EXECUTAM o arquivo em vez de reescrever (ex.: styling de slides). Nunca deixe o
+   modelo resolver 2x o mesmo problema técnico.
+2. **Progressive disclosure + protocolo de 3 testes** — no boot, só `name +
+   description` do frontmatter; `SKILL.md` full só no match; scripts/refs lazy.
+   Descriptions precisas com palavras reais do usuário, sem overlap. Valide cada
+   description com 3 testes: request óbvio (deve disparar), paráfrase (deve
+   disparar), negativo que NÃO deve disparar.
+3. **Correção → menor lugar durável + rerun** — diagnosticar causa (processo vs.
+   contexto vs. regra fraca vs. código) → editar o menor ponto durável → rerun +
+   verificar. Portátil entre harnesses; performance entre modelos não garantida.
+4. **Verificação com evidência externa** — acceptance criteria + 1º draft interno +
+   inspeção (screenshot/teste/fonte/personas: iniciante confuso, comprador cético,
+   audiência real) + 2º pass; reporte o que ficou NÃO-verificado. Ver também
+   `santa-method` e `outcome-rubric-verification`.
+
 ## Referências Oficiais (Validados 2026-08-30)
 
 - [Claude Code Skills Docs](https://docs.anthropic.com/en/docs/claude-code/skills)

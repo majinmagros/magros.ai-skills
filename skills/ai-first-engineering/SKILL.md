@@ -70,14 +70,18 @@ Raise testing bar for generated code:
 - explicit edge-case assertions
 - integration checks for interface boundaries
 
-## Three Disciplines (Batch 17j, #118)
+## Three Disciplines — checklists operáveis (leva YouTube rodada 7)
 
-AI-assisted teams rot invisibly: (1) cognitive surrender — engineer
-accepts confident output without thinking (fix: write your own guess
-FIRST, then compare; ask what the AI assumes and what would prove it
-wrong); (2) cognitive debt — system nobody understands (fix: require
-real explanations, rotate ownership, review architecture not diffs,
-decisions written in human words); (3) orchestration tax — N agents,
-one brain (fix: attention architecture — standardize evidence format,
-exceptions over routines, batch similar decisions, automate boring
-checks, clear escalation).
+Expansão do resumo Batch 17j em checklist + ADR:
+
+1. **Anti-surrender (não aceite sem pensar)** — antes de ler o output da IA, escreva
+   seu palpite em 1 linha; depois compare. Pergunte sempre: o que a IA está
+   assumindo? O que provaria que está errado? Qual a alternativa? Exija explicação
+   SEM a IA por perto + em palavras próprias + com responsável nomeado.
+2. **Anti-debt (sistema que alguém entende)** — review de arquitetura, não só de
+   diff. Decisões escritas em palavras humanas via `architecture-decision-records`.
+   Rode ownership: ninguém é dono permanente de módulo gerado por IA.
+3. **Anti-orchestration-tax (N agentes, 1 cérebro)** — padronize formato de evidência,
+   exceções sobre rotina, batch de decisões similares, automatize checks chatos,
+   escalation claro. Ver `attention-architecture` (durante-run) e
+   `swarm-readiness-gate` (pré-run).

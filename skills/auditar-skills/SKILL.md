@@ -60,6 +60,16 @@ node scripts/audit-gen.js  # re-gera auditoria-skills.md + .json
 - Revisar descriptions de todas após a primeira leva — descrição é o gatilho
   de ativação; descrição fraca = skill que nunca dispara.
 
+## 4b. Protocolo de 3 testes + reescrita de descriptions (leva YouTube rodada 7)
+
+Para cada description, rode 3 testes antes de aprovar:
+
+1. **Request óbvio** — o pedido canônico dispara a skill? Se não, reescreva com as palavras reais do usuário.
+2. **Paráfrase** — 3 formas diferentes de pedir a mesma coisa disparam? Se não, amplie sem virar genérico.
+3. **Negativo** — 2 pedidos parecidos-mas-diferentes NÃO disparam? Se disparam, estreite + declare non-triggers explícitos.
+
+Reescrita: 1 verbo de ação + objeto + contexto de quando usar + non-trigger. Ver o lado autor em `skill-creator-methodology` (§ 4 práticas Anthropic).
+
 ## 5. Regra
 
 - Nota é meio, não fim: o objetivo é 1 correção acionável por skill,

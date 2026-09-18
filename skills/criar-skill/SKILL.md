@@ -84,3 +84,18 @@ exemplo nos `references/` — muito mais preciso do que especificar no vácuo.
 | `SKILL.md` | **D**irection | Frontmatter (name+description) + workflow passo a passo + regras |
 | `references/` | **B**lueprints | Arquivos estáticos: voz, marca, exemplos, templates, ICP |
 | `scripts/` | **S**olutions | Código pro que LLM não faz bem: APIs, cálculos, formatação |
+
+## 4. Seletor de template por grau de liberdade (leva YouTube rodada 7)
+
+Escolha o template antes de escrever:
+
+- **strict-API** — tarefa rígida, passos fixos, zero julgamento (ex.: validar PR contra checklist). SKILL.md curto, comandos literais, falha = parar.
+- **flexible-guidance** — tarefa com variação, princípios + exemplos (ex.: revisar copy). Diretrizes + 2-3 exemplos bom/ruim, modelo preenche o resto.
+- **conditional-workflow** — tarefa com ramificações (ex.: triagem). Árvore se/então explícita + critério de cada ramo + saída de cada folha.
+
+Template errado = skill que nunca dispara (rígida demais) ou alucina (solta demais).
+
+## 5. Validação em sessão limpa (leva YouTube rodada 7)
+
+- **Teste em sessão sem contexto** — abra sessão nova (sem a memória do chat de criação) e rode 2-3 casos reais. A sessão de construção sempre parece melhor do que é.
+- **Otimização > criação** — antes de criar, verifique se um ajuste na skill existente resolve (etapas determinísticas viram `scripts/`, decisões do modelo ficam no texto). Só crie quando o ajuste não couber.

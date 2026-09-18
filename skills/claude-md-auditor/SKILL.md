@@ -70,3 +70,7 @@ adapters/
 │   └── README.md
 ├── codex/
 │   ├── hooks/
+
+## Ponte: regras Claude 5 (leva YouTube rodada 7)
+
+Este auditor mede TAMANHO e estrutura — não semântica de constraints. Para a reescrita das regras (goal+why+done, sem over-triggers/rituais, boundaries answer-vs-action), rode em seguida claude5-prompt-rewrite (7 regras Fable/Opus 5 + scanner regex de anti-padrões + diff para aprovação). Ordem: audite tamanho aqui → reescreva semântica lá.
