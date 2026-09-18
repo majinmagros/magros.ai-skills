@@ -62,3 +62,10 @@ swarm
 - Agents never write the canonical directly in chat — that deadlocks
   (N agents appending to one shared text).
 - Verification cost scales with compute: budget referee passes like workers.
+
+### 5. Swarm economics + sandbox prerequisite (leva YouTube rodada 6)
+
+- **Bootup cost é real** — as primeiras mensagens produzem alinhamento, não output. Orce tokens/calls de coordenação separado da execução; swarm pequeno sem budget de boot morre de fome.
+- **Dead-agent reaping** — thread parada sem `done` é removida, não esperada. Registre custo real ao final (tokens, calls, $, tempo) para calibrar o próximo run.
+- **Pré-requisito sandbox** — se você não sabe sandboxar, não rode swarm. Yolo mode só DENTRO de sandbox (ver `agent-guardrails`, yolo-no-sandbox). Sem sandbox = sem swarm.
+- **Gate antes de operar** — rode `swarm-readiness-gate` (go/no-go) antes de spawnar. Esta skill ensina a operar; o gate decide se pode operar.

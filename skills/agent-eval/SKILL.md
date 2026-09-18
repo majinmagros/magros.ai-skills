@@ -69,3 +69,12 @@ until genuinely complete". Fase de plan separada evita vitoria de
 prototipo bonito inacabado. Meca custo + tempo por fase, nao so total.
 
 ### 1. Define Tasks
+### Terminal-Bench / Deep-SWE protocol (leva YouTube rodada 6)
+
+Para eval agêntico além de tasks do próprio codebase, use o protocolo:
+
+- **Harness loop em container** — task → container preparado → loop comando→resultado → verifier valida estado final (pass/fail). Sem verifier, sem score.
+- **Colunas obrigatórias por task** — steps, tokens, tempo, custo ($/task), além do pass/fail. Compare tiers: SOTA / workhorse / leve.
+- **Prompts curtos, horizonte longo** (Deep-SWE) — prompts realistas e vagos como usuário real escreveria; mede autonomia com spec mínima, não obediência a spec detalhada.
+- **Regra variância-vs-saturação** — benchmark com todos empatados (~85-90%+) está saturado: descarte ou troque de pacote.
+- Veja `agentic-benchmark-top5` para montar seu índice pessoal antes de rodar.

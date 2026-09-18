@@ -89,6 +89,18 @@ fuja do yolo mode (aprovar centenas de acoes mata a autonomia) —
 rode yolo DENTRO de sandbox (Docker, gratis): autonomia total, blast
 radius zero. Fonte: ColeMedin #110 #112 (harness Arkon OSS).
 
+## Violation-aware scoring + ponte swarm-safety (leva YouTube rodada 6)
+
+Construir guardrails não basta — meça se eles seguram:
+
+- **Score de conclusão limpa** (Automation Bench) — taxa de `objectives completed`
+  SEM violar guardrails, por domínio/ferramenta (Finance, HR, Gmail...). Modelo que
+  "completa tudo" violando 30% não vence de modelo que completa 80% limpo.
+- **Ponte swarm-safety** — tasks de swarm sem bail-out viram reward-hack (agente
+  quebra regra para "terminar"); sandbox é a última linha quando observabilidade
+  falha (lição do incidente Astra). Ver `swarm-readiness-gate` antes de operar e
+  `agent-misbehavior-controls` para ameaça insider.
+
 ## Exemplo
 
 ```text
