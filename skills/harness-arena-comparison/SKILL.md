@@ -37,3 +37,7 @@ Quando precisa escolher ou trocar de harness, validar uma mudança de setup, ou 
 - `agent-eval` — eval first-party do seu agente/modelo.
 - `plan-duel` — duelo entre dois planos antes de implementar.
 - `eval-harness` — rigor de avaliação e rubricas.
+
+## Roteamento por step (leva YouTube rodada 9)
+
+Apos comparar na arena, roteie por step: ideacao/plano que rebate e questiona (owl) vs executor cirurgico que obedece + verification loops (rottweiler). Steps ambiguos vao para owl; steps especificados vao para rottweiler + verifier. Registre a heuristica usada por task para calibrar.

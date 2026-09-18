@@ -69,3 +69,7 @@ Detalhe 2D/3D: ver `references/pipeline.md` Etapas 3b-3c (mindmap/quiz via Noteb
 ---
 
 ## Etapa 1: SETUP — Nivelamento Inicial
+
+## Modo tour-apresentacao (leva YouTube rodada 9)
+
+Sobre o modo cidade-3D/mindmap: camada de apresentacao guiada por ilha (progressao, velocidade, edges de fluxo 3D, nota ELI12 por no). Tour nao e exploracao livre: tour tem roteiro, checkpoint e quiz por ilha.

@@ -87,3 +87,7 @@ demais e DEGREDAM a qualidade no novo modelo (guia oficial Anthropic).
 Na migracao para Claude 5, revise o inventario e remova instrucoes
 antigas (steps fechados, double-checks manuais, continuacoes forcadas)
 antes de culpar o modelo. Vale tambem para Astra 6 (OpenAI).
+
+## Failure modes da serie nova (leva YouTube rodada 9)
+
+Checklist ao migrar de serie: AI tells novos, formatacao ilegivel, tool-use que mudou de forma, custo/latencia por task (nao por token). Regra: nunca hiper-otimizar a ultima gota na serie antiga na vespera da migracao — congele e migre com eval suite verde.

@@ -63,3 +63,7 @@ generate(
     "image_size": "landscape_16_9",
     "num_images": 1,
     "seed": 42
+
+## Anexo provider Higgsfield (leva YouTube rodada 9)
+
+Catalogo de endpoints (t2v/i2v/t2i), polling ate MP4 local, custo por geracao registrado no chat, break-even vs subscription, bulk via workers (briefs para fan-out). Shootout mesmo-prompt entre providers antes de fixar o default. Ver ugc-seedance-talking-head para pipeline UGC completo.

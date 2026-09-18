@@ -62,3 +62,7 @@ project_name: "my-react-app"
 ---
 
 # Prefer Functional Style
+
+## Split personal-vs-site (leva YouTube rodada 9)
+
+Duas classes de licao: pessoal (como-eu-trabalho: markdown editavel, so licao duravel, nunca sai da maquina) vs site/compartilhada (como-o-site-funciona: ex. filtro escondido, cross-user). Promocao pessoal-para-global so com evidencia em 3+ sessoes. Para schedules/triggers pagos e MCP two-ways, registre custo e dono.

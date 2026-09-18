@@ -62,3 +62,7 @@ Search for high-signal people in target verticals. Assign a weight to each based
 | Engagement with your content | 5% | X API interactions |
 
 ### Signal Search Approach
+
+## Prospecacao estilo Clay (leva YouTube rodada 9)
+
+Ache quem deploya agentes publicamente + enrich em waterfall (250+ providers) + draft marcado not-sent (nunca auto-enviar). Anexe a logica ao dado: cada lead carrega o porque (sinal observado). Sem sinal, sem outreach.

@@ -63,3 +63,7 @@ skills/<skill-name>/
 ---
 name: kebab-case-name
 description: Gatilhos concretos (quando usar) + não-gatilhos + outcome.
+
+## Conversor poly-skill (leva YouTube rodada 9)
+
+Checklist Swiss-knife Claude+Codex: frontmatter YAML kebab-case, description beefier (verbos dos dois harnesses), Python generico sem dependencia exotica, cron mensal de revalidacao vs docs dos harnesses. Teste nos 2 alvos antes de declarar portavel.

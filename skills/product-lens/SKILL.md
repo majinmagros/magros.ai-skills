@@ -63,3 +63,7 @@ Maps the actual user experience:
 1. Clone/install the product as a new user
 2. Document every friction point (confusing steps, errors, missing docs)
 3. Time each step
+
+## Modo 1-person (leva YouTube rodada 9)
+
+Filtros antes de construir: capital necessario, automatizavel por software, dor de 1 pessoa com promessa clara (pain-person-promise). Niche em suporte primeiro (volume + willingness-to-pay). Se nao passa nos 3 filtros, nao construa — volte para o diagnostico YC.

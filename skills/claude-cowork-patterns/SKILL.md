@@ -61,3 +61,7 @@ adapters/
 ├── codex/ (hooks, README)
 └── ...
 ```
+
+## Conversa unificada (leva YouTube rodada 9)
+
+Nao force escolha de superficie: mesma thread para pergunta e tarefa profunda. O modelo roteia (responder vs executar); o usuario faz steer/edit no meio. Se a thread mistura pergunta + execucao, separe a prova por entrega, nao por mensagem.

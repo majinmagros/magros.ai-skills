@@ -71,3 +71,7 @@ Guia de conectores: **priorização (Gmail/Calendar/Drive/Notion), MCP vs nativo
 Drive/Notion P2 nativos; API interna de billing → MCP custom (sem conector oficial)
 OAuth com escopo mínimo; revoga o que não usa em 30 dias
 ```
+
+## Hub pronto vs MCP proprio (leva YouTube rodada 9)
+
+Playbook: use hub pronto (estilo Composio, 1000+ integracoes, 1 install) quando o conector e commodity (Gmail/Sheets/Notion/CRM); construa MCP proprio quando ha logica de dominio, SLA ou dados sensiveis. Decisao registrada por conector; revise quando o hub mudar pricing/limites.

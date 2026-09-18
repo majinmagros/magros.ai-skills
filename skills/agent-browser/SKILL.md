@@ -63,3 +63,7 @@ Após instalar a skill, o agente sabe usar comandos como:
 ```
 "Use o agent browser para testar a responsividade do header: diminua a tela, veja se o hamburger menu abre."
 "Use o agent browser para buscar as 5 últimas notícias do site X e me traga títulos + links."
+
+## Decision-plane barato (leva YouTube rodada 9)
+
+Para browser-use com custo sob controle: lista numerada de controles, refresh de contexto a cada step, 1 request = 1 escolha (op + target), texto gerado por modelo barato, timer excluindo startup, custo medido sem infra. Se o decision custar mais que a acao, simplifique a pagina primeiro (ver defuddle-leitura-limpa).

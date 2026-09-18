@@ -84,3 +84,7 @@ For every error path, include:
 Track:
 - completion rate
 - retries per task
+
+## Reverse-engineer via JSONL (leva YouTube rodada 9)
+
+Para clonar comportamento de harness bom: leia o JSONL de tool calls (ordem, verificacao, retries), replique o padrao monkey-see-monkey-do no seu harness, e arrende o cerebro (70-80 por cento local quando possivel). Copie o protocolo observado, nao o marketing do vendor.
