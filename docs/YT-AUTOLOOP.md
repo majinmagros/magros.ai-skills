@@ -29,10 +29,13 @@
 7. **Recomece** — volte ao passo 1 (nova data, próximos pendentes, próximo lote
    de enrichments). **Não pare entre voltas. Não pergunte.**
 
-## Automação ativa
+## Automação (sob comando)
 
-- **Task Scheduler `magros-yt-loop-diario`** (06:00): roda o passo 1 e atualiza
-  `state/yt-pending.json`. A sessão do agente entra no passo 2.
+- O gatilho é o **comando do usuário** ("próxima volta", "rode o loop", etc.) —
+  sem agendamento automático. Ao receber, execute as voltas em sequência sem
+  perguntar e sem parar entre elas.
+- `scripts/yt-loop-auto.ps1` faz o passo 1 (coleta) e atualiza
+  `state/yt-pending.json`. A sessão entra no passo 2.
 - **Skips conhecidos** (não retentar à exaustão): videos members-only
   (ex.: `@matthew_berman`), sem legendas, dedup vazio. Registre e siga.
 - **429 do YouTube**: é transitório — o retry do script base absorve; se
