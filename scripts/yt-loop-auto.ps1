@@ -53,22 +53,41 @@ if (-not $SkipCatalog) {
 RepoLog "diff-all --since $Since ..."
 $diffRaw = & node scripts/yt-oportunidades.mjs diff-all --since $Since 2>$null | Out-String
 $diff = $diffRaw | ConvertFrom-Json
+
+# Skiplist persistente: falhas deterministicas nao sao retentadas (members-only).
+$skipsFile = Join-Path $RepoRoot 'state\yt-skips.json'
+$skips = @{}
+if (Test-Path -LiteralPath $skipsFile) {
+  (Get-Content -LiteralPath $skipsFile -Raw | ConvertFrom-Json).PSObject.Properties |
+    ForEach-Object { $skips[$_.Name] = $_.Value }
+}
 $cands = @()
 foreach ($c in $diff) {
   foreach ($v in $c.sem_transcricao) {
-    if ($v.matches_filtro) {
+    if ($v.matches_filtro -and -not $skips.ContainsKey($v.id)) {
       $cands += [pscustomobject]@{ canal = $c.canal; id = $v.id; title = $v.title; upload_date = $v.upload_date }
     }
   }
 }
-RepoLog "$($cands.Count) video(s) com match desde $Since."
+RepoLog ('match desde ' + $Since + ': ' + $cands.Count + ' video(s), ' + $skips.Count + ' em skiplist.')
 
-# 3. Downloads (com teto; 429/rate-limit sao absorvidos pelo retry do script base)
+# 3. Downloads (com teto; falhas nao abortam a volta — 429 e transitório)
 $dl = @(); $fail = @()
 $take = $cands | Select-Object -First $MaxDownloads
 foreach ($t in $take) {
   RepoLog "download $($t.canal) / $($t.id) ..."
-  & node scripts/yt-oportunidades.mjs download --canal "$($t.canal)" "$($t.id)" 2>&1 | Out-String | Write-Host
+  $prevErr = $ErrorActionPreference; $ErrorActionPreference = 'Continue'
+  try {
+    $out = & node scripts/yt-oportunidades.mjs download --canal "$($t.canal)" "$($t.id)" 2>&1 | Out-String
+    Write-Host $out
+    if ($out -match 'members-only|Join this channel') {
+      $skips[$t.id] = 'members-only'
+      RepoLog "skiplist: $($t.id) = members-only (nao retentar)."
+    }
+  } catch {
+    $firstLine = $_.Exception.Message.Split([Environment]::NewLine)[0]
+    RepoLog ('falha (segue a volta): ' + $t.id + ' — ' + $firstLine)
+  } finally { $ErrorActionPreference = $prevErr }
   $dl += $t
 }
 if ($cands.Count -gt $take.Count) {
@@ -98,5 +117,6 @@ foreach ($t in $dl) {
 $pendingFile = Join-Path $RepoRoot 'state\yt-pending.json'
 @{ generated_at = (Get-Date).ToUniversalTime().ToString('o'); since = $Since; pending = @($pending) } |
   ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $pendingFile -Encoding utf8
-RepoLog "pending: $($pending.Count) pronto(s) p/ analise em state/yt-pending.json; $($fail.Count) sem transcricao (429/members-only/sem legenda)."
+$skips | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath $skipsFile -Encoding utf8
+RepoLog ('pending: ' + $pending.Count + ' pronto(s) em state/yt-pending.json; ' + $fail.Count + ' sem transcricao (429 ou sem legenda, retenta na proxima).')
 RepoLog 'Proximo passo (agente): analisar state/yt-pending.json, cruzar com skills/, CRIAR/ENRIQUECER, validar, mark, commit+push. Ver docs/YT-AUTOLOOP.md.'
