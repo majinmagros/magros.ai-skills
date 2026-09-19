@@ -44,7 +44,7 @@ project-root/
 - `references/commands-memory.md` — slash commands, memory layout, daily log, auto-reflection
 - `references/automation-data.md` — LaunchAgent/systemd/pm2, JSON data layer, schema evolution
 - `references/antipatterns.md` — monolith agent, stateless sessions, hardcoded creds, external DB, routing in code
-- `references/enriquecimentos.md` — sandbox (exe.dev), brand context folder, team memory (YT 2026-08-20)
+- `references/enriquecimentos.md` — sandbox (exe.dev), brand context folder, team memory (YT 2026-08-20), projects-as-orchestrator threads (YT 2026-09-19)
 
 ## Checklist
 

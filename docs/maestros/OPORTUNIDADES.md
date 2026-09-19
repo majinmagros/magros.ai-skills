@@ -843,3 +843,22 @@ Verificação por evidência (grep + diff de ids no relatório + unicidade do ca
 | 113 | **Vercel Eve Framework** (`m8VC2SV2igM` - @ColeMedin) | Framework filesystem-first (Vercel, OSS): pasta = agente (instruções, modelo, skills, tools, sandbox, channels, MCP, sub-agentes, schedules) | ✅ **NOVO** | **Gap G28** `vercel-eve-filesystem` (framework novo, materialização pendente de validação oficial — mesmo critério de G27) |
 
 Enrich aplicado: `agent-guardrails` (gates + yolo-sandbox). Gap novo G28 registrado (pendente). Nenhuma skill nova.
+---
+
+## Volta 2026-09-19 — 9 transcrições (6 canais), 2 enriches, 0 skills novas
+
+Coleta fresca pós-pull (16 commits do outro PC): catalog-all completo nos 26 canais + download de 9 matches_filtro (teto 15 respeitado, 429s absorvidos no retry). 2 members-only em skiplist (5uJsSGINJbc, Sjdvu4nHfDk).
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 115 | **Agentic Engineering Benchmarks** (9weiIHy9T_0 - @IndyDevDan) | Top-5 pessoal vs índice global AA 4.3; Terminal-Bench; stack por performance/custo/velocidade | ✅ Analisado | **COBERTO** por agentic-benchmark-top5 — sem edit |
+| 116 | **Drive Screen skill** (SWEThyRHMgQ - @ColeMedin) | Computer use leve via CLI, sem harness; morning setup; token-efficient | ✅ Analisado | **COBERTO** por drive-screen-os-control — sem edit |
+| 117 | **Anthropic Projects = Agentic OS** (afVpjeoQF2I - @SimonScrapes) | Projeto delega, threads executam (sessão CC cloud em branch próprio); migre e leve as camadas | ✅ Analisado | **Enrich M aplicado**: agentic-os/references/enriquecimentos.md (projects-as-orchestrator) |
+| 118 | **Claude Crash Course Expert** (-URQjhtvxZo - @SimonScrapes) | Guia oficial Claude 5: tirar auto-verificação, dizer o que fazer, justificar regras | ✅ Analisado | **COBERTO** por claude5-prompt-rewrite — sem edit |
+| 119 | **AI Agents Attack Hugging Face** (rfhKtNXSGTs - @celinexu6598) | Escape de sandbox, eval cheating, lições de governança | ✅ Analisado | **COBERTO** por eval-harness (eval-escape precedents) — sem edit |
+| 120 | **UGC com Seedance 2.5 + Treg** (GkGufbIVVC8 - @AIJasonZ) | 1 demo x N hooks; hook+demo; custo por segundo | ✅ Analisado | **COBERTO** por ugc-seedance-talking-head — sem edit |
+| 121 | **11 Hermes Skills que valem** (V1nMBWzXsCI - @maestrosdaia) | Skill custa memória; quais pagam o espaço; repo-first depois global; licença | ✅ Analisado | **Enrich P aplicado**: skill-eval-runner (pré-gate dieta de skills) |
+| 122 | **Mind Map vs 3D World** (whsi1qlUA78 - @maestrosdaia) | Ilhas do conhecimento, fluxogramas 3D | ✅ Analisado | **COBERTO** por ai-tutor-system (cidade de conceitos) — sem edit |
+| 123 | **From Employee to AI Agency** (b4nyIkPL4fQ - @maestrosdaia) | Tese harness > modelo; 80% não precisa de frontier | ✅ Analisado | **COBERTO** por 12-factor-agents + roteamento-modelos-baratos — sem edit |
+
+Backlog p/ próxima volta (matches_filtro sem_transcricao): Harness Arena (aL4eepffdjM), Projects oficial (5qt_aGyAsKk), Pen dev interfaces (huaTd5sAwKU), Codex Skills (9KOtMsZ9I28), content machine (WnZsMYeR7aA), CC 3.0 Mods (u1dW4z5Ye90).

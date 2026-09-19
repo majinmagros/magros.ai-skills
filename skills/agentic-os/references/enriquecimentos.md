@@ -11,3 +11,9 @@
 ## Team memory (Notion + supermemory.ai)
 
 - Fonte `PzaC81yCJg0`/`9CiOwbmOKdU`/`4iMZA1omCkM`: memory single-player por padrão. Padrão time: `Notion` (shared drive + permissions) + `supermemory.ai` (working memory queryable) + `Claude desktop`. Supera `Memory MD` nativo (5-10 notes após meses). Para solo, use `unified-memory` + `continuous-learning-v2` para continuidade.
+
+## Projects-as-orchestrator (threads delegam, projeto não executa) — YouTube 2026-09-19
+
+- Fonte `afVpjeoQF2I` (SimonScrapes, sobre o upgrade oficial de Projects): o projeto vira **uma conversa longa que não executa trabalho — ela delega**. O projeto é o orquestrador principal: recebe o objetivo e abre múltiplas sub-threads, cada thread uma sessão full Claude Code cloud **no próprio branch**, com contexto isolado; threads dividem-se em sub-agents/workflows. Regra oficial: **threads do the work**.
+- Migre seu OS para esse formato quando o provedor oferecer: 1 objetivo por conversa-mãe, trabalho em threads com branch próprio, nunca acumular execução na conversa-mãe (ela estoura contexto igual ao problema antigo de pasta+chats isolados).
+- Juízo de valor da fonte (e regra de migração): o framework do provedor é MVP — o valor está no que você layerou em cima (memory que distingue dado pessoal vs compartilhado, skills que codificam como o negócio trabalha, brand context refinado por meses, permissões que espelham a empresa). Quando o provedor shippar o OS, **migre para ele e leve as camadas** — o objetivo nunca foi a estrutura de pastas, foi o outcome.

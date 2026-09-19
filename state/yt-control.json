@@ -5,10 +5,10 @@
   },
   "canais": {
     "@maestrosdaia": {
-      "ultimaColeta": "2026-09-18",
-      "analisados": 5,
-      "ultimoVideoId": "McKnT5TwAAo",
-      "atualizadoEm": "2026-09-18T19:35:13.652Z"
+      "ultimaColeta": "2026-09-19",
+      "analisados": 85,
+      "ultimoVideoId": "b4nyIkPL4fQ",
+      "atualizadoEm": "2026-09-19T15:27:51.143Z"
     },
     "@FullCycle": {
       "ultimaColeta": "2026-09-18",
@@ -36,9 +36,9 @@
     },
     "@IndyDevDan": {
       "ultimaColeta": "2026-09-15",
-      "analisados": 2,
-      "ultimoVideoId": "S2sjyokoxeE",
-      "atualizadoEm": "2026-09-18T17:17:39.685Z"
+      "analisados": 16,
+      "ultimoVideoId": "9weiIHy9T_0",
+      "atualizadoEm": "2026-09-19T15:27:50.545Z"
     },
     "@pavanadhav": {
       "ultimaColeta": "2025-09-14",
@@ -47,10 +47,10 @@
       "atualizadoEm": "2026-09-13T20:43:07.925Z"
     },
     "@SimonScrapes": {
-      "ultimaColeta": "2026-09-18",
-      "analisados": 3,
-      "ultimoVideoId": "afVpjeoQF2I",
-      "atualizadoEm": "2026-09-18T18:23:45.026Z"
+      "ultimaColeta": "2026-09-19",
+      "analisados": 23,
+      "ultimoVideoId": "-URQjhtvxZo",
+      "atualizadoEm": "2026-09-19T15:27:50.789Z"
     },
     "@anwarhermuche": {
       "ultimaColeta": "2026-09-11",
@@ -77,10 +77,10 @@
       "atualizadoEm": "2026-09-18T18:07:38.477Z"
     },
     "@ColeMedin": {
-      "ultimaColeta": "2026-09-18",
-      "analisados": 4,
-      "ultimoVideoId": "joKb_QMmglM",
-      "atualizadoEm": "2026-09-18T19:35:12.688Z"
+      "ultimaColeta": "2026-09-16",
+      "analisados": 14,
+      "ultimoVideoId": "SWEThyRHMgQ",
+      "atualizadoEm": "2026-09-19T15:27:50.674Z"
     },
     "@matthew_berman": {
       "ultimaColeta": "2026-09-18",
@@ -89,10 +89,10 @@
       "atualizadoEm": "2026-09-18T19:35:14.288Z"
     },
     "@celinexu6598": {
-      "ultimaColeta": "2026-09-18",
-      "analisados": 2,
-      "ultimoVideoId": "x26cPhhLe-0",
-      "atualizadoEm": "2026-09-18T17:41:42.660Z"
+      "ultimaColeta": "2026-09-19",
+      "analisados": 9,
+      "ultimoVideoId": "rfhKtNXSGTs",
+      "atualizadoEm": "2026-09-19T15:27:50.910Z"
     },
     "@attekitadev": {
       "ultimaColeta": "2026-09-15",
@@ -120,9 +120,9 @@
     },
     "@AIJasonZ": {
       "ultimaColeta": "2026-09-16",
-      "analisados": 1,
+      "analisados": 9,
       "ultimoVideoId": "GkGufbIVVC8",
-      "atualizadoEm": "2026-09-18T17:57:05.749Z"
+      "atualizadoEm": "2026-09-19T15:27:51.025Z"
     }
   }
 }

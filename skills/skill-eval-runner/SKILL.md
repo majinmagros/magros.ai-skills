@@ -71,3 +71,13 @@ Skill X editada: 5 prompts dos triggers + 3 near-miss (não devem disparar)
 Braços pareados (com/sem skill, mesmo modelo) → juiz cego 0-2 por critério
 Veredito: +qualidade com +tokens? keep/drop por modelo + HTML com custo/tempo
 ```
+
+## Pré-gate: dieta de skills (Hermes 11 — YT 2026-09-19)
+
+Antes de rodar qualquer A/B, aplique a regra de custo de manutenção (fonte `V1nMBWzXsCI`, Maestros da IA sobre Hermes Agent, formato padrão aberto válido em qualquer harness):
+
+- Skill instalada não é grátis: **todo o menu instalado ocupa memória do agente e é cobrado a cada resposta**. 40 instaladas usando 6 = agente caro e lento fazendo o mesmo trabalho. A pergunta nunca é "quantas consigo instalar", é **"quais pagam o próprio espaço"**.
+- Gate: liste as instaladas, marque as não usadas no último mês e **remova antes do eval** — skill morta distorce os braços (o braço "sem skill" continua pagando o menu dela).
+- Agrupe candidatas por **problema, não por ranking**: comportamento / custo / alcance / qualidade de entrega — e avalie um grupo por vez.
+- Instalação teste: valide primeiro **no repositório** (escopo local); só promova a global o que provar uso diário — global carrega o menu em toda sessão e auto-invoca em tarefas amplas (ex. "analisar documentos") mais vezes do que o pretendido.
+- Checagem de licença antes de importar packs de terceiros: pacotes cujo texto proíbe copiar arquivos para fora do produto de origem **não entram**, mesmo que funcionem tecnicamente.
