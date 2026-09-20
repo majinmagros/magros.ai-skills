@@ -4,7 +4,7 @@
 
 ## Por que referência
 
-- **344 SKILL.md validados** (`node scripts/ci/count-skills.js` fonte única, 295 herdadas + 49 autorais), `validate-skills --strict` + `validate-no-personal-paths` em CI.
+- **501 SKILL.md validados** (`node scripts/ci/count-skills.js` fonte única, 416 herdadas + 85 autorais), `validate-skills --strict` + `validate-no-personal-paths` em CI.
 - **TrustScore interno** `scripts/ci/validate-trustscore.js` (Security 40 / Quality 60, gate 70, faixas 90/75/60/40/0, penalidades crítico -20/alto -10/médio -3/baixo -1) — sem depender de serviço externo.
 - **Processo vivo**: coleta semanal YouTube (`scripts/yt-oportunidades.mjs catalog-all/diff-all --since-last`) já prova atualização; `OPORTUNIDADES-2026-08-20.md` local documenta `collect→enrich→validate` sem gerar redundância (cruzamento prévio com 344).
 - **Sem lock-in de registry**: skills são Markdown + `SKILL.md` ≤200 linhas, `description` <1024 com `[o que faz] + [Use quando] + [NÃO use]` — portáveis para qualquer harness (Claude, Codex, Cursor, OpenCode).

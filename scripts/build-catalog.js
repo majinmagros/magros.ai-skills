@@ -15,6 +15,7 @@ const SKILLS_DIR = path.join(ROOT, 'skills');
 const MANIFEST = path.join(ROOT, 'manifests', 'install-modules.json');
 const AUTORAIS_MANIFEST = path.join(ROOT, 'manifests', 'skills-autorais.json');
 const README_FILE = path.join(ROOT, 'README.md');
+const ADOPT_FILE = path.join(ROOT, 'docs', 'corporate', 'adopt.md');
 const OUT_DIR = path.join(ROOT, 'docs', 'data');
 const OUT_FILE = path.join(OUT_DIR, 'skills.json');
 
@@ -107,6 +108,7 @@ function syncReadmeCounts(counts) {
     [/^- \*\*\d+ `SKILL\.md`\*\* no total/m, `- **${counts.total} \`SKILL.md\`** no total`],
     [/^- \*\*\d+\*\* herdadas do upstream ECC/m, `- **${counts.ecc}** herdadas do upstream ECC`],
     [/^- \*\*\d+ autorais\*\* \(/m, `- **${counts.autorais} autorais** (`],
+    [/# todas as skills \(\d+ ECC \+ \d+ autorais/, `# todas as skills (${counts.ecc} ECC + ${counts.autorais} autorais`],
   ];
   let updated = text;
   let applied = 0;
@@ -119,7 +121,35 @@ function syncReadmeCounts(counts) {
   if (updated !== text) {
     fs.writeFileSync(README_FILE, bom + updated, 'utf8');
   }
-  console.log(`README.md: ${applied}/3 contadores sincronizados (total=${counts.total}, ecc=${counts.ecc}, autorais=${counts.autorais})`);
+  console.log(`README.md: ${applied}/4 contadores sincronizados (total=${counts.total}, ecc=${counts.ecc}, autorais=${counts.autorais})`);
+  syncAdoptCounts(counts);
+}
+
+/**
+ * Sincroniza os contadores de docs/corporate/adopt.md (mesma fonte única).
+ */
+function syncAdoptCounts(counts) {
+  if (!fs.existsSync(ADOPT_FILE)) return;
+  const raw = fs.readFileSync(ADOPT_FILE, 'utf8');
+  const bom = raw.startsWith('\uFEFF') ? '\uFEFF' : '';
+  const text = bom ? raw.slice(1) : raw;
+  const rules = [
+    [/\*\*\d+ SKILL\.md validados\*\*/, `**${counts.total} SKILL.md validados**`],
+    [/(\d+) herdadas \+ (\d+) autorais/, `${counts.ecc} herdadas + ${counts.autorais} autorais`],
+  ];
+  let updated = text;
+  let applied = 0;
+  for (const [re, replacement] of rules) {
+    if (re.test(updated)) {
+      updated = updated.replace(re, replacement);
+      applied++;
+    }
+  }
+  // Linha da árvore do README principal (formato distinto, mesmo número).
+  if (updated !== text) {
+    fs.writeFileSync(ADOPT_FILE, bom + updated, 'utf8');
+  }
+  console.log(`adopt.md: ${applied}/2 contadores sincronizados`);
 }
 
 main();

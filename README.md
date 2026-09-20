@@ -144,7 +144,7 @@ em português/enriquecidas** — não são duplicatas cruas:
 ## Estrutura
 
 ```
-skills/          # todas as skills (295 ECC + 49 autorais; lista autorais em manifests/skills-autorais.json)
+skills/          # todas as skills (416 ECC + 85 autorais; lista autorais em manifests/skills-autorais.json)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
   grills/                  # autoral

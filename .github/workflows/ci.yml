@@ -42,6 +42,9 @@ jobs:
         # Sem --strict até zerar o backlog de órfãs pré-existentes; WARN visível sem quebrar o build.
         run: node scripts/ci/validate-manifest-coverage.js
 
+      - name: Validate skill cross-links (Related skills)
+        run: node scripts/ci/validate-skill-links.js --strict
+
       - name: Skill count source of truth
         run: node scripts/ci/count-skills.js
 

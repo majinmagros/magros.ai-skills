@@ -54,5 +54,4 @@ const cart = useCartStore();
 
 - `accessibility` — ARIA, semantic HTML, focus management
 - `frontend-patterns` — Cross-framework frontend architecture
-- `typescript` — TypeScript best practices applied to Vue projects
-- `coding-standards` — General code quality standards
+- `coding-standards` — General code quality standards (incl. TypeScript practices in references/)

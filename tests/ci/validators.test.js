@@ -3257,6 +3257,88 @@ function runTests() {
     cleanupTestDir(testDir);
   })) passed++; else failed++;
 
+  // ==========================================
+  // validate-manifest-coverage.js
+  // ==========================================
+  console.log('\nvalidate-manifest-coverage.js:');
+
+  function writeCoverageFixture(testDir, skillIds, modules) {
+    for (const id of skillIds) {
+      const d = path.join(testDir, 'skills', id);
+      fs.mkdirSync(d, { recursive: true });
+      fs.writeFileSync(path.join(d, 'SKILL.md'),
+        `---\nname: ${id}\ndescription: Fixture\n---\n# ${id}\n`);
+    }
+    writeJson(path.join(testDir, 'manifests', 'install-modules.json'),
+      { version: 1, modules });
+  }
+
+  function runCoverageValidator(testDir, strict) {
+    const validatorPath = path.join(validatorsDir, 'validate-manifest-coverage.js');
+    let source = fs.readFileSync(validatorPath, 'utf8');
+    source = stripShebang(source);
+    if (strict) source = `process.argv.push('--strict');\n${source}`;
+    source = source.replace(/const ROOT = .*?;/,
+      `const ROOT = ${JSON.stringify(testDir)};`);
+    return runSourceViaTempFile(source);
+  }
+
+  if (test('passes clean fixture (mapped, no cycles)', () => {
+    const testDir = createTestDir();
+    writeCoverageFixture(testDir, ['a', 'b'], [
+      { id: 'm1', paths: ['skills/a', 'skills/b'], dependencies: [] },
+    ]);
+    const result = runCoverageValidator(testDir, false);
+    assert.strictEqual(result.code, 0, `Should pass, got: ${result.stdout} ${result.stderr}`);
+    assert.ok(result.stdout.includes('0 orfas'), 'Should report zero orphans');
+    cleanupTestDir(testDir);
+  })) passed++; else failed++;
+
+  if (test('warns (not fails) on orphan skill in default mode', () => {
+    const testDir = createTestDir();
+    writeCoverageFixture(testDir, ['a', 'ghost'], [
+      { id: 'm1', paths: ['skills/a'], dependencies: [] },
+    ]);
+    const result = runCoverageValidator(testDir, false);
+    assert.strictEqual(result.code, 0, 'Default mode must not fail CI');
+    assert.ok(result.stdout.includes('pendência'), 'Should summarize pending items');
+    cleanupTestDir(testDir);
+  })) passed++; else failed++;
+
+  if (test('fails on orphan skill in strict mode', () => {
+    const testDir = createTestDir();
+    writeCoverageFixture(testDir, ['a', 'ghost'], [
+      { id: 'm1', paths: ['skills/a'], dependencies: [] },
+    ]);
+    const result = runCoverageValidator(testDir, true);
+    assert.strictEqual(result.code, 1, 'Strict mode must fail on orphan');
+    assert.ok(result.stderr.includes('ghost'), 'Should report the orphan skill');
+    cleanupTestDir(testDir);
+  })) passed++; else failed++;
+
+  if (test('fails on phantom manifest entry in strict mode', () => {
+    const testDir = createTestDir();
+    writeCoverageFixture(testDir, ['a'], [
+      { id: 'm1', paths: ['skills/a', 'skills/nope'], dependencies: [] },
+    ]);
+    const result = runCoverageValidator(testDir, true);
+    assert.strictEqual(result.code, 1, 'Strict mode must fail on phantom entry');
+    assert.ok(result.stderr.includes('nope'), 'Should report the phantom entry');
+    cleanupTestDir(testDir);
+  })) passed++; else failed++;
+
+  if (test('fails on circular module dependency in strict mode', () => {
+    const testDir = createTestDir();
+    writeCoverageFixture(testDir, ['a', 'b'], [
+      { id: 'm1', paths: ['skills/a'], dependencies: ['m2'] },
+      { id: 'm2', paths: ['skills/b'], dependencies: ['m1'] },
+    ]);
+    const result = runCoverageValidator(testDir, true);
+    assert.strictEqual(result.code, 1, 'Strict mode must fail on cycle');
+    assert.ok(result.stderr.includes('circular'), 'Should report the cycle');
+    cleanupTestDir(testDir);
+  })) passed++; else failed++;
+
   // Summary
   console.log(`\nResults: Passed: ${passed}, Failed: ${failed}`);
   process.exit(failed > 0 ? 1 : 0);

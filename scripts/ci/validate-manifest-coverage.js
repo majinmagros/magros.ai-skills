@@ -62,6 +62,37 @@ function main() {
       report(`manifests/install-modules.json referencia skills/${id} sem diretorio correspondente (entrada fantasma)`);
     }
   }
+  // Dependencias circulares entre modulos (A->B->C->A quebra a instalacao).
+  // Desconhecidas ficam com validate-install-manifests; aqui so ciclos.
+  const depGraph = new Map();
+  for (const mod of manifest.modules || []) {
+    depGraph.set(mod.id, (mod.dependencies || []).filter(d => typeof d === 'string'));
+  }
+  const WHITE = 0, GRAY = 1, BLACK = 2;
+  const color = new Map([...depGraph.keys()].map(k => [k, WHITE]));
+  const stack = [];
+  let cycle = null;
+  function dfs(node) {
+    color.set(node, GRAY);
+    stack.push(node);
+    for (const dep of depGraph.get(node) || []) {
+      if (!depGraph.has(dep)) continue;
+      if (color.get(dep) === GRAY) {
+        cycle = [...stack.slice(stack.indexOf(dep)), dep];
+        return true;
+      }
+      if (color.get(dep) === WHITE && dfs(dep)) return true;
+    }
+    stack.pop();
+    color.set(node, BLACK);
+    return false;
+  }
+  for (const node of depGraph.keys()) {
+    if (color.get(node) === WHITE && dfs(node)) break;
+  }
+  if (cycle) {
+    report(`dependencia circular entre modulos: ${cycle.join(' -> ')}`);
+  }
   if (errors > 0 && STRICT) {
     process.exit(1);
   }

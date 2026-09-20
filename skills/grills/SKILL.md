@@ -1,6 +1,6 @@
 ---
 name: grills
-description: Stress-test a plan and its implementation with repeated and adversarial runs (edge cases, extreme inputs, concurrency, load) before the solution is executed or finalized. Use when a plan or code patch must be proven highly reliable before completion.
+description: Stress-test a plan and its implementation with repeated and adversarial runs (edge cases, extreme inputs, concurrency, load) before the solution is executed or finalized. Use when a plan or code patch must be proven highly reliable before completion. For idea interviews without execution, use grilling (with records in grill-with-docs).
 argument-hint: "<target: plano | codigo | ambos>"
 ---
 
