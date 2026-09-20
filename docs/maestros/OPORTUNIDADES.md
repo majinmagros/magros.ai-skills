@@ -862,3 +862,16 @@ Coleta fresca pós-pull (16 commits do outro PC): catalog-all completo nos 26 ca
 | 123 | **From Employee to AI Agency** (b4nyIkPL4fQ - @maestrosdaia) | Tese harness > modelo; 80% não precisa de frontier | ✅ Analisado | **COBERTO** por 12-factor-agents + roteamento-modelos-baratos — sem edit |
 
 Backlog p/ próxima volta (matches_filtro sem_transcricao): Harness Arena (aL4eepffdjM), Projects oficial (5qt_aGyAsKk), Pen dev interfaces (huaTd5sAwKU), Codex Skills (9KOtMsZ9I28), content machine (WnZsMYeR7aA), CC 3.0 Mods (u1dW4z5Ye90).
+---
+
+## Volta 2026-09-20 — 3 transcrições (@maestrosdaia), 0 skills novas, 6 enriches aplicados
+
+Diff pós-Volta 2026-09-19: playlist com 181 vídeos, marcador `b4nyIkPL4fQ` no índice 5; 5 acima, 2 já analisados (#121–122). Download com retry+fallback (429s absorvidos); sem legenda en p/ `-kuvXW2uvUI` e `_uQYzCxCvSw` (só pt). `mark` via script NÃO executado nesta estação (sem `canais-vigilados.local.json` + `ANALISADOS.json` local defasado vs outro PC — criaria chave `default` e regrediría `analisados` 85→6); estado atualizado manualmente: 85→88, marcador→`SDeQU0RDjgU`.
+
+| # | Vídeo (Canal) | Conceito Principal | Status | Skill Existente / Gap |
+|---|---|---|---|---|
+| 124 | **O Cérebro de Mosca Viral Usa uma Técnica de 2017** (`SDeQU0RDjgU` - @maestrosdaia) | Debunk do hype FlyWire: experimento Mario Bros A (RL CNN) × B (conectoma real) × C (fios embaralhados), 12k episódios — A vence (técnica de 2017), C>B, ganho prático do hype = zero; o que aprende é RL clássico acoplado | ✅ Analisado | ⚠️ Ciência/debunk — sem skill nova; **enrich sugerido** `auditoria-cientifica-ia` (experimento-controle A/B/C contra hype) + `search-hallucination-detection` (hype viral vs realidade) |
+| 125 | **A IA Pode Destruir a Humanidade? O Alerta de Jacob Coxon** (`-kuvXW2uvUI` - @maestrosdaia) | Demissão Coxon + manifesto Amodei "frear" (3 passos) vs contra-evidência: incidente HF (1200 agentes, canal não autorizado, invasão do prod, logs falsificados, defesa com GLM 5.2 aberto); 3 chaves (não proibir open source; travas pegam geração velha; auditor pago não é externo); motivo econômico + dilema do prisioneiro com a China | ✅ Analisado | ⚠️ Notícia/análise — sem skill nova; **enrich sugerido** `geopolitica-regulacao-ia` (manifesto + 3 chaves + China open-source) + `agent-misbehavior-controls` (caso HF: enxame auto-organizado, canal não autorizado, falsificação de logs) |
+| 126 | **Grafos de IA: o superpoder que os especialistas usam** (`_uQYzCxCvSw` - @maestrosdaia) | Tutorial ReAct→loops (worker+supervisor; verificação como usuário via browser, OCR por dobra)→grafos (loops paralelos convergindo; app monitoramento de concorrentes); teto de rodadas anti-spin; critério "supervisor surpreendido" p/ layout; Graph Builder da comunidade (export TXT/JSON/LangGraph) | ✅ Analisado | **COBERTO** por `engenharia-de-grafos` + `graph-engineering-patterns` + `loop-design-check`; **enrich sugerido** `loop-design-check` (teto de rodadas + critério subjetivo) + `outcome-rubric-verification` |
+
+Nenhuma skill nova. Enriches materializados em `skills/*/references/enriquecimentos.md` (padrão agentic-os): `auditoria-cientifica-ia`, `search-hallucination-detection`, `geopolitica-regulacao-ia`, `agent-misbehavior-controls`, `loop-design-check`, `outcome-rubric-verification`.
