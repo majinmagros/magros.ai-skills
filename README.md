@@ -10,6 +10,14 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 > A ideia central: a biblioteca funciona como um **"cérebro externo"** — procedimentos
 > detalhados que permitem até a modelos de IA mais simples produzir trabalho de
 > qualidade, com o conhecimento vivendo no seu computador.
+>
+> **Posicionamento:** isto não é uma coleção de prompts — é prompt tratado como
+> produto de engenharia. Cada skill tem ciclo de vida (criação validada, eval A/B
+> com rubrica, auditoria de peso-morto, versionamento e rollback), higiene
+> automatizada (validadores de CI, manifestos, catálogo gerado) e prova de origem
+> (cada acréscimo nasce de execução real ou fonte oficial validada, nunca de
+> palpite). O efeito prático: o rigor mora nos procedimentos, não no modelo —
+> dá para trocar o modelo sem trocar o padrão de qualidade.
 
 ## Conteúdo
 
