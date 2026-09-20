@@ -1,6 +1,6 @@
 ---
 name: coletar-oportunidades-youtube
-description: Use when the user wants to check a YouTube channel against local transcripts, collect skill/automation opportunities from videos, download missing transcripts, analyze videos for new skill ideas, or keep a catalog up to date. Triggers on "defasagem do canal", "oportunidades de skill", "analisa os vídeos", "transcrições faltando", "baixar transcrição", "vídeos novos", "coletar oportunidades", "yt-oportunidades". Uses scripts/yt-oportunidades.mjs (sync-check/catalog/diff/download/dedup/mark/analyzed) with transcripts kept OUTSIDE the public repo.
+description: Use when the user wants to check a YouTube channel against local transcripts, collect skill/automation opportunities from videos, download missing transcripts, analyze videos for new skill ideas, or keep a catalog up to date. Triggers on "defasagem do canal", "oportunidades de skill", "analisa os vídeos", "transcrições faltando", "baixar transcrição", "vídeos novos", "coletar oportunidades", "yt-oportunidades". Uses scripts/yt-oportunidades.mjs (sync-check/catalog/diff/download/dedup/mark/reconcile/analyzed) with transcripts kept OUTSIDE the public repo.
 metadata:
   origin: ECC
 ---
@@ -50,6 +50,22 @@ node scripts/yt-oportunidades.mjs sync-check
 
 O `sync-check` mostra também a última coleta publicada e o
 `state/yt-control.json` (fonte da verdade por canal, só ids/datas).
+
+### 0b. Reconciliar marcas locais vs compartilhadas (multi-PC, antes do `mark`)
+
+Com 2+ PCs, seu `ANALISADOS.json` local pode estar atrás do compartilhado:
+
+```
+node scripts/yt-oportunidades.mjs reconcile
+```
+
+- Exit 0 (`OK`) → pode marcar.
+- Exit 1 (`DIVERGENTE`) → NÃO rode `mark`: o compartilhado tem marcas que
+  seu PC não tem (outro PC coletou). Faça `git pull`, confira, e só então marque.
+- Proteção automática: `mark` nunca reduz `analisados` nem volta `ultimaColeta`
+  no `state/yt-control.json` (guarda monotônico — regressão 85→6 não acontece mais).
+- Convenção de dono: campo opcional `dono` em `manifests/canais-vigilados.json`
+  por canal (qual PC coleta); sem dono explícito, vale quem coletou por último.
 
 ### 1. Catalogar o canal
 

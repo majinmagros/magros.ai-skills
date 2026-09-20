@@ -522,14 +522,63 @@ function updateControlState(ctx, ids) {
     state._meta = { nota: 'Fonte da verdade compartilhada entre PCs (só ids/datas — nunca transcrições). Commit + push após cada coleta.' };
   }
   const key = ctx.label || 'default';
+  const prev = (state.canais && state.canais[key]) || {};
+  const prevCount = Number(prev.analisados) || 0;
+  const localCount = Array.isArray(analyzed) ? analyzed.length : 0;
+  // Multi-PC: nunca regredir a contagem compartilhada — outro PC pode ter
+  // marcas que esta estacao ainda nao tem no ANALISADOS.json local.
+  const count = Math.max(prevCount, localCount);
+  if (localCount < prevCount) {
+    console.log(`[${ctx.label}] mantido analisados=${prevCount} (local tem ${localCount} — marcas de outro PC?)`);
+  }
+  const computedDate = (last && last.ultimaColeta) || todayStr();
+  const ultimaColeta = [prev.ultimaColeta, computedDate].filter(Boolean).sort().pop();
   state.canais[key] = {
-    ultimaColeta: (last && last.ultimaColeta) || todayStr(),
-    analisados: Array.isArray(analyzed) ? analyzed.length : 0,
-    ultimoVideoId: ids.length > 0 ? ids[ids.length - 1] : (state.canais[key] && state.canais[key].ultimoVideoId) || null,
+    ultimaColeta,
+    analisados: count,
+    ultimoVideoId: ids.length > 0 ? ids[ids.length - 1] : prev.ultimoVideoId || null,
     atualizadoEm: new Date().toISOString(),
   };
   writeJson(CONTROL_STATE_FILE, state);
   console.log(`[${ctx.label}] Estado compartilhado atualizado: state/yt-control.json (faça commit + push para o outro PC enxergar)`);
+}
+
+/** Chave do canal no state compartilhado (label --canal ou handle da URL). */
+function sharedKeyFor(ctx) {
+  if (ctx.label && ctx.label !== 'default') return ctx.label;
+  const m = String(ctx.channel || '').match(/youtube\.com\/(@[^/]+)/);
+  return m ? m[1] : ctx.label;
+}
+
+/**
+ * reconcile — acusa divergência entre marcas locais e estado compartilhado.
+ * Exit 0 (OK, pode marcar) / 1 (DIVERGENTE, não rode `mark` até reconciliar).
+ */
+function reconcile(ctx) {
+  const key = sharedKeyFor(ctx);
+  const analyzed = readJson(ctx.analyzedFile, []);
+  const last = readJson(ctx.lastColetaFile, null);
+  const state = readJson(CONTROL_STATE_FILE, null);
+  const shared = (state && state.canais && state.canais[key]) || null;
+  const localIds = new Set(Array.isArray(analyzed) ? analyzed : []);
+  console.log(`[${ctx.label}] canal compartilhado: ${key}`);
+  console.log(`[${ctx.label}] local: ${localIds.size} analisados, ultimaColeta=${(last && last.ultimaColeta) || '(nenhuma)'}`);
+  if (!shared) {
+    console.log(`[${ctx.label}] sem entrada compartilhada — OK para primeira coleta (mark cria)`);
+    process.exit(0);
+  }
+  console.log(`[${ctx.label}] compartilhado: ${shared.analisados} analisados, ultimaColeta=${shared.ultimaColeta}, marcador=${shared.ultimoVideoId}`);
+  let divergente = false;
+  if (localIds.size < (Number(shared.analisados) || 0)) {
+    console.log(`[${ctx.label}] DIVERGENTE: compartilhado tem ${shared.analisados}, local tem ${localIds.size} — outro PC marcou sem voce (pull + confira antes de mark)`);
+    divergente = true;
+  }
+  if (shared.ultimoVideoId && !localIds.has(shared.ultimoVideoId)) {
+    console.log(`[${ctx.label}] AVISO: marcador ${shared.ultimoVideoId} fora do seu ANALISADOS.json local`);
+    divergente = true;
+  }
+  if (!divergente) console.log(`[${ctx.label}] OK — local e compartilhado convergem`);
+  process.exit(divergente ? 1 : 0);
 }
 
 function mark(ctx, ids) {
@@ -637,10 +686,11 @@ switch (RUN()) {
   case 'download': download(targetCtx(), posArgs()); break;
   case 'dedup': dedup(targetCtx(), posArgs()); break;
   case 'mark': mark(targetCtx(), posArgs()); break;
+  case 'reconcile': reconcile(targetCtx()); break;
   case 'analyzed': analyzed(targetCtx()); break;
   case 'last': lastColeta(targetCtx()); break;
   default:
-    console.log(`Uso: node ${basename(process.argv[1])} {sync-check [--json|--allow-stale|--no-fetch|--branch NOME]|catalog|catalog-all|diff [--since DATA|--since-last]|diff-all [--since DATA|--since-last]|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|analyzed [--canal HANDLE]|last [--canal HANDLE]}`);
+    console.log(`Uso: node ${basename(process.argv[1])} {sync-check [--json|--allow-stale|--no-fetch|--branch NOME]|catalog|catalog-all|diff [--since DATA|--since-last]|diff-all [--since DATA|--since-last]|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|reconcile [--canal HANDLE]|analyzed [--canal HANDLE]|last [--canal HANDLE]}`);
     console.log(`  YT_DIR=${defaultCtx().dir}`);
     console.log(`  YT_CHANNEL=${defaultCtx().channel}`);
 }

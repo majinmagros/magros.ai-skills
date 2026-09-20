@@ -1,6 +1,6 @@
 ---
 name: motion-patterns
-description: "Use when animating buttons, modals, toasts, stagger lists, page transitions, scroll reveals, or layout animations in React/Next.js with motion. Triggers on \"motion-patterns\", \"motion patterns\", \"patterns\"."
+description: "Use when animating buttons, modals, toasts, stagger lists, page transitions, scroll reveals, or layout animations in React/Next.js with motion. Triggers on \"motion-patterns\", \"motion patterns\", \"patterns\". For system-level judgment (when/why, performance, accessibility), prefer motion-ui; patterns require motion-foundations tokens."
 metadata:
   origin: ECC
 ---

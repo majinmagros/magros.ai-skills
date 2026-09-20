@@ -3339,6 +3339,16 @@ function runTests() {
     cleanupTestDir(testDir);
   })) passed++; else failed++;
 
+  if (test('ignores intentionally-unshipped skills', () => {
+    const testDir = createTestDir();
+    writeCoverageFixture(testDir, ['a', 'skill-comply'], [
+      { id: 'm1', paths: ['skills/a'], dependencies: [] },
+    ]);
+    const result = runCoverageValidator(testDir, true);
+    assert.strictEqual(result.code, 0, `Intentionally-unshipped must not fail; got: ${result.stdout} ${result.stderr}`);
+    cleanupTestDir(testDir);
+  })) passed++; else failed++;
+
   // Summary
   console.log(`\nResults: Passed: ${passed}, Failed: ${failed}`);
   process.exit(failed > 0 ? 1 : 0);

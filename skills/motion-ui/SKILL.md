@@ -1,6 +1,6 @@
 ---
 name: motion-ui
-description: "Production-ready UI motion system for React/Next.js. Use when implementing animations, transitions, or motion patterns."
+description: "Production-ready UI motion system for React/Next.js. Use when implementing animations, transitions, or motion patterns. For copy-paste recipes (buttons, modals, stagger, scroll reveals), prefer motion-patterns."
 metadata:
   origin: ECC
 ---

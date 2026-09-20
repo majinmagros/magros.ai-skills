@@ -39,8 +39,7 @@ jobs:
         run: node scripts/ci/validate-install-manifests.js
 
       - name: Validate manifest coverage (no orphan skills)
-        # Sem --strict até zerar o backlog de órfãs pré-existentes; WARN visível sem quebrar o build.
-        run: node scripts/ci/validate-manifest-coverage.js
+        run: node scripts/ci/validate-manifest-coverage.js --strict
 
       - name: Validate skill cross-links (Related skills)
         run: node scripts/ci/validate-skill-links.js --strict

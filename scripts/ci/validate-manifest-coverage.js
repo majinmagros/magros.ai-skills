@@ -25,6 +25,13 @@ const ROOT = path.join(__dirname, '..', '..');
 const SKILLS_DIR = path.join(ROOT, 'skills');
 const MANIFEST = path.join(ROOT, 'manifests', 'install-modules.json');
 
+// Espelha INTENTIONALLY_UNSHIPPED_SKILL_IDS de validate-install-manifests.js:21
+// (manter sincronizado manualmente; aquele arquivo exige `ajv`, este roda sem deps).
+const INTENTIONALLY_UNSHIPPED = new Set([
+  'skill-comply', // meta-skill com .pyc + .gitignore aninhado; revisit apos packaging cleanup
+  'ai-media-generator', // marcado como externo naquele arquivo; mapeado aqui mesmo assim
+]);
+
 function main() {
   if (!fs.existsSync(SKILLS_DIR)) {
     console.log('No curated skills directory (skills/), skipping');
@@ -53,7 +60,7 @@ function main() {
     }
   };
   for (const dir of dirs) {
-    if (!mapped.has(dir)) {
+    if (!mapped.has(dir) && !INTENTIONALLY_UNSHIPPED.has(dir)) {
       report(`skills/${dir} sem mapeamento em manifests/install-modules.json (skill orfa no instalador)`);
     }
   }
