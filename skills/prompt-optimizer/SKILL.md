@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-description: Use when the user wants a prompt optimized or rewritten — analyze intent and gaps, match ECC components, output a ready-to-paste prompt. Triggers on "optimize prompt", "improve my prompt", "rewrite this prompt", "help me prompt", "优化prompt", "帮我优化这个指令".
+description: Use when the user wants a prompt optimized or rewritten — analyze intent and gaps, match ECC components, output a ready-to-paste prompt. Triggers on "optimize prompt", "improve my prompt", "rewrite this prompt", "help me prompt", "优化prompt", "帮我优化这个指令". For quick lazy-prompt fixes via the 4 pillars (PT), prefer prompt-builder.
 metadata:
   origin: community
   author: YannJY02

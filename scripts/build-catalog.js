@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
  * build-catalog.js — gera docs/data/skills.json a partir do repo.
- * Lê: cada skills/<id>/SKILL.md (frontmatter + corpo), manifests/install-modules.json (módulo/custo).
- * Marca autorais pela lista canônica do README (frontmatter não identifica ECC de forma confiável).
+ * Lê: cada skills/<id>/SKILL.md (frontmatter + corpo), manifests/install-modules.json (módulo/custo),
+ * manifests/skills-autorais.json (lista curada, fonte única — mesma de scripts/ci/count-skills.js).
+ * Sincroniza os contadores do README.md (seção Conteúdo) com os números gerados.
  * Uso: node scripts/build-catalog.js
  */
 
@@ -12,20 +13,14 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const SKILLS_DIR = path.join(ROOT, 'skills');
 const MANIFEST = path.join(ROOT, 'manifests', 'install-modules.json');
+const AUTORAIS_MANIFEST = path.join(ROOT, 'manifests', 'skills-autorais.json');
+const README_FILE = path.join(ROOT, 'README.md');
 const OUT_DIR = path.join(ROOT, 'docs', 'data');
 const OUT_FILE = path.join(OUT_DIR, 'skills.json');
 
-const AUTORAIS = new Set([
-  'analise-concorrentes','anti-hallucination','auditar-skills','auditoria-artefatos',
-  'automacao-deterministica','baixar-musica','checklist-requisitos','clareza','clarificar',
-  'constituicao-projeto','convergencia','conversa','coordenacao','criar-campanha-visual',
-  'criar-skill','criatividade','dnb-production','doctor','encontrar-skill','engenharia-de-grafos',
-  'gauntlet-loop','goal','graph-engineering','graphify','grill-with-docs','grilling','grills',
-  'humanizar-texto','pesquisa-social','plain-language-response','plan','prompt-builder','routines',
-  'score-loop','skill-map','superpowers','taste','triagem-bug','triagem-ideias','workflows',
-  'coletar-oportunidades-youtube','sessoes-orquestradas','gemini-cli-agent-skills',
-  'roteamento-modelos-baratos','pipeline-video-agente'
-]);
+const AUTORAIS = new Set(
+  JSON.parse(fs.readFileSync(AUTORAIS_MANIFEST, 'utf8').replace(/^\uFEFF/, '')).skills || []
+);
 
 function parseFrontmatter(content) {
   const m = content.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
@@ -93,6 +88,38 @@ function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(OUT_FILE, JSON.stringify(out, null, 2), 'utf8');
   console.log(`OK: ${out.counts.total} skills (${out.counts.autorais} autorais, ${out.counts.ecc} ECC) -> ${path.relative(ROOT, OUT_FILE)}`);
+  syncReadmeCounts(out.counts);
+}
+
+/**
+ * Reescreve os 3 contadores da seção Conteúdo do README.md com os números
+ * gerados (fonte única: este catálogo). Auto-cura a defasagem README vs real.
+ */
+function syncReadmeCounts(counts) {
+  if (!fs.existsSync(README_FILE)) {
+    console.log('README.md ausente, contadores não sincronizados');
+    return;
+  }
+  const raw = fs.readFileSync(README_FILE, 'utf8');
+  const bom = raw.startsWith('\uFEFF') ? '\uFEFF' : '';
+  const text = bom ? raw.slice(1) : raw;
+  const rules = [
+    [/^- \*\*\d+ `SKILL\.md`\*\* no total/m, `- **${counts.total} \`SKILL.md\`** no total`],
+    [/^- \*\*\d+\*\* herdadas do upstream ECC/m, `- **${counts.ecc}** herdadas do upstream ECC`],
+    [/^- \*\*\d+ autorais\*\* \(/m, `- **${counts.autorais} autorais** (`],
+  ];
+  let updated = text;
+  let applied = 0;
+  for (const [re, replacement] of rules) {
+    if (re.test(updated)) {
+      updated = updated.replace(re, replacement);
+      applied++;
+    }
+  }
+  if (updated !== text) {
+    fs.writeFileSync(README_FILE, bom + updated, 'utf8');
+  }
+  console.log(`README.md: ${applied}/3 contadores sincronizados (total=${counts.total}, ecc=${counts.ecc}, autorais=${counts.autorais})`);
 }
 
 main();

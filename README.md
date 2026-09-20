@@ -21,9 +21,9 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **493 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
-- **411** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **82 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **501 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **416** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
+- **85 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 

@@ -1,6 +1,6 @@
 ---
 name: prompt-builder
-description: Use when the user wants a lazy/vague prompt improved or adapted — generate from scratch, fix, or port to another model/tool. Triggers on "melhora esse prompt", "estrutura o prompt", "prompt melhor", "conserta meu prompt", "garbage in garbage out", "prompt para imagem/vídeo/código". Applies the 4 pillars of good prompting.
+description: Use when the user wants a lazy/vague prompt improved or adapted — generate from scratch, fix, or port to another model/tool. Triggers on "melhora esse prompt", "estrutura o prompt", "prompt melhor", "conserta meu prompt", "garbage in garbage out", "prompt para imagem/vídeo/código". Applies the 4 pillars of good prompting. Se precisa de pipeline com bench e match de componentes ECC, prefira prompt-optimizer.
 ---
 
 # Skill: Prompt-builder — transforma instrução preguiçosa em prompt bom

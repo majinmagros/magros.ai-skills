@@ -1,6 +1,6 @@
 ---
 name: encontrar-skill
-description: Use when the user needs to find a Claude Code skill for a problem — existing solution, best option among many, or curated lists. Triggers on "encontra uma skill", "procura skill", "qual skill pra", "tem skill pra isso", "melhores skills", "app store de skills". Filters by stars, installs, recency, license; reviews before installing.
+description: Use when the user needs to find a Claude Code skill for a problem — existing solution, best option among many, or curated lists. Triggers on "encontra uma skill", "procura skill", "qual skill pra", "tem skill pra isso", "melhores skills", "app store de skills". Filters by stars, installs, recency, license; reviews before installing. Para pesquisar fontes antes de CRIAR uma skill, use skill-scout.
 ---
 
 # Skill: Encontrar-skill — acha a skill certa (app store de skills)
