@@ -43,6 +43,7 @@
     "gauntlet-loop",
     "gemini-cli-agent-skills",
     "goal",
+    "google-adk-patterns",
     "graph-engineering",
     "graphify",
     "grill-with-docs",
@@ -74,6 +75,7 @@
     "sessoes-orquestradas",
     "skill-execution-dashboard",
     "skill-map",
+    "software-factory-orchestrator",
     "superpowers",
     "support-agent-report-card",
     "swarm-readiness-gate",
@@ -81,6 +83,7 @@
     "triagem-bug",
     "triagem-ideias",
     "ugc-seedance-talking-head",
+    "vercel-eve-filesystem",
     "vibe-security-scanner",
     "workflows",
     "youtube-packaging"

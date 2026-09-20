@@ -969,7 +969,10 @@
         "skills/attention-architecture",
         "skills/claude-admin-model-governance",
         "skills/self-improvement-ladder",
-        "skills/codex-subscription-offload"
+        "skills/codex-subscription-offload",
+        "skills/google-adk-patterns",
+        "skills/vercel-eve-filesystem",
+        "skills/software-factory-orchestrator"
       ],
       "targets": [
         "claude",

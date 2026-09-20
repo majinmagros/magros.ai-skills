@@ -891,3 +891,15 @@ Backlog da Volta 2026-09-19 (`matches_filtro sem_transcricao`): 6/6 baixados p/ 
 | 132 | **Claude Code 3.0 (Mods)** (`u1dW4z5Ye90` - @aicodeking) | Roundup 20/ago–18/set: Mods (function hooks; 4 built-in: agents-md loader, diff panel, telemetria, org security) + suporte AGENTS.md + Projects beta (coordenador+threads+memória+cloud+branches) + computer use background + /resume + Fable 5.1 1M + /skill doctor + plugin eval A/B (clawed) | ✅ Analisado | **COBERTO** por `hookify-rules` + `agentic-os` + `sessoes-orquestradas` + `context-budget`; **enrich aplicado** `skill-eval-runner` (precedente clawed + /skill doctor) |
 
 Nenhuma skill nova. Backlog zerado (6/6 com transcrição; 5 analisados + 1 dead-end).
+---
+
+## Materialização G27/G28/G29 — 2026-09-20 (3 skills novas, validadas)
+
+Gaps registrados nos Batches 17d/17f/17g, materializados após validação nas fontes oficiais (critério `criar-skill`: sem skill teórica):
+
+- **G27 `google-adk-patterns`** (fonte #66 `V3Mtur9JuKY`): validado em google.github.io/adk-docs — Python/TS/Go/Java/Kotlin, Get Started, Agents CLI, Installation, workflows (Sequential/Loop/Parallel), human input. Skill: install → agente mínimo → `adk run` → `adk web` (trace/events/function-calls) → tools com docstrings → confirmation gate → subagentes+state → modos → LiteLLM → tier free AI Studio.
+- **G28 `vercel-eve-filesystem`** (fonte #113 `m8VC2SV2igM`): validado em github.com/vercel/eve (Apache-2.0, ~5k stars, 2026-06-16) + eve.dev + vercel.com/docs/eve + anúncio 2026-06-17. Skill: `npx eve@latest init` → estrutura agent/ → compilação sem imports → run local + HTTP API → deploy via plugin/MCP → primitivas prod (Workflows duráveis, Sandbox, HITL, evals-gate, AI Gateway). Nota beta registrada na skill.
+- **G29 `software-factory-orchestrator`** (fonte #114 `joKb_QMmglM`): validado em github.com/coleam00/Archon (MIT, 23k stars) + github.com/coleam00/dark-factory-experiment (issues → triage → implement → validate → auto-merge, cron, MISSION.md/FACTORY_RULES.md). Skill: interview → VPS (KVM2 ref) → auth manual → Archon workflows → teste e2e → operação 24/7 → routing por nó. Nota early-alpha registrada.
+- Registro: `manifests/install-modules.json` (módulo `agentic-patterns`) + `manifests/skills-autorais.json` (3 entradas); `docs/data/skills.json` regenerado via `scripts/build-catalog.js` (498 → **501 skills**, 42 → **45 autorais**).
+- Validadores: `validate-skills` OK (501 dirs); `validate-no-personal-paths` OK; `check-unicode-safety` mantém SOMENTE falhas pré-existentes (emojis `voice-cloning-local`, BOMs `state/yt-*.json`); `validate-install-manifests` NÃO rodou nesta estação (dependência `ajv` ausente no `node_modules` — falha ambiental pré-existente em `require`, antes de ler manifestos; JSON validado via parse + checagem de registro).
+- Transcrições-fonte baixadas p/ `projetos/yt-backlog-2026-09-20/` (fora do repo).
