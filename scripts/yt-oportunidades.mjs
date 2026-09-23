@@ -311,6 +311,9 @@ function download(ctx, ids) {
           '--sub-format', 'vtt',
           '--no-playlist',
           '--no-warnings',
+          '--sleep-requests', '1',
+          '--sleep-subtitles', '5',
+          '--retries', '10',
           '-o', `${ctx.rawDir.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
           `https://www.youtube.com/watch?v=${id}`,
         ], { encoding: 'utf8' });
