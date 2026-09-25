@@ -15,7 +15,40 @@ description: Triagem rapida com modelo barato via bundle Choice Score Prob para 
 
 - Não substitui `regex-vs-llm-structured-text` em dado deterministico (ID, formato fixo) — regex continua first.
 - Não extrai entidade livre complexa nem decide acao irreversivel.
-- Não confia em `confidence` como probabilidade calibrada.
+- Não confia em `confidence` como probabilidade calibrada — exceto em modelos de
+  decisao calibrados (ver Backend Jev), onde vira sinal de roteamento com threshold + auditoria.
+
+## Backend Jev (modelo de decisao dedicado)
+
+Jev (Typesafe, via OpenRouter; acesso direto por waitlist em typesafe.ai) é um
+"first-order model": não gera texto, só decide. Treino RLCD (nao RLHF), input em
+duas partes — `situation` + perguntas fechadas com opcoes — output sempre
+escolha + confidence. Numeros abaixo sao claims do vendor/comunidade (set/2026),
+nao medidos aqui: 20–200x mais rapido, 40–1000x mais barato que LLMs grandes em
+decisao, 0% de JSON malformado em inferencia estruturada.
+
+Mapeamento no bundle Choice/Score/Prob:
+
+| Bundle | Forma Jev |
+|---|---|
+| `Choice` (departamento/intencao) | 1 pergunta, opcoes = classes canonicas + `other/unknown` |
+| `Score` (urgencia/frustracao 0-1) | 1 pergunta por eixo, opcoes ordenadas (ex. `baixa/media/alta/urgente`) |
+| `Prob` (refund? sim/nao) | pergunta binaria; usar confidence como prioridade de fila |
+
+Regras do backend:
+
+- Paralelizar perguntas independentes do mesmo ticket numa chamada (routing +
+  urgencia + frustracao juntos).
+- Thresholds de human review definidos antes de ligar (`unknown`, zona cinzenta
+  de confidence, refund acima do valor) — iguais aos do pipeline base.
+- Confidence calibrada pode ordenar fila e porta de autoacao; nunca decide
+  acao irreversivel sozinha.
+- Custo/latencia por mil julgamentos entram nas metricas (alvo: decisao comum
+  em ~0,2s por centavos de dolar no lote, ordem de grandeza, nao SLA).
+
+Fonte: C. Medin, "Jev is the FIRST of a Whole New Class of AI Models" (22/09/2026,
+transcricao local fora do repo) — casos: roteamento de tickets com confidence,
+sorteamento de issues/PRs por profundidade de review, LLM-router barato.
 
 ## Pre-requisitos
 
@@ -53,5 +86,6 @@ description: Triagem rapida com modelo barato via bundle Choice Score Prob para 
 ## Related skills
 
 - `regex-vs-llm-structured-text` — determinístico primeiro, judgment depois.
+- `roteamento-modelos-baratos` — Jev como LLM-router barato (outro uso do mesmo backend).
 - `anti-hallucination` — verificação de fatos.
 - `agent-browser` — triagem com contexto web quando preciso.
