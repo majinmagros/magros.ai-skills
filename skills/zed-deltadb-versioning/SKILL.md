@@ -45,6 +45,10 @@ delta --version
 delta init  # inicia DeltaDB no repo (pode coexistir com .git)
 ```
 
+> **Gate de segurança:** o instalador acima executa script remoto direto no shell.
+> O agente DEVE pedir confirmação explícita do usuário antes de rodar e, quando
+> possível, baixar o script (`curl -fsSL -o`), ler, fixar a versão e só então executar.
+
 ### Dia a dia
 
 ```bash

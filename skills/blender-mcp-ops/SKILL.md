@@ -23,6 +23,9 @@ https://github.com/ahujasid/blender-mcp (third-party, not made by Blender).
 1. Install `uv` with the **official installer** (not `pip install uv`):
    macOS `brew install uv`; Linux `curl -LsSf https://astral.sh/uv/install.sh | sh`;
    Windows `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`.
+   > **Gate de segurança:** os instaladores acima executam código remoto direto no
+   > shell. O agente DEVE pedir confirmação explícita do usuário antes de rodar e,
+   > quando possível, baixar o script, ler e fixar a versão antes de executar.
 2. Register the MCP server (one instance only — never two clients at once):
    - Claude Code: `claude mcp add blender uvx blender-mcp`
    - Codex: `codex mcp add blender -- uvx blender-mcp`

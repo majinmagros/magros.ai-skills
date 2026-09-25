@@ -1,5 +1,3 @@
 @echo off
-echo [MAGROS.AI-SKILLS] Sincronizando skills e atualizando ambiente...
-powershell -ExecutionPolicy Bypass -File "%~dp0sync_global_opencode.ps1"
-echo [MAGROS.AI-SKILLS] Sincronizacao concluida!
-pause
+echo [MAGROS.AI-SKILLS] Verificando sincronizacao das skills (somente leitura, nada e' aplicado)...
+powershell -ExecutionPolicy RemoteSigned -File "%~dp0verificar_sync_opencode.ps1"

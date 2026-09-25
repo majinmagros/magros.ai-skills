@@ -63,3 +63,7 @@ load_dotenv(".env")
 import videodb
 conn = videodb.connect()
 ```
+
+**Guardrails:** shell access in this skill is Python-only (`Bash(python:*)`). Do not
+install packages (`pip install`), do not run non-`python` shell commands, and ask for
+explicit user confirmation before starting background/long-lived processes (`&`, `nohup`).

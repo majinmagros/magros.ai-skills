@@ -1,4 +1,4 @@
-﻿# Guia de Portabilidade Universal (Universal Portability Guide)
+# Guia de Portabilidade Universal (Universal Portability Guide)
 
 **Versão:** 1.0  
 **Gerado em:** 2026-08-29  

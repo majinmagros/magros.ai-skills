@@ -61,4 +61,9 @@ curl -fsSL https://raw.githubusercontent.com/okjpg/agent-context-kit/main/instal
 git clone https://github.com/okjpg/agent-context-kit.git && cd agent-context-kit && bash install.sh
 ```
 
+> **Gate de segurança:** a Opção A executa script remoto (`main`, sem versão fixa)
+> direto no shell. O agente DEVE pedir confirmação explícita do usuário antes de
+> rodar qualquer pipe-to-shell e preferir a Opção B (clonar, ler o `install.sh`,
+> fixar a versão revisada e só então executar).
+
 Instalador verifica Python 3.10+ / SQLite FTS5 / Hermes, cria vault, planta demo sintética, instala MCP + skill de roteamento, testa 3 tools, mantém backup para rollback.

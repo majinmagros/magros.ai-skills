@@ -1,4 +1,4 @@
-﻿---
+---
 name: universal-portability
 description: Use when authoring portable cross-platform skills or validating portability — core Markdown plus deterministic scripts plus isolated adapters, CI validation. Triggers on "criar skill portável", "validar portabilidade", "portar skill para outra plataforma", "adapter pattern", "cross-platform skill".
 metadata:

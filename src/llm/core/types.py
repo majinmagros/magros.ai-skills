@@ -18,8 +18,6 @@ class ProviderType(str, Enum):
     CLAUDE = "claude"
     OPENAI = "openai"
     OLLAMA = "ollama"
-    ASTRAFLOW = "astraflow"
-    ASTRAFLOW_CN = "astraflow_cn"
     ATLAS = "atlas"
 
 
