@@ -1,4 +1,4 @@
-﻿# Oportunidades do YouTube — Relatório de Análise
+# Oportunidades do YouTube — Relatório de Análise
 
 Data: 2026-09-03 (atualizado 2026-09-13 — Batch 16: +5 transcrições novas analisadas: Maestros da IA, Full Cycle, Inteligência Mil Grau, Nate Herk, Gustavo Campelo)  
 Canais analisados: IndyDevDan, ColeMedin, SimonScrapes, AI Foundations, AI Jason, Maestros da IA, Attekita Dev, Sujeito Programador, AI Revolution PT, Inteligência Mil Grau, AI Code King, Claude Oficial, Nate Herk, Anwar Hermuche, **Gustavo Campelo (@gucampelo)**, **Joy Dev Studio (@joydevstudio)**, **Luciana Papini (@LucianaPapini)**, **Karine Lago (@KarineLago)**, **Pavan Adhav (@pavanadhav)**, **Ratos de IA (@ratosdeia)**  

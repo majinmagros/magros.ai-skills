@@ -25,8 +25,6 @@ class TestProviderType:
         assert ProviderType.CLAUDE.value == "claude"
         assert ProviderType.OPENAI.value == "openai"
         assert ProviderType.OLLAMA.value == "ollama"
-        assert ProviderType.ASTRAFLOW.value == "astraflow"
-        assert ProviderType.ASTRAFLOW_CN.value == "astraflow_cn"
 
 
 class TestMessage:

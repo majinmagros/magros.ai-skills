@@ -3,7 +3,7 @@ name: inherit-legacy-style
 description: Legacy-project style inheritance skill. Use when the user types /inherit-legacy-style, or when onboarding an AI coding agent onto a hand-written legacy project and you need to prevent "style drift" (the model imposing its pretrained mainstream idioms onto the project). Language- and framework-agnostic — it aligns meta-architecture only, not syntax. Once run, it becomes a behavioral constraint on all subsequent coding tasks. Do NOT use for pure research or one-off questions unrelated to code-style alignment.
 metadata:
   origin: community
-allowed-tools: Read, Glob, Grep, Bash, Edit, Write, AskUserQuestion
+allowed-tools: Read, Glob, Grep, Bash(git:*), Edit, Write, AskUserQuestion
 ---
 
 # Inherit Legacy Style
@@ -25,6 +25,7 @@ Use this skill when you need to preserve legacy project style and prevent AI-gen
 
 - Git (recommended; non-Git projects fall back to file timestamps for incremental mode)
 - Read/Write access to the project root (generates `.ai-style-rules.md` and optionally `CLAUDE.md`)
+- Least privilege: shell use is limited to read-only `git` commands; file writes are limited to `.ai-style-rules.md` and `CLAUDE.md` at the project root
 
 ## Workflow
 

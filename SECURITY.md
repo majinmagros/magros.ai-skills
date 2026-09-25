@@ -9,15 +9,15 @@
 | 1.9.x | Critical fixes only |
 | < 1.9 | :x: |
 
-Security fixes land on `main` first. Backports are best-effort and only for currently supported release lines.
+Security fixes land on `master` first. Backports are best-effort and only for currently supported release lines.
 
 ## Reporting a Vulnerability
 
 Use GitHub private vulnerability reporting whenever possible — it reaches the maintainer directly:
 
-- <https://github.com/affaan-m/ECC/security/advisories/new>
+- <https://github.com/majinmagros/magros.ai-skills/security/advisories/new>
 
-You can also email **<affaan@ecc.tools>** (the `security@ecc.tools` alias is not monitored — use `affaan@ecc.tools`).
+You can also email **<majinmagros@gmail.com>**.
 
 Do **not** open a public GitHub issue for security vulnerabilities.
 
@@ -42,16 +42,20 @@ If a report is declined, we will explain whether it is not reproducible, out of 
 
 This policy covers:
 
-- the `affaan-m/ECC` repository
-- the `ecc-universal` npm package
-- ECC plugin, install, repair, dashboard, hook, rule, skill, MCP, and command surfaces shipped from this repository
+- the `majinmagros/magros.ai-skills` repository (ECC-based fork)
+- plugin, install, repair, dashboard, hook, rule, skill, MCP, and command surfaces shipped from this repository
 - GitHub Actions workflows and release automation in this repository
-- the ECC Tools GitHub App integration points documented by this repository
-- AgentShield usage docs when they are embedded here. AgentShield code issues belong in <https://github.com/affaan-m/agentshield>
+
+Upstream ECC surfaces (`affaan-m/ECC`, `ecc-universal` npm package, AgentShield at `affaan-m/agentshield`) are maintained by their own author — report issues in those projects directly to upstream. This policy covers only the code as shipped in this fork.
 
 ## Official Distribution Surfaces
 
-Official ECC surfaces are:
+Official distribution surfaces of this fork are:
+
+- GitHub repo: <https://github.com/majinmagros/magros.ai-skills>
+- Website: <https://majinmagros.github.io/magros.ai-skills/>
+
+Upstream ECC surfaces (not maintained here — report upstream):
 
 - GitHub repo: <https://github.com/affaan-m/ECC>
 - npm package: `ecc-universal`
@@ -59,7 +63,7 @@ Official ECC surfaces are:
 - marketplace/plugin slug: `ecc@ecc`
 - website: <https://ecc.tools>
 
-Official AgentShield surface:
+Upstream AgentShield surface (not maintained in this fork — report upstream):
 
 - npm package: `ecc-agentshield`
 - GitHub repo: <https://github.com/affaan-m/agentshield>
@@ -78,7 +82,7 @@ GitHub dependency graph may also show Go module aliases such as `github.com/affa
 Reports are usually out of scope when they only show:
 
 - local command execution where the user already controls the local shell and no higher-privilege trust boundary is crossed
-- screenshots, stale line numbers, or reports against `affaan-m/everything-claude-code` that do not reproduce on current `affaan-m/ECC`
+- screenshots, stale line numbers, or reports against upstream `affaan-m/ECC` that do not reproduce on current `majinmagros/magros.ai-skills`
 - self-XSS or social engineering with no repository-controlled exploit path
 - dependency graph/package metadata confusion without an install path to an official ECC package
 - vulnerabilities in third-party packages unless ECC pins, installs, or executes them in a way that creates extra impact
@@ -92,7 +96,7 @@ ECC treats supply-chain exposure as a first-class security surface.
 - GitHub Actions must use pinned commit SHAs for third-party actions.
 - Workflows must avoid shelling untrusted GitHub context directly into `run:` blocks.
 - Release and install docs must point only to official packages.
-- Package metadata should point at `affaan-m/ECC`, not historical repo paths.
+- Package metadata should point at `majinmagros/magros.ai-skills`, not at upstream or historical repo paths.
 - Private vulnerability reports are triaged privately before public disclosure.
 - Security advisories are published only when a supported release is affected and coordinated disclosure is appropriate.
 
