@@ -72,3 +72,12 @@ Report: report-2026-09-13.html com gasto, thumbnails e status por ad
 
 - Meta Ads Library (angle research): https://www.facebook.com/ads/library/
 - Meta Marketing API (campaign structure): https://developers.facebook.com/docs/marketing-api/
+
+## Enriquecimento 2026-09-26 — Astra Skill vs assinatura (captura semanal)
+
+N. Herk `oWCcN6hSFjA` (19/09): ONE GPT-6 Astra Skill substitui assinatura
+Higgsfield; G. Adamuchi `baf7Dt4eTNI` (25/09): Astra + Seedance 2.5 clona
+ad viral (KAIROGEN). Regra: no `Research`, checar antes se skill Astra
+gratuita resolve; só assina ferramenta paga se skill perder em qualidade
+medida (mesmo ângulo, 2 variantes). Sem duplicata com
+`ugc-seedance-talking-head` — factory consome o demo, não regenera.

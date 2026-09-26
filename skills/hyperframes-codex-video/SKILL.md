@@ -131,3 +131,16 @@ Bruto 65s -> transcript (ms) -> cut 28s -> 6 beats -> HTML+GSAP (liquid-glass ca
 Studio: texto 80px, fan 3D sem overlap -> verify screenshots OK -> render MP4
 "Turn that into a skill" -> proxima edicao: "edit this video, use this skill"
 ```
+
+## Enriquecimento 2026-09-26 — Opus 5.5 + ScrollCraft (captura semanal)
+
+N. Herk 25/09 ("Opus 5.5 Just Changed Video Editing Forever"): intro do
+próprio vídeo editada por Opus 5.5 via Hyperframes de 1 prompt — motion,
+sound, B-roll, screenshots e imagens geradas pelo modelo, com toques
+criativos próprios (zooms sutis). Setup: apontar Claude Code ao repo +
+transcrição ElevenLabs ou Whisper local p/ temporizar animações. Prompt
+exact usado no vídeo inclui logos animados sobre liquid-glass cards,
+highlight de texto e overlays. Sizzle reel de 105GB em 3 prompts. Skill
+grátis citada: **ScrollCraft** (website design) + student kit. Regra:
+em Opus 5.5, 1 prompt gera multi-beats com gosto visual melhor (pós-crítica
+ao Opus 5); validar screenshot antes de render final.

@@ -28,6 +28,29 @@ existente para não criar redundância.
   hardcoded; config por env vars) para não vazar o caminho da sua máquina.
 - Credenciais de API nunca entram no repo.
 
+## Sistema de capturas — modo manutenção semanal (vigente desde 2026-09-26)
+
+Catálogo considerado completo (500+ skills). A partir de agora a coleta é
+**manutenção contínua**, com o **mesmo comando/gatilho** de sempre
+("capturar novas oportunidades de skills", "oportunidades de skill",
+"analisa os vídeos", "vídeos novos", "coletar oportunidades"):
+
+- **Janela móvel de 7 dias:** sem data fixa. A cada acesso, vasculha
+  `hoje - 7 dias` até `hoje` (ex: `diff-all --since <hoje-7d>`).
+- **Fase 1 — listagem existente primeiro:** roda `diff-all --since <hoje-7d>`
+  só nos canais de `manifests/canais-vigilados.json`. Foco em
+  **atualização/melhoria**, não em criar por criar.
+- **Fase 2 — outros canais depois:** pesquisa YouTube fora da lista, só
+  checagem de **novas citadas** na mesma janela de 7 dias. Se o canal novo
+  se repetir, propõe inclusão como `tier: radar`; senão só loga e descarta.
+- **Anti-obsolescência (definição vigente):** obsoleta = skill que **pode
+  evoluir e a gente ficar com versão antiga**. Por isso toda captura nova
+  **compara** com a skill existente correspondente antes de decidir:
+  `manter / atualizar / fundir / arquivar`. Nunca criar duplicata ou
+  redundância — cruzar SEMPRE com o inventário (`skills/*/SKILL.md`).
+- **Verificação contínua:** manter atualizadas, aprimorando, comparando e
+  verificando melhorias a cada rodada semanal.
+
 ## Pipeline
 
 ### 0. Checar sync com o GitHub (OBRIGATÓRIO antes de tudo)

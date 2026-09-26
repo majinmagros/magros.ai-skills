@@ -65,3 +65,13 @@ adapters/
 ## Conversa unificada (leva YouTube rodada 9)
 
 Nao force escolha de superficie: mesma thread para pergunta e tarefa profunda. O modelo roteia (responder vs executar); o usuario faz steer/edit no meio. Se a thread mistura pergunta + execucao, separe a prova por entrega, nao por mensagem.
+
+## Enriquecimento 2026-09-26 — Claude+Codex e 1-person business (captura semanal)
+
+- Maestros `5Cj7qxnIJro` (21/09): Claude Code + Codex combinados p/ fixar
+  app — padrão: um gera, outro revisa/corrige; approval gate no meio.
+- N. Herk `QDsenEcAJIk` (19/09, CEO Anthropic): 1-person business com
+  Claude; Claude oficial `S_lzYIvtEaQ` (24/09, Collison/Stripe): Claude Code
+  em produção. Regra: task execution com checkpoints + approval em escrita
+  externa; sem duplicata com `team-agent-orchestration` (aqui é 1 operador,
+  lá é squad).

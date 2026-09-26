@@ -44,6 +44,20 @@ Auditing `CLAUDE.md`, project instructions, skills, or saved prompts that predat
 - **Agrees**: goal + why over steps; redundant re-checks waste tokens — same cleanup applies.
 - **Differs**: no action bias — add explicit `bias toward action` when autonomy is wanted; ships a word blocklist (`delve`, `leverage`, …) in its system prompt, so humanizer-style word bans are redundant there too.
 
+## Enriquecimento 2026-09-26 — Opus 5.5 escrita direta (captura semanal)
+
+Opus 5.5 corrige a queixa nº1 do Opus 5 (managed prose densa virou piada):
+~40% menos padding sem perder precisão, informação principal no início,
+frases curtas, segue regras de escrita do usuário em vez de reverter ao
+house style. Ex. oficial: Opus 5 "The fall to the free level is a regression"
+vs 5.5 "The change in the free plan explains only 1.5 of the drop. The
+remainder, 9.9, comes from an error." Regra: em 5.5, regra 7 (managed prose
+global) continua válida mas pode ser mais leve; priorize `done + length`
+porque o modelo já entrega conciso por padrão. Validar com teste A/B
+antes/depois em 1 skill real.
+
+Fonte: Maestros `XsRt-kwqtVA` (transcrito local, 22/09/2026).
+
 ## Rules
 
 - NEVER add a constraint the system prompt already enforces — it fights the model and wastes tokens.
