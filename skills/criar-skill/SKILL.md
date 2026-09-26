@@ -43,6 +43,12 @@ o agente generalista ja le/escreve/chama tools; a skill e o app
 resolver 2x o mesmo problema tecnico — vire script dentro da skill
 (scripts/ e para o que LLM faz mal).
 
+Regra dial-density (Fase 2, 26/09/2026): cada escolha que a skill deve
+impor vira valor duro (número, hex, threshold, lista fechada) ou never
+duro — alvo ~1 dial por 100 palavras. Sem dial, o modelo devolve a
+mediana do treino. Vale para qualquer domínio, não só design (ver
+teste dial em `auditar-skills` § 4c).
+
 ## 1. Processo de criação (4 etapas — evita skill "teórica")
 
 1. **Mapear o pipeline**: identifique EXATAMENTE o que a skill deve fazer, do

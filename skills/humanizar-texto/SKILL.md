@@ -50,6 +50,15 @@ Depois: "Resumindo: nosso sistema corta 2h do seu dia."
 3. **Revisar** mantendo 100% da informação/marca (não inventar dado).
 4. **Entregar** o texto final + nota curta: quais padrões foram removidos.
 
+## 3b. Mecanismo argue-list (Fase 2, 26/09/2026)
+
+Armadilha: corretor de IA remove junto a voz (frases estranhas, analogias
+ruins, piada interna) e devolve "o mesmo problema com sabor melhor".
+Regra: remover os padrões **sem achatar a voz** + listar tudo o que mudou
+para o dono poder contestar ("não queria essa reescrita"). Referência de
+22 padrões EN: Peter Yang no-AI-slop (via Dubibubi 26/09, canal fora da
+lista) — somar aos padrões PT do § 1, não substituir.
+
 ## 4. Regras
 
 - Manter o tom, argumentos e fatos originais — humanizar não é mudar conteúdo.

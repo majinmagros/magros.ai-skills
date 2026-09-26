@@ -8,7 +8,9 @@ description: Prune model output verbosity (preamble, repeated summary, help offe
 Pode a verbosidade de saída do modelo: corta preâmbulo, resumo repetido e
 oferta de ajuda, preservando fatos, números e próximos passos acionáveis.
 Conceito da skill Caveman (Maestros da IA, vídeo V1nMBWzXsCI). Números de
-−65/−87% são alegação da fonte, não garantia.
+−65/−87% são alegação da fonte, não garantia. Medição independente
+(Dubibubi, 26/09/2026, canal fora da lista): ~35% real em prosa típica —
+situar expectativa nessa faixa salvo texto muito verboso.
 
 ## Quando usar / When to use
 
@@ -35,6 +37,16 @@ Conceito da skill Caveman (Maestros da IA, vídeo V1nMBWzXsCI). Números de
 4. **Medir (amostragem, não sempre)** — em 3–5 respostas, compare
    `tokens antes → depois`. Se economia < 30%, a resposta já era enxuta:
    declare e não force mais corte.
+
+## Eixo código — volume (Fase 2, 26/09/2026)
+
+Em código o slop é volume, não prosa: Claude escreve certo porém demais.
+Padrão "dev sênior preguiçoso" (Ponytail, via Dubibubi 26/09): forçar a
+solução mínima — medido ~50% menos código, −20% custo, −27% mais rápido
+(claims do autor até −94%; usar o medido). Aplica-se nos passos 2–3:
+cortar scaffolding, abstração prematura e repetição; nunca cortar
+tratamento de erro, tipos e testes. Sem skill nova — mesmo corte,
+outro eixo.
 
 ## Quando NÃO cortar
 

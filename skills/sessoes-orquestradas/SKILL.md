@@ -45,6 +45,16 @@ da outra ao vivo" — a comunicação é via resume/handoff.
 - **Supervisor/avaliador** = modelo forte (qualidade de julgamento).
 - Não use o modelo caro para gerar em massa nem o barato para decidir.
 
+## Enriquecimento 2026-09-26 — loop Pocock Fable→Sonnet→Sonnet-review (Fase 2)
+
+Validação externa (Dubibubi 26/09 + CLI Stack/Pocock, canais fora da
+lista): mesma sessão Fable orquestra Sonnets executores e usa skill de
+code review p/ Sonnet revisar o próprio output antes de devolver ao
+Fable — slop pego dentro do loop, nunca chega ao humano. Instrução
+mínima: link do repo + "use as skills onde fizer sentido" (descriptions
+boas dispensam micromanage). Confirma os padrões 2–3 acima com modelos
+atuais; sem skill nova.
+
 ## Checklist
 - [ ] Sessões têm nomes únicos e intencionais.
 - [ ] Cada sessão tem escopo pequeno e entregável claro.
