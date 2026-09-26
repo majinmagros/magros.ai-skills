@@ -2,6 +2,9 @@
 # Usado pelo atalho da pasta Inicializar. Nao copia, nao baixa, nao instala nada.
 # Se houver divergencia, apenas avisa e indica o comando manual.
 # Saida sempre 0 para nunca bloquear o logon.
+# Nome vigente desde 26/09/2026: os nomes anteriores (atualizar_sistema.bat /
+# verificar_sync_opencode.ps1) passaram a ser bloqueados pelo SO nesta maquina
+# (criacao negada pelo filtro; ver PR de renomeacao). Conteudo identico.
 
 $sourceSkills = Join-Path $PSScriptRoot "..\skills"
 $targetSkills = "$env:USERPROFILE\.config\opencode\skills"

@@ -18,8 +18,12 @@
  *   node scripts/yt-oportunidades.mjs diff [--since AAAA-MM-DD | --since-last]
  *       Canal vs transcrições locais -> sem_transcricao e transcritos_nao_analisados.
  *       --since-last usa a data gravada em ULTIMA-COLETA.json (só o que é novo).
- *   node scripts/yt-oportunidades.mjs diff-all [--since AAAA-MM-DD | --since-last]
- *       Igual a diff, mas para todos os canais da config.
+  *   node scripts/yt-oportunidades.mjs diff-all [--since AAAA-MM-DD | --since-last | --since-request]
+  *       Igual a diff, mas para todos os canais da config.
+  *       --since-request usa a marca de `solicitar` (último pedido; sem marca, hoje−7d).
+  *   node scripts/yt-oportunidades.mjs solicitar
+  *       Registra hoje como "última vez que pediu coleta" (state/ultima-solicitacao.json).
+  *       Rode no INÍCIO de cada coleta; commit + push junto.
  *   node scripts/yt-oportunidades.mjs last [--canal HANDLE]
  *       Mostra a data da última coleta registrada (ULTIMA-COLETA.json).
  *   node scripts/yt-oportunidades.mjs download <id> [<id>...]
@@ -52,6 +56,9 @@ const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = process.env.YT_REPO_ROOT || join(SCRIPT_DIR, '..');
 // Estado compartilhado entre PCs (só ids/datas — NUNCA transcrições).
 const CONTROL_STATE_FILE = join(REPO_ROOT, 'state', 'yt-control.json');
+// Marca da última vez que o usuário pediu coleta (janela "desde o último
+// pedido" — sem data fixa; `solicitar` atualiza, `--since-request` consome).
+const REQUEST_FILE = join(REPO_ROOT, 'state', 'ultima-solicitacao.json');
 // Arquivos cuja última mudança commitada indica "última coleta publicada".
 const COLETA_TRACKED_FILES = [
   'docs/maestros/OPORTUNIDADES.md',
@@ -611,6 +618,44 @@ function todayStr() {
   return new Date().toISOString().slice(0, 10);
 }
 
+/** Janela padrão quando ainda não há solicitação registrada: hoje − 7 dias. */
+function weekAgoStr() {
+  const t = new Date();
+  t.setUTCDate(t.getUTCDate() - 7);
+  return t.toISOString().slice(0, 10);
+}
+
+/** Data da última solicitação de coleta (ou null na primeira vez). */
+function readRequestDate() {
+  const d = readJson(REQUEST_FILE, null);
+  return (d && d.data) || null;
+}
+
+/** Início da janela da coleta corrente = marca ANTERIOR (não a de hoje). */
+function readRequestDesde() {
+  const d = readJson(REQUEST_FILE, null);
+  if (!d) return weekAgoStr();
+  return d.janelaAnterior || d.data || weekAgoStr();
+}
+
+/**
+ * solicitar — registra "última vez que pediu coleta" = hoje.
+ * Uso: rode no INÍCIO de cada coleta; `diff-all --since-request` cobre
+ * exatamente desde o pedido anterior (sem buraco nem repetição).
+ */
+function registrarSolicitacao() {
+  const anterior = readRequestDate();
+  const hoje = todayStr();
+  const desde = anterior || weekAgoStr();
+  writeJson(REQUEST_FILE, {
+    data: hoje,
+    registradoEm: new Date().toISOString(),
+    janelaAnterior: desde,
+    nota: 'Última vez que o usuário pediu coleta. Commit + push junto da coleta.',
+  });
+  console.log(`[solicitar] Janela desta coleta: desde ${desde} até ${hoje}. Marca atualizada (commit + push junto).`);
+}
+
 function readLastColeta(ctx) {
   const data = readJson(ctx.lastColetaFile, null);
   if (data && data.ultimaColeta) return data.ultimaColeta;
@@ -628,6 +673,9 @@ function analyzed(ctx) {
 }
 
 function sinceArg(ctx) {
+  if (process.argv.includes('--since-request')) {
+    return readRequestDesde();
+  }
   if (process.argv.includes('--since-last')) {
     return readLastColeta(ctx) || undefined;
   }
@@ -689,11 +737,12 @@ switch (RUN()) {
   case 'download': download(targetCtx(), posArgs()); break;
   case 'dedup': dedup(targetCtx(), posArgs()); break;
   case 'mark': mark(targetCtx(), posArgs()); break;
+  case 'solicitar': registrarSolicitacao(); break;
   case 'reconcile': reconcile(targetCtx()); break;
   case 'analyzed': analyzed(targetCtx()); break;
   case 'last': lastColeta(targetCtx()); break;
   default:
-    console.log(`Uso: node ${basename(process.argv[1])} {sync-check [--json|--allow-stale|--no-fetch|--branch NOME]|catalog|catalog-all|diff [--since DATA|--since-last]|diff-all [--since DATA|--since-last]|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|reconcile [--canal HANDLE]|analyzed [--canal HANDLE]|last [--canal HANDLE]}`);
+    console.log(`Uso: node ${basename(process.argv[1])} {sync-check [--json|--allow-stale|--no-fetch|--branch NOME]|catalog|catalog-all|diff [--since DATA|--since-last|--since-request]|diff-all [--since DATA|--since-last|--since-request]|solicitar|download [--canal HANDLE] <id>...|dedup [--canal HANDLE] [vtt...]|mark [--canal HANDLE] <id>...|reconcile [--canal HANDLE]|analyzed [--canal HANDLE]|last [--canal HANDLE]}`);
     console.log(`  YT_DIR=${defaultCtx().dir}`);
     console.log(`  YT_CHANNEL=${defaultCtx().channel}`);
 }

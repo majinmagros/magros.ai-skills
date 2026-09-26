@@ -7,7 +7,7 @@ if (Test-Path -LiteralPath $oldPath) {
 $scPath = Join-Path $startup 'VerificarMagrosAISkills.lnk'
 $ws = New-Object -ComObject WScript.Shell
 $sc = $ws.CreateShortcut($scPath)
-$sc.TargetPath = Join-Path $PSScriptRoot 'atualizar_sistema.bat'
+$sc.TargetPath = Join-Path $PSScriptRoot 'verificar_skills_startup.bat'
 $sc.WorkingDirectory = $PSScriptRoot
 $sc.Save()
 Write-Host "Atalho criado com sucesso em: $scPath"

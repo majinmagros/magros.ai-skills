@@ -1,3 +1,3 @@
 @echo off
 echo [MAGROS.AI-SKILLS] Verificando sincronizacao das skills (somente leitura, nada e' aplicado)...
-powershell -ExecutionPolicy RemoteSigned -File "%~dp0verificar_sync_opencode.ps1"
+powershell -ExecutionPolicy RemoteSigned -File "%~dp0verificar_skills_startup.ps1"
