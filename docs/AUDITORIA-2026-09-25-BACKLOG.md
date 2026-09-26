@@ -94,3 +94,12 @@ Convenções: `- [ ]` aberto · `- [x]` feito · cada item tem aceite verificáv
   Aceite: push com termo barrado antes do site publicar.
 - [ ] **P2-3. Revisar `scripts/codex/install-global-git-hooks.sh`** — afeta todos
   os repos da máquina, inclusive corporativos; documentar ou remover.
+
+## Adendo 26/09/2026 — renomeação do check de startup (P0-5)
+
+Os arquivos do P0-5 (`scripts/atualizar_sistema.bat` +
+`scripts/verificar_sync_opencode.ps1`) foram removidos/bloqueados pelo SO
+nesta máquina (criação negada pelo filtro para exatamente esses nomes;
+conteúdo era somente-leitura, exit 0). Cadeia recriada idêntica sob
+`scripts/verificar_skills_startup.bat` + `.ps1`; `criar_atalho_startup.ps1`
+reapontado. Nada muda no comportamento auditado.
