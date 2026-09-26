@@ -144,3 +144,9 @@ highlight de texto e overlays. Sizzle reel de 105GB em 3 prompts. Skill
 grátis citada: **ScrollCraft** (website design) + student kit. Regra:
 em Opus 5.5, 1 prompt gera multi-beats com gosto visual melhor (pós-crítica
 ao Opus 5); validar screenshot antes de render final.
+
+Validação externa (Fase 2, Dubibubi 26/09, canal fora da lista): todo o
+motion graphics do vídeo feito via Hyperframes de descrição falada —
+"melhor que Remotion na maioria das vezes, com menos nagging"; firework
+de ~8s gerado em ~8 min (vs 1 dia no After Effects). Reforça o verify
+loop: ratio esforço/payoff é o argumento.

@@ -70,6 +70,21 @@ Para cada description, rode 3 testes antes de aprovar:
 
 Reescrita: 1 verbo de ação + objeto + contexto de quando usar + non-trigger. Ver o lado autor em `skill-creator-methodology` (§ 4 práticas Anthropic).
 
+## 4c. Teste dial — valores duros por 100 palavras (Fase 2, 26/09/2026)
+
+Skill que muda pixel/comportamento carrega **dials**: valores duros (hex,
+ms, px, curva de easing) + nevers duros ("nunca X"). Regra prática: ~1
+dial por 100 palavras ou mais = move o modelo; perto de zero = adjetivo
+(o modelo devolve a mediana do treino — ex. todo botão vira índigo).
+Conte na pasta inteira, não só no front (o front pode ser só router e os
+valores morarem em `references/`). Ex. medido: guideline de marca 329
+palavras/2,1 dials por 100 = instalar primeiro; skill de 3.800 palavras
+sem número = packaging. Exceção: skill-crítico (layout/acessibilidade)
+pontua como auditor pós-build, não como gerador.
+
+Fonte: Simple Tech Man, "Claude Design Skills, Measured" (26/09/2026,
+canal fora da lista).
+
 ## 5. Regra
 
 - Nota é meio, não fim: o objetivo é 1 correção acionável por skill,
