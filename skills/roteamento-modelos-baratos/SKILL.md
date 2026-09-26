@@ -89,4 +89,17 @@ Job: 100 resumos/dia no Opus = R$X/mês → executor DeepSeek Flash + verifier S
 Valida nota do barato antes de escalar; métrica = custo-por-tarefa, não $/token
 Caveat: testa o loop no OpenRouter antes (tool-use pode quebrar fora da Anthropic)
 ```
+
+## Enriquecimento 2026-09-26 — Jev como router + Sol como worker (captura semanal)
+
+- **Jev (TypeSafe, OpenRouter) como camada 0**: 20–200x mais rápido,
+  40–1000x mais barato, 0% JSON malformado; routing de dezenas de testes
+  saiu por 0,4 centavo a ~0,2s/decisão (C. Medin 22/09). Uso: LLM-router,
+  classificação de issues/PRs, browser next-action.
+- **GPT-6 Sol ($2/$10) como worker paralelo**: num teste 10 use cases vs
+  Opus 5.5 ($4/$20), Sol corre em paralelo e mais rápido — "$100 em cada,
+  qual entrega mais por dólar?" (N. Herk `eF3yeJuifoQ`).
+- **Prova externa**: Coder One + Jev na frente do Claude Code manteve
+  24/24 pass e cortou 61% custo / 37% tempo vs Opus 5.5 puro (TerminalBench
+  v4, openagents 23/09). Regra: Jev decide, Sol executa volume, forte verifica.
 |---|---|---|

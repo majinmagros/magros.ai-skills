@@ -82,3 +82,13 @@ Exemplo mínimo:
 - `ai-media-generator` / `fal-ai-media` — execução da geração via provedor.
 
 Fonte: vídeo GkGufbIVVC8 (AIJasonZ, UGC Seedance 2.5).
+
+## Enriquecimento 2026-09-26 — Astra + Seedance viral cloning (captura semanal)
+
+G. Adamuchi `baf7Dt4eTNI` (25/09, fora→lista core): **GPT-6 Astra +
+Seedance 2.5 = Viral Ad Cloning** via KAIROGEN — tutorial completo de
+clonagem de ad viral. N. Herk `oWCcN6hSFjA` (19/09): **ONE Astra Skill
+substitui assinatura Higgsfield**. Regra: antes de assinar ferramenta de
+avatar/ads, testar skill Astra equivalente; se $/s estourar, reduz N de
+hooks (regra 3) antes de trocar de stack. Sem duplicata: padrão continua
+1 demo × N hooks, só troca o motor quando Astra empata em qualidade.

@@ -50,6 +50,21 @@ Fonte: C. Medin, "Jev is the FIRST of a Whole New Class of AI Models" (22/09/202
 transcricao local fora do repo) — casos: roteamento de tickets com confidence,
 sorteamento de issues/PRs por profundidade de review, LLM-router barato.
 
+## Enriquecimento 2026-09-26 — padrão Jev-first via UserPromptSubmit (captura semanal)
+
+Todo prompt bate no Jev antes do LLM (hook `UserPromptSubmit` no Claude Code /
+Cursor / Codex). Se o Jev resolve com tool call direta, responde na hora
+(~0,5s, custo ~zero, cor diferente no chat) e o LLM nem é invocado; senão
+cai para o Claude normal. Setup: API key Typesafe (waitlist aprova em ~10min,
+$1 dura o mês) + agent setup prompt + skill file colados numa sessão nova,
+depois instrui o agente a ligar o hook. Validado em dataset vivo (follower
+growth + comentários 30d) e em CSV upado (survey). Regra: Jev decide
+`respondo direto vs passo ao LLM` como pergunta Choice com threshold de
+confidence — `unknown`/zona cinzenta sempre cai para o LLM/humano.
+
+Fonte: Kevin Badi, "How to Add Jev AI to Claude Code (Step by Step)"
+(19/09/2026, canal fora da lista — proposto p/ tier radar).
+
 ## Pre-requisitos
 
 - Modelo barato e rapido dedicado a judgments, prompts curtos.

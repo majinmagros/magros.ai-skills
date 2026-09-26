@@ -96,3 +96,13 @@ Taxonomia (Fowler): GUIDES sao pre-acao (spec, AGENTS.md, doc de arquitetura) e 
 Diagnostico quando o agente erra, em 3 camadas: (a) clareza da instrucao, (b) contexto/estrutura + frescor do AGENTS.md, (c) tools/sensors + completion criteria. Corrija na camada certa: reescrever prompt nao conserta sensor faltante.
 
 Padrao AGENTS.md-indice: AGENTS.md vira indice + artefatos distribuidos com lookup condicional ("so consulte memoria/ quando estiver resolvendo bug"). Contexto e recurso finito e competitivo: cada linha do AGENTS.md disputa espaco com o trabalho. Ver claude-md-auditor para a auditoria de tamanho.
+
+## Enriquecimento 2026-09-26 — Coder One + Jev, Pi Agent (captura semanal)
+
+- openagents Coder One (23/09, fora→radar): harness com System One via Jev
+  na frente do Claude Code — 24/24 pass, **-61% custo / -37% tempo** vs
+  Opus 5.5 puro em TerminalBench v4; NIP-OPT compartilha tuning como
+  record assinado (network effect entre operadores).
+- IndyDevDan `3b0U4_02bAE` (22/09): Self-Compact Pi Agent, zero hype devlog.
+  Regra: camada de decisão (Jev) antes do loop caro; medir sempre
+  completion + retries + custo/task, nunca só pass rate.

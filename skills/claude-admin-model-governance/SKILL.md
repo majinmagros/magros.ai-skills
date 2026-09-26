@@ -44,6 +44,20 @@ description: Playbook de governanca de modelos Claude por role, entitlements e e
 - Matriz `role→default/fallback`, tabela de entitlements, effort caps e formula de custo-por-tarefa.
 - Done = politica publicada, versionada e com dono de revisao.
 
+## Enriquecimento 2026-09-26 — defaults Opus 5.5 (captura semanal 19-26/09)
+
+- Default fronteira criativa = **Opus 5.5 em effort medium** (não high/max):
+  medium supera o melhor da concorrência por fração do custo; máximo só com
+  prova de necessidade. Preço $4/$20, cache $0.20 (era $0.50).
+- Effort caps por categoria: rotina low/medium, execução medium, fronteira
+  high só com aprovação; xhigh/max só builds 30min+ com dono.
+- Custo-por-tarefa = modelo + effort + cache; exigir cache em fluxo repetitivo
+  (cache é a maior linha em agentes). Revisão mensal inclui taxa de escalação
+  e top tarefas caras. Safety: cyber redireciona p/ modelo antigo sem aviso,
+  bio exige programa de verificação — documentar no runbook de agentes.
+
+Fontes: Maestros `XsRt-kwqtVA`, N. Herk `eF3yeJuifoQ`, claude.dev 22/09.
+
 ## Related skills
 
 - `claude-model-router` — roteamento por tarefa em runtime.

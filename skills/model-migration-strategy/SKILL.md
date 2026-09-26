@@ -91,3 +91,13 @@ antes de culpar o modelo. Vale tambem para Astra 6 (OpenAI).
 ## Failure modes da serie nova (leva YouTube rodada 9)
 
 Checklist ao migrar de serie: AI tells novos, formatacao ilegivel, tool-use que mudou de forma, custo/latencia por task (nao por token). Regra: nunca hiper-otimizar a ultima gota na serie antiga na vespera da migracao — congele e migre com eval suite verde.
+
+## Migração vigente 2026-09-26 — Opus 5→5.5, Fable/Astra→Sol (captura semanal)
+
+- **Opus 5→5.5**: eval suite primeiro; gotchas novos = safety redirect
+  (cyber→modelo antigo, bio→verificação) e default effort medium (não high);
+  fast mode só com extra usage. Ganho esperado ~40% custo/task sem mudar prompt.
+- **Fable 5.1/Astra ($10/$50) → Sol ($2/$10) p/ volume**: migrar workers
+  paralelos primeiro (canary 5%/24h), manter SOTA no architect; hedge =
+  managed prose do 5 (piada) sumiu no 5.5 — remover workarounds de verbosidade
+  na migração. Fontes: Maestros `XsRt-kwqtVA`, N. Herk `eF3yeJuifoQ`.

@@ -32,6 +32,12 @@ Row schema:
 Prefer `estimated_cost_usd` over hand-calculating pricing — model and cache
 prices change, and the tracker is the source of truth.
 
+> Tabela vigente 26/09/2026 (captura semanal): Opus 5.5 **$4/$20**, cache
+> **$0.20** (era $0.50); Opus 5 $5/$25; Fable 5.1 e GPT-6 Astra $10/$50;
+> GPT-6 Sol $2/$10. Economia real Opus 5.5 vs Opus 5 ≈ 20% tabela + 20%
+> menos tokens + 60% menos cache. Fontes: Maestros `XsRt-kwqtVA`,
+> N. Herk `eF3yeJuifoQ`.
+
 ## When to Use
 
 - The user asks "how much have I spent?", "what did this session cost?", or

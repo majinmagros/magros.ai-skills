@@ -72,3 +72,12 @@ Assinaturas: Claude Max 5X + Codex Pro 5X → roteia por allowance restante, nã
 Volume repetitivo: GLM $18 (cache alto estende a semana); fast mode só se urgência (~2x créditos)
 Banked reset promocional: usa antes do refresh; alerta se feature passa de 50% do budget
 ```
+
+## Enriquecimento 2026-09-26 — Opus 5.5 no tier (captura semanal)
+
+- Opus 5.5 no mesmo allowance rende mais: ~40% economia real vs Opus 5
+  (tabela + tokens + cache $0.20). Limites 5h Pro/Team/Enterprise subiram +
+  **limit reset sob demanda** (não espera a janela) — para pico à tarde vale
+  mais que benchmark. Fast mode (preview, extra usage on, +$/token) só quando
+  cada reply trava entrega. Regra: medium-first no allowance; high/xhigh só
+  com prova. Fontes: Maestros `XsRt-kwqtVA`, claude.dev 22/09.

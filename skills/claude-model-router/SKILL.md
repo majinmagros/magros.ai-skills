@@ -72,6 +72,29 @@ metadata:
 - **Subagents sempre baratos** — workers delegados rodam no modelo barato
   por padrão; só o architect/orchestrador principal usa o modelo forte.
 
+## Enriquecimento 2026-09-26 — Opus 5.5 + GPT-6 Sol/Luna (captura semanal 19-26/09)
+
+- **Opus 5.5**: `claude-opus-5-5`, **$4/$20** por MTok (era $5/$25 no Opus 5),
+  cache read **$0.20** (era $0.50, -60% na linha que mais pesa em agentes),
+  ~20% menos tokens por task → ~40% economia real vs Opus 5. Fable 5.1 e
+  GPT-6 Astra cobram $10/$50 (2,5x). Default effort **medium** (Opus 5 era
+  high) — medium entrega igual por fração do custo; máximo raramente compensa.
+- **Benchmarks (esforço máximo)**: Terminal-Bench 66.4% vs Fable 5.1 55.8% vs
+  Astra 57.9%; Frontier Code 54.4% vs 53.3% vs 50.3%; GDP 1846 vs 1735 vs 1542;
+  OSWorld 81.5% vs 80.7%. Perde só em business workflows (40% vs 41.4%) e
+  pesquisa científica agêntica (58.7% vs 64%).
+- **GPT-6 Sol**: **$2/$10** (metade do Opus 5.5) — em 10 use cases reais
+  (Nate Herk `eF3yeJuifoQ`) Sol corre em paralelo e mais rápido; regra:
+  "$100 em Sol vs $100 em Opus, qual entrega mais qualidade por dólar?"
+- **Operacional**: fast mode chega mais rápido mas custa mais por token;
+  safety redireciona cyber p/ modelo antigo e bio p/ programa de verificação;
+  limit reset sob demanda (Pro/Team/Enterprise). CLI: `swap --to opus-5-5`.
+- Regra nova: Opus 5.5 medium-first; worker barato continua (Sol/Jev);
+  architect no forte. Comparar sempre custo-por-tarefa-concluída.
+
+Fontes: Maestros `XsRt-kwqtVA` + `SisHKjjECPM` (transcritos locais),
+N. Herk `eF3yeJuifoQ`, A. Osmani (claude.dev 22/09), C. Medin Jev 22/09.
+
 ## Referências Oficiais
 
 - [Luciana Papini Video](https://www.youtube.com/watch?v=Bezlzmti6_U)

@@ -38,3 +38,15 @@ Quando o índice global fica borrado, quando dois modelos parecem empatados no s
 - `agent-eval` — avaliação first-party de agentes via CLI.
 - `llm-leaderboard-tracker` — acompanhamento contínuo de leaderboards.
 - `benchmark-methodology` — desenho e scoring de benchmarks próprios.
+
+## Snapshot 2026-09-26 — Opus 5.5 vs Fable 5.1 vs Astra (captura semanal)
+
+Números de esforço máximo (Maestros `XsRt-kwqtVA`, transcrito local):
+Terminal-Bench 66.4% vs 55.8% vs 57.9%; Frontier Code 54.4% vs 53.3% vs
+50.3%; GDP 1846 vs 1735 vs 1542; OSWorld 81.5% vs 80.7%; perde só em
+business workflows e pesquisa científica agêntica. Custo-por-task:
+Opus 5.5 medium-first vence o melhor da concorrência por fração do custo;
+Sol $2/$10 vence em paralelo/velocidade (N. Herk 10 use cases). Coder One
++ Jev (openagents): -61% custo, -37% tempo, mesmo pass rate vs Opus 5.5
+em TerminalBench v4. Regra: fixar 1 controle e comparar sempre com
+tokens + tempo + custo, nunca só score.

@@ -69,6 +69,16 @@ so entra no ranking com fonte oficial.
 Bench), stealth OX Alpha ($0/$0 OpenRouter). Medicao de autor — fonte
 oficial antes do ranking.
 
+### Watchlist 2026-09-26 (captura semanal 19-26/09, só confirmados em vídeo)
+
+- **NOVO confirmado**: Opus 5.5 (Anthropic 22/09, $4/$20), GPT-6 Sol + Luna
+  (OpenAI, Sol $2/$10), GPT-6 Astra ($10/$50), Fable 5.2, Grok 4.7, Jev
+  (TypeSafe first-order, via OpenRouter + waitlist typesafe.ai).
+- **Sinais**: Opus 5.5 lidera Terminal-Bench/Frontier/GDP/OSWorld vs Fable
+  5.1 e Astra (ver `agentic-benchmark-top5`); Sol vence em custo/velocidade
+  paralela (N. Herk 10 use cases). Só entram no ranking com snapshot oficial
+  — nomes acima são watchlist, não rank.
+
 ### Watchlist Batch 17h (#92-109, AI Revolution roundups — tudo rumor ou
 medicao de autor ate confirmacao oficial)
 - OpenAI: GPT-6 Astra/Soul/Terra/Luna (hierarquia vazada); GPT 5.6
