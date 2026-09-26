@@ -35,8 +35,12 @@ Catálogo considerado completo (500+ skills). A partir de agora a coleta é
 ("capturar novas oportunidades de skills", "oportunidades de skill",
 "analisa os vídeos", "vídeos novos", "coletar oportunidades"):
 
-- **Janela móvel de 7 dias:** sem data fixa. A cada acesso, vasculha
-  `hoje - 7 dias` até `hoje` (ex: `diff-all --since <hoje-7d>`).
+- **Janela desde a última solicitação (sem data fixa):** cada pedido seu
+  vira marca (`node scripts/yt-oportunidades.mjs solicitar` no início,
+  gravando `state/ultima-solicitacao.json`); a coleta cobre exatamente
+  desde a marca anterior até hoje (`diff-all --since-request`). Sem marca
+  ainda, cai para hoje−7d. Mais prático: sem buraco se demorar a pedir,
+  sem repetição se pedir cedo.
 - **Fase 1 — listagem existente primeiro:** roda `diff-all --since <hoje-7d>`
   só nos canais de `manifests/canais-vigilados.json`. Foco em
   **atualização/melhoria**, não em criar por criar.
