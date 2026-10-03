@@ -1,6 +1,6 @@
 ---
 name: criar-skill
-description: Use when creating, authoring, or refining Claude Code skills. Triggers on "cria uma skill", "skill nova", "gravar skill", "record a skill", "como criar skill", "melhora a skill", "4 regras de skill". Encodes the 4-step authoring process, Skill Creator / Record a Skill, the 3-layer structure, the DBS framework, the EADA filter, skill systems, and the Anthropic engineers' 4 rules.
+description: Use when creating, authoring, or refining Claude Code skills. Triggers on "cria uma skill", "skill nova", "gravar skill", "record a skill", "como criar skill", "melhora a skill", "degrees of freedom", "reference file over 100 lines", "head-100", "skill audit". Encodes the 4-step authoring process, Skill Creator / Record a Skill, the 3-layer structure, the DBS framework, the EADA filter, skill systems, and the Anthropic 9-rule update (Oct 2026: contents-list, degrees of freedom, per-model testing, 1-level refs, checklists, self-validation, portability).
 ---
 
 # Skill: Criar-skill — autoragem de skills (do zero ou por refinamento)
@@ -105,3 +105,19 @@ Template errado = skill que nunca dispara (rígida demais) ou alucina (solta dem
 
 - **Teste em sessão sem contexto** — abra sessão nova (sem a memória do chat de criação) e rode 2-3 casos reais. A sessão de construção sempre parece melhor do que é.
 - **Otimização > criação** — antes de criar, verifique se um ajuste na skill existente resolve (etapas determinísticas viram `scripts/`, decisões do modelo ficam no texto). Só crie quando o ajuste não couber.
+
+## 6. As 9 regras novas da Anthropic (leva YouTube 2026-10-03)
+
+Fonte: SimonScrapes `e7TY56-yIvM` ("Everything You Know About Skills IS OUTDATED", 2026-10-03) — resume o guia atualizado de best practices da Anthropic. Aplique em skills novas E audite as existentes (uma skill pode misturar níveis):
+
+1. **Contents-list em refs >100 linhas (problema `head-100`)** — ao abrir um reference longo, o Claude roda `head -100` e decide se o resto importa; regra após a linha 100 "não existe". Todo arquivo de referência com mais de 100 linhas ganha um índice no topo espelhando os headings (ex.: API ref → authentication, core methods, advanced, error handling, examples).
+2. **Degrees of freedom por passo** — o detalhe depende da fragilidade/variação: **high** = objetivo em texto (ex.: code review, draft de post — modelo decide o como); **medium** = template com settings (ex.: relatório semanal — charts true/false, markdown/HTML); **low** = comando exato, sem flags extras (ex.: migration de banco, invoice, delete — qualquer desvio tem consequência). Pergunta-guia: "o que acontece se o Claude fizer diferente?" Se nada muda, solte; se é consequente, trave. Low freedom quase sempre = `scripts/`, não mais texto.
+3. **Teste por modelo** — o resultado depende do modelo; teste a skill em cada modelo que vai usá-la (Haiku/Sonnet/Opus/Fable). Modelos antigos pulavam passos (exigiam listas numeradas + ênfase); modelos reasoning novos pioram com excesso de prescrição (guia Fable 5: remova instrução se o modelo for melhor sem ela).
+4. **Frontmatter declara o modelo-alvo** — no YAML da skill, registre com quais modelos ela foi testada. Perguntas por modelo: Haiku tem guidance suficiente? Sonnet está clara e eficiente? Opus não está over-explained?
+5. **Corpo do `SKILL.md` <500 linhas** — trate o corpo como sumário; ao se aproximar do limite, quebre em arquivos separados. Scripts executam (não entram no contexto), então não custam janela.
+6. **Refs a 1 nível do `SKILL.md`** — `skill.md → advance.md → details.md` faz o último elo ser lido só parcialmente. Liste tudo que a skill aponta e garanta link direto do `SKILL.md`; nada alcançável só via outro arquivo. Por área quando a skill cobre vários domínios (ex.: `finance.md`, `sales.md` — pergunta de revenue nunca carrega `marketing.md`).
+7. **Checklist p/ processos ordenados** — o Claude copia p/ a resposta e dá tick; use SÓ quando a ordem importa (ex.: checar dados antes de montar o report). Passos curtos orientados a objetivo, não prescritivos; ex.: research synthesis em 5 linhas com o último passo "verify citations — se incompleto, volte ao passo 3".
+8. **Self-validation loop** — draft → checa contra o guia (voz, brand, checklist) listando cada infração com a seção quebrada → revisa → repete até passar. Se o draft falhar por motivo fora do guia, sugira a regra nova no fim do run; aprovada, ela entra no doc e o próximo run já checa contra ela.
+9. **Portabilidade (day-one)** — nunca assuma ferramenta instalada (a skill funciona na sua máquina porque você instalou a lib há 6 meses e esqueceu). Coloque a linha de install ao lado de cada script — se já instalado, o modelo pula.
+
+**Auditoria rápida:** percorra `.claude/skills`, ache refs >100 linhas sem índice, refs aninhadas, checklists ausentes em fluxo ordenado, scripts sem install line, frontmatter sem modelo-alvo — corrija antes de criar skill nova.
