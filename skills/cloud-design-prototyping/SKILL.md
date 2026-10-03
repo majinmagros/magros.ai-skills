@@ -35,6 +35,15 @@ Cloud Design 2.0 also fixed the brutal token burn of v1 — but direction
 lock (step 2) is still what saves cost: no system, no identity, more
 iterations burned.
 
+## Design-spike em side project (Claude Code + Artifacts, leva YouTube 2026-10-03)
+
+Fonte: Claude `@claude/COJAZQM1aeQ` ("Build an App With Claude Design", 2026-10-02). Para a parte pequena que você não pensaria duas vezes (ex.: onboarding de side project), um spike rápido com o repo conectado rende mais que caprichar no vácuo:
+
+1. Abra o Claude Code com o repo conectado → aba Artifacts → novo design pedindo para olhar o estado atual ("design a silly onboarding for this app").
+2. Comente o que funciona/não funciona; corrija detalhes você mesmo no editor e gere novas opções em cima.
+3. Peça o click-through prototype, clique de verdade, e só então mande construir ("OK, build it").
+4. Vale quando o custo do spike é menor que o custo de decidir no escuro; não vale para fluxos críticos (esses pedem direction lock + DESIGN.md primeiro).
+
 ## Example
 
 ```bash

@@ -55,6 +55,16 @@ Run a native Slack agent via Tag: the chat UI is decoupled from the transcript t
 - Track shelf-life: harnesses rot fast (treat ~2 months as a review point), then re-mock.
 - Log every run: items in, verdicts out, overrides, cost.
 
+## Memória e acesso por canal (Tag oficial, leva YouTube 2026-10-03)
+
+Fonte: Claude `@claude/_f_rtbW_uFM` ("Getting started with Claude Tag", 2026-10-01). Regras do produto oficial que valem para qualquer deploy Tag:
+
+- **Memória por canal, não global**: "Remember for this channel: ..." (ex.: incluir links diretos p/ a fonte na planilha de eventos). Qualquer pessoa do canal lê/atualiza marcando o Claude; ele aprende estilos e preferências do time ao longo do tempo.
+- **Aponte para docs vivos**: style guides e checklists como referência cruzada — se o checklist for atualizado depois, o Claude acompanha por padrão.
+- **Contas próprias + log de quem pediu**: age com identidade própria, registra cada mudança e quem solicitou; ao usar tool individual em seu nome, pede permissão toda vez.
+- **Acesso por canal**: decida por canal o que ele trabalha, frequência de intervenção e autonomia; dados de canais públicos podem ser compartilhados, DMs e privados ficam privados.
+- **Progresso visível**: quebra em passos acompanháveis, avisa quando termina ou quando precisa de decisão; follow-up de qualquer dispositivo.
+
 ## Anti-Patterns
 
 - Supervising tool calls instead of delegating by objective.
