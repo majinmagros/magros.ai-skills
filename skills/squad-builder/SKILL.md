@@ -61,5 +61,7 @@ discover -> GATE 1 -> investigate -> GATE 2 -> design -> GATE 3 -> run
 
 ### 3. Design - five roles plus wiring
 
+**Skills vs agents (leva YouTube 2026-10-03)** — fonte: Grace Leung `@graceleungyl/BzS93V2zFTg` (AI marketing team, 2026-10-03). Para cada responsabilidade, decida antes de desenhar: **skill** quando a tarefa é repetível e o processo é claro (mesma qualidade/formato toda vez — ex.: page builder, ad creative); **agente** quando exige julgamento (interpretar objetivo, escolher skills, ser dono de uma área — persona + escopo + papel bastam, o valor está no julgamento). Skills viram a biblioteca reutilizável do squad; agentes escolhem skills sozinhos. Registre tudo num `agents.md` (manual de onboarding do projeto: contexto + como trabalhar) e, por fim, uma orientação de roteamento (quando delegar a especialista vs executar skill direto).
+
 - Draft exactly five roles by default: strategist, researcher,
   writer, visual builder, publisher. Rename to the niche, keep the

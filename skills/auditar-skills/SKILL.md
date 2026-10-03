@@ -85,6 +85,19 @@ pontua como auditor pós-build, não como gerador.
 Fonte: Simple Tech Man, "Claude Design Skills, Measured" (26/09/2026,
 canal fora da lista).
 
+## 4d. Checklist das 9 regras Anthropic (leva YouTube 2026-10-03)
+
+Fonte: SimonScrapes `e7TY56-yIvM`; lado autor em `criar-skill` §6. Na auditoria, marque por skill:
+
+- [ ] Refs >100 linhas têm contents-list no topo? (problema `head-100`)
+- [ ] Degrees of freedom adequados por passo? (low fragil = `scripts/`, não texto)
+- [ ] Testada nos modelos-alvo? Frontmatter declara com quais? (Haiku guidance suficiente / Sonnet clara / Opus sem over-explain)
+- [ ] Corpo do `SKILL.md` <500 linhas? (se encostando, quebrar em arquivos)
+- [ ] Refs a 1 nível do `SKILL.md`? (nada alcançável só via outro arquivo)
+- [ ] Fluxo ordenado tem checklist copiável? (só onde a ordem importa)
+- [ ] Tem self-validation loop? (draft → checa → fixa → repete; regra nova entra no guia)
+- [ ] Scripts trazem install line ao lado? (portabilidade day-one)
+
 ## 5. Regra
 
 - Nota é meio, não fim: o objetivo é 1 correção acionável por skill,
