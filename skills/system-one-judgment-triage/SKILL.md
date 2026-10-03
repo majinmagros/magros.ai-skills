@@ -65,6 +65,16 @@ confidence — `unknown`/zona cinzenta sempre cai para o LLM/humano.
 Fonte: Kevin Badi, "How to Add Jev AI to Claude Code (Step by Step)"
 (19/09/2026, canal fora da lista — proposto p/ tier radar).
 
+## Casos novos (ColeMedin, out/2026)
+
+Fonte: C. Medin `@ColeMedin/bA8WeHYmJko` ("Jev is the FIRST of a Whole New Class", transcricao local fora do repo). Além do bundle do ticket:
+
+- **PR-depth routing (Archon)**: classificar que profundidade de review cada PR exige — nem todo PR precisa de análise profunda; o Jev decide o roteamento e só os casos pesados caem no LLM caro.
+- **Browser-action selection**: situação = layout atual da página, opções = próxima ação (clicar/digitar) — troca o LLM no loop de navegação/inspeção visual (o gargalo mais lento do coding workflow).
+- **Verification & filters, calibration, finance/trading, games/sims**: decisões em tempo real com confidence por ação (ex.: teste de jogo jogado pelo próprio modelo).
+- **Classificador geral vs específico**: diferente de classificadores TF/PyTorch (1 tarefa, 1 dataset), o Jev aceita qualquer situação — router único para suporte, review, modelo e ação.
+- Há lista open-source de projetos/casos de uso (classification/routing, agentic decision-making, verification, calibration, research, games, finance) — consulte antes de modelar um caso novo.
+
 ## Pre-requisitos
 
 - Modelo barato e rapido dedicado a judgments, prompts curtos.

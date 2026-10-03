@@ -1,6 +1,6 @@
 ---
 name: agent-guardrails
-description: Use when designing security for LLM agents and agentic applications — protecting them from prompt injection, jailbreaking, data exfiltration, and malicious tool calls. Triggers on "proteger o agente", "prompt injection", "jailbreak", "guard rails", "guardrail", "segurança de agente de IA", "agente recebeu prompt malicioso", "proteger API de agente", "evitar que a IA faça besteira". Covers layered defenses (input intent-checking, output filtering, tool allowlists, scope enforcement, human approval gates) and how to apply them in Claude Code, Codex, and custom agents.
+description: Use when designing security for LLM agents and agentic applications — protecting them from prompt injection, jailbreaking, data exfiltration, and malicious tool calls. Triggers on "proteger o agente", "prompt injection", "jailbreak", "guard rails", "guardrail", "segurança de agente de IA", "agente recebeu prompt malicioso", "proteger API de agente", "evitar que a IA faça besteira". Covers layered defenses (input intent-checking, output filtering, tool allowlists, scope enforcement, human approval gates), read-only-first rollout with kill switch, pre-automation pain check, and metric accountability, and how to apply them in Claude Code, Codex, and custom agents.
 metadata:
   origin: ECC
 ---
@@ -24,6 +24,13 @@ agente executar uma ação que você não autorizaria.
 Não use para: revisar código não-agente (isso é `security-review`); auditoria
 de SaaS vibe-coded (isso é `vibe-security-scanner`); segurança específica de
 agentes de trading (isso é `llm-trading-agent-security`, que estende esta).
+
+## Camada 0 — antes de automatizar: ache a dor (leva YouTube 2026-10-03)
+
+Fonte: Nate Herk `@nateherk/Ktnwygcnd8U` ("Claude Code is Starting To Get Dangerous", 2026-09-29). O modelo executa um plano errado rapidinho — o erro mais caro acontece antes do primeiro prompt:
+
+- Não automatize o pedido literal ("vi um agente no LinkedIn, constrói pra nós?"). Pergunta-guia: **"se o negócio crescesse 10x amanhã, que processo quebraria primeiro?"** (ex.: a clínica queria leads, mas o ralo era no-show — o fix era lembrete, não aquisição).
+- Só prossiga quando a dor custa dinheiro mensurável; do contrário, o agente só torna o desperdício mais rápido.
 
 ## Modelo de ameaça (as 3 falhas clássicas)
 
@@ -100,6 +107,14 @@ Construir guardrails não basta — meça se eles seguram:
   quebra regra para "terminar"); sandbox é a última linha quando observabilidade
   falha (lição do incidente Astra). Ver `swarm-readiness-gate` antes de operar e
   `agent-misbehavior-controls` para ameaça insider.
+
+## Controle progressivo + accountability (leva YouTube 2026-10-03)
+
+Fonte: Nate Herk `@nateherk/Ktnwygcnd8U`. Quanto mais potente o agente, mais apertado o controle — e resultado sem dono não vale:
+
+- **Acesso progressivo, nunca tudo de uma vez**: comece read-only; depois drafts antes de publicar/enviar; aprovação humana sempre para dinheiro, delete e publicação. Registre toda ação em log e tenha kill switch (desligar rápido se estranhar). Não é binário: defina o que lê, o que muda, o que exige aprovação e o que é rastreável depois.
+- **Questionário do insurer** (use como checklist de prontidão): quais agentes podem enviar dinheiro? Quais tocam dados de cliente? Algum implementa código? Ações registradas onde? Quem desliga? Se não responde, não está pronto — e atacante usa a mesma IA contra você (phishing, scan, pós-comprometimento).
+- **Contrato de métrica antes de construir**: baseline, meta, prazo (ex.: presença por horário antes/depois do lembrete). Mais: "o que pode dar errado e quem checa?" — defina interceptação humana no diálogo com cliente real e log de cada mensagem. Na pergunta "funcionou? / estava sob controle?", mostre métrica + trilha (quem aprovou, o que aconteceu no incerto). Erro do agente é seu; acerto bem medido é seu crédito.
 
 ## Exemplo
 
