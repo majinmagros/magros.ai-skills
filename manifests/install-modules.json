@@ -937,6 +937,7 @@
         "skills/data-scraper-agent",
         "skills/dynamic-workflow-mode",
         "skills/enterprise-agent-ops",
+        "skills/enterprise-ai-readiness",
         "skills/nanoclaw-repl",
         "skills/prompt-optimizer",
         "skills/ralphinho-rfc-pipeline",
