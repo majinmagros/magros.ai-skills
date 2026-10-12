@@ -75,6 +75,30 @@ Fonte: C. Medin `@ColeMedin/bA8WeHYmJko` ("Jev is the FIRST of a Whole New Class
 - **Classificador geral vs específico**: diferente de classificadores TF/PyTorch (1 tarefa, 1 dataset), o Jev aceita qualquer situação — router único para suporte, review, modelo e ação.
 - Há lista open-source de projetos/casos de uso (classification/routing, agentic decision-making, verification, calibration, research, games, finance) — consulte antes de modelar um caso novo.
 
+## Backend Laya (alternativa open-source ao Jev)
+
+Laya é a alternativa open-source ao Jev na mesma categoria (System One /
+decision models): recebe entrada + alternativas fechadas e responde com uma
+das opções — saída estruturada e previsível, sem gerar texto livre. Numeros
+abaixo sao claims do vendor/comunidade (out/2026), nao medidos aqui: mesma
+ordem de grandeza do Jev em velocidade/custo vs LLMs grandes em decisao.
+
+Quando preferir Laya sobre Jev:
+
+- Sem waitlist/vendor lock-in (open-source, auto-hospedável).
+- Piloto onde custo por julgamento precisa tender a zero além do budget Jev.
+- Mesmo contrato vale: `situation` + lista candidata fechada + `other/unknown`
+  obrigatória + thresholds de human review antes de ligar.
+
+Receita Claude Code (economia de tokens no agente): rotear decisões do loop
+(classificar, rotear, escolher próxima ação) para o backend System One e só
+invocar o LLM caro no que exige raciocínio aberto — o modelo de decisão vira
+o porteiro barato do workflow agentic.
+
+Fonte: Attekita Dev `@attekitadev/X0q6fgG24bU` ("Is Laya the End of JEV?",
+03/10/2026, transcricao local fora do repo) — comparativo Jev vs Laya + demo
+prática com integração no Claude Code para otimizar custo do agente.
+
 ## Pre-requisitos
 
 - Modelo barato e rapido dedicado a judgments, prompts curtos.

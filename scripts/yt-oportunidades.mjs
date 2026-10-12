@@ -26,8 +26,11 @@
   *       Rode no INÍCIO de cada coleta; commit + push junto.
  *   node scripts/yt-oportunidades.mjs last [--canal HANDLE]
  *       Mostra a data da última coleta registrada (ULTIMA-COLETA.json).
- *   node scripts/yt-oportunidades.mjs download <id> [<id>...]
- *       Baixa auto-subs (pt/en) do vídeo e gera <id>.<lang>.dedup.txt.
+  *   node scripts/yt-oportunidades.mjs download <id> [<id>...]
+  *       Baixa auto-subs (pt/en) do vídeo e gera <id>.<lang>.dedup.txt.
+  *       Modo low-burn (throttle 429): 1 tentativa por faixa de langs, player
+  *       client android, sleeps maiores. Overrides: YT_ATTEMPTS=1,
+  *       YT_PLAYER_CLIENT=android, YT_SLEEP_REQ=3, YT_SLEEP_SUB=15, YT_RETRIES=2.
  *   node scripts/yt-oportunidades.mjs dedup [arquivo.vtt ...]
  *       Converte VTT(s) em texto plano sem timestamps. Padrão: raw/*.vtt.
  *   node scripts/yt-oportunidades.mjs mark <id> [<id>...]
@@ -304,12 +307,23 @@ function download(ctx, ids) {
     process.exit(1);
   }
   ensureDir(ctx.rawDir);
+  // Modo low-burn (2026-10-10): o CDN de legendas do YouTube throttla o IP
+  // com 429; cada tentativa extra e queima de cota com ~0 chance de sucesso.
+  // 1 tentativa por faixa de langs, player client android (passa onde o web
+  // client toma 429), sleeps maiores. Overrides via env (sem hardcoded):
+  // YT_ATTEMPTS (default 1), YT_PLAYER_CLIENT (default android),
+  // YT_SLEEP_REQ (default 3), YT_SLEEP_SUB (default 15), YT_RETRIES (default 2).
+  const attempts = Math.max(1, parseInt(process.env.YT_ATTEMPTS || '1', 10) || 1);
+  const playerClient = process.env.YT_PLAYER_CLIENT || 'android';
+  const sleepReq = process.env.YT_SLEEP_REQ || '3';
+  const sleepSub = process.env.YT_SLEEP_SUB || '15';
+  const retries = process.env.YT_RETRIES || '2';
   for (const id of ids) {
     let ok = false;
     for (const langs of [['pt', 'pt-PT', 'en'], ['en'], ['pt']]) {
-      for (let attempt = 0; attempt < 3 && !ok; attempt++) {
+      for (let attempt = 0; attempt < attempts && !ok; attempt++) {
         if (attempt > 0) setTimeoutSync(5000 * attempt);
-        console.log(`[${ctx.label}] baixando subs de ${id} (${langs.join(',')}) tentativa ${attempt + 1}...`);
+        console.log(`[${ctx.label}] baixando subs de ${id} (${langs.join(',')}) tentativa ${attempt + 1}/${attempts}...`);
         const r = spawnSync('yt-dlp', [
           '--skip-download',
           '--write-auto-sub',
@@ -318,9 +332,10 @@ function download(ctx, ids) {
           '--sub-format', 'vtt',
           '--no-playlist',
           '--no-warnings',
-          '--sleep-requests', '1',
-          '--sleep-subtitles', '5',
-          '--retries', '10',
+          '--sleep-requests', sleepReq,
+          '--sleep-subtitles', sleepSub,
+          '--retries', retries,
+          '--extractor-args', `youtube:player_client=${playerClient}`,
           '-o', `${ctx.rawDir.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
           `https://www.youtube.com/watch?v=${id}`,
         ], { encoding: 'utf8' });

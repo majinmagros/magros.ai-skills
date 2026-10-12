@@ -937,6 +937,7 @@
         "skills/data-scraper-agent",
         "skills/dynamic-workflow-mode",
         "skills/enterprise-agent-ops",
+        "skills/enterprise-ai-readiness",
         "skills/nanoclaw-repl",
         "skills/prompt-optimizer",
         "skills/ralphinho-rfc-pipeline",
@@ -1006,7 +1007,8 @@
         "skills/codex-subscription-offload",
         "skills/google-adk-patterns",
         "skills/vercel-eve-filesystem",
-        "skills/software-factory-orchestrator"
+        "skills/software-factory-orchestrator",
+        "skills/claude-code-mods"
       ],
       "targets": [
         "claude",

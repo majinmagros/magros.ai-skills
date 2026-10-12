@@ -1,6 +1,6 @@
 ---
 name: subscription-tier-routing
-description: Use when routing LLM calls by subscription tier allowance — Codex/Claude weekly allowances, cache-aware routing, fast mode, banked resets, GLM $18 budget. Triggers on "subscription tier routing", "weekly allowance routing", "cache aware routing", "banked resets", "glm budget tier".
+description: Use when routing LLM calls by subscription tier allowance — Codex/Claude weekly allowances, cache-aware routing, fast mode, ultrafast, banked resets, GLM $18 budget. Triggers on "subscription tier routing", "weekly allowance routing", "cache aware routing", "banked resets", "glm budget tier", "ultrafast".
 metadata:
   origin: ECC
   source_docs:
@@ -46,6 +46,7 @@ Roteamento que considera **weekly allowances por tier**, **cache hit rates**, **
 | GLM $18: browser automation, C coding, trial quota | ✅ | Z.ai pricing |
 | Banked resets: promocional, refresh 5h+weekly | ✅ | OpenAI usage settings |
 | Fast mode: ~2x créditos, respostas mais rápidas | ✅ | OpenAI/Anthropic docs |
+| Ultrafast: 8x standard / 4x fast, ~300 tok/s, só plano $500 | Medicao do autor (validar) | Nate Herk `pY5_Ux_YJjo` (out/2026) |
 | Fable 5.1 esforço máximo = multi-agente caro; claim 2x rápido/metade tokens | Medicao do autor (validar) | Campelo `5tSGf1DYKe0` (Batch 16, #49) |
 
 ---
@@ -57,6 +58,7 @@ Roteamento que considera **weekly allowances por tier**, **cache hit rates**, **
 | Codex | Plus | $20 | 1X | ~$240 | 94% | Light coding |
 | Codex | Pro 5X | $100 | 5X | ~$1,200 | 94% | Daily coding |
 | Codex | Pro 20X | $200 | 20X | ~$4,900 | 94% | Heavy volume |
+| Codex | Ultrafast (via $500) | $500 | 20X+ | N/A | 94% | Picos que travam entrega |
 | Claude | Pro | $20 | 1X (5h/dia) | ~$101 | 79% | Light coding |
 | Claude | Max 5X | $100 | 5X | ~$503 | 79% | Daily coding |
 | Claude | Max 20X | $200 | 20X | ~$2,013 | 79% | Heavy volume |
@@ -81,3 +83,17 @@ Banked reset promocional: usa antes do refresh; alerta se feature passa de 50% d
   mais que benchmark. Fast mode (preview, extra usage on, +$/token) só quando
   cada reply trava entrega. Regra: medium-first no allowance; high/xhigh só
   com prova. Fontes: Maestros `XsRt-kwqtVA`, claude.dev 22/09.
+
+## Enriquecimento 2026-10-10 — Ultrafast no Codex (captura semanal)
+
+- **Ultrafast** é o modo mais rápido de gerar com Astra no Codex: 8x o
+  standard, 4x o fast, até ~300 tok/s (mais rápido do que dá para ler).
+  Disponível só no plano novo de **$500/mês** (não nos de $100/$200) e via
+  API; chega em breve ao GBD-6.1 Sol (mais barato).
+- Consome o **weekly limit** — é voraz: medir quanto de cada tarefa come do
+  allowance antes de adotar como padrão. Regra: ultrafast só quando cada
+  reply trava entrega (ex.: resumir call de 54min em ~19s, triar 145GB de
+  footage em story 9:16); resto fica no fast/normal do allowance.
+- Fonte: Nate Herk `@nateherk/pY5_Ux_YJjo` ("I Tested Codex's $500/mo
+  Ultrafast", 03/10/2026, transcricao local fora do repo) — comparativo
+  ultrafast vs standard com consumo de limite semanal.
