@@ -240,7 +240,7 @@ function closeDetail() {
   els.backdrop.hidden = true;
 }
 
-async function openGuide(file = 'data/guia-9router.md') {
+async function openGuide(file = 'data/guia-opencode.md') {
   els.guideOverlay.hidden = false;
   els.guideBody.innerHTML = 'carregando guia...';
   try {
@@ -550,7 +550,7 @@ function showSection(name) {
   return name;
 }
 
-/* ---- dashboard de execução (fluxo estilo 9router USO) ---- */
+/* ---- dashboard de execução (fluxo de uso) ---- */
 const DASH_NODES = [
   { id: 'prompt', label: 'PRÉVIA DO PROMPT', sub: 'conteúdo do prompt', x: 75, y: 240 },
   { id: 'roteamento', label: 'MOTOR DE ROTEAMENTO', sub: 'análise de contexto', x: 260, y: 240 },
@@ -705,7 +705,7 @@ function refreshNodePosition(node) {
   sub.setAttribute('y', node.y + 12);
   // Se for o nó de Skill, atualizar sub com o agente
   if (node.id === 'skill') {
-    sub.textContent = "Agent: 9Router";
+    sub.textContent = "Agent: OpenCode";
   }
   g.querySelector('.node-dot').setAttribute('cx', node.x + 66);
   g.querySelector('.node-dot').setAttribute('cy', node.y - 20);
@@ -863,7 +863,7 @@ async function dashRun(forcedSkillId) {
   dashState.currentSkill = skillName;
   if (els.telmPrompt) els.telmPrompt.textContent = '"' + prompt + '"';
   if (els.telmSkill) els.telmSkill.textContent = skillName;
-  if (els.telmModel) els.telmModel.textContent = '9router/my-combo';
+  if (els.telmModel) els.telmModel.textContent = 'opencode/deepseek-v4.1-flash-free';
   if (els.telmStatus) els.telmStatus.textContent = 'EXECUTANDO';
   if (els.telmTok) els.telmTok.textContent = '—';
   setAllNodes(''); setAllEdges(''); setLadderStep(-1);

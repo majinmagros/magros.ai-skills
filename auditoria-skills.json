@@ -355,20 +355,6 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
-    "name": "9router-gateway",
-    "score": 100,
-    "lines": 45,
-    "reasons": [],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
-    "name": "9router-resilient-fallback",
-    "score": 100,
-    "lines": 39,
-    "reasons": [],
-    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
-  },
-  {
     "name": "a2a-interoperability",
     "score": 100,
     "lines": 74,
@@ -3040,7 +3026,7 @@
   {
     "name": "roteamento-modelos-gratuitos",
     "score": 100,
-    "lines": 94,
+    "lines": 96,
     "reasons": [
       "desc longa"
     ],

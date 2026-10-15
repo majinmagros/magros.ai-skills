@@ -55,7 +55,7 @@ onde você cria a conta e copia a API key. Cole a chave no opencode quando pedid
 
 A credencial fica salva em:
 
-- Windows: `C:\Users\SEU_USUARIO\.local\share\opencode\auth.json`
+- Windows: `%USERPROFILE%\.local\share\opencode\auth.json`
 - Linux/macOS: `~/.local/share/opencode/auth.json`
 
 ---
@@ -69,7 +69,7 @@ opencode models
 ```
 
 Para fixar o modelo padrão, edite o arquivo de configuração
-(Windows: `C:\Users\SEU_USUARIO\.config\opencode\opencode.json`):
+(Windows: `%USERPROFILE%\.config\opencode\opencode.json`):
 
 ```json
 {

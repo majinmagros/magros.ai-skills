@@ -1,17 +1,17 @@
 # Auditoria de Skills — Scorecard de Clareza e Saude
 
-> Gerado automaticamente em 2026-10-15 | Projeto: magros.ai-skills | Total: 501 pastas em skills/
+> Gerado automaticamente em 2026-10-15 | Projeto: magros.ai-skills | Total: 499 pastas em skills/
 
 ## Resumo Executivo
 
 - **Media geral:** 99.2/100 (boa — acima do 80 desejavel para corpus premium)
 - **Pastas sem SKILL.md:** 0 (quebradas, score 0)
-- **Description sem gatilho quando usar:** 10 / 501 (2.0%) — **padrao critico**
+- **Description sem gatilho quando usar:** 10 / 499 (2.0%) — **padrao critico**
 - **Description com literal block | :** 0 (quebra renderers flat-table)
 - **SKILL.md >200 linhas:** 0 (0.0%) | >500 linhas: 0
-- **Com progressive disclosure (references/scripts):** 206 / 501 (41.1%) — 85% sao monolitos
+- **Com progressive disclosure (references/scripts):** 206 / 499 (41.3%) — 85% sao monolitos
 - **Distribuicao por faixa:** 0-19:0 | 20-39:0 | 40-59:0 | 60-79:5 | 80-99:31
-- **Conclusao:** Corpus sofre de **inflacao quantitativa** (501 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 2.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
+- **Conclusao:** Corpus sofre de **inflacao quantitativa** (499 pastas) sem curadoria de foco; 0.0% violam regra de ouro <=200 linhas e 2.0% nao disparam por falta de gatilho. Qualidade media aceitavel, mas cauda longa de skills fracas arrasta discoverability.
 
 ## Padroes Repetidos (encontrados no conjunto)
 
@@ -21,7 +21,7 @@
 | Literal block pipe em description | 0 skills | Quebra renderers flat-table | Trocar pipe por > (folded) |
 | Monolitos >200 linhas | 0 skills | Custo tokens alto, sem disclosure | Fatiar e mover para references/ |
 | Mega-monolitos >500 linhas | 0 skills | Impossivel manter | Quebrar em 2-4 skills focadas |
-| Sem progressive disclosure | 295 sem references/scripts | Tudo no SKILL.md | Criar references/ |
+| Sem progressive disclosure | 293 sem references/scripts | Tudo no SKILL.md | Criar references/ |
 | Clusters duplicados | threejs(7), security(11), testing(12), homelab(5), healthcare(5), claude(9) | Overlap e confusao roteamento | Fundir ou diferenciar com Nao use para cruzado |
 | Name != pasta | 6 skills | Quebra tooling | Renomear frontmatter |
 
@@ -67,20 +67,20 @@
 | # | Score | Linhas | Skill | Por que e boa |
 |---|---|---|---|---|
 | 1 | 100 | 74 | `12-factor-agents` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 2 | 100 | 45 | `9router-gateway` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 3 | 100 | 39 | `9router-resilient-fallback` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 4 | 100 | 74 | `a2a-interoperability` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 5 | 100 | 65 | `accessibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 6 | 100 | 83 | `ads-creative-factory` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 7 | 100 | 73 | `ads-operator` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 8 | 100 | 73 | `ads-reporter-multi` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 9 | 100 | 74 | `aeo-geo-visibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 10 | 100 | 50 | `agent-architecture-audit` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 11 | 100 | 70 | `agent-browser` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 12 | 100 | 74 | `agent-commerce-interface` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 13 | 100 | 74 | `agent-cost-optimization-batch` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 14 | 100 | 81 | `agent-eval` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
-| 15 | 100 | 126 | `agent-guardrails` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 2 | 100 | 74 | `a2a-interoperability` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 3 | 100 | 65 | `accessibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 4 | 100 | 83 | `ads-creative-factory` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 5 | 100 | 73 | `ads-operator` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 6 | 100 | 73 | `ads-reporter-multi` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 7 | 100 | 74 | `aeo-geo-visibility` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 8 | 100 | 50 | `agent-architecture-audit` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 9 | 100 | 70 | `agent-browser` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 10 | 100 | 74 | `agent-commerce-interface` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 11 | 100 | 74 | `agent-cost-optimization-batch` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 12 | 100 | 81 | `agent-eval` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 13 | 100 | 126 | `agent-guardrails` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 14 | 100 | 109 | `agent-harness-construction` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
+| 15 | 100 | 65 | `agent-introspection-debugging` | description com gatilho, <=200 linhas, tem Quando Ativar + exemplos |
 
 ## Clusters de Overlap — Analise de Deduplicacao
 
@@ -99,7 +99,7 @@
 - **Workflows (8)**: `claude-voice-workflow`, `dmux-workflows`, `dynamic-workflow-mode`, `git-workflow`, `memory-import-workflow`, `mle-workflow`, `tdd-workflow`, `workflows`
   - *Diagnostico:* workflows vs dynamic-workflow-mode vs dmux-workflows sao confusos. Acao: renomear descriptions para escopo claro.
 
-## Tabela Completa (condensada) — Todas as 501 skills por faixa
+## Tabela Completa (condensada) — Todas as 499 skills por faixa
 
 ### Faixa 0-39 (Critica - 0 skills)
 
@@ -110,8 +110,8 @@
 ### Faixa 60-79 (Regular - 5 skills)
 Amostra: `claude-admin-model-governance`(73), `proposta-comercial-auto`(73), `repurpose-shorts-dm-funnel`(73), `support-agent-report-card`(73), `system-one-judgment-triage`(73) ...
 
-### Faixa 80-99 & 100 (Boa/Excelente - 496 skills)
-Amostra 100pts: `12-factor-agents`, `9router-gateway`, `9router-resilient-fallback`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails` ... (465 com 100pts)
+### Faixa 80-99 & 100 (Boa/Excelente - 494 skills)
+Amostra 100pts: `12-factor-agents`, `a2a-interoperability`, `accessibility`, `ads-creative-factory`, `ads-operator`, `ads-reporter-multi`, `aeo-geo-visibility`, `agent-architecture-audit`, `agent-browser`, `agent-commerce-interface`, `agent-cost-optimization-batch`, `agent-eval`, `agent-guardrails`, `agent-harness-construction`, `agent-introspection-debugging` ... (463 com 100pts)
 
 ## Plano de Correcao Priorizado (ordem de esforco x ganho)
 

@@ -964,8 +964,6 @@
         "skills/gemini-cli-agent-skills",
         "skills/roteamento-modelos-baratos",
         "skills/roteamento-modelos-gratuitos",
-        "skills/9router-gateway",
-        "skills/9router-resilient-fallback",
         "skills/game-npc-ai-integration",
         "skills/meta-muse-spark",
         "skills/engenharia-de-grafos",
