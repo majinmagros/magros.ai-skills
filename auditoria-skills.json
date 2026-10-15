@@ -1,5 +1,351 @@
 [
   {
+    "name": "claude-admin-model-governance",
+    "score": 73,
+    "lines": 70,
+    "reasons": [
+      "sem gatilho quando usar",
+      "sem exemplos"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "proposta-comercial-auto",
+    "score": 73,
+    "lines": 54,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "repurpose-shorts-dm-funnel",
+    "score": 73,
+    "lines": 50,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "support-agent-report-card",
+    "score": 73,
+    "lines": 53,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "system-one-judgment-triage",
+    "score": 73,
+    "lines": 117,
+    "reasons": [
+      "sem gatilho quando usar",
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "context-ledger-sync",
+    "score": 80,
+    "lines": 112,
+    "reasons": [
+      "sem gatilho quando usar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "episode-planner-and-script",
+    "score": 80,
+    "lines": 61,
+    "reasons": [
+      "sem gatilho quando usar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "multi-source-researcher",
+    "score": 80,
+    "lines": 85,
+    "reasons": [
+      "sem gatilho quando usar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "post-production-pipeline",
+    "score": 80,
+    "lines": 107,
+    "reasons": [
+      "sem gatilho quando usar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "whatsapp-link-collector",
+    "score": 80,
+    "lines": 109,
+    "reasons": [
+      "sem gatilho quando usar"
+    ],
+    "fix": "Reescrever description com Use when + triggers concretos"
+  },
+  {
+    "name": "agent-misbehavior-controls",
+    "score": 93,
+    "lines": 42,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "agentic-benchmark-top5",
+    "score": 93,
+    "lines": 53,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "attention-architecture",
+    "score": 93,
+    "lines": 39,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "cartao-pontos-optimizer",
+    "score": 93,
+    "lines": 60,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "caveman-saida-enxuta",
+    "score": 93,
+    "lines": 70,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-safety-monitoring-window",
+    "score": 93,
+    "lines": 59,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude-zero-retention-frontier",
+    "score": 93,
+    "lines": 70,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "codebase-mapa-indexado",
+    "score": 93,
+    "lines": 36,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "codex-subscription-offload",
+    "score": 93,
+    "lines": 50,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "design-code-drift-ci",
+    "score": 93,
+    "lines": 37,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "design-in-repo",
+    "score": 93,
+    "lines": 36,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "drive-screen-os-control",
+    "score": 93,
+    "lines": 55,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "funil-cro-watch",
+    "score": 93,
+    "lines": 36,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "google-adk-patterns",
+    "score": 93,
+    "lines": 41,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "harness-arena-comparison",
+    "score": 93,
+    "lines": 44,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "health-coach-wearables",
+    "score": 93,
+    "lines": 66,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "junior-seniorizado-playbook",
+    "score": 93,
+    "lines": 84,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "knowledge-work-proxy-eval",
+    "score": 93,
+    "lines": 40,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "linkedin-inbox-triage",
+    "score": 93,
+    "lines": 63,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "mcp-local-bridge",
+    "score": 93,
+    "lines": 37,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "meeting-brief-pre-read",
+    "score": 93,
+    "lines": 36,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "saas-to-vps-coolify",
+    "score": 93,
+    "lines": 48,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "self-improvement-ladder",
+    "score": 93,
+    "lines": 49,
+    "reasons": [
+      "desc longa",
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "software-factory-orchestrator",
+    "score": 93,
+    "lines": 39,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "vercel-eve-filesystem",
+    "score": 93,
+    "lines": 39,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "youtube-packaging",
+    "score": 93,
+    "lines": 36,
+    "reasons": [
+      "sem exemplos"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "12-factor-agents",
     "score": 100,
     "lines": 74,
@@ -11,7 +357,7 @@
   {
     "name": "9router-gateway",
     "score": 100,
-    "lines": 37,
+    "lines": 45,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -41,7 +387,7 @@
   {
     "name": "ads-creative-factory",
     "score": 100,
-    "lines": 74,
+    "lines": 83,
     "reasons": [
       "desc longa"
     ],
@@ -84,7 +430,7 @@
   {
     "name": "agent-browser",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [
       "desc longa"
     ],
@@ -109,14 +455,14 @@
   {
     "name": "agent-eval",
     "score": 100,
-    "lines": 65,
+    "lines": 81,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "agent-guardrails",
     "score": 100,
-    "lines": 74,
+    "lines": 126,
     "reasons": [
       "desc longa"
     ],
@@ -125,7 +471,7 @@
   {
     "name": "agent-harness-construction",
     "score": 100,
-    "lines": 86,
+    "lines": 109,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -160,7 +506,7 @@
   {
     "name": "agent-swarm-ops",
     "score": 100,
-    "lines": 65,
+    "lines": 72,
     "reasons": [
       "desc longa"
     ],
@@ -176,7 +522,7 @@
   {
     "name": "agentic-os",
     "score": 100,
-    "lines": 59,
+    "lines": 63,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -192,7 +538,7 @@
   {
     "name": "ai-first-engineering",
     "score": 100,
-    "lines": 72,
+    "lines": 88,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -206,7 +552,7 @@
   {
     "name": "ai-media-generator",
     "score": 100,
-    "lines": 44,
+    "lines": 56,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -220,7 +566,7 @@
   {
     "name": "ai-tutor-system",
     "score": 100,
-    "lines": 65,
+    "lines": 76,
     "reasons": [
       "desc longa"
     ],
@@ -259,7 +605,7 @@
   {
     "name": "anti-hallucination",
     "score": 100,
-    "lines": 67,
+    "lines": 79,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -280,7 +626,7 @@
   {
     "name": "approval-loop-morning-digest",
     "score": 100,
-    "lines": 74,
+    "lines": 78,
     "reasons": [
       "desc longa"
     ],
@@ -312,7 +658,7 @@
   {
     "name": "auditar-skills",
     "score": 100,
-    "lines": 67,
+    "lines": 105,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -346,7 +692,7 @@
   {
     "name": "automacao-deterministica",
     "score": 100,
-    "lines": 60,
+    "lines": 74,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -376,7 +722,7 @@
   {
     "name": "autopilot-content-factory",
     "score": 100,
-    "lines": 64,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -436,7 +782,7 @@
   {
     "name": "blender-mcp-ops",
     "score": 100,
-    "lines": 75,
+    "lines": 78,
     "reasons": [
       "desc longa"
     ],
@@ -480,7 +826,7 @@
   {
     "name": "browser-qa",
     "score": 100,
-    "lines": 65,
+    "lines": 72,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -575,14 +921,14 @@
   {
     "name": "claude-connector-strategy",
     "score": 100,
-    "lines": 73,
+    "lines": 78,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "claude-cowork-patterns",
     "score": 100,
-    "lines": 64,
+    "lines": 78,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -603,14 +949,14 @@
   {
     "name": "claude-md-auditor",
     "score": 100,
-    "lines": 65,
+    "lines": 81,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "claude-model-router",
     "score": 100,
-    "lines": 65,
+    "lines": 112,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -633,6 +979,15 @@
     "score": 100,
     "lines": 38,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "claude5-prompt-rewrite",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -666,7 +1021,7 @@
   {
     "name": "cloud-code-vps-deploy",
     "score": 100,
-    "lines": 35,
+    "lines": 49,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -682,7 +1037,7 @@
   {
     "name": "cloud-design-prototyping",
     "score": 100,
-    "lines": 53,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -724,7 +1079,7 @@
   {
     "name": "coletar-oportunidades-youtube",
     "score": 100,
-    "lines": 65,
+    "lines": 113,
     "reasons": [
       "desc longa"
     ],
@@ -800,7 +1155,7 @@
   {
     "name": "content-hash-cache-pattern",
     "score": 100,
-    "lines": 65,
+    "lines": 74,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -814,7 +1169,7 @@
   {
     "name": "context-ledger",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [
       "desc longa"
     ],
@@ -837,7 +1192,7 @@
   {
     "name": "continuous-learning-v2",
     "score": 100,
-    "lines": 65,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -874,7 +1229,7 @@
   {
     "name": "copyright-compliance-tracking",
     "score": 100,
-    "lines": 71,
+    "lines": 74,
     "reasons": [
       "desc longa"
     ],
@@ -883,14 +1238,14 @@
   {
     "name": "cost-aware-llm-pipeline",
     "score": 100,
-    "lines": 65,
+    "lines": 84,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "cost-tracking",
     "score": 100,
-    "lines": 65,
+    "lines": 71,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -918,14 +1273,14 @@
   {
     "name": "criar-campanha-visual",
     "score": 100,
-    "lines": 59,
+    "lines": 63,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "criar-skill",
     "score": 100,
-    "lines": 80,
+    "lines": 123,
     "reasons": [
       "desc longa"
     ],
@@ -992,7 +1347,7 @@
   {
     "name": "data-scraper-agent",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [
       "desc longa"
     ],
@@ -1027,6 +1382,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "defuddle-leitura-limpa",
+    "score": 100,
+    "lines": 66,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "delivery-gate",
     "score": 100,
     "lines": 72,
@@ -1043,7 +1407,7 @@
   {
     "name": "design-iterate-in-place",
     "score": 100,
-    "lines": 74,
+    "lines": 79,
     "reasons": [
       "desc longa"
     ],
@@ -1052,7 +1416,7 @@
   {
     "name": "design-system",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1094,7 +1458,7 @@
   {
     "name": "dm-keyword-automation",
     "score": 100,
-    "lines": 73,
+    "lines": 78,
     "reasons": [
       "desc longa"
     ],
@@ -1191,7 +1555,7 @@
   {
     "name": "email-ops",
     "score": 100,
-    "lines": 74,
+    "lines": 78,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1199,7 +1563,9 @@
     "name": "encontrar-skill",
     "score": 100,
     "lines": 60,
-    "reasons": [],
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -1235,7 +1601,7 @@
   {
     "name": "eval-harness",
     "score": 100,
-    "lines": 65,
+    "lines": 94,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1256,7 +1622,7 @@
   {
     "name": "fal-ai-media",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1314,7 +1680,7 @@
   {
     "name": "frontend-design-direction",
     "score": 100,
-    "lines": 74,
+    "lines": 78,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1342,7 +1708,7 @@
   {
     "name": "fusion-harness",
     "score": 100,
-    "lines": 65,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1425,7 +1791,7 @@
   {
     "name": "goal",
     "score": 100,
-    "lines": 56,
+    "lines": 75,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1469,7 +1835,7 @@
   {
     "name": "graphify",
     "score": 100,
-    "lines": 65,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1499,7 +1865,7 @@
   {
     "name": "grokbot-team-ops",
     "score": 100,
-    "lines": 73,
+    "lines": 78,
     "reasons": [
       "desc longa"
     ],
@@ -1613,7 +1979,7 @@
   {
     "name": "humanizar-texto",
     "score": 100,
-    "lines": 66,
+    "lines": 75,
     "reasons": [
       "desc longa"
     ],
@@ -1634,6 +2000,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "hyperframes-codex-video",
+    "score": 100,
+    "lines": 153,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "hyperledger-fabric-generator",
     "score": 100,
     "lines": 65,
@@ -1645,21 +2020,21 @@
   {
     "name": "img2threejs",
     "score": 100,
-    "lines": 66,
+    "lines": 76,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "impeccable-design",
     "score": 100,
-    "lines": 31,
+    "lines": 43,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "inherit-legacy-style",
     "score": 100,
-    "lines": 65,
+    "lines": 66,
     "reasons": [
       "desc longa"
     ],
@@ -1875,7 +2250,7 @@
   {
     "name": "lead-intelligence",
     "score": 100,
-    "lines": 65,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1889,7 +2264,7 @@
   {
     "name": "llm-leaderboard-tracker",
     "score": 100,
-    "lines": 64,
+    "lines": 103,
     "reasons": [
       "desc longa"
     ],
@@ -1912,7 +2287,7 @@
   {
     "name": "local-llm-efficiency",
     "score": 100,
-    "lines": 49,
+    "lines": 57,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -1979,7 +2354,7 @@
   {
     "name": "marketing-campaign",
     "score": 100,
-    "lines": 73,
+    "lines": 78,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2074,7 +2449,7 @@
   {
     "name": "model-migration-strategy",
     "score": 100,
-    "lines": 73,
+    "lines": 104,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2339,7 +2714,7 @@
   {
     "name": "plain-language-response",
     "score": 100,
-    "lines": 48,
+    "lines": 51,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2362,7 +2737,7 @@
   {
     "name": "plan-duel",
     "score": 100,
-    "lines": 74,
+    "lines": 79,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2418,7 +2793,7 @@
   {
     "name": "product-lens",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2446,14 +2821,16 @@
   {
     "name": "prompt-builder",
     "score": 100,
-    "lines": 81,
-    "reasons": [],
+    "lines": 99,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "prompt-optimizer",
     "score": 100,
-    "lines": 65,
+    "lines": 72,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2525,7 +2902,7 @@
   {
     "name": "rag-corporativo-seguro",
     "score": 100,
-    "lines": 73,
+    "lines": 89,
     "reasons": [
       "desc longa"
     ],
@@ -2654,7 +3031,7 @@
   {
     "name": "roteamento-modelos-baratos",
     "score": 100,
-    "lines": 73,
+    "lines": 105,
     "reasons": [
       "desc longa"
     ],
@@ -2663,7 +3040,7 @@
   {
     "name": "roteamento-modelos-gratuitos",
     "score": 100,
-    "lines": 73,
+    "lines": 94,
     "reasons": [
       "desc longa"
     ],
@@ -2672,14 +3049,14 @@
   {
     "name": "roteiro-engenheiro-ia-2026",
     "score": 100,
-    "lines": 80,
+    "lines": 85,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "routines",
     "score": 100,
-    "lines": 68,
+    "lines": 72,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -2734,6 +3111,15 @@
     "score": 100,
     "lines": 50,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "sast-gate-pr",
+    "score": 100,
+    "lines": 54,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -2836,7 +3222,7 @@
   {
     "name": "sessoes-orquestradas",
     "score": 100,
-    "lines": 73,
+    "lines": 83,
     "reasons": [
       "desc longa"
     ],
@@ -2868,14 +3254,14 @@
   {
     "name": "skill-creator-methodology",
     "score": 100,
-    "lines": 60,
+    "lines": 80,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "skill-eval-runner",
     "score": 100,
-    "lines": 73,
+    "lines": 83,
     "reasons": [
       "desc longa"
     ],
@@ -2912,7 +3298,7 @@
   {
     "name": "slack-tag-ops",
     "score": 100,
-    "lines": 73,
+    "lines": 83,
     "reasons": [
       "desc longa"
     ],
@@ -2979,7 +3365,7 @@
   {
     "name": "squad-builder",
     "score": 100,
-    "lines": 65,
+    "lines": 67,
     "reasons": [
       "desc longa"
     ],
@@ -2988,14 +3374,14 @@
   {
     "name": "strategic-compact",
     "score": 100,
-    "lines": 65,
+    "lines": 73,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
     "name": "stripe-webhook-handler",
     "score": 100,
-    "lines": 57,
+    "lines": 64,
     "reasons": [
       "desc longa"
     ],
@@ -3011,7 +3397,7 @@
   {
     "name": "subscription-tier-routing",
     "score": 100,
-    "lines": 73,
+    "lines": 83,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3020,6 +3406,15 @@
     "score": 100,
     "lines": 51,
     "reasons": [],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
+    "name": "swarm-readiness-gate",
+    "score": 100,
+    "lines": 73,
+    "reasons": [
+      "desc longa"
+    ],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
@@ -3134,7 +3529,7 @@
   {
     "name": "threejs-scene-composer",
     "score": 100,
-    "lines": 76,
+    "lines": 83,
     "reasons": [
       "desc longa"
     ],
@@ -3189,6 +3584,15 @@
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
   {
+    "name": "ugc-seedance-talking-head",
+    "score": 100,
+    "lines": 95,
+    "reasons": [
+      "desc longa"
+    ],
+    "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
+  },
+  {
     "name": "ui-demo",
     "score": 100,
     "lines": 43,
@@ -3226,7 +3630,7 @@
   {
     "name": "universal-portability",
     "score": 100,
-    "lines": 65,
+    "lines": 70,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3247,7 +3651,7 @@
   {
     "name": "verification-loop",
     "score": 100,
-    "lines": 65,
+    "lines": 84,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3261,7 +3665,7 @@
   {
     "name": "video-cut-pipeline",
     "score": 100,
-    "lines": 73,
+    "lines": 84,
     "reasons": [
       "desc longa"
     ],
@@ -3277,7 +3681,7 @@
   {
     "name": "videodb",
     "score": 100,
-    "lines": 65,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3330,7 +3734,7 @@
   {
     "name": "vue-patterns",
     "score": 100,
-    "lines": 59,
+    "lines": 58,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   },
@@ -3390,7 +3794,7 @@
   {
     "name": "zed-deltadb-versioning",
     "score": 100,
-    "lines": 65,
+    "lines": 69,
     "reasons": [],
     "fix": "Revisar descricao e adicionar 1 exemplo copiavel"
   }
