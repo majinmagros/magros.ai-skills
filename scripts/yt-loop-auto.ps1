@@ -115,8 +115,10 @@ foreach ($t in $dl) {
   }
 }
 $pendingFile = Join-Path $RepoRoot 'state\yt-pending.json'
-@{ generated_at = (Get-Date).ToUniversalTime().ToString('o'); since = $Since; pending = @($pending) } |
-  ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $pendingFile -Encoding utf8
-$skips | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath $skipsFile -Encoding utf8
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+$pendingJson = @{ generated_at = (Get-Date).ToUniversalTime().ToString('o'); since = $Since; pending = @($pending) } |
+  ConvertTo-Json -Depth 5
+[IO.File]::WriteAllText($pendingFile, $pendingJson + "`r`n", $utf8NoBom)
+[IO.File]::WriteAllText($skipsFile, ($skips | ConvertTo-Json -Depth 3) + "`r`n", $utf8NoBom)
 RepoLog ('pending: ' + $pending.Count + ' pronto(s) em state/yt-pending.json; ' + $fail.Count + ' sem transcricao (429 ou sem legenda, retenta na proxima).')
 RepoLog 'Proximo passo (agente): analisar state/yt-pending.json, cruzar com skills/, CRIAR/ENRIQUECER, validar, mark, commit+push. Ver docs/YT-AUTOLOOP.md.'
