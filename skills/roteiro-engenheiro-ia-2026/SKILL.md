@@ -44,7 +44,7 @@ Em 2026, a engenharia de IA substituiu o treino de modelos do zero (Machine Lear
 - **Alucinação**: A natureza estatística do próximo token e a inevitabilidade teórica da alucinação (mitigável, não eliminável).
 
 ### Fase 2: APIs e Prompts Avançados
-- **SDKs de Provedores**: Integração com Anthropic, OpenAI, Google via SDKs oficiais ou 9Router/OmniRoute.
+- **SDKs de Provedores**: Integração com Anthropic, OpenAI, Google via SDKs oficiais ou OpenCode/OpenRouter.
 - **Saídas Estruturadas**: Uso de schemas (Pydantic / JSON Schema) para forçar respostas tipadas (não strings soltas).
 - **Tool Calling & ReAct**: Como o LLM emite chamadas estruturadas e o código executa.
 - **Técnicas de Prompt**: Few-shot, Chain of Thought (CoT), Tree of Thoughts (ToT).

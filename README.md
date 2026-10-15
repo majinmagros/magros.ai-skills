@@ -21,8 +21,8 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **501 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
-- **416** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
+- **499 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **414** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
 - **85 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
@@ -144,7 +144,7 @@ em português/enriquecidas** — não são duplicatas cruas:
 ## Estrutura
 
 ```
-skills/          # todas as skills (416 ECC + 85 autorais; lista autorais em manifests/skills-autorais.json)
+skills/          # todas as skills (414 ECC + 85 autorais; lista autorais em manifests/skills-autorais.json)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
   grills/                  # autoral
@@ -175,7 +175,7 @@ manifests/       # install-modules.json (módulos de instalação)
 As 9 skills derivadas foram criadas a partir da análise de **16 vídeos transcritos**
 (yt-dlp auto-subs, 2026-08-11). Relatório, scorecard de auditoria das skills e
 transcrições `.dedup.txt` ficam em um diretório local fora deste repo.
-Mapa transcrição→skill no `RELATORIO.md`.
+Mapa transcrição→skill no `RELATORIO.md` (no diretório local).
 
 ## Manutenção / atualização das skills
 
@@ -193,7 +193,7 @@ git remote add upstream https://github.com/affaan-m/ECC.git
 
 O script `sync-upstream.sh` faz `fetch` + `merge` do branch principal do upstream para o seu `master`.
 Conflitos (ex.: se você editou uma skill que também mudou lá em cima) precisam ser resolvidos
-manualmente — o git vai apontá-los. As suas **49 skills autorais** (ver `manifests/skills-autorais.json`)
+manualmente — o git vai apontá-los. As suas **85 skills autorais** (ver `manifests/skills-autorais.json`)
 não são tocadas pelo merge, pois não existem no upstream.
 
 Recomendação: rode o sync após novas releases do ECC, e rode a skill `doctor` periodicamente para

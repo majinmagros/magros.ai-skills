@@ -1,9 +1,18 @@
 import { createRequire } from 'module';
-import { writeFileSync, mkdirSync } from 'fs';
+import { writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
 
-const require = createRequire(join(homedir(), 'AppData/Roaming/npm/node_modules/9router/'));
+const sqliteCandidates = [
+  join(homedir(), 'AppData/Roaming/npm/node_modules/better-sqlite3'),
+  join(process.cwd(), 'node_modules/better-sqlite3')
+];
+const sqliteDir = sqliteCandidates.find((p) => existsSync(p));
+if (!sqliteDir) {
+  console.error('better-sqlite3 nao encontrado. Instale com: npm i -g better-sqlite3');
+  process.exit(1);
+}
+const require = createRequire(join(sqliteDir, 'package.json'));
 const Database = require('better-sqlite3');
 const db = new Database(join(homedir(), '.local/share/opencode/opencode.db'), { readonly: true });
 
