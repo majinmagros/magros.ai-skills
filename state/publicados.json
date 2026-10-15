@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "nota": "Ledger de republicacao multi-plataforma (piloto DJ sets). Um registro por video-fonte: Short + pack texto + status por plataforma. Nunca republicar o que caiu (mutado/bloqueado). Sincronizado via git como state/yt-control.json.",
+    "criadoEm": "2026-09-18",
+    "videoPiloto": "_SR8QLn7gVU"
+  },
+  "videos": [
+    {
+      "video_id": "_SR8QLn7gVU",
+      "title": "This Drum and Bass mix explores modern underground DnB",
+      "style": "Drum'n Bass",
+      "canal": "@magroszapatero5357",
+      "full_url": "https://www.youtube.com/watch?v=_SR8QLn7gVU",
+      "playlist_canonica": "https://www.youtube.com/playlist?list=PLiIX1vnlWWNE3k60c5ok5eNmezlO6Fzv5",
+      "claim_longo": "monetizado pelos donos (tracklist de ~40 faixas = claims, sem bloqueio reportado)",
+      "teaser": {
+        "arquivo": "teaser-dnb-00-60.mp4",
+        "segmento": "00:00-01:00 do video-fonte",
+        "formato": "1080x1920 vertical blur-fill, h264+aac, ~36MB",
+        "status": "pronto-p/upload"
+      },
+      "short_id": null,
+      "short_url": null,
+      "claim_short": null,
+      "texto": {
+        "x": "pendente",
+        "threads": "pendente",
+        "bluesky": "pendente",
+        "telegram": "pendente",
+        "discord": "pendente"
+      },
+      "tiktok": "nao-testado",
+      "reels": "nao-testado",
+      "status_piloto": "aguardando-execucao-usuario"
+    }
+  ]
+}
