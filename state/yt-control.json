@@ -5,10 +5,10 @@
   },
   "canais": {
     "@maestrosdaia": {
-      "ultimaColeta": "2026-09-20",
+      "ultimaColeta": "2026-10-14",
       "analisados": 88,
-      "ultimoVideoId": "SDeQU0RDjgU",
-      "atualizadoEm": "2026-09-20T14:28:38.497Z"
+      "ultimoVideoId": "Kqj7RzukaeE",
+      "atualizadoEm": "2026-10-16T01:34:21.688Z"
     },
     "@FullCycle": {
       "ultimaColeta": "2026-09-20",
@@ -35,10 +35,10 @@
       "atualizadoEm": "2026-09-19T14:57:59.323Z"
     },
     "@IndyDevDan": {
-      "ultimaColeta": "2026-09-15",
+      "ultimaColeta": "2026-10-13",
       "analisados": 16,
-      "ultimoVideoId": "9weiIHy9T_0",
-      "atualizadoEm": "2026-09-19T15:27:50.545Z"
+      "ultimoVideoId": "DNDYYHsypZg",
+      "atualizadoEm": "2026-10-16T01:34:23.068Z"
     },
     "@pavanadhav": {
       "ultimaColeta": "2025-09-14",
@@ -47,10 +47,10 @@
       "atualizadoEm": "2026-09-13T20:43:07.925Z"
     },
     "@SimonScrapes": {
-      "ultimaColeta": "2026-09-19",
+      "ultimaColeta": "2026-10-09",
       "analisados": 23,
-      "ultimoVideoId": "-URQjhtvxZo",
-      "atualizadoEm": "2026-09-19T15:27:50.789Z"
+      "ultimoVideoId": "zac3kEUwIlg",
+      "atualizadoEm": "2026-10-16T01:34:22.402Z"
     },
     "@anwarhermuche": {
       "ultimaColeta": "2026-09-11",
@@ -77,10 +77,10 @@
       "atualizadoEm": "2026-09-18T18:07:38.477Z"
     },
     "@ColeMedin": {
-      "ultimaColeta": "2026-09-16",
+      "ultimaColeta": "2026-10-15",
       "analisados": 14,
-      "ultimoVideoId": "SWEThyRHMgQ",
-      "atualizadoEm": "2026-09-19T15:27:50.674Z"
+      "ultimoVideoId": "2i_ZyqDmtio",
+      "atualizadoEm": "2026-10-16T01:34:22.069Z"
     },
     "@matthew_berman": {
       "ultimaColeta": "2026-09-18",
@@ -123,6 +123,12 @@
       "analisados": 9,
       "ultimoVideoId": "GkGufbIVVC8",
       "atualizadoEm": "2026-09-19T15:27:51.025Z"
+    },
+    "@graceleungyl": {
+      "ultimaColeta": "2026-10-04",
+      "analisados": 1,
+      "ultimoVideoId": "BzS93V2zFTg",
+      "atualizadoEm": "2026-10-16T01:34:22.735Z"
     }
   }
 }
