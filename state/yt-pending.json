@@ -1,7 +1,62 @@
 {
-    "generated_at":  "2026-09-18T18:59:44.5912714Z",
-    "pending":  [
-
-                ],
-    "since":  "2026-09-15"
+  "generated_at": "2026-10-16T00:24:37.238Z",
+  "since": "2026-10-03",
+  "pending": [
+    {
+      "canal": "@ColeMedin",
+      "id": "2i_ZyqDmtio",
+      "title": "How I Keep Up with AI Without Drowning in It (Free Skill)",
+      "upload_date": "20261015",
+      "transcript": "C:\\Transcrições\\colemedin\\2i_ZyqDmtio.pt.dedup.txt"
+    },
+    {
+      "canal": "@SimonScrapes",
+      "id": "zac3kEUwIlg",
+      "title": "You Should Be Using Jev�s Browser Agent, Here�s Why",
+      "upload_date": "20261009",
+      "transcript": "C:\\Transcrições\\simonscrapes\\zac3kEUwIlg.en.dedup.txt"
+    },
+    {
+      "canal": "@graceleungyl",
+      "id": "BzS93V2zFTg",
+      "title": "ChatGPT Work + Dot: Build your AI Marketing Team (Agents + Skills)",
+      "upload_date": "20261004",
+      "transcript": "C:\\Transcrições\\graceleungyl\\BzS93V2zFTg.en.dedup.txt"
+    },
+    {
+      "canal": "@maestrosdaia",
+      "id": "Kqj7RzukaeE",
+      "title": "Kimi vs Claude: a maior FRAUDE da Hist�ria da IA",
+      "upload_date": "20261014",
+      "transcript": "C:\\Transcrições\\maestrosdaia\\Kqj7RzukaeE.pt.dedup.txt"
+    },
+    {
+      "canal": "@maestrosdaia",
+      "id": "Ckuo9Bvy3zk",
+      "title": "My Favorite NEW Claude Code Skill",
+      "upload_date": "20261012",
+      "transcript": "C:\\Transcrições\\maestrosdaia\\Ckuo9Bvy3zk.pt.dedup.txt"
+    },
+    {
+      "canal": "@maestrosdaia",
+      "id": "IXuLJdR_zgk",
+      "title": "Claude Code Just Released MODS: Master Them in 10 Minutes",
+      "upload_date": "20261010",
+      "transcript": "C:\\Transcrições\\maestrosdaia\\IXuLJdR_zgk.pt.dedup.txt"
+    },
+    {
+      "canal": "@maestrosdaia",
+      "id": "oDKKrBzMe2g",
+      "title": "Como Aprender Qualquer Coisa 10x Mais R�pido Usando IA",
+      "upload_date": "20261008",
+      "transcript": "C:\\Transcrições\\maestrosdaia\\oDKKrBzMe2g.pt.dedup.txt"
+    },
+    {
+      "canal": "@IndyDevDan",
+      "id": "DNDYYHsypZg",
+      "title": "Pi Durable PROACTIVE Agents: Jev Triggers My ON-CALL Pi Agent",
+      "upload_date": "20261013",
+      "transcript": "C:\\Transcrições\\indydevdan\\DNDYYHsypZg.pt.dedup.txt"
+    }
+  ]
 }
