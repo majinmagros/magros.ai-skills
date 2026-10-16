@@ -63,7 +63,17 @@ Após instalar a skill, o agente sabe usar comandos como:
 ```
 "Use o agent browser para testar a responsividade do header: diminua a tela, veja se o hamburger menu abre."
 "Use o agent browser para buscar as 5 últimas notícias do site X e me traga títulos + links."
+```
 
 ## Decision-plane barato (leva YouTube rodada 9)
 
 Para browser-use com custo sob controle: lista numerada de controles, refresh de contexto a cada step, 1 request = 1 escolha (op + target), texto gerado por modelo barato, timer excluindo startup, custo medido sem infra. Se o decision custar mais que a acao, simplifique a pagina primeiro (ver defuddle-leitura-limpa).
+
+## Jev: decision model de 1 pergunta (leva YouTube 2026-10-15)
+
+Fonte: SimonScrapes `@SimonScrapes/zac3kEUwIlg` ("You Should Be Using Jev's Browser Agent, Here's Why", 2026-10-09). Complementa a seção "Decision-plane barato" acima.
+
+- **O que é**: Jev é um modelo de julgamento (não conversa): input = state (texto) + pergunta, output = resposta entre as opções + confidence. ~4¢/milhão de tokens de input (output geralmente grátis), ~1/3s por decisão, milhares/segundo.
+- **Loop no browser**: (1) agente numera os elementos visíveis; (2) Jev responde 2 perguntas (o que fazer? qual target?) → ação + confidence; (3) confidence ≥ 0.7 segue local; abaixo disso escala para o Claude.
+- **Pitfalls**: cookie banners, iframes/upload invisíveis na árvore de acessibilidade, falso "ready" → verificação via Claude; memória das últimas 5 ações para encadear metas curtas.
+- **Setup**: <15 min; open source (browserless.com); a browser-use refez o agente em Jev → voo Google em 7s (1092 → 101 requests). Habilidade-chave da skill: formular as perguntas certas e agrupar elementos.

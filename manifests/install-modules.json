@@ -442,7 +442,9 @@
         "skills/defuddle-leitura-limpa",
         "skills/caveman-saida-enxuta",
         "skills/codebase-mapa-indexado",
-        "skills/system-one-judgment-triage"
+        "skills/system-one-judgment-triage",
+        "skills/claude-code-mods",
+        "skills/approval-rejection-board"
       ],
       "targets": [
         "claude",
@@ -695,7 +697,8 @@
         "skills/meeting-task-listener",
         "skills/telegram-channel-operator",
         "skills/meeting-brief-pre-read",
-        "skills/health-coach-wearables"
+        "skills/health-coach-wearables",
+        "skills/monitor-novidades-ia"
       ],
       "targets": [
         "claude",
@@ -1004,7 +1007,9 @@
         "skills/codex-subscription-offload",
         "skills/google-adk-patterns",
         "skills/vercel-eve-filesystem",
-        "skills/software-factory-orchestrator"
+        "skills/software-factory-orchestrator",
+        "skills/chatgpt-work-dot-team",
+        "skills/agentes-proativos-duraveis"
       ],
       "targets": [
         "claude",
