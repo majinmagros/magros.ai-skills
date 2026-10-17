@@ -345,7 +345,9 @@
     {
       "handle": "@pavanadhav",
       "nome": "Pavan Adhav",
-      "tier": "core",
+      "tier": "radar",
+      "status": "snow",
+      "motivo_snow": "Última coleta 2026-09-13, vídeo mais antigo de 2025-09-14; canal sem movimento recente de skills/IA — manter em pausa até publicar novamente",
       "idiomas": [
         "en"
       ],
@@ -560,6 +562,74 @@
         "negocios"
       ],
       "tier": "core"
+    },
+    {
+      "handle": "@jkc-tutorials",
+      "nome": "JKC Tutorials",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "mcp",
+        "claude",
+        "codex",
+        "agent",
+        "workflow",
+        "automation"
+      ],
+      "tier": "radar"
+    },
+    {
+      "handle": "@the-code-city",
+      "nome": "The Code City",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "subagent",
+        "agent",
+        "claude",
+        "workflow",
+        "handoff",
+        "multi-agent"
+      ],
+      "tier": "radar"
+    },
+    {
+      "handle": "@make-it-future",
+      "nome": "Make it Future (Tiberiu Socaci)",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "mcp",
+        "claude",
+        "agent",
+        "slack",
+        "workflow",
+        "automation",
+        "business"
+      ],
+      "tier": "radar"
+    },
+    {
+      "handle": "@claude-skills-tutorial",
+      "nome": "The ONLY Claude Skills Tutorial (2026)",
+      "idiomas": [
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "claude",
+        "tutorial",
+        "beginner",
+        "mcp",
+        "workflow"
+      ],
+      "tier": "radar"
     }
   ]
 }
