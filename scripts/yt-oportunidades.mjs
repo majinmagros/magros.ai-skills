@@ -1,68 +1,68 @@
 #!/usr/bin/env node
 /**
- * yt-oportunidades.mjs — Pipeline determinístico de coleta de oportunidades.
+ * yt-oportunidades.mjs â€” Pipeline determinÃ­stico de coleta de oportunidades.
  *
- * Cataloga canais do YouTube, compara com as transcrições locais, baixa e
- * deduplica transcrições que faltam. A ANÁLISE das transcrições (raciocínio)
- * fica com a skill `coletar-oportunidades-youtube`, não aqui.
+ * Cataloga canais do YouTube, compara com as transcriÃ§Ãµes locais, baixa e
+ * deduplica transcriÃ§Ãµes que faltam. A ANÃLISE das transcriÃ§Ãµes (raciocÃ­nio)
+ * fica com a skill `coletar-oportunidades-youtube`, nÃ£o aqui.
  *
  * Uso:
  *   node scripts/yt-oportunidades.mjs sync-check [--json] [--allow-stale] [--no-fetch] [--branch NOME]
  *       Compara o repo local com o GitHub (fetch + HEAD vs origin) e BLOQUEIA
- *       (exit 1) se estiver atrás, com worktree suja ou com commits sem push.
+ *       (exit 1) se estiver atrÃ¡s, com worktree suja ou com commits sem push.
  *       Rode SEMPRE antes de catalog/diff quando houver 2+ PCs coletando.
- *       --allow-stale libera (exit 0) assumindo o risco; --json imprime só JSON.
- *       Canal -> CATALOGO.json na pasta de transcrições (id, título, data).
+ *       --allow-stale libera (exit 0) assumindo o risco; --json imprime sÃ³ JSON.
+ *       Canal -> CATALOGO.json na pasta de transcriÃ§Ãµes (id, tÃ­tulo, data).
  *   node scripts/yt-oportunidades.mjs catalog-all
  *       Cataloga TODOS os canais de manifests/canais-vigilados.json.
  *   node scripts/yt-oportunidades.mjs diff [--since AAAA-MM-DD | --since-last]
- *       Canal vs transcrições locais -> sem_transcricao e transcritos_nao_analisados.
- *       --since-last usa a data gravada em ULTIMA-COLETA.json (só o que é novo).
+ *       Canal vs transcriÃ§Ãµes locais -> sem_transcricao e transcritos_nao_analisados.
+ *       --since-last usa a data gravada em ULTIMA-COLETA.json (sÃ³ o que Ã© novo).
   *   node scripts/yt-oportunidades.mjs diff-all [--since AAAA-MM-DD | --since-last | --since-request]
   *       Igual a diff, mas para todos os canais da config.
-  *       --since-request usa a marca de `solicitar` (último pedido; sem marca, hoje−7d).
+  *       --since-request usa a marca de `solicitar` (Ãºltimo pedido; sem marca, hojeâˆ’7d).
   *   node scripts/yt-oportunidades.mjs solicitar
-  *       Registra hoje como "última vez que pediu coleta" (state/ultima-solicitacao.json).
-  *       Rode no INÍCIO de cada coleta; commit + push junto.
+  *       Registra hoje como "Ãºltima vez que pediu coleta" (state/ultima-solicitacao.json).
+  *       Rode no INÃCIO de cada coleta; commit + push junto.
  *   node scripts/yt-oportunidades.mjs last [--canal HANDLE]
- *       Mostra a data da última coleta registrada (ULTIMA-COLETA.json).
+ *       Mostra a data da Ãºltima coleta registrada (ULTIMA-COLETA.json).
   *   node scripts/yt-oportunidades.mjs download <id> [<id>...]
-  *       Baixa auto-subs (pt/en) do vídeo e gera <id>.<lang>.dedup.txt.
+  *       Baixa auto-subs (pt/en) do vÃ­deo e gera <id>.<lang>.dedup.txt.
   *       Modo low-burn (throttle 429): 1 tentativa por faixa de langs, player
   *       client android, sleeps maiores. Overrides: YT_ATTEMPTS=1,
   *       YT_PLAYER_CLIENT=android, YT_SLEEP_REQ=3, YT_SLEEP_SUB=15, YT_RETRIES=2.
  *   node scripts/yt-oportunidades.mjs dedup [arquivo.vtt ...]
- *       Converte VTT(s) em texto plano sem timestamps. Padrão: raw/*.vtt.
+ *       Converte VTT(s) em texto plano sem timestamps. PadrÃ£o: raw/*.vtt.
  *   node scripts/yt-oportunidades.mjs mark <id> [<id>...]
- *       Marca vídeos como analisados (registro ANALISADOS.json).
+ *       Marca vÃ­deos como analisados (registro ANALISADOS.json).
  *   node scripts/yt-oportunidades.mjs analyzed
- *       Lista os vídeos marcados como analisados.
+ *       Lista os vÃ­deos marcados como analisados.
  *
- * Configuração por variáveis de ambiente (modo canal único, compatível):
- *   YT_CHANNEL  URL do canal (padrão: https://www.youtube.com/@maestrosdaia/videos)
- *   YT_DIR      pasta(s) das transcrições, separadas por ';'
- *               (padrão: ~/projetos/maestros-da-ia;~/projetos/enzo-sparo).
- *               Catálogo/registro de análise vão na PRIMEIRA pasta.
+ * ConfiguraÃ§Ã£o por variÃ¡veis de ambiente (modo canal Ãºnico, compatÃ­vel):
+ *   YT_CHANNEL  URL do canal (padrÃ£o: https://www.youtube.com/@maestrosdaia/videos)
+ *   YT_DIR      pasta(s) das transcriÃ§Ãµes, separadas por ';'
+ *               (padrÃ£o: ~/projetos/maestros-da-ia;~/projetos/enzo-sparo).
+ *               CatÃ¡logo/registro de anÃ¡lise vÃ£o na PRIMEIRA pasta.
  *
  * Modo multi-canal (catalog-all/diff-all):
- *   Lê manifests/canais-vigilados.json: [{ handle, nome, pasta, idiomas, keywords }]
- *   Cada canal tem sua própria pasta de transcrições (catalogo/analisados locais).
+ *   LÃª manifests/canais-vigilados.json: [{ handle, nome, pasta, idiomas, keywords }]
+ *   Cada canal tem sua prÃ³pria pasta de transcriÃ§Ãµes (catalogo/analisados locais).
  */
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { basename, dirname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
-// Raiz do repo (sobrescrevível via YT_REPO_ROOT só para testes com fixtures git).
+// Raiz do repo (sobrescrevÃ­vel via YT_REPO_ROOT sÃ³ para testes com fixtures git).
 const REPO_ROOT = process.env.YT_REPO_ROOT || join(SCRIPT_DIR, '..');
-// Estado compartilhado entre PCs (só ids/datas — NUNCA transcrições).
+// Estado compartilhado entre PCs (sÃ³ ids/datas â€” NUNCA transcriÃ§Ãµes).
 const CONTROL_STATE_FILE = join(REPO_ROOT, 'state', 'yt-control.json');
-// Marca da última vez que o usuário pediu coleta (janela "desde o último
-// pedido" — sem data fixa; `solicitar` atualiza, `--since-request` consome).
+// Marca da Ãºltima vez que o usuÃ¡rio pediu coleta (janela "desde o Ãºltimo
+// pedido" â€” sem data fixa; `solicitar` atualiza, `--since-request` consome).
 const REQUEST_FILE = join(REPO_ROOT, 'state', 'ultima-solicitacao.json');
-// Arquivos cuja última mudança commitada indica "última coleta publicada".
+// Arquivos cuja Ãºltima mudanÃ§a commitada indica "Ãºltima coleta publicada".
 const COLETA_TRACKED_FILES = [
   'docs/maestros/OPORTUNIDADES.md',
   'manifests/canais-vigilados.json',
@@ -128,14 +128,14 @@ function defaultCtx() {
   });
 }
 
-/** Lê manifests/canais-vigilados.json e devolve ctxs por canal.
- *  Falha ALTO se a pasta de algum canal estiver ausente ou não for absoluta —
- *  paths relativos resolvem contra o cwd e espalham catálogos/transcrições
+/** LÃª manifests/canais-vigilados.json e devolve ctxs por canal.
+ *  Falha ALTO se a pasta de algum canal estiver ausente ou nÃ£o for absoluta â€”
+ *  paths relativos resolvem contra o cwd e espalham catÃ¡logos/transcriÃ§Ãµes
  *  pela raiz do projeto (bug real de 2026-08-20). */
 function allChannelCtxs() {
   const cfg = readJson(CHANNELS_CONFIG, null);
   if (!cfg || !Array.isArray(cfg.canais) || cfg.canais.length === 0) {
-    process.stderr.write(`Config multi-canal ausente/inválida: ${CHANNELS_CONFIG}\n`);
+    process.stderr.write(`Config multi-canal ausente/invÃ¡lida: ${CHANNELS_CONFIG}\n`);
     process.exit(1);
   }
   const local = readJson(LOCAL_CHANNELS_CONFIG, null);
@@ -149,7 +149,7 @@ function allChannelCtxs() {
       continue;
     }
     if (!isAbsolute(pasta)) {
-      problemas.push(`${c.handle}: pasta "${pasta}" não é caminho absoluto`);
+      problemas.push(`${c.handle}: pasta "${pasta}" nÃ£o Ã© caminho absoluto`);
       continue;
     }
     ctxs.push({
@@ -160,7 +160,7 @@ function allChannelCtxs() {
   }
   if (problemas.length > 0) {
     process.stderr.write(
-      `Config de canais inválida (${problemas.length} problema(s)) — corrija antes de coletar:\n` +
+      `Config de canais invÃ¡lida (${problemas.length} problema(s)) â€” corrija antes de coletar:\n` +
         problemas.map((p) => `  - ${p}`).join('\n') +
         '\n',
     );
@@ -186,7 +186,7 @@ function catalog(ctx) {
     });
   const data = { generatedAt: new Date().toISOString(), channel: ctx.channel, videos };
   writeJson(ctx.catalogFile, data);
-  console.log(`[${ctx.label}] Catálogo: ${videos.length} vídeos em ${ctx.catalogFile}`);
+  console.log(`[${ctx.label}] CatÃ¡logo: ${videos.length} vÃ­deos em ${ctx.catalogFile}`);
   return data;
 }
 
@@ -256,7 +256,7 @@ function dedupVtt(vttPath) {
     if (!line) continue;
     if (/^\d{1,2}:\d{2}:\d{2}/.test(line)) continue; // linha de timestamp
     if (/^(WEBVTT|Kind:|Language:)/i.test(line)) continue;
-    if (/^\d+$/.test(line)) continue; // número de cue
+    if (/^\d+$/.test(line)) continue; // nÃºmero de cue
     if (line === prev) continue; // duplicata consecutiva
     prev = line;
     clean.push(line);
@@ -307,43 +307,70 @@ function download(ctx, ids) {
     process.exit(1);
   }
   ensureDir(ctx.rawDir);
-  // Modo low-burn (2026-10-10): o CDN de legendas do YouTube throttla o IP
-  // com 429; cada tentativa extra e queima de cota com ~0 chance de sucesso.
-  // 1 tentativa por faixa de langs, player client android (passa onde o web
-  // client toma 429), sleeps maiores. Overrides via env (sem hardcoded):
-  // YT_ATTEMPTS (default 1), YT_PLAYER_CLIENT (default android),
-  // YT_SLEEP_REQ (default 3), YT_SLEEP_SUB (default 15), YT_RETRIES (default 2).
+  // Modo low-burn (2026-10-10): o CDN de legendas do YouTube throttla por IP e
+  // por client com 429; cada tentativa extra e queima de cota. Overrides via env
+  // (sem hardcoded): YT_ATTEMPTS (default 1), YT_PLAYER_CLIENT (default
+  // "web_embedded,android"), YT_SLEEP_REQ (default 3), YT_SLEEP_SUB (default 15),
+  // YT_RETRIES (default 2).
+  //
+  // 2026-10-31: `android` passou a tomar 429 em quase tudo; `web_embedded` +
+  // `--ignore-no-formats-error` entrega o VTT e depois morre em "Requested
+  // format is not available" â€” irrelevante, nao queremos o video. Por isso o
+  // sucesso e medido pelo .vtt novo no disco, NAO pelo exit code (yt-dlp sai 1
+  // quando uma das langs falha ou quando nao acha formato).
   const attempts = Math.max(1, parseInt(process.env.YT_ATTEMPTS || '1', 10) || 1);
-  const playerClient = process.env.YT_PLAYER_CLIENT || 'android';
+  const clients = (process.env.YT_PLAYER_CLIENT || 'web_embedded,android')
+    .split(',')
+    .map((c) => c.trim())
+    .filter(Boolean);
   const sleepReq = process.env.YT_SLEEP_REQ || '3';
   const sleepSub = process.env.YT_SLEEP_SUB || '15';
   const retries = process.env.YT_RETRIES || '2';
+  const usePyBridge = (process.env.YT_DOWNLOADER || 'auto') !== 'yt-dlp';
+  const pyBridge = join(REPO_ROOT, 'scripts', 'yt-subs.py');
   for (const id of ids) {
     let ok = false;
-    for (const langs of [['pt', 'pt-PT', 'en'], ['en'], ['pt']]) {
-      for (let attempt = 0; attempt < attempts && !ok; attempt++) {
-        if (attempt > 0) setTimeoutSync(5000 * attempt);
-        console.log(`[${ctx.label}] baixando subs de ${id} (${langs.join(',')}) tentativa ${attempt + 1}/${attempts}...`);
-        const r = spawnSync('yt-dlp', [
-          '--skip-download',
-          '--write-auto-sub',
-          '--write-subs',
-          '--sub-langs', langs.join(','),
-          '--sub-format', 'vtt',
-          '--no-playlist',
-          '--no-warnings',
-          '--sleep-requests', sleepReq,
-          '--sleep-subtitles', sleepSub,
-          '--retries', retries,
-          '--extractor-args', `youtube:player_client=${playerClient}`,
-          '-o', `${ctx.rawDir.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
-          `https://www.youtube.com/watch?v=${id}`,
-        ], { encoding: 'utf8' });
-        if (r.status === 0) {
-          ok = true;
-          break;
+    // Caminho primario: ponte Python (youtube-transcript-api). Ver o cabecalho de
+    // scripts/yt-subs.py para o motivo. Desliga com YT_DOWNLOADER=yt-dlp.
+    if (usePyBridge && existsSync(pyBridge)) {
+      const py = spawnSync('python', [pyBridge, ctx.rawDir, id, 'pt,pt-PT,en'], { encoding: 'utf8' });
+      if (py.status === 0) {
+        ok = true;
+      } else {
+        const reason = (py.stderr || py.stdout || '').trim().split('\n').filter(Boolean).pop() || `exit ${py.status}`;
+        process.stderr.write(`  ponte python: ${reason}\n`);
+      }
+    }
+    for (const playerClient of clients) {
+      if (ok) break;
+      for (const langs of [['pt', 'pt-PT', 'en'], ['en'], ['pt']]) {
+        for (let attempt = 0; attempt < attempts && !ok; attempt++) {
+          if (attempt > 0) setTimeoutSync(5000 * attempt);
+          console.log(`[${ctx.label}] baixando subs de ${id} (${langs.join(',')} @ ${playerClient}) tentativa ${attempt + 1}/${attempts}...`);
+          const startedAt = Date.now() - 2000;
+          const r = spawnSync('yt-dlp', [
+            '--skip-download',
+            '--ignore-no-formats-error',
+            '--write-auto-sub',
+            '--write-subs',
+            '--sub-langs', langs.join(','),
+            '--sub-format', 'vtt',
+            '--no-playlist',
+            '--no-warnings',
+            '--sleep-requests', sleepReq,
+            '--sleep-subtitles', sleepSub,
+            '--retries', retries,
+            '--extractor-args', `youtube:player_client=${playerClient}`,
+            '-o', `${ctx.rawDir.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
+            `https://www.youtube.com/watch?v=${id}`,
+          ], { encoding: 'utf8' });
+          if (hasFreshVtt(ctx, id, startedAt)) {
+            ok = true;
+            break;
+          }
+          process.stderr.write(`  erro (${r.status}): ${(r.stderr || r.stdout || '').split('\n')[0]}\n`);
         }
-        process.stderr.write(`  erro (${r.status}): ${(r.stderr || r.stdout || '').split('\n')[0]}\n`);
+        if (ok) break;
       }
       if (ok) break;
     }
@@ -359,13 +386,29 @@ function setTimeoutSync(ms) {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
 
-/** Roda git sempre na raiz do repo. Nunca joga exceção. */
+/**
+ * Ha .vtt novo para um video desde `sinceMs`?
+ * yt-dlp sai 1 mesmo entregando a legenda (format indisponivel / lang faltando),
+ * entao o exit code nao serve como sinal. Mtime tambem cobre sobrescrita.
+ */
+function hasFreshVtt(ctx, id, sinceMs = 0) {
+  try {
+    return readdirSync(ctx.rawDir).some((f) => {
+      if (!f.startsWith(id + '.') || !/\.vtt$/i.test(f)) return false;
+      return statSync(join(ctx.rawDir, f)).mtimeMs >= sinceMs;
+    });
+  } catch {
+    return false;
+  }
+}
+
+/** Roda git sempre na raiz do repo. Nunca joga exceÃ§Ã£o. */
 function git(args, { timeout = 30000 } = {}) {
   try {
     // GIT_CEILING_DIRECTORIES impede o git de "subir" para um repo pai quando
-    // REPO_ROOT não é um repo (evita operar no repo errado em silêncio).
-    // (git pode ecoar o próprio argumento no stdout em caso de erro — por
-    // isso os chamadores só usam `stdout` quando `status === 0`.)
+    // REPO_ROOT nÃ£o Ã© um repo (evita operar no repo errado em silÃªncio).
+    // (git pode ecoar o prÃ³prio argumento no stdout em caso de erro â€” por
+    // isso os chamadores sÃ³ usam `stdout` quando `status === 0`.)
     const r = spawnSync('git', args, {
       encoding: 'utf8',
       cwd: REPO_ROOT,
@@ -383,7 +426,7 @@ function git(args, { timeout = 30000 } = {}) {
   }
 }
 
-/** stdout de um git só vale quando o exit é 0. */
+/** stdout de um git sÃ³ vale quando o exit Ã© 0. */
 function gitOut(args, opts) {
   const r = git(args, opts);
   return r.status === 0 ? r.stdout : null;
@@ -406,9 +449,9 @@ function repoBranch() {
 }
 
 /**
- * sync-check — trava pré-coleta para uso em 2+ PCs.
- * Exit 0 = em dia (pode coletar). Exit 1 = BLOQUEADO (atrás/sujo/sem push).
- * Exit 2 = remoto inverificável (offline/erro), salvo --allow-stale (exit 0).
+ * sync-check â€” trava prÃ©-coleta para uso em 2+ PCs.
+ * Exit 0 = em dia (pode coletar). Exit 1 = BLOQUEADO (atrÃ¡s/sujo/sem push).
+ * Exit 2 = remoto inverificÃ¡vel (offline/erro), salvo --allow-stale (exit 0).
  */
 function syncCheck() {
   const asJson = hasFlag('--json');
@@ -422,17 +465,17 @@ function syncCheck() {
     } else {
       console.log(`[sync-check] branch: ${obj.branch}`);
       console.log(`[sync-check] local:  ${obj.localSha || '(sem commit?)'}`);
-      console.log(`[sync-check] remoto: ${obj.remoteSha || '(inverificável)'} (${remoteRef}${obj.fetched ? ', fetch agora' : ', sem fetch'})`);
-      console.log(`[sync-check] atrás: ${obj.behind} | à frente (sem push): ${obj.ahead} | worktree suja: ${obj.dirty ? `SIM (${obj.dirtyFiles.length} arquivo(s))` : 'não'}`);
+      console.log(`[sync-check] remoto: ${obj.remoteSha || '(inverificÃ¡vel)'} (${remoteRef}${obj.fetched ? ', fetch agora' : ', sem fetch'})`);
+      console.log(`[sync-check] atrÃ¡s: ${obj.behind} | Ã  frente (sem push): ${obj.ahead} | worktree suja: ${obj.dirty ? `SIM (${obj.dirtyFiles.length} arquivo(s))` : 'nÃ£o'}`);
       if (obj.lastColetaCommit && obj.lastColetaCommit.sha) {
-        console.log(`[sync-check] última coleta publicada: ${obj.lastColetaCommit.sha.slice(0, 7)} (${obj.lastColetaCommit.date}) ${obj.lastColetaCommit.subject}`);
+        console.log(`[sync-check] Ãºltima coleta publicada: ${obj.lastColetaCommit.sha.slice(0, 7)} (${obj.lastColetaCommit.date}) ${obj.lastColetaCommit.subject}`);
       } else {
-        console.log('[sync-check] última coleta publicada: (nenhum commit nos arquivos de coleta)');
+        console.log('[sync-check] Ãºltima coleta publicada: (nenhum commit nos arquivos de coleta)');
       }
       if (obj.controlState) {
-        console.log(`[sync-check] state/yt-control.json: ${obj.controlState.canais} canal(is), última coleta ${obj.controlState.ultimaColeta || '?'}`);
+        console.log(`[sync-check] state/yt-control.json: ${obj.controlState.canais} canal(is), Ãºltima coleta ${obj.controlState.ultimaColeta || '?'}`);
       } else {
-        console.log('[sync-check] state/yt-control.json: ausente — rode `mark` + commit + push após a próxima coleta');
+        console.log('[sync-check] state/yt-control.json: ausente â€” rode `mark` + commit + push apÃ³s a prÃ³xima coleta');
       }
       if (obj.dirty) {
         for (const f of obj.dirtyFiles.slice(0, 10)) console.log(`[sync-check]   sujo: ${f}`);
@@ -443,7 +486,7 @@ function syncCheck() {
 
   const top = git(['rev-parse', '--show-toplevel']);
   if (top.status !== 0) {
-    const obj = { ok: false, exit: 2, branch, message: 'BLOQUEADO: fora de um repo git — verifique YT_REPO_ROOT.' };
+    const obj = { ok: false, exit: 2, branch, message: 'BLOQUEADO: fora de um repo git â€” verifique YT_REPO_ROOT.' };
     out(obj);
     process.exit(allowStale ? 0 : 2);
   }
@@ -452,7 +495,7 @@ function syncCheck() {
   const statusOut = gitOut(['status', '--porcelain']);
   const dirtyFiles = (statusOut == null ? null : statusOut.split(/\r?\n/).map((l) => l.trim()).filter(Boolean));
   if (dirtyFiles == null) {
-    const obj = { ok: false, exit: 2, branch, message: 'INVERIFICÁVEL: não foi possível ler a worktree (repo corrompido?).' };
+    const obj = { ok: false, exit: 2, branch, message: 'INVERIFICÃVEL: nÃ£o foi possÃ­vel ler a worktree (repo corrompido?).' };
     out(obj);
     process.exit(allowStale ? 0 : 2);
   }
@@ -480,7 +523,7 @@ function syncCheck() {
       ok: false, exit: 2, branch, localSha, remoteSha: null, fetched,
       behind: 0, ahead: 0, dirty, dirtyFiles,
       lastColetaCommit: lastColetaCommit(), controlState: controlSummary(),
-      message: 'INVERIFICÁVEL: sem acesso ao remoto (offline?). Re-rode com rede ou use --allow-stale assumindo o risco de duplicar coleta.',
+      message: 'INVERIFICÃVEL: sem acesso ao remoto (offline?). Re-rode com rede ou use --allow-stale assumindo o risco de duplicar coleta.',
     };
     out(obj);
     process.exit(allowStale ? 0 : 2);
@@ -493,16 +536,16 @@ function syncCheck() {
   const sameCommit = !!localSha && localSha === remoteSha;
 
   const problems = [];
-  if (!sameCommit && behind > 0) problems.push(`repo ${behind} commit(s) ATRÁS do GitHub — rode: git pull --rebase`);
-  if (dirty) problems.push(`worktree com ${dirtyFiles.length} arquivo(s) modificado(s) — commit/stash ANTES do pull`);
-  if (ahead > 0) problems.push(`${ahead} commit(s) local(is) SEM PUSH — rode: git push (o outro PC não vê esses commits)`);
+  if (!sameCommit && behind > 0) problems.push(`repo ${behind} commit(s) ATRÃS do GitHub â€” rode: git pull --rebase`);
+  if (dirty) problems.push(`worktree com ${dirtyFiles.length} arquivo(s) modificado(s) â€” commit/stash ANTES do pull`);
+  if (ahead > 0) problems.push(`${ahead} commit(s) local(is) SEM PUSH â€” rode: git push (o outro PC nÃ£o vÃª esses commits)`);
 
   const obj = {
     ok: problems.length === 0, exit: 0, branch,
     localSha, remoteSha, fetched, behind, ahead, dirty, dirtyFiles,
     lastColetaCommit: lastColetaCommit(), controlState: controlSummary(),
     message: problems.length === 0
-      ? 'EM DIA — pode coletar.'
+      ? 'EM DIA â€” pode coletar.'
       : `BLOQUEADO: ${problems.join(' | ')}`,
   };
   if (problems.length > 0) obj.exit = 1;
@@ -514,7 +557,7 @@ function syncCheck() {
   process.exit(obj.exit);
 }
 
-/** Último commit que tocou os arquivos de coleta (o que o outro PC publicou). */
+/** Ãšltimo commit que tocou os arquivos de coleta (o que o outro PC publicou). */
 function lastColetaCommit() {
   const r = git(['log', '-1', '--format=%H|%ci|%s', '--', ...COLETA_TRACKED_FILES]);
   if (r.status !== 0 || !r.stdout) return null;
@@ -536,7 +579,7 @@ function controlSummary() {
   return { canais: keys.length, ultimaColeta: ultima };
 }
 
-/** Atualiza o state compartilhado (repo) a cada `mark` — commit + push à parte. */
+/** Atualiza o state compartilhado (repo) a cada `mark` â€” commit + push Ã  parte. */
 function updateControlState(ctx, ids) {
   const analyzed = readJson(ctx.analyzedFile, []);
   const last = readJson(ctx.lastColetaFile, null);
@@ -544,17 +587,17 @@ function updateControlState(ctx, ids) {
   if (!state || typeof state !== 'object' || Array.isArray(state)) return;
   if (!state.canais || typeof state.canais !== 'object') state.canais = {};
   if (!state._meta) {
-    state._meta = { nota: 'Fonte da verdade compartilhada entre PCs (só ids/datas — nunca transcrições). Commit + push após cada coleta.' };
+    state._meta = { nota: 'Fonte da verdade compartilhada entre PCs (sÃ³ ids/datas â€” nunca transcriÃ§Ãµes). Commit + push apÃ³s cada coleta.' };
   }
   const key = ctx.label || 'default';
   const prev = (state.canais && state.canais[key]) || {};
   const prevCount = Number(prev.analisados) || 0;
   const localCount = Array.isArray(analyzed) ? analyzed.length : 0;
-  // Multi-PC: nunca regredir a contagem compartilhada — outro PC pode ter
+  // Multi-PC: nunca regredir a contagem compartilhada â€” outro PC pode ter
   // marcas que esta estacao ainda nao tem no ANALISADOS.json local.
   const count = Math.max(prevCount, localCount);
   if (localCount < prevCount) {
-    console.log(`[${ctx.label}] mantido analisados=${prevCount} (local tem ${localCount} — marcas de outro PC?)`);
+    console.log(`[${ctx.label}] mantido analisados=${prevCount} (local tem ${localCount} â€” marcas de outro PC?)`);
   }
   const computedDate = (last && last.ultimaColeta) || todayStr();
   const ultimaColeta = [prev.ultimaColeta, computedDate].filter(Boolean).sort().pop();
@@ -565,7 +608,7 @@ function updateControlState(ctx, ids) {
     atualizadoEm: new Date().toISOString(),
   };
   writeJson(CONTROL_STATE_FILE, state);
-  console.log(`[${ctx.label}] Estado compartilhado atualizado: state/yt-control.json (faça commit + push para o outro PC enxergar)`);
+  console.log(`[${ctx.label}] Estado compartilhado atualizado: state/yt-control.json (faÃ§a commit + push para o outro PC enxergar)`);
 }
 
 /** Chave do canal no state compartilhado (label --canal ou handle da URL). */
@@ -576,8 +619,8 @@ function sharedKeyFor(ctx) {
 }
 
 /**
- * reconcile — acusa divergência entre marcas locais e estado compartilhado.
- * Exit 0 (OK, pode marcar) / 1 (DIVERGENTE, não rode `mark` até reconciliar).
+ * reconcile â€” acusa divergÃªncia entre marcas locais e estado compartilhado.
+ * Exit 0 (OK, pode marcar) / 1 (DIVERGENTE, nÃ£o rode `mark` atÃ© reconciliar).
  */
 function reconcile(ctx) {
   const key = sharedKeyFor(ctx);
@@ -589,20 +632,20 @@ function reconcile(ctx) {
   console.log(`[${ctx.label}] canal compartilhado: ${key}`);
   console.log(`[${ctx.label}] local: ${localIds.size} analisados, ultimaColeta=${(last && last.ultimaColeta) || '(nenhuma)'}`);
   if (!shared) {
-    console.log(`[${ctx.label}] sem entrada compartilhada — OK para primeira coleta (mark cria)`);
+    console.log(`[${ctx.label}] sem entrada compartilhada â€” OK para primeira coleta (mark cria)`);
     process.exit(0);
   }
   console.log(`[${ctx.label}] compartilhado: ${shared.analisados} analisados, ultimaColeta=${shared.ultimaColeta}, marcador=${shared.ultimoVideoId}`);
   let divergente = false;
   if (localIds.size < (Number(shared.analisados) || 0)) {
-    console.log(`[${ctx.label}] DIVERGENTE: compartilhado tem ${shared.analisados}, local tem ${localIds.size} — outro PC marcou sem voce (pull + confira antes de mark)`);
+    console.log(`[${ctx.label}] DIVERGENTE: compartilhado tem ${shared.analisados}, local tem ${localIds.size} â€” outro PC marcou sem voce (pull + confira antes de mark)`);
     divergente = true;
   }
   if (shared.ultimoVideoId && !localIds.has(shared.ultimoVideoId)) {
     console.log(`[${ctx.label}] AVISO: marcador ${shared.ultimoVideoId} fora do seu ANALISADOS.json local`);
     divergente = true;
   }
-  if (!divergente) console.log(`[${ctx.label}] OK — local e compartilhado convergem`);
+  if (!divergente) console.log(`[${ctx.label}] OK â€” local e compartilhado convergem`);
   process.exit(divergente ? 1 : 0);
 }
 
@@ -626,27 +669,27 @@ function updateLastColeta(ctx) {
   }
   const date = maxDate.length === 8 ? `${maxDate.slice(0, 4)}-${maxDate.slice(4, 6)}-${maxDate.slice(6, 8)}` : todayStr();
   writeJson(ctx.lastColetaFile, { ultimaColeta: date, atualizadoEm: new Date().toISOString() });
-  console.log(`[${ctx.label}] Última coleta registrada: ${date}`);
+  console.log(`[${ctx.label}] Ãšltima coleta registrada: ${date}`);
 }
 
 function todayStr() {
   return new Date().toISOString().slice(0, 10);
 }
 
-/** Janela padrão quando ainda não há solicitação registrada: hoje − 7 dias. */
+/** Janela padrÃ£o quando ainda nÃ£o hÃ¡ solicitaÃ§Ã£o registrada: hoje âˆ’ 7 dias. */
 function weekAgoStr() {
   const t = new Date();
   t.setUTCDate(t.getUTCDate() - 7);
   return t.toISOString().slice(0, 10);
 }
 
-/** Data da última solicitação de coleta (ou null na primeira vez). */
+/** Data da Ãºltima solicitaÃ§Ã£o de coleta (ou null na primeira vez). */
 function readRequestDate() {
   const d = readJson(REQUEST_FILE, null);
   return (d && d.data) || null;
 }
 
-/** Início da janela da coleta corrente = marca ANTERIOR (não a de hoje). */
+/** InÃ­cio da janela da coleta corrente = marca ANTERIOR (nÃ£o a de hoje). */
 function readRequestDesde() {
   const d = readJson(REQUEST_FILE, null);
   if (!d) return weekAgoStr();
@@ -654,9 +697,9 @@ function readRequestDesde() {
 }
 
 /**
- * solicitar — registra "última vez que pediu coleta" = hoje.
- * Uso: rode no INÍCIO de cada coleta; `diff-all --since-request` cobre
- * exatamente desde o pedido anterior (sem buraco nem repetição).
+ * solicitar â€” registra "Ãºltima vez que pediu coleta" = hoje.
+ * Uso: rode no INÃCIO de cada coleta; `diff-all --since-request` cobre
+ * exatamente desde o pedido anterior (sem buraco nem repetiÃ§Ã£o).
  */
 function registrarSolicitacao() {
   const anterior = readRequestDate();
@@ -666,9 +709,9 @@ function registrarSolicitacao() {
     data: hoje,
     registradoEm: new Date().toISOString(),
     janelaAnterior: desde,
-    nota: 'Última vez que o usuário pediu coleta. Commit + push junto da coleta.',
+    nota: 'Ãšltima vez que o usuÃ¡rio pediu coleta. Commit + push junto da coleta.',
   });
-  console.log(`[solicitar] Janela desta coleta: desde ${desde} até ${hoje}. Marca atualizada (commit + push junto).`);
+  console.log(`[solicitar] Janela desta coleta: desde ${desde} atÃ© ${hoje}. Marca atualizada (commit + push junto).`);
 }
 
 function readLastColeta(ctx) {
@@ -679,7 +722,7 @@ function readLastColeta(ctx) {
 
 function lastColeta(ctx) {
   const date = readLastColeta(ctx);
-  console.log(`[${ctx.label}] ${date || '(nunca coletado — use --since para a primeira coleta)'}`);
+  console.log(`[${ctx.label}] ${date || '(nunca coletado â€” use --since para a primeira coleta)'}`);
 }
 
 function analyzed(ctx) {
@@ -699,20 +742,20 @@ function sinceArg(ctx) {
     : undefined;
 }
 
-/** Resolve o canal-alvo de --canal <handle> (senão o canal padrão/env). */
+/** Resolve o canal-alvo de --canal <handle> (senÃ£o o canal padrÃ£o/env). */
 function targetCtx() {
   const i = process.argv.indexOf('--canal');
   if (i === -1) return defaultCtx();
   const handle = String(process.argv[i + 1] || '').replace(/^@/, '').toLowerCase();
   const ctx = allChannelCtxs().find((c) => c.label.replace(/^@/, '').toLowerCase() === handle || c.nome.toLowerCase().includes(handle));
   if (!ctx) {
-    process.stderr.write(`Canal não encontrado na config: ${handle}\n`);
+    process.stderr.write(`Canal nÃ£o encontrado na config: ${handle}\n`);
     process.exit(1);
   }
   return ctx;
 }
 
-/** Args posicionais após o comando, removendo --canal <handle>, --branch <nome> e outras flags. */
+/** Args posicionais apÃ³s o comando, removendo --canal <handle>, --branch <nome> e outras flags. */
 function posArgs() {
   const rest = process.argv.slice(3);
   for (const flag of ['--canal', '--branch']) {
