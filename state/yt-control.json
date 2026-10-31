@@ -5,10 +5,31 @@
   },
   "canais": {
     "@maestrosdaia": {
-      "ultimaColeta": "2026-09-20",
+      "ultimaColeta": "2026-10-17",
       "analisados": 88,
-      "ultimoVideoId": "SDeQU0RDjgU",
-      "atualizadoEm": "2026-09-20T14:28:38.497Z"
+      "ultimoVideoId": "8X0LNJE5r_I",
+      "atualizadoEm": "2026-10-31T19:37:05.968Z",
+      "pendentes": [
+        "bKI-YvBuu2Y",
+        "0PjtV7KtlB4",
+        "Go5V8n021sw",
+        "DL8Op83cqCE",
+        "JF1jgRuFOMQ",
+        "___J8OOGAh8",
+        "02ebTWFXqKE",
+        "W_jYe1xNdSs",
+        "LPCXbBrn4JM",
+        "sFgPZZXwMMk",
+        "k-ktzERKmw8",
+        "_hO8HbdRO28",
+        "GmDFULXLUB4",
+        "x67v6Ftah6I",
+        "2Ui4Qiuo-tQ",
+        "VWTMxPP-TuQ",
+        "Kqj7RzukaeE",
+        "gXeLOrH_Zsg"
+      ],
+      "nota": "Marca recuada de 2026-10-26 para 2026-10-17: 18 videos ainda sem transcricao (429 do YouTube). 3 analisados nesta coleta."
     },
     "@FullCycle": {
       "ultimaColeta": "2026-09-20",

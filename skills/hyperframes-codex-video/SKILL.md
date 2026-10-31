@@ -3,6 +3,9 @@ name: hyperframes-codex-video
 description: "Use when editing video with an AI coding agent (Codex, Claude Code) through Hyperframes HTML-to-video: transcript-first beats, HTML/CSS/JS motion graphics, Studio preview, screenshot verify loop. Triggers on \"hyperframes\", \"codex edit video\", \"html to video\", \"motion graphics with ai\", \"transcript beats\". Non-triggers: React-based programmatic video (use remotion-video-creation); raw silence-cut only (use video-cut-pipeline). Outcome: a rendered MP4 plus a reusable skill that repeats the style."
 metadata:
   origin: ECC
+  video_sources:
+    - "o3IEkKXXXvo - Nate Herk (Hyperframes base)"
+    - "8X0LNJE5r_I - Claude Now Makes MOTION GRAPHICS On Its Own (@maestrosdaia, 2026-10-26)"
 ---
 
 # Hyperframes Codex Video
@@ -60,12 +63,65 @@ deterministic MP4 (same input = identical output). Source: Nate Herk
    for small manual fixes (text size, position) instead of re-prompting
    a full render on long videos.
 
-## Motion Library (Batch 17d, #65)
+## Motion Library (Batch 17d, #65 / video 8X0LNJE5r_I, 2026-10-26)
 
 AI-slop has a look: same motions, same covers, zero identity. Keep a
 library of signature motions (complex, on-brand, word-synced) and
 generate one custom image per motion for what is being said. Reuse the
 library across videos; never ship the default pattern.
+
+### Economia: motion vs. IA generativa
+
+- Video generativo cobra por segundo (US$ 2-10 por 15 s, conforme o
+  modelo); depois de baixada, a biblioteca de motion e local,
+  deterministica e gratuita.
+- Para B-roll, lower third, terminal, ranking, demo de produto e slide
+  animado, o template costuma ser mais didatico e engajar mais do que a
+  imagem ultrarrealista — que ainda carrega o vies "e IA, logo vale
+  menos" (caso Monet: quadro real postado como "gerado por IA" e criticado).
+- Nao e ou-um-ou-outro: IA generativa onde so ela resolve (fala, cena
+  impossivel), motion para tudo que precisa de precisao e repeticao.
+
+### O que entra na biblioteca (15 repos open source no video)
+
+Categorias vistas na selecao (a lista completa ficou no material pago;
+10 repos nao foram cobertos):
+
+- demos de produto/app, icones e rankings com estetica minimalista "Apple";
+- recorte de papel / paper-cut para contar historia sem realismo;
+- **Animate** e templates de motion mais padrao;
+- VSL/ad com brilho e efeito chamativo (1.000+ estrelas);
+- repo que **transforma HTML em video** (citado como "HTML Video Nexo"):
+  ponte natural com este skill (HTML -> MP4);
+- template de terminal/demo do proprio repositorio do **Hyperframes**
+  (HeyGen), otimo para video de ferramenta.
+
+Quebrar cada repo em elementos pequenos (avatares, icones, cards) torna o
+template reutilizavel em contextos diferentes — e voce define a linha
+estetica da casa em vez de aceitar o default.
+
+### Workflow do agente de motion
+
+1. Importe todos os templates para **um agente dedicado a motion** (um
+   basta para comecar; varias bibliotecas por projeto e o passo seguinte).
+2. Peca uma versao em video de todos os assets (ou dos principais).
+3. Aprove/reprove no **AR-board** (`approval-rejection-board`): aprovado =
+   o agente mantem o template na biblioteca; reprovado = remove do repo.
+   O motivo do R vira criterio de selecao.
+4. Com algumas dezenas de templates aprovados, peca os primeiros videos
+   usando os motions "nos lugares mais pertinentes".
+
+Referencia do video: um video montado assim passou de 25 mil views com
+zero trabalho humano. O custo real esta no refinamento (gerar 100-1000
+motions e filtrar "muito simples / muito infantil"), nao no render.
+
+### Separacao de agentes
+
+O melhor arranjo testado: **um agente so testa os modelos, outro so grava
+os testes, outro finaliza o video**. O agente de motion recebe o material,
+elabora o roteiro, encaixa numa linha narrativa e aplica os motions por
+cima. Ainda e experimental — a divisao reduz o custo de uma rodada
+monolitica e facilita o replay de um passo isolado.
 
 ## Skill-ify (the compounding step)
 

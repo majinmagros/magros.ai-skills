@@ -9,6 +9,7 @@ metadata:
     - https://code.claude.com/docs/en/plugins/mods/events
     - https://claude.dev/blog/getting-started-with-claude-code-mods/
   video_source: "yUuFvL1lK4k - Mods in Claude Code (official Claude channel)"
+  video_source_update: "4Jp0CtfXjz0 - Stop Using Claude Code Without These 14 Mods (@maestrosdaia, 2026-10-26)"
 ---
 
 # Skill: claude-code-mods — Middleware Dentro do Claude Code
@@ -107,6 +108,73 @@ na sessao atual. Compartilhar: mesmo fluxo de plugin (marketplace repo).
    comuns de rodarem — entenda quem e o ultimo a decidir.
 4. Para debugar: `/plugin` (aba Installed) mostra os mods; `--safe-mode`
    desliga tudo por uma sessao.
+
+## Criacao Rapida (fluxo do video, 2026-10-26)
+
+1. `claude update` — mods exigem **2.1.287+** (o video roda em 2.1.305).
+2. Descreva o mod em linguagem natural ("cria um mod que mostra X acima da
+   caixa de mensagem"), no app desktop ou no VS Code.
+3. O Claude Code ja traz a skill embutida **`plugin authoring`**, que sabe
+   montar `plugin.json` + `hooks.json` + modulo. Aceite o hot reload quando
+   ele oferecer: o mod aparece na sessao atual assim que fica pronto.
+4. Ajuste por conversa ("muda a cor, move para a direita") — nao precisa
+   editar o codigo na mao.
+5. **Mod criado numa sessao e temporario por padrao.** Se gostou, peca
+   explicitamente para salvar como plugin; so assim ele carrega em toda
+   sessao. Revisar antes de instalar faz parte do passo.
+6. Ligar/desligar sem desinstalar: `/plugin enable <nome>`.
+
+## Catalogo: 14 Mods que Valem a Pena
+
+Oficiais (Anthropic):
+
+| Mod | O que faz |
+|---|---|
+| **Token Weather** | "Previsao do tempo" da janela de contexto acima da caixa de mensagem: quanto da memoria da conversa ja foi ocupado. |
+| **Blast Radius** | Intercepta operacao arriscada (apagar arquivo/pasta) e mostra exatamente o que sera deletado, com botoes continuar/cancelar. |
+| **Replay Theater** | Comando `/replay`: reve cada edicao da rodada, arquivo por arquivo, antes/depois — serve para revisao de texto tambem. |
+| **You Should Know** | Um segundo agente le a resposta e puxa para cima o ponto que voce nao pode esquecer (ex.: custo escondido). Gasta token extra. |
+| **Next Steps** | Ao fim de cada rodada sugere 3 proximos passos (corrigir bug, juntar mudancas, rodar teste) ou descartar. |
+
+Comunidade:
+
+| Mod | O que faz |
+|---|---|
+| **Progresso + subagentes** | Quanto falta para o Code terminar; com subagentes, barra lateral por ajudante (modelo, andamento, custo) — da para dar mascote. |
+| **Temas visuais** | Troca cores/icones sem mexer no fluxo (Dracula, Tokyo Night); aceita a paleta da sua marca. O mais seguro para comecar. |
+| **Painel de arquivos** | Arquivo em edicao brilha, fica verde quando salvo; util ate em pasta de documentos (imposto de renda). |
+| **Cronometro de cache** | Avisa 5 min antes do cache esfriar e estima o custo da proxima mensagem; opcao de mensagem minima para manter quente ou passar a sessao para conversa nova. |
+| **Modo gravacao** | Troca dados sensiveis por tags na tela; o modelo continua trabalhando com o dado real, so a gravacao fica protegida. |
+| **Painel do `/goal`** | Meta, tempo decorrido, lista de tarefas e % concluido; varias sessoes num lugar so. |
+| **Anti-colisao** | Antes de editar, checa se o arquivo mudou nos ultimos 30 min; pergunta continuar / copia de trabalho / cancelar. |
+| **Aprende com correcoes** | Quando voce corrige o Claude, um banner pergunta se salva como regra no `CLAUDE.md` ou na skill. |
+| **Navegador lateral** | Navegador real ao lado do chat para revisar a pagina criada ou PR do GitHub sem trocar de janela. |
+
+**Custo:** mod que chama modelo ou segundo agente (You Should Know) consome
+limite; mod so de codigo roda fora do modelo e **nao gasta token**. Os cinco
+mods sugeridos no video eram todos code-only. **Seguranca:** mod de terceiro
+roda com o mesmo acesso do Claude Code (arquivos, chaves, rede) — `claude
+plugin validate` + leitura das linhas `hooks:`/`calls:` antes de instalar.
+
+## Prompt: 5 Mods a Partir do Seu Historico
+
+O melhor ponto de partida quando voce nao sabe o que quer:
+
+```text
+Leia os meus históricos de sessão do Claude Code, os mais recentes que você
+conseguir acessar, identifique o que eu repito com mais frequência, quais
+tarefas faço toda semana, onde perco tempo e onde já tive erros caros.
+Com base nisso, sugira os cinco mods do Claude Code que mais me ajudariam a
+economizar dinheiro, andar mais rápido e me manter organizado.
+Para cada um: nome, o que ele mostra na tela, qual evento ele escuta, se
+gasta tokens ou é só código, e um prompt pronto para eu pedir a criação.
+Não crie nada ainda, só lista.
+```
+
+No exemplo do video, a leitura de ~70 sessoes em 50 dias (6 pastas) achou um
+loop repetido 22-23x ("abrir o ultimo teleprompter") em que uma sessao leu
+725 mil tokens de cache so para achar um arquivo. Escolha um mod da lista,
+peca para criar e, se aprovar, peca para salvar como plugin.
 
 ## Anti-Patterns
 
