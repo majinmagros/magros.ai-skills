@@ -79,6 +79,13 @@ Em 2026, a engenharia de IA substituiu o treino de modelos do zero (Machine Lear
 - **Cloud & Infraestrutura**: Deploy em nuvem (AWS, GCP, Azure ou VPS dedicada via Uncloud/Hostinger).
 - **Engenharia de Produção**: Rate limits, autenticação, logs e resiliência (fallback automático via gateway).
 
+## Ordem de prática: a escada de maturidade
+
+As 7 fases dizem **o quê** estudar; a escada diz **em que sequência** (skills → agentes →
+agendamento → loops/grafos → custo → orquestração → model-agnostic), com o sinal de que
+cada degrau chegou. Inclui o teste A/B que decide se um agente se paga.
+Detalhe em `references/escada-de-maturidade.md`.
+
 ## Nota: estagio virou junior, junior virou pleno (leva YouTube rodada 10)
 
 A barra subiu: vaga junior pede skill senior de verificacao ("sabe dizer se a IA fez ta certo?"). Para hiring-readiness verificavel (checklist de entrevista + 1 projeto real), ver junior-seniorizado-playbook. Este roadmap continua sendo a trilha de estudos; o playbook e a prova.

@@ -52,12 +52,14 @@ Não é gerador de imagem: é um pipeline editorial que só vira imagem no fim.
 
 Custo: modelo de imagem só na capa (CTA opcional); miolo em código = 0 créditos.
 Estilo 100% código existe, mas a capa decide o "parar ou passar" — é onde vale gastar.
+Com OpenArt via MCP, pedir estimativa de créditos e saldo **antes** de gerar.
 
 ## Arquivos de apoio
 
 - `references/metodo-completo.md` — prompts por etapa, campos de entrada, formato do catálogo de estilos, memória de temas, exportação.
 - `references/catalogo-estilos.md` — os 13 estilos observados nas referências e como numerar o seu.
 - `references/checklist-revisao.md` — checklist final antes de entregar/publicar.
+- `references/openart-mcp.md` — conectar OpenArt por MCP, Director Mode, custo em créditos e reaproveitamento de assets.
 
 ## Regras de operação
 
