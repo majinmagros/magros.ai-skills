@@ -80,4 +80,4 @@ Humano: keep 2, fix 1 → só aprovados vão ao polish (nada auto-publica)
 
 ## Convenção keyword-marcador (leva YouTube rodada 8)
 
-Marque cortes com palavra-chave FALADA no vídeo (ex.: diga a keyword em voz alta no ponto de corte). A keyword vira EDL: transcrição → timestamp da keyword → corte automático. 1 keyword por corte, sem exceção. Para funil completo (CTA + DM + multi-conta), orquestre com epurpose-shorts-dm-funnel; para embalagem, youtube-packaging.
+Marque cortes com palavra-chave FALADA no vídeo (ex.: diga a keyword em voz alta no ponto de corte). A keyword vira EDL: transcrição → timestamp da keyword → corte automático. 1 keyword por corte, sem exceção. Para funil completo (CTA + DM + multi-conta), orquestre com `repurpose-shorts-dm-funnel`; para canal inteiro em cadência, `youtube-channel-autopilot`; para embalagem, `youtube-packaging`.

@@ -1,6 +1,6 @@
 ---
 name: team-agent-orchestration
-description: "Use when run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs. Triggers on \"team-agent-orchestration\", \"team agent orchestration\", \"orchestration\"."
+description: "Use when run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs. Covers Paperclip as the fast self-hosted entry point. Triggers on \"team-agent-orchestration\", \"team agent orchestration\", \"orchestration\", \"Paperclip\", \"org chart de agentes\", \"conselho de modelos\"."
 metadata:
   origin: ECC
 ---
@@ -63,3 +63,27 @@ Each card should fit this schema:
 ## Team-Based Orchestration Flow
 
 1. **Shape the board**: convert fuzzy ambition into work items with owners and merge gates.
+2. **Assign owners**: one accountable agent per card; never two agents on the same files.
+3. **Isolate**: branch or worktree per card, plus an explicit forbidden-areas list.
+4. **Run and hand off**: the agent leaves a handoff artifact (diff, test output, notes), not just a chat message.
+5. **Gate**: review tests and diff against the merge gate before integration.
+6. **Merge and archive**: update mainline, then archive the card with the reason.
+
+## Entry Point: Paperclip (fastest multi-agent setup)
+
+When the ask is "put several agents working together this afternoon" rather than
+"design a bespoke orchestrator", Paperclip is the lowest-friction entry point
+(`github.com/paperclipai/paperclip`, MIT, self-hosted, `npx paperclipai onboard --yes`).
+
+- **Org chart instead of prompt chain**: agents get role, boss, job description, and a shared mission; tasks trace back to the goal.
+- **Separate context per agent**, which is exactly what ad-hoc fan-out lacks.
+- **Budgets per agent**: hitting the limit stops the agent — the hard limit this skill's merge gates assume.
+- **Heartbeats**: agents wake on a schedule, so delegation does not depend on a human poking them.
+- **Governance**: you approve hires/strategy and can pause or terminate any agent.
+- **Model-agnostic**: Claude, Codex, Gemini, Cursor, Hermes, OpenClaw, OpenCode behind one structure.
+
+It also covers the "council" pattern: several models debate a topic and converge
+on a refined result. Use Paperclip for the operational shell (org, tickets,
+budgets) and keep this skill's card schema as the contract inside each agent.
+Caveat: it is a young product — validate the local install and the agent
+runtimes you depend on before moving a paid workflow onto it.
