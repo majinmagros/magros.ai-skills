@@ -1,25 +1,19 @@
 {
   "_meta": {
     "nota": "Fonte da verdade compartilhada entre PCs (só ids/datas — nunca transcrições). Atualizado via `mark`. Commit + push após cada coleta.",
-    "ultimaColetaGlobal": "2026-09-09"
+    "ultimaColetaGlobal": "2026-10-17"
   },
   "canais": {
     "@maestrosdaia": {
       "ultimaColeta": "2026-10-17",
-      "analisados": 88,
-      "ultimoVideoId": "8X0LNJE5r_I",
-      "atualizadoEm": "2026-10-31T19:37:05.968Z",
+      "analisados": 94,
+      "ultimoVideoId": "Go5V8n021sw",
+      "atualizadoEm": "2026-10-31T21:31:59.255Z",
       "pendentes": [
-        "bKI-YvBuu2Y",
         "0PjtV7KtlB4",
-        "Go5V8n021sw",
         "DL8Op83cqCE",
-        "JF1jgRuFOMQ",
-        "___J8OOGAh8",
         "02ebTWFXqKE",
-        "W_jYe1xNdSs",
-        "LPCXbBrn4JM",
-        "sFgPZZXwMMk",
+        "LPCXBrn4JM",
         "k-ktzERKmw8",
         "_hO8HbdRO28",
         "GmDFULXLUB4",
@@ -29,7 +23,7 @@
         "Kqj7RzukaeE",
         "gXeLOrH_Zsg"
       ],
-      "nota": "Marca recuada de 2026-10-26 para 2026-10-17: 18 videos ainda sem transcricao (429 do YouTube). 3 analisados nesta coleta."
+      "nota": "Marca mantida em 2026-10-17: 12 videos transcritos e ainda sem analise (o mais recente de 2026-10-31 ja foi analisado). Nao avancar a marca enquanto houver pendente mais antigo."
     },
     "@FullCycle": {
       "ultimaColeta": "2026-09-20",

@@ -310,22 +310,30 @@ function download(ctx, ids) {
   // Modo low-burn (2026-10-10): o CDN de legendas do YouTube throttla por IP e
   // por client com 429; cada tentativa extra e queima de cota. Overrides via env
   // (sem hardcoded): YT_ATTEMPTS (default 1), YT_PLAYER_CLIENT (default
-  // "web_embedded,android"), YT_SLEEP_REQ (default 3), YT_SLEEP_SUB (default 15),
+  // "ios,web_embedded,android"), YT_SLEEP_REQ (default 3), YT_SLEEP_SUB (default 15),
   // YT_RETRIES (default 2).
   //
-  // 2026-10-31: `android` passou a tomar 429 em quase tudo; `web_embedded` +
-  // `--ignore-no-formats-error` entrega o VTT e depois morre em "Requested
-  // format is not available" â€” irrelevante, nao queremos o video. Por isso o
+  // 2026-10-31: `android` passou a tomar 429 em quase tudo; `ios` entrega e
+  // `web_embedded` serve de reserva. `--ignore-no-formats-error` evita morrer em
+  // "Requested format is not available" — nao queremos o video. Por isso o
   // sucesso e medido pelo .vtt novo no disco, NAO pelo exit code (yt-dlp sai 1
   // quando uma das langs falha ou quando nao acha formato).
   const attempts = Math.max(1, parseInt(process.env.YT_ATTEMPTS || '1', 10) || 1);
-  const clients = (process.env.YT_PLAYER_CLIENT || 'web_embedded,android')
+  const clients = (process.env.YT_PLAYER_CLIENT || 'ios,web_embedded,android')
     .split(',')
     .map((c) => c.trim())
+    .filter(Boolean);
+  // Uma requisicao por idioma: pedir "pt,pt-PT,en" de uma vez dispara 3 downloads
+  // e o 429 no segundo aborta o terceiro. Com YT_LANGS=en, canal em ingles gasta
+  // exatamente 1 request por video.
+  const langsList = (process.env.YT_LANGS || 'pt,pt-PT,en')
+    .split(',')
+    .map((l) => l.trim())
     .filter(Boolean);
   const sleepReq = process.env.YT_SLEEP_REQ || '3';
   const sleepSub = process.env.YT_SLEEP_SUB || '15';
   const retries = process.env.YT_RETRIES || '2';
+  const sleepVideo = Math.max(0, parseInt(process.env.YT_SLEEP_VIDEO || '0', 10) || 0);
   const usePyBridge = (process.env.YT_DOWNLOADER || 'auto') !== 'yt-dlp';
   const pyBridge = join(REPO_ROOT, 'scripts', 'yt-subs.py');
   for (const id of ids) {
@@ -343,17 +351,17 @@ function download(ctx, ids) {
     }
     for (const playerClient of clients) {
       if (ok) break;
-      for (const langs of [['pt', 'pt-PT', 'en'], ['en'], ['pt']]) {
+      for (const lang of langsList) {
         for (let attempt = 0; attempt < attempts && !ok; attempt++) {
           if (attempt > 0) setTimeoutSync(5000 * attempt);
-          console.log(`[${ctx.label}] baixando subs de ${id} (${langs.join(',')} @ ${playerClient}) tentativa ${attempt + 1}/${attempts}...`);
+          console.log(`[${ctx.label}] baixando subs de ${id} (${lang} @ ${playerClient}) tentativa ${attempt + 1}/${attempts}...`);
           const startedAt = Date.now() - 2000;
           const r = spawnSync('yt-dlp', [
             '--skip-download',
             '--ignore-no-formats-error',
             '--write-auto-sub',
             '--write-subs',
-            '--sub-langs', langs.join(','),
+            '--sub-langs', lang,
             '--sub-format', 'vtt',
             '--no-playlist',
             '--no-warnings',
@@ -375,6 +383,7 @@ function download(ctx, ids) {
       if (ok) break;
     }
     if (!ok) process.stderr.write(`[${ctx.label}] FALHOU: ${id} (rate limit persistente)\n`);
+    if (sleepVideo > 0) setTimeoutSync(sleepVideo * 1000);
   }
   const vtts = readdirSync(ctx.rawDir)
     .filter((f) => /\.vtt$/i.test(f) && ids.some((id) => f.startsWith(id + '.')))
