@@ -63,6 +63,9 @@ S3/S4: pode recomendar registrar e agendar, a decisão é do usuário.
   pare e peça aprovação — isso é decisão do usuário.
 - Se a causa-raiz confirmar outra hipótese mais profunda ou exigir redesign:
   volte à fase 1 com a nova evidência.
+- **Hipótese refutada pela evidência → remova as mudanças feitas com base nela**
+  antes de testar a próxima. Sessão de debug que acumula cinco workarounds não
+  sabe qual resolveu, e o diff vira lixo impossível de revisar.
 
 ## Fase 3 — Provar
 

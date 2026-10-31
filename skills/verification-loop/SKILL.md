@@ -1,6 +1,6 @@
 ---
 name: verification-loop
-description: "Use when a comprehensive verification system for Claude Code sessions. Triggers on \"verification-loop\", \"verification loop\", \"loop\", \"verify skill\", \"runtime verification\", \"layout shift\", \"screenshot proof\", \"prove the change\". Covers build/type/lint/tests PLUS runtime checks in the running app with measurable pass criteria."
+description: "Use when a comprehensive verification system for Claude Code sessions. Triggers on \"verification-loop\", \"verification loop\", \"loop\", \"verify skill\", \"runtime verification\", \"layout shift\", \"screenshot proof\", \"prove the change\", \"artefato exportado\". Covers build/type/lint/tests PLUS runtime checks in the running app with measurable pass criteria."
 license: MIT
 metadata:
   origin: ECC
@@ -72,6 +72,7 @@ Fonte: Claude `@claude/mQZB0l-rhxE` ("Building verification loops in Claude Code
 - Exemplos mensuráveis: layout shift via Chrome DevTools MCP (Core Web Vitals), performance budget, accessibility checklist, regras do design system.
 - Entregue prova: screenshot + scores junto com a mudança (ex.: botão Like funcionando + página sem jump no load).
 - Regra de bolso: toda vez que você se pegar checando algo à mão e dizendo ao Claude o que corrigir, pergunte "contra o que mensurável ele poderia checar sozinho?" — e codifique.
+- **Abra o artefato, não só o build.** Build verde não diz se o PDF exportado tem as colunas certas, se o PPTX manteve a fonte ou se o JSON tem os campos. Aplique o filtro, baixe o arquivo e inspecione o conteúdo — a falha mora no output, não no exit code.
 
 ### Phase 6: Save working checks as a skill
 

@@ -1,6 +1,6 @@
 ---
 name: engenharia-de-grafos
-description: Engenharia de Grafos (Graph Engineering) — decompor um objetivo em tarefas paralelas que executam simultaneamente e convergem para um único resultado, com verificadores independentes por ramo, e iterar até uma nota mínima quando houver candidatos ranqueáveis. Use quando várias sub-tarefas independentes podem rodar ao mesmo tempo (pesquisa de fontes múltiplas, geração em volume, coleta paralela, thumbnails/variantes) e precisam convergir em um único entregável, em vez de uma execução sequencial uma-de-cada-vez. Também cobre a decisão de NÃO usar grafo (anti-overengineering) e a relação loop-como-nó-de-grafo. Triggers on "graph engineering", "engenharia de grafos", "orquestrar agentes em paralelo", "verificar em paralelo", "grafos", "gerar candidatos", "rankear", "nota 80", "pipeline", "dynamic workflow".
+description: Engenharia de Grafos (Graph Engineering) — decompor um objetivo em tarefas paralelas que executam simultaneamente e convergem para um único resultado, com verificadores independentes por ramo, e iterar até uma nota mínima quando houver candidatos ranqueáveis. Use quando várias sub-tarefas independentes podem rodar ao mesmo tempo (pesquisa de fontes múltiplas, geração em volume, coleta paralela, thumbnails/variantes) e precisam convergir em um único entregável, em vez de uma execução sequencial uma-de-cada-vez. Também cobre a decisão de NÃO usar grafo (anti-overengineering) e a relação loop-como-nó-de-grafo. Triggers on "graph engineering", "engenharia de grafos", "orquestrar agentes em paralelo", "verificar em paralelo", "grafos", "gerar candidatos", "rankear", "nota 80", "pipeline", "dynamic workflow", "arena de candidatos", "verificado vs nao verificado".
 metadata:
   origin: ECC
 ---
@@ -43,6 +43,15 @@ Transforme um pipeline sequencial lento em um grafo de execução paralela: vár
 | notaMin (aprovado) | 80/100 |
 | mínimo de candidatos | 3 por elemento |
 | máximo de iterações | 3 |
+
+**Combinação verificada (padrão Arena)**: quando dois candidatos ficam próximos,
+escolha um como base, traga as ideias boas dos outros e **rode a verificação de
+novo no resultado combinado**. Combinar sem reverificar é o mesmo que não ter
+verificado — o híbrido herda defeito dos dois lados.
+
+**Não verificado ≠ aprovado**: no relatório final, o que o verificador não
+conseguiu checar entra explicitamente como `não verificado`. Checagem inacabada
+virando passe silencioso é o furo clássico de fan-out.
 
 ## Loop como nó de grafo (relação, não oposição)
 

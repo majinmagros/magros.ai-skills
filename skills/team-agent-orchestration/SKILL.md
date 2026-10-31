@@ -30,6 +30,13 @@ Treat every agent as a teammate with a narrow contract:
 
 Use agent Kanban when work must be visible across sessions.
 
+**Default is one chat.** Earn the team with a reason you can name: parallel
+research, a clean file split, a separate check, or a job too long for one
+context. If you cannot name it, stay in the main loop — splitting by problem
+type (mirroring the org chart) is the most common way to add cost and lose
+detail. The decision test lives in `sub-agent-cost-guard`
+(`references/quando-dobrar-subagentes.md`).
+
 | Column | Meaning | Exit Criteria |
 | --- | --- | --- |
 | Backlog | Candidate work item, not yet shaped | Acceptance criteria written |
