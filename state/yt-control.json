@@ -5,25 +5,10 @@
   },
   "canais": {
     "@maestrosdaia": {
-      "ultimaColeta": "2026-10-17",
-      "analisados": 94,
-      "ultimoVideoId": "Go5V8n021sw",
-      "atualizadoEm": "2026-10-31T21:31:59.255Z",
-      "pendentes": [
-        "0PjtV7KtlB4",
-        "DL8Op83cqCE",
-        "02ebTWFXqKE",
-        "LPCXBrn4JM",
-        "k-ktzERKmw8",
-        "_hO8HbdRO28",
-        "GmDFULXLUB4",
-        "x67v6Ftah6I",
-        "2Ui4Qiuo-tQ",
-        "VWTMxPP-TuQ",
-        "Kqj7RzukaeE",
-        "gXeLOrH_Zsg"
-      ],
-      "nota": "Marca mantida em 2026-10-17: 12 videos transcritos e ainda sem analise (o mais recente de 2026-10-31 ja foi analisado). Nao avancar a marca enquanto houver pendente mais antigo."
+      "ultimaColeta": "2026-10-31",
+      "analisados": 105,
+      "ultimoVideoId": "gXeLOrH_Zsg",
+      "atualizadoEm": "2026-11-07T15:24:48.680Z"
     },
     "@FullCycle": {
       "ultimaColeta": "2026-09-20",
@@ -38,10 +23,10 @@
       "atualizadoEm": "2026-09-14T00:10:25.713Z"
     },
     "@nateherk": {
-      "ultimaColeta": "2026-10-10",
-      "analisados": 25,
-      "ultimoVideoId": "oz2CwrPV2Rg",
-      "atualizadoEm": "2026-10-12T16:28:12.016Z"
+      "ultimaColeta": "2026-10-31",
+      "analisados": 27,
+      "ultimoVideoId": "DByAR5Su1Yw",
+      "atualizadoEm": "2026-11-07T15:24:52.995Z"
     },
     "@gucampelo": {
       "ultimaColeta": "2026-09-12",
@@ -80,16 +65,16 @@
       "atualizadoEm": "2026-10-10T13:54:39.120Z"
     },
     "@aicodeking": {
-      "ultimaColeta": "2026-10-03",
-      "analisados": 44,
-      "ultimoVideoId": "ROnTKqrwn-U",
-      "atualizadoEm": "2026-10-10T13:54:45.517Z"
+      "ultimaColeta": "2026-10-31",
+      "analisados": 45,
+      "ultimoVideoId": "jyz4ALAahdE",
+      "atualizadoEm": "2026-11-07T15:24:52.913Z"
     },
     "@airevolutionx_pt": {
-      "ultimaColeta": "2026-10-03",
-      "analisados": 45,
-      "ultimoVideoId": "Br3Tg3NNOOA",
-      "atualizadoEm": "2026-10-10T13:54:45.287Z"
+      "ultimaColeta": "2026-10-31",
+      "analisados": 46,
+      "ultimoVideoId": "wYWObfMosII",
+      "atualizadoEm": "2026-11-07T15:24:52.835Z"
     },
     "@ColeMedin": {
       "ultimaColeta": "2026-09-16",
@@ -140,10 +125,10 @@
       "atualizadoEm": "2026-09-19T15:27:51.025Z"
     },
     "@graceleungyl": {
-      "ultimaColeta": "2026-10-03",
-      "analisados": 10,
-      "ultimoVideoId": "BzS93V2zFTg",
-      "atualizadoEm": "2026-10-10T13:54:39.008Z"
+      "ultimaColeta": "2026-10-31",
+      "analisados": 11,
+      "ultimoVideoId": "F8jidmEkIeM",
+      "atualizadoEm": "2026-11-07T15:24:53.080Z"
     },
     "@gabrieladamuchi": {
       "ultimaColeta": "2026-10-03",

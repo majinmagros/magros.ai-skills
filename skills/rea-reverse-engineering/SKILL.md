@@ -115,3 +115,24 @@ Se quiser contribuir ou entender o código-fonte do REA, ele está em:
 - Análise de malware ou software protegido sem autorização legal
 - Substituição de auditoria de segurança profissional
 - Quando você já tem o código-fonte e só precisa de refatoração (use code-reviewer em vez disso)
+
+## Limites do REA e pipeline "espelho de apps" (captura 2026-11)
+
+Fonte: Maestros da IA `_hO8HbdRO28` e `02ebTWFXqKE`.
+
+O REA Ã© forte na **coleta de evidÃªncias** (o que o app faz, como a feature se
+comporta). A parte de **desenvolvimento do clone** deixa a desejar: falta um
+processo estruturado de especificaÃ§Ã£o e verificaÃ§Ã£o. NÃ£o trate "clonar qualquer
+app" como um prompt Ãºnico.
+
+Pipeline que funcionou melhor:
+
+1. **Coletar** com REA: fluxos, telas, estados, chamadas, limitaÃ§Ãµes.
+2. **Escrever um spec de clone** â€” escopo mÃ­nimo, telas, entidades, aÃ§Ãµes,
+   critÃ©rios de aceite e o que fica de fora.
+3. **Revisar o spec com goldfish** (`elephant-goldfish-review`).
+4. **Implementar em fatias verticais**, uma tela/fluxo por vez.
+5. **Verificar no app rodando** â€” comparaÃ§Ã£o lado a lado com o original.
+6. SÃ³ entÃ£o generalizar e adicionar recursos.
+
+Regra: "1 prompt" Ã© marketing. O ganho real vem de spec + fatias + verificaÃ§Ã£o.

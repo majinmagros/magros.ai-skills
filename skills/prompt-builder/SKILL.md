@@ -96,3 +96,27 @@ novos invertem o ensino antigo:
   escrever o brief — nao tente adivinhar o prompt perfeito.
 - Effort baixo/medio em task curta: Fable 5.1 no low compete com Opus
   antigo por menos tokens.
+
+## 8. Barreira de comunicaÃ§Ã£o (Matt Pocock, captura 2026-11)
+
+Fonte: Maestros da IA `0PjtV7KtlB4` (entrevista de Matt Pocock).
+
+Antes de trocar de modelo, verifique se o problema Ã© de comunicaÃ§Ã£o:
+
+- **Objetivo**: dÃ¡ para escrever em uma frase o que o resultado precisa fazer?
+  Se nÃ£o, o modelo vai adivinhar.
+- **PÃºblico e uso**: para quem Ã© e o que o output viabiliza (o WHY do item 7).
+- **RestriÃ§Ãµes**: o que nÃ£o pode mudar, tamanho, stack, tom, prazo.
+- **Exemplos**: um bom e um ruim valem mais que trÃªs parÃ¡grafos de adjetivos.
+- **DefiniÃ§Ã£o de pronto**: critÃ©rio observÃ¡vel, nÃ£o "ficar bom".
+
+Sinais de que o problema nÃ£o Ã© o modelo:
+
+- a mesma instruÃ§Ã£o funciona para outra pessoa com o mesmo modelo;
+- o resultado "certo" sÃ³ existe na sua cabeÃ§a;
+- vocÃª estÃ¡ no pico da curva de Dunning-Kruger da ferramenta: confunde o bÃ¡sico
+  que jÃ¡ domina com o todo.
+
+CorreÃ§Ã£o: peÃ§a ao agente para te entrevistar antes de executar (goal, pÃºblico,
+done, edge cases, tradeoffs) e transforme as respostas em prompt. Trocar de
+modelo Ã© a Ãºltima aÃ§Ã£o, nÃ£o a primeira.
