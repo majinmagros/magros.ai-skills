@@ -88,3 +88,10 @@ pertence a um loop único ou a um sub-agente:
 Detalhe, modos de falha e o teste de decisão em
 `references/quando-dobrar-subagentes.md`. Para orquestração de time com vários
 agentes, ver `team-agent-orchestration`.
+## TTL do cache e retorno minimo (leva YouTube 2026-11-11)
+
+Fonte `ZRKAw472Nmk`. Subagente nasce com cache frio: paga o preco cheio do contexto
+(~5x) e vive so o TTL de 1h. Por isso: (a) dispare sob demanda e em lote, nao em
+pinga-pinga; (b) peca retorno **so do essencial** (resumo + caminho do arquivo), nunca o
+transcript inteiro de volta ao pai; (c) defina `effort`/modelo no INICIO da sessao -
+trocar no meio descarta o cache. Worker barato para volume, modelo forte para decidir.

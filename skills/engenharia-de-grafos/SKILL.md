@@ -80,3 +80,12 @@ Grafo: 5 ramos isolados (coleta+verificador próprio) → convergem p/ síntese
 Loop-no-nó: thumbnails geradas em volume, rankeadas até nota >= 80
 Não-grafo: resumir 1 vídeo curto (sequencial simples resolve)
 ```
+
+## Tres tipos de grafo e memoria em 3 camadas (leva YouTube 2026-11-11)
+
+Fonte `r8JueeaKJ9w` (Maestros da IA). Diferencie o desenho: grafo de **dados/fluxo**,
+grafo de **agentes** (delegacao) e grafo de **verificacao** (checagens em paralelo) - nao
+use o mesmo desenho para os tres. Memoria em **3 camadas** (sessao, projeto, conhecimento
+duravel) para o agente nao recarregar tudo. **Scripts deterministicos como gates** entre
+nos: o que e regra (formato, schema, limite) vira filtro executavel, nao pedido em prompt;
+nos que exigem aprovacao humana ficam explicitos no grafo.

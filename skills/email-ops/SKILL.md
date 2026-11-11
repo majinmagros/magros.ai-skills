@@ -75,3 +75,11 @@ Nunca: "enviado" sem confirmação real da pasta Sent
 ## Copy Humanizer operacional (leva YouTube rodada 10)
 
 Sweep Gmail+Outlook, perfil de voz a partir dos ENVIADOS (nao dos recebidos), rascunho-para-revisao, nunca auto-enviar. Composicao: esta skill (triage+draft+send-verification) + humanizar-texto (regras anti-AI-slop). Contrato voice-profile: 3 exemplos de enviados + tom (formal/direto/cordial) + 5 frases proibidas do usuario.
+
+## Auditoria de descadastro em 30 dias (leva YouTube 2026-11-11)
+
+Fonte `JmPtYJK7CcE` (Karine Lago). Rotina mensal: varrer listas/newsletters assinadas nos
+ultimos **30 dias**, classificar (uso real / ruido / nunca abri) e propor descadastro em
+lote - **com aprovacao humana antes de qualquer unsubscribe** (nunca automatico). Reporte
+o tempo recuperado: no caso dela, ~**2 h/dia**. Registre o que foi cancelado para nao
+reassinar.

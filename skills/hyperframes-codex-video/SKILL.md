@@ -206,3 +206,12 @@ motion graphics do vídeo feito via Hyperframes de descrição falada —
 "melhor que Remotion na maioria das vezes, com menos nagging"; firework
 de ~8s gerado em ~8 min (vs 1 dia no After Effects). Reforça o verify
 loop: ratio esforço/payoff é o argumento.
+
+## EDL por palavra e mixagem (leva YouTube 2026-11-11)
+
+Fonte `WuzMxEKJHkQ`. Corte guiado por **transcricao**: EDL com entrada/saida por palavra
+(remove respiro e muleta sem cortar ideia) e **diff do transcript** depois da edicao para
+achar frase perdida. Elementos: **matte/tracking** do sujeito para inserir grafico atras,
+**OCR** para capturar texto de tela, b-roll de **Pexels**, e **ducking** da trilha sob a
+voz + loudness alvo consistente (-14 LUFS). Cada corte justificado por uma palavra =
+ritmo, nao corte por tempo.

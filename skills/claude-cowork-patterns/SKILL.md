@@ -75,3 +75,12 @@ Nao force escolha de superficie: mesma thread para pergunta e tarefa profunda. O
   em produção. Regra: task execution com checkpoints + approval em escrita
   externa; sem duplicata com `team-agent-orchestration` (aqui é 1 operador,
   lá é squad).
+
+## Escada N0-N4 e o trio de arquivos (leva YouTube 2026-11-11)
+
+Fonte `wqNMoe_fq3U` (AI Foundations). Nao comece pelo agente: **N0** = fazer o trabalho
+manual e documentar; **N1** = conectar ferramentas; **N2** = construir o agente; **N3/N4**
+= orquestrar e escalar. Todo agente tem **3 arquivos**: `CLAUDE.md` (contexto/regras),
+`SKILL.md` (procedimento) e `MEMORY.md` (estado duravel) - o agente le o memory ao ser
+invocado. Antes de escrever, rode a **entrevista de ~10 perguntas** (objetivo, entradas,
+saidas, excecoes, aprovacao) e so entao gere os arquivos.

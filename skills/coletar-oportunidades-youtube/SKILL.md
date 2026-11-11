@@ -94,6 +94,12 @@ node scripts/yt-oportunidades.mjs reconcile
 - Convenção de dono: campo opcional `dono` em `manifests/canais-vigilados.json`
   por canal (qual PC coleta); sem dono explícito, vale quem coletou por último.
 
+- **Nunca rode dois `mark` em paralelo** (dois terminais ou dois shells na mesma
+  mensagem): cada processo lê o JSON inteiro e grava por cima — last-writer-wins
+  apaga as chaves do outro lote. Se acontecer, re-rode todos os canais em série;
+  ausentes se recuperam com `git show HEAD:state/yt-control.json` + merge por
+  `Math.max(analisados)` / maior `ultimaColeta`.
+
 ### 1. Catalogar o canal
 
 Roda o catálogo oficial do canal (título, id, data) e salva como JSON:

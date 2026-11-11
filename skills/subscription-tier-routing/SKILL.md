@@ -97,3 +97,11 @@ Banked reset promocional: usa antes do refresh; alerta se feature passa de 50% d
 - Fonte: Nate Herk `@nateherk/pY5_Ux_YJjo` ("I Tested Codex's $500/mo
   Ultrafast", 03/10/2026, transcricao local fora do repo) — comparativo
   ultrafast vs standard com consumo de limite semanal.
+## Idle compaction e Haiku 5.5 (leva YouTube 2026-11-11)
+
+Fonte `o4A03TVuadg`. **Idle compaction**: conversa acima de **200k tokens** parada por
+~**54 min** e compactada sozinha - evita retomar sessao gigante e pagar releitura; da para
+desligar, mas o custo volta. **Haiku 5.5** entra como default barato do Claude Code, com
+**1M** de contexto, para volume/tarefa mecanica; reserve Opus/Sonnet para decidir. Ao
+retomar sessao compactada, avise o modelo do que mudou (senao ele reexplora). Cheque o
+consumo por modelo em `/usage` antes de culpar o plano.

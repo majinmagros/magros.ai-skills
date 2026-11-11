@@ -63,3 +63,11 @@ Para tarefas complexas que exigem inteligência de nível Mythos (Fable 5 e supe
 
 Não planeje por conta própria em tarefas simples de implementar/corrigir/refatorar.
 Só rode o fluxo de plano quando o usuário pedir `/plan` ou um plano explícito.
+## Prova, blast radius e decisao (leva YouTube 2026-11-11)
+
+Fonte `hMEQ4rdaOLw` (Cole Medin, 11 fixes). Todo plano declara, antes de implementar:
+(1) **artefatos de prova** - comando real + screenshot/arquivo que demonstra o done;
+(2) **blast radius** - arquivos/pacotes/servicos que a mudanca pode tocar e o que fica
+fora de escopo; (3) **decisoes** - o que o agente decide sozinho vs. o que exige humano
+(contrato, preco, migracao); (4) **diff minimo** - o menor patch que resolve, proibido
+"aproveitar para refatorar". Regra: item sem prova executavel nao sai do plano.

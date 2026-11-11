@@ -903,3 +903,97 @@ Gaps registrados nos Batches 17d/17f/17g, materializados após validação nas f
 - Registro: `manifests/install-modules.json` (módulo `agentic-patterns`) + `manifests/skills-autorais.json` (3 entradas); `docs/data/skills.json` regenerado via `scripts/build-catalog.js` (498 → **501 skills**, 42 → **45 autorais**).
 - Validadores: `validate-skills` OK (501 dirs); `validate-no-personal-paths` OK; `check-unicode-safety` mantém SOMENTE falhas pré-existentes (emojis `voice-cloning-local`, BOMs `state/yt-*.json`); `validate-install-manifests` NÃO rodou nesta estação (dependência `ajv` ausente no `node_modules` — falha ambiental pré-existente em `require`, antes de ler manifestos; JSON validado via parse + checagem de registro).
 - Transcrições-fonte baixadas p/ `projetos/yt-backlog-2026-09-20/` (fora do repo).
+
+---
+
+## Volta 2026-11-11 — janela 2026-11-07 → 2026-11-11
+
+**Comando:** `sync-check` → `solicitar` → `catalog-all` → `diff-all --since-request` → `download` → `mark`.
+**Números:** 26 canais catalogados, **49 vídeos novos**, **19 transcrições analisadas** (4 subagentes em paralelo) contra o inventário de **512 skills**, **18 enriquecimentos** aplicados, **11 gaps** propostos (G30–G40).
+**Caminho de download:** ponte `scripts/yt-subs.py` (youtube-transcript-api) — contorno documentado do 429; 19/19 sem falha, yt-dlp não foi acionado.
+
+### Transcritos e analisados (19)
+
+| # | Vídeo (canal) | Conceito | Destino |
+|---|---|---|---|
+| 133 | **11 More Tiny Coding Agent Fixes** (`hMEQ4rdaOLw` - Cole Medin) | 11 correções baratas na "AI layer": prova anexada ao PR, hooks para must/never, handoff, controle de subagentes | ENRICH `plan` + `verification-loop`; GAP `scope-discipline` |
+| 134 | **Claude Pros Don't Pay for Max** (`ZRKAw472Nmk` - Simon Scrapes) | Limite não é o gargalo: cache de 1h, handoff.md, `/context`, `/usage`, effort no início | ENRICH `strategic-compact` + `sub-agent-cost-guard`; GAP `claude-usage-audit` |
+| 135 | **Graph Engineering** (`r8JueeaKJ9w` - Maestros da IA) | 3 tipos de grafo, memória em 3 camadas, scripts determinísticos como gates | ENRICH `engenharia-de-grafos` |
+| 136 | **You're Using Claude the Hard Way** (`nt7PYzjL6P8` - Maestros da IA) | Placement global vs por projeto; demo de 2min27 | ENRICH `criar-skill` |
+| 137 | **Best Design Skill for Websites** (`zFwYkzNQ0Z4` - Maestros da IA) | Compara design skills (Open Design etc.) e critérios de escolha | COBERTO pelas skills de design; GAP `design-skill-benchmark` |
+| 138 | **Fable 5.2 edits this video** (`WuzMxEKJHkQ` - Maestros da IA) | EDL por palavra, matte/tracking, OCR, Pexels, ducking/loudness, diff do transcript | ENRICH `hyperframes-codex-video` |
+| 139 | **My AI development workflow** (`paXHXZyRSsM` - Attekita Dev) | spec → 1 issue GitHub por ticket; `implement-spec` com subagentes em worktrees; merge danger | ENRICH `spec-kit` |
+| 140 | **Spec Driven no Slack** (`ltarNdgEw0E` - Full Cycle) | roadmap → PRD → spec → tasks; fatias verticais em ondas; smart zone 40–60%; design-system.md | ENRICH `orch-pipeline` + `design-system` |
+| 141 | **Crazy Claude Code Upgrades** (`o4A03TVuadg` - AI Code King) | Idle compaction (>200k / ~54 min), Haiku 5.5 (1M), `/usage` por modelo | ENRICH `subscription-tier-routing` |
+| 142 | **Trending OpenSource Plugin** (`3Zq4cceOTa4` - AI Code King) | Plugin de memória para Claude Code; leitura de 425 tokens, trade-off de recall | GAP `agent-memory-plugin-eval` |
+| 143 | **Infinite Context Repo** (`IeW7DDQeTgU` - AI Code King) | Proxy de compressão de contexto; teste de 0,29 → US$ 4,61 vs baseline | GAP `context-compression-proxy` |
+| 144 | **Herdr Updates** (`LDxan-w2LVw` - AI Code King) | Herdr status-aware (~49k estrelas), `machine add`/`--machine`, stagger 100 ms, 48 snapshots | ENRICH `dmux-workflows` |
+| 145 | **Codex, Grok, OpenCode 24/7 (Ratoeira)** (`AAM_gAS6J2c` - Ratos de IA) | Plano de controle multi-CLI, cada CLI 150–300 MB de RAM, operação 24h | GAP `multi-cli-control-plane` |
+| 146 | **How I Use AI Daily** (`JmPtYJK7CcE` - Karine Lago) | Delegação diária (~2 h/dia), auditoria de assinaturas/descadastro | ENRICH `email-ops` |
+| 147 | **Psychology of a Premium Website** (`IZ5oK4y3Z2o` - Gustavo Campelo) | Julgamento em ~50 ms (halo), regra subtrativa, ordem de construção, animação por último | ENRICH `frontend-design-direction` |
+| 148 | **KIMI K3.1 Hands-on** (`mjMJzCUJjMo` - Gustavo Campelo) | Teste de ~41 min; custo ~metade do Opus 5.5 | ENRICH `llm-leaderboard-tracker` + `roteamento-modelos-baratos` |
+| 149 | **I Studied 10,000 AI Websites** (`mImbbszCjCI` - Nate Herk) | 5 padrões de site premium, 60-30-10, +79,3% de conversão | ENRICH `frontend-design-direction` + `visual-qa-designer` |
+| 150 | **LIQUID Software Factory** (`GRlcm3wmOqs` - IndyDevDan) | "Software líquido": fábrica mínima de ponta a ponta em 16 min | GAP `liquid-software-factory` |
+| 151 | **First AI Agent in 30 Minutes** (`wqNMoe_fq3U` - AI Foundations) | Escada N0–N4, trio CLAUDE.md/SKILL.md/MEMORY.md, entrevista de ~10 perguntas | ENRICH `claude-cowork-patterns` |
+
+### Triados por título, sem transcrição (30)
+
+Notícia/roundup/produto sem técnica nova o suficiente para justificar download:
+
+- `@matthew_berman` (5): `FCmLuTENOp0` (AI NEWS), `kMdHCyAnNHA` (Box CEO), `0vNyVMDFdkg`, `lVbQqjAJpkE`, `-M62vWrZh54`
+- `@maestrosdaia` (4): `hsqUdJAI3Jg`, `pOrmRItuNvk`, `JkNkcax2Xck`, `rKcxLM15yAE`
+- `@claude` (7): `YewAJPawE7I`, `Gy1jSeSzAhk`, `vdYynH177h0`, `FMbXUxn_nBw`, `6a1QSJlsYpU`, `4ZsVR-6YOzs`, `UTubvRLX2j4`
+- `@airevolutionx_pt` (5): `POZrGNzxroc`, `QtXv6vOH1QQ`, `kFjJUsuI4PM`, `ODiNnxHYM_s`, `pg9ROejCVtc`
+- `@inteligenciamilgrau` (2): `lfTtQGbh4uo`, `4fpxRkB6jBI`
+- `@attekitadev` (1): `XfVQVdLwxPc`
+- `@FullCycle` (1): `umvH4luRsj8`
+- `@aicodeking` (1): `WOc6Vf8cCsE`
+- `@gabrieladamuchi` (1): `XbcmOrffjmA`
+- `@anwarhermuche` (1): `oZGm6HPPPgE`
+- `@gucampelo` (1): `sgU9MtsafBY`
+- `@ratosdeia` (1): `RqbCc-DfCZ0`
+
+### Enriquecimentos aplicados (18 skills)
+
+| Skill | Delta | Fonte |
+|---|---|---|
+| `plan` | Artefatos de prova, blast radius, decisões agente/humano, diff mínimo | `hMEQ4rdaOLw` |
+| `verification-loop` | Evidência anexada ao PR, teste como usuário, devil's advocate | `hMEQ4rdaOLw` |
+| `strategic-compact` | `handoff.md`, cache de 1h, custo ~5x, caso 11% do limite | `ZRKAw472Nmk` |
+| `sub-agent-cost-guard` | TTL do cache, retorno só do essencial, effort no início | `ZRKAw472Nmk` |
+| `spec-kit` | spec → issues GitHub, `implement-spec` com worktrees, merge danger | `paXHXZyRSsM` |
+| `orch-pipeline` | roadmap → PRD → spec → ondas, smart zone 40–60%, docs vivos | `ltarNdgEw0E` |
+| `engenharia-de-grafos` | 3 tipos de grafo, memória em 3 camadas, scripts como gates | `r8JueeaKJ9w` |
+| `frontend-design-direction` | 50 ms/halo, regra subtrativa, 60-30-10, 5 padrões | `IZ5oK4y3Z2o`, `mImbbszCjCI` |
+| `visual-qa-designer` | Squint test, orçamento de cor, estados de erro | `mImbbszCjCI` |
+| `hyperframes-codex-video` | EDL por palavra, matte/tracking/OCR, Pexels, ducking/LUFS | `WuzMxEKJHkQ` |
+| `claude-cowork-patterns` | Escada N0–N4, trio de arquivos, entrevista de ~10 perguntas | `wqNMoe_fq3U` |
+| `subscription-tier-routing` | Idle compaction 200k/54 min, Haiku 5.5 1M, aviso de resume | `o4A03TVuadg` |
+| `criar-skill` | Placement global vs por projeto | `nt7PYzjL6P8` |
+| `design-system` | Figma MCP + `design-system.md` no fluxo spec-driven | `ltarNdgEw0E` |
+| `dmux-workflows` | Herdr status-aware, `machine add`/`--machine`, 100 ms, 48 snapshots | `LDxan-w2LVw` |
+| `email-ops` | Auditoria de descadastro em 30 dias com aprovação | `JmPtYJK7CcE` |
+| `llm-leaderboard-tracker` | Kimi K3.1 Pro na watchlist (`MONITORAR`) | `mjMJzCUJjMo` |
+| `roteamento-modelos-baratos` | Kimi K3.1 Pro como workhorse (~metade do Opus 5.5) | `mjMJzCUJjMo` |
+
+### Gaps propostos (G30–G40) — não materializados
+
+| # | Gap | Escopo |
+|---|---|---|
+| G30 | `scope-discipline` | Impedir expansão de escopo: request pequeno → diff pequeno, critério de "fora de escopo" no plano |
+| G31 | `claude-usage-audit` | Auditoria de cota: `/context`, `/usage`, cache de 1h, itens >10%, plugins esquecidos |
+| G32 | `liquid-software-factory` | Fábrica mínima de software (LIQUID): issue → agente → validação → PR em fluxo contínuo |
+| G33 | `multi-cli-control-plane` | Plano de controle para Claude Code + Codex + Grok + OpenCode 24/7, orçamento de RAM e fila |
+| G34 | `context-compression-proxy` | Proxy de compressão de contexto, medição de custo antes/depois e risco de perda |
+| G35 | `agent-memory-plugin-eval` | Avaliar plugins de memória com golden set: recall, tokens, latência, vazamento |
+| G36 | `html-briefing` | Briefing em HTML de uma página (antes de slides) para alinhar decisão |
+| G37 | `consent-cmp-lgpd` | Banner/consentimento e CMP compatível com LGPD, sem dark pattern |
+| G38 | `saved-content-catalog` | Catálogo pesquisável do que foi salvo (links, PDFs, posts) com fonte e data |
+| G39 | `media-file-organizer` | Organização de mídia baixada por projeto/evento com dedupe e nomenclatura |
+| G40 | `design-skill-benchmark` | Comparar design skills em tarefa fixa (layout, acessibilidade, tokens) com rubrica |
+
+### Notas de execução
+
+- `reconcile` por canal: 17/18 OK. `@matthew_berman` divergiu porque o estado compartilhado tinha 1 marcador (`2z-7pIj57f8`, de outro PC) e o local 43. O `mark` não regride contagem (`Math.max`) e o id foi adotado na lista local.
+- `@ai-foundations` ainda sem entrada compartilhada (primeira coleta) — `mark` cria.
+- Nenhuma skill nova criada nesta rodada, conforme regra de evitar redundância com o inventário.

@@ -71,3 +71,10 @@ Build novo "parece estranho": captura fixa (viewport+rota+seed) → 4 passes
 Achado: home|hero|contraste|alta|corrigir; typo: 3 famílias → 2; CTA secundário gritando
 Fixa → recaptura → checklist verde; 3ª recorrência vira regra do design-system
 ```
+## Squint test e orcamento de cor (leva YouTube 2026-11-11)
+
+Fonte `mImbbszCjCI`. Antes do checklist fino: **squint test** (desfoque/afaste a tela) -
+se a hierarquia nao aparece, o problema e contraste/tamanho, nao detalhe. **Orcamento de
+cor**: no maximo 3 familias (60-30-10) e 1 acento para acao; cor fora do orcamento e bug.
+Cheque tambem o primeiro viewport isolado (impressao de 50 ms) e os estados de erro/hover/
+focus - nao so o caminho feliz.

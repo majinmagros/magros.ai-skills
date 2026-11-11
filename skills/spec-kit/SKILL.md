@@ -62,3 +62,13 @@ O agente lê a constituição + spec + plan + tasks como contexto. Isso evita "c
 | **GitHub Copilot** | `copilot` | Slash commands no Copilot Chat |
 | **Gemini CLI** | `gemini` | Via `@speckit` ou CLI direta |
 | **Cursor** | `cursor` | Slash commands no Cursor Agent |
+
+## spec -> issues do GitHub e implement-spec (leva YouTube 2026-11-11)
+
+Fonte `paXHXZyRSsM` (Attekita Dev). Depois de `grill-with-docs` + spec: quebre em
+tickets e abra **1 issue do GitHub por ticket** (issue e a unidade de paralelismo, nao
+arquivo local). `implement` roda ticket a ticket; `implement-spec` dispara um orquestrador
+que abre subagentes por ticket em **worktrees** e so para quando a spec fecha. Trade-off
+real: PR de ~100 arquivos perde controle - mantenha escopo pequeno. No PR exija summary +
+evidencias + **merge danger** (reversibilidade/blast radius); retro poda a spec velha do
+`AGENTS.md`.

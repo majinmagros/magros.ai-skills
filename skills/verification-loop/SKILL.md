@@ -83,3 +83,10 @@ A primeira vez que o loop funcionar, salve os passos que funcionaram como verify
 - App deployed comportando-se p/ usuário real, screenshot de falha, patch + rerun → `closed-loop-verifier-pattern` (+ `testsprite-cli-integration`).
 - QA visual com checklist de designer → `browser-qa`.
 - Loop genérico (goal decidível, anti-spin) → `loop-design-check`.
+## Evidencia no PR e teste como usuario (leva YouTube 2026-11-11)
+
+Fonte `hMEQ4rdaOLw`. "Passou" sem evidencia anexada nao conta: cole no PR o comando
+executado, a saida e o screenshot/log do fluxo real. Teste unitario verde com app
+quebrado e falha de verificacao - rode o caminho do usuario (browser/CLI) antes de
+declarar done. Antes de fechar, rode um **devil's advocate** ("o que faria isso nao
+funcionar?") em contexto limpo/reviewer separado; achado vira teste ou item de checklist.
