@@ -323,9 +323,6 @@ function download(ctx, ids) {
     .split(',')
     .map((c) => c.trim())
     .filter(Boolean);
-  // Uma requisicao por idioma: pedir "pt,pt-PT,en" de uma vez dispara 3 downloads
-  // e o 429 no segundo aborta o terceiro. Com YT_LANGS=en, canal em ingles gasta
-  // exatamente 1 request por video.
   const langsList = (process.env.YT_LANGS || 'pt,pt-PT,en')
     .split(',')
     .map((l) => l.trim())
@@ -336,12 +333,18 @@ function download(ctx, ids) {
   const sleepVideo = Math.max(0, parseInt(process.env.YT_SLEEP_VIDEO || '0', 10) || 0);
   const usePyBridge = (process.env.YT_DOWNLOADER || 'auto') !== 'yt-dlp';
   const pyBridge = join(REPO_ROOT, 'scripts', 'yt-subs.py');
+  // Cookies support: YT_COOKIES=/path/to/cookies.txt (netscape format)
+  const cookiesFile = process.env.YT_COOKIES;
+  if (cookiesFile && !existsSync(cookiesFile)) {
+    process.stderr.write(`[${ctx.label}] Aviso: YT_COOKIES=${cookiesFile} não existe, ignorando.\n`);
+  }
   for (const id of ids) {
     let ok = false;
-    // Caminho primario: ponte Python (youtube-transcript-api). Ver o cabecalho de
-    // scripts/yt-subs.py para o motivo. Desliga com YT_DOWNLOADER=yt-dlp.
+    // Caminho primario: ponte Python (youtube-transcript-api).
     if (usePyBridge && existsSync(pyBridge)) {
-      const py = spawnSync('python', [pyBridge, ctx.rawDir, id, 'pt,pt-PT,en'], { encoding: 'utf8' });
+      const pyArgs = [pyBridge, ctx.rawDir, id, langsList.join(',')];
+      if (cookiesFile) pyArgs.push('--cookies', cookiesFile);
+      const py = spawnSync('python', pyArgs, { encoding: 'utf8' });
       if (py.status === 0) {
         ok = true;
       } else {
@@ -356,7 +359,7 @@ function download(ctx, ids) {
           if (attempt > 0) setTimeoutSync(5000 * attempt);
           console.log(`[${ctx.label}] baixando subs de ${id} (${lang} @ ${playerClient}) tentativa ${attempt + 1}/${attempts}...`);
           const startedAt = Date.now() - 2000;
-          const r = spawnSync('yt-dlp', [
+          const ytDlpArgs = [
             '--skip-download',
             '--ignore-no-formats-error',
             '--write-auto-sub',
@@ -371,7 +374,9 @@ function download(ctx, ids) {
             '--extractor-args', `youtube:player_client=${playerClient}`,
             '-o', `${ctx.rawDir.replace(/\\/g, '/')}/%(id)s.%(ext)s`,
             `https://www.youtube.com/watch?v=${id}`,
-          ], { encoding: 'utf8' });
+          ];
+          if (cookiesFile) ytDlpArgs.unshift('--cookies', cookiesFile);
+          const r = spawnSync('yt-dlp', ytDlpArgs, { encoding: 'utf8' });
           if (hasFreshVtt(ctx, id, startedAt)) {
             ok = true;
             break;

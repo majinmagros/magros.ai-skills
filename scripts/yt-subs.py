@@ -8,7 +8,7 @@ usa continua entregando as mesmas faixas, entao ela virou o caminho primario do
 comando `download` do yt-oportunidades.mjs (yt-dlp segue como fallback).
 
 Uso:
-    python scripts/yt-subs.py <raw_dir> <video_id> [langs]
+    python scripts/yt-subs.py <raw_dir> <video_id> [langs] [--cookies COOKIES_FILE]
 
 `langs` e uma lista separada por virgula, em ordem de preferencia (default
 "pt,pt-PT,en"). Escreve `<raw_dir>/<id>.<lang>.vtt` no formato WEBVTT que o
@@ -30,14 +30,28 @@ def ts(seconds: float) -> str:
     return f"{h:02d}:{m:02d}:{s:02d}.{ms:03d}"
 
 
-def main() -> int:
-    if len(sys.argv) < 3:
-        print("uso: yt-subs.py <raw_dir> <video_id> [langs]", file=sys.stderr)
-        return 2
-
-    raw_dir, video_id = sys.argv[1], sys.argv[2]
-    raw_langs = sys.argv[3] if len(sys.argv) > 3 else "pt,pt-PT,en"
+def parse_args():
+    """Parse arguments including optional --cookies flag."""
+    args = sys.argv[1:]
+    cookies_file = None
+    if "--cookies" in args:
+        idx = args.index("--cookies")
+        if idx + 1 < len(args):
+            cookies_file = args[idx + 1]
+        args = args[:idx] + args[idx + 2:]
+    if len(args) < 2:
+        print("uso: yt-subs.py <raw_dir> <video_id> [langs] [--cookies COOKIES_FILE]", file=sys.stderr)
+        return None, None, None, None
+    raw_dir, video_id = args[0], args[1]
+    raw_langs = args[2] if len(args) > 2 else "pt,pt-PT,en"
     langs = [lang.strip() for lang in raw_langs.split(",") if lang.strip()]
+    return raw_dir, video_id, langs, cookies_file
+
+
+def main() -> int:
+    raw_dir, video_id, langs, cookies_file = parse_args()
+    if raw_dir is None:
+        return 2
 
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
@@ -49,11 +63,15 @@ def main() -> int:
         )
         return 1
 
+    # youtube-transcript-api suporta cookies via YT_COOKIES env var ou param
+    if cookies_file:
+        os.environ["YT_COOKIES"] = cookies_file
+
     api = YouTubeTranscriptApi()
 
     try:
         available = {t.language_code for t in api.list(video_id)}
-    except Exception as exc:  # noqa: BLE001 - qualquer falha vira mensagem curta
+    except Exception as exc:  # noqa: BLE001
         print(f"list falhou: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1
 
