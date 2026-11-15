@@ -21,7 +21,7 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 ## Conteúdo
 
-- **510 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
+- **511 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
 - **425** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
 - **85 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
@@ -128,6 +128,21 @@ Enrichments da rodada: `automacao-deterministica` (+verify/cost-gate/idempotency
 | `saas-to-vps-coolify` | Migra SaaS para VPS Coolify com conta feita: matriz de custo, catálogo app+DB+fila, sizing KVM validado, backup, quando NÃO migrar. | devops-infra |
 
 Enrichments da auditoria: `agent-harness-construction` (+guides-vs-sensors, diagnóstico 3 camadas, AGENTS.md-índice), `claude-md-auditor` (+ponte índice/lookup), `grokbot-team-ops` (+receita AgentMail inbox-do-bot), `routines` (+cross-link AgentMail).
+
+### Autorais — leva YouTube rodada 6 (2026-11-15, +2 vídeos analisados)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `criar-skill` (enriquecida) | **+ Referência NotebookLM Skill Factory**: caderno Gemini Notebook com 5 guias oficiais + System Prompt customizado; Fast Research nativo; Template 3 pilares (Modelo Alvo + Objetivo + Input Runtime) → saída completa para `skills/<nome>/SKILL.md` ou painel nativo. Ver `references/notebooklm-skill-factory.md`. | workflow-quality |
+
+**Oportunidades identificadas (pendentes de implementação):**
+- `fable52-benchmark-runner` — Bateria automatizada Frontier Code/SWE, OS World, Chartography, Robo Dojo com relatório comparativo
+- `computer-use-orchestrator` — Orquestra 1000+ sub-agentes Fable para tarefas massivas (formalização Lean, world-building 3D)
+- `mythos-access-checker` — Verifica elegibilidade org para Mythos 5.2 + fallback para Fable
+- `voice-assistant-hub-generator` — Gera hub de assistente de voz funcional (demo Anthropic)
+- `security-overrefusal-tracker` — Monitora redução over-refusal (Cyber -60%, Bio -40%, geral -55%)
+
+*9 vídeos pendentes por rate limit YouTube 429 — reprocessar quando cota resetar.*
 
 ### Redundância reconciliada (3 variantes PT mantidas)
 
