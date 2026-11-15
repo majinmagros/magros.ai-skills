@@ -80,6 +80,11 @@ exemplo nos `references/` — muito mais preciso do que especificar no vácuo.
   confirme a disponibilidade atual antes de usar. Use SÓ quando não houver
   conector oficial — navegação por browser quebra quando o layout muda.
 - **Manual**: você mesmo estrutura o arquivo (útil para refinar/editar).
+- **NotebookLM Skill Factory** (Joaquín Barberá): caderno Gemini Notebook
+  carregado com guias oficiais de 3 plataformas + System Prompt customizado.
+  Fast Research nativo enriquece contexto → 3 pilares de input
+  (modelo-alvo, objetivo, dados-runtime) → saída completa pronta para
+  `skills/<nome>/SKILL.md` ou painel nativo. Ver `references/notebooklm-skill-factory.md`.
 
 ## 3. Estrutura de uma skill (DBS + 3 camadas)
 
