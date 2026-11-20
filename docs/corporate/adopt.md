@@ -4,7 +4,7 @@
 
 ## Por que referência
 
-- **510 SKILL.md validados** (`node scripts/ci/count-skills.js` fonte única, 425 herdadas + 85 autorais), `validate-skills --strict` + `validate-no-personal-paths` em CI.
+- **515 SKILL.md validados** (`node scripts/ci/count-skills.js` fonte única, 426 herdadas + 89 autorais), `validate-skills --strict` + `validate-no-personal-paths` em CI.
 - **TrustScore interno** `scripts/ci/validate-trustscore.js` (Security 40 / Quality 60, gate 70, faixas 90/75/60/40/0, penalidades crítico -20/alto -10/médio -3/baixo -1) — sem depender de serviço externo.
 - **Processo vivo**: coleta semanal YouTube (`scripts/yt-oportunidades.mjs catalog-all/diff-all --since-last`) já prova atualização; `OPORTUNIDADES-2026-08-20.md` local documenta `collect→enrich→validate` sem gerar redundância (cruzamento prévio com 344).
 - **Sem lock-in de registry**: skills são Markdown + `SKILL.md` ≤200 linhas, `description` <1024 com `[o que faz] + [Use quando] + [NÃO use]` — portáveis para qualquer harness (Claude, Codex, Cursor, OpenCode).
@@ -17,7 +17,7 @@
 
 ## Passos de adoção (3 dias)
 
-1. **Dia 1 — Inventário**: `node scripts/ci/count-skills.js` → confirme 344; `validate-trustscore.js` sem `--strict` (advisory, 7 falsos-positivos em exemplos `sk_live` são esperados) ; `validate-no-personal-paths`.
+1. **Dia 1 — Inventário**: `node scripts/ci/count-skills.js` → confirme 515; `validate-trustscore.js` sem `--strict` (advisory, 7 falsos-positivos em exemplos `sk_live` são esperados) ; `validate-no-personal-paths`.
 2. **Dia 2 — Piloto squad**: instale `triagem-bug` + `doctor` em 1 repo, rode `doctor` em cópia, meça `context-budget` (ex.: 37k para "Hi" → corte 90% com progressive disclosure).
 3. **Dia 3 — Promoção**: gere `docs/data/skills-registry.json` (hashes) e publique release com `manifests/install-modules.json` versionado.
 

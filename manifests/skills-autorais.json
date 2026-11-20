@@ -3,6 +3,7 @@
   "description": "Fonte unica de verdade das skills autorais (escritas/adaptadas pelo autor do repo, fora do bundle ECC). Gerada a partir dos commits de autoria (git log, excluido o import do bundle).",
   "skills": [
     "agent-misbehavior-controls",
+    "agent-safety-guards",
     "agentic-benchmark-top5",
     "analise-concorrentes",
     "anti-hallucination",
@@ -28,6 +29,7 @@
     "convergencia",
     "conversa",
     "coordenacao",
+    "context-handoff-compact",
     "criar-campanha-visual",
     "criar-skill",
     "criatividade",
@@ -38,6 +40,7 @@
     "doctor",
     "drive-screen-os-control",
     "encontrar-skill",
+    "fable-5-prompt-workflow",
     "financiamento-imobiliario",
     "funil-cro-watch",
     "gauntlet-loop",
@@ -72,6 +75,7 @@
     "saas-to-vps-coolify",
     "sast-gate-pr",
     "self-improvement-ladder",
+    "score-loop",
     "sessoes-orquestradas",
     "skill-execution-dashboard",
     "skill-map",
@@ -85,6 +89,7 @@
     "ugc-seedance-talking-head",
     "vercel-eve-filesystem",
     "vibe-security-scanner",
+    "video-editor-claude-code",
     "workflows",
     "youtube-packaging"
   ]

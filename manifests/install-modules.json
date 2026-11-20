@@ -442,6 +442,7 @@
         "skills/defuddle-leitura-limpa",
         "skills/caveman-saida-enxuta",
         "skills/codebase-mapa-indexado",
+        "skills/context-handoff-compact",
         "skills/system-one-judgment-triage"
       ],
       "targets": [
@@ -511,6 +512,7 @@
       "description": "Security review, automated scanning (ZAP, GitLeaks, Bandit, OpenGrype), and security-focused framework guidance.",
       "paths": [
         "skills/agent-guardrails",
+        "skills/agent-safety-guards",
         "skills/defi-amm-security",
         "skills/django-security",
         "skills/healthcare-phi-compliance",
@@ -532,11 +534,11 @@
         "skills/healthcare-emr-patterns",
         "skills/healthcare-eval-harness",
         "skills/safety-guard",
-        "skills/vibe-security-scanner",
         "skills/sast-gate-pr",
         "skills/agent-misbehavior-controls",
         "skills/claude-safety-monitoring-window",
-        "skills/claude-zero-retention-frontier"
+        "skills/claude-zero-retention-frontier",
+        "skills/vibe-security-scanner"
       ],
       "targets": [
         "claude",
@@ -838,7 +840,8 @@
         "skills/multi-source-researcher",
         "skills/post-production-pipeline",
         "skills/repurpose-shorts-dm-funnel",
-        "skills/ugc-seedance-talking-head"
+        "skills/ugc-seedance-talking-head",
+        "skills/video-editor-claude-code"
       ],
       "targets": [
         "claude",
@@ -1008,7 +1011,8 @@
         "skills/google-adk-patterns",
         "skills/vercel-eve-filesystem",
         "skills/software-factory-orchestrator",
-        "skills/claude-code-mods"
+        "skills/claude-code-mods",
+        "skills/fable-5-prompt-workflow"
       ],
       "targets": [
         "claude",

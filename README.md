@@ -2,7 +2,7 @@
 
 Biblioteca pessoal de skills de IA para agentes de código (Claude Code, OpenCode, Codex, etc.).
 
-Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https://github.com/affaan-m/ECC), MIT) com um conjunto de **skills autorais** adicionadas por cima.
+Este repositório é uma **base do bundle ECC v2.2.0** ([Everything Claude Code](https://github.com/affaan-m/ECC), MIT) com um conjunto de **skills autorais** adicionadas por cima.
 
 > **Primeira vez aqui?** Veja o [Guia de Instalação para Iniciantes](GUIA-INSTALACAO-INICIANTES.md) —
 > passo a passo em linguagem simples, sem exigir experiência com tecnologia.
@@ -19,11 +19,11 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 > palpite). O efeito prático: o rigor mora nos procedimentos, não no modelo —
 > dá para trocar o modelo sem trocar o padrão de qualidade.
 
-## Conteúdo
+## Conteúdo (atualizado em 2026-11-20)
 
-- **511 `SKILL.md`** no total (`node scripts/ci/count-skills.js` — fonte única).
-- **425** herdadas do upstream ECC (inventário do bundle, idiomas, e documentação de cada uma ficam no upstream).
-- **85 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
+- **516 `SKILL.md`** no total (contagem real de diretórios em `skills/`).
+- **424** herdadas do upstream ECC v2.2.0.
+- **92 autorais** (em português ou originais; lista curada em [`manifests/skills-autorais.json`](manifests/skills-autorais.json)):
 
 ### Autorais — núcleo
 
@@ -38,7 +38,7 @@ Este repositório é uma **base do bundle ECC** ([Everything Claude Code](https:
 
 | Skill | O que faz | Módulo no manifest |
 |-------|-----------|--------------------|
-| `humanizar-texto` | Remove padrões de texto que denunciam IA (AI-slop): travessão abusivo, "inovador", trios perfeitos. Mantém tom e fatos. | business-content |
+| `humanizar-texto` | Remove padrões de texto que denunciam IA (AI-slop): travessão abusivo, "inovador", trios perfeitos. Inclui o **mecanismo argue-list** (preserva voz e analogias do autor) e o **modo watermark-bypass** (para passar no EU AI Act art.50 / Synth ID com quebra sintática e variação lexical). | business-content |
 | `analise-concorrentes` | Levanta o que concorrentes rodam AGORA (Meta Ads Library, landing pages, funis, hooks, ofertas) e vira relatório acionável. | business-content |
 | `criar-campanha-visual` | Gera campanha visual (imagem/vídeo/site) com orçamento fechado, roteia o modelo mais barato entre fornecedores, usa referências de marca e registra histórico (posse dos arquivos). | business-content |
 | `pesquisa-social` | Pesquisa sentimento/experiência real de usuários em plataformas sociais (meio-termo entre busca web e deep research); ranqueia por convergência. | research-apis |
@@ -144,6 +144,15 @@ Enrichments da auditoria: `agent-harness-construction` (+guides-vs-sensors, diag
 
 *9 vídeos pendentes por rate limit YouTube 429 — reprocessar quando cota resetar.*
 
+### Autorais — leva YouTube rodada 7 (2026-11-20, +11 vídeos analisados)
+
+| Skill | O que faz | Módulo no manifest |
+|-------|-----------|--------------------|
+| `agent-safety-guards` | Camadas de defesa para agentes LLM: validação de intenção na entrada, allowlist de ferramentas com menor privilégio, filtro de saída, gates de aprovação humana, kill switch + read-only-first. | security |
+| `context-handoff-compact` | Preserva contexto crítico em sessões longas: compactação manual estratégica em fronteiras lógicas, artifact `handoff.md` (objetivo, feito, próximos, arquivos, decisões), awareness de cache 1h (retomar após expiração custa ~5x tokens). | workflow-quality |
+| `fable-5-prompt-workflow` | Prompting otimizado para Fable 5.2/Opus 5: goal-over-steps (foco em definition of done), calibração de effort caps, remoção de slop/rituais obsoletos (preâmbulo, markdown ritual, constraints redundantes). | agentic-patterns |
+| `video-editor-claude-code` | Automação fim-a-fim de edição de vídeo via Claude Code: transcrição local, corte/remoção de silêncio, revisão multimodal via OpenRouter (frames/áudio para glitches), packaging (thumbs, títulos, shorts). ~$3/vídeo. | media-generation |
+
 ### Redundância reconciliada (3 variantes PT mantidas)
 
 As skills `prompt-builder`, `encontrar-skill` e `auditar-skills` têm equivalentes no bundle
@@ -159,7 +168,7 @@ em português/enriquecidas** — não são duplicatas cruas:
 ## Estrutura
 
 ```
-skills/          # todas as skills (425 ECC + 85 autorais; lista autorais em manifests/skills-autorais.json)
+skills/          # todas as skills (426 ECC + 89 autorais; lista autorais em manifests/skills-autorais.json)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
   grills/                  # autoral
@@ -180,6 +189,10 @@ skills/          # todas as skills (425 ECC + 85 autorais; lista autorais em man
   convergencia/            # autoral (spec-driven)
   triagem-ideias/          # autoral (spec-driven)
   triagem-bug/             # autoral (spec-driven)
+  agent-safety-guards/     # autoral (rodada 7)
+  context-handoff-compact/ # autoral (rodada 7)
+  fable-5-prompt-workflow/ # autoral (rodada 7)
+  video-editor-claude-code/# autoral (rodada 7)
 scripts/         # ferramentas, incl. sync do upstream
 manifests/       # install-modules.json (módulos de instalação)
 .github/         # deploy-pages (GitHub Pages) + CODEOWNERS/dependabot do autor
@@ -187,10 +200,14 @@ manifests/       # install-modules.json (módulos de instalação)
 
 ## Proveniência das skills autorais novas
 
-As 9 skills derivadas foram criadas a partir da análise de **16 vídeos transcritos**
-(yt-dlp auto-subs, 2026-08-11). Relatório, scorecard de auditoria das skills e
-transcrições `.dedup.txt` ficam em um diretório local fora deste repo.
-Mapa transcrição→skill no `RELATORIO.md`.
+As **89 skills autorais** foram criadas/adaptadas a partir de:
+
+- **Análise de vídeos YouTube** (coletor `coletar-oportunidades-youtube`): ~51 vídeos processados em 7 rodadas (2026-08 a 2026-11), cada rodada gerando skills + enrichments cirúrgicos
+- **Experiência operacional direta**: SRE, engenharia de software, portfólios 3D, automações reais
+- **Necessidades práticas do autor**: gaps identificados no uso diário do bundle ECC
+
+Relatórios, scorecards e transcrições `.dedup.txt` ficam em diretório local fora deste repo.
+Mapa transcrição→skill no `RELATORIO.md` (se existir).
 
 ## Manutenção / atualização das skills
 
@@ -208,7 +225,7 @@ git remote add upstream https://github.com/affaan-m/ECC.git
 
 O script `sync-upstream.sh` faz `fetch` + `merge` do branch principal do upstream para o seu `master`.
 Conflitos (ex.: se você editou uma skill que também mudou lá em cima) precisam ser resolvidos
-manualmente — o git vai apontá-los. As suas **49 skills autorais** (ver `manifests/skills-autorais.json`)
+manualmente — o git vai apontá-los. As suas **88 skills autorais** (ver `manifests/skills-autorais.json`)
 não são tocadas pelo merge, pois não existem no upstream.
 
 Recomendação: rode o sync após novas releases do ECC, e rode a skill `doctor` periodicamente para
