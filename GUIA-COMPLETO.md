@@ -71,8 +71,8 @@ npm install
 
 Para ver todas as opções: `./install.sh --help`.
 
-> **Configurar o 9router + opencode do zero** (roteador grátis de IA, API keys,
-> conexão e troubleshooting): veja o [`GUIA-9ROUTER-OPENCODE.md`](GUIA-9ROUTER-OPENCODE.md).
+> **Configurar o opencode do zero** (instalação, modelos grátis, API keys e
+> conexão): veja o [`GUIA-OPENCODE.md`](GUIA-OPENCODE.md).
 
 ## 3. Como saber se instalou certo
 

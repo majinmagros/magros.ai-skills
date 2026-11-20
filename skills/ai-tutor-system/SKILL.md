@@ -73,3 +73,13 @@ Detalhe 2D/3D: ver `references/pipeline.md` Etapas 3b-3c (mindmap/quiz via Noteb
 ## Modo tour-apresentacao (leva YouTube rodada 9)
 
 Sobre o modo cidade-3D/mindmap: camada de apresentacao guiada por ilha (progressao, velocidade, edges de fluxo 3D, nota ELI12 por no). Tour nao e exploracao livre: tour tem roteiro, checkpoint e quiz por ilha.
+
+## Modo light speed learning (leva YouTube 2026-10-15)
+
+Fonte: Maestros da IA `@maestrosdaia/oDKKrBzMe2g` ("Como Aprender Qualquer Coisa 10x Mais Rápido Usando IA", 2026-10-08). Leitura dinâmica aplicada: 1 conceito a fundo em 2–5 min com retenção.
+
+- **4 slides por conceito**: (1) definição + analogia + exemplos práticos; (2) vídeo narrado nó a nó (diagrama + TTS, ex. 11 Labs/clone de voz); (3) imagem ilustrativa gerada; (4) exame oral de 3 perguntas.
+- **Conversacional**: dúvida a qualquer momento após o slide 1; comando "fique quietinho" pausa o fluxo.
+- **Exame**: 3 certas = aprovado; errou = continua ensinando, corrige, follow-up, mostra gabarito e deixa refazer.
+- **Latência escondida**: gera vídeo (~16–18s) e imagens em background enquanto você lê o slide 1; resposta por voz suportada.
+- **Harness-agnóstico**: Claude Code, Codex, Cursor, DeepSeek, Pi, Hermes. Casos: entender um conceito rápido antes de reunião/vídeo/relatório.
