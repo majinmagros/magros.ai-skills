@@ -576,7 +576,8 @@
         "skills/scientific-thinking-scholar-evaluation",
         "skills/documentation-lookup",
         "skills/pesquisa-social",
-        "skills/auditoria-cientifica-ia"
+        "skills/auditoria-cientifica-ia",
+        "skills/rea-reverse-engineering"
       ],
       "targets": [
         "claude",
@@ -635,7 +636,10 @@
         "skills/funil-cro-watch",
         "skills/proposta-comercial-auto",
         "skills/cartao-pontos-optimizer",
-        "skills/junior-seniorizado-playbook"
+        "skills/junior-seniorizado-playbook",
+        "skills/carrossel-autopilot",
+        "skills/explicacao-em-degraus",
+        "skills/chatgpt-work-dot-team"
       ],
       "targets": [
         "claude",
@@ -834,6 +838,8 @@
         "skills/video-cut-pipeline",
         "skills/hyperframes-codex-video",
         "skills/youtube-packaging",
+        "skills/youtube-channel-autopilot",
+        "skills/gemini-notebook-video",
         "skills/ai-media-generator",
         "skills/manga-generator",
         "skills/episode-planner-and-script",
@@ -968,9 +974,13 @@
         "skills/gemini-cli-agent-skills",
         "skills/roteamento-modelos-baratos",
         "skills/roteamento-modelos-gratuitos",
-        "skills/9router-gateway",
-        "skills/9router-resilient-fallback",
         "skills/game-npc-ai-integration",
+        "skills/agentes-proativos-duraveis",
+        "skills/approval-rejection-board",
+        "skills/elephant-goldfish-review",
+        "skills/jev-realtime-ui",
+        "skills/monitor-novidades-ia",
+        "skills/claude-code-mods",
         "skills/meta-muse-spark",
         "skills/engenharia-de-grafos",
         "skills/score-loop",
@@ -1011,7 +1021,6 @@
         "skills/google-adk-patterns",
         "skills/vercel-eve-filesystem",
         "skills/software-factory-orchestrator",
-        "skills/claude-code-mods",
         "skills/fable-5-prompt-workflow"
       ],
       "targets": [
