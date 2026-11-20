@@ -47,3 +47,4 @@ description: Transforma video longo em shorts com funil de DM por palavra-chave,
 - `autopilot-content-factory` — factory de conteúdo gerado.
 - `dm-keyword-automation` — automação de DM por keyword.
 - `youtube-packaging` — embalagem para Youtube Shorts.
+- `youtube-channel-autopilot` — quando o objetivo é canal de busca em cadência (5+/dia), não funil de DM.

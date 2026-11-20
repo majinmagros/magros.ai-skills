@@ -47,3 +47,12 @@ dmux
 - [ ] Worktrees created when file overlap is likely
 - [ ] Pane count kept at 5-6 max for token control
 - [ ] Output reviewed before merge; completion signal defined
+
+## Herdr status-aware e multi-maquina (leva YouTube 2026-11-11)
+
+Fonte `LDxan-w2LVw`. O Herdr (repo ~**49k** estrelas) ficou **status-aware**: cada painel
+mostra o estado real do agente (rodando/esperando/erro) lido do session file, inclusive
+status do Codex - pare de inferir pelo scroll. Adicione hosts com `machine add` (SSH) e
+direcione a sessao com `--machine`, para rodar agentes em servidor e nao no laptop.
+Operacao: stagger de ~**100 ms** ao disparar varios paineis (thundering herd) e guarde ate
+**48 snapshots** de layout por sessao para restaurar o arranjo.

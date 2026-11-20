@@ -442,9 +442,8 @@
         "skills/defuddle-leitura-limpa",
         "skills/caveman-saida-enxuta",
         "skills/codebase-mapa-indexado",
-        "skills/system-one-judgment-triage",
-        "skills/claude-code-mods",
-        "skills/approval-rejection-board"
+        "skills/context-handoff-compact",
+        "skills/system-one-judgment-triage"
       ],
       "targets": [
         "claude",
@@ -513,6 +512,7 @@
       "description": "Security review, automated scanning (ZAP, GitLeaks, Bandit, OpenGrype), and security-focused framework guidance.",
       "paths": [
         "skills/agent-guardrails",
+        "skills/agent-safety-guards",
         "skills/defi-amm-security",
         "skills/django-security",
         "skills/healthcare-phi-compliance",
@@ -534,11 +534,11 @@
         "skills/healthcare-emr-patterns",
         "skills/healthcare-eval-harness",
         "skills/safety-guard",
-        "skills/vibe-security-scanner",
         "skills/sast-gate-pr",
         "skills/agent-misbehavior-controls",
         "skills/claude-safety-monitoring-window",
-        "skills/claude-zero-retention-frontier"
+        "skills/claude-zero-retention-frontier",
+        "skills/vibe-security-scanner"
       ],
       "targets": [
         "claude",
@@ -576,7 +576,8 @@
         "skills/scientific-thinking-scholar-evaluation",
         "skills/documentation-lookup",
         "skills/pesquisa-social",
-        "skills/auditoria-cientifica-ia"
+        "skills/auditoria-cientifica-ia",
+        "skills/rea-reverse-engineering"
       ],
       "targets": [
         "claude",
@@ -635,7 +636,10 @@
         "skills/funil-cro-watch",
         "skills/proposta-comercial-auto",
         "skills/cartao-pontos-optimizer",
-        "skills/junior-seniorizado-playbook"
+        "skills/junior-seniorizado-playbook",
+        "skills/carrossel-autopilot",
+        "skills/explicacao-em-degraus",
+        "skills/chatgpt-work-dot-team"
       ],
       "targets": [
         "claude",
@@ -697,8 +701,7 @@
         "skills/meeting-task-listener",
         "skills/telegram-channel-operator",
         "skills/meeting-brief-pre-read",
-        "skills/health-coach-wearables",
-        "skills/monitor-novidades-ia"
+        "skills/health-coach-wearables"
       ],
       "targets": [
         "claude",
@@ -835,13 +838,16 @@
         "skills/video-cut-pipeline",
         "skills/hyperframes-codex-video",
         "skills/youtube-packaging",
+        "skills/youtube-channel-autopilot",
+        "skills/gemini-notebook-video",
         "skills/ai-media-generator",
         "skills/manga-generator",
         "skills/episode-planner-and-script",
         "skills/multi-source-researcher",
         "skills/post-production-pipeline",
         "skills/repurpose-shorts-dm-funnel",
-        "skills/ugc-seedance-talking-head"
+        "skills/ugc-seedance-talking-head",
+        "skills/video-editor-claude-code"
       ],
       "targets": [
         "claude",
@@ -940,6 +946,7 @@
         "skills/data-scraper-agent",
         "skills/dynamic-workflow-mode",
         "skills/enterprise-agent-ops",
+        "skills/enterprise-ai-readiness",
         "skills/nanoclaw-repl",
         "skills/prompt-optimizer",
         "skills/ralphinho-rfc-pipeline",
@@ -968,6 +975,12 @@
         "skills/roteamento-modelos-baratos",
         "skills/roteamento-modelos-gratuitos",
         "skills/game-npc-ai-integration",
+        "skills/agentes-proativos-duraveis",
+        "skills/approval-rejection-board",
+        "skills/elephant-goldfish-review",
+        "skills/jev-realtime-ui",
+        "skills/monitor-novidades-ia",
+        "skills/claude-code-mods",
         "skills/meta-muse-spark",
         "skills/engenharia-de-grafos",
         "skills/score-loop",
@@ -1008,8 +1021,7 @@
         "skills/google-adk-patterns",
         "skills/vercel-eve-filesystem",
         "skills/software-factory-orchestrator",
-        "skills/chatgpt-work-dot-team",
-        "skills/agentes-proativos-duraveis"
+        "skills/fable-5-prompt-workflow"
       ],
       "targets": [
         "claude",

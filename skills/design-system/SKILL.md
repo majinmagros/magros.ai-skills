@@ -67,3 +67,11 @@ Identifies generic AI-generated design patterns:
 ## Contrato design-system.md + AGENTS.md (leva YouTube rodada 10)
 
 Template: design/designsystem.md com pilares (layout/cores/fontes) + AGENTS.md apontando para ele + gate "leia o MD antes de qualquer UI" (leitura via file-read por performance, nao so MCP) + tabela de traducao design-para-codigo por projeto.
+
+## Figma MCP e design-system.md no spec-driven (leva YouTube 2026-11-11)
+
+Fonte `ltarNdgEw0E`. No fluxo spec-driven o design system e **artefato de entrada**: o
+`design-system.md` (tokens, tipografia, espacamento, componentes) e lido antes de gerar
+UI e atualizado ao fim de cada onda. Com **Figma MCP**, puxe tokens/estrutura do arquivo
+em vez de descrever no prompt; o codigo gerado referencia os mesmos nomes. Gate: PR de UI
+que muda token/componente sem diff de `design-system.md` e PR incompleto.

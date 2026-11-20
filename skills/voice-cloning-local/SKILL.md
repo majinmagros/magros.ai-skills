@@ -1,6 +1,6 @@
 ---
 name: voice-cloning-local
-description: Use when cloning a voice locally (offline, free, no API) from 3 seconds of reference audio with Qwen3-TTS. Triggers on "clonar voz local", "voice clone offline", "alternativa ElevenLabs grátis", "Qwen3-TTS", "TTS local Apache 2.0".
+description: Use when cloning a voice locally (offline, free, no API) from 3 seconds of reference audio with Qwen3-TTS, or when comparing free open-source voice stacks (Voice Studio adds video dubbing). Triggers on "clonar voz local", "voice clone offline", "alternativa ElevenLabs grátis", "Qwen3-TTS", "Voice Studio", "dublar vídeo de graça", "TTS local Apache 2.0".
 metadata:
   origin: ECC
   validated: 2026-08-22
@@ -63,3 +63,26 @@ Regras: `ref_text` = match EXATO do áudio (crítico p/ qualidade); ref limpo 10
 ### 3. Web UI local (`http://localhost:7861`, modelo em cache)
 
 ```bash
+python scripts/web_clone_server.py   # FastAPI + UI; carrega o modelo UMA vez
+```
+
+Fluxo: solta o `ref.wav` no navegador, cola/grava o texto, clona. Bom para
+testar uma voz antes de rodar batch.
+
+### 4. Alternativa: Voice Studio (grátis, open source, com dublagem)
+
+`github.com/debpalash/VoiceStudio` (AGPL-3.0, ~97k estrelas, `voicestudio.sh`):
+ElevenLabs local — clona voz, gera áudio e **dubla vídeo de um idioma para
+outro** com a voz clonada, tudo na máquina. O @maestrosdaia testou em PT-BR e
+chamou o resultado de surpreendente, com uma ressalva honesta: **não é melhor
+que as opções pagas** — eles seguem pagando (~US$100/mês) nos projetos sérios.
+Vale quando o requisito é ilimitado e grátis: VPS, pipeline 24h, 100 vídeos/dia.
+
+| Critério | Qwen3-TTS (esta skill) | Voice Studio |
+|---|---|---|
+| Clone + TTS | sim, script/API | sim, com UI |
+| Dublar vídeo inteiro | não | **sim** |
+| Licença | Apache 2.0 | AGPL-3.0 (copyleft de rede) |
+| Qualidade vs pago | boa | boa, abaixo do pago |
+
+Detalhes, licença e quando escolher cada um: `references/voice-studio.md`.

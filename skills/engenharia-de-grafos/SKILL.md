@@ -1,6 +1,6 @@
 ---
 name: engenharia-de-grafos
-description: Engenharia de Grafos (Graph Engineering) — decompor um objetivo em tarefas paralelas que executam simultaneamente e convergem para um único resultado, com verificadores independentes por ramo, e iterar até uma nota mínima quando houver candidatos ranqueáveis. Use quando várias sub-tarefas independentes podem rodar ao mesmo tempo (pesquisa de fontes múltiplas, geração em volume, coleta paralela, thumbnails/variantes) e precisam convergir em um único entregável, em vez de uma execução sequencial uma-de-cada-vez. Também cobre a decisão de NÃO usar grafo (anti-overengineering) e a relação loop-como-nó-de-grafo. Triggers on "graph engineering", "engenharia de grafos", "orquestrar agentes em paralelo", "verificar em paralelo", "grafos", "gerar candidatos", "rankear", "nota 80", "pipeline", "dynamic workflow".
+description: Engenharia de Grafos (Graph Engineering) — decompor um objetivo em tarefas paralelas que executam simultaneamente e convergem para um único resultado, com verificadores independentes por ramo, e iterar até uma nota mínima quando houver candidatos ranqueáveis. Use quando várias sub-tarefas independentes podem rodar ao mesmo tempo (pesquisa de fontes múltiplas, geração em volume, coleta paralela, thumbnails/variantes) e precisam convergir em um único entregável, em vez de uma execução sequencial uma-de-cada-vez. Também cobre a decisão de NÃO usar grafo (anti-overengineering) e a relação loop-como-nó-de-grafo. Triggers on "graph engineering", "engenharia de grafos", "orquestrar agentes em paralelo", "verificar em paralelo", "grafos", "gerar candidatos", "rankear", "nota 80", "pipeline", "dynamic workflow", "arena de candidatos", "verificado vs nao verificado".
 metadata:
   origin: ECC
 ---
@@ -44,6 +44,15 @@ Transforme um pipeline sequencial lento em um grafo de execução paralela: vár
 | mínimo de candidatos | 3 por elemento |
 | máximo de iterações | 3 |
 
+**Combinação verificada (padrão Arena)**: quando dois candidatos ficam próximos,
+escolha um como base, traga as ideias boas dos outros e **rode a verificação de
+novo no resultado combinado**. Combinar sem reverificar é o mesmo que não ter
+verificado — o híbrido herda defeito dos dois lados.
+
+**Não verificado ≠ aprovado**: no relatório final, o que o verificador não
+conseguiu checar entra explicitamente como `não verificado`. Checagem inacabada
+virando passe silencioso é o furo clássico de fan-out.
+
 ## Loop como nó de grafo (relação, não oposição)
 
 Loop e grafo **não são excludentes**: um nó do grafo pode ser um loop (ex.: um ramo que precisa iterar até atingir condição antes de convergir). Loop = uma tarefa sequencial com condição de conclusão; grafo = orquestração de fluxos paralelos. Use grafo quando houver paralelismo real; use loop dentro do nó quando aquele ramo precisar refinar até passar.
@@ -71,3 +80,12 @@ Grafo: 5 ramos isolados (coleta+verificador próprio) → convergem p/ síntese
 Loop-no-nó: thumbnails geradas em volume, rankeadas até nota >= 80
 Não-grafo: resumir 1 vídeo curto (sequencial simples resolve)
 ```
+
+## Tres tipos de grafo e memoria em 3 camadas (leva YouTube 2026-11-11)
+
+Fonte `r8JueeaKJ9w` (Maestros da IA). Diferencie o desenho: grafo de **dados/fluxo**,
+grafo de **agentes** (delegacao) e grafo de **verificacao** (checagens em paralelo) - nao
+use o mesmo desenho para os tres. Memoria em **3 camadas** (sessao, projeto, conhecimento
+duravel) para o agente nao recarregar tudo. **Scripts deterministicos como gates** entre
+nos: o que e regra (formato, schema, limite) vira filtro executavel, nao pedido em prompt;
+nos que exigem aprovacao humana ficam explicitos no grafo.

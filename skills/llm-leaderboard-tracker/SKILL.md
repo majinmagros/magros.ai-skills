@@ -100,3 +100,10 @@ medicao de autor ate confirmacao oficial)
 - Nota crítica aplicada: HF Open LLM Leaderboard **aposentado em 2025** →
   não usado como fonte agregada; usado LMArena + leaderboards comunitários.
 - Diff real: detectaria `NOVO` / `CRUZOU-LIMIAR` ao re-snapshotar.
+
+## Watchlist: Kimi K3.1 Pro (leva YouTube 2026-11-11)
+
+Fonte `mjMJzCUJjMo`. Entrou na watchlist **Kimi K3.1 Pro** (Moonshot): testado a mao em
+tarefa longa (~**41 min** de execucao) com resultado utilizavel; ainda sem posicao de topo
+agregada, entao entra como `MONITORAR` ate cruzar limiar em benchmark reproduzivel. Regra:
+nao promover por demo de video - exigir 2 fontes + re-snapshot antes de subir no ranking.

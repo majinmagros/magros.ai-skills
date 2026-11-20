@@ -80,6 +80,11 @@ exemplo nos `references/` — muito mais preciso do que especificar no vácuo.
   confirme a disponibilidade atual antes de usar. Use SÓ quando não houver
   conector oficial — navegação por browser quebra quando o layout muda.
 - **Manual**: você mesmo estrutura o arquivo (útil para refinar/editar).
+- **NotebookLM Skill Factory** (Joaquín Barberá): caderno Gemini Notebook
+  carregado com guias oficiais de 3 plataformas + System Prompt customizado.
+  Fast Research nativo enriquece contexto → 3 pilares de input
+  (modelo-alvo, objetivo, dados-runtime) → saída completa pronta para
+  `skills/<nome>/SKILL.md` ou painel nativo. Ver `references/notebooklm-skill-factory.md`.
 
 ## 3. Estrutura de uma skill (DBS + 3 camadas)
 
@@ -121,3 +126,11 @@ Fonte: SimonScrapes `e7TY56-yIvM` ("Everything You Know About Skills IS OUTDATED
 9. **Portabilidade (day-one)** — nunca assuma ferramenta instalada (a skill funciona na sua máquina porque você instalou a lib há 6 meses e esqueceu). Coloque a linha de install ao lado de cada script — se já instalado, o modelo pula.
 
 **Auditoria rápida:** percorra `.claude/skills`, ache refs >100 linhas sem índice, refs aninhadas, checklists ausentes em fluxo ordenado, scripts sem install line, frontmatter sem modelo-alvo — corrija antes de criar skill nova.
+## Placement: global vs por projeto (leva YouTube 2026-11-11)
+
+Fonte `nt7PYzjL6P8`. Antes de escrever, decida o **lugar**: skill **global**
+(`~/.claude/skills`) para o que vale em qualquer repo (fluxo, voz, QA) e skill **do
+projeto** (`.claude/skills`, versionada) para o que depende de dominio/stack/contrato
+local. Skill de projeto e artefato de engenharia: entra no PR e evolui com o codigo; skill
+global e preferencia pessoal e nao deve carregar contexto de um cliente. Duplicar nos dois
+lugares e o erro mais comum - escolha um e referencie o outro.

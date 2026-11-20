@@ -103,3 +103,10 @@ Caveat: testa o loop no OpenRouter antes (tool-use pode quebrar fora da Anthropi
   24/24 pass e cortou 61% custo / 37% tempo vs Opus 5.5 puro (TerminalBench
   v4, openagents 23/09). Regra: Jev decide, Sol executa volume, forte verifica.
 |---|---|---|
+## Kimi K3.1 Pro como workhorse (leva YouTube 2026-11-11)
+
+Fonte `mjMJzCUJjMo`. Candidato a **workhorse** a ~metade do custo do Opus 5.5 (US$ 2 vs
+US$ 4 por milhao de tokens de entrada, no teste): sustentou ~**41 min** de execucao
+continua com resultado aceitavel. Posicione como executor barato atras de um verificador
+forte (mesmo padrao Jev/Sol); nao use como decisor unico. Antes de adotar, rode o eval
+suite do projeto - preco baixo nao compensa retrabalho.

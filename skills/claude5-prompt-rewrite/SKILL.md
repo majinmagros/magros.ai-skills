@@ -32,12 +32,22 @@ Auditing `CLAUDE.md`, project instructions, skills, or saved prompts that predat
 
 ```text
 \b(never|always|must|critical|IMPORTANT)\b        → rule 4: positive + reason
+\b[A-Z]{4,}\b                                     → rule 4: CAPS is emphasis, not control
+\b(if possible|se possível|preferencialmente)\b   → decide: requirement or cut it
 \bthink (carefully|step by step)\b               → rule 5: delete, use effort
 \bwalk me through your reasoning\b               → rule 5: delete (refusal risk)
 \bdouble-?check\b|\bverify (with|via|using) a sub-?agent\b → rule 5: delete
 ^Step \d+|^\d+\.\s+[A-Z].*(then|next)\b          → rule 1: steps → goal
 \bdon't use (bullets|bold|tables|jargon)\b       → rule 7: move global / delete
 ```
+
+Why the new two lines: Anthropic's current prompting docs describe the final result
+precisely instead of shouting at the model. CAPS emphasis over-fires the same way
+`never/always` does, and "if possible" quietly turns a requirement into a suggestion —
+the model drops it the moment the task gets busy. Both come from the same cleanup:
+say what the output must be, then stop.
+
+Fonte: Maestros `Go5V8n021sw` (docs oficiais da Anthropic, 2026-10).
 
 ## Appendix: GPT-6 Astra (agrees / differs)
 

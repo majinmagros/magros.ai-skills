@@ -71,3 +71,11 @@ Each phase delegates — it does not do the work inline.
 Gate 1 (humano aprova plano) antes do TDD; gate 2 antes do commit
 Security trigger (auth) → no mínimo standard, mesmo com 2 arquivos
 ```
+## roadmap -> PRD -> spec -> ondas (leva YouTube 2026-11-11)
+
+Fonte `ltarNdgEw0E` (Full Cycle). Encadeie artefatos vivos em vez de um prompt gigante:
+**roadmap -> PRD -> spec -> tasks -> implement**, cada um derivado do anterior e versionado.
+Implemente em **fatias verticais** entregaveis, agrupadas em **ondas** (uma onda = conjunto
+que passa junto), nao por camada horizontal. Fique na **smart zone (~40-60% do contexto)**:
+acima disso a qualidade cai e o certo e compactar/handoff, nao insistir. Docs sao vivos:
+cada onda atualiza PRD/spec; spec que nao bate com o codigo e podada.

@@ -76,3 +76,14 @@ Direção: utilitário denso + escaneável; detalhe memorável = coluna de statu
 Restrições: tokens existentes, a11y, responsivo sem shift de toolbar
 Anti-padrão evitado: hero gigante de landing page num tool de uso diário
 ```
+## Julgamento em 50ms e regra subtrativa (leva YouTube 2026-11-11)
+
+Fonte `IZ5oK4y3Z2o` + `mImbbszCjCI` (Gustavo Campelo, Nate Herk). A impressao de
+"premium" se forma em ~**50 ms** (efeito halo) e a avaliacao rapida quase nao muda depois
+de navegar: o primeiro viewport e o produto. Ordem de construcao: briefing (objetivo/
+publico) -> esboco funcional -> identidade -> **enxugar** -> microinteracoes -> animacao
+por ultimo (site forte funciona sem animacao em device fraco). Regra subtrativa: elemento
+que nao ajuda a decisao sai; IA tende a encher a tela de informacao. Aplique **60-30-10**
+de cor (60% neutro, 30% secundario, 10% acento) e os 5 padroes de Nate (incl. "amostra
+gratis" - entregar valor antes do CTA). Caso medido: variacao de pagina +**79,3%** de
+conversao.

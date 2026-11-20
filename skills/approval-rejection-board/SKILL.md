@@ -1,49 +1,114 @@
 ---
 name: approval-rejection-board
-description: "Painel local de aprovação/rejeição conectado à sessão: N variações, teclas A/R, comentários e digitar terminei para o agente ler o veredito e iterar. Use ao revisar muitas variações antes de decidir ou amplificar. Triggers PT: aprovar rejeitar variações, painel de decisões, terminei, loop de aprovação. Triggers EN: approval board, rejection board, variations review, decision loop."
+description: "Use when training an agent to your taste via batch approve/reject cycles on a visual board (AR-board). Triggers on \"AR board\", \"approval rejection board\", \"aprovacao em lote\", \"approve reject board\", \"treinar agente com aprovacao\", \"10 variacoes\". Non-triggers: single chat approval tokens (use approval-loop-morning-digest), single-artifact browser review (use plan-canvas), per-skill feedback logs (use self-improving-skill). Outcome: batch candidates reviewed with A/R + reasons, session picks up approved IDs on 'terminei', implements, and re-boards until 90%+ approvable."
 metadata:
   origin: ECC
+version: "1.0.0"
 ---
 
-# Approval/Rejection Board — Decisão Humana em Lote
+# Approval-Rejection Board (AR-board)
 
-> Fonte: Maestros da IA `@maestrosdaia/Ckuo9Bvy3zk` ("My Favorite NEW Claude Code Skill", 2026-10-12).
+Train agents to your quality criteria and taste with batch approve/reject
+cycles instead of per-step supervision or fire-and-forget prompts. You
+generate N candidates, review them on a board (A = approve, R = reject,
+plus the reason), say "terminei", and the session picks up exactly what
+was approved — no retyping IDs. Repeat until 90%+ of a board is approvable;
+only then send the agent on a long unattended run.
 
-## Quando usar
+**Core principle:** the most useful training is not the most ambitious
+one — it is the one inside your daily workflow. Ten focused A/R decisions
+beat a 50-page technical report you will never read.
 
-- O agente gerou N variações (10, 50, 500) e você precisa decidir rápido.
-- O gargalo é a decisão, não o prompt: aprovar/rejeitar com critério + feedback.
-- Quer controlar gasto: humano decide antes de o agente amplificar.
+## When To Activate
 
-## Como funciona
+- The user wants 10 variations of something to pick from (hero sections,
+  features, agent-arch improvements, themes, templates, carousels).
+- The user says AR board, approval board, approve/reject, aprovar em lote,
+  "quero escolher", or wants to train an agent to their taste.
+- A refinement loop needs hundreds of micro-decisions (e.g. 500 visual
+  templates) and reading full reports per change is too slow.
+- The agent must learn *why* something was approved/rejected, not just what.
 
-1. O agente sobe um server local + HTML com as variações (conectado à sessão — não é HTML estático).
-2. Você navega e marca com teclas A (aprovar) / R (rejeitar), com comentário do porquê.
-3. Digita "terminei" → o agente lê aprovados/rejeitados + comentários e prossegue.
-4. O server tem timer e morre sozinho — sem processo órfão.
+Do NOT use for: one-shot chat approvals ("approved A1") → `approval-loop-morning-digest`;
+reviewing a single plan artifact in the browser → `plan-canvas`;
+improving the skill itself from run logs → `self-improving-skill`.
 
-## Casos reais (vídeo)
+## Workflow (checklist — order matters)
 
-- 10 topics virais, 10 arquiteturas de agente, 10 microtemplates, 500 variações de carrossel, heroes.
-- Serve para qualquer coisa, não só visual: nome, copy, plano, arquitetura.
+- [ ] 1. Generate a board of N candidates (default N = 10). Each candidate
+  has a stable numeric id (1..N) and is meaningfully different from the
+  others (layout, palette, approach — never 10 near-copies).
+- [ ] 2. Open the board where the human can A/R fast. Any renderer works
+  (HTML file, canvas, chat list); requirement: one keypress/click per
+  verdict (A = approve, R = reject) plus an optional reason per item.
+- [ ] 3. Human reviews: A/R every item, writing the reason when the *why*
+  matters for training ("rejeitei porque parece site tech, não loja de
+  instrumentos"). Reasons are the training signal — IDs alone are not.
+- [ ] 4. Human says the close token (`terminei`). The session reads the
+  board state file (see contract) and repeats back the approved IDs.
+  Never ask the human to retype IDs.
+- [ ] 5. Implement exactly the approved set (or generate the next stage:
+  next fold, roteiro from approved themes, features for the app). No
+  silent substitution of rejected items.
+- [ ] 6. Re-board: generate the next batch (next fold, next 10, next
+  variations of winners) and repeat. Track approval rate per cycle;
+  converged = 90%+ approved in one board.
 
-## Loop de treino (auto-melhoria do agente)
+## Board-state contract (low freedom — follow exactly)
 
-1. Gere 50–500 variações com o agente.
-2. Aprove/rejeite usando os comentários como feedback.
-3. "Termina; use o feedback para aprimorar esse agente."
-4. Repita até 90–100% de aprovação — o agente está calibrado no seu gosto.
+- State lives in a session-readable file next to the board, e.g.
+  `board-state.json`: `{ approved: [1, 5], rejected: [2, 3, 4, 6, 7, 8, 9, 10], comments: { "2": "parece site tech" } }`.
+- The board server (if any) auto-kills after 20 minutes idle so forgotten
+  boards never linger; re-opening restores from the state file.
+- Close token is `terminei` (PT) / `done` (EN). On close, the session MUST
+  echo `aprovados: <ids>` before implementing. No echo = no implement.
+- Silence is never approval. Unreviewed items count as rejected.
 
-## Regras
+## Training loop (why this beats the alternatives)
 
-- Toda rejeição ganha um porquê; comentário vazio não retroalimenta.
-- Uma rodada = um tipo de decisão (não misture copy com arquitetura).
-- Menos é mais: se a aprovação cai, reduza N antes de aumentar contexto.
-- Decisão é o gargalo do trabalho com IA — o board existe para torná-la barata.
+- Fire-and-forget (prompt → sleep → miracle): burns tokens for days and
+  you never learn what the agent is doing.
+- Per-step approval (approve every 20s of work): saves tokens but costs
+  all your time.
+- AR-board: one focused 10-minute A/R session trains the agent, then it
+  runs 8–10h unattended (see `gauntlet-loop`) producing aligned output
+  you actually understand — because you taught it decision by decision.
 
-## Related skills
+## Self-validation before implement
 
-- `plan-canvas` — anotar/aprovar planos e artefatos no browser.
-- `visual-qa-designer` — revisão visual lado a lado.
-- `triagem-ideias` — triagem de ideias antes de virar produção.
-- `approval-loop-morning-digest` — loop diário de aprovações assimétricas.
+- Draft → check against approved IDs + comments: every implemented item
+  is in `approved`, every rejected item is absent, every comment with a
+  constraint is honored. List any violation with the item id, fix, repeat.
+- If the draft fails for a reason outside this guide, propose it as a new
+  board rule at the end of the run.
+
+## Anti-Patterns
+
+- 10 near-identical candidates → human learns nothing; force variation.
+- A/R without reasons on taste tasks → agent copies IDs, never learns criteria.
+- Asking the human to retype approved IDs → breaks the contract; read the file.
+- Skipping the echo (`aprovados: ...`) → silent substitution risk.
+- Sending on the long run before 90% convergence → aligned-looking slop.
+- Board without auto-kill → dozen zombie servers; always set the timer.
+
+## Relations
+
+- `approval-loop-morning-digest`: owns chat token approvals + digest; this
+  skill owns batch visual A/R training. Use that for scheduled ops, this
+  for taste training.
+- `plan-canvas`: owns single-artifact point-and-approve review; this skill
+  owns multi-candidate batch training. A board item can open in a canvas.
+- `self-improving-skill`: owns per-skill feedback→edit loop; this skill
+  feeds it promotion candidates (a reason repeated 3+ boards becomes a rule).
+- `gauntlet-loop` / `score-loop`: own long unattended execution with a
+  cutoff; run them only after AR-board convergence.
+
+## Exemplo
+
+```text
+Humano: "quero 10 microtemplates de hero pra loja de instrumentos"
+Agente: gera board 1..10 (state file criado) → humano: A1 A5, R resto + motivos
+Humano: "terminei"
+Agente: "aprovados: 1, 5" → implementa dobra 1 dos vencedores → abre board 2 (10 variações da próxima dobra)
+Ciclo 3: 9/10 aprovados = convergiu → "rode 8h sozinho" (gauntlet-loop)
+```

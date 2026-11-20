@@ -94,6 +94,12 @@ node scripts/yt-oportunidades.mjs reconcile
 - Convenção de dono: campo opcional `dono` em `manifests/canais-vigilados.json`
   por canal (qual PC coleta); sem dono explícito, vale quem coletou por último.
 
+- **Nunca rode dois `mark` em paralelo** (dois terminais ou dois shells na mesma
+  mensagem): cada processo lê o JSON inteiro e grava por cima — last-writer-wins
+  apaga as chaves do outro lote. Se acontecer, re-rode todos os canais em série;
+  ausentes se recuperam com `git show HEAD:state/yt-control.json` + merge por
+  `Math.max(analisados)` / maior `ultimaColeta`.
+
 ### 1. Catalogar o canal
 
 Roda o catálogo oficial do canal (título, id, data) e salva como JSON:
@@ -106,6 +112,47 @@ Config por env:
 - `YT_CHANNEL` (padrão `https://www.youtube.com/@maestrosdaia/videos`)
 - `YT_DIR` — pastas de transcrições locais, separadas por `;`. **Sempre setar
   explicitamente** — o default (`~/projetos/...`) expande para a pasta do
+
+## Contorno de Rate Limit 429 (Prioridade Máxima)
+
+**Sempre tente com cookies primeiro** — é o método mais eficaz e grátis.
+
+| Método | Comando | Taxa de Sucesso |
+|--------|---------|-----------------|
+| **Cookies Chrome/Edge** (recomendado) | `export YT_COOKIES=~/cookies/youtube.txt` + download | ~80-95% |
+| **yt-dlp + cookies** | Mesmo `YT_COOKIES`, usa yt-dlp nativo | ~95% |
+| **Invidious público** | `yt-dlp --write-auto-sub "https://yewtu.be/watch?v=ID"` | ~60% |
+| **YouTube Data API v3** | Requer API key, quota 10k/dia | 100% (quota limitada) |
+| **Proxy rotativo** | `YT_PROXY=http://...` | ~99% (pago) |
+
+### Setup Cookies (2 min)
+1. Instale extensão **"Get cookies.txt LOCALLY"** no Chrome/Edge
+2. Acesse `youtube.com` logado
+3. Extensão → Export → salve em `~/cookies/youtube.txt`
+4. Use nas chamadas:
+```bash
+export YT_COOKIES=~/cookies/youtube.txt
+export YT_ATTEMPTS=3
+export YT_SLEEP_SUB=10
+node scripts/yt-oportunidades.mjs download ID1 ID2 ID3...
+```
+
+### Variáveis de ambiente suportadas
+| Variável | Padrão | Descrição |
+|----------|--------|-----------|
+| `YT_COOKIES` | — | Caminho para `cookies.txt` (formato Netscape) |
+| `YT_ATTEMPTS` | `1` | Tentativas por idioma/client |
+| `YT_PLAYER_CLIENT` | `ios,web_embedded,android` | Clients do yt-dlp (ordem de prioridade) |
+| `YT_LANGS` | `pt,pt-PT,en` | Idiomas preferidos (vírgula) |
+| `YT_SLEEP_REQ` | `3` | Segundos entre requests |
+| `YT_SLEEP_SUB` | `15` | Segundos entre legendas |
+| `YT_SLEEP_VIDEO` | `0` | Segundos entre vídeos |
+| `YT_RETRIES` | `2` | Retries do yt-dlp |
+| `YT_DOWNLOADER` | `auto` | `auto` = python bridge + yt-dlp fallback; `yt-dlp` = só yt-dlp |
+
+> **Nota:** O script aplica cookies tanto no bridge Python (`youtube-transcript-api` via `YT_COOKIES` env) quanto no `yt-dlp` (`--cookies`). Se `YT_COOKIES` não existir, ignora silenciosamente.
+
+---
 
 ## Radar 4 fontes + curadoria (leva YouTube rodada 8)
 

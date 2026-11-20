@@ -1,6 +1,6 @@
 ---
 name: agent-harness-construction
-description: "Use when design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates. Triggers on \"agent-harness-construction\", \"agent harness construction\", \"construction\"."
+description: "Use when design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates. Triggers on \"agent-harness-construction\", \"agent harness construction\", \"construction\", \"shared action UI agent\", \"agente dentro do app\", \"agent native app\"."
 metadata:
   origin: ECC
 ---
@@ -50,6 +50,27 @@ Agent output quality is constrained by:
 - Use micro-tools for high-risk operations (deploy, migration, permissions).
 - Use medium tools for common edit/read/search loops.
 - Use macro-tools only when round-trip overhead is the dominant cost.
+
+## Shared actions: one operation, UI and agent (leva 2026-10-31)
+
+When the agent lives inside an app the user also edits by hand, the action is
+the contract between them — not a second copy of the business logic.
+
+- One action = `description` + typed `schema` + `run`, callable from the UI
+  (hooks) and from the agent (HTTP/MCP). Validation and permissions live inside
+  it, so both callers enforce the same rule.
+- Pass **view + selection** as context; a "view screen" action resolves the
+  records. Without it the agent guesses between similarly named documents and
+  edits a stale copy — the classic "it brought back my old title" bug.
+- Granular editors (patch operations) and agent actions must share the same lock
+  and the same data, or one silently overwrites the other.
+- Test the alternation: manual edit → agent continue → does it preserve the
+  human edit, show the latest result, and allow undo?
+
+Details and the context/alternation tests in
+`references/acoes-compartilhadas-ui-agente.md`. Progressive disclosure of tools
+(load on demand) is the same principle applied to the prompt — see
+`sub-agent-cost-guard` for the loop-vs-sub-agent decision.
 
 ## Observation Design
 

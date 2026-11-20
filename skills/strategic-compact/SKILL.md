@@ -70,3 +70,12 @@ acha importante.
 ```
 
 ## Configuration
+
+## handoff.md e cache de 1h (leva YouTube 2026-11-11)
+
+Fonte `ZRKAw472Nmk` (Simon Scrapes). `/compact` perde decisao; `handoff.md` preserva:
+objetivo, feito, proximo, arquivos tocados, decisoes e o que falhou - escreva antes do
+`/clear` e abra a sessao nova lendo o arquivo. O cache da assinatura dura **1 hora**;
+retomar chat de ontem re-le tudo pelo preco cheio (~**5x** tokens). Caso medido: skill mal
+configurado levou o uso a **11%** do limite sem entrega. Audite com `/context`
+(CLAUDE.md < 200 linhas, plugins esquecidos) e `/usage` (skills/subagentes/MCP > 10%).

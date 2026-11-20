@@ -345,7 +345,9 @@
     {
       "handle": "@pavanadhav",
       "nome": "Pavan Adhav",
-      "tier": "core",
+      "tier": "radar",
+      "status": "snow",
+      "motivo_snow": "Última coleta 2026-09-13, vídeo mais antigo de 2025-09-14; canal sem movimento recente de skills/IA — manter em pausa até publicar novamente",
       "idiomas": [
         "en"
       ],
