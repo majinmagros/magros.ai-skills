@@ -19,6 +19,16 @@ Este repositório é uma **base do bundle ECC v2.2.0** ([Everything Claude Code]
 > palpite). O efeito prático: o rigor mora nos procedimentos, não no modelo —
 > dá para trocar o modelo sem trocar o padrão de qualidade.
 
+## Catálogo
+
+Access to 68 agents, 520 skills, and 94 legacy command shims.
+
+| Feature | Claude Code | Cursor IDE | Codex CLI | OpenCode |
+|---------|------------|------------|-----------|----------|
+| Agents | PASS: 68 agents | Shared | Shared | 1 |
+| Commands | PASS: 94 commands | Shared | Shared | 1 |
+| Skills | PASS: 520 skills | Shared | Shared | 1 |
+
 ## Conteúdo (atualizado em 2026-11-20)
 
 - **516 `SKILL.md`** no total (contagem real de diretórios em `skills/`).
@@ -168,6 +178,7 @@ em português/enriquecidas** — não são duplicatas cruas:
 ## Estrutura
 
 ```
+|-- agents/           # 68 specialized subagents for delegation
 skills/          # todas as skills (426 ECC + 89 autorais; lista autorais em manifests/skills-autorais.json)
   doctor/                  # autoral
   engenharia-de-grafos/    # autoral
