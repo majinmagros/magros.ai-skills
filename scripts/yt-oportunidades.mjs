@@ -78,13 +78,38 @@ const DEFAULT_DIRS = `${join(homedir(), 'projetos', 'maestros-da-ia')};${join(ho
 
 const RUN = () => process.argv[2];
 
+/**
+ * yt-dlp no Windows nao emite UTF-8 no stdout quando a saida vai para um pipe:
+ * emite cp1252 (bytes e7/e1 viram "?" ao decodificar como utf8) e, em alguns
+ * builds, UTF-16LE com BOM. Sem tratar isso, todo titulo com acento entra
+ * corrompido no CATALOGO.json. Tenta UTF-8 estrito e cai para cp1252.
+ */
+function decodeOutput(buf) {
+  if (!buf || buf.length === 0) return '';
+  if (buf[0] === 0xff && buf[1] === 0xfe) return buf.subarray(2).toString('utf16le');
+  if (buf[0] === 0xfe && buf[1] === 0xff) {
+    const swapped = Buffer.from(buf.subarray(2));
+    swapped.swap16();
+    return swapped.toString('utf16le');
+  }
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(buf);
+  } catch {
+    try {
+      return new TextDecoder('windows-1252').decode(buf);
+    } catch {
+      return buf.toString('latin1');
+    }
+  }
+}
+
 function yt(args) {
-  const r = spawnSync('yt-dlp', args, { encoding: 'utf8' });
+  const r = spawnSync('yt-dlp', args, { encoding: 'buffer' });
   if (r.status !== 0) {
-    process.stderr.write(`yt-dlp falhou (${r.status}): ${r.stderr || r.stdout}\n`);
+    process.stderr.write(`yt-dlp falhou (${r.status}): ${decodeOutput(r.stderr) || decodeOutput(r.stdout)}\n`);
     process.exit(1);
   }
-  return r.stdout;
+  return decodeOutput(r.stdout);
 }
 
 function ensureDir(p) {

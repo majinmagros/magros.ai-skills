@@ -562,6 +562,28 @@
         "negocios"
       ],
       "tier": "core"
+    },
+    {
+      "handle": "@andre_lug",
+      "nome": "Andre Lug",
+      "idiomas": [
+        "pt",
+        "pt-PT",
+        "en"
+      ],
+      "keywords": [
+        "skill",
+        "agent",
+        "claude",
+        "codex",
+        "mcp",
+        "workflow",
+        "ia",
+        "open-source",
+        "second-brain",
+        "mcp-connectors"
+      ],
+      "tier": "radar"
     }
   ]
 }
