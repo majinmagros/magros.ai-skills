@@ -29,10 +29,10 @@
       "atualizadoEm": "2026-11-11T12:43:15.078Z"
     },
     "@gucampelo": {
-      "ultimaColeta": "2026-11-11",
-      "analisados": 14,
-      "ultimoVideoId": "sgU9MtsafBY",
-      "atualizadoEm": "2026-11-11T12:43:14.768Z"
+      "ultimaColeta": "2026-11-20",
+      "analisados": 15,
+      "ultimoVideoId": "hADqyWY8Oqo",
+      "atualizadoEm": "2026-11-27T23:35:02.056Z"
     },
     "@IndyDevDan": {
       "ultimaColeta": "2026-11-11",
@@ -47,10 +47,10 @@
       "atualizadoEm": "2026-09-13T20:43:07.925Z"
     },
     "@SimonScrapes": {
-      "ultimaColeta": "2026-11-09",
-      "analisados": 25,
-      "ultimoVideoId": "ZRKAw472Nmk",
-      "atualizadoEm": "2026-11-11T12:43:13.513Z"
+      "ultimaColeta": "2026-11-20",
+      "analisados": 26,
+      "ultimoVideoId": "6VjeXzvpoJo",
+      "atualizadoEm": "2026-11-27T23:35:01.698Z"
     },
     "@anwarhermuche": {
       "ultimaColeta": "2026-11-10",
@@ -65,10 +65,10 @@
       "atualizadoEm": "2026-11-11T12:43:14.335Z"
     },
     "@aicodeking": {
-      "ultimaColeta": "2026-11-10",
-      "analisados": 50,
-      "ultimoVideoId": "WOc6Vf8cCsE",
-      "atualizadoEm": "2026-11-11T12:43:14.444Z"
+      "ultimaColeta": "2026-11-22",
+      "analisados": 54,
+      "ultimoVideoId": "kcxFVl3sIWM",
+      "atualizadoEm": "2026-11-27T23:35:10.283Z"
     },
     "@airevolutionx_pt": {
       "ultimaColeta": "2026-11-11",
@@ -77,10 +77,10 @@
       "atualizadoEm": "2026-11-11T12:43:14.106Z"
     },
     "@ColeMedin": {
-      "ultimaColeta": "2026-11-10",
-      "analisados": 15,
-      "ultimoVideoId": "hMEQ4rdaOLw",
-      "atualizadoEm": "2026-11-11T12:43:13.294Z"
+      "ultimaColeta": "2026-11-21",
+      "analisados": 17,
+      "ultimoVideoId": "k87Iqft91j8",
+      "atualizadoEm": "2026-11-27T23:35:01.490Z"
     },
     "@matthew_berman": {
       "ultimaColeta": "2026-11-11",
@@ -89,10 +89,10 @@
       "atualizadoEm": "2026-11-11T12:43:13.404Z"
     },
     "@celinexu6598": {
-      "ultimaColeta": "2026-10-03",
-      "analisados": 10,
-      "ultimoVideoId": "ebIHQjbVT8w",
-      "atualizadoEm": "2026-10-10T13:54:38.894Z"
+      "ultimaColeta": "2026-11-20",
+      "analisados": 11,
+      "ultimoVideoId": "WJ19eL_WuX4",
+      "atualizadoEm": "2026-11-27T23:35:01.892Z"
     },
     "@attekitadev": {
       "ultimaColeta": "2026-11-11",
@@ -113,10 +113,10 @@
       "atualizadoEm": "2026-11-11T12:43:14.983Z"
     },
     "@ratosdeia": {
-      "ultimaColeta": "2026-11-10",
-      "analisados": 39,
-      "ultimoVideoId": "RqbCc-DfCZ0",
-      "atualizadoEm": "2026-11-11T12:43:14.885Z"
+      "ultimaColeta": "2026-11-21",
+      "analisados": 40,
+      "ultimoVideoId": "KvzviWLiiCg",
+      "atualizadoEm": "2026-11-27T23:35:10.493Z"
     },
     "@AIJasonZ": {
       "ultimaColeta": "2026-09-16",
@@ -147,6 +147,12 @@
       "analisados": 20,
       "ultimoVideoId": "hDqip3F8apI",
       "atualizadoEm": "2026-11-20T18:58:42.013Z"
+    },
+    "@anthropic-ai": {
+      "ultimaColeta": "2026-11-21",
+      "analisados": 3,
+      "ultimoVideoId": "ROF2Nv_KjOM",
+      "atualizadoEm": "2026-11-27T23:35:10.752Z"
     }
   }
 }

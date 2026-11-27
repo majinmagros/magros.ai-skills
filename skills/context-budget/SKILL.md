@@ -64,10 +64,28 @@ Identify the following problem patterns:
 - **Bloated agent descriptions** — description >30 words in frontmatter loads into every Task tool invocation
 - **Heavy agents** — files >200 lines inflate Task tool context on every spawn
 
+## Phase 4: Reduce the read, not only the inventory
+
+Inventário diz quanto carrega. A maior economia costuma estar em **como o agente
+lê** — não no que está instalado. (Fonte: Simon Scrapes `6VjeXzvpoJo`, práticas
+Anthropic de 2026-11-04.)
+
+| Prática | Antes | Depois |
+|---|---|---|
+| Ler por script | `Read` do log inteiro no chat: 150k tokens | script filtra/agrega e devolve 2k tokens |
+| Flags booleanas | `--verbose`, `--dry-run`, `--no-cache` em vez de prosa | parser não gasta token adivinhando intenção |
+| Hook em vez de cap | "lembre-se de rodar X" no CLAUDE.md | hook determinístico executa X, custo zero de contexto |
+| Pesquisa largo→estreito | varrer tudo de uma vez | índice primeiro, abrir só o que casa |
+| Saída explícita | modelo inventa quando não sabe | instrução: "se não achar, diga que não sabe" |
+
+Regra de bolso: se a tarefa é "encontre X em N arquivos", o contexto correto é o
+**resultado**, não os N arquivos. Mova a varredura para script.
+
 ## Exemplo
 
 ```text
 Sintoma: sessão lenta após instalar 12 skills + 3 MCPs
 Inventário: skills 45k tokens, MCPs 18k (1 server com 30 tools), CLAUDE.md 9k
 Ação: 4 skills p/ on-demand, remove server que embrulha `gh` (CLI basta) → -30k
+Leitura: 3 tarefas de "procure no repo" viraram script → -40k de input por sessão
 ```
