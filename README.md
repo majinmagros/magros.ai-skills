@@ -21,13 +21,13 @@ Este repositório é uma **base do bundle ECC v2.2.0** ([Everything Claude Code]
 
 ## Catálogo
 
-Access to 68 agents, 520 skills, and 94 legacy command shims.
+Access to 68 agents, 522 skills, and 94 legacy command shims.
 
 | Feature | Claude Code | Cursor IDE | Codex CLI | OpenCode |
 |---------|------------|------------|-----------|----------|
 | Agents | PASS: 68 agents | Shared | Shared | 1 |
 | Commands | PASS: 94 commands | Shared | Shared | 1 |
-| Skills | PASS: 520 skills | Shared | Shared | 1 |
+| Skills | PASS: 522 skills | Shared | Shared | 1 |
 
 ## Conteúdo (atualizado em 2026-11-20)
 

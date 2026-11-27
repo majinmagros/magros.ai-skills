@@ -51,6 +51,21 @@ a Next/React + Tailwind + TS repo. Includes a WordPress -> repo exit path.
 8. Ship gate: full-page diff plus link check plus build pass. No merge
    while any section diff is open.
 
+## Animated and 3D pages
+
+Screenshot diff não cobre motion: uma cena Three.js/Rive parada pode dar diff
+zero e ficar errada no play. (Fonte: Gustavo Campelo `hADqyWY8Oqo`, skill
+`Reanimate`.)
+
+1. Identifique o runtime no HTML: `<canvas>` + `three` no bundle = Three.js;
+   `.riv` = Rive; GSAP/ScrollTrigger = timeline de scroll.
+2. Capture motion: screen recording de 10–20s rolando a seção, mais a URL.
+3. Reconstrua com a **mesma** lib (Three.js com Three.js, Rive com Rive) —
+   reimplementar em CSS/WebGL cru vira drift.
+4. Diff de motion: amostre 5–8 frames do recording e compare com frames
+   equivalentes do rebuild. Gate: ≤2% de diferença visual por frame; acima
+   disso, ajuste câmera/curva de easing antes de seguir.
+
 ## Section Acceptance
 
 - Layout matches at desktop and mobile widths.
